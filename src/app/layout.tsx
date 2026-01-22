@@ -1,23 +1,10 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { Toaster } from 'react-hot-toast';
 import { SEO } from '@/lib/constants';
-
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-inter',
-  display: 'swap',
-});
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  variable: '--font-playfair',
-  display: 'swap',
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(SEO.siteUrl),
@@ -29,12 +16,12 @@ export const metadata: Metadata = {
   keywords: [
     'granola artesanal',
     'granola sin gluten',
-    'granola ecológica',
+    'granola ecologica',
     'granola premium',
     'desayuno saludable',
     'avena sin gluten',
     'snack saludable',
-    'granola españa',
+    'granola espana',
   ],
   authors: [{ name: 'Granola Artesanal' }],
   creator: 'Granola Artesanal',
@@ -56,7 +43,7 @@ export const metadata: Metadata = {
         url: SEO.ogImage,
         width: 1200,
         height: 630,
-        alt: 'Granola Artesanal - Sin gluten, orgánica, premium',
+        alt: 'Granola Artesanal - Sin gluten, organica, premium',
       },
     ],
   },
@@ -78,9 +65,6 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  verification: {
-    // google: 'your-google-verification-code',
-  },
 };
 
 export default function RootLayout({
@@ -89,12 +73,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${inter.variable} ${playfair.variable}`}>
+    <html lang="es">
       <head>
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-
         {/* Favicon */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/icon.svg" type="image/svg+xml" />
@@ -102,13 +82,21 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
 
         {/* Theme color */}
-        <meta name="theme-color" content="#d4863d" />
+        <meta name="theme-color" content="#A66842" />
+
+        {/* System font CSS variables */}
+        <style>{`
+          :root {
+            --font-inter: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --font-playfair: Georgia, 'Times New Roman', Times, serif;
+          }
+        `}</style>
       </head>
-      <body className="font-sans antialiased bg-neutral-50 text-neutral-900 min-h-screen flex flex-col">
+      <body className="font-sans antialiased min-h-screen flex flex-col">
         {/* Skip to content link for accessibility */}
         <a
           href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary-600 text-white px-4 py-2 rounded-md z-50"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-earth-600 text-cream-50 px-4 py-2 rounded-md z-50"
         >
           Saltar al contenido principal
         </a>
@@ -130,20 +118,20 @@ export default function RootLayout({
           toastOptions={{
             duration: 4000,
             style: {
-              background: '#292524',
-              color: '#fafaf9',
-              borderRadius: '8px',
+              background: '#33312D',
+              color: '#FDF9F3',
+              borderRadius: '12px',
             },
             success: {
               iconTheme: {
-                primary: '#22c522',
-                secondary: '#fafaf9',
+                primary: '#8BA664',
+                secondary: '#FDF9F3',
               },
             },
             error: {
               iconTheme: {
                 primary: '#ef4444',
-                secondary: '#fafaf9',
+                secondary: '#FDF9F3',
               },
             },
           }}
