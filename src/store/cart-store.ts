@@ -176,4 +176,18 @@ export const useCartStore = create<CartState>()(
 // Selector hooks for common operations
 export const useCartItems = () => useCartStore((state) => state.items);
 export const useCartIsOpen = () => useCartStore((state) => state.isOpen);
-export const useCartItemCount = () => useCartStore((state) => state.getItemCount());
+
+// Hook that safely returns cart count (avoids hydration mismatch)
+import { useState, useEffect } from 'react';
+
+export const useCartItemCount = () => {
+  const [count, setCount] = useState(0);
+  const items = useCartStore((state) => state.items);
+
+  useEffect(() => {
+    const total = items.reduce((acc, item) => acc + item.quantity * item.packSize, 0);
+    setCount(total);
+  }, [items]);
+
+  return count;
+};
