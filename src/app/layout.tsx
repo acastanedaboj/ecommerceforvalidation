@@ -3,6 +3,7 @@ import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/cart/CartDrawer';
+import { SessionProvider } from '@/components/providers/SessionProvider';
 import { Toaster } from 'react-hot-toast';
 import { SEO } from '@/lib/constants';
 
@@ -85,27 +86,28 @@ export default function RootLayout({
         <meta name="theme-color" content="#A66842" />
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
-        {/* Skip to content link for accessibility */}
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-earth-600 text-cream-50 px-4 py-2 rounded-md z-50"
-        >
-          Saltar al contenido principal
-        </a>
+        <SessionProvider>
+          {/* Skip to content link for accessibility */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-earth-600 text-cream-50 px-4 py-2 rounded-md z-50"
+          >
+            Saltar al contenido principal
+          </a>
 
-        <Header />
+          <Header />
 
-        <main id="main-content" className="flex-grow">
-          {children}
-        </main>
+          <main id="main-content" className="flex-grow">
+            {children}
+          </main>
 
-        <Footer />
+          <Footer />
 
-        {/* Cart Drawer */}
-        <CartDrawer />
+          {/* Cart Drawer */}
+          <CartDrawer />
 
-        {/* Toast notifications */}
-        <Toaster
+          {/* Toast notifications */}
+          <Toaster
           position="bottom-right"
           toastOptions={{
             duration: 4000,
@@ -148,6 +150,7 @@ export default function RootLayout({
             />
           </>
         )}
+        </SessionProvider>
       </body>
     </html>
   );
