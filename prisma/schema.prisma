@@ -1,0 +1,411 @@
+// Prisma Schema for Granola Artesanal E-commerce
+// PostgreSQL database
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ==========================================
+// PRODUCTS
+// ==========================================
+
+model Product {
+  id          String   @id @default(cuid())
+  sku         String   @unique
+  name        String
+  slug        String   @unique
+  description String   @db.Text
+  shortDescription String? @db.Text
+
+  // Pricing (in cents to avoid floating point issues)
+  priceInCents Int      @default(900) // 9.00€ = 900 cents
+
+  // Product details
+  weight      Int      @default(250) // grams
+  ingredients String   @db.Text
+  allergens   String?  @db.Text
+  nutritionalInfo Json?
+
+  // Images (array of paths)
+  images      String[]
+
+  // Inventory
+  stock       Int      @default(0)
+  isActive    Boolean  @default(true)
+
+  // SEO
+  metaTitle       String?
+  metaDescription String?
+
+  // Relations
+  category    Category? @relation(fields: [categoryId], references: [id])
+  categoryId  String?
+  orderItems  OrderItem[]
+  cartItems   CartItem[]
+
+  // Timestamps
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([slug])
+  @@index([categoryId])
+  @@index([isActive])
+}
+
+model Category {
+  id          String    @id @default(cuid())
+  name        String
+  slug        String    @unique
+  description String?
+  image       String?
+  products    Product[]
+
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+// ==========================================
+// USERS & AUTH
+// ==========================================
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  passwordHash  String?
+  name          String?
+  phone         String?
+
+  // Stripe
+  stripeCustomerId String? @unique
+
+  // Relations
+  addresses     Address[]
+  orders        Order[]
+  cart          Cart?
+  subscriptions Subscription[]
+
+  // Timestamps
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+
+  @@index([email])
+  @@index([stripeCustomerId])
+}
+
+model Address {
+  id          String  @id @default(cuid())
+  userId      String
+  user        User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  name        String
+  line1       String
+  line2       String?
+  city        String
+  state       String?
+  postalCode  String
+  country     String  @default("ES")
+  phone       String?
+
+  isDefault   Boolean @default(false)
+
+  orders      Order[]
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([userId])
+}
+
+// ==========================================
+// CART
+// ==========================================
+
+model Cart {
+  id        String     @id @default(cuid())
+  userId    String?    @unique
+  user      User?      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sessionId String?    @unique // For guest carts
+
+  items     CartItem[]
+
+  createdAt DateTime   @default(now())
+  updatedAt DateTime   @updatedAt
+
+  @@index([sessionId])
+}
+
+model CartItem {
+  id        String  @id @default(cuid())
+  cartId    String
+  cart      Cart    @relation(fields: [cartId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product @relation(fields: [productId], references: [id])
+
+  quantity  Int     @default(1)
+
+  // Pack selection (null for single items)
+  packSize  Int?    // 3, 4, or 6
+
+  // Subscription flag
+  isSubscription Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([cartId, productId, packSize, isSubscription])
+  @@index([cartId])
+}
+
+// ==========================================
+// ORDERS
+// ==========================================
+
+model Order {
+  id              String      @id @default(cuid())
+  orderNumber     String      @unique
+  userId          String?
+  user            User?       @relation(fields: [userId], references: [id])
+
+  // Status
+  status          OrderStatus @default(PENDING)
+  paymentStatus   PaymentStatus @default(PENDING)
+
+  // Stripe
+  stripePaymentIntentId String? @unique
+  stripeSessionId       String?
+
+  // Amounts (in cents)
+  subtotalInCents Int
+  discountInCents Int       @default(0)
+  shippingInCents Int       @default(0)
+  taxInCents      Int       @default(0)
+  totalInCents    Int
+
+  // Discount details
+  discountCode    String?
+  discountType    String?   // 'pack_3', 'pack_4', 'pack_6', 'subscription'
+
+  // Shipping
+  shippingAddressId String?
+  shippingAddress   Address? @relation(fields: [shippingAddressId], references: [id])
+
+  // Customer info (for guest checkout)
+  customerEmail   String
+  customerName    String?
+  customerPhone   String?
+
+  // Shipping address snapshot
+  shippingName    String?
+  shippingLine1   String?
+  shippingLine2   String?
+  shippingCity    String?
+  shippingState   String?
+  shippingPostal  String?
+  shippingCountry String?
+
+  // Payment method
+  paymentMethod   String    @default("card") // 'card', 'cash_on_delivery'
+
+  // Notes
+  notes           String?   @db.Text
+
+  // Relations
+  items           OrderItem[]
+
+  // Timestamps
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+  paidAt          DateTime?
+  shippedAt       DateTime?
+  deliveredAt     DateTime?
+
+  @@index([userId])
+  @@index([orderNumber])
+  @@index([status])
+  @@index([stripePaymentIntentId])
+}
+
+model OrderItem {
+  id          String  @id @default(cuid())
+  orderId     String
+  order       Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId   String
+  product     Product @relation(fields: [productId], references: [id])
+
+  // Snapshot of product at time of order
+  productName String
+  productSku  String
+
+  quantity    Int
+  packSize    Int?
+
+  // Price at time of order (in cents)
+  unitPriceInCents Int
+  totalPriceInCents Int
+
+  createdAt   DateTime @default(now())
+
+  @@index([orderId])
+}
+
+enum OrderStatus {
+  PENDING
+  CONFIRMED
+  PROCESSING
+  SHIPPED
+  DELIVERED
+  CANCELLED
+  REFUNDED
+}
+
+enum PaymentStatus {
+  PENDING
+  PAID
+  FAILED
+  REFUNDED
+  PARTIALLY_REFUNDED
+}
+
+// ==========================================
+// SUBSCRIPTIONS
+// ==========================================
+
+model Subscription {
+  id                    String             @id @default(cuid())
+  userId                String
+  user                  User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  // Stripe subscription
+  stripeSubscriptionId  String             @unique
+  stripePriceId         String?
+
+  // Status
+  status                SubscriptionStatus @default(ACTIVE)
+
+  // Plan details
+  packSize              Int                @default(6) // Pack 6 subscription
+  quantity              Int                @default(1)
+
+  // Billing
+  pricePerUnitInCents   Int                // 765 cents = 7.65€ with 15% discount
+  intervalMonths        Int                @default(1)
+
+  // Next billing
+  currentPeriodStart    DateTime?
+  currentPeriodEnd      DateTime?
+  nextBillingDate       DateTime?
+
+  // Cancellation
+  cancelAtPeriodEnd     Boolean            @default(false)
+  cancelledAt           DateTime?
+
+  createdAt             DateTime           @default(now())
+  updatedAt             DateTime           @updatedAt
+
+  @@index([userId])
+  @@index([stripeSubscriptionId])
+  @@index([status])
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  PAUSED
+  CANCELLED
+  PAST_DUE
+  UNPAID
+}
+
+// ==========================================
+// CONTENT (Blog, FAQ)
+// ==========================================
+
+model BlogPost {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  excerpt     String?  @db.Text
+  content     String   @db.Text
+  coverImage  String?
+
+  // SEO
+  metaTitle       String?
+  metaDescription String?
+
+  isPublished Boolean  @default(false)
+  publishedAt DateTime?
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([slug])
+  @@index([isPublished])
+}
+
+model FAQ {
+  id          String   @id @default(cuid())
+  question    String
+  answer      String   @db.Text
+  category    String?  // 'producto', 'envio', 'pago', 'suscripcion', 'legal'
+  order       Int      @default(0)
+  isActive    Boolean  @default(true)
+
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@index([category])
+  @@index([isActive])
+}
+
+// ==========================================
+// B2B / WHOLESALE
+// ==========================================
+
+model WholesaleInquiry {
+  id            String   @id @default(cuid())
+
+  // Contact info
+  companyName   String
+  contactName   String
+  email         String
+  phone         String?
+
+  // Business details
+  businessType  String   // 'cafeteria', 'tienda', 'distribuidor', 'otro'
+  location      String?
+
+  // Inquiry
+  message       String   @db.Text
+  estimatedVolume String?
+
+  // Status
+  status        String   @default("new") // 'new', 'contacted', 'negotiating', 'closed'
+  notes         String?  @db.Text
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([status])
+}
+
+// ==========================================
+// CONTACT MESSAGES
+// ==========================================
+
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  subject   String?
+  message   String   @db.Text
+
+  isRead    Boolean  @default(false)
+
+  createdAt DateTime @default(now())
+
+  @@index([isRead])
+}
