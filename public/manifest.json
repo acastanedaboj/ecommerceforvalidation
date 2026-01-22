@@ -1,0 +1,21 @@
+{
+  "name": "Granola Artesanal",
+  "short_name": "Granola",
+  "description": "Granola artesanal, ecologica y sin gluten. Hecha con ingredientes naturales de la mejor calidad.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FDF9F3",
+  "theme_color": "#A66842",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
