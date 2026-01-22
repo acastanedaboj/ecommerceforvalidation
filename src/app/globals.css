@@ -224,12 +224,30 @@
 
   /* Prose for blog content */
   .prose-custom {
-    @apply prose prose-stone max-w-none;
-    @apply prose-headings:font-display prose-headings:text-stone-800 prose-headings:font-medium;
-    @apply prose-a:text-earth-600 prose-a:no-underline hover:prose-a:text-earth-700 hover:prose-a:underline;
-    @apply prose-strong:text-stone-800 prose-strong:font-semibold;
-    @apply prose-img:rounded-2xl;
-    @apply prose-p:text-stone-600;
+    @apply max-w-none;
+  }
+
+  .prose-custom h1,
+  .prose-custom h2,
+  .prose-custom h3,
+  .prose-custom h4 {
+    @apply font-display text-stone-800 font-medium mb-4;
+  }
+
+  .prose-custom p {
+    @apply text-stone-600 leading-relaxed mb-4;
+  }
+
+  .prose-custom a {
+    @apply text-earth-600 no-underline hover:text-earth-700 hover:underline;
+  }
+
+  .prose-custom strong {
+    @apply text-stone-800 font-semibold;
+  }
+
+  .prose-custom img {
+    @apply rounded-2xl;
   }
 
   /* Glass effect */
