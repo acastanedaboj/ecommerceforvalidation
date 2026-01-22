@@ -13,147 +13,169 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section */}
-      <section className="relative bg-hero-gradient overflow-hidden">
-        <div className="container-custom py-16 md:py-24 lg:py-32">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+      {/* Hero Section - Elegant & Minimal */}
+      <section className="relative bg-gradient-warm overflow-hidden">
+        <div className="container-custom py-20 md:py-28 lg:py-36">
+          <div className="grid lg:grid-cols-2 gap-16 lg:gap-20 items-center">
             {/* Hero Content */}
-            <div className="text-center lg:text-left">
-              <span className="inline-block badge-accent mb-4">
+            <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
+              <span className="inline-block badge-accent mb-6 animate-fade-in">
                 Sin gluten certificado
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-neutral-900 mb-6">
-                Granola artesanal 250g —{' '}
-                <span className="text-primary-600">sin gluten real</span> y orgánica
+
+              <h1 className="font-display text-stone-800 mb-8 animate-fade-in-up">
+                Granola artesanal
+                <br />
+                <span className="text-earth-600">sin gluten real</span>
               </h1>
-              <p className="text-lg md:text-xl text-neutral-600 mb-8 max-w-xl mx-auto lg:mx-0">
-                Elaborada a mano con avena certificada, miel ecológica de apicultores locales
-                y los mejores frutos secos. Remojada para facilitar la digestión.
+
+              <p className="text-lg md:text-xl text-stone-500 mb-10 leading-relaxed animate-fade-in-up animation-delay-100">
+                Elaborada a mano con avena certificada, miel ecologica
+                de apicultores locales y los mejores frutos secos.
+                Remojada para facilitar la digestion.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                <Link href="/tienda" className="btn-primary btn-lg">
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-200">
+                <Link href="/tienda" className="btn-primary btn-lg group">
                   Comprar ahora
-                  <ArrowRight className="w-5 h-5 ml-2" />
+                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link href="/suscripcion" className="btn-outline btn-lg">
-                  Suscríbete y ahorra 15%
+                  Suscribete -15%
                 </Link>
               </div>
 
               {/* Trust indicators */}
-              <div className="flex flex-wrap gap-6 mt-10 justify-center lg:justify-start text-sm text-neutral-600">
-                <span className="flex items-center gap-2">
-                  <Truck className="w-5 h-5 text-primary-600" />
-                  Envío gratis +4 bolsas
+              <div className="flex flex-wrap gap-8 mt-14 justify-center lg:justify-start text-sm text-stone-500 animate-fade-in-up animation-delay-300">
+                <span className="flex items-center gap-2.5">
+                  <Truck className="w-5 h-5 text-earth-500" strokeWidth={1.5} />
+                  Envio gratis +4 bolsas
                 </span>
-                <span className="flex items-center gap-2">
-                  <Leaf className="w-5 h-5 text-accent-600" />
+                <span className="flex items-center gap-2.5">
+                  <Leaf className="w-5 h-5 text-olive-500" strokeWidth={1.5} />
                   100% Natural
                 </span>
-                <span className="flex items-center gap-2">
-                  <Heart className="w-5 h-5 text-red-500" />
+                <span className="flex items-center gap-2.5">
+                  <Heart className="w-5 h-5 text-earth-400" strokeWidth={1.5} />
                   Hecho con amor
                 </span>
               </div>
             </div>
 
             {/* Hero Image */}
-            <div className="relative">
+            <div className="relative animate-fade-in animation-delay-200">
               <div className="relative aspect-square max-w-lg mx-auto">
-                <Image
-                  src="/images/hero-granola.jpg"
-                  alt="Granola artesanal con frutos secos y miel"
-                  fill
-                  className="object-cover rounded-3xl shadow-2xl"
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                />
-                {/* Floating badge */}
-                <div className="absolute -bottom-4 -left-4 bg-white rounded-2xl shadow-lg p-4 animate-fade-in">
-                  <div className="flex items-center gap-3">
-                    <div className="flex -space-x-2">
-                      <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center text-lg">⭐</div>
-                      <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center text-lg">⭐</div>
-                      <div className="w-8 h-8 rounded-full bg-primary-100 flex items-center justify-center text-lg">⭐</div>
+                {/* Main image */}
+                <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden shadow-soft-lg">
+                  <Image
+                    src="/images/hero-granola.jpg"
+                    alt="Granola artesanal con frutos secos y miel"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="(max-width: 1024px) 100vw, 50vw"
+                  />
+                </div>
+
+                {/* Floating badge - Reviews */}
+                <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-soft-lg p-5 animate-float">
+                  <div className="flex items-center gap-4">
+                    <div className="flex -space-x-1">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-4 h-4 fill-amber-400 text-amber-400"
+                        />
+                      ))}
                     </div>
                     <div>
-                      <p className="font-semibold text-neutral-900">4.9/5</p>
-                      <p className="text-xs text-neutral-500">+500 reseñas</p>
+                      <p className="font-display font-medium text-stone-800">4.9/5</p>
+                      <p className="text-xs text-stone-400">+500 resenas</p>
                     </div>
                   </div>
                 </div>
+
+                {/* Decorative element */}
+                <div className="absolute -top-8 -right-8 w-24 h-24 bg-olive-100 rounded-full blur-2xl opacity-60" />
+                <div className="absolute -bottom-4 right-12 w-16 h-16 bg-earth-100 rounded-full blur-xl opacity-60" />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Decorative wave */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M0 50L60 45.8C120 41.7 240 33.3 360 33.3C480 33.3 600 41.7 720 50C840 58.3 960 66.7 1080 62.5C1200 58.3 1320 41.7 1380 33.3L1440 25V100H1380C1320 100 1200 100 1080 100C960 100 840 100 720 100C600 100 480 100 360 100C240 100 120 100 60 100H0V50Z" fill="#fafaf9"/>
-          </svg>
-        </div>
+        {/* Subtle wave divider */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-cream-50" style={{
+          clipPath: 'ellipse(70% 100% at 50% 100%)'
+        }} />
       </section>
 
       {/* Benefits Section */}
-      <section className="section bg-neutral-50">
+      <section className="section bg-cream-50">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
-              ¿Por qué nuestra granola es diferente?
+          <div className="text-center mb-16">
+            <h2 className="font-display text-stone-800 mb-5">
+              Por que nuestra granola es diferente
             </h2>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              No es solo granola. Es el resultado de años perfeccionando una receta artesanal
-              con ingredientes de verdad.
+            <p className="text-lg text-stone-500 max-w-2xl mx-auto">
+              No es solo granola. Es el resultado de anos perfeccionando
+              una receta artesanal con ingredientes de verdad.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {/* Benefit 1 */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-2xl">🌾</span>
+            <div className="bg-white rounded-2xl p-7 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-cream-100 rounded-2xl flex items-center justify-center mb-5">
+                <span className="text-3xl">{String.fromCodePoint(0x1F33E)}</span>
               </div>
-              <h3 className="font-semibold text-neutral-900 mb-2">Avena remojada</h3>
-              <p className="text-sm text-neutral-600">
-                Remojamos la avena para reducir el ácido fítico y mejorar la digestibilidad.
-                Tu intestino te lo agradecerá.
+              <h3 className="font-display text-lg font-medium text-stone-800 mb-3">
+                Avena remojada
+              </h3>
+              <p className="text-stone-500 text-sm leading-relaxed">
+                Remojamos la avena para reducir el acido fitico y mejorar
+                la digestibilidad. Tu intestino te lo agradecera.
               </p>
             </div>
 
             {/* Benefit 2 */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-2xl">🍯</span>
+            <div className="bg-white rounded-2xl p-7 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-earth-50 rounded-2xl flex items-center justify-center mb-5">
+                <span className="text-3xl">{String.fromCodePoint(0x1F36F)}</span>
               </div>
-              <h3 className="font-semibold text-neutral-900 mb-2">Miel ecológica local</h3>
-              <p className="text-sm text-neutral-600">
-                Endulzada únicamente con miel de apicultores de pueblo. Sin azúcares refinados,
-                sin edulcorantes artificiales.
+              <h3 className="font-display text-lg font-medium text-stone-800 mb-3">
+                Miel ecologica local
+              </h3>
+              <p className="text-stone-500 text-sm leading-relaxed">
+                Endulzada unicamente con miel de apicultores de pueblo.
+                Sin azucares refinados, sin edulcorantes artificiales.
               </p>
             </div>
 
             {/* Benefit 3 */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-2xl">🥜</span>
+            <div className="bg-white rounded-2xl p-7 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-olive-50 rounded-2xl flex items-center justify-center mb-5">
+                <span className="text-3xl">{String.fromCodePoint(0x1F95C)}</span>
               </div>
-              <h3 className="font-semibold text-neutral-900 mb-2">Frutos secos premium</h3>
-              <p className="text-sm text-neutral-600">
+              <h3 className="font-display text-lg font-medium text-stone-800 mb-3">
+                Frutos secos premium
+              </h3>
+              <p className="text-stone-500 text-sm leading-relaxed">
                 Pecanas, almendras, avellanas y anacardos de primera calidad.
                 Nada de rellenos baratos ni saborizantes.
               </p>
             </div>
 
             {/* Benefit 4 */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow">
-              <div className="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center mb-4">
-                <span className="text-2xl">❌</span>
+            <div className="bg-white rounded-2xl p-7 shadow-soft hover:shadow-soft-lg transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 bg-cream-200 rounded-2xl flex items-center justify-center mb-5">
+                <span className="text-3xl">{String.fromCodePoint(0x2728)}</span>
               </div>
-              <h3 className="font-semibold text-neutral-900 mb-2">Sin aditivos</h3>
-              <p className="text-sm text-neutral-600">
+              <h3 className="font-display text-lg font-medium text-stone-800 mb-3">
+                Sin aditivos
+              </h3>
+              <p className="text-stone-500 text-sm leading-relaxed">
                 Sin conservantes, sin colorantes, sin potenciadores del sabor.
-                Solo ingredientes que reconocerías en tu cocina.
+                Solo ingredientes que reconocerias en tu cocina.
               </p>
             </div>
           </div>
@@ -161,27 +183,27 @@ export default function HomePage() {
       </section>
 
       {/* Products Section */}
-      <section className="section">
+      <section className="section bg-white">
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12">
             <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-2">
+              <h2 className="font-display text-stone-800 mb-3">
                 Nuestros productos
               </h2>
-              <p className="text-neutral-600">
-                Elige tu sabor favorito o pruébalos todos
+              <p className="text-stone-500">
+                Elige tu sabor favorito o pruebalos todos
               </p>
             </div>
             <Link
               href="/tienda"
-              className="mt-4 md:mt-0 text-primary-600 hover:text-primary-700 font-medium inline-flex items-center gap-1"
+              className="mt-6 md:mt-0 text-earth-600 hover:text-earth-700 font-medium inline-flex items-center gap-2 group"
             >
               Ver todos
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.slice(0, 3).map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -190,51 +212,54 @@ export default function HomePage() {
       </section>
 
       {/* Pricing/Packs Section */}
-      <section className="section bg-primary-50">
+      <section className="section bg-cream-100">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
-              Cuanto más compras, más ahorras
+          <div className="text-center mb-14">
+            <h2 className="font-display text-stone-800 mb-5">
+              Cuanto mas compras, mas ahorras
             </h2>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              Elige el pack que mejor se adapte a tu consumo. A partir de 4 bolsas, ¡el envío es gratis!
+            <p className="text-lg text-stone-500 max-w-2xl mx-auto">
+              Elige el pack que mejor se adapte a tu consumo.
+              A partir de 4 bolsas, el envio es gratis.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-5xl mx-auto">
             {packOptions.map((pack) => (
               <div
                 key={pack.size}
-                className={`bg-white rounded-2xl p-6 border-2 transition-all ${
+                className={`bg-white rounded-2xl p-6 transition-all duration-300 ${
                   pack.size === 4
-                    ? 'border-primary-500 shadow-lg scale-105'
-                    : 'border-transparent shadow-sm hover:border-primary-200'
+                    ? 'ring-2 ring-earth-500 shadow-soft-lg scale-[1.02]'
+                    : 'shadow-soft hover:shadow-soft-lg hover:-translate-y-1'
                 }`}
               >
                 {pack.size === 4 && (
-                  <span className="badge-primary mb-3 block w-fit">Más popular</span>
+                  <span className="badge-primary mb-4 block w-fit">Mas popular</span>
                 )}
-                <h3 className="text-xl font-bold text-neutral-900 mb-1">{pack.label}</h3>
+                <h3 className="font-display text-xl font-medium text-stone-800 mb-2">
+                  {pack.label}
+                </h3>
                 <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-3xl font-bold text-primary-600">
+                  <span className="text-3xl font-display font-medium text-earth-600">
                     {formatPrice(pack.unitPriceCents)}
                   </span>
-                  <span className="text-neutral-500">/ud.</span>
+                  <span className="text-stone-400 text-sm">/ud.</span>
                 </div>
                 {pack.discountPercentage > 0 && (
-                  <p className="text-sm text-accent-600 font-medium mb-2">
+                  <p className="text-sm text-olive-600 font-medium mb-3">
                     Ahorras {pack.discountPercentage}% por unidad
                   </p>
                 )}
-                <ul className="space-y-2 text-sm text-neutral-600 mb-4">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-4 h-4 text-accent-600" />
+                <ul className="space-y-2.5 text-sm text-stone-500 mb-5">
+                  <li className="flex items-center gap-2.5">
+                    <Check className="w-4 h-4 text-olive-500" strokeWidth={2} />
                     Total: {formatPrice(pack.totalPriceCents)}
                   </li>
                   {pack.freeShipping && (
-                    <li className="flex items-center gap-2">
-                      <Check className="w-4 h-4 text-accent-600" />
-                      Envío gratis
+                    <li className="flex items-center gap-2.5">
+                      <Check className="w-4 h-4 text-olive-500" strokeWidth={2} />
+                      Envio gratis
                     </li>
                   )}
                 </ul>
@@ -251,101 +276,110 @@ export default function HomePage() {
           </div>
 
           {/* Subscription CTA */}
-          <div className="mt-12 bg-gradient-to-r from-primary-600 to-primary-700 rounded-3xl p-8 md:p-12 text-white text-center">
-            <div className="flex items-center justify-center gap-2 mb-4">
-              <RefreshCw className="w-6 h-6" />
-              <span className="badge bg-white/20 text-white">Suscripción mensual</span>
+          <div className="mt-14 bg-stone-800 rounded-3xl p-10 md:p-14 text-center overflow-hidden relative">
+            {/* Background decoration */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-earth-600/20 rounded-full blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-olive-600/20 rounded-full blur-3xl" />
+
+            <div className="relative">
+              <div className="flex items-center justify-center gap-3 mb-5">
+                <RefreshCw className="w-5 h-5 text-cream-300" strokeWidth={1.5} />
+                <span className="badge bg-cream-100/10 text-cream-200">Suscripcion mensual</span>
+              </div>
+              <h3 className="font-display text-2xl md:text-3xl font-medium text-cream-50 mb-4">
+                Suscribete y ahorra un {subscriptionInfo.discountPercentage}%
+              </h3>
+              <p className="text-cream-300 mb-8 max-w-xl mx-auto">
+                Recibe 6 bolsas cada mes a solo {formatPrice(subscriptionInfo.unitPriceCents)}/ud.
+                Cancela cuando quieras, sin compromisos.
+              </p>
+              <Link
+                href="/suscripcion"
+                className="btn bg-cream-50 text-stone-800 hover:bg-cream-100 btn-lg group"
+              >
+                Empezar suscripcion
+                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+              </Link>
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold mb-2">
-              Suscríbete y ahorra un {subscriptionInfo.discountPercentage}%
-            </h3>
-            <p className="text-primary-100 mb-6 max-w-xl mx-auto">
-              Recibe 6 bolsas cada mes a solo {formatPrice(subscriptionInfo.unitPriceCents)}/ud.
-              Cancela cuando quieras, sin compromisos.
-            </p>
-            <Link href="/suscripcion" className="btn bg-white text-primary-700 hover:bg-primary-50">
-              Empezar suscripción
-              <ArrowRight className="w-4 h-4 ml-2" />
-            </Link>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="section">
+      <section className="section bg-white">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
+          <div className="text-center mb-14">
+            <h2 className="font-display text-stone-800 mb-5">
               Lo que dicen nuestros clientes
             </h2>
-            <p className="text-neutral-600">
-              Más de 500 familias ya disfrutan de nuestra granola cada día
+            <p className="text-stone-500">
+              Mas de 500 familias ya disfrutan de nuestra granola cada dia
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {/* Testimonial 1 */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
-              <div className="flex gap-1 mb-4">
+            <div className="bg-cream-50 rounded-2xl p-7 hover:shadow-soft transition-all duration-300">
+              <div className="flex gap-1 mb-5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <p className="text-neutral-700 mb-4">
-                "Por fin una granola que puedo comer sin problemas. Soy celíaca y siempre
-                tenía miedo de la contaminación cruzada. Esta es la primera que me sienta bien de verdad."
+              <p className="text-stone-600 mb-6 leading-relaxed">
+                &ldquo;Por fin una granola que puedo comer sin problemas. Soy celiaca y siempre
+                tenia miedo de la contaminacion cruzada. Esta es la primera que me sienta bien de verdad.&rdquo;
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center font-semibold text-primary-700">
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full bg-earth-100 flex items-center justify-center font-display font-medium text-earth-700">
                   ML
                 </div>
                 <div>
-                  <p className="font-semibold text-neutral-900">María L.</p>
-                  <p className="text-sm text-neutral-500">Cliente verificada</p>
+                  <p className="font-medium text-stone-800">Maria L.</p>
+                  <p className="text-sm text-stone-400">Cliente verificada</p>
                 </div>
               </div>
             </div>
 
             {/* Testimonial 2 */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
-              <div className="flex gap-1 mb-4">
+            <div className="bg-cream-50 rounded-2xl p-7 hover:shadow-soft transition-all duration-300">
+              <div className="flex gap-1 mb-5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <p className="text-neutral-700 mb-4">
-                "El sabor es increíble, se nota que está hecha con ingredientes de calidad.
-                Mis hijos la devoran y me encanta saber que están comiendo algo nutritivo."
+              <p className="text-stone-600 mb-6 leading-relaxed">
+                &ldquo;El sabor es increible, se nota que esta hecha con ingredientes de calidad.
+                Mis hijos la devoran y me encanta saber que estan comiendo algo nutritivo.&rdquo;
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center font-semibold text-primary-700">
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full bg-olive-100 flex items-center justify-center font-display font-medium text-olive-700">
                   CG
                 </div>
                 <div>
-                  <p className="font-semibold text-neutral-900">Carlos G.</p>
-                  <p className="text-sm text-neutral-500">Cliente verificado</p>
+                  <p className="font-medium text-stone-800">Carlos G.</p>
+                  <p className="text-sm text-stone-400">Cliente verificado</p>
                 </div>
               </div>
             </div>
 
             {/* Testimonial 3 */}
-            <div className="bg-white rounded-2xl p-6 shadow-sm border border-neutral-100">
-              <div className="flex gap-1 mb-4">
+            <div className="bg-cream-50 rounded-2xl p-7 hover:shadow-soft transition-all duration-300">
+              <div className="flex gap-1 mb-5">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 fill-amber-400 text-amber-400" />
+                  <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <p className="text-neutral-700 mb-4">
-                "La suscripción es genial. No tengo que preocuparme de hacer pedidos y siempre
-                tengo granola en casa. Además, el ahorro se nota a final de mes."
+              <p className="text-stone-600 mb-6 leading-relaxed">
+                &ldquo;La suscripcion es genial. No tengo que preocuparme de hacer pedidos y siempre
+                tengo granola en casa. Ademas, el ahorro se nota a final de mes.&rdquo;
               </p>
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-primary-100 flex items-center justify-center font-semibold text-primary-700">
+              <div className="flex items-center gap-4">
+                <div className="w-11 h-11 rounded-full bg-cream-200 flex items-center justify-center font-display font-medium text-cream-800">
                   AS
                 </div>
                 <div>
-                  <p className="font-semibold text-neutral-900">Ana S.</p>
-                  <p className="text-sm text-neutral-500">Suscriptora</p>
+                  <p className="font-medium text-stone-800">Ana S.</p>
+                  <p className="text-sm text-stone-400">Suscriptora</p>
                 </div>
               </div>
             </div>
@@ -354,21 +388,21 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section bg-neutral-900 text-white">
+      <section className="section bg-gradient-earth">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
-            ¿Listo para probar la diferencia?
+          <h2 className="font-display text-stone-800 mb-5">
+            Listo para probar la diferencia?
           </h2>
-          <p className="text-neutral-300 mb-8 max-w-xl mx-auto">
-            Únete a cientos de familias que han descubierto el sabor de la granola
-            artesanal de verdad. Envío gratis a partir de 4 bolsas.
+          <p className="text-stone-500 mb-10 max-w-xl mx-auto text-lg">
+            Unete a cientos de familias que han descubierto el sabor de la granola
+            artesanal de verdad. Envio gratis a partir de 4 bolsas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/tienda" className="btn-primary btn-lg">
+            <Link href="/tienda" className="btn-primary btn-lg group">
               Comprar ahora
-              <ArrowRight className="w-5 h-5 ml-2" />
+              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
             </Link>
-            <Link href="/nosotros" className="btn bg-white/10 hover:bg-white/20 text-white btn-lg">
+            <Link href="/nosotros" className="btn-ghost btn-lg">
               Conocer nuestra historia
             </Link>
           </div>

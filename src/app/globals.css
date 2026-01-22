@@ -3,18 +3,29 @@
 @tailwind utilities;
 
 /* ==========================================
-   Base Styles
+   Base Styles - Minimalist & Elegant
    ========================================== */
 
 @layer base {
-  /* Smooth scrolling */
+  /* Smooth scrolling & selection */
   html {
     scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    @apply bg-earth-200 text-earth-900;
+  }
+
+  /* Body defaults */
+  body {
+    @apply bg-cream-50 text-stone-700 font-sans;
   }
 
   /* Better focus styles for accessibility */
   *:focus-visible {
-    @apply outline-none ring-2 ring-primary-500 ring-offset-2;
+    @apply outline-none ring-2 ring-earth-400 ring-offset-2 ring-offset-cream-50;
   }
 
   /* Remove default button styles */
@@ -27,144 +38,208 @@
     @apply max-w-full h-auto;
   }
 
-  /* Typography defaults */
+  /* Typography defaults - Elegant & Clean */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display text-neutral-900;
+    @apply font-display text-stone-800 tracking-tight;
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-6xl font-bold leading-tight;
+    @apply text-4xl md:text-5xl lg:text-display-lg font-medium leading-tight;
   }
 
   h2 {
-    @apply text-3xl md:text-4xl font-bold;
+    @apply text-3xl md:text-display-sm font-medium;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-semibold;
+    @apply text-2xl md:text-3xl font-medium;
   }
 
   h4 {
-    @apply text-xl md:text-2xl font-semibold;
+    @apply text-xl md:text-2xl font-medium;
   }
 
   p {
-    @apply text-neutral-700 leading-relaxed;
+    @apply text-stone-600 leading-relaxed;
   }
 
   /* Link defaults */
   a {
-    @apply transition-colors duration-200;
+    @apply transition-colors duration-300;
+  }
+
+  /* Smooth transitions on interactive elements */
+  button, a, input, select, textarea {
+    @apply transition-all duration-300;
   }
 }
 
 /* ==========================================
-   Component Styles
+   Component Styles - Refined & Minimal
    ========================================== */
 
 @layer components {
   /* Container */
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-12;
   }
 
-  /* Buttons */
+  .container-narrow {
+    @apply max-w-4xl mx-auto px-5 sm:px-8 lg:px-12;
+  }
+
+  /* Buttons - Elegant with subtle interactions */
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed;
+    @apply inline-flex items-center justify-center px-7 py-3.5 font-medium rounded-full
+           transition-all duration-300 ease-out
+           focus:outline-none focus:ring-2 focus:ring-offset-2
+           disabled:opacity-50 disabled:cursor-not-allowed
+           text-sm tracking-wide;
   }
 
   .btn-primary {
-    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+    @apply btn bg-earth-600 text-cream-50
+           hover:bg-earth-700 hover:shadow-soft
+           active:scale-[0.98]
+           focus:ring-earth-400;
   }
 
   .btn-secondary {
-    @apply btn bg-secondary-600 text-white hover:bg-secondary-700 focus:ring-secondary-500;
+    @apply btn bg-olive-600 text-cream-50
+           hover:bg-olive-700 hover:shadow-soft
+           active:scale-[0.98]
+           focus:ring-olive-400;
   }
 
   .btn-outline {
-    @apply btn border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white focus:ring-primary-500;
+    @apply btn border-2 border-earth-500 text-earth-600 bg-transparent
+           hover:bg-earth-500 hover:text-cream-50
+           active:scale-[0.98]
+           focus:ring-earth-400;
   }
 
   .btn-ghost {
-    @apply btn text-neutral-700 hover:bg-neutral-100 focus:ring-neutral-400;
+    @apply btn text-stone-600 bg-transparent
+           hover:bg-stone-100 hover:text-stone-800
+           focus:ring-stone-300;
   }
 
   .btn-sm {
-    @apply px-4 py-2 text-sm;
+    @apply px-5 py-2.5 text-sm;
   }
 
   .btn-lg {
-    @apply px-8 py-4 text-lg;
+    @apply px-9 py-4 text-base;
   }
 
-  /* Badges */
+  /* Badges - Subtle & Refined */
   .badge {
-    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium tracking-wide;
   }
 
   .badge-primary {
-    @apply badge bg-primary-100 text-primary-800;
+    @apply badge bg-earth-100 text-earth-700;
   }
 
   .badge-accent {
-    @apply badge bg-accent-100 text-accent-800;
+    @apply badge bg-olive-100 text-olive-700;
   }
 
   .badge-secondary {
-    @apply badge bg-secondary-100 text-secondary-800;
+    @apply badge bg-cream-200 text-cream-800;
   }
 
-  /* Cards */
+  .badge-dark {
+    @apply badge bg-stone-800 text-cream-100;
+  }
+
+  /* Cards - Clean with subtle shadows */
   .card {
-    @apply bg-white rounded-xl shadow-sm border border-neutral-200 overflow-hidden transition-shadow duration-200 hover:shadow-md;
+    @apply bg-white rounded-2xl shadow-soft border border-cream-200
+           overflow-hidden transition-all duration-400
+           hover:shadow-soft-lg hover:border-cream-300;
   }
 
-  /* Form inputs */
+  .card-flat {
+    @apply bg-cream-100 rounded-2xl border border-cream-200
+           overflow-hidden transition-all duration-300;
+  }
+
+  /* Form inputs - Minimal & Elegant */
   .input {
-    @apply w-full px-4 py-3 border border-neutral-300 rounded-lg text-neutral-900 placeholder-neutral-400 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200;
+    @apply w-full px-5 py-3.5
+           bg-white border border-cream-300 rounded-xl
+           text-stone-800 placeholder-stone-400
+           focus:outline-none focus:ring-2 focus:ring-earth-300 focus:border-earth-300
+           transition-all duration-300;
   }
 
   .input-error {
-    @apply border-red-500 focus:ring-red-500;
+    @apply border-red-400 focus:ring-red-300 focus:border-red-300;
   }
 
   .label {
-    @apply block text-sm font-medium text-neutral-700 mb-1;
+    @apply block text-sm font-medium text-stone-700 mb-2;
   }
 
   .error-message {
-    @apply text-sm text-red-600 mt-1;
+    @apply text-sm text-red-600 mt-1.5;
   }
 
-  /* Section spacing */
+  /* Section spacing - Generous & Breathing */
   .section {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-28 lg:py-32;
   }
 
   .section-sm {
-    @apply py-12 md:py-16;
+    @apply py-14 md:py-20;
   }
 
   /* Price display */
   .price {
-    @apply font-semibold text-neutral-900;
+    @apply font-display font-medium text-stone-800;
   }
 
   .price-original {
-    @apply text-neutral-400 line-through;
+    @apply text-stone-400 line-through font-normal;
   }
 
   .price-discount {
-    @apply text-accent-600 font-bold;
+    @apply text-olive-600 font-semibold;
+  }
+
+  /* Dividers */
+  .divider {
+    @apply h-px bg-gradient-to-r from-transparent via-cream-300 to-transparent;
   }
 
   /* Prose for blog content */
   .prose-custom {
-    @apply prose prose-neutral max-w-none;
-    @apply prose-headings:font-display prose-headings:text-neutral-900;
-    @apply prose-a:text-primary-600 prose-a:no-underline hover:prose-a:underline;
-    @apply prose-strong:text-neutral-900;
-    @apply prose-img:rounded-xl;
+    @apply prose prose-stone max-w-none;
+    @apply prose-headings:font-display prose-headings:text-stone-800 prose-headings:font-medium;
+    @apply prose-a:text-earth-600 prose-a:no-underline hover:prose-a:text-earth-700 hover:prose-a:underline;
+    @apply prose-strong:text-stone-800 prose-strong:font-semibold;
+    @apply prose-img:rounded-2xl;
+    @apply prose-p:text-stone-600;
+  }
+
+  /* Glass effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  /* Link with underline animation */
+  .link-underline {
+    @apply relative;
+  }
+
+  .link-underline::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-earth-500 transition-all duration-300;
+  }
+
+  .link-underline:hover::after {
+    @apply w-full;
   }
 }
 
@@ -174,8 +249,12 @@
 
 @layer utilities {
   /* Text gradient */
-  .text-gradient {
-    @apply bg-gradient-to-r from-primary-600 to-primary-400 bg-clip-text text-transparent;
+  .text-gradient-earth {
+    @apply bg-gradient-to-r from-earth-600 to-earth-400 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-olive {
+    @apply bg-gradient-to-r from-olive-600 to-olive-400 bg-clip-text text-transparent;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -187,33 +266,66 @@
     display: none;
   }
 
+  /* Custom scrollbar */
+  .scrollbar-custom {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.cream.400') transparent;
+  }
+  .scrollbar-custom::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-custom::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-custom::-webkit-scrollbar-thumb {
+    background: theme('colors.cream.400');
+    border-radius: 3px;
+  }
+
   /* Animation delays */
-  .animation-delay-100 {
-    animation-delay: 100ms;
-  }
-  .animation-delay-200 {
-    animation-delay: 200ms;
-  }
-  .animation-delay-300 {
-    animation-delay: 300ms;
-  }
-  .animation-delay-400 {
-    animation-delay: 400ms;
-  }
+  .animation-delay-100 { animation-delay: 100ms; }
+  .animation-delay-200 { animation-delay: 200ms; }
+  .animation-delay-300 { animation-delay: 300ms; }
+  .animation-delay-400 { animation-delay: 400ms; }
+  .animation-delay-500 { animation-delay: 500ms; }
 
   /* Aspect ratios */
   .aspect-product {
-    aspect-ratio: 3 / 4;
+    aspect-ratio: 4 / 5;
   }
 
   .aspect-hero {
-    aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 10;
   }
 
-  /* Background patterns */
+  .aspect-square-rounded {
+    aspect-ratio: 1 / 1;
+    @apply rounded-2xl;
+  }
+
+  /* Subtle background patterns */
   .bg-dots {
-    background-image: radial-gradient(circle, #d6d3d1 1px, transparent 1px);
-    background-size: 20px 20px;
+    background-image: radial-gradient(circle, theme('colors.cream.300') 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .bg-grain {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+  }
+
+  /* Hover lift effect */
+  .hover-lift {
+    @apply transition-transform duration-300 hover:-translate-y-1;
+  }
+
+  /* Image zoom on hover */
+  .img-zoom {
+    @apply transition-transform duration-500 ease-out;
+  }
+
+  .group:hover .img-zoom {
+    @apply scale-105;
   }
 }
 
@@ -223,18 +335,40 @@
 
 /* Stripe Elements */
 .StripeElement {
-  @apply w-full px-4 py-3 border border-neutral-300 rounded-lg bg-white;
+  @apply w-full px-5 py-3.5 bg-white border border-cream-300 rounded-xl;
 }
 
 .StripeElement--focus {
-  @apply ring-2 ring-primary-500 border-transparent;
+  @apply ring-2 ring-earth-300 border-earth-300;
 }
 
 .StripeElement--invalid {
-  @apply border-red-500;
+  @apply border-red-400;
 }
 
 /* React Hot Toast customization */
 .react-hot-toast {
   @apply font-sans;
+}
+
+/* ==========================================
+   Custom animations
+   ========================================== */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-soft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
 }

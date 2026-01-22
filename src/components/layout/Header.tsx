@@ -1,126 +1,165 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, ShoppingBag, User, Search } from 'lucide-react';
+import { Menu, X, ShoppingBag, User } from 'lucide-react';
 import { useCartStore, useCartItemCount } from '@/store/cart-store';
 import { NAVIGATION, BUSINESS } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const toggleCart = useCartStore((state) => state.toggleCart);
   const itemCount = useCartItemCount();
 
+  // Handle scroll effect
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-40 bg-white/95 backdrop-blur-sm border-b border-neutral-200">
-      {/* Announcement bar */}
-      <div className="bg-primary-600 text-white text-center py-2 px-4 text-sm">
-        <p>
-          <span className="font-medium">Envío gratis</span> a partir de 4 bolsas o 35€ |{' '}
-          <Link href="/suscripcion" className="underline hover:no-underline">
-            Suscríbete y ahorra 15%
+    <header className="sticky top-0 z-40">
+      {/* Announcement bar - Subtle & Elegant */}
+      <div className="bg-stone-800 text-cream-100 text-center py-2.5 px-4">
+        <p className="text-sm tracking-wide">
+          <span className="font-medium">Envio gratis</span>
+          <span className="mx-2 opacity-40">|</span>
+          a partir de 4 bolsas o 35 EUR
+          <span className="mx-2 opacity-40">|</span>
+          <Link
+            href="/suscripcion"
+            className="underline underline-offset-2 hover:text-cream-300 transition-colors"
+          >
+            Suscribete y ahorra 15%
           </Link>
         </p>
       </div>
 
-      <nav className="container-custom" aria-label="Navegación principal">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link
-            href="/"
-            className="flex items-center gap-2 text-xl md:text-2xl font-display font-bold text-primary-700 hover:text-primary-600 transition-colors"
-          >
-            <span className="text-2xl md:text-3xl">🌾</span>
-            <span className="hidden sm:inline">{BUSINESS.name}</span>
-            <span className="sm:hidden">Granola</span>
-          </Link>
-
-          {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-8">
-            {NAVIGATION.main.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-neutral-700 hover:text-primary-600 font-medium transition-colors"
-              >
-                {item.name}
-              </Link>
-            ))}
-          </div>
-
-          {/* Right side actions */}
-          <div className="flex items-center gap-2 md:gap-4">
-            {/* Search button */}
-            <button
-              type="button"
-              className="p-2 text-neutral-600 hover:text-primary-600 hover:bg-neutral-100 rounded-lg transition-colors"
-              aria-label="Buscar productos"
-            >
-              <Search className="w-5 h-5" />
-            </button>
-
-            {/* Account link */}
+      {/* Main navigation */}
+      <nav
+        className={cn(
+          'transition-all duration-300',
+          isScrolled
+            ? 'bg-cream-50/95 backdrop-blur-md shadow-soft'
+            : 'bg-cream-50'
+        )}
+        aria-label="Navegacion principal"
+      >
+        <div className="container-custom">
+          <div className="flex items-center justify-between h-18 md:h-22">
+            {/* Logo */}
             <Link
-              href="/cuenta"
-              className="p-2 text-neutral-600 hover:text-primary-600 hover:bg-neutral-100 rounded-lg transition-colors"
-              aria-label="Mi cuenta"
+              href="/"
+              className="group flex items-center gap-3"
             >
-              <User className="w-5 h-5" />
+              <span className="text-3xl md:text-4xl transition-transform duration-300 group-hover:scale-110">
+                {String.fromCodePoint(0x1F33E)}
+              </span>
+              <span className="font-display text-xl md:text-2xl font-medium text-stone-800 tracking-tight">
+                <span className="hidden sm:inline">{BUSINESS.name}</span>
+                <span className="sm:hidden">Granola</span>
+              </span>
             </Link>
 
-            {/* Cart button */}
-            <button
-              type="button"
-              onClick={toggleCart}
-              className="relative p-2 text-neutral-600 hover:text-primary-600 hover:bg-neutral-100 rounded-lg transition-colors"
-              aria-label={`Carrito de compra (${itemCount} productos)`}
-            >
-              <ShoppingBag className="w-5 h-5" />
-              {itemCount > 0 && (
-                <span className="absolute -top-1 -right-1 bg-primary-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
-                  {itemCount > 99 ? '99+' : itemCount}
-                </span>
-              )}
-            </button>
+            {/* Desktop Navigation - Clean & Minimal */}
+            <div className="hidden lg:flex items-center gap-10">
+              {NAVIGATION.main.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="link-underline text-stone-600 hover:text-stone-900 font-medium text-sm tracking-wide transition-colors"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
 
-            {/* Mobile menu button */}
-            <button
-              type="button"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2 text-neutral-600 hover:text-primary-600 hover:bg-neutral-100 rounded-lg transition-colors"
-              aria-expanded={isMobileMenuOpen}
-              aria-controls="mobile-menu"
-              aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
-            >
-              {isMobileMenuOpen ? (
-                <X className="w-6 h-6" />
-              ) : (
-                <Menu className="w-6 h-6" />
-              )}
-            </button>
+            {/* Right side actions */}
+            <div className="flex items-center gap-1 md:gap-2">
+              {/* Account link */}
+              <Link
+                href="/cuenta"
+                className="p-3 text-stone-500 hover:text-stone-800 hover:bg-cream-200/50 rounded-full transition-all"
+                aria-label="Mi cuenta"
+              >
+                <User className="w-5 h-5" strokeWidth={1.5} />
+              </Link>
+
+              {/* Cart button */}
+              <button
+                type="button"
+                onClick={toggleCart}
+                className="relative p-3 text-stone-500 hover:text-stone-800 hover:bg-cream-200/50 rounded-full transition-all"
+                aria-label={`Carrito de compra (${itemCount} productos)`}
+              >
+                <ShoppingBag className="w-5 h-5" strokeWidth={1.5} />
+                {itemCount > 0 && (
+                  <span className="absolute top-1 right-1 bg-earth-600 text-cream-50 text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
+                    {itemCount > 9 ? '9+' : itemCount}
+                  </span>
+                )}
+              </button>
+
+              {/* Mobile menu button */}
+              <button
+                type="button"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-3 text-stone-500 hover:text-stone-800 hover:bg-cream-200/50 rounded-full transition-all ml-1"
+                aria-expanded={isMobileMenuOpen}
+                aria-controls="mobile-menu"
+                aria-label={isMobileMenuOpen ? 'Cerrar menu' : 'Abrir menu'}
+              >
+                {isMobileMenuOpen ? (
+                  <X className="w-5 h-5" strokeWidth={1.5} />
+                ) : (
+                  <Menu className="w-5 h-5" strokeWidth={1.5} />
+                )}
+              </button>
+            </div>
           </div>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Elegant slide down */}
         <div
           id="mobile-menu"
           className={cn(
-            'lg:hidden overflow-hidden transition-all duration-300 ease-in-out',
-            isMobileMenuOpen ? 'max-h-96 pb-4' : 'max-h-0'
+            'lg:hidden overflow-hidden transition-all duration-400 ease-out border-t border-cream-200',
+            isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0 border-transparent'
           )}
         >
-          <div className="flex flex-col gap-1 pt-2 border-t border-neutral-200">
-            {NAVIGATION.main.map((item) => (
+          <div className="container-custom py-6">
+            <div className="flex flex-col gap-1">
+              {NAVIGATION.main.map((item, index) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={cn(
+                    'px-4 py-3.5 text-stone-700 hover:text-stone-900 hover:bg-cream-100 rounded-xl font-medium transition-all',
+                    'animate-fade-in-up',
+                  )}
+                  style={{ animationDelay: `${index * 50}ms` }}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+
+            {/* Mobile CTA */}
+            <div className="mt-6 pt-6 border-t border-cream-200">
               <Link
-                key={item.href}
-                href={item.href}
+                href="/tienda"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="px-4 py-3 text-neutral-700 hover:text-primary-600 hover:bg-neutral-50 rounded-lg font-medium transition-colors"
+                className="btn-primary w-full justify-center"
               >
-                {item.name}
+                Comprar ahora
               </Link>
-            ))}
+            </div>
           </div>
         </div>
       </nav>
