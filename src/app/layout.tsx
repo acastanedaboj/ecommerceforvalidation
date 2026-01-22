@@ -83,14 +83,6 @@ export default function RootLayout({
 
         {/* Theme color */}
         <meta name="theme-color" content="#A66842" />
-
-        {/* System font CSS variables */}
-        <style>{`
-          :root {
-            --font-inter: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-            --font-playfair: Georgia, 'Times New Roman', Times, serif;
-          }
-        `}</style>
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
         {/* Skip to content link for accessibility */}
