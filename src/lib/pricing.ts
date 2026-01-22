@@ -188,6 +188,23 @@ export function calculateCartTotal(
     hasLargePack ||
     hasSubscription;
 
+  // If cart is empty, return zeros
+  if (items.length === 0 || totalUnits === 0) {
+    return {
+      unitPriceCents: 0,
+      subtotalCents: 0,
+      discountCents: 0,
+      discountPercentage: 0,
+      shippingCents: 0,
+      taxCents: 0,
+      totalCents: 0,
+      isFreeShipping: false,
+      savingsPerUnit: 0,
+      itemCount: 0,
+      items: [],
+    };
+  }
+
   // Shipping cost
   const shippingCents = isFreeShipping ? 0 : SHIPPING.STANDARD_COST_CENTS;
 

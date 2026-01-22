@@ -19,13 +19,15 @@ export function formatPrice(
   options: Intl.NumberFormatOptions = {}
 ): string {
   const euros = cents / 100;
-  return new Intl.NumberFormat(CURRENCY.locale, {
+  const formatted = new Intl.NumberFormat(CURRENCY.locale, {
     style: 'currency',
     currency: CURRENCY.code,
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
     ...options,
   }).format(euros);
+  // Normalize non-breaking spaces to regular spaces for consistency
+  return formatted.replace(/\u00A0/g, ' ');
 }
 
 /**
