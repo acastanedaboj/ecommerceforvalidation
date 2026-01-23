@@ -68,7 +68,7 @@ export default function HomePage() {
                 {/* Main image */}
                 <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden shadow-soft-lg">
                   <Image
-                    src="/images/hero-granola.jpg"
+                    src="/products/hero.jpg"
                     alt="Granola artesanal con frutos secos y miel"
                     fill
                     className="object-cover"
