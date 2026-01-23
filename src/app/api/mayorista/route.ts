@@ -1,8 +1,6 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 const NOTIFY_EMAIL = 'alvaro.castanneda@gmail.com';
 
 interface MayoristaFormData {
@@ -28,6 +26,9 @@ const businessTypeLabels: Record<string, string> = {
 export async function POST(request: Request) {
   try {
     const data: MayoristaFormData = await request.json();
+
+    // Initialize Resend at runtime (not at build time)
+    const resend = new Resend(process.env.RESEND_API_KEY);
 
     // Validate required fields
     if (!data.companyName || !data.contactName || !data.email || !data.businessType) {
