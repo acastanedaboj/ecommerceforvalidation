@@ -34,12 +34,27 @@ export default function MayoristaPage() {
     e.preventDefault();
     setIsLoading(true);
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    try {
+      const response = await fetch('/api/mayorista', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    toast.success('Solicitud enviada correctamente');
-    setIsSubmitted(true);
-    setIsLoading(false);
+      if (!response.ok) {
+        throw new Error('Error al enviar la solicitud');
+      }
+
+      toast.success('Solicitud enviada correctamente');
+      setIsSubmitted(true);
+    } catch (error) {
+      toast.error('Error al enviar la solicitud. Intentalo de nuevo.');
+      console.error('Error:', error);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (
