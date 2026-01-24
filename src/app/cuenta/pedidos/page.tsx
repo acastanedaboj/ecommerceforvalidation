@@ -2,7 +2,7 @@ import { Package, ShoppingBag, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Mis Pedidos | Granola Artesanal',
+  title: 'Mis Pedidos | Nalu',
   description: 'Consulta el historial de tus pedidos',
 };
 

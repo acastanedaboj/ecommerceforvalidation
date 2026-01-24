@@ -75,10 +75,10 @@ function ConfirmacionContent() {
           <p className="mt-8 text-sm text-neutral-500">
             ¿Tienes alguna pregunta? Escríbenos a{' '}
             <a
-              href="mailto:hola@granolaartesanal.com"
+              href="mailto:hola@nalu.es"
               className="text-primary-600 hover:underline"
             >
-              hola@granolaartesanal.com
+              hola@nalu.es
             </a>
           </p>
         </div>

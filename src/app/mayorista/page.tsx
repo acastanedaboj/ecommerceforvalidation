@@ -213,10 +213,10 @@ export default function MayoristaPage() {
             {/* Why choose us */}
             <div className="mt-8 bg-primary-50 rounded-xl p-6">
               <h3 className="font-semibold text-neutral-900 mb-4">
-                ¿Por qué elegir Granola Artesanal?
+                ¿Por qué elegir Nalu?
               </h3>
               <ul className="space-y-3 text-sm text-neutral-700">
-                <li>✓ Producto diferenciador: granola artesanal de verdad</li>
+                <li>✓ Producto diferenciador: granola de verdad</li>
                 <li>✓ Sin gluten certificado: atrae a clientes celíacos</li>
                 <li>✓ Historia de marca: conecta con consumidores conscientes</li>
                 <li>✓ Flexibilidad: adaptamos formatos a tus necesidades</li>

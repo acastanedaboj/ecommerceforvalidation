@@ -1,11 +1,11 @@
 // ==========================================
-// Business Constants - Granola Artesanal
+// Business Constants - Nalu
 // ==========================================
 
 export const BUSINESS = {
-  name: 'Granola Artesanal',
+  name: 'Nalu',
   tagline: 'Sin gluten real, orgánica, artesanal',
-  email: 'hola@granolaartesanal.com',
+  email: 'hola@nalu.es',
   phone: '+34 600 000 000',
   address: {
     street: 'Calle Ejemplo, 123',
@@ -14,8 +14,8 @@ export const BUSINESS = {
     country: 'España',
   },
   socialMedia: {
-    instagram: 'https://instagram.com/granolaartesanal',
-    facebook: 'https://facebook.com/granolaartesanal',
+    instagram: 'https://instagram.com/nalu_granola',
+    facebook: 'https://facebook.com/nalugranola',
   },
 } as const;
 
@@ -95,13 +95,13 @@ export const CURRENCY = {
 // ==========================================
 
 export const SEO = {
-  titleTemplate: '%s | Granola Artesanal',
-  defaultTitle: 'Granola Artesanal - Sin Gluten, Orgánica, Premium',
+  titleTemplate: '%s | Nalu',
+  defaultTitle: 'Nalu - Granola Sin Gluten, Orgánica, Premium',
   defaultDescription:
     'Granola artesanal 250g sin gluten real, elaborada con avena certificada, miel ecológica y frutos secos premium. Envío gratis a partir de 4 bolsas.',
-  siteUrl: process.env.NEXT_PUBLIC_APP_URL || 'https://granolaartesanal.com',
+  siteUrl: process.env.NEXT_PUBLIC_APP_URL || 'https://nalu.es',
   ogImage: '/images/og-image.jpg',
-  twitterHandle: '@granolaartesanal',
+  twitterHandle: '@nalu_granola',
 } as const;
 
 // ==========================================

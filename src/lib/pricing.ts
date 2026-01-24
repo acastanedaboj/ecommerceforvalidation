@@ -1,5 +1,5 @@
 /**
- * Pricing Logic for Granola Artesanal
+ * Pricing Logic for Nalu
  *
  * Business Rules:
  * - Base price: 9.00€ per 250g bag

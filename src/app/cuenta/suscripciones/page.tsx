@@ -2,8 +2,8 @@ import { Heart, Sparkles, ArrowRight, Calendar, Package } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Mis Suscripciones | Granola Artesanal',
-  description: 'Gestiona tus suscripciones de granola artesanal',
+  title: 'Mis Suscripciones | Nalu',
+  description: 'Gestiona tus suscripciones de granola Nalu',
 };
 
 // TODO: This would fetch subscriptions from Stripe/database

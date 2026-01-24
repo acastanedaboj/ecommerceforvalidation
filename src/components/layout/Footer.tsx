@@ -24,7 +24,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-5 text-cream-400 max-w-sm leading-relaxed">
-              Granola artesanal elaborada con amor, ingredientes ecologicos y sin gluten real.
+              Granola elaborada con amor, ingredientes ecologicos y sin gluten real.
               Tostada lentamente con miel de apicultores locales.
             </p>
 

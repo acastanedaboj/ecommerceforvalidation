@@ -4,7 +4,7 @@ test.describe('E-commerce Happy Path', () => {
   test('should complete a full purchase flow', async ({ page }) => {
     // 1. Visit homepage
     await page.goto('/');
-    await expect(page).toHaveTitle(/Granola Artesanal/);
+    await expect(page).toHaveTitle(/Nalu/);
 
     // 2. Navigate to shop
     await page.click('text=Tienda');
@@ -143,7 +143,7 @@ test.describe('Navigation and SEO', () => {
     await page.goto('/');
 
     // Check title
-    await expect(page).toHaveTitle(/Granola Artesanal/);
+    await expect(page).toHaveTitle(/Nalu/);
 
     // Check meta description
     const description = await page.locator('meta[name="description"]').getAttribute('content');

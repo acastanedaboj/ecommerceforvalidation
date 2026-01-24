@@ -3,7 +3,7 @@ import { BUSINESS } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Aviso Legal',
-  description: 'Aviso legal e información corporativa de Granola Artesanal.',
+  description: 'Aviso legal e información corporativa de Nalu.',
 };
 
 export default function AvisoLegalPage() {
@@ -35,7 +35,7 @@ export default function AvisoLegalPage() {
           <h2>2. Objeto</h2>
           <p>
             Este sitio web tiene como finalidad la venta de productos alimenticios,
-            específicamente granola artesanal, así como proporcionar información
+            específicamente granola Nalu, así como proporcionar información
             sobre los mismos.
           </p>
 

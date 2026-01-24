@@ -6,7 +6,7 @@ import { faqs, faqCategories, getFAQsByCategory } from '@/data/faqs';
 export const metadata: Metadata = {
   title: 'Preguntas Frecuentes (FAQ)',
   description:
-    'Encuentra respuestas a las preguntas más frecuentes sobre nuestra granola artesanal: ingredientes, envíos, pagos, suscripciones y más.',
+    'Encuentra respuestas a las preguntas más frecuentes sobre nuestra granola Nalu: ingredientes, envíos, pagos, suscripciones y más.',
 };
 
 const categoryIcons: Record<string, React.ReactNode> = {

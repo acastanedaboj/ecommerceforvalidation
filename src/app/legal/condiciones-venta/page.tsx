@@ -3,7 +3,7 @@ import { BUSINESS, SHIPPING, PRICING } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Condiciones de Venta',
-  description: 'Condiciones generales de venta de Granola Artesanal.',
+  description: 'Condiciones generales de venta de Nalu.',
 };
 
 export default function CondicionesVentaPage() {
@@ -39,7 +39,7 @@ export default function CondicionesVentaPage() {
 
           <h2>3. Productos</h2>
           <p>
-            Todos nuestros productos son granola artesanal elaborada con ingredientes
+            Todos nuestros productos son granola Nalu elaborada con ingredientes
             de alta calidad. Las características de cada producto se detallan en su
             ficha correspondiente.
           </p>

@@ -1,5 +1,5 @@
 /**
- * FAQ Data - Granola Artesanal
+ * FAQ Data - Nalu
  */
 
 export interface FAQ {
@@ -124,7 +124,7 @@ Actualmente solo realizamos envíos a España. Si estás interesado en envíos i
 2. Podrás rastrear tu paquete desde tu cuenta o directamente en la web de la empresa de transporte
 3. Te enviaremos notificaciones cuando el pedido esté en reparto
 
-Si no has recibido la información de seguimiento en 48 horas laborables después de hacer tu pedido, escríbenos a hola@granolaartesanal.com`,
+Si no has recibido la información de seguimiento en 48 horas laborables después de hacer tu pedido, escríbenos a hola@nalu.es`,
     category: 'envio',
     order: 2,
   },
@@ -176,7 +176,7 @@ Tus datos de pago nunca se almacenan en nuestros servidores.`,
 
 **Si necesitas factura completa con datos fiscales:**
 1. Indica tus datos de facturación durante el checkout (razón social, NIF/CIF, dirección fiscal)
-2. O solicítala enviando un email a hola@granolaartesanal.com con tu número de pedido
+2. O solicítala enviando un email a hola@nalu.es con tu número de pedido
 
 **IVA:** Todos nuestros precios incluyen el 10% de IVA (tipo reducido aplicable a productos alimenticios en España).
 
@@ -189,7 +189,7 @@ Para compras B2B con volumen, ofrecemos condiciones especiales. Consulta nuestra
   {
     id: 'faq_subscription_works',
     question: '¿Cómo funciona la suscripción?',
-    answer: `Nuestra suscripción es la forma más económica de disfrutar de granola artesanal cada mes:
+    answer: `Nuestra suscripción es la forma más económica de disfrutar de granola Nalu cada mes:
 
 **Qué incluye:**
 - Pack de 6 bolsas cada mes
@@ -221,7 +221,7 @@ Para compras B2B con volumen, ofrecemos condiciones especiales. Consulta nuestra
 4. Confirma la cancelación
 
 **Por email:**
-También puedes escribirnos a hola@granolaartesanal.com solicitando la cancelación.
+También puedes escribirnos a hola@nalu.es solicitando la cancelación.
 
 **Importante:**
 - La cancelación se hará efectiva al final del período actual ya pagado
@@ -293,7 +293,7 @@ Consulta nuestra Política de Privacidad completa para más detalles. Cumplimos 
 - Trazabilidad completa de ingredientes
 - Producción en instalaciones registradas
 
-Puedes solicitar información adicional sobre nuestras certificaciones escribiéndonos a hola@granolaartesanal.com`,
+Puedes solicitar información adicional sobre nuestras certificaciones escribiéndonos a hola@nalu.es`,
     category: 'legal',
     order: 2,
   },

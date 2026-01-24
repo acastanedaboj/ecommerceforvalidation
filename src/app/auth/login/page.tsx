@@ -35,7 +35,7 @@ function LoginContent() {
           <Link href="/" className="inline-flex items-center gap-3 mb-8">
             <span className="text-4xl">{String.fromCodePoint(0x1F33E)}</span>
             <span className="font-display text-2xl font-medium text-stone-800">
-              Granola Artesanal
+              Nalu
             </span>
           </Link>
           <h1 className="font-display text-3xl font-medium text-stone-800 mb-3">

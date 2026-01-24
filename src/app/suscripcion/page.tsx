@@ -8,7 +8,7 @@ import { PRICING } from '@/lib/constants';
 export const metadata: Metadata = {
   title: 'Suscripción Mensual',
   description:
-    'Suscríbete y ahorra un 15% en tu granola artesanal. Recibe 6 bolsas cada mes, envío gratis y cancela cuando quieras. Sin compromisos.',
+    'Suscríbete y ahorra un 15% en tu granola Nalu. Recibe 6 bolsas cada mes, envío gratis y cancela cuando quieras. Sin compromisos.',
 };
 
 export default function SuscripcionPage() {
@@ -29,7 +29,7 @@ export default function SuscripcionPage() {
               Suscríbete y ahorra un {subscriptionInfo.discountPercentage}%
             </h1>
             <p className="text-xl text-primary-100 mb-8">
-              Recibe 6 bolsas de granola artesanal cada mes a solo{' '}
+              Recibe 6 bolsas de granola Nalu cada mes a solo{' '}
               <strong className="text-white">
                 {formatPrice(subscriptionInfo.unitPriceCents)}/ud
               </strong>
@@ -369,7 +369,7 @@ export default function SuscripcionPage() {
             ¿Listo para ahorrar en tu granola favorita?
           </h2>
           <p className="text-neutral-300 mb-8 max-w-xl mx-auto">
-            Únete a cientos de suscriptores que reciben su granola artesanal cada mes
+            Únete a cientos de suscriptores que reciben su granola Nalu cada mes
             sin preocupaciones.
           </p>
           <Link href="/tienda" className="btn-primary btn-lg">

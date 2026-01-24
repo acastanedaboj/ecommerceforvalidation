@@ -3,7 +3,7 @@ import { BUSINESS } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Política de Privacidad',
-  description: 'Política de privacidad y protección de datos de Granola Artesanal.',
+  description: 'Política de privacidad y protección de datos de Nalu.',
 };
 
 export default function PrivacidadPage() {
