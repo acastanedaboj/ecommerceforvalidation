@@ -1,9 +1,13 @@
 import { Metadata } from 'next';
 import { BUSINESS } from '@/lib/constants';
+import { getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Política de Cookies',
   description: 'Política de cookies de Poppy.',
+  alternates: {
+    canonical: getCanonicalUrl('/legal/cookies'),
+  },
 };
 
 export default function CookiesPage() {

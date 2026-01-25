@@ -1,9 +1,13 @@
 import { Metadata } from 'next';
 import { BUSINESS } from '@/lib/constants';
+import { getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Aviso Legal',
   description: 'Aviso legal e información corporativa de Poppy.',
+  alternates: {
+    canonical: getCanonicalUrl('/legal/aviso-legal'),
+  },
 };
 
 export default function AvisoLegalPage() {

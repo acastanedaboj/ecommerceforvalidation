@@ -1,9 +1,13 @@
 import { Metadata } from 'next';
 import { BUSINESS } from '@/lib/constants';
+import { getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Política de Privacidad',
   description: 'Política de privacidad y protección de datos de Poppy.',
+  alternates: {
+    canonical: getCanonicalUrl('/legal/privacidad'),
+  },
 };
 
 export default function PrivacidadPage() {
