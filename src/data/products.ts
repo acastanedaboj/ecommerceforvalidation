@@ -43,6 +43,48 @@ export interface NutritionalInfo {
 
 export const products: Product[] = [
   {
+    id: 'prod_granola_clasica',
+    sku: 'GRAN-250-CLA',
+    name: 'Granola Clásica',
+    slug: 'granola-clasica-250g',
+    description: `Nuestra granola clásica es la receta original que dio vida a Poppy. Un equilibrio perfecto entre la avena sin gluten, la miel ecológica de apicultores locales y una mezcla premium de frutos secos que define nuestro sabor característico.
+
+La avena se remoja cuidadosamente antes de hornear, lo que le otorga esa textura crujiente pero delicada que tanto gusta. La miel ecológica carameliza suavemente durante el tostado lento, creando clusters perfectos.
+
+Nueces pecanas, almendras, avellanas y anacardos se tuestan junto con semillas de girasol y calabaza, aportando un perfil de sabor complejo y satisfactorio. El toque sutil de canela y jengibre completa la experiencia.
+
+**El sabor que nos hizo famosos. Sencillo, auténtico, irresistible.**`,
+    shortDescription:
+      'Nuestra receta original con miel ecológica y frutos secos premium. El sabor clásico que nos define.',
+    priceInCents: 900,
+    weight: 250,
+    ingredients:
+      'Copos de avena sin gluten* (40%), miel ecológica* (12%), nueces pecanas (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), sal marina (0.5%). *De agricultura ecológica.',
+    allergens:
+      'Contiene: frutos de cáscara (almendras, avellanas, anacardos, nueces pecanas). Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
+    nutritionalInfo: {
+      servingSize: 'por 100g',
+      calories: 445,
+      fat: 22,
+      saturatedFat: 5.2,
+      carbohydrates: 48,
+      sugars: 14,
+      fiber: 7.5,
+      protein: 11,
+      salt: 0.08,
+    },
+    images: ['/products/granola-clasica.jpg'],
+    stock: 200,
+    isActive: true,
+    categoryId: 'cat_granola',
+    tags: ['sin-gluten', 'ecológico', 'artesanal', 'clásico', 'original', 'con-miel'],
+    metaTitle: 'Granola Clásica 250g | Sin Gluten | Poppy',
+    metaDescription:
+      'Granola Poppy clásica 250g. Sin gluten, con miel ecológica y frutos secos premium. Nuestra receta original. Envío gratis +4 bolsas.',
+    hasHoney: true,
+    isVegan: false,
+  },
+  {
     id: 'prod_granola_chocolate',
     sku: 'GRAN-250-CHO',
     name: 'Granola de Chocolate',
