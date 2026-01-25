@@ -87,9 +87,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    // Add these when you have the codes
-    // google: 'your-google-verification-code',
-    // yandex: 'your-yandex-verification-code',
+    google: 'GbX2brF7bgtG_rR_nC4LDj4PMRQIXA3H1E3mvD43D8I',
   },
   category: 'food',
 };
