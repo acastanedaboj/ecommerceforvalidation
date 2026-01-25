@@ -190,6 +190,13 @@ export default function RootLayout({
             />
           </>
         )}
+
+        {/* Ahrefs Analytics */}
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="h5AGfn3DdpbaDrNA9emzVQ"
+          async
+        />
         </SessionProvider>
       </body>
     </html>
