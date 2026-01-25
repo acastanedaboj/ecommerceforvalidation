@@ -24,6 +24,9 @@ export interface Product {
   tags: string[];
   metaTitle: string;
   metaDescription: string;
+  // Dietary info
+  hasHoney: boolean; // true = con miel, false = sin miel (apto vegano)
+  isVegan: boolean;
 }
 
 export interface NutritionalInfo {
@@ -52,11 +55,11 @@ Perfecta para el desayuno, como topping de yogur o simplemente para picar entre 
 
 **El sabor del chocolate, pero con ingredientes reales.**`,
     shortDescription:
-      'Granola con cacao puro y pepitas de chocolate negro 70%. La opcion perfecta para los amantes del chocolate saludable.',
+      'Granola con cacao puro y pepitas de chocolate negro 70%. Endulzada con miel ecologica. La opcion perfecta para los amantes del chocolate saludable.',
     priceInCents: 900,
     weight: 250,
     ingredients:
-      'Copos de avena certificada sin gluten* (38%), miel ecologica* (10%), pepitas de chocolate negro 70% (12%), cacao en polvo puro* (8%), nibs de cacao* (5%), almendras (8%), avellanas (6%), aceite de coco virgen extra* (4%), pipas de girasol (4%), lino molido (3%), vainilla natural (1%), sal marina (0.5%). *De agricultura ecologica.',
+      'Copos de avena sin gluten* (38%), miel ecologica* (10%), pepitas de chocolate negro 70% (12%), cacao en polvo puro* (8%), nibs de cacao* (5%), almendras (8%), avellanas (6%), aceite de coco virgen extra* (4%), pipas de girasol (4%), lino molido (3%), vainilla natural (1%), sal marina (0.5%). *De agricultura ecologica.',
     allergens:
       'Contiene: frutos de cascara (avellanas, almendras), cacao. Producido en instalaciones que procesan gluten, soja y sesamo. Control de contaminacion cruzada segun estandar ≤20 ppm de gluten.',
     nutritionalInfo: {
@@ -74,10 +77,12 @@ Perfecta para el desayuno, como topping de yogur o simplemente para picar entre 
     stock: 150,
     isActive: true,
     categoryId: 'cat_granola',
-    tags: ['sin-gluten', 'ecologico', 'artesanal', 'cacao', 'chocolate'],
+    tags: ['sin-gluten', 'ecologico', 'artesanal', 'cacao', 'chocolate', 'con-miel'],
     metaTitle: 'Granola de Chocolate 250g | Sin Gluten | Poppy',
     metaDescription:
-      'Granola Poppy de chocolate con cacao puro 250g. Sin gluten, sin azucares añadidos. El sabor del chocolate saludable. Envio gratis +4 bolsas.',
+      'Granola Poppy de chocolate con cacao puro 250g. Sin gluten, endulzada con miel ecologica. Envio gratis +4 bolsas.',
+    hasHoney: true,
+    isVegan: false,
   },
   {
     id: 'prod_granola_naranja',
@@ -92,11 +97,11 @@ El toque de canela de Ceilan y jengibre fresco realzan los aromas naturales de l
 
 **Frescura mediterranea en tu desayuno.**`,
     shortDescription:
-      'Granola con naranja natural y miel de azahar. Un toque citrico y refrescante para empezar el dia.',
+      'Granola con naranja natural y miel de azahar ecologica. Un toque citrico y refrescante para empezar el dia.',
     priceInCents: 900,
     weight: 250,
     ingredients:
-      'Copos de avena certificada sin gluten* (40%), miel de azahar ecologica* (12%), almendras marcona (10%), nueces (8%), naranja confitada (8%), ralladura de naranja natural (3%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilan (1%), jengibre en polvo (1%). *De agricultura ecologica.',
+      'Copos de avena sin gluten* (40%), miel de azahar ecologica* (12%), almendras marcona (10%), nueces (8%), naranja confitada (8%), ralladura de naranja natural (3%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilan (1%), jengibre en polvo (1%). *De agricultura ecologica.',
     allergens:
       'Contiene: frutos de cascara (almendras, nueces). Producido en instalaciones que procesan gluten, soja y sesamo. Control de contaminacion cruzada segun estandar ≤20 ppm de gluten.',
     nutritionalInfo: {
@@ -114,10 +119,12 @@ El toque de canela de Ceilan y jengibre fresco realzan los aromas naturales de l
     stock: 200,
     isActive: true,
     categoryId: 'cat_granola',
-    tags: ['sin-gluten', 'ecologico', 'artesanal', 'citricos', 'naranja'],
+    tags: ['sin-gluten', 'ecologico', 'artesanal', 'citricos', 'naranja', 'con-miel'],
     metaTitle: 'Granola de Naranja 250g | Sin Gluten | Poppy',
     metaDescription:
       'Granola Poppy de naranja 250g sin gluten. Ralladura de naranja natural y miel de azahar ecologica. Frescura mediterranea. Envio gratis +4 bolsas.',
+    hasHoney: true,
+    isVegan: false,
   },
   {
     id: 'prod_granola_datiles',
@@ -132,11 +139,11 @@ El toque de cardamomo y canela transporta a los zocos del Mediterraneo, mientras
 
 **Dulzura natural, sin azucares añadidos.**`,
     shortDescription:
-      'Granola con datiles Medjool y frutos secos. Dulzura 100% natural sin azucares añadidos.',
+      'Granola con datiles Medjool y frutos secos. Sin miel, apta para veganos. Dulzura 100% natural sin azucares añadidos.',
     priceInCents: 900,
     weight: 250,
     ingredients:
-      'Copos de avena certificada sin gluten* (38%), datiles Medjool (18%), almendras (10%), nueces pecanas (8%), anacardos (6%), semillas de sesamo tostado (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), cardamomo molido (1%), canela de Ceilan (1%), sal marina (0.5%). *De agricultura ecologica.',
+      'Copos de avena sin gluten* (38%), datiles Medjool (18%), almendras (10%), nueces pecanas (8%), anacardos (6%), semillas de sesamo tostado (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), cardamomo molido (1%), canela de Ceilan (1%), sal marina (0.5%). *De agricultura ecologica.',
     allergens:
       'Contiene: frutos de cascara (almendras, nueces pecanas, anacardos), sesamo. Producido en instalaciones que procesan gluten y soja. Control de contaminacion cruzada segun estandar ≤20 ppm de gluten.',
     nutritionalInfo: {
@@ -154,10 +161,12 @@ El toque de cardamomo y canela transporta a los zocos del Mediterraneo, mientras
     stock: 180,
     isActive: true,
     categoryId: 'cat_granola',
-    tags: ['sin-gluten', 'ecologico', 'artesanal', 'datiles', 'sin-azucar'],
-    metaTitle: 'Granola de Datiles 250g | Sin Azucar Añadido | Poppy',
+    tags: ['sin-gluten', 'ecologico', 'artesanal', 'datiles', 'sin-azucar', 'vegano', 'sin-miel'],
+    metaTitle: 'Granola de Datiles 250g | Vegana Sin Miel | Poppy',
     metaDescription:
-      'Granola Poppy de datiles Medjool 250g. Sin gluten, sin azucares añadidos. Dulzura 100% natural. Envio gratis +4 bolsas.',
+      'Granola Poppy de datiles Medjool 250g. Sin gluten, vegana, sin miel. Dulzura 100% natural. Envio gratis +4 bolsas.',
+    hasHoney: false,
+    isVegan: true,
   },
   {
     id: 'prod_granola_horeca',
@@ -172,11 +181,11 @@ Nuestra granola clasica en formato horeca mantiene todas las cualidades que nos 
 
 Solicita informacion sobre precios mayoristas y condiciones de distribucion a traves de nuestro formulario B2B.`,
     shortDescription:
-      'Formato 1kg para hosteleria y tiendas. Misma receta artesanal, tamaño profesional.',
+      'Formato 1kg para hosteleria y tiendas. Endulzada con miel ecologica. Misma receta artesanal, tamaño profesional.',
     priceInCents: 2800,
     weight: 1000,
     ingredients:
-      'Copos de avena certificada sin gluten* (40%), miel ecologica* (12%), nueces pecanas (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilan (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecologica.',
+      'Copos de avena sin gluten* (40%), miel ecologica* (12%), nueces pecanas (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilan (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecologica.',
     allergens:
       'Contiene: frutos de cascara (almendras, avellanas, anacardos, nueces pecanas). Producido en instalaciones que procesan gluten, soja y sesamo. Control de contaminacion cruzada segun estandar ≤20 ppm de gluten.',
     nutritionalInfo: {
@@ -194,10 +203,12 @@ Solicita informacion sobre precios mayoristas y condiciones de distribucion a tr
     stock: 50,
     isActive: true,
     categoryId: 'cat_horeca',
-    tags: ['sin-gluten', 'ecologico', 'artesanal', 'horeca', 'b2b'],
+    tags: ['sin-gluten', 'ecologico', 'artesanal', 'horeca', 'b2b', 'con-miel'],
     metaTitle: 'Granola Clasica 1kg Horeca | Formato Profesional | Poppy',
     metaDescription:
-      'Granola Poppy formato 1kg para hosteleria y tiendas. Sin gluten, ecologica. Solicita precios mayoristas para tu negocio.',
+      'Granola Poppy formato 1kg para hosteleria y tiendas. Sin gluten, endulzada con miel ecologica. Solicita precios mayoristas.',
+    hasHoney: true,
+    isVegan: false,
   },
 ];
 

@@ -41,16 +41,16 @@ Si buscas una opción sin ningún tipo de azúcar añadido, nuestra granola no e
   },
   {
     id: 'faq_vegan',
-    question: '¿La granola es vegana?',
-    answer: `**No, nuestra granola no es vegana** porque contiene miel de abejas.
+    question: '¿Tenéis opciones veganas?',
+    answer: `**Sí, nuestra Granola de Dátiles es 100% vegana**, ya que no contiene miel ni ningún ingrediente de origen animal.
 
-Entendemos que muchas personas buscan opciones veganas, y aunque la miel es un producto natural, proviene de las abejas. Hemos elegido mantener la miel en nuestra receta porque:
+La mayoría de nuestras granolas contienen miel ecológica como endulzante natural. Elegimos miel porque:
 
 - Es el endulzante que mejor resultado da en textura y sabor
 - Proviene de apicultores locales con prácticas éticas
 - Aporta propiedades beneficiosas adicionales
 
-Si sigues una dieta vegana estricta, te recomendamos buscar alternativas que utilicen siropes vegetales como endulzante.`,
+**Para veganos:** Nuestra Granola de Dátiles utiliza dátiles Medjool como endulzante natural, ofreciendo una dulzura intensa sin necesidad de miel. Está claramente etiquetada como "Sin miel (vegana)" en nuestra tienda.`,
     category: 'producto',
     order: 3,
   },

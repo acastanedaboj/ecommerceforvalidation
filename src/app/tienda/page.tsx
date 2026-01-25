@@ -98,28 +98,23 @@ export default function TiendaPage() {
           </div>
         </section>
 
-        {/* Horeca products */}
+        {/* Horeca CTA - Link to B2B page */}
         {horecaProducts.length > 0 && (
           <section className="mb-16">
-            <div className="bg-cream-100 rounded-2xl p-8 md:p-10 mb-10 border border-cream-200">
-              <h2 className="font-display text-2xl font-medium text-stone-800 mb-3">
+            <div className="bg-stone-800 rounded-2xl p-8 md:p-10 text-white">
+              <h2 className="font-display text-2xl font-medium mb-3">
                 Formato profesional (Horeca)
               </h2>
-              <p className="text-stone-500">
-                Tienes una cafeteria, hotel o tienda? Consulta nuestros formatos de 1kg
+              <p className="text-stone-300 mb-6">
+                Tienes una cafeteria, hotel o tienda? Ofrecemos formatos de 1kg
                 y condiciones especiales para profesionales.
               </p>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
-              {horecaProducts.map((product, index) => (
-                <div
-                  key={product.id}
-                  className="animate-fade-in-up"
-                  style={{ animationDelay: `${index * 100}ms` }}
-                >
-                  <ProductCard product={product} showQuickAdd={false} />
-                </div>
-              ))}
+              <a
+                href="/mayorista"
+                className="inline-flex items-center gap-2 bg-white text-stone-800 px-6 py-3 rounded-full font-medium hover:bg-cream-100 transition-colors"
+              >
+                Ver condiciones mayorista
+              </a>
             </div>
           </section>
         )}
@@ -136,8 +131,8 @@ export default function TiendaPage() {
               </h3>
               <p className="text-stone-500 mb-4">
                 Todos nuestros sabores comparten la misma base de calidad: avena sin gluten
-                remojada, miel ecologica y frutos secos premium. La diferencia esta en los
-                toques especiales de cada variedad.
+                y frutos secos premium. La mayoria estan endulzados con miel ecologica,
+                y tenemos una opcion vegana (Datiles) sin miel.
               </p>
               <p className="text-sm text-earth-600 font-medium">
                 Consejo: Empieza con el sabor clasico y luego explora los demas.
