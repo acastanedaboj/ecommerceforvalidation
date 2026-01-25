@@ -74,41 +74,52 @@ export default function BlogPostPage({ params }: Props) {
 
   // Simple markdown-like parsing for the content
   const formatContent = (content: string) => {
+    // Helper function to parse inline markdown (bold)
+    const parseInline = (text: string) => {
+      return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    };
+
     return content
       .split('\n')
       .map((line, index) => {
         // Headers
         if (line.startsWith('# ')) {
           return (
-            <h1 key={index} className="text-3xl font-display font-bold text-neutral-900 mt-8 mb-4">
-              {line.slice(2)}
-            </h1>
+            <h1
+              key={index}
+              className="text-3xl font-display font-bold text-neutral-900 mt-8 mb-4"
+              dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
+            />
           );
         }
         if (line.startsWith('## ')) {
           return (
-            <h2 key={index} className="text-2xl font-display font-bold text-neutral-900 mt-8 mb-4">
-              {line.slice(3)}
-            </h2>
+            <h2
+              key={index}
+              className="text-2xl font-display font-bold text-neutral-900 mt-8 mb-4"
+              dangerouslySetInnerHTML={{ __html: parseInline(line.slice(3)) }}
+            />
           );
         }
         if (line.startsWith('### ')) {
           return (
-            <h3 key={index} className="text-xl font-semibold text-neutral-900 mt-6 mb-3">
-              {line.slice(4)}
-            </h3>
+            <h3
+              key={index}
+              className="text-xl font-semibold text-neutral-900 mt-6 mb-3"
+              dangerouslySetInnerHTML={{ __html: parseInline(line.slice(4)) }}
+            />
           );
         }
         // List items
         if (line.startsWith('- ')) {
           return (
-            <li key={index} className="text-neutral-600 ml-4">
-              {line.slice(2)}
-            </li>
+            <li
+              key={index}
+              className="text-neutral-600 ml-4"
+              dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
+            />
           );
         }
-        // Bold text
-        const boldLine = line.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
         // Empty lines
         if (line.trim() === '') {
           return <br key={index} />;
@@ -118,7 +129,7 @@ export default function BlogPostPage({ params }: Props) {
           <p
             key={index}
             className="text-neutral-600 mb-4"
-            dangerouslySetInnerHTML={{ __html: boldLine }}
+            dangerouslySetInnerHTML={{ __html: parseInline(line) }}
           />
         );
       });
