@@ -74,7 +74,7 @@ Aquí viene lo divertido: añade la granola en una sección, los frutos rojos fr
 
 ¡Comparte tu creación en Instagram con el hashtag #Poppy!
     `,
-    coverImage: '/images/blog/smoothie-bowl.jpg',
+    coverImage: '/images/blog/smoothie-bowl-granola.png',
     category: 'recetas',
     author: 'Equipo Poppy',
     publishedAt: '2024-01-15',
@@ -146,7 +146,7 @@ No toda la granola es igual. La próxima vez que desayunes tu bol de Poppy, recu
 
 **¿Tienes sensibilidad digestiva a los cereales?** Muchas personas que tienen problemas con la avena convencional toleran perfectamente nuestra granola gracias al proceso de remojo. ¡Pruébala y cuéntanos tu experiencia!
     `,
-    coverImage: '/images/blog/avena-sin-gluten.jpg',
+    coverImage: '/images/blog/granola-bowl-yogurt.png',
     category: 'nutricion',
     author: 'Equipo Poppy',
     publishedAt: '2024-01-08',
@@ -241,7 +241,7 @@ Sea cual sea la forma que elijas, recuerda: **añade la granola al final** para 
 
 #Poppy #DesayunoSaludable
     `,
-    coverImage: '/images/blog/formas-desayunar-granola.jpg',
+    coverImage: '/images/blog/5-formas-desayunar-granola.png',
     category: 'estilo-de-vida',
     author: 'Equipo Poppy',
     publishedAt: '2024-01-01',
@@ -306,7 +306,7 @@ En Poppy utilizamos avena de cultivos dedicados, procesada en instalaciones con 
 
 **Nota importante:** Si tienes enfermedad celíaca severa, consulta siempre con tu médico antes de introducir cualquier producto nuevo.
     `,
-    coverImage: '/images/blog/granola-sin-gluten-celiacos.jpg',
+    coverImage: '/images/blog/granola-sin-gluten-celiacos.png',
     category: 'nutricion',
     author: 'Equipo Poppy',
     publishedAt: '2024-01-22',
@@ -391,7 +391,7 @@ Esta receta aporta aproximadamente:
 
 ¡Prepara varios tarros el domingo y tendrás desayuno para toda la semana!
     `,
-    coverImage: '/images/blog/overnight-oats-granola.jpg',
+    coverImage: '/images/blog/overnight-oats-granola.png',
     category: 'recetas',
     author: 'Equipo Poppy',
     publishedAt: '2024-01-18',
@@ -464,7 +464,7 @@ Trabajamos con apicultores locales de la región de Castilla-La Mancha que pract
 
 Entendemos que la miel no es apta para veganos. Por eso, nuestra Granola de Dátiles utiliza dátiles Medjool como endulzante 100% vegetal, ofreciendo una alternativa igual de deliciosa.
     `,
-    coverImage: '/images/blog/miel-ecologica.jpg',
+    coverImage: '/images/blog/miel-ecologica.png',
     category: 'nutricion',
     author: 'Equipo Poppy',
     publishedAt: '2024-01-12',
@@ -550,7 +550,7 @@ Si practicas deporte, la granola puede ser un snack perfecto:
 
 La clave está en el equilibrio: la granola es un snack excelente, pero como todo, en su justa medida.
     `,
-    coverImage: '/images/blog/granola-snack.jpg',
+    coverImage: '/images/blog/granola-snack.png',
     category: 'estilo-de-vida',
     author: 'Equipo Poppy',
     publishedAt: '2024-01-05',
@@ -655,7 +655,7 @@ Aproximadamente el **25-30%** de nuestra granola son frutos secos y semillas. Es
 
 Esta proporción garantiza que en cada cucharada encuentres sabor, textura y nutrientes de los frutos secos, no solo avena con azúcar.
     `,
-    coverImage: '/images/blog/frutos-secos-granola.jpg',
+    coverImage: '/images/blog/frutos-secos-granola.png',
     category: 'nutricion',
     author: 'Equipo Poppy',
     publishedAt: '2023-12-28',
@@ -752,7 +752,7 @@ Tras el ejercicio, tienes una "ventana anabólica" de 30-60 minutos donde tu cue
 
 Este bowl es una comida completa. Si entrenas por la mañana, puede ser tu desayuno post-gym perfecto.
     `,
-    coverImage: '/images/blog/bowl-proteico.jpg',
+    coverImage: '/images/blog/bowl-proteico.png',
     category: 'recetas',
     author: 'Equipo Poppy',
     publishedAt: '2023-12-20',
@@ -861,7 +861,7 @@ La vitamina B12 no se encuentra de forma fiable en alimentos vegetales. Asegúra
 
 Un desayuno vegano bien planificado puede ser tan (o más) nutritivo que uno convencional. La clave está en la variedad y la planificación.
     `,
-    coverImage: '/images/blog/desayuno-vegano.jpg',
+    coverImage: '/images/blog/desayuno-vegano.png',
     category: 'nutricion',
     author: 'Equipo Poppy',
     publishedAt: '2023-12-15',
@@ -986,7 +986,7 @@ Si tu granola se ha ablandado ligeramente pero no huele rancia:
 
 Consulta siempre la fecha de consumo preferente en el envase.
     `,
-    coverImage: '/images/blog/conservar-granola.jpg',
+    coverImage: '/images/blog/conservar-granola.png',
     category: 'estilo-de-vida',
     author: 'Equipo Poppy',
     publishedAt: '2023-12-08',
@@ -1112,7 +1112,7 @@ No competimos con la granola industrial. Somos otra categoría. Hacemos granola 
 
 ¿Es más cara? Sí. ¿Merece la pena? Creemos que sí, y nuestros clientes también.
     `,
-    coverImage: '/images/blog/granola-casera-vs-industrial.jpg',
+    coverImage: '/images/blog/granola-casera-vs-industrial.png',
     category: 'estilo-de-vida',
     author: 'Equipo Poppy',
     publishedAt: '2023-12-01',
