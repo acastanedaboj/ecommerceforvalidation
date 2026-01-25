@@ -85,76 +85,92 @@ Aquí viene lo divertido: añade la granola en una sección, los frutos rojos fr
       'Aprende a preparar el smoothie bowl perfecto con granola Poppy y frutos rojos. Receta fácil, nutritiva y deliciosa para tus desayunos.',
   },
   {
-    id: 'post_beneficios_avena',
-    slug: 'beneficios-avena-sin-gluten-remojada',
-    title: '¿Por qué remojamos la avena? Los beneficios de la avena sin gluten',
+    id: 'post_remojo_frutos_secos',
+    slug: 'por-que-remojamos-frutos-secos-semillas',
+    title: 'Por qué remojamos los frutos secos y semillas en Poppy',
     excerpt:
-      'Descubre por qué el proceso de remojo de la avena marca la diferencia en digestibilidad y absorción de nutrientes. La ciencia detrás de nuestra granola.',
+      'Descubre el proceso tradicional de remojo de frutos secos y semillas que utilizamos en nuestra granola. Una técnica ancestral que puede mejorar la digestibilidad.',
     content: `
-# ¿Por qué remojamos la avena? Los beneficios de la avena sin gluten
+# Por qué remojamos los frutos secos y semillas
 
-En Poppy, uno de nuestros secretos mejor guardados es el **remojo previo de la avena**. No es solo tradición: hay ciencia detrás de este proceso ancestral que mejora significativamente la calidad de nuestra granola.
+En Poppy aplicamos una técnica tradicional que muchos han olvidado: el **remojo previo de los frutos secos y las semillas**. Este proceso ancestral, utilizado durante generaciones en diversas culturas, forma parte de nuestra manera de elaborar granola.
 
-## El problema del ácido fítico
+## ¿Qué remojamos exactamente?
 
-Los cereales integrales como la avena contienen **ácido fítico**, un compuesto que actúa como antinutriente. El ácido fítico se une a minerales importantes como el hierro, zinc, calcio y magnesio, reduciendo su absorción en el intestino.
+Antes de incorporarlos a nuestra granola, remojamos:
 
-Esto no significa que la avena sea mala, sino que hay formas de prepararla que maximizan sus beneficios.
+- **Almendras**
+- **Anacardos**
+- **Pipas de calabaza**
+- **Pipas de girasol**
+- **Semillas de lino**
 
-## La solución: el remojo
+Cada uno de estos ingredientes pasa por un proceso de remojo en agua durante varias horas antes del tostado.
 
-Cuando remojamos la avena en agua ligeramente ácida (nosotros usamos un toque de limón) durante varias horas:
+## La tradición del remojo
 
-1. **Se activan las enzimas** naturales del grano que descomponen el ácido fítico
-2. **Mejora la digestibilidad** de los almidones
-3. **Se liberan los nutrientes** para una mejor absorción
-4. **Se suaviza la fibra** sin perder sus beneficios
+El remojo de frutos secos y semillas es una práctica que se ha utilizado durante siglos en muchas culturas alrededor del mundo. Nuestras abuelas lo hacían de forma natural, sin necesidad de explicaciones científicas.
 
-## ¿Por qué avena sin gluten?
+### ¿Qué ocurre durante el remojo?
 
-La avena es naturalmente libre de gluten, pero la mayoría de la avena comercial está contaminada porque se procesa en las mismas instalaciones que el trigo, la cebada y el centeno.
+Los frutos secos y semillas contienen **fitatos** (ácido fítico), compuestos naturales que forman parte de la estructura de estos alimentos. El remojo en agua puede:
 
-Nuestra avena proviene de **cultivos dedicados** y se procesa en instalaciones exclusivas, garantizando niveles de gluten por debajo de 20 ppm (el umbral legal para etiquetarse como "sin gluten").
+- **Reducir parcialmente los fitatos** presentes en estos alimentos
+- **Ablandar la textura** de los frutos secos
+- **Suavizar el sabor**, haciéndolo más delicado
 
-## Beneficios de la avena para la salud
+## Nuestra experiencia
 
-### Beta-glucanos
-La avena es rica en beta-glucanos, un tipo de fibra soluble que:
-- Ayuda a regular el colesterol
-- Estabiliza los niveles de azúcar en sangre
-- Alimenta las bacterias beneficiosas del intestino
+Llevamos años elaborando granola con este método y hemos observado que:
 
-### Proteína vegetal
-Con aproximadamente 13g de proteína por 100g, la avena es uno de los cereales más proteicos.
+1. **El sabor es más suave y redondo** - Los frutos secos remojados y luego tostados tienen un perfil de sabor más delicado
+2. **La textura mejora** - Conseguimos un tostado más uniforme
+3. **Algunos clientes nos comentan** que la encuentran más fácil de digerir que otras granolas
 
-### Minerales y vitaminas
-Rica en manganeso, fósforo, magnesio, hierro y vitaminas del grupo B.
+## Lo que podemos decir (y lo que no)
 
-## Nuestro proceso
+Queremos ser transparentes sobre este proceso:
 
-1. **Selección:** Avena certificada sin gluten de origen controlado
-2. **Remojo:** 8-12 horas en agua con un toque de ácido
+**Lo que sí podemos afirmar:**
+- Es una técnica tradicional utilizada durante generaciones
+- Puede ayudar a algunas personas con digestiones sensibles
+- Mejora el sabor y la textura de los frutos secos
+- Forma parte de nuestro proceso artesanal
+
+**Lo que NO afirmamos:**
+- No hacemos declaraciones de salud
+- No decimos que "elimine" los antinutrientes (solo los reduce parcialmente)
+- Cada persona es diferente y los efectos pueden variar
+
+## Nuestro proceso completo
+
+1. **Selección:** Frutos secos y semillas de calidad premium
+2. **Remojo:** Varias horas en agua filtrada
 3. **Escurrido y secado:** Eliminamos el exceso de agua
-4. **Tostado lento:** A baja temperatura para preservar nutrientes
-5. **Mezclado:** Con miel ecológica, aceite de coco y frutos secos
+4. **Tostado artesanal:** A baja temperatura para un tostado uniforme
+5. **Mezclado:** Con avena sin gluten, miel ecológica y aceite de coco
 
-Este proceso lleva más tiempo que simplemente mezclar ingredientes, pero el resultado es una granola más digestiva, nutritiva y con mejor sabor.
+## ¿Por qué nos tomamos esta molestia?
 
-## Conclusión
+Sería mucho más fácil (y rápido) mezclar todos los ingredientes directamente. Pero en Poppy creemos en hacer las cosas bien, no en hacerlas rápido.
 
-No toda la granola es igual. La próxima vez que desayunes tu bol de Poppy, recuerda que cada bocado es el resultado de un proceso pensado para tu bienestar.
+Este proceso lleva más tiempo, pero creemos que el resultado merece la pena: una granola elaborada con mimo y siguiendo técnicas tradicionales que respetan los ingredientes.
 
-**¿Tienes sensibilidad digestiva a los cereales?** Muchas personas que tienen problemas con la avena convencional toleran perfectamente nuestra granola gracias al proceso de remojo. ¡Pruébala y cuéntanos tu experiencia!
+## Pruébala y cuéntanos
+
+Al final, lo importante es cómo te sienta a ti. Algunas personas notan diferencia con granolas elaboradas con este proceso, otras simplemente disfrutan del sabor.
+
+**¿Has probado nuestra granola?** Nos encantaría saber tu experiencia.
     `,
     coverImage: '/images/blog/granola-bowl-yogurt.png',
     category: 'nutricion',
     author: 'Equipo Poppy',
     publishedAt: '2024-01-08',
-    readingTime: 7,
-    tags: ['nutricion', 'avena', 'sin-gluten', 'digestion', 'salud'],
-    metaTitle: 'Beneficios de la Avena Sin Gluten Remojada | Poppy',
+    readingTime: 5,
+    tags: ['nutricion', 'frutos-secos', 'proceso-artesanal', 'digestion', 'tradicion'],
+    metaTitle: 'Por qué Remojamos los Frutos Secos y Semillas | Poppy',
     metaDescription:
-      'Descubre por qué el remojo de la avena mejora su digestibilidad y absorción de nutrientes. Aprende sobre los beneficios de la avena sin gluten certificada.',
+      'Descubre el proceso tradicional de remojo de frutos secos y semillas que utilizamos en Poppy. Una técnica ancestral para una granola artesanal.',
   },
   {
     id: 'post_desayuno_energetico',
