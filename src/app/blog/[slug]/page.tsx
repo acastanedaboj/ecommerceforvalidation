@@ -230,7 +230,7 @@ export default function BlogPostPage({ params }: Props) {
             ¿Te ha gustado este artículo?
           </h3>
           <p className="text-neutral-600 mb-4">
-            Prueba nuestra granola Nalu y ponla en práctica
+            Prueba nuestra granola Poppy y ponla en práctica
           </p>
           <Link href="/tienda" className="btn-primary">
             Ver productos

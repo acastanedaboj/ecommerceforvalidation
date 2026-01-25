@@ -5,7 +5,7 @@ import { getActiveProducts } from '@/data/products';
 export const metadata: Metadata = {
   title: 'Tienda',
   description:
-    'Compra granola Nalu sin gluten, ecológica y premium. Elige entre nuestros sabores y packs. Envío gratis a partir de 4 bolsas.',
+    'Compra granola Poppy sin gluten, ecológica y premium. Elige entre nuestros sabores y packs. Envío gratis a partir de 4 bolsas.',
 };
 
 export default function TiendaPage() {
@@ -22,7 +22,7 @@ export default function TiendaPage() {
             Nuestra tienda
           </h1>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Granola Nalu elaborada con ingredientes de calidad.
+            Granola Poppy elaborada con ingredientes de calidad.
             Elige tu sabor favorito y el pack que mejor se adapte a ti.
           </p>
         </div>

@@ -1,11 +1,11 @@
 // ==========================================
-// Business Constants - Nalu
+// Business Constants - Poppy
 // ==========================================
 
 export const BUSINESS = {
-  name: 'Nalu',
+  name: 'Poppy',
   tagline: 'Sin gluten real, orgánica, artesanal',
-  email: 'hola@nalu.es',
+  email: 'hola@poppy.es',
   phone: '+34 600 000 000',
   address: {
     street: 'Calle Ejemplo, 123',
@@ -14,8 +14,8 @@ export const BUSINESS = {
     country: 'España',
   },
   socialMedia: {
-    instagram: 'https://instagram.com/nalu_granola',
-    facebook: 'https://facebook.com/nalugranola',
+    instagram: 'https://instagram.com/poppy_granola',
+    facebook: 'https://facebook.com/poppygranola',
   },
 } as const;
 
@@ -95,13 +95,13 @@ export const CURRENCY = {
 // ==========================================
 
 export const SEO = {
-  titleTemplate: '%s | Nalu',
-  defaultTitle: 'Nalu - Granola Sin Gluten, Orgánica, Premium',
+  titleTemplate: '%s | Poppy',
+  defaultTitle: 'Poppy - Granola Sin Gluten, Orgánica, Premium',
   defaultDescription:
     'Granola artesanal 250g sin gluten real, elaborada con avena certificada, miel ecológica y frutos secos premium. Envío gratis a partir de 4 bolsas.',
-  siteUrl: process.env.NEXT_PUBLIC_APP_URL || 'https://nalu.es',
+  siteUrl: process.env.NEXT_PUBLIC_APP_URL || 'https://poppy.es',
   ogImage: '/images/og-image.jpg',
-  twitterHandle: '@nalu_granola',
+  twitterHandle: '@poppy_granola',
 } as const;
 
 // ==========================================

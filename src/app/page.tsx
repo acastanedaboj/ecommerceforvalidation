@@ -69,7 +69,7 @@ export default function HomePage() {
                 <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden shadow-soft-lg">
                   <Image
                     src="/products/hero.jpg"
-                    alt="Nalu granola con frutos secos y miel"
+                    alt="Poppy granola con frutos secos y miel"
                     fill
                     className="object-cover"
                     priority

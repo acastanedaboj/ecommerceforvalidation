@@ -1,5 +1,5 @@
 /**
- * Pricing Logic for Nalu
+ * Pricing Logic for Poppy
  *
  * Business Rules:
  * - Base price: 9.00€ per 250g bag

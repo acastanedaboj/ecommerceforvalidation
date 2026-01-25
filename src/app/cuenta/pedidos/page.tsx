@@ -2,7 +2,7 @@ import { Package, ShoppingBag, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Mis Pedidos | Nalu',
+  title: 'Mis Pedidos | Poppy',
   description: 'Consulta el historial de tus pedidos',
 };
 

@@ -167,7 +167,7 @@ export const useCartStore = create<CartState>()(
       getItemKey: generateItemKey,
     }),
     {
-      name: 'nalu-cart',
+      name: 'poppy-cart',
       partialize: (state) => ({ items: state.items }), // Only persist items
     }
   )

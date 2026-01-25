@@ -1,5 +1,5 @@
 /**
- * Blog/Recipes Data - Nalu
+ * Blog/Recipes Data - Poppy
  */
 
 export interface BlogPost {
@@ -39,7 +39,7 @@ El desayuno es la comida más importante del día, y este smoothie bowl es la pr
 - 1 cucharada de mantequilla de almendras (opcional)
 
 **Para el topping:**
-- 40g de Nalu Clásica
+- 40g de Poppy Clásica
 - Frutos rojos frescos al gusto
 - 1 cucharada de semillas de chía
 - Virutas de coco
@@ -72,17 +72,17 @@ Aquí viene lo divertido: añade la granola en una sección, los frutos rojos fr
 | Grasas | 14g |
 | Fibra | 9g |
 
-¡Comparte tu creación en Instagram con el hashtag #Nalu!
+¡Comparte tu creación en Instagram con el hashtag #Poppy!
     `,
     coverImage: '/images/blog/smoothie-bowl.jpg',
     category: 'recetas',
-    author: 'Equipo Nalu',
+    author: 'Equipo Poppy',
     publishedAt: '2024-01-15',
     readingTime: 5,
     tags: ['recetas', 'desayuno', 'smoothie-bowl', 'frutos-rojos', 'saludable'],
-    metaTitle: 'Receta: Smoothie Bowl con Granola y Frutos Rojos | Nalu',
+    metaTitle: 'Receta: Smoothie Bowl con Granola y Frutos Rojos | Poppy',
     metaDescription:
-      'Aprende a preparar el smoothie bowl perfecto con granola Nalu y frutos rojos. Receta fácil, nutritiva y deliciosa para tus desayunos.',
+      'Aprende a preparar el smoothie bowl perfecto con granola Poppy y frutos rojos. Receta fácil, nutritiva y deliciosa para tus desayunos.',
   },
   {
     id: 'post_beneficios_avena',
@@ -93,7 +93,7 @@ Aquí viene lo divertido: añade la granola en una sección, los frutos rojos fr
     content: `
 # ¿Por qué remojamos la avena? Los beneficios de la avena sin gluten
 
-En Nalu, uno de nuestros secretos mejor guardados es el **remojo previo de la avena**. No es solo tradición: hay ciencia detrás de este proceso ancestral que mejora significativamente la calidad de nuestra granola.
+En Poppy, uno de nuestros secretos mejor guardados es el **remojo previo de la avena**. No es solo tradición: hay ciencia detrás de este proceso ancestral que mejora significativamente la calidad de nuestra granola.
 
 ## El problema del ácido fítico
 
@@ -142,17 +142,17 @@ Este proceso lleva más tiempo que simplemente mezclar ingredientes, pero el res
 
 ## Conclusión
 
-No toda la granola es igual. La próxima vez que desayunes tu bol de Nalu, recuerda que cada bocado es el resultado de un proceso pensado para tu bienestar.
+No toda la granola es igual. La próxima vez que desayunes tu bol de Poppy, recuerda que cada bocado es el resultado de un proceso pensado para tu bienestar.
 
 **¿Tienes sensibilidad digestiva a los cereales?** Muchas personas que tienen problemas con la avena convencional toleran perfectamente nuestra granola gracias al proceso de remojo. ¡Pruébala y cuéntanos tu experiencia!
     `,
     coverImage: '/images/blog/avena-sin-gluten.jpg',
     category: 'nutricion',
-    author: 'Equipo Nalu',
+    author: 'Equipo Poppy',
     publishedAt: '2024-01-08',
     readingTime: 7,
     tags: ['nutricion', 'avena', 'sin-gluten', 'digestion', 'salud'],
-    metaTitle: 'Beneficios de la Avena Sin Gluten Remojada | Nalu',
+    metaTitle: 'Beneficios de la Avena Sin Gluten Remojada | Poppy',
     metaDescription:
       'Descubre por qué el remojo de la avena mejora su digestibilidad y absorción de nutrientes. Aprende sobre los beneficios de la avena sin gluten certificada.',
   },
@@ -165,7 +165,7 @@ No toda la granola es igual. La próxima vez que desayunes tu bol de Nalu, recue
     content: `
 # 5 formas de desayunar granola para empezar con energía
 
-Si piensas que la granola solo se come con leche en un bol, prepárate para descubrir un mundo de posibilidades. Aquí te dejamos cinco formas de disfrutar tu Nalu que transformarán tus mañanas.
+Si piensas que la granola solo se come con leche en un bol, prepárate para descubrir un mundo de posibilidades. Aquí te dejamos cinco formas de disfrutar tu Poppy que transformarán tus mañanas.
 
 ## 1. El clásico reinventado: Yogur griego con granola
 
@@ -185,7 +185,7 @@ Sí, es un clásico, pero hay trucos para elevarlo:
 **Ingredientes:**
 - 1 rebanada de pan de masa madre
 - 1/2 aguacate maduro
-- 2 cucharadas de Nalu
+- 2 cucharadas de Poppy
 - Sal en escamas
 - Un toque de aceite de oliva virgen extra
 
@@ -200,7 +200,7 @@ La noche trabaja por ti:
 - 40g de copos de avena
 - 150ml de bebida de almendras
 - 1 cucharada de semillas de chía
-- Por la mañana: 30g de Nalu + fruta
+- Por la mañana: 30g de Poppy + fruta
 
 **Preparación:**
 Mezcla la avena, leche y chía en un tarro. Refrigera toda la noche. Por la mañana, añade la granola y fruta. ¡Listo para llevar!
@@ -226,7 +226,7 @@ Para los que entrenan por la mañana:
 - 200ml de leche
 - 1 cucharada de mantequilla de cacahuete
 - 30g de proteína en polvo (opcional)
-- 30g de Nalu por encima
+- 30g de Poppy por encima
 
 **Preparación:**
 Bate todo excepto la granola. Sirve en un bol ancho y corona con la granola para añadir textura.
@@ -239,15 +239,15 @@ Sea cual sea la forma que elijas, recuerda: **añade la granola al final** para 
 
 ¿Cuál es tu forma favorita de comer granola? ¡Compártela con nosotros en redes sociales!
 
-#Nalu #DesayunoSaludable
+#Poppy #DesayunoSaludable
     `,
     coverImage: '/images/blog/formas-desayunar-granola.jpg',
     category: 'estilo-de-vida',
-    author: 'Equipo Nalu',
+    author: 'Equipo Poppy',
     publishedAt: '2024-01-01',
     readingTime: 4,
     tags: ['recetas', 'desayuno', 'ideas', 'saludable', 'energia'],
-    metaTitle: '5 Formas de Desayunar Granola con Energía | Nalu',
+    metaTitle: '5 Formas de Desayunar Granola con Energía | Poppy',
     metaDescription:
       'Descubre 5 ideas creativas para desayunar granola más allá del bol con leche. Recetas fáciles y deliciosas para empezar el día con energía.',
   },

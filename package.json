@@ -1,8 +1,8 @@
 {
-  "name": "nalu-ecommerce",
+  "name": "poppy-ecommerce",
   "version": "1.0.0",
   "private": true,
-  "description": "E-commerce de Nalu - Granola sin gluten, orgánica, premium",
+  "description": "E-commerce de Poppy - Granola sin gluten, orgánica, premium",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

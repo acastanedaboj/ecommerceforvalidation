@@ -3,7 +3,7 @@ import { BUSINESS } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Política de Cookies',
-  description: 'Política de cookies de Nalu.',
+  description: 'Política de cookies de Poppy.',
 };
 
 export default function CookiesPage() {
@@ -43,7 +43,7 @@ export default function CookiesPage() {
             </thead>
             <tbody>
               <tr>
-                <td className="p-2 border-b">nalu-cart</td>
+                <td className="p-2 border-b">poppy-cart</td>
                 <td className="p-2 border-b">Guardar el carrito de compra</td>
                 <td className="p-2 border-b">30 días</td>
               </tr>

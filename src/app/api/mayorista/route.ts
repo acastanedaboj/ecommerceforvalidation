@@ -105,7 +105,7 @@ export async function POST(request: Request) {
 
         <div style="background-color: #44403c; padding: 20px; text-align: center;">
           <p style="color: #d6d3d1; margin: 0; font-size: 14px;">
-            Este email fue enviado desde el formulario de mayoristas de Nalu
+            Este email fue enviado desde el formulario de mayoristas de Poppy
           </p>
         </div>
       </div>
@@ -113,7 +113,7 @@ export async function POST(request: Request) {
 
     // Send email
     const { error } = await resend.emails.send({
-      from: 'Nalu <onboarding@resend.dev>',
+      from: 'Poppy <onboarding@resend.dev>',
       to: [NOTIFY_EMAIL],
       replyTo: data.email,
       subject: `Nueva solicitud mayorista: ${data.companyName}`,

@@ -1,5 +1,5 @@
 /**
- * Product Data - Nalu
+ * Product Data - Poppy
  *
  * All prices are in cents (900 = 9.00€)
  * Weights are in grams
@@ -75,9 +75,9 @@ Perfecta para el desayuno, como topping de yogur o simplemente para picar entre 
     isActive: true,
     categoryId: 'cat_granola',
     tags: ['sin-gluten', 'ecologico', 'artesanal', 'cacao', 'chocolate'],
-    metaTitle: 'Granola de Chocolate 250g | Sin Gluten | Nalu',
+    metaTitle: 'Granola de Chocolate 250g | Sin Gluten | Poppy',
     metaDescription:
-      'Granola Nalu de chocolate con cacao puro 250g. Sin gluten, sin azucares añadidos. El sabor del chocolate saludable. Envio gratis +4 bolsas.',
+      'Granola Poppy de chocolate con cacao puro 250g. Sin gluten, sin azucares añadidos. El sabor del chocolate saludable. Envio gratis +4 bolsas.',
   },
   {
     id: 'prod_granola_naranja',
@@ -115,9 +115,9 @@ El toque de canela de Ceilan y jengibre fresco realzan los aromas naturales de l
     isActive: true,
     categoryId: 'cat_granola',
     tags: ['sin-gluten', 'ecologico', 'artesanal', 'citricos', 'naranja'],
-    metaTitle: 'Granola de Naranja 250g | Sin Gluten | Nalu',
+    metaTitle: 'Granola de Naranja 250g | Sin Gluten | Poppy',
     metaDescription:
-      'Granola Nalu de naranja 250g sin gluten. Ralladura de naranja natural y miel de azahar ecologica. Frescura mediterranea. Envio gratis +4 bolsas.',
+      'Granola Poppy de naranja 250g sin gluten. Ralladura de naranja natural y miel de azahar ecologica. Frescura mediterranea. Envio gratis +4 bolsas.',
   },
   {
     id: 'prod_granola_datiles',
@@ -155,9 +155,9 @@ El toque de cardamomo y canela transporta a los zocos del Mediterraneo, mientras
     isActive: true,
     categoryId: 'cat_granola',
     tags: ['sin-gluten', 'ecologico', 'artesanal', 'datiles', 'sin-azucar'],
-    metaTitle: 'Granola de Datiles 250g | Sin Azucar Añadido | Nalu',
+    metaTitle: 'Granola de Datiles 250g | Sin Azucar Añadido | Poppy',
     metaDescription:
-      'Granola Nalu de datiles Medjool 250g. Sin gluten, sin azucares añadidos. Dulzura 100% natural. Envio gratis +4 bolsas.',
+      'Granola Poppy de datiles Medjool 250g. Sin gluten, sin azucares añadidos. Dulzura 100% natural. Envio gratis +4 bolsas.',
   },
   {
     id: 'prod_granola_horeca',
@@ -195,9 +195,9 @@ Solicita informacion sobre precios mayoristas y condiciones de distribucion a tr
     isActive: true,
     categoryId: 'cat_horeca',
     tags: ['sin-gluten', 'ecologico', 'artesanal', 'horeca', 'b2b'],
-    metaTitle: 'Granola Clasica 1kg Horeca | Formato Profesional | Nalu',
+    metaTitle: 'Granola Clasica 1kg Horeca | Formato Profesional | Poppy',
     metaDescription:
-      'Granola Nalu formato 1kg para hosteleria y tiendas. Sin gluten, ecologica. Solicita precios mayoristas para tu negocio.',
+      'Granola Poppy formato 1kg para hosteleria y tiendas. Sin gluten, ecologica. Solicita precios mayoristas para tu negocio.',
   },
 ];
 
@@ -206,7 +206,7 @@ export const categories = [
     id: 'cat_granola',
     name: 'Granola 250g',
     slug: 'granola-250g',
-    description: 'Nuestra linea de granola Nalu en formato 250g, perfecta para consumo individual.',
+    description: 'Nuestra linea de granola Poppy en formato 250g, perfecta para consumo individual.',
     image: '/images/categories/granola-250g.jpg',
   },
   {

@@ -12,7 +12,7 @@ async function main() {
     create: {
       name: 'Granola 250g',
       slug: 'granola-250g',
-      description: 'Nuestra línea de granola Nalu en formato 250g',
+      description: 'Nuestra línea de granola Poppy en formato 250g',
       image: '/images/categories/granola-250g.jpg',
     },
   });
@@ -215,7 +215,7 @@ async function main() {
       isPublished: true,
       publishedAt: new Date('2024-01-15'),
       metaTitle: 'Receta: Smoothie Bowl con Granola',
-      metaDescription: 'Aprende a preparar el smoothie bowl perfecto con granola Nalu.',
+      metaDescription: 'Aprende a preparar el smoothie bowl perfecto con granola Poppy.',
     },
     {
       slug: 'beneficios-avena-sin-gluten',

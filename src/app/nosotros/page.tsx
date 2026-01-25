@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { Leaf, Heart, Sun, Users, Award, Truck, ArrowRight } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'Nosotros | Nalu',
+  title: 'Nosotros | Poppy',
   description:
     'Conoce nuestra historia. Elaboramos granola con ingredientes ecologicos y mucho amor. Sin gluten, sin azucares refinados, 100% natural.',
 };
@@ -323,7 +323,7 @@ export default function NosotrosPage() {
             ¿Listo para probar la diferencia?
           </h2>
           <p className="text-stone-600 mb-8">
-            Descubre por que miles de personas han elegido Nalu
+            Descubre por que miles de personas han elegido Poppy
             para empezar el dia con energia y sabor.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

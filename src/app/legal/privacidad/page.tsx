@@ -3,7 +3,7 @@ import { BUSINESS } from '@/lib/constants';
 
 export const metadata: Metadata = {
   title: 'Política de Privacidad',
-  description: 'Política de privacidad y protección de datos de Nalu.',
+  description: 'Política de privacidad y protección de datos de Poppy.',
 };
 
 export default function PrivacidadPage() {
