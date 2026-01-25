@@ -84,7 +84,7 @@ export default function RootLayout({
         <link rel="manifest" href="/manifest.json" />
 
         {/* Theme color */}
-        <meta name="theme-color" content="#A66842" />
+        <meta name="theme-color" content="#E05A47" />
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <SessionProvider>
@@ -113,20 +113,20 @@ export default function RootLayout({
           toastOptions={{
             duration: 4000,
             style: {
-              background: '#33312D',
-              color: '#FDF9F3',
+              background: '#1C1C1C',
+              color: '#FFFFFF',
               borderRadius: '12px',
             },
             success: {
               iconTheme: {
-                primary: '#8BA664',
-                secondary: '#FDF9F3',
+                primary: '#7D9160',
+                secondary: '#FFFFFF',
               },
             },
             error: {
               iconTheme: {
-                primary: '#ef4444',
-                secondary: '#FDF9F3',
+                primary: '#E05A47',
+                secondary: '#FFFFFF',
               },
             },
           }}
