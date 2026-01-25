@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { useCartStore, useCartItemCount } from '@/store/cart-store';
 import { NAVIGATION, BUSINESS } from '@/lib/constants';
@@ -56,15 +57,16 @@ export function Header() {
             {/* Logo */}
             <Link
               href="/"
-              className="group flex items-center gap-3"
+              className="group flex items-center"
             >
-              <span className="text-3xl md:text-4xl transition-transform duration-300 group-hover:scale-110">
-                {String.fromCodePoint(0x1F33E)}
-              </span>
-              <span className="font-display text-xl md:text-2xl font-medium text-stone-800 tracking-tight">
-                <span className="hidden sm:inline">{BUSINESS.name}</span>
-                <span className="sm:hidden">Granola</span>
-              </span>
+              <Image
+                src="/images/logo.png"
+                alt={BUSINESS.name}
+                width={140}
+                height={50}
+                className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+                priority
+              />
             </Link>
 
             {/* Desktop Navigation - Clean & Minimal */}

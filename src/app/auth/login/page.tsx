@@ -5,6 +5,7 @@ import { signIn, useSession } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 function LoginContent() {
   const { data: session, status } = useSession();
@@ -32,11 +33,15 @@ function LoginContent() {
       <div className="max-w-md w-full">
         {/* Header */}
         <div className="text-center mb-10">
-          <Link href="/" className="inline-flex items-center gap-3 mb-8">
-            <span className="text-4xl">{String.fromCodePoint(0x1F33E)}</span>
-            <span className="font-display text-2xl font-medium text-stone-800">
-              Poppy
-            </span>
+          <Link href="/" className="inline-block mb-8">
+            <Image
+              src="/images/logo.png"
+              alt="Poppy"
+              width={160}
+              height={56}
+              className="h-14 w-auto"
+              priority
+            />
           </Link>
           <h1 className="font-display text-3xl font-medium text-stone-800 mb-3">
             Iniciar sesion

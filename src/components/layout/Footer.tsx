@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
 import { NAVIGATION, BUSINESS } from '@/lib/constants';
 
@@ -14,14 +15,15 @@ export function Footer() {
           <div className="lg:col-span-5">
             <Link
               href="/"
-              className="inline-flex items-center gap-3 group"
+              className="inline-flex items-center group"
             >
-              <span className="text-3xl transition-transform duration-300 group-hover:scale-110">
-                {String.fromCodePoint(0x1F33E)}
-              </span>
-              <span className="font-display text-2xl font-medium text-cream-50">
-                {BUSINESS.name}
-              </span>
+              <Image
+                src="/images/logo.png"
+                alt={BUSINESS.name}
+                width={140}
+                height={50}
+                className="h-10 w-auto brightness-0 invert transition-transform duration-300 group-hover:scale-105"
+              />
             </Link>
             <p className="mt-5 text-cream-400 max-w-sm leading-relaxed">
               Granola elaborada con amor, ingredientes ecologicos y sin gluten real.
