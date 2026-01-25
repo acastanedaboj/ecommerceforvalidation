@@ -6,55 +6,74 @@ import { CartDrawer } from '@/components/cart/CartDrawer';
 import { SessionProvider } from '@/components/providers/SessionProvider';
 import { Toaster } from 'react-hot-toast';
 import { SEO } from '@/lib/constants';
+import {
+  buildOrganizationSchema,
+  buildWebsiteSchema,
+  SITE_URL,
+  BRAND_NAME,
+} from '@/lib/seo';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(SEO.siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: SEO.defaultTitle,
-    template: SEO.titleTemplate,
+    default: `${BRAND_NAME} - Granola Sin Gluten Premium, Ecológica y Artesanal`,
+    template: `%s | ${BRAND_NAME}`,
   },
-  description: SEO.defaultDescription,
+  description:
+    'Granola artesanal sin gluten elaborada con avena certificada (≤20ppm), miel ecológica y frutos secos premium. Opción vegana disponible. Envío gratis desde 4 unidades. Compra online en España.',
   keywords: [
-    'poppy',
-    'poppy granola',
     'granola sin gluten',
+    'granola sin gluten españa',
     'granola ecologica',
+    'granola organica',
     'granola premium',
-    'desayuno saludable',
+    'granola vegana',
     'avena sin gluten',
-    'snack saludable',
-    'granola espana',
+    'avena certificada sin gluten',
+    'desayuno sin gluten',
+    'snack saludable sin gluten',
+    'granola artesanal',
+    'granola miel ecologica',
+    'granola datiles',
+    'poppy granola',
+    'comprar granola online',
   ],
-  authors: [{ name: 'Poppy' }],
-  creator: 'Poppy',
-  publisher: 'Poppy',
+  authors: [{ name: BRAND_NAME, url: SITE_URL }],
+  creator: BRAND_NAME,
+  publisher: BRAND_NAME,
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
+  alternates: {
+    canonical: SITE_URL,
+  },
   openGraph: {
     type: 'website',
     locale: 'es_ES',
-    url: SEO.siteUrl,
-    siteName: 'Poppy',
-    title: SEO.defaultTitle,
-    description: SEO.defaultDescription,
+    url: SITE_URL,
+    siteName: BRAND_NAME,
+    title: `${BRAND_NAME} - Granola Sin Gluten Premium`,
+    description:
+      'Granola artesanal sin gluten con avena certificada, miel ecológica y frutos secos premium. Opción vegana disponible. Envío gratis +4 unidades.',
     images: [
       {
-        url: SEO.ogImage,
+        url: `${SITE_URL}/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Poppy - Granola sin gluten, organica, premium',
+        alt: 'Poppy - Granola sin gluten premium, ecológica y artesanal',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: SEO.defaultTitle,
-    description: SEO.defaultDescription,
-    images: [SEO.ogImage],
+    title: `${BRAND_NAME} - Granola Sin Gluten Premium`,
+    description:
+      'Granola artesanal sin gluten con avena certificada y miel ecológica. Opción vegana. Envío gratis +4 unidades.',
+    images: [`${SITE_URL}/images/og-image.jpg`],
     creator: SEO.twitterHandle,
+    site: SEO.twitterHandle,
   },
   robots: {
     index: true,
@@ -67,6 +86,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  verification: {
+    // Add these when you have the codes
+    // google: 'your-google-verification-code',
+    // yandex: 'your-yandex-verification-code',
+  },
+  category: 'food',
 };
 
 export default function RootLayout({
@@ -85,6 +110,22 @@ export default function RootLayout({
 
         {/* Theme color */}
         <meta name="theme-color" content="#E05A47" />
+
+        {/* JSON-LD: Organization Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildOrganizationSchema()),
+          }}
+        />
+
+        {/* JSON-LD: WebSite Schema with SearchAction */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildWebsiteSchema()),
+          }}
+        />
       </head>
       <body className="font-sans antialiased min-h-screen flex flex-col">
         <SessionProvider>

@@ -4,11 +4,21 @@ import Image from 'next/image';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { getAllBlogPosts, blogCategories } from '@/data/blog';
 import { formatDate } from '@/lib/utils';
+import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Blog & Recetas',
+  title: 'Blog de Recetas y Nutrición | Granola Sin Gluten',
   description:
-    'Descubre recetas deliciosas, consejos de nutrición y artículos sobre alimentación saludable en nuestro blog. Aprende a sacar el máximo partido a tu granola.',
+    'Recetas con granola, consejos de nutrición sin gluten y artículos sobre alimentación saludable. Smoothie bowls, overnight oats, tostadas y más ideas para tu desayuno.',
+  alternates: {
+    canonical: getCanonicalUrl('/blog'),
+  },
+  openGraph: {
+    title: 'Blog de Recetas y Nutrición | Poppy',
+    description:
+      'Ideas deliciosas para disfrutar tu granola, consejos de nutrición y recetas saludables.',
+    url: `${SITE_URL}/blog`,
+  },
 };
 
 export default function BlogPage() {
@@ -17,7 +27,16 @@ export default function BlogPage() {
   const otherPosts = posts.slice(1);
 
   return (
-    <div className="section">
+    <>
+      {/* JSON-LD: Breadcrumb Schema */}
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: 'Inicio', url: '/' },
+          { name: 'Blog', url: '/blog' },
+        ])}
+      />
+
+      <div className="section">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
@@ -156,5 +175,6 @@ export default function BlogPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

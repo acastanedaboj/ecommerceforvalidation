@@ -1,12 +1,22 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Package, Truck, CreditCard, RefreshCw, Shield } from 'lucide-react';
-import { faqs, faqCategories, getFAQsByCategory } from '@/data/faqs';
+import { faqs, faqCategories, getFAQsByCategory, getAllFAQs } from '@/data/faqs';
+import { SITE_URL, getCanonicalUrl, buildFaqSchema, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Preguntas Frecuentes (FAQ)',
+  title: 'Preguntas Frecuentes (FAQ) | Granola Sin Gluten',
   description:
-    'Encuentra respuestas a las preguntas más frecuentes sobre nuestra granola Poppy: ingredientes, envíos, pagos, suscripciones y más.',
+    'Resuelve tus dudas sobre granola Poppy: ingredientes sin gluten, opciones veganas, envíos a España, métodos de pago, suscripciones y política de devoluciones.',
+  alternates: {
+    canonical: getCanonicalUrl('/faq'),
+  },
+  openGraph: {
+    title: 'Preguntas Frecuentes | Poppy',
+    description:
+      'Todo lo que necesitas saber sobre nuestra granola sin gluten: ingredientes, envíos, pagos y suscripciones.',
+    url: `${SITE_URL}/faq`,
+  },
 };
 
 const categoryIcons: Record<string, React.ReactNode> = {
@@ -18,8 +28,22 @@ const categoryIcons: Record<string, React.ReactNode> = {
 };
 
 export default function FAQPage() {
+  const allFaqs = getAllFAQs();
+
   return (
-    <div className="section">
+    <>
+      {/* JSON-LD: FAQ Schema */}
+      <JsonLd data={buildFaqSchema(allFaqs)} />
+
+      {/* JSON-LD: Breadcrumb Schema */}
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: 'Inicio', url: '/' },
+          { name: 'Preguntas Frecuentes', url: '/faq' },
+        ])}
+      />
+
+      <div className="section">
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
@@ -113,5 +137,6 @@ export default function FAQPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

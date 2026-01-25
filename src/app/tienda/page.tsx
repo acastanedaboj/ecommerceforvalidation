@@ -1,10 +1,11 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { ProductCard } from '@/components/product/ProductCard';
 import { BundleBuilderModal } from '@/components/bundle';
 import { getActiveProducts } from '@/data/products';
-import { Lightbulb, SlidersHorizontal, Package } from 'lucide-react';
+import { Lightbulb, SlidersHorizontal, Package, ChevronRight } from 'lucide-react';
 
 export default function TiendaPage() {
   const [isBundleModalOpen, setIsBundleModalOpen] = useState(false);
@@ -16,6 +17,21 @@ export default function TiendaPage() {
   return (
     <div className="section bg-cream-50">
       <div className="container-custom">
+        {/* Breadcrumbs */}
+        <nav className="mb-8" aria-label="Breadcrumb">
+          <ol className="flex items-center gap-1 text-sm">
+            <li>
+              <Link href="/" className="text-stone-400 hover:text-earth-600 transition-colors">
+                Inicio
+              </Link>
+            </li>
+            <li>
+              <ChevronRight className="w-4 h-4 text-stone-300" />
+            </li>
+            <li className="text-stone-700 font-medium">Tienda</li>
+          </ol>
+        </nav>
+
         {/* Page header */}
         <div className="text-center mb-14">
           <h1 className="font-display text-stone-800 mb-5">

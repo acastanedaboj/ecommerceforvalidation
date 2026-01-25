@@ -4,11 +4,21 @@ import { Check, RefreshCw, Truck, CreditCard, X, ArrowRight, Gift } from 'lucide
 import { formatPrice } from '@/lib/utils';
 import { getSubscriptionInfo, calculatePackUnitPrice } from '@/lib/pricing';
 import { PRICING } from '@/lib/constants';
+import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Suscripción Mensual',
+  title: 'Suscripción Mensual de Granola Sin Gluten | 15% Descuento',
   description:
-    'Suscríbete y ahorra un 15% en tu granola Poppy. Recibe 6 bolsas cada mes, envío gratis y cancela cuando quieras. Sin compromisos.',
+    'Suscríbete y ahorra un 15% en granola Poppy sin gluten. Recibe 6 bolsas cada mes con envío gratis. Sin permanencia, cancela cuando quieras.',
+  alternates: {
+    canonical: getCanonicalUrl('/suscripcion'),
+  },
+  openGraph: {
+    title: 'Suscripción Mensual | 15% Descuento | Poppy',
+    description:
+      'Ahorra un 15% con la suscripción mensual de granola sin gluten. Envío gratis, sin compromiso.',
+    url: `${SITE_URL}/suscripcion`,
+  },
 };
 
 export default function SuscripcionPage() {
@@ -17,6 +27,14 @@ export default function SuscripcionPage() {
 
   return (
     <>
+      {/* JSON-LD: Breadcrumb Schema */}
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: 'Inicio', url: '/' },
+          { name: 'Suscripción', url: '/suscripcion' },
+        ])}
+      />
+
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16 md:py-24">
         <div className="container-custom">

@@ -2,11 +2,21 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Leaf, Heart, Sun, Users, Award, Truck, ArrowRight } from 'lucide-react';
+import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Nosotros | Poppy',
+  title: 'Nuestra Historia | Granola Artesanal Sin Gluten',
   description:
-    'Conoce nuestra historia. Elaboramos granola con ingredientes ecologicos y mucho amor. Sin gluten, sin azucares refinados, 100% natural.',
+    'Conoce la historia de Poppy. Desde 2019 elaboramos granola artesanal sin gluten con ingredientes ecológicos y miel local. 100% natural, hecha con amor.',
+  alternates: {
+    canonical: getCanonicalUrl('/nosotros'),
+  },
+  openGraph: {
+    title: 'Nuestra Historia | Poppy',
+    description:
+      'Granola artesanal sin gluten elaborada con pasión. Ingredientes ecológicos, tostado lento, hecha a mano.',
+    url: `${SITE_URL}/nosotros`,
+  },
 };
 
 const values = [
@@ -57,7 +67,16 @@ const team = [
 
 export default function NosotrosPage() {
   return (
-    <div className="min-h-screen bg-cream-50">
+    <>
+      {/* JSON-LD: Breadcrumb Schema */}
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: 'Inicio', url: '/' },
+          { name: 'Nosotros', url: '/nosotros' },
+        ])}
+      />
+
+      <div className="min-h-screen bg-cream-50">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-earth-100 to-cream-50 py-20 sm:py-28">
         <div className="max-w-4xl mx-auto px-4 text-center">
@@ -343,6 +362,7 @@ export default function NosotrosPage() {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 }

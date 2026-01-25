@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Truck, Leaf, Heart, RefreshCw, Star, Check, Wheat, Droplets, Sparkles, TreeDeciduous } from 'lucide-react';
@@ -6,6 +7,23 @@ import { TestimonialCard } from '@/components/ui/TestimonialCard';
 import { getRetailProducts } from '@/data/products';
 import { formatPrice } from '@/lib/utils';
 import { getPackOptions, getSubscriptionInfo } from '@/lib/pricing';
+import { SITE_URL, BRAND_NAME, getCanonicalUrl } from '@/lib/seo';
+
+export const metadata: Metadata = {
+  title: `${BRAND_NAME} | Granola Sin Gluten Artesanal con Miel Ecológica`,
+  description:
+    'Granola artesanal sin gluten elaborada con avena remojada, miel ecológica de apicultores locales y frutos secos premium. Envío gratis desde 4 unidades. Compra online en España.',
+  alternates: {
+    canonical: getCanonicalUrl('/'),
+  },
+  openGraph: {
+    title: `${BRAND_NAME} - Granola Sin Gluten Artesanal`,
+    description:
+      'Granola artesanal sin gluten con avena remojada, miel ecológica y frutos secos premium. Opción vegana disponible. Envío gratis +4 unidades.',
+    url: SITE_URL,
+    type: 'website',
+  },
+};
 
 export default function HomePage() {
   const products = getRetailProducts();

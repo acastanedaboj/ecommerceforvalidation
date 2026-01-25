@@ -5,6 +5,13 @@ import { notFound } from 'next/navigation';
 import { Calendar, Clock, ChevronLeft, Share2 } from 'lucide-react';
 import { getBlogPostBySlug, getAllBlogPosts, blogCategories } from '@/data/blog';
 import { formatDate } from '@/lib/utils';
+import {
+  SITE_URL,
+  getCanonicalUrl,
+  buildArticleSchema,
+  buildBreadcrumbSchema,
+  JsonLd,
+} from '@/lib/seo';
 
 interface Props {
   params: { slug: string };
@@ -17,18 +24,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: 'Artículo no encontrado' };
   }
 
+  const postUrl = `/blog/${post.slug}`;
+
   return {
     title: post.metaTitle || post.title,
     description: post.metaDescription || post.excerpt,
+    alternates: {
+      canonical: getCanonicalUrl(postUrl),
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: 'article',
       publishedTime: post.publishedAt,
       authors: [post.author],
+      url: `${SITE_URL}${postUrl}`,
       images: [
         {
-          url: post.coverImage || '/images/og-image.jpg',
+          url: post.coverImage?.startsWith('http')
+            ? post.coverImage
+            : `${SITE_URL}${post.coverImage || '/images/og-image.jpg'}`,
           width: 1200,
           height: 630,
           alt: post.title,
@@ -54,6 +69,8 @@ export default function BlogPostPage({ params }: Props) {
   const relatedPosts = getAllBlogPosts()
     .filter((p) => p.id !== post.id && p.category === post.category)
     .slice(0, 2);
+
+  const postUrl = `/blog/${post.slug}`;
 
   // Simple markdown-like parsing for the content
   const formatContent = (content: string) => {
@@ -108,11 +125,24 @@ export default function BlogPostPage({ params }: Props) {
   };
 
   return (
-    <article className="section">
-      <div className="container-custom">
-        {/* Breadcrumb */}
-        <nav className="mb-8">
-          <Link
+    <>
+      {/* JSON-LD: Article Schema */}
+      <JsonLd data={buildArticleSchema(post, postUrl)} />
+
+      {/* JSON-LD: Breadcrumb Schema */}
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: 'Inicio', url: '/' },
+          { name: 'Blog', url: '/blog' },
+          { name: post.title, url: postUrl },
+        ])}
+      />
+
+      <article className="section">
+        <div className="container-custom">
+          {/* Breadcrumb */}
+          <nav className="mb-8">
+            <Link
             href="/blog"
             className="inline-flex items-center text-neutral-600 hover:text-primary-600"
           >
@@ -236,7 +266,8 @@ export default function BlogPostPage({ params }: Props) {
             Ver productos
           </Link>
         </section>
-      </div>
-    </article>
+        </div>
+      </article>
+    </>
   );
 }
