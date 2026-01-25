@@ -2,7 +2,7 @@
 
 import { cn } from '@/lib/utils';
 import { getPackOptions } from '@/lib/pricing';
-import { Truck } from 'lucide-react';
+import { Truck, Check } from 'lucide-react';
 
 interface PackPillSelectorProps {
   selectedPack: number;
@@ -25,17 +25,11 @@ export function PackPillSelector({
 }: PackPillSelectorProps) {
   const packOptions = getPackOptions();
 
-  const sizeClasses = {
-    sm: 'px-3 py-2 text-xs',
-    md: 'px-4 py-2.5 text-sm',
-    lg: 'px-5 py-3 text-base',
-  };
-
   return (
     <div
       className={cn(
-        'flex gap-3',
-        variant === 'grid' ? 'flex-wrap' : 'flex-row overflow-x-auto scrollbar-hide',
+        'grid gap-3',
+        variant === 'grid' ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-4',
         className
       )}
       role="radiogroup"
@@ -52,44 +46,56 @@ export function PackPillSelector({
             type="button"
             role="radio"
             aria-checked={isSelected}
-            aria-label={`${option.label}, ${formatPrice(option.unitPriceCents)} por unidad${hasSavings ? `, ahorra ${option.discountPercentage}%` : ''}${hasFreeShipping ? ', envio gratis' : ''}`}
+            aria-label={`${option.label}, ${formatPrice(option.unitPriceCents)} por unidad${hasSavings ? `, ahorra ${option.discountPercentage}%` : ''}${hasFreeShipping ? ', envío gratis' : ''}`}
             onClick={() => onSelect(option.size)}
             className={cn(
-              'relative inline-flex flex-col items-center justify-center rounded-full border-2 bg-white',
-              'transition-all duration-300 focus-visible:ring-2 focus-visible:ring-earth-400 focus-visible:ring-offset-2',
-              'hover:border-cream-300 hover:bg-cream-50',
-              sizeClasses[size],
+              'relative flex flex-col items-center justify-center rounded-xl border-2 bg-white p-4',
+              'transition-all duration-200 focus-visible:ring-2 focus-visible:ring-earth-400 focus-visible:ring-offset-2',
               isSelected
-                ? 'border-earth-500 bg-earth-50 text-earth-700 shadow-inner-glow'
-                : 'border-cream-200 text-stone-600',
-              variant === 'grid' ? 'min-w-[100px]' : 'flex-shrink-0'
+                ? 'border-earth-500 bg-earth-50 shadow-md'
+                : 'border-cream-200 hover:border-cream-300 hover:bg-cream-50'
             )}
           >
-            {/* Savings badge */}
-            {showSavings && hasSavings && (
-              <span className="absolute -top-2 -right-2 px-2 py-0.5 bg-olive-500 text-white text-[10px] font-bold rounded-full shadow-sm z-10">
-                -{option.discountPercentage}%
+            {/* Selection indicator */}
+            {isSelected && (
+              <span className="absolute top-2 right-2 w-5 h-5 bg-earth-500 rounded-full flex items-center justify-center">
+                <Check className="w-3 h-3 text-white" strokeWidth={3} />
               </span>
             )}
 
-            {/* Main content */}
-            <span className="font-medium whitespace-nowrap">
-              {option.size === 1 ? '1 ud' : `Pack ${option.size}`}
-            </span>
+            {/* Pack name */}
             <span className={cn(
-              'text-xs mt-0.5',
-              isSelected ? 'text-earth-600' : 'text-stone-400'
+              'font-display text-lg font-semibold',
+              isSelected ? 'text-earth-700' : 'text-stone-700'
+            )}>
+              {option.size === 1 ? '1 bolsa' : `Pack ${option.size}`}
+            </span>
+
+            {/* Price */}
+            <span className={cn(
+              'text-sm font-medium mt-1',
+              isSelected ? 'text-earth-600' : 'text-stone-500'
             )}>
               {formatPrice(option.unitPriceCents)}/ud
             </span>
 
-            {/* Free shipping indicator */}
-            {showShipping && hasFreeShipping && (
-              <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 flex items-center gap-1 px-2 py-0.5 bg-earth-500 text-white text-[9px] font-bold rounded-full shadow-sm whitespace-nowrap z-10">
-                <Truck className="w-2.5 h-2.5" />
-                Gratis
-              </span>
-            )}
+            {/* Badges row */}
+            <div className="flex items-center gap-1.5 mt-2 min-h-[20px]">
+              {/* Savings badge */}
+              {showSavings && hasSavings && (
+                <span className="px-2 py-0.5 bg-olive-100 text-olive-700 text-xs font-semibold rounded-full">
+                  -{option.discountPercentage}%
+                </span>
+              )}
+
+              {/* Free shipping indicator */}
+              {showShipping && hasFreeShipping && (
+                <span className="flex items-center gap-1 px-2 py-0.5 bg-earth-100 text-earth-700 text-xs font-medium rounded-full">
+                  <Truck className="w-3 h-3" />
+                  Gratis
+                </span>
+              )}
+            </div>
           </button>
         );
       })}
