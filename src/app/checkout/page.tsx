@@ -5,7 +5,8 @@ import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ChevronLeft, CreditCard, Truck, Shield, Lock } from 'lucide-react';
-import { useCartStore } from '@/store/cart-store';
+import { useCartStore, isCartBundleItem } from '@/store/cart-store';
+import { generateBundleSummary } from '@/lib/bundle';
 import { Input } from '@/components/ui/Input';
 import { Select } from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
@@ -160,14 +161,29 @@ export default function CheckoutPage() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            items: items.map((item) => ({
-              productId: item.productId,
-              productName: item.productName,
-              quantity: item.quantity,
-              packSize: item.packSize,
-              isSubscription: item.isSubscription,
-              priceInCents: item.priceInCents,
-            })),
+            items: items.map((item) => {
+              if (isCartBundleItem(item)) {
+                return {
+                  productId: item.bundleId,
+                  productName: item.bundleName,
+                  productDescription: generateBundleSummary(item.flavors),
+                  quantity: item.quantity,
+                  packSize: item.packSize,
+                  isSubscription: item.isSubscription,
+                  priceInCents: item.priceInCents,
+                  isBundle: true,
+                  flavors: item.flavors,
+                };
+              }
+              return {
+                productId: item.productId,
+                productName: item.productName,
+                quantity: item.quantity,
+                packSize: item.packSize,
+                isSubscription: item.isSubscription,
+                priceInCents: item.priceInCents,
+              };
+            }),
             customer: formData,
             paymentMethod,
           }),
@@ -187,14 +203,29 @@ export default function CheckoutPage() {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            items: items.map((item) => ({
-              productId: item.productId,
-              productName: item.productName,
-              quantity: item.quantity,
-              packSize: item.packSize,
-              isSubscription: item.isSubscription,
-              priceInCents: item.priceInCents,
-            })),
+            items: items.map((item) => {
+              if (isCartBundleItem(item)) {
+                return {
+                  productId: item.bundleId,
+                  productName: item.bundleName,
+                  productDescription: generateBundleSummary(item.flavors),
+                  quantity: item.quantity,
+                  packSize: item.packSize,
+                  isSubscription: item.isSubscription,
+                  priceInCents: item.priceInCents,
+                  isBundle: true,
+                  flavors: item.flavors,
+                };
+              }
+              return {
+                productId: item.productId,
+                productName: item.productName,
+                quantity: item.quantity,
+                packSize: item.packSize,
+                isSubscription: item.isSubscription,
+                priceInCents: item.priceInCents,
+              };
+            }),
             customer: formData,
             paymentMethod,
             totals: cartTotal,
@@ -478,41 +509,49 @@ export default function CheckoutPage() {
 
                 {/* Items */}
                 <div className="space-y-4 mb-6">
-                  {items.map((item) => (
-                    <div
-                      key={`${item.productId}-${item.packSize}-${item.isSubscription}`}
-                      className="flex gap-3"
-                    >
-                      <div className="relative w-16 h-16 bg-neutral-100 rounded-lg overflow-hidden flex-shrink-0">
-                        <Image
-                          src={item.productImage || '/images/placeholder-product.jpg'}
-                          alt={item.productName}
-                          fill
-                          className="object-cover"
-                          sizes="64px"
-                        />
+                  {items.map((item) => {
+                    const isBundle = isCartBundleItem(item);
+                    const itemKey = isBundle
+                      ? item.bundleId
+                      : `${item.productId}-${item.packSize}-${item.isSubscription}`;
+                    const itemName = isBundle ? item.bundleName : item.productName;
+                    const itemImage = isBundle
+                      ? item.flavors[0]?.productImage || '/images/placeholder-product.jpg'
+                      : item.productImage || '/images/placeholder-product.jpg';
+                    const itemId = isBundle ? item.bundleId : item.productId;
+                    const lineTotal = cartTotal.items.find(
+                      (i) =>
+                        i.productId === itemId &&
+                        i.packSize === item.packSize &&
+                        i.isSubscription === item.isSubscription
+                    )?.lineTotalCents || 0;
+
+                    return (
+                      <div key={itemKey} className="flex gap-3">
+                        <div className="relative w-16 h-16 bg-neutral-100 rounded-lg overflow-hidden flex-shrink-0">
+                          <Image
+                            src={itemImage}
+                            alt={itemName}
+                            fill
+                            className="object-cover"
+                            sizes="64px"
+                          />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="font-medium text-neutral-900 text-sm line-clamp-1">
+                            {itemName}
+                          </p>
+                          <p className="text-xs text-neutral-500">
+                            {isBundle
+                              ? generateBundleSummary(item.flavors)
+                              : `${item.packSize > 1 ? `Pack ${item.packSize}` : '1 ud'} x ${item.quantity}`}
+                            {item.isSubscription && ' (Suscripcion)'}
+                          </p>
+                        </div>
+                        <p className="text-sm font-medium">{formatPrice(lineTotal)}</p>
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <p className="font-medium text-neutral-900 text-sm line-clamp-1">
-                          {item.productName}
-                        </p>
-                        <p className="text-xs text-neutral-500">
-                          {item.packSize > 1 ? `Pack ${item.packSize}` : '1 ud'} x {item.quantity}
-                          {item.isSubscription && ' (Suscripción)'}
-                        </p>
-                      </div>
-                      <p className="text-sm font-medium">
-                        {formatPrice(
-                          cartTotal.items.find(
-                            (i) =>
-                              i.productId === item.productId &&
-                              i.packSize === item.packSize &&
-                              i.isSubscription === item.isSubscription
-                          )?.lineTotalCents || 0
-                        )}
-                      </p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
 
                 {/* Totals */}

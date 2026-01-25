@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ShoppingBag, Truck, RefreshCw, Shield, Plus, Minus, FileText, List, BarChart2, AlertTriangle } from 'lucide-react';
+import { ShoppingBag, Truck, RefreshCw, Shield, Plus, Minus, FileText, List, BarChart2, AlertTriangle, Package } from 'lucide-react';
 import { getProductBySlug, getRetailProducts } from '@/data/products';
 import { useCartStore } from '@/store/cart-store';
 import { formatPrice, cn } from '@/lib/utils';
@@ -14,6 +14,7 @@ import { ImageGallery } from '@/components/ui/ImageGallery';
 import { PackPillSelector } from '@/components/ui/PackPillSelector';
 import { Collapsible } from '@/components/ui/Collapsible';
 import { StickyAddToCart } from '@/components/ui/StickyAddToCart';
+import { BundleBuilderModal } from '@/components/bundle';
 import toast from 'react-hot-toast';
 
 export default function ProductDetailPage() {
@@ -25,6 +26,7 @@ export default function ProductDetailPage() {
   const [isSubscription, setIsSubscription] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
+  const [isBundleModalOpen, setIsBundleModalOpen] = useState(false);
 
   const addItem = useCartStore((state) => state.addItem);
   const toggleCart = useCartStore((state) => state.toggleCart);
@@ -186,6 +188,15 @@ export default function ProductDetailPage() {
                   variant="horizontal"
                   size="lg"
                 />
+                {/* Bundle builder link */}
+                <button
+                  type="button"
+                  onClick={() => setIsBundleModalOpen(true)}
+                  className="mt-4 flex items-center gap-2 text-earth-600 hover:text-earth-700 font-medium text-sm transition-colors"
+                >
+                  <Package className="w-4 h-4" />
+                  O crea un pack mixto con este sabor
+                </button>
               </div>
 
               {/* Subscription option */}
@@ -433,6 +444,13 @@ export default function ProductDetailPage() {
         isLoading={isAdding}
         isDisabled={product.stock === 0}
         observeElementId="main-cta"
+      />
+
+      {/* Bundle Builder Modal */}
+      <BundleBuilderModal
+        isOpen={isBundleModalOpen}
+        onClose={() => setIsBundleModalOpen(false)}
+        initialProductId={product.id}
       />
     </>
   );

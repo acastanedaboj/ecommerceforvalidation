@@ -3,10 +3,11 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { X, Plus, Minus, ShoppingBag, Trash2, ArrowRight, Check, Truck } from 'lucide-react';
-import { useCartStore } from '@/store/cart-store';
+import { useCartStore, isCartBundleItem } from '@/store/cart-store';
 import { formatPrice } from '@/lib/utils';
 import { cn } from '@/lib/utils';
 import { SHIPPING } from '@/lib/constants';
+import { BundleCartItem } from '@/components/bundle';
 
 export function CartDrawer() {
   const { items, isOpen, setIsOpen, removeItem, updateQuantity, getCartTotal } = useCartStore();
@@ -110,112 +111,124 @@ export function CartDrawer() {
             </div>
           ) : (
             <ul className="divide-y divide-cream-100">
-              {items.map((item) => (
-                <li
-                  key={`${item.productId}-${item.packSize}-${item.isSubscription}`}
-                  className="px-6 py-5 hover:bg-cream-50/50 transition-colors"
-                >
-                  <div className="flex gap-4">
-                    {/* Product image */}
-                    <Link
-                      href={`/tienda/${item.productSlug}`}
-                      onClick={() => setIsOpen(false)}
-                      className="relative w-20 h-20 bg-cream-100 rounded-xl overflow-hidden flex-shrink-0 group"
-                    >
-                      <Image
-                        src={item.productImage || '/images/placeholder-product.jpg'}
-                        alt={item.productName}
-                        fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        sizes="80px"
-                      />
-                    </Link>
+              {items.map((item) => {
+                // Check if this is a bundle item
+                if (isCartBundleItem(item)) {
+                  return (
+                    <li key={item.bundleId} className="px-6">
+                      <BundleCartItem item={item} />
+                    </li>
+                  );
+                }
 
-                    {/* Product details */}
-                    <div className="flex-1 min-w-0">
+                // Regular single product item
+                return (
+                  <li
+                    key={`${item.productId}-${item.packSize}-${item.isSubscription}`}
+                    className="px-6 py-5 hover:bg-cream-50/50 transition-colors"
+                  >
+                    <div className="flex gap-4">
+                      {/* Product image */}
                       <Link
                         href={`/tienda/${item.productSlug}`}
                         onClick={() => setIsOpen(false)}
-                        className="font-medium text-stone-800 hover:text-earth-600 transition-colors line-clamp-1"
+                        className="relative w-20 h-20 bg-cream-100 rounded-xl overflow-hidden flex-shrink-0 group"
                       >
-                        {item.productName}
+                        <Image
+                          src={item.productImage || '/images/placeholder-product.jpg'}
+                          alt={item.productName}
+                          fill
+                          className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          sizes="80px"
+                        />
                       </Link>
 
-                      {/* Pack/Subscription info */}
-                      <div className="mt-1.5 flex flex-wrap gap-2">
-                        {item.packSize > 1 && (
-                          <span className="badge-secondary text-xs">Pack {item.packSize}</span>
-                        )}
-                        {item.isSubscription && (
-                          <span className="badge bg-olive-100 text-olive-700 text-xs">Suscripcion</span>
-                        )}
-                      </div>
+                      {/* Product details */}
+                      <div className="flex-1 min-w-0">
+                        <Link
+                          href={`/tienda/${item.productSlug}`}
+                          onClick={() => setIsOpen(false)}
+                          className="font-medium text-stone-800 hover:text-earth-600 transition-colors line-clamp-1"
+                        >
+                          {item.productName}
+                        </Link>
 
-                      {/* Price and quantity */}
-                      <div className="mt-3 flex items-center justify-between">
-                        <div className="flex items-center bg-white border border-cream-200 rounded-full">
-                          <button
-                            type="button"
-                            onClick={() =>
-                              updateQuantity(
-                                item.productId,
-                                item.packSize,
-                                item.isSubscription,
-                                item.quantity - 1
-                              )
-                            }
-                            className="p-2 hover:bg-cream-50 rounded-l-full transition-colors"
-                            aria-label="Reducir cantidad"
-                          >
-                            <Minus className="w-3.5 h-3.5 text-stone-500" />
-                          </button>
-                          <span className="w-8 text-center text-sm font-medium text-stone-800">
-                            {item.quantity}
-                          </span>
-                          <button
-                            type="button"
-                            onClick={() =>
-                              updateQuantity(
-                                item.productId,
-                                item.packSize,
-                                item.isSubscription,
-                                item.quantity + 1
-                              )
-                            }
-                            className="p-2 hover:bg-cream-50 rounded-r-full transition-colors"
-                            aria-label="Aumentar cantidad"
-                          >
-                            <Plus className="w-3.5 h-3.5 text-stone-500" />
-                          </button>
+                        {/* Pack/Subscription info */}
+                        <div className="mt-1.5 flex flex-wrap gap-2">
+                          {item.packSize > 1 && (
+                            <span className="badge-secondary text-xs">Pack {item.packSize}</span>
+                          )}
+                          {item.isSubscription && (
+                            <span className="badge bg-olive-100 text-olive-700 text-xs">Suscripcion</span>
+                          )}
                         </div>
 
-                        <p className="font-semibold text-stone-800">
-                          {formatPrice(
-                            cartTotal.items.find(
-                              (i) =>
-                                i.productId === item.productId &&
-                                i.packSize === item.packSize &&
-                                i.isSubscription === item.isSubscription
-                            )?.lineTotalCents || 0
-                          )}
-                        </p>
-                      </div>
-                    </div>
+                        {/* Price and quantity */}
+                        <div className="mt-3 flex items-center justify-between">
+                          <div className="flex items-center bg-white border border-cream-200 rounded-full">
+                            <button
+                              type="button"
+                              onClick={() =>
+                                updateQuantity(
+                                  item.productId,
+                                  item.packSize,
+                                  item.isSubscription,
+                                  item.quantity - 1
+                                )
+                              }
+                              className="p-2 hover:bg-cream-50 rounded-l-full transition-colors"
+                              aria-label="Reducir cantidad"
+                            >
+                              <Minus className="w-3.5 h-3.5 text-stone-500" />
+                            </button>
+                            <span className="w-8 text-center text-sm font-medium text-stone-800">
+                              {item.quantity}
+                            </span>
+                            <button
+                              type="button"
+                              onClick={() =>
+                                updateQuantity(
+                                  item.productId,
+                                  item.packSize,
+                                  item.isSubscription,
+                                  item.quantity + 1
+                                )
+                              }
+                              className="p-2 hover:bg-cream-50 rounded-r-full transition-colors"
+                              aria-label="Aumentar cantidad"
+                            >
+                              <Plus className="w-3.5 h-3.5 text-stone-500" />
+                            </button>
+                          </div>
 
-                    {/* Remove button */}
-                    <button
-                      type="button"
-                      onClick={() =>
-                        removeItem(item.productId, item.packSize, item.isSubscription)
-                      }
-                      className="p-2 text-stone-300 hover:text-red-500 hover:bg-red-50 rounded-full transition-all self-start"
-                      aria-label={`Eliminar ${item.productName} del carrito`}
-                    >
-                      <Trash2 className="w-4 h-4" />
-                    </button>
-                  </div>
-                </li>
-              ))}
+                          <p className="font-semibold text-stone-800">
+                            {formatPrice(
+                              cartTotal.items.find(
+                                (i) =>
+                                  i.productId === item.productId &&
+                                  i.packSize === item.packSize &&
+                                  i.isSubscription === item.isSubscription
+                              )?.lineTotalCents || 0
+                            )}
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Remove button */}
+                      <button
+                        type="button"
+                        onClick={() =>
+                          removeItem(item.productId, item.packSize, item.isSubscription)
+                        }
+                        className="p-2 text-stone-300 hover:text-red-500 hover:bg-red-50 rounded-full transition-all self-start"
+                        aria-label={`Eliminar ${item.productName} del carrito`}
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           )}
         </div>

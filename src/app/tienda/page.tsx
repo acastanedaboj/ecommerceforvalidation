@@ -1,15 +1,14 @@
-import { Metadata } from 'next';
-import { ProductCard } from '@/components/product/ProductCard';
-import { getActiveProducts } from '@/data/products';
-import { Lightbulb, SlidersHorizontal } from 'lucide-react';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'Tienda',
-  description:
-    'Compra granola Poppy sin gluten, ecologica y premium. Elige entre nuestros sabores y packs. Envio gratis a partir de 4 bolsas.',
-};
+import { useState } from 'react';
+import { ProductCard } from '@/components/product/ProductCard';
+import { BundleBuilderModal } from '@/components/bundle';
+import { getActiveProducts } from '@/data/products';
+import { Lightbulb, SlidersHorizontal, Package } from 'lucide-react';
 
 export default function TiendaPage() {
+  const [isBundleModalOpen, setIsBundleModalOpen] = useState(false);
+
   const products = getActiveProducts();
   const retailProducts = products.filter((p) => p.categoryId === 'cat_granola');
   const horecaProducts = products.filter((p) => p.categoryId === 'cat_horeca');
@@ -26,6 +25,29 @@ export default function TiendaPage() {
             Granola Poppy elaborada con ingredientes de calidad.
             Elige tu sabor favorito y el pack que mejor se adapte a ti.
           </p>
+        </div>
+
+        {/* Bundle Builder CTA */}
+        <div className="bg-gradient-earth rounded-2xl p-6 md:p-8 mb-10 border border-earth-100">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
+            <div className="w-14 h-14 bg-white/80 rounded-xl flex items-center justify-center flex-shrink-0 shadow-soft">
+              <Package className="w-7 h-7 text-earth-500" strokeWidth={1.5} />
+            </div>
+            <div className="flex-1">
+              <h3 className="font-display text-xl font-medium text-stone-800 mb-1">
+                Crea tu pack mixto
+              </h3>
+              <p className="text-stone-600">
+                Mezcla tus sabores favoritos y ahorra hasta un 10%
+              </p>
+            </div>
+            <button
+              onClick={() => setIsBundleModalOpen(true)}
+              className="btn-primary whitespace-nowrap"
+            >
+              Crear pack
+            </button>
+          </div>
         </div>
 
         {/* Filters and sorting */}
@@ -124,6 +146,12 @@ export default function TiendaPage() {
           </div>
         </div>
       </div>
+
+      {/* Bundle Builder Modal */}
+      <BundleBuilderModal
+        isOpen={isBundleModalOpen}
+        onClose={() => setIsBundleModalOpen(false)}
+      />
     </div>
   );
 }

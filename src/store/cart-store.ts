@@ -5,15 +5,24 @@
  * - Persistent cart in localStorage
  * - Pack quantity management
  * - Subscription items
+ * - Bundle (mixed pack) support
  * - Automatic price calculations
  */
 
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { calculateCartTotal, type CartPriceCalculation } from '@/lib/pricing';
+import { calculateBundlePrice, generateBundleId, generateBundleName } from '@/lib/bundle';
 import { PRICING } from '@/lib/constants';
+import type {
+  BundleCartItem,
+  BundleFlavorSelection,
+  BundlePackSize,
+} from '@/types/bundle';
 
+// Single product cart item (original type)
 export interface CartItem {
+  type?: 'single'; // Optional for backward compatibility
   productId: string;
   productName: string;
   productSlug: string;
@@ -24,12 +33,25 @@ export interface CartItem {
   priceInCents: number; // Base price per unit
 }
 
+// Union of all cart item types
+export type CartItemUnion = CartItem | BundleCartItem;
+
+// Type guard for bundle items
+export function isCartBundleItem(item: CartItemUnion): item is BundleCartItem {
+  return item.type === 'bundle';
+}
+
+// Type guard for single items
+export function isCartSingleItem(item: CartItemUnion): item is CartItem {
+  return item.type !== 'bundle';
+}
+
 interface CartState {
-  items: CartItem[];
+  items: CartItemUnion[];
   isOpen: boolean;
 
-  // Actions
-  addItem: (item: Omit<CartItem, 'quantity'> & { quantity?: number }) => void;
+  // Single item actions
+  addItem: (item: Omit<CartItem, 'quantity' | 'type'> & { quantity?: number }) => void;
   removeItem: (productId: string, packSize: number, isSubscription: boolean) => void;
   updateQuantity: (
     productId: string,
@@ -37,6 +59,18 @@ interface CartState {
     isSubscription: boolean,
     quantity: number
   ) => void;
+
+  // Bundle actions
+  addBundle: (bundle: {
+    flavors: BundleFlavorSelection[];
+    packSize: BundlePackSize;
+    isSubscription?: boolean;
+    priceInCents?: number;
+  }) => void;
+  removeBundle: (bundleId: string) => void;
+  updateBundleQuantity: (bundleId: string, quantity: number) => void;
+
+  // General actions
   clearCart: () => void;
   setIsOpen: (isOpen: boolean) => void;
   toggleCart: () => void;
@@ -66,6 +100,7 @@ export const useCartStore = create<CartState>()(
         set((state) => {
           const existingIndex = state.items.findIndex(
             (item) =>
+              !isCartBundleItem(item) &&
               item.productId === newItem.productId &&
               item.packSize === newItem.packSize &&
               item.isSubscription === newItem.isSubscription
@@ -74,9 +109,10 @@ export const useCartStore = create<CartState>()(
           if (existingIndex >= 0) {
             // Update quantity of existing item
             const updatedItems = [...state.items];
+            const existingItem = updatedItems[existingIndex] as CartItem;
             updatedItems[existingIndex] = {
-              ...updatedItems[existingIndex],
-              quantity: updatedItems[existingIndex].quantity + (newItem.quantity || 1),
+              ...existingItem,
+              quantity: existingItem.quantity + (newItem.quantity || 1),
             };
             return { items: updatedItems };
           }
@@ -87,6 +123,7 @@ export const useCartStore = create<CartState>()(
               ...state.items,
               {
                 ...newItem,
+                type: 'single' as const,
                 quantity: newItem.quantity || 1,
               },
             ],
@@ -98,6 +135,7 @@ export const useCartStore = create<CartState>()(
         set((state) => ({
           items: state.items.filter(
             (item) =>
+              isCartBundleItem(item) ||
               !(
                 item.productId === productId &&
                 item.packSize === packSize &&
@@ -115,9 +153,51 @@ export const useCartStore = create<CartState>()(
 
         set((state) => ({
           items: state.items.map((item) =>
+            !isCartBundleItem(item) &&
             item.productId === productId &&
             item.packSize === packSize &&
             item.isSubscription === isSubscription
+              ? { ...item, quantity }
+              : item
+          ),
+        }));
+      },
+
+      // Bundle actions
+      addBundle: ({ flavors, packSize, isSubscription = false, priceInCents }) => {
+        const bundleItem: BundleCartItem = {
+          type: 'bundle',
+          bundleId: generateBundleId(),
+          bundleName: generateBundleName(packSize),
+          flavors: flavors.filter((f) => f.quantity > 0),
+          packSize,
+          quantity: 1,
+          isSubscription,
+          priceInCents: priceInCents || PRICING.BASE_PRICE_CENTS,
+        };
+
+        set((state) => ({
+          items: [...state.items, bundleItem],
+        }));
+      },
+
+      removeBundle: (bundleId) => {
+        set((state) => ({
+          items: state.items.filter(
+            (item) => !isCartBundleItem(item) || item.bundleId !== bundleId
+          ),
+        }));
+      },
+
+      updateBundleQuantity: (bundleId, quantity) => {
+        if (quantity <= 0) {
+          get().removeBundle(bundleId);
+          return;
+        }
+
+        set((state) => ({
+          items: state.items.map((item) =>
+            isCartBundleItem(item) && item.bundleId === bundleId
               ? { ...item, quantity }
               : item
           ),
@@ -132,7 +212,12 @@ export const useCartStore = create<CartState>()(
 
       getItemCount: () => {
         const { items } = get();
-        return items.reduce((total, item) => total + item.quantity * item.packSize, 0);
+        return items.reduce((total, item) => {
+          if (isCartBundleItem(item)) {
+            return total + item.quantity * item.packSize;
+          }
+          return total + item.quantity * item.packSize;
+        }, 0);
       },
 
       getCartTotal: () => {
@@ -153,15 +238,29 @@ export const useCartStore = create<CartState>()(
           };
         }
 
-        return calculateCartTotal(
-          items.map((item) => ({
+        // Convert all items (including bundles) to the format expected by calculateCartTotal
+        const cartItems = items.map((item) => {
+          if (isCartBundleItem(item)) {
+            // Bundle: treat as a single product with the pack size
+            return {
+              productId: item.bundleId,
+              quantity: item.quantity,
+              packSize: item.packSize,
+              isSubscription: item.isSubscription,
+              priceInCents: item.priceInCents || PRICING.BASE_PRICE_CENTS,
+            };
+          }
+          // Single item
+          return {
             productId: item.productId,
             quantity: item.quantity,
             packSize: item.packSize,
             isSubscription: item.isSubscription,
             priceInCents: item.priceInCents || PRICING.BASE_PRICE_CENTS,
-          }))
-        );
+          };
+        });
+
+        return calculateCartTotal(cartItems);
       },
 
       getItemKey: generateItemKey,
@@ -185,9 +284,26 @@ export const useCartItemCount = () => {
   const items = useCartStore((state) => state.items);
 
   useEffect(() => {
-    const total = items.reduce((acc, item) => acc + item.quantity * item.packSize, 0);
+    const total = items.reduce((acc, item) => {
+      if (isCartBundleItem(item)) {
+        return acc + item.quantity * item.packSize;
+      }
+      return acc + item.quantity * item.packSize;
+    }, 0);
     setCount(total);
   }, [items]);
 
   return count;
+};
+
+// Hook to get only single items
+export const useSingleItems = () => {
+  const items = useCartStore((state) => state.items);
+  return items.filter((item): item is CartItem => !isCartBundleItem(item));
+};
+
+// Hook to get only bundle items
+export const useBundleItems = () => {
+  const items = useCartStore((state) => state.items);
+  return items.filter((item): item is BundleCartItem => isCartBundleItem(item));
 };
