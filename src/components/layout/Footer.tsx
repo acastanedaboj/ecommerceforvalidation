@@ -18,7 +18,7 @@ export function Footer() {
               className="inline-flex items-center group"
             >
               <Image
-                src="/images/logo.png"
+                src="/images/logo.svg"
                 alt={BUSINESS.name}
                 width={140}
                 height={50}

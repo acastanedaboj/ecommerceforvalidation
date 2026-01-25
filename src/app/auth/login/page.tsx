@@ -35,7 +35,7 @@ function LoginContent() {
         <div className="text-center mb-10">
           <Link href="/" className="inline-block mb-8">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.svg"
               alt="Poppy"
               width={160}
               height={56}

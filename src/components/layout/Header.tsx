@@ -60,7 +60,7 @@ export function Header() {
               className="group flex items-center"
             >
               <Image
-                src="/images/logo.png"
+                src="/images/logo.svg"
                 alt={BUSINESS.name}
                 width={140}
                 height={50}
