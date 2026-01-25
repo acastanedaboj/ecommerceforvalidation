@@ -119,7 +119,7 @@ export function BundleBuilder({
       isSubscription: false,
     });
 
-    toast.success('Pack mixto anadido al carrito', {
+    toast.success('Pack mixto añadido al carrito', {
       style: {
         background: '#1C1C1C',
         color: '#FDFCFB',
@@ -151,9 +151,9 @@ export function BundleBuilder({
         {/* Pack Size Selector */}
         <div>
           <label className="block text-sm font-medium text-stone-700 mb-3">
-            Tamano del pack
+            Tamaño del pack
           </label>
-          <div className="flex gap-3" role="radiogroup" aria-label="Tamano del pack">
+          <div className="flex gap-3" role="radiogroup" aria-label="Tamaño del pack">
             {packOptions.map((option) => {
               const isSelected = packSize === option.size;
               return (
@@ -197,7 +197,7 @@ export function BundleBuilder({
                   {/* Free shipping badge */}
                   {option.freeShipping && (
                     <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-earth-500 text-white text-[10px] font-medium rounded-full whitespace-nowrap">
-                      Envio gratis
+                      Envío gratis
                     </span>
                   )}
                 </button>
@@ -297,7 +297,7 @@ export function BundleBuilder({
           {/* Remaining indicator */}
           {!isComplete && remaining > 0 && (
             <p className="mt-3 text-sm text-stone-500 text-center">
-              Selecciona {remaining} {remaining === 1 ? 'bolsa' : 'bolsas'} mas
+              Selecciona {remaining} {remaining === 1 ? 'bolsa' : 'bolsas'} más
             </p>
           )}
         </div>
@@ -307,7 +307,7 @@ export function BundleBuilder({
           {/* Summary */}
           {summary && (
             <div className="text-sm text-stone-600">
-              <span className="font-medium">Tu seleccion:</span> {summary}
+              <span className="font-medium">Tu selección:</span> {summary}
             </div>
           )}
 
@@ -335,7 +335,7 @@ export function BundleBuilder({
           {hasFreeShipping && (
             <div className="flex items-center gap-2 text-earth-600">
               <Truck className="w-5 h-5" />
-              <span className="font-medium">Envio gratis incluido</span>
+              <span className="font-medium">Envío gratis incluido</span>
             </div>
           )}
         </div>
@@ -357,14 +357,14 @@ export function BundleBuilder({
           {isAdding ? (
             <>
               <Check className="w-5 h-5 mr-2" strokeWidth={2.5} />
-              Anadido al carrito
+              Añadido al carrito
             </>
           ) : (
             <>
               <ShoppingBag className="w-5 h-5 mr-2" />
               {isComplete
-                ? 'Anadir pack al carrito'
-                : `Selecciona ${remaining} mas`}
+                ? 'Añadir pack al carrito'
+                : `Selecciona ${remaining} más`}
             </>
           )}
         </button>

@@ -32,21 +32,21 @@ export default function HomePage() {
 
   const testimonials = [
     {
-      quote: 'Por fin una granola que puedo comer sin problemas. Soy celiaca y siempre tenia miedo de la contaminacion cruzada. Esta es la primera que me sienta bien de verdad.',
-      author: 'Maria L.',
+      quote: 'Por fin una granola que puedo comer sin problemas. Soy celíaca y siempre tenía miedo de la contaminación cruzada. Esta es la primera que me sienta bien de verdad.',
+      author: 'María L.',
       role: 'Cliente verificada',
       rating: 5,
       verified: true,
     },
     {
-      quote: 'El sabor es increible, se nota que esta hecha con ingredientes de calidad. Mis hijos la devoran y me encanta saber que estan comiendo algo nutritivo.',
+      quote: 'El sabor es increíble, se nota que está hecha con ingredientes de calidad. Mis hijos la devoran y me encanta saber que están comiendo algo nutritivo.',
       author: 'Carlos G.',
       role: 'Cliente verificado',
       rating: 5,
       verified: true,
     },
     {
-      quote: 'La suscripcion es genial. No tengo que preocuparme de hacer pedidos y siempre tengo granola en casa. Ademas, el ahorro se nota a final de mes.',
+      quote: 'La suscripción es genial. No tengo que preocuparme de hacer pedidos y siempre tengo granola en casa. Además, el ahorro se nota a final de mes.',
       author: 'Ana S.',
       role: 'Suscriptora',
       rating: 5,
@@ -73,9 +73,9 @@ export default function HomePage() {
               </h1>
 
               <p className="text-lg md:text-xl text-stone-500 mb-12 leading-relaxed animate-fade-in-up animation-delay-100">
-                Elaborada a mano con avena certificada, miel ecologica
+                Elaborada a mano con avena certificada, miel ecológica
                 de apicultores locales y los mejores frutos secos.
-                Remojada para facilitar la digestion.
+                Remojada para facilitar la digestión.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-200">
@@ -84,7 +84,7 @@ export default function HomePage() {
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link href="/suscripcion" className="btn-outline btn-lg hover:scale-[1.02] transition-transform">
-                  Suscribete -15%
+                  Suscríbete -15%
                 </Link>
               </div>
 
@@ -92,7 +92,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-10 mt-16 justify-center lg:justify-start text-sm text-stone-500 animate-fade-in-up animation-delay-300">
                 <span className="flex items-center gap-3">
                   <Truck className="w-5 h-5 text-earth-500" strokeWidth={1.5} />
-                  Envio gratis +4 bolsas
+                  Envío gratis +4 bolsas
                 </span>
                 <span className="flex items-center gap-3">
                   <Leaf className="w-5 h-5 text-olive-500" strokeWidth={1.5} />
@@ -133,7 +133,7 @@ export default function HomePage() {
                     </div>
                     <div>
                       <p className="font-display font-semibold text-stone-800 text-lg">4.9/5</p>
-                      <p className="text-xs text-stone-400">+500 resenas</p>
+                      <p className="text-xs text-stone-400">+500 reseñas</p>
                     </div>
                   </div>
                 </div>
@@ -157,10 +157,10 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-20">
             <h2 className="font-display text-stone-800 mb-6">
-              Por que nuestra granola es diferente
+              Por qué nuestra granola es diferente
             </h2>
             <p className="text-lg text-stone-500 max-w-2xl mx-auto">
-              No es solo granola. Es el resultado de anos perfeccionando
+              No es solo granola. Es el resultado de años perfeccionando
               una receta artesanal con ingredientes de verdad.
             </p>
           </div>
@@ -175,8 +175,8 @@ export default function HomePage() {
                 Avena remojada
               </h3>
               <p className="text-stone-500 text-sm leading-relaxed">
-                Remojamos la avena para reducir el acido fitico y mejorar
-                la digestibilidad. Tu intestino te lo agradecera.
+                Remojamos la avena para reducir el ácido fítico y mejorar
+                la digestibilidad. Tu intestino te lo agradecerá.
               </p>
             </div>
 
@@ -186,11 +186,11 @@ export default function HomePage() {
                 <Droplets className="w-8 h-8 text-amber-500" strokeWidth={1.5} />
               </div>
               <h3 className="font-display text-xl font-medium text-stone-800 mb-4">
-                Miel ecologica local
+                Miel ecológica local
               </h3>
               <p className="text-stone-500 text-sm leading-relaxed">
-                Endulzada unicamente con miel de apicultores de pueblo.
-                Sin azucares refinados, sin edulcorantes artificiales.
+                Endulzada únicamente con miel de apicultores de pueblo.
+                Sin azúcares refinados, sin edulcorantes artificiales.
               </p>
             </div>
 
@@ -218,7 +218,7 @@ export default function HomePage() {
               </h3>
               <p className="text-stone-500 text-sm leading-relaxed">
                 Sin conservantes, sin colorantes, sin potenciadores del sabor.
-                Solo ingredientes que reconocerias en tu cocina.
+                Solo ingredientes que reconocerías en tu cocina.
               </p>
             </div>
           </div>
@@ -234,7 +234,7 @@ export default function HomePage() {
                 Nuestros productos
               </h2>
               <p className="text-stone-500 text-lg">
-                Elige tu sabor favorito o pruebalos todos
+                Elige tu sabor favorito o pruébalos todos
               </p>
             </div>
             <Link
@@ -265,11 +265,11 @@ export default function HomePage() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="font-display text-stone-800 mb-6">
-              Cuanto mas compras, mas ahorras
+              Cuanto más compras, más ahorras
             </h2>
             <p className="text-lg text-stone-500 max-w-2xl mx-auto">
               Elige el pack que mejor se adapte a tu consumo.
-              A partir de 4 bolsas, el envio es gratis.
+              A partir de 4 bolsas, el envío es gratis.
             </p>
           </div>
 
@@ -286,7 +286,7 @@ export default function HomePage() {
               >
                 {pack.size === 4 && (
                   <span className="absolute -top-3 left-1/2 -translate-x-1/2 badge-primary whitespace-nowrap">
-                    Mas popular
+                    Más popular
                   </span>
                 )}
                 <h3 className="font-display text-xl font-medium text-stone-800 mb-3 mt-2">
@@ -312,12 +312,12 @@ export default function HomePage() {
                     {pack.freeShipping ? (
                       <>
                         <Truck className="w-4 h-4 text-earth-500 flex-shrink-0" strokeWidth={2} />
-                        <span className="text-earth-600 font-medium">Envio gratis</span>
+                        <span className="text-earth-600 font-medium">Envío gratis</span>
                       </>
                     ) : (
                       <>
                         <Truck className="w-4 h-4 text-stone-400 flex-shrink-0" strokeWidth={2} />
-                        <span>Envio: 4,95 EUR</span>
+                        <span>Envío: 4,95 EUR</span>
                       </>
                     )}
                   </li>
@@ -344,11 +344,11 @@ export default function HomePage() {
               <div className="flex items-center justify-center gap-3 mb-6">
                 <RefreshCw className="w-5 h-5 text-cream-300" strokeWidth={1.5} />
                 <span className="badge bg-cream-100/10 text-cream-200 border border-cream-200/20">
-                  Suscripcion mensual
+                  Suscripción mensual
                 </span>
               </div>
               <h3 className="font-display text-3xl md:text-4xl font-medium text-cream-50 mb-5">
-                Suscribete y ahorra un {subscriptionInfo.discountPercentage}%
+                Suscríbete y ahorra un {subscriptionInfo.discountPercentage}%
               </h3>
               <p className="text-cream-300 mb-10 max-w-xl mx-auto text-lg">
                 Recibe 6 bolsas cada mes a solo {formatPrice(subscriptionInfo.unitPriceCents)}/ud.
@@ -358,7 +358,7 @@ export default function HomePage() {
                 href="/suscripcion"
                 className="btn bg-cream-50 text-stone-800 hover:bg-cream-100 hover:scale-[1.02] btn-lg group transition-all"
               >
-                Empezar suscripcion
+                Empezar suscripción
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
@@ -374,7 +374,7 @@ export default function HomePage() {
               Lo que dicen nuestros clientes
             </h2>
             <p className="text-stone-500 text-lg">
-              Mas de 500 familias ya disfrutan de nuestra granola cada dia
+              Más de 500 familias ya disfrutan de nuestra granola cada día
             </p>
           </div>
 
@@ -396,11 +396,11 @@ export default function HomePage() {
       <section className="section bg-gradient-earth">
         <div className="container-custom text-center">
           <h2 className="font-display text-stone-800 mb-6">
-            Listo para probar la diferencia?
+            ¿Listo para probar la diferencia?
           </h2>
           <p className="text-stone-500 mb-12 max-w-xl mx-auto text-lg">
-            Unete a cientos de familias que han descubierto el sabor de la granola
-            artesanal de verdad. Envio gratis a partir de 4 bolsas.
+            Únete a cientos de familias que han descubierto el sabor de la granola
+            artesanal de verdad. Envío gratis a partir de 4 bolsas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/tienda" className="btn-primary btn-lg group hover:scale-[1.02] transition-transform">

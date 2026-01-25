@@ -22,45 +22,45 @@ export const metadata: Metadata = {
 const values = [
   {
     icon: Leaf,
-    title: 'Ingredientes ecologicos',
+    title: 'Ingredientes ecológicos',
     description:
-      'Seleccionamos cuidadosamente cada ingrediente de productores locales certificados en agricultura ecologica.',
+      'Seleccionamos cuidadosamente cada ingrediente de productores locales certificados en agricultura ecológica.',
   },
   {
     icon: Heart,
     title: 'Hecho con amor',
     description:
-      'Cada lote se elabora a mano en pequeñas cantidades para garantizar la maxima calidad y frescura.',
+      'Cada lote se elabora a mano en pequeñas cantidades para garantizar la máxima calidad y frescura.',
   },
   {
     icon: Sun,
     title: 'Tostado artesanal',
     description:
-      'Utilizamos tecnicas tradicionales de tostado lento a baja temperatura para preservar todos los nutrientes.',
+      'Utilizamos técnicas tradicionales de tostado lento a baja temperatura para preservar todos los nutrientes.',
   },
 ];
 
 const stats = [
-  { number: '2019', label: 'Año de fundacion' },
+  { number: '2019', label: 'Año de fundación' },
   { number: '15K+', label: 'Clientes felices' },
   { number: '100%', label: 'Ingredientes naturales' },
-  { number: '0', label: 'Azucares refinados' },
+  { number: '0', label: 'Azúcares refinados' },
 ];
 
 const team = [
   {
-    name: 'Maria Garcia',
+    name: 'María García',
     role: 'Fundadora & Chef',
-    description: 'Apasionada por la alimentacion saludable desde hace mas de 15 años.',
+    description: 'Apasionada por la alimentación saludable desde hace más de 15 años.',
   },
   {
     name: 'Carlos Ruiz',
-    role: 'Produccion',
-    description: 'Experto en tecnicas de tostado artesanal y control de calidad.',
+    role: 'Producción',
+    description: 'Experto en técnicas de tostado artesanal y control de calidad.',
   },
   {
-    name: 'Ana Martinez',
-    role: 'Atencion al cliente',
+    name: 'Ana Martínez',
+    role: 'Atención al cliente',
     description: 'Siempre dispuesta a ayudarte con cualquier consulta.',
   },
 ];
@@ -102,24 +102,24 @@ export default function NosotrosPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-6">
-                Todo empezo en una pequeña cocina
+                Todo empezó en una pequeña cocina
               </h2>
               <div className="space-y-4 text-stone-600">
                 <p>
                   En 2019, cansados de las opciones procesadas del supermercado,
-                  decidimos crear nuestra propia granola. Lo que empezo como un
-                  experimento casero pronto se convirtio en una obsesion por la
-                  perfeccion.
+                  decidimos crear nuestra propia granola. Lo que empezó como un
+                  experimento casero pronto se convirtió en una obsesión por la
+                  perfección.
                 </p>
                 <p>
                   Probamos cientos de combinaciones hasta encontrar el equilibrio
-                  perfecto: crujiente pero no dura, dulce pero sin azucares refinados,
+                  perfecto: crujiente pero no dura, dulce pero sin azúcares refinados,
                   nutritiva pero irresistiblemente deliciosa.
                 </p>
                 <p>
-                  Hoy, seguimos elaborando cada lote con el mismo cuidado y atencion
-                  que el primer dia. Porque creemos que lo artesanal no es solo un
-                  metodo de produccion, es una filosofia de vida.
+                  Hoy, seguimos elaborando cada lote con el mismo cuidado y atención
+                  que el primer día. Porque creemos que lo artesanal no es solo un
+                  método de producción, es una filosofía de vida.
                 </p>
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function NosotrosPage() {
               Nuestros valores
             </h2>
             <p className="text-stone-600 max-w-2xl mx-auto">
-              Cada decision que tomamos esta guiada por tres principios fundamentales
+              Cada decisión que tomamos está guiada por tres principios fundamentales
             </p>
           </div>
           <div className="grid sm:grid-cols-3 gap-8">
@@ -201,15 +201,15 @@ export default function NosotrosPage() {
               Nuestro proceso
             </h2>
             <p className="text-stone-600 max-w-2xl mx-auto">
-              De la seleccion de ingredientes a tu mesa, cada paso importa
+              De la selección de ingredientes a tu mesa, cada paso importa
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 step: '01',
-                title: 'Seleccion',
-                description: 'Elegimos ingredientes ecologicos de productores locales de confianza',
+                title: 'Selección',
+                description: 'Elegimos ingredientes ecológicos de productores locales de confianza',
               },
               {
                 step: '02',
@@ -223,7 +223,7 @@ export default function NosotrosPage() {
               },
               {
                 step: '04',
-                title: 'Envio',
+                title: 'Envío',
                 description: 'Empaquetamos con cariño y enviamos directamente a tu puerta',
               },
             ].map((item, index) => (
@@ -289,22 +289,22 @@ export default function NosotrosPage() {
                 {
                   icon: Leaf,
                   title: 'Sin gluten',
-                  description: 'Apta para celiacos, elaborada en instalaciones libres de gluten',
+                  description: 'Apta para celíacos, elaborada en instalaciones libres de gluten',
                 },
                 {
                   icon: Heart,
-                  title: 'Sin azucares refinados',
-                  description: 'Endulzada naturalmente con sirope de arce ecologico',
+                  title: 'Sin azúcares refinados',
+                  description: 'Endulzada naturalmente con sirope de arce ecológico',
                 },
                 {
                   icon: Award,
-                  title: 'Certificacion ecologica',
-                  description: 'Todos nuestros ingredientes tienen certificacion eco',
+                  title: 'Certificación ecológica',
+                  description: 'Todos nuestros ingredientes tienen certificación eco',
                 },
                 {
                   icon: Truck,
-                  title: 'Envio sostenible',
-                  description: 'Packaging 100% reciclable y envios con huella de carbono compensada',
+                  title: 'Envío sostenible',
+                  description: 'Packaging 100% reciclable y envíos con huella de carbono compensada',
                 },
                 {
                   icon: Users,
@@ -313,8 +313,8 @@ export default function NosotrosPage() {
                 },
                 {
                   icon: Sun,
-                  title: 'Energia renovable',
-                  description: 'Nuestro obrador funciona con energia 100% solar',
+                  title: 'Energía renovable',
+                  description: 'Nuestro obrador funciona con energía 100% solar',
                 },
               ].map((item, index) => {
                 const Icon = item.icon;
@@ -342,8 +342,8 @@ export default function NosotrosPage() {
             ¿Listo para probar la diferencia?
           </h2>
           <p className="text-stone-600 mb-8">
-            Descubre por que miles de personas han elegido Poppy
-            para empezar el dia con energia y sabor.
+            Descubre por qué miles de personas han elegido Poppy
+            para empezar el día con energía y sabor.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -357,7 +357,7 @@ export default function NosotrosPage() {
               href="/contacto"
               className="inline-flex items-center justify-center gap-2 bg-white text-earth-700 px-8 py-4 rounded-full hover:bg-cream-100 transition-colors font-medium border border-earth-200"
             >
-              Contactanos
+              Contáctanos
             </Link>
           </div>
         </div>

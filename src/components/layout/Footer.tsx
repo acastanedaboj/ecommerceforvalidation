@@ -26,7 +26,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-5 text-cream-400 max-w-sm leading-relaxed">
-              Granola elaborada con amor, ingredientes ecologicos y sin gluten real.
+              Granola elaborada con amor, ingredientes ecológicos y sin gluten real.
               Tostada lentamente con miel de apicultores locales.
             </p>
 
@@ -37,14 +37,14 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 bg-stone-800 hover:bg-earth-600 rounded-xl transition-all duration-300 hover:-translate-y-0.5"
-                aria-label="Siguenos en Instagram"
+                aria-label="Síguenos en Instagram"
               >
                 <Instagram className="w-5 h-5" strokeWidth={1.5} />
               </a>
               <a
                 href={`mailto:${BUSINESS.email}`}
                 className="p-3 bg-stone-800 hover:bg-earth-600 rounded-xl transition-all duration-300 hover:-translate-y-0.5"
-                aria-label="Envianos un email"
+                aria-label="Envíanos un email"
               >
                 <Mail className="w-5 h-5" strokeWidth={1.5} />
               </a>
@@ -154,7 +154,7 @@ export function Footer() {
               <span className="px-2.5 py-1 bg-stone-800/50 rounded-md">Stripe</span>
             </div>
             <span className="hidden sm:inline text-cream-700">|</span>
-            <span>Envio seguro a toda Espana</span>
+            <span>Envío seguro a toda España</span>
           </div>
         </div>
       </div>

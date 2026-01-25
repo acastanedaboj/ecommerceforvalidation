@@ -77,13 +77,13 @@ export default function TiendaPage() {
               Sin gluten
             </button>
             <button className="pill hover:border-olive-300">
-              Ecologico
+              Ecológico
             </button>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-sm text-stone-500">Ordenar:</span>
             <select className="input py-2.5 px-4 w-auto text-sm bg-white rounded-full border-cream-200 focus:border-earth-300 focus:ring-earth-200">
-              <option value="popular">Mas populares</option>
+              <option value="popular">Más populares</option>
               <option value="price-asc">Precio: menor a mayor</option>
               <option value="price-desc">Precio: mayor a menor</option>
               <option value="name">Nombre A-Z</option>
@@ -122,7 +122,7 @@ export default function TiendaPage() {
                 Formato profesional (Horeca)
               </h2>
               <p className="text-stone-300 mb-6">
-                Tienes una cafeteria, hotel o tienda? Ofrecemos formatos de 1kg
+                ¿Tienes una cafetería, hotel o tienda? Ofrecemos formatos de 1kg
                 y condiciones especiales para profesionales.
               </p>
               <a
@@ -143,15 +143,15 @@ export default function TiendaPage() {
             </div>
             <div>
               <h3 className="font-display text-xl font-medium text-stone-800 mb-3">
-                No sabes cual elegir?
+                ¿No sabes cuál elegir?
               </h3>
               <p className="text-stone-500 mb-4">
                 Todos nuestros sabores comparten la misma base de calidad: avena sin gluten
-                y frutos secos premium. La mayoria estan endulzados con miel ecologica,
-                y tenemos una opcion vegana (Datiles) sin miel.
+                y frutos secos premium. La mayoría están endulzados con miel ecológica,
+                y tenemos una opción vegana (Dátiles) sin miel.
               </p>
               <p className="text-sm text-earth-600 font-medium">
-                Consejo: Empieza con el sabor clasico y luego explora los demas.
+                Consejo: Empieza con el sabor clásico y luego explora los demás.
               </p>
             </div>
           </div>
