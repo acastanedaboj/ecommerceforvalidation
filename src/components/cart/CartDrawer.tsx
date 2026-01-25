@@ -1,9 +1,8 @@
 'use client';
 
-import { Fragment } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { X, Plus, Minus, ShoppingBag, Trash2, ArrowRight } from 'lucide-react';
+import { X, Plus, Minus, ShoppingBag, Trash2, ArrowRight, Check, Truck } from 'lucide-react';
 import { useCartStore } from '@/store/cart-store';
 import { formatPrice } from '@/lib/utils';
 import { cn } from '@/lib/utils';
@@ -18,12 +17,14 @@ export function CartDrawer() {
     ? 0
     : Math.max(0, SHIPPING.FREE_SHIPPING_MIN_AMOUNT_CENTS - cartTotal.subtotalCents);
 
+  const progressPercentage = Math.min(100, (cartTotal.subtotalCents / SHIPPING.FREE_SHIPPING_MIN_AMOUNT_CENTS) * 100);
+
   return (
     <>
       {/* Backdrop */}
       <div
         className={cn(
-          'fixed inset-0 bg-black/50 z-50 transition-opacity duration-300',
+          'fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-50 transition-all duration-400',
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         )}
         onClick={() => setIsOpen(false)}
@@ -33,7 +34,7 @@ export function CartDrawer() {
       {/* Drawer */}
       <aside
         className={cn(
-          'fixed top-0 right-0 h-full w-full max-w-md bg-white z-50 shadow-2xl transition-transform duration-300 ease-out flex flex-col',
+          'fixed top-0 right-0 h-full w-full max-w-md bg-cream-50 z-50 shadow-soft-xl transition-transform duration-400 ease-bounce-soft flex flex-col',
           isOpen ? 'translate-x-0' : 'translate-x-full'
         )}
         role="dialog"
@@ -41,12 +42,12 @@ export function CartDrawer() {
         aria-label="Carrito de compra"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-4 border-b border-neutral-200">
-          <h2 className="text-lg font-semibold flex items-center gap-2">
-            <ShoppingBag className="w-5 h-5" />
+        <div className="flex items-center justify-between px-6 py-5 border-b border-cream-200 bg-white">
+          <h2 className="font-display text-xl font-medium text-stone-800 flex items-center gap-3">
+            <ShoppingBag className="w-5 h-5 text-earth-500" />
             Tu carrito
             {items.length > 0 && (
-              <span className="text-sm font-normal text-neutral-500">
+              <span className="text-sm font-sans font-normal text-stone-400">
                 ({cartTotal.itemCount} {cartTotal.itemCount === 1 ? 'producto' : 'productos'})
               </span>
             )}
@@ -54,46 +55,50 @@ export function CartDrawer() {
           <button
             type="button"
             onClick={() => setIsOpen(false)}
-            className="p-2 hover:bg-neutral-100 rounded-lg transition-colors"
+            className="p-2.5 hover:bg-cream-100 rounded-full transition-colors"
             aria-label="Cerrar carrito"
           >
-            <X className="w-5 h-5" />
+            <X className="w-5 h-5 text-stone-500" />
           </button>
         </div>
 
         {/* Free shipping progress */}
         {items.length > 0 && !cartTotal.isFreeShipping && (
-          <div className="px-6 py-3 bg-primary-50 border-b border-primary-100">
-            <p className="text-sm text-primary-800">
-              ¡Te faltan <strong>{formatPrice(amountForFreeShipping)}</strong> para envío gratis!
-            </p>
-            <div className="mt-2 h-2 bg-primary-100 rounded-full overflow-hidden">
+          <div className="px-6 py-4 bg-earth-50 border-b border-earth-100">
+            <div className="flex items-center gap-2 mb-3">
+              <Truck className="w-4 h-4 text-earth-500" />
+              <p className="text-sm text-earth-700">
+                Te faltan <strong>{formatPrice(amountForFreeShipping)}</strong> para envio gratis
+              </p>
+            </div>
+            <div className="progress-bar">
               <div
-                className="h-full bg-primary-500 transition-all duration-300"
-                style={{
-                  width: `${Math.min(100, (cartTotal.subtotalCents / SHIPPING.FREE_SHIPPING_MIN_AMOUNT_CENTS) * 100)}%`,
-                }}
+                className="progress-fill"
+                style={{ width: `${progressPercentage}%` }}
               />
             </div>
           </div>
         )}
 
         {items.length > 0 && cartTotal.isFreeShipping && (
-          <div className="px-6 py-3 bg-accent-50 border-b border-accent-100">
-            <p className="text-sm text-accent-800 font-medium">
-              ✓ ¡Genial! Tu pedido tiene envío gratis
+          <div className="px-6 py-4 bg-olive-50 border-b border-olive-100">
+            <p className="text-sm text-olive-700 font-medium flex items-center gap-2">
+              <Check className="w-4 h-4" />
+              Genial! Tu pedido tiene envio gratis
             </p>
           </div>
         )}
 
         {/* Cart items */}
-        <div className="flex-1 overflow-y-auto">
+        <div className="flex-1 overflow-y-auto scrollbar-custom">
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full px-6 text-center">
-              <ShoppingBag className="w-16 h-16 text-neutral-300 mb-4" />
-              <p className="text-neutral-600 mb-2">Tu carrito está vacío</p>
-              <p className="text-sm text-neutral-400 mb-6">
-                Añade algunos productos deliciosos
+              <div className="w-20 h-20 bg-cream-100 rounded-full flex items-center justify-center mb-6">
+                <ShoppingBag className="w-10 h-10 text-cream-400" />
+              </div>
+              <p className="font-display text-lg text-stone-700 mb-2">Tu carrito esta vacio</p>
+              <p className="text-sm text-stone-400 mb-8">
+                Anade algunos productos deliciosos
               </p>
               <Link
                 href="/tienda"
@@ -104,47 +109,51 @@ export function CartDrawer() {
               </Link>
             </div>
           ) : (
-            <ul className="divide-y divide-neutral-100">
+            <ul className="divide-y divide-cream-100">
               {items.map((item) => (
                 <li
                   key={`${item.productId}-${item.packSize}-${item.isSubscription}`}
-                  className="px-6 py-4"
+                  className="px-6 py-5 hover:bg-cream-50/50 transition-colors"
                 >
                   <div className="flex gap-4">
                     {/* Product image */}
-                    <div className="relative w-20 h-20 bg-neutral-100 rounded-lg overflow-hidden flex-shrink-0">
+                    <Link
+                      href={`/tienda/${item.productSlug}`}
+                      onClick={() => setIsOpen(false)}
+                      className="relative w-20 h-20 bg-cream-100 rounded-xl overflow-hidden flex-shrink-0 group"
+                    >
                       <Image
                         src={item.productImage || '/images/placeholder-product.jpg'}
                         alt={item.productName}
                         fill
-                        className="object-cover"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
                         sizes="80px"
                       />
-                    </div>
+                    </Link>
 
                     {/* Product details */}
                     <div className="flex-1 min-w-0">
                       <Link
                         href={`/tienda/${item.productSlug}`}
                         onClick={() => setIsOpen(false)}
-                        className="font-medium text-neutral-900 hover:text-primary-600 transition-colors line-clamp-1"
+                        className="font-medium text-stone-800 hover:text-earth-600 transition-colors line-clamp-1"
                       >
                         {item.productName}
                       </Link>
 
                       {/* Pack/Subscription info */}
-                      <div className="mt-1 flex flex-wrap gap-2">
+                      <div className="mt-1.5 flex flex-wrap gap-2">
                         {item.packSize > 1 && (
-                          <span className="badge-secondary">Pack {item.packSize}</span>
+                          <span className="badge-secondary text-xs">Pack {item.packSize}</span>
                         )}
                         {item.isSubscription && (
-                          <span className="badge-accent">Suscripción</span>
+                          <span className="badge bg-olive-100 text-olive-700 text-xs">Suscripcion</span>
                         )}
                       </div>
 
                       {/* Price and quantity */}
-                      <div className="mt-2 flex items-center justify-between">
-                        <div className="flex items-center gap-2">
+                      <div className="mt-3 flex items-center justify-between">
+                        <div className="flex items-center bg-white border border-cream-200 rounded-full">
                           <button
                             type="button"
                             onClick={() =>
@@ -155,12 +164,12 @@ export function CartDrawer() {
                                 item.quantity - 1
                               )
                             }
-                            className="p-1 hover:bg-neutral-100 rounded transition-colors"
+                            className="p-2 hover:bg-cream-50 rounded-l-full transition-colors"
                             aria-label="Reducir cantidad"
                           >
-                            <Minus className="w-4 h-4" />
+                            <Minus className="w-3.5 h-3.5 text-stone-500" />
                           </button>
-                          <span className="w-8 text-center font-medium">
+                          <span className="w-8 text-center text-sm font-medium text-stone-800">
                             {item.quantity}
                           </span>
                           <button
@@ -173,25 +182,23 @@ export function CartDrawer() {
                                 item.quantity + 1
                               )
                             }
-                            className="p-1 hover:bg-neutral-100 rounded transition-colors"
+                            className="p-2 hover:bg-cream-50 rounded-r-full transition-colors"
                             aria-label="Aumentar cantidad"
                           >
-                            <Plus className="w-4 h-4" />
+                            <Plus className="w-3.5 h-3.5 text-stone-500" />
                           </button>
                         </div>
 
-                        <div className="text-right">
-                          <p className="font-semibold text-neutral-900">
-                            {formatPrice(
-                              cartTotal.items.find(
-                                (i) =>
-                                  i.productId === item.productId &&
-                                  i.packSize === item.packSize &&
-                                  i.isSubscription === item.isSubscription
-                              )?.lineTotalCents || 0
-                            )}
-                          </p>
-                        </div>
+                        <p className="font-semibold text-stone-800">
+                          {formatPrice(
+                            cartTotal.items.find(
+                              (i) =>
+                                i.productId === item.productId &&
+                                i.packSize === item.packSize &&
+                                i.isSubscription === item.isSubscription
+                            )?.lineTotalCents || 0
+                          )}
+                        </p>
                       </div>
                     </div>
 
@@ -201,7 +208,7 @@ export function CartDrawer() {
                       onClick={() =>
                         removeItem(item.productId, item.packSize, item.isSubscription)
                       }
-                      className="p-1 text-neutral-400 hover:text-red-600 transition-colors self-start"
+                      className="p-2 text-stone-300 hover:text-red-500 hover:bg-red-50 rounded-full transition-all self-start"
                       aria-label={`Eliminar ${item.productName} del carrito`}
                     >
                       <Trash2 className="w-4 h-4" />
@@ -215,49 +222,58 @@ export function CartDrawer() {
 
         {/* Footer with totals */}
         {items.length > 0 && (
-          <div className="border-t border-neutral-200 px-6 py-4 bg-neutral-50">
+          <div className="border-t border-cream-200 px-6 py-5 bg-white">
             {/* Subtotals */}
-            <div className="space-y-2 text-sm">
+            <div className="space-y-2.5 text-sm">
               <div className="flex justify-between">
-                <span className="text-neutral-600">Subtotal</span>
-                <span>{formatPrice(cartTotal.subtotalCents)}</span>
+                <span className="text-stone-500">Subtotal</span>
+                <span className="text-stone-700">{formatPrice(cartTotal.subtotalCents)}</span>
               </div>
 
               {cartTotal.discountCents > 0 && (
-                <div className="flex justify-between text-accent-600">
+                <div className="flex justify-between text-olive-600">
                   <span>Descuento</span>
                   <span>-{formatPrice(cartTotal.discountCents)}</span>
                 </div>
               )}
 
               <div className="flex justify-between">
-                <span className="text-neutral-600">Envío</span>
+                <span className="text-stone-500">Envio</span>
                 <span>
                   {cartTotal.isFreeShipping ? (
-                    <span className="text-accent-600">Gratis</span>
+                    <span className="text-olive-600 font-medium">Gratis</span>
                   ) : (
-                    formatPrice(cartTotal.shippingCents)
+                    <span className="text-stone-700">{formatPrice(cartTotal.shippingCents)}</span>
                   )}
                 </span>
               </div>
 
-              <div className="flex justify-between text-xs text-neutral-500">
+              <div className="flex justify-between text-xs text-stone-400">
                 <span>IVA incluido (10%)</span>
                 <span>{formatPrice(cartTotal.taxCents)}</span>
               </div>
             </div>
 
             {/* Total */}
-            <div className="flex justify-between items-center mt-4 pt-4 border-t border-neutral-200">
-              <span className="font-semibold">Total</span>
-              <span className="text-xl font-bold">{formatPrice(cartTotal.totalCents)}</span>
+            <div className="flex justify-between items-center mt-5 pt-5 border-t border-cream-200">
+              <span className="font-medium text-stone-600">Total</span>
+              <span className="text-2xl font-display font-semibold text-stone-800">
+                {formatPrice(cartTotal.totalCents)}
+              </span>
             </div>
+
+            {/* Savings callout */}
+            {cartTotal.discountCents > 0 && (
+              <p className="text-sm text-olive-600 mt-2 text-right">
+                Has ahorrado {formatPrice(cartTotal.discountCents)}
+              </p>
+            )}
 
             {/* Checkout button */}
             <Link
               href="/checkout"
               onClick={() => setIsOpen(false)}
-              className="btn-primary w-full mt-4 justify-center"
+              className="btn-primary w-full mt-5 justify-center py-4"
             >
               Finalizar compra
               <ArrowRight className="w-4 h-4 ml-2" />

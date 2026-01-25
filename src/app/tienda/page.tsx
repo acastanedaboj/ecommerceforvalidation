@@ -1,11 +1,12 @@
 import { Metadata } from 'next';
 import { ProductCard } from '@/components/product/ProductCard';
 import { getActiveProducts } from '@/data/products';
+import { Lightbulb, SlidersHorizontal } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'Tienda',
   description:
-    'Compra granola Poppy sin gluten, ecológica y premium. Elige entre nuestros sabores y packs. Envío gratis a partir de 4 bolsas.',
+    'Compra granola Poppy sin gluten, ecologica y premium. Elige entre nuestros sabores y packs. Envio gratis a partir de 4 bolsas.',
 };
 
 export default function TiendaPage() {
@@ -14,32 +15,37 @@ export default function TiendaPage() {
   const horecaProducts = products.filter((p) => p.categoryId === 'cat_horeca');
 
   return (
-    <div className="section">
+    <div className="section bg-cream-50">
       <div className="container-custom">
         {/* Page header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-4">
+        <div className="text-center mb-14">
+          <h1 className="font-display text-stone-800 mb-5">
             Nuestra tienda
           </h1>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+          <p className="text-lg text-stone-500 max-w-2xl mx-auto">
             Granola Poppy elaborada con ingredientes de calidad.
             Elige tu sabor favorito y el pack que mejor se adapte a ti.
           </p>
         </div>
 
-        {/* Filters and sorting - simplified for now */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-8 pb-8 border-b border-neutral-200">
-          <div className="flex flex-wrap gap-2">
-            <span className="text-sm text-neutral-500">Filtros:</span>
-            <button className="badge-primary">Sin gluten</button>
-            <button className="badge bg-neutral-100 text-neutral-700 hover:bg-neutral-200">
-              Ecológico
+        {/* Filters and sorting */}
+        <div className="flex flex-wrap items-center justify-between gap-6 mb-10 pb-8 border-b border-cream-200">
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="flex items-center gap-2 text-sm text-stone-500">
+              <SlidersHorizontal className="w-4 h-4" />
+              Filtros:
+            </span>
+            <button className="pill pill-active">
+              Sin gluten
+            </button>
+            <button className="pill hover:border-olive-300">
+              Ecologico
             </button>
           </div>
-          <div className="flex items-center gap-2">
-            <span className="text-sm text-neutral-500">Ordenar:</span>
-            <select className="input py-2 w-auto text-sm">
-              <option value="popular">Más populares</option>
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-stone-500">Ordenar:</span>
+            <select className="input py-2.5 px-4 w-auto text-sm bg-white rounded-full border-cream-200 focus:border-earth-300 focus:ring-earth-200">
+              <option value="popular">Mas populares</option>
               <option value="price-asc">Precio: menor a mayor</option>
               <option value="price-desc">Precio: mayor a menor</option>
               <option value="name">Nombre A-Z</option>
@@ -47,51 +53,75 @@ export default function TiendaPage() {
           </div>
         </div>
 
+        {/* Results count */}
+        <p className="text-sm text-stone-400 mb-8">
+          Mostrando {retailProducts.length} productos
+        </p>
+
         {/* Retail products */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-display font-bold text-neutral-900 mb-6">
+        <section className="mb-20">
+          <h2 className="font-display text-2xl font-medium text-stone-800 mb-8">
             Granola 250g
           </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {retailProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            {retailProducts.map((product, index) => (
+              <div
+                key={product.id}
+                className="animate-fade-in-up"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <ProductCard product={product} />
+              </div>
             ))}
           </div>
         </section>
 
         {/* Horeca products */}
         {horecaProducts.length > 0 && (
-          <section>
-            <div className="bg-secondary-50 rounded-2xl p-8 mb-6">
-              <h2 className="text-2xl font-display font-bold text-neutral-900 mb-2">
+          <section className="mb-16">
+            <div className="bg-cream-100 rounded-2xl p-8 md:p-10 mb-10 border border-cream-200">
+              <h2 className="font-display text-2xl font-medium text-stone-800 mb-3">
                 Formato profesional (Horeca)
               </h2>
-              <p className="text-neutral-600">
-                ¿Tienes una cafetería, hotel o tienda? Consulta nuestros formatos de 1kg
+              <p className="text-stone-500">
+                Tienes una cafeteria, hotel o tienda? Consulta nuestros formatos de 1kg
                 y condiciones especiales para profesionales.
               </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {horecaProducts.map((product) => (
-                <ProductCard key={product.id} product={product} showQuickAdd={false} />
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+              {horecaProducts.map((product, index) => (
+                <div
+                  key={product.id}
+                  className="animate-fade-in-up"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <ProductCard product={product} showQuickAdd={false} />
+                </div>
               ))}
             </div>
           </section>
         )}
 
         {/* Info banner */}
-        <div className="mt-16 bg-primary-50 rounded-2xl p-8 text-center">
-          <h3 className="text-xl font-bold text-neutral-900 mb-2">
-            ¿No sabes cuál elegir?
-          </h3>
-          <p className="text-neutral-600 mb-4">
-            Todos nuestros sabores comparten la misma base de calidad: avena sin gluten
-            remojada, miel ecológica y frutos secos premium. La diferencia está en los
-            toques especiales de cada variedad.
-          </p>
-          <p className="text-sm text-primary-700 font-medium">
-            💡 Consejo: Empieza con el sabor clásico y luego explora los demás.
-          </p>
+        <div className="bg-white rounded-2xl p-8 md:p-10 shadow-soft border border-cream-100">
+          <div className="flex items-start gap-4">
+            <div className="w-12 h-12 bg-earth-50 rounded-xl flex items-center justify-center flex-shrink-0">
+              <Lightbulb className="w-6 h-6 text-earth-500" strokeWidth={1.5} />
+            </div>
+            <div>
+              <h3 className="font-display text-xl font-medium text-stone-800 mb-3">
+                No sabes cual elegir?
+              </h3>
+              <p className="text-stone-500 mb-4">
+                Todos nuestros sabores comparten la misma base de calidad: avena sin gluten
+                remojada, miel ecologica y frutos secos premium. La diferencia esta en los
+                toques especiales de cada variedad.
+              </p>
+              <p className="text-sm text-earth-600 font-medium">
+                Consejo: Empieza con el sabor clasico y luego explora los demas.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
