@@ -1,30 +1,23 @@
-import { Metadata } from 'next';
+'use client';
+
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
-import { getAllBlogPosts, blogCategories } from '@/data/blog';
+import { getAllBlogPosts, blogCategories, BlogPost } from '@/data/blog';
 import { formatDate } from '@/lib/utils';
-import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
-
-export const metadata: Metadata = {
-  title: 'Blog de Recetas y Nutrición | Granola Sin Gluten',
-  description:
-    'Recetas con granola, consejos de nutrición sin gluten y artículos sobre alimentación saludable. Smoothie bowls, overnight oats, tostadas y más ideas para tu desayuno.',
-  alternates: {
-    canonical: getCanonicalUrl('/blog'),
-  },
-  openGraph: {
-    title: 'Blog de Recetas y Nutrición | Poppy',
-    description:
-      'Ideas deliciosas para disfrutar tu granola, consejos de nutrición y recetas saludables.',
-    url: `${SITE_URL}/blog`,
-  },
-};
+import { buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
 
 export default function BlogPage() {
-  const posts = getAllBlogPosts();
-  const featuredPost = posts[0];
-  const otherPosts = posts.slice(1);
+  const allPosts = getAllBlogPosts();
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+  const filteredPosts = selectedCategory
+    ? allPosts.filter((post) => post.category === selectedCategory)
+    : allPosts;
+
+  const featuredPost = filteredPosts[0];
+  const otherPosts = filteredPosts.slice(1);
 
   return (
     <>
@@ -51,11 +44,25 @@ export default function BlogPage() {
 
         {/* Category filters */}
         <div className="flex flex-wrap justify-center gap-3 mb-12">
-          <button className="badge-primary">Todos</button>
+          <button
+            onClick={() => setSelectedCategory(null)}
+            className={`badge transition-colors ${
+              selectedCategory === null
+                ? 'badge-primary'
+                : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
+            }`}
+          >
+            Todos
+          </button>
           {blogCategories.map((category) => (
             <button
               key={category.id}
-              className="badge bg-neutral-100 text-neutral-700 hover:bg-neutral-200 transition-colors"
+              onClick={() => setSelectedCategory(category.id)}
+              className={`badge transition-colors ${
+                selectedCategory === category.id
+                  ? 'badge-primary'
+                  : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
+              }`}
             >
               {category.name}
             </button>
