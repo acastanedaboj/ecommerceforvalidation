@@ -8,6 +8,7 @@ export const metadata: Metadata = {
   alternates: {
     canonical: getCanonicalUrl('/mayorista'),
   },
+  robots: 'noindex, nofollow', // Hidden until ready for public
 };
 
 export default function MayoristaLayout({
