@@ -236,21 +236,6 @@ export default function PreventaPage() {
                 </div>
                 <div>
                   <h3 className="font-semibold text-neutral-900 mb-1">
-                    Recibirás confirmación
-                  </h3>
-                  <p className="text-neutral-600 text-sm">
-                    Te enviaremos un email de confirmación con los detalles de tu
-                    pedido.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-semibold text-sm">
-                  3
-                </div>
-                <div>
-                  <h3 className="font-semibold text-neutral-900 mb-1">
                     Preparamos tu pedido
                   </h3>
                   <p className="text-neutral-600 text-sm">
@@ -262,7 +247,7 @@ export default function PreventaPage() {
 
               <div className="flex gap-4">
                 <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-semibold text-sm">
-                  4
+                  3
                 </div>
                 <div>
                   <h3 className="font-semibold text-neutral-900 mb-1">
