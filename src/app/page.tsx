@@ -73,7 +73,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-lg md:text-xl text-stone-500 mb-12 leading-relaxed animate-fade-in-up animation-delay-100">
-                Elaborada a mano con avena certificada, miel ecológica
+                Elaborada a mano con avena sin gluten certificada, miel ecológica
                 de apicultores locales y los mejores frutos secos.
                 Remojada para facilitar la digestión.
               </p>
