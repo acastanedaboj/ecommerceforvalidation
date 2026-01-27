@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import type { Metadata } from 'next';
 import { CheckCircle, ShoppingBag, Truck, Package, Heart } from 'lucide-react';
 import { Input } from '@/components/ui/Input';
@@ -31,6 +31,13 @@ export default function PreventaPage() {
     producto: '',
     cantidad: '',
   });
+
+  // Scroll to top when form is submitted successfully
+  useEffect(() => {
+    if (isSubmitted) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [isSubmitted]);
 
   const validateForm = (): boolean => {
     const newErrors = {
