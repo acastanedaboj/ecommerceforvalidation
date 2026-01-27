@@ -103,7 +103,7 @@ export default function PreventaPage() {
         throw new Error('Error al enviar el pedido');
       }
 
-      toast.success('¡Pedido registrado! Revisa tu email para confirmar.');
+      toast.success('¡Pedido registrado con éxito!');
       setIsSubmitted(true);
     } catch (error) {
       toast.error('Error al procesar tu pedido. Por favor, inténtalo de nuevo.');
@@ -140,12 +140,9 @@ export default function PreventaPage() {
           <h1 className="text-3xl font-display font-bold text-neutral-900 mb-4">
             ¡Pedido registrado con éxito!
           </h1>
-          <p className="text-neutral-600 mb-4">
+          <p className="text-neutral-600 mb-8">
             Hemos recibido tu preventa correctamente. Te contactaremos muy pronto para
             coordinar la entrega en mano de tu granola.
-          </p>
-          <p className="text-sm text-neutral-500 mb-8">
-            Revisa tu email (incluyendo spam) para más información.
           </p>
           <a href="/" className="btn-primary">
             Volver al inicio
