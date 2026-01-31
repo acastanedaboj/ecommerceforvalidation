@@ -27,17 +27,17 @@
   }
 
   ::selection {
-    @apply bg-earth-200 text-earth-900;
+    @apply bg-olive-300 text-earth-900;
   }
 
   /* Body defaults */
   body {
-    @apply bg-cream-50 text-stone-700 font-sans;
+    @apply bg-white text-stone-800 font-sans;
   }
 
   /* Better focus styles for accessibility */
   *:focus-visible {
-    @apply outline-none ring-2 ring-earth-400 ring-offset-2 ring-offset-cream-50;
+    @apply outline-none ring-2 ring-cream-500 ring-offset-2 ring-offset-white;
   }
 
   /* Remove default button styles */
@@ -110,30 +110,30 @@
   }
 
   .btn-primary {
-    @apply btn bg-earth-600 text-cream-50
+    @apply btn bg-earth-600 text-white
            hover:bg-earth-700 hover:shadow-soft
            active:scale-[0.98]
            focus:ring-earth-400;
   }
 
   .btn-secondary {
-    @apply btn bg-olive-600 text-cream-50
-           hover:bg-olive-700 hover:shadow-soft
+    @apply btn bg-cream-500 text-stone-800
+           hover:bg-cream-600 hover:shadow-soft
            active:scale-[0.98]
-           focus:ring-olive-400;
+           focus:ring-cream-400;
   }
 
   .btn-outline {
-    @apply btn border-2 border-earth-500 text-earth-600 bg-transparent
-           hover:bg-earth-500 hover:text-cream-50
+    @apply btn border-2 border-earth-600 text-earth-600 bg-transparent
+           hover:bg-earth-600 hover:text-white
            active:scale-[0.98]
            focus:ring-earth-400;
   }
 
   .btn-ghost {
-    @apply btn text-stone-600 bg-transparent
-           hover:bg-stone-100 hover:text-stone-800
-           focus:ring-stone-300;
+    @apply btn text-stone-800 bg-transparent
+           hover:bg-cream-200 hover:text-stone-900
+           focus:ring-cream-400;
   }
 
   .btn-sm {
@@ -154,35 +154,35 @@
   }
 
   .badge-accent {
-    @apply badge bg-olive-100 text-olive-700;
-  }
-
-  .badge-secondary {
     @apply badge bg-cream-200 text-cream-800;
   }
 
+  .badge-secondary {
+    @apply badge bg-olive-200 text-olive-800;
+  }
+
   .badge-dark {
-    @apply badge bg-stone-800 text-cream-100;
+    @apply badge bg-stone-800 text-white;
   }
 
   /* Cards - Clean with subtle shadows */
   .card {
-    @apply bg-white rounded-2xl shadow-soft border border-cream-200
+    @apply bg-white rounded-2xl shadow-soft border border-stone-200
            overflow-hidden transition-all duration-400
-           hover:shadow-soft-lg hover:border-cream-300;
+           hover:shadow-soft-lg hover:border-cream-500;
   }
 
   .card-flat {
-    @apply bg-cream-100 rounded-2xl border border-cream-200
+    @apply bg-cream-100 rounded-2xl border border-stone-200
            overflow-hidden transition-all duration-300;
   }
 
   /* Form inputs - Minimal & Elegant */
   .input {
     @apply w-full px-5 py-3.5
-           bg-white border border-cream-300 rounded-xl
+           bg-white border border-stone-300 rounded-xl
            text-stone-800 placeholder-stone-400
-           focus:outline-none focus:ring-2 focus:ring-earth-300 focus:border-earth-300
+           focus:outline-none focus:ring-2 focus:ring-cream-500 focus:border-cream-500
            transition-all duration-300;
   }
 
@@ -242,7 +242,7 @@
   }
 
   .prose-custom a {
-    @apply text-earth-600 no-underline hover:text-earth-700 hover:underline;
+    @apply text-earth-600 no-underline hover:text-earth-700 hover:underline decoration-cream-500;
   }
 
   .prose-custom strong {
@@ -265,7 +265,7 @@
 
   .link-underline::after {
     content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-earth-500 transition-all duration-300;
+    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-earth-600 transition-all duration-300;
   }
 
   .link-underline:hover::after {
@@ -287,18 +287,18 @@
   }
 
   .pill-active {
-    @apply border-earth-500 bg-earth-50 text-earth-700 shadow-inner-glow;
+    @apply border-earth-600 bg-earth-50 text-earth-700 shadow-inner-glow;
   }
 
   .pill-savings {
     @apply absolute -top-2 -right-2 px-2 py-0.5
-           bg-olive-500 text-white text-[10px] font-bold
+           bg-olive-500 text-stone-900 text-[10px] font-bold
            rounded-full shadow-sm z-10;
   }
 
   .pill-shipping {
     @apply absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5
-           bg-earth-500 text-white text-[10px] font-bold
+           bg-earth-600 text-white text-[10px] font-bold
            rounded-full shadow-sm whitespace-nowrap z-10;
   }
 
@@ -310,7 +310,7 @@
   .collapsible-trigger {
     @apply flex items-center justify-between w-full py-5
            text-left font-display text-lg font-medium text-stone-800
-           hover:text-earth-600 transition-colors;
+           hover:text-earth-700 transition-colors;
   }
 
   .collapsible-icon {
@@ -328,8 +328,8 @@
   /* Sticky mobile CTA */
   .sticky-cta-mobile {
     @apply fixed bottom-0 left-0 right-0 p-4
-           bg-cream-50/95 backdrop-blur-md
-           border-t border-cream-200 shadow-soft-lg
+           bg-white/95 backdrop-blur-md
+           border-t border-stone-200 shadow-soft-lg
            transform transition-transform duration-300
            lg:hidden z-30;
   }
@@ -364,17 +364,17 @@
 
   /* Progress bar premium */
   .progress-bar {
-    @apply h-1.5 bg-cream-200 rounded-full overflow-hidden;
+    @apply h-1.5 bg-stone-200 rounded-full overflow-hidden;
   }
 
   .progress-fill {
-    @apply h-full bg-gradient-to-r from-earth-400 to-earth-600
+    @apply h-full bg-gradient-to-r from-cream-500 to-earth-600
            rounded-full transition-all duration-500;
   }
 
   /* Testimonial card */
   .testimonial-quote {
-    @apply font-display text-6xl text-earth-200 leading-none;
+    @apply font-display text-6xl text-cream-400 leading-none;
   }
 
   /* Rating stars */
@@ -388,9 +388,9 @@
 
   /* Premium card hover effect */
   .card-premium {
-    @apply bg-white rounded-2xl shadow-soft border border-cream-100
+    @apply bg-white rounded-2xl shadow-soft border border-stone-100
            overflow-hidden transition-all duration-400
-           hover:shadow-card-hover hover:border-cream-200 hover:-translate-y-1;
+           hover:shadow-card-hover hover:border-cream-500 hover:-translate-y-1;
   }
 
   /* Skeleton loading */
@@ -418,11 +418,15 @@
 @layer utilities {
   /* Text gradient */
   .text-gradient-earth {
-    @apply bg-gradient-to-r from-earth-600 to-earth-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-earth-600 to-taupe-500 bg-clip-text text-transparent;
   }
 
   .text-gradient-olive {
-    @apply bg-gradient-to-r from-olive-600 to-olive-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-olive-500 to-olive-400 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-teal {
+    @apply bg-gradient-to-r from-cream-600 to-cream-500 bg-clip-text text-transparent;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -503,11 +507,11 @@
 
 /* Stripe Elements */
 .StripeElement {
-  @apply w-full px-5 py-3.5 bg-white border border-cream-300 rounded-xl;
+  @apply w-full px-5 py-3.5 bg-white border border-stone-300 rounded-xl;
 }
 
 .StripeElement--focus {
-  @apply ring-2 ring-earth-300 border-earth-300;
+  @apply ring-2 ring-cream-500 border-cream-500;
 }
 
 .StripeElement--invalid {

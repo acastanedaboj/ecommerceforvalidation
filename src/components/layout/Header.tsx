@@ -26,8 +26,8 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40">
-      {/* Announcement bar - Subtle & Elegant */}
-      <div className="bg-stone-800 text-cream-100 text-center py-2.5 px-4">
+      {/* Announcement bar - Modern & Clean */}
+      <div className="bg-earth-600 text-white text-center py-2.5 px-4">
         <p className="text-sm tracking-wide">
           <span className="font-medium">Envio gratis</span>
           <span className="mx-2 opacity-40">|</span>
@@ -35,7 +35,7 @@ export function Header() {
           <span className="mx-2 opacity-40">|</span>
           <Link
             href="/suscripcion"
-            className="underline underline-offset-2 hover:text-cream-300 transition-colors"
+            className="underline underline-offset-2 hover:text-cream-200 transition-colors"
           >
             Suscribete y ahorra 15%
           </Link>
@@ -47,8 +47,8 @@ export function Header() {
         className={cn(
           'transition-all duration-300',
           isScrolled
-            ? 'bg-cream-50/95 backdrop-blur-md shadow-soft'
-            : 'bg-cream-50'
+            ? 'bg-white/95 backdrop-blur-md shadow-soft'
+            : 'bg-white'
         )}
         aria-label="Navegacion principal"
       >
@@ -75,7 +75,7 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="link-underline text-stone-600 hover:text-stone-900 font-medium text-sm tracking-wide transition-colors"
+                  className="link-underline text-stone-800 hover:text-earth-600 font-medium text-sm tracking-wide transition-colors"
                 >
                   {item.name}
                 </Link>
@@ -91,12 +91,12 @@ export function Header() {
               <button
                 type="button"
                 onClick={toggleCart}
-                className="relative p-3 text-stone-500 hover:text-stone-800 hover:bg-cream-200/50 rounded-full transition-all"
+                className="relative p-3 text-stone-800 hover:text-earth-600 hover:bg-cream-200/50 rounded-full transition-all"
                 aria-label={`Carrito de compra (${itemCount} productos)`}
               >
                 <ShoppingBag className="w-5 h-5" strokeWidth={1.5} />
                 {itemCount > 0 && (
-                  <span className="absolute top-1 right-1 bg-earth-600 text-cream-50 text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
+                  <span className="absolute top-1 right-1 bg-earth-600 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
                     {itemCount > 9 ? '9+' : itemCount}
                   </span>
                 )}
@@ -106,7 +106,7 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-3 text-stone-500 hover:text-stone-800 hover:bg-cream-200/50 rounded-full transition-all ml-1"
+                className="lg:hidden p-3 text-stone-800 hover:text-earth-600 hover:bg-cream-200/50 rounded-full transition-all ml-1"
                 aria-expanded={isMobileMenuOpen}
                 aria-controls="mobile-menu"
                 aria-label={isMobileMenuOpen ? 'Cerrar menu' : 'Abrir menu'}
@@ -121,11 +121,11 @@ export function Header() {
           </div>
         </div>
 
-        {/* Mobile Navigation - Elegant slide down */}
+        {/* Mobile Navigation - Clean slide down */}
         <div
           id="mobile-menu"
           className={cn(
-            'lg:hidden overflow-hidden transition-all duration-400 ease-out border-t border-cream-200',
+            'lg:hidden overflow-hidden transition-all duration-400 ease-out border-t border-stone-200',
             isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0 border-transparent'
           )}
         >
@@ -137,7 +137,7 @@ export function Header() {
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    'px-4 py-3.5 text-stone-700 hover:text-stone-900 hover:bg-cream-100 rounded-xl font-medium transition-all',
+                    'px-4 py-3.5 text-stone-800 hover:text-earth-600 hover:bg-cream-100 rounded-xl font-medium transition-all',
                     'animate-fade-in-up',
                   )}
                   style={{ animationDelay: `${index * 50}ms` }}
@@ -148,7 +148,7 @@ export function Header() {
             </div>
 
             {/* Mobile CTA */}
-            <div className="mt-6 pt-6 border-t border-cream-200">
+            <div className="mt-6 pt-6 border-t border-stone-200">
               <Link
                 href="/tienda"
                 onClick={() => setIsMobileMenuOpen(false)}
