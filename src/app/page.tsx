@@ -140,10 +140,10 @@ export default function HomePage() {
       </section>
 
       {/* Benefits Section - Editorial Style */}
-      <section className="py-20 md:py-28 bg-[#A3BFBF]">
+      <section className="py-20 md:py-28 bg-cream-100">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <p className="text-xs tracking-widest uppercase text-stone-700 mb-4">
+            <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
               Calidad artesanal
             </p>
             <h2 className="font-display text-stone-800 mb-6">
@@ -151,47 +151,47 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-400/30">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-200">
             {/* Benefit 1 */}
-            <div className="bg-[#A3BFBF] p-10 text-center group hover:bg-white/30 transition-colors">
-              <Wheat className="w-8 h-8 text-stone-700 mx-auto mb-6" strokeWidth={1} />
+            <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
+              <Wheat className="w-8 h-8 text-earth-600 mx-auto mb-6" strokeWidth={1} />
               <h3 className="font-display text-lg text-stone-800 mb-3">
                 Avena remojada
               </h3>
-              <p className="text-stone-700 text-sm leading-relaxed">
+              <p className="text-stone-600 text-sm leading-relaxed">
                 Reducimos el ácido fítico para mejorar la digestibilidad.
               </p>
             </div>
 
             {/* Benefit 2 */}
-            <div className="bg-[#A3BFBF] p-10 text-center group hover:bg-white/30 transition-colors">
-              <Droplets className="w-8 h-8 text-stone-700 mx-auto mb-6" strokeWidth={1} />
+            <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
+              <Droplets className="w-8 h-8 text-olive-600 mx-auto mb-6" strokeWidth={1} />
               <h3 className="font-display text-lg text-stone-800 mb-3">
                 Miel ecológica local
               </h3>
-              <p className="text-stone-700 text-sm leading-relaxed">
+              <p className="text-stone-600 text-sm leading-relaxed">
                 De apicultores de pueblo. Sin azúcares refinados.
               </p>
             </div>
 
             {/* Benefit 3 */}
-            <div className="bg-[#A3BFBF] p-10 text-center group hover:bg-white/30 transition-colors">
-              <TreeDeciduous className="w-8 h-8 text-stone-700 mx-auto mb-6" strokeWidth={1} />
+            <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
+              <TreeDeciduous className="w-8 h-8 text-taupe-600 mx-auto mb-6" strokeWidth={1} />
               <h3 className="font-display text-lg text-stone-800 mb-3">
                 Frutos secos premium
               </h3>
-              <p className="text-stone-700 text-sm leading-relaxed">
+              <p className="text-stone-600 text-sm leading-relaxed">
                 Pecanas, almendras, avellanas y anacardos de primera.
               </p>
             </div>
 
             {/* Benefit 4 */}
-            <div className="bg-[#A3BFBF] p-10 text-center group hover:bg-white/30 transition-colors">
-              <Sparkles className="w-8 h-8 text-stone-700 mx-auto mb-6" strokeWidth={1} />
+            <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
+              <Sparkles className="w-8 h-8 text-earth-600 mx-auto mb-6" strokeWidth={1} />
               <h3 className="font-display text-lg text-stone-800 mb-3">
                 Sin aditivos
               </h3>
-              <p className="text-stone-700 text-sm leading-relaxed">
+              <p className="text-stone-600 text-sm leading-relaxed">
                 Solo ingredientes que reconocerías en tu cocina.
               </p>
             </div>
