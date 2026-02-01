@@ -22,7 +22,7 @@ export function Footer() {
                 alt={BUSINESS.name}
                 width={100}
                 height={35}
-                className="h-8 w-auto brightness-0 invert sepia saturate-[10] hue-rotate-[15deg] transition-transform duration-300 group-hover:scale-105"
+                className="h-8 w-auto brightness-0 invert sepia saturate-[8] hue-rotate-[35deg] transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
             <p className="mt-5 text-[#f1e978] max-w-sm leading-relaxed">
