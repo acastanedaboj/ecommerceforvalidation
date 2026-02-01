@@ -127,7 +127,7 @@ export default function TiendaPage() {
               </p>
               <a
                 href="/mayorista"
-                className="inline-flex items-center gap-2 bg-white text-stone-800 px-6 py-3 rounded-full font-medium hover:bg-cream-100 transition-colors"
+                className="inline-flex items-center gap-2 bg-[#ffffec] text-stone-800 px-6 py-3 rounded-full font-medium hover:bg-[#ffffec]/90 transition-colors"
               >
                 Ver condiciones mayorista
               </a>
