@@ -75,7 +75,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
             </span>
           )}
           {product.tags.includes('ecologico') && (
-            <span className="badge bg-olive-500/95 text-white backdrop-blur-sm">
+            <span className="badge bg-olive-500/95 text-stone-700 backdrop-blur-sm">
               Ecologico
             </span>
           )}

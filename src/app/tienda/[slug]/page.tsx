@@ -236,7 +236,7 @@ export default function ProductDetailPage() {
                         </span>
                       </div>
                     </div>
-                    <span className="badge bg-olive-500 text-white">-15%</span>
+                    <span className="badge bg-olive-500 text-stone-700">-15%</span>
                   </div>
                 </button>
               </div>
