@@ -27,7 +27,7 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40">
       {/* Announcement bar - Modern & Clean */}
-      <div className="bg-black/80 text-gray-100 text-center py-2.5 px-4">
+      <div className="bg-black/80 text-[#ffffec] text-center py-2.5 px-4">
         <p className="text-sm tracking-wide font-medium">
           <span className="font-semibold">Envio gratis</span>
           <span className="mx-2 opacity-70">|</span>
@@ -35,7 +35,7 @@ export function Header() {
           <span className="mx-2 opacity-70">|</span>
           <Link
             href="/suscripcion"
-            className="underline underline-offset-2 hover:text-white transition-colors font-semibold"
+            className="underline underline-offset-2 hover:text-[#ffffec] transition-colors font-semibold"
           >
             Suscribete y ahorra 15%
           </Link>
