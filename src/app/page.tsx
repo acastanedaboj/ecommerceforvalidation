@@ -58,7 +58,7 @@ export default function HomePage() {
     <>
       {/* Hero Section - Editorial Style */}
       <section className="relative bg-white overflow-hidden">
-        <div className="container-custom py-20 md:py-28 lg:py-36">
+        <div className="container-custom pt-10 pb-16 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Hero Content */}
             <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
