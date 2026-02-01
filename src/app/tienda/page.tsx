@@ -148,7 +148,7 @@ export default function TiendaPage() {
               <p className="text-stone-500 mb-4">
                 Todos nuestros sabores comparten la misma base de calidad: avena sin gluten
                 y frutos secos premium. La mayoría están endulzados con miel ecológica,
-                y tenemos una opción vegana (Dátiles) endulzada con sirope de ágave.
+                y tenemos una opción vegana endulzada con sirope de ágave.
               </p>
               <p className="text-sm text-earth-600 font-medium">
                 Consejo: Empieza con el sabor clásico y luego explora los demás.
