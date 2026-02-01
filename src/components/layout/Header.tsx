@@ -64,7 +64,7 @@ export function Header() {
                 alt={BUSINESS.name}
                 width={100}
                 height={35}
-                className="h-8 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-auto max-w-[100px] transition-transform duration-300 group-hover:scale-105"
                 priority
               />
             </Link>
