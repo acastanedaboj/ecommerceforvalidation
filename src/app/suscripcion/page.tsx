@@ -56,7 +56,7 @@ export default function SuscripcionPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/tienda/granola-clasica-250g"
-                className="btn bg-white text-primary-700 hover:bg-primary-50 btn-lg"
+                className="btn bg-[#ffffec] text-primary-700 hover:bg-[#ffffec]/90 btn-lg"
               >
                 Empezar suscripción
                 <ArrowRight className="w-5 h-5 ml-2" />
