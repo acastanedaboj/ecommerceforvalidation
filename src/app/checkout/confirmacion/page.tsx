@@ -15,7 +15,7 @@ function ConfirmacionContent() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
+          <h1 className="text-3xl md:text-4xl font-display text-neutral-900 mb-4">
             ¡Gracias por tu pedido!
           </h1>
           <p className="text-lg text-neutral-600 mb-8">
@@ -24,7 +24,7 @@ function ConfirmacionContent() {
 
           {/* Order info card */}
           <div className="bg-white rounded-xl p-6 shadow-sm border border-neutral-200 mb-8 text-left">
-            <h2 className="font-semibold text-neutral-900 mb-4">¿Qué pasa ahora?</h2>
+            <h2 className="text-neutral-900 mb-4">¿Qué pasa ahora?</h2>
             <div className="space-y-4">
               <div className="flex gap-4">
                 <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">

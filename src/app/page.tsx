@@ -128,7 +128,7 @@ export default function HomePage() {
                       ))}
                     </div>
                     <div>
-                      <p className="font-display font-semibold text-stone-800">4.9/5</p>
+                      <p className="font-display text-stone-800">4.9/5</p>
                       <p className="text-xs text-stone-500">+500 reseñas</p>
                     </div>
                   </div>
@@ -272,7 +272,7 @@ export default function HomePage() {
                   <span className="text-stone-500 text-sm">/ud.</span>
                 </div>
                 {pack.discountPercentage > 0 && (
-                  <p className="inline-block text-xs text-olive-700 bg-olive-100 px-2 py-0.5 mb-4">
+                  <p className="inline-block text-xs text-stone-800 bg-olive-100 px-2 py-1 rounded mb-4">
                     -{pack.discountPercentage}% por unidad
                   </p>
                 )}

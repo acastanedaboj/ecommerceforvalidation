@@ -213,7 +213,7 @@
   }
 
   .price-discount {
-    @apply text-olive-600 font-semibold;
+    @apply text-olive-600;
   }
 
   /* Dividers */
@@ -242,7 +242,7 @@
   }
 
   .prose-custom strong {
-    @apply text-black font-semibold;
+    @apply text-black font-medium;
   }
 
   .prose-custom img {

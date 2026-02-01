@@ -65,7 +65,7 @@ export function PackPillSelector({
 
             {/* Pack name */}
             <span className={cn(
-              'font-display text-lg font-semibold',
+              'font-display text-lg',
               isSelected ? 'text-earth-700' : 'text-stone-700'
             )}>
               {option.size === 1 ? '1 bolsa' : `Pack ${option.size}`}

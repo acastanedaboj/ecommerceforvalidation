@@ -154,7 +154,7 @@ export default function ProductDetailPage() {
               {/* Price display */}
               <div className="bg-white rounded-2xl p-6 mb-8 shadow-soft border border-cream-100">
                 <div className="flex items-baseline gap-3 mb-2">
-                  <span className="text-4xl font-display font-semibold text-earth-600">
+                  <span className="text-4xl font-display text-earth-600">
                     {formatPrice(packUnitPrice)}
                   </span>
                   <span className="text-stone-400">/unidad</span>
@@ -291,7 +291,7 @@ export default function ProductDetailPage() {
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-stone-300">Total:</span>
                   <div className="text-right">
-                    <span className="text-3xl font-display font-semibold">{formatPrice(totalPrice)}</span>
+                    <span className="text-3xl font-display">{formatPrice(totalPrice)}</span>
                     {isFreeShipping && (
                       <p className="text-earth-400 text-sm flex items-center gap-2 justify-end mt-1">
                         <Truck className="w-4 h-4" />

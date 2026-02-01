@@ -14,7 +14,7 @@ export default function CookiesPage() {
   return (
     <div className="section">
       <div className="container-custom max-w-3xl">
-        <h1 className="text-4xl font-display font-bold text-neutral-900 mb-8">
+        <h1 className="text-4xl font-display text-neutral-900 mb-8">
           Política de Cookies
         </h1>
 

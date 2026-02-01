@@ -98,7 +98,7 @@ export default function BlogPostPage({ params }: Props) {
           return (
             <h1
               key={index}
-              className="text-3xl font-display font-bold text-neutral-900 mt-8 mb-4"
+              className="text-3xl font-display text-neutral-900 mt-8 mb-4"
               dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
             />
           );
@@ -107,7 +107,7 @@ export default function BlogPostPage({ params }: Props) {
           return (
             <h2
               key={index}
-              className="text-2xl font-display font-bold text-neutral-900 mt-8 mb-4"
+              className="text-2xl font-display text-neutral-900 mt-8 mb-4"
               dangerouslySetInnerHTML={{ __html: parseInline(line.slice(3)) }}
             />
           );
@@ -116,7 +116,7 @@ export default function BlogPostPage({ params }: Props) {
           return (
             <h3
               key={index}
-              className="text-xl font-semibold text-neutral-900 mt-6 mb-3"
+              className="text-xl text-neutral-900 mt-6 mb-3"
               dangerouslySetInnerHTML={{ __html: parseInline(line.slice(4)) }}
             />
           );
@@ -176,7 +176,7 @@ export default function BlogPostPage({ params }: Props) {
         {/* Header */}
         <header className="max-w-3xl mx-auto text-center mb-12">
           <span className="badge-accent mb-4">{category?.name}</span>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-neutral-900 mb-6">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-display text-neutral-900 mb-6">
             {post.title}
           </h1>
           <p className="text-lg text-neutral-600 mb-6">{post.excerpt}</p>
@@ -243,7 +243,7 @@ export default function BlogPostPage({ params }: Props) {
         {/* Related posts */}
         {relatedPosts.length > 0 && (
           <section className="mt-16 pt-16 border-t border-neutral-200">
-            <h2 className="text-2xl font-display font-bold text-neutral-900 mb-8 text-center">
+            <h2 className="text-2xl font-display text-neutral-900 mb-8 text-center">
               Artículos relacionados
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -263,7 +263,7 @@ export default function BlogPostPage({ params }: Props) {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="font-semibold text-neutral-900 group-hover:text-primary-600 transition-colors">
+                    <h3 className="text-neutral-900 group-hover:text-primary-600 transition-colors">
                       {relatedPost.title}
                     </h3>
                     <p className="text-sm text-neutral-600 mt-2 line-clamp-2">
@@ -278,7 +278,7 @@ export default function BlogPostPage({ params }: Props) {
 
         {/* CTA */}
         <section className="mt-16 bg-primary-50 rounded-2xl p-8 text-center max-w-2xl mx-auto">
-          <h3 className="text-xl font-bold text-neutral-900 mb-2">
+          <h3 className="text-xl text-neutral-900 mb-2">
             ¿Te ha gustado este artículo?
           </h3>
           <p className="text-neutral-600 mb-4">

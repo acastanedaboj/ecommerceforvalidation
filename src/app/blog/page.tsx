@@ -33,7 +33,7 @@ export default function BlogPage() {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-display text-neutral-900 mb-4">
             Blog & Recetas
           </h1>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
@@ -88,7 +88,7 @@ export default function BlogPage() {
                   <span className="badge-accent mb-3">
                     {blogCategories.find((c) => c.id === featuredPost.category)?.name}
                   </span>
-                  <h2 className="text-2xl md:text-3xl font-display font-bold text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors">
+                  <h2 className="text-2xl md:text-3xl font-display text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors">
                     {featuredPost.title}
                   </h2>
                   <p className="text-neutral-600 mb-4 line-clamp-3">
@@ -133,7 +133,7 @@ export default function BlogPage() {
                     <span className="badge-secondary text-xs mb-2">
                       {blogCategories.find((c) => c.id === post.category)?.name}
                     </span>
-                    <h3 className="font-semibold text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
+                    <h3 className="text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
                       {post.title}
                     </h3>
                     <p className="text-sm text-neutral-600 mb-3 line-clamp-2">
@@ -158,7 +158,7 @@ export default function BlogPage() {
 
         {/* Newsletter CTA */}
         <div className="mt-16 bg-primary-50 rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="text-2xl font-bold text-neutral-900 mb-2">
+          <h3 className="text-2xl text-neutral-900 mb-2">
             ¿Quieres más recetas y consejos?
           </h3>
           <p className="text-neutral-600 mb-6 max-w-xl mx-auto">
