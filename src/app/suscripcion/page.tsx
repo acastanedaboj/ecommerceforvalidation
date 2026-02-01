@@ -43,10 +43,10 @@ export default function SuscripcionPage() {
               <RefreshCw className="w-4 h-4" />
               Suscripción mensual
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6 text-[#ffffec]">
               Suscríbete y ahorra un {subscriptionInfo.discountPercentage}%
             </h1>
-            <p className="text-xl text-primary-100 mb-8">
+            <p className="text-xl text-[#ffffec]/80 mb-8">
               Recibe 6 bolsas de granola Poppy cada mes a solo{' '}
               <strong className="text-[#ffffec]">
                 {formatPrice(subscriptionInfo.unitPriceCents)}/ud
@@ -56,7 +56,7 @@ export default function SuscripcionPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/tienda/granola-clasica-250g"
-                className="btn bg-white text-primary-700 hover:bg-primary-50 btn-lg"
+                className="btn bg-[#ffffec] text-primary-700 hover:bg-[#ffffec]/90 btn-lg"
               >
                 Empezar suscripción
                 <ArrowRight className="w-5 h-5 ml-2" />
@@ -383,10 +383,10 @@ export default function SuscripcionPage() {
       {/* Final CTA */}
       <section className="section bg-neutral-900 text-[#ffffec]">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-display mb-4">
+          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4 text-[#ffffec]">
             ¿Listo para ahorrar en tu granola favorita?
           </h2>
-          <p className="text-neutral-300 mb-8 max-w-xl mx-auto">
+          <p className="text-[#ffffec]/80 mb-8 max-w-xl mx-auto">
             Únete a cientos de suscriptores que reciben su granola Poppy cada mes
             sin preocupaciones.
           </p>
