@@ -35,7 +35,7 @@ export function Header() {
           <span className="mx-2 opacity-70">|</span>
           <Link
             href="/suscripcion"
-            className="underline underline-offset-2 hover:text-[#f1e978]/90 transition-colors font-semibold"
+            className="underline underline-offset-2 hover:text-[#ffffec] transition-colors font-semibold"
           >
             Suscribete y ahorra 15%
           </Link>
@@ -64,7 +64,7 @@ export function Header() {
                 alt={BUSINESS.name}
                 width={100}
                 height={35}
-                className="h-8 w-auto transition-transform duration-300 group-hover:scale-105"
+                className="h-auto max-w-[100px] transition-transform duration-300 group-hover:scale-105"
                 priority
               />
             </Link>
@@ -96,7 +96,7 @@ export function Header() {
               >
                 <ShoppingBag className="w-5 h-5" strokeWidth={1.5} />
                 {itemCount > 0 && (
-                  <span className="absolute top-1 right-1 bg-earth-600 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
+                  <span className="absolute top-1 right-1 bg-earth-600 text-[#ffffec] text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
                     {itemCount > 9 ? '9+' : itemCount}
                   </span>
                 )}

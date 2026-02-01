@@ -190,13 +190,13 @@ export function BundleBuilder({
                   </div>
                   {/* Discount badge */}
                   {option.discountPercentage > 0 && (
-                    <span className="absolute -top-2 -right-2 px-2 py-0.5 bg-olive-500 text-white text-xs font-bold rounded-full">
+                    <span className="absolute -top-2 -right-2 px-2 py-0.5 bg-olive-500 text-[#ffffec] text-xs font-bold rounded-full">
                       -{Math.round(option.discountPercentage)}%
                     </span>
                   )}
                   {/* Free shipping badge */}
                   {option.freeShipping && (
-                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-earth-500 text-white text-[10px] font-medium rounded-full whitespace-nowrap">
+                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-earth-500 text-[#ffffec] text-[10px] font-medium rounded-full whitespace-nowrap">
                       Envío gratis
                     </span>
                   )}
@@ -282,7 +282,7 @@ export function BundleBuilder({
                     className={cn(
                       'w-10 h-10 rounded-full flex items-center justify-center transition-all',
                       totalUnits < packSize
-                        ? 'bg-earth-500 text-white hover:bg-earth-600'
+                        ? 'bg-earth-500 text-[#ffffec] hover:bg-earth-600'
                         : 'bg-cream-100 text-stone-300 cursor-not-allowed'
                     )}
                     aria-label={`Aumentar ${flavor.productName}`}
@@ -348,7 +348,7 @@ export function BundleBuilder({
           className={cn(
             'btn w-full justify-center py-4 text-base',
             isAdding
-              ? 'bg-olive-500 text-white hover:bg-olive-500'
+              ? 'bg-olive-500 text-[#ffffec] hover:bg-olive-500'
               : isComplete
               ? 'btn-primary'
               : 'bg-cream-200 text-stone-400 cursor-not-allowed'

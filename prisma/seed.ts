@@ -36,7 +36,7 @@ async function main() {
       sku: 'GRAN-250-CLS',
       name: 'Granola Clásica',
       slug: 'granola-clasica-250g',
-      description: `Nuestra granola clásica es el resultado de una receta artesanal perfeccionada durante años. Elaborada con avena certificada sin gluten, remojada para facilitar su digestión, y tostada lentamente con miel ecológica de apicultores locales.`,
+      description: `Nuestra granola clásica es el resultado de una receta artesanal perfeccionada durante años. Elaborada con avena certificada sin gluten, frutos secos y semillas remojados para facilitar la digestión, y tostada lentamente con miel ecológica de apicultores locales.`,
       shortDescription: 'Granola artesanal premium con avena sin gluten, miel ecológica y frutos secos selectos.',
       priceInCents: 900,
       weight: 250,
@@ -220,13 +220,13 @@ async function main() {
     {
       slug: 'beneficios-avena-sin-gluten',
       title: 'Beneficios de la Avena Sin Gluten',
-      excerpt: 'Descubre por qué el proceso de remojo de la avena marca la diferencia.',
+      excerpt: 'Descubre por qué la avena sin gluten certificada marca la diferencia.',
       content: '# Beneficios de la Avena Sin Gluten\n\nLa avena es uno de los cereales más completos...',
       coverImage: '/images/blog/avena-sin-gluten.jpg',
       isPublished: true,
       publishedAt: new Date('2024-01-08'),
-      metaTitle: 'Beneficios de la Avena Sin Gluten Remojada',
-      metaDescription: 'Descubre por qué el remojo de la avena mejora su digestibilidad.',
+      metaTitle: 'Beneficios de la Avena Sin Gluten Certificada',
+      metaDescription: 'Descubre los beneficios de la avena sin gluten certificada en nuestra granola.',
     },
   ];
 
