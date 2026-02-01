@@ -31,7 +31,7 @@
 
   /* Body defaults */
   body {
-    @apply bg-white text-stone-800 font-sans;
+    @apply bg-white text-black font-sans;
   }
 
   /* Better focus styles for accessibility */
@@ -51,7 +51,7 @@
 
   /* Typography defaults - Elegant & Clean */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display text-stone-800 tracking-tight;
+    @apply font-display text-black tracking-tight;
   }
 
   h1 {
@@ -71,7 +71,7 @@
   }
 
   p {
-    @apply text-stone-600 leading-relaxed;
+    @apply text-black leading-relaxed;
   }
 
   /* Link defaults */
@@ -205,7 +205,7 @@
 
   /* Price display */
   .price {
-    @apply font-display font-medium text-stone-800;
+    @apply font-display font-medium text-black;
   }
 
   .price-original {
@@ -230,11 +230,11 @@
   .prose-custom h2,
   .prose-custom h3,
   .prose-custom h4 {
-    @apply font-display text-stone-800 font-medium mb-4;
+    @apply font-display text-black font-medium mb-4;
   }
 
   .prose-custom p {
-    @apply text-stone-600 leading-relaxed mb-4;
+    @apply text-black leading-relaxed mb-4;
   }
 
   .prose-custom a {
@@ -242,7 +242,7 @@
   }
 
   .prose-custom strong {
-    @apply text-stone-800 font-semibold;
+    @apply text-black font-semibold;
   }
 
   .prose-custom img {
@@ -288,7 +288,7 @@
 
   .pill-savings {
     @apply absolute -top-2 -right-2 px-2 py-0.5
-           bg-olive-500 text-stone-900 text-[10px] font-bold
+           bg-olive-500 text-stone-700 text-[10px] font-bold
            shadow-sm z-10;
   }
 
@@ -305,7 +305,7 @@
 
   .collapsible-trigger {
     @apply flex items-center justify-between w-full py-5
-           text-left font-display text-lg font-medium text-stone-800
+           text-left font-display text-lg font-medium text-black
            hover:text-earth-700 transition-colors;
   }
 

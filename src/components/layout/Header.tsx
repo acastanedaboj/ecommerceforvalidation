@@ -62,9 +62,9 @@ export function Header() {
               <Image
                 src="/images/logo.svg"
                 alt={BUSINESS.name}
-                width={140}
-                height={50}
-                className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+                width={100}
+                height={35}
+                className="h-8 w-auto transition-transform duration-300 group-hover:scale-105"
                 priority
               />
             </Link>
