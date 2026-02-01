@@ -30,9 +30,9 @@ export function Header() {
       <div className="bg-black/80 text-[#ffffec] text-center py-2.5 px-4">
         <p className="text-sm tracking-wide font-medium">
           <span className="font-semibold">Envio gratis</span>
-          <span className="mx-2 opacity-70">|</span>
+          <span className="mx-2">|</span>
           a partir de 4 bolsas o 35 EUR
-          <span className="mx-2 opacity-70">|</span>
+          <span className="mx-2">|</span>
           <Link
             href="/suscripcion"
             className="underline underline-offset-2 hover:text-[#ffffec] transition-colors font-semibold"
