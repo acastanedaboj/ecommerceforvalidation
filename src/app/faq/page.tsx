@@ -94,7 +94,7 @@ export default function FAQPage() {
                       key={faq.id}
                       className="bg-white rounded-xl border border-neutral-200 group"
                     >
-                      <summary className="p-6 font-semibold text-neutral-900 cursor-pointer list-none flex justify-between items-center hover:text-primary-600 transition-colors">
+                      <summary className="p-6 text-neutral-900 cursor-pointer list-none flex justify-between items-center hover:text-primary-600 transition-colors">
                         {faq.question}
                         <span className="text-primary-600 group-open:rotate-180 transition-transform ml-4 flex-shrink-0">
                           ↓

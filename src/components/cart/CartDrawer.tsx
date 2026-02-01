@@ -270,7 +270,7 @@ export function CartDrawer() {
             {/* Total */}
             <div className="flex justify-between items-center mt-5 pt-5 border-t border-cream-200">
               <span className="font-medium text-stone-600">Total</span>
-              <span className="text-2xl font-display font-semibold text-stone-800">
+              <span className="text-2xl font-display text-stone-800">
                 {formatPrice(cartTotal.totalCents)}
               </span>
             </div>

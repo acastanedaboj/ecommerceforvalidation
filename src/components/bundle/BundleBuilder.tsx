@@ -173,7 +173,7 @@ export function BundleBuilder({
                   <div className="text-center">
                     <span
                       className={cn(
-                        'block text-lg font-semibold',
+                        'block text-lg',
                         isSelected ? 'text-earth-700' : 'text-stone-700'
                       )}
                     >
@@ -314,7 +314,7 @@ export function BundleBuilder({
           {/* Price breakdown */}
           <div className="flex items-baseline justify-between">
             <div>
-              <span className="text-3xl font-display font-semibold text-earth-600">
+              <span className="text-3xl font-display text-earth-600">
                 {formatPrice(pricing.subtotalCents)}
               </span>
               <span className="text-stone-500 ml-2">

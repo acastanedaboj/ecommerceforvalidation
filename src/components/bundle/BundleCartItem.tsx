@@ -161,7 +161,7 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
 
           {/* Price */}
           <div className="text-right">
-            <p className="font-display text-lg font-semibold text-earth-600">
+            <p className="font-display text-lg text-earth-600">
               {formatPrice(pricing.subtotalCents)}
             </p>
             {pricing.discountPercentage > 0 && (

@@ -102,7 +102,7 @@ export default function NosotrosPage() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-6">
-                Todo empezó en una pequeña cocina
+                Todo empezó en una pequeña <span className="text-earth-600-display-italic">cocina</span>
               </h2>
               <div className="space-y-4 text-stone-600">
                 <p>
@@ -149,7 +149,7 @@ export default function NosotrosPage() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
-              Nuestros valores
+              Nuestros <span className="text-earth-600-display-italic">valores</span>
             </h2>
             <p className="text-stone-600 max-w-2xl mx-auto">
               Cada decisión que tomamos está guiada por tres principios fundamentales
@@ -281,7 +281,7 @@ export default function NosotrosPage() {
           <div className="bg-white rounded-3xl shadow-soft-lg p-8 sm:p-12">
             <div className="text-center mb-10">
               <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
-                Nuestros compromisos
+                Nuestros <span className="text-earth-600-display-italic">compromisos</span>
               </h2>
             </div>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -339,7 +339,7 @@ export default function NosotrosPage() {
       <section className="py-16 sm:py-24 bg-earth-50">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
-            ¿Listo para probar la diferencia?
+            ¿Listo para probar la <span className="text-earth-600-display-italic">diferencia</span>?
           </h2>
           <p className="text-stone-600 mb-8">
             Descubre por qué miles de personas han elegido Poppy

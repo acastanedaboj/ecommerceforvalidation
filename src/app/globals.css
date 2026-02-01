@@ -36,7 +36,7 @@
 
   /* Better focus styles for accessibility */
   *:focus-visible {
-    @apply outline-none ring-2 ring-cream-500 ring-offset-2 ring-offset-white;
+    @apply outline-none ring-2 ring-sky-500 ring-offset-2 ring-offset-white;
   }
 
   /* Remove default button styles */
@@ -115,9 +115,9 @@
   }
 
   .btn-secondary {
-    @apply btn bg-cream-500 text-stone-800
-           hover:bg-cream-600
-           focus:ring-cream-400;
+    @apply btn bg-sky-500 text-white
+           hover:bg-sky-600
+           focus:ring-sky-400;
   }
 
   .btn-outline {
@@ -128,8 +128,8 @@
 
   .btn-ghost {
     @apply btn text-stone-800 bg-transparent
-           hover:bg-cream-100
-           focus:ring-cream-400;
+           hover:bg-sky-100
+           focus:ring-sky-400;
   }
 
   .btn-sm {
@@ -150,7 +150,7 @@
   }
 
   .badge-accent {
-    @apply badge bg-cream-200 text-cream-800;
+    @apply badge bg-sky-200 text-sky-800;
   }
 
   .badge-secondary {
@@ -213,7 +213,7 @@
   }
 
   .price-discount {
-    @apply text-olive-600 font-semibold;
+    @apply text-olive-600;
   }
 
   /* Dividers */
@@ -238,11 +238,11 @@
   }
 
   .prose-custom a {
-    @apply text-earth-600 no-underline hover:text-earth-700 hover:underline decoration-cream-500;
+    @apply text-earth-600 no-underline hover:text-earth-700 hover:underline decoration-sky-500;
   }
 
   .prose-custom strong {
-    @apply text-black font-semibold;
+    @apply text-black font-medium;
   }
 
   .prose-custom img {
@@ -278,8 +278,8 @@
            border border-stone-300
            text-sm font-medium text-stone-600 bg-white
            transition-all duration-300
-           hover:border-stone-400 hover:bg-cream-50
-           focus-visible:ring-1 focus-visible:ring-stone-400;
+           hover:border-stone-400 hover:bg-sky-50
+           focus-visible:ring-1 focus-visible:ring-sky-400;
   }
 
   .pill-active {
@@ -369,7 +369,7 @@
 
   /* Testimonial card */
   .testimonial-quote {
-    @apply font-display text-6xl text-cream-400 leading-none;
+    @apply font-display text-6xl text-sky-300 leading-none;
   }
 
   /* Rating stars */
@@ -411,6 +411,11 @@
    ========================================== */
 
 @layer utilities {
+  /* Text earth-600 with display font italic */
+  .text-earth-600-display-italic {
+    @apply text-earth-600 font-display italic;
+  }
+
   /* Text gradient */
   .text-gradient-earth {
     @apply bg-gradient-to-r from-earth-600 to-taupe-500 bg-clip-text text-transparent;
@@ -420,8 +425,8 @@
     @apply bg-gradient-to-r from-olive-500 to-olive-400 bg-clip-text text-transparent;
   }
 
-  .text-gradient-teal {
-    @apply bg-gradient-to-r from-cream-600 to-cream-500 bg-clip-text text-transparent;
+  .text-gradient-sky {
+    @apply bg-gradient-to-r from-sky-600 to-sky-500 bg-clip-text text-transparent;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -506,7 +511,7 @@
 }
 
 .StripeElement--focus {
-  @apply ring-2 ring-cream-500 border-cream-500;
+  @apply ring-2 ring-sky-500 border-sky-500;
 }
 
 .StripeElement--invalid {
