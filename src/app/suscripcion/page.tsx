@@ -36,10 +36,10 @@ export default function SuscripcionPage() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-white py-16 md:py-24">
+      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-[#ffffec] py-16 md:py-24">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 badge bg-white/20 text-white mb-4">
+            <span className="inline-flex items-center gap-2 badge bg-white/20 text-[#ffffec] mb-4">
               <RefreshCw className="w-4 h-4" />
               Suscripción mensual
             </span>
@@ -48,7 +48,7 @@ export default function SuscripcionPage() {
             </h1>
             <p className="text-xl text-primary-100 mb-8">
               Recibe 6 bolsas de granola Poppy cada mes a solo{' '}
-              <strong className="text-white">
+              <strong className="text-[#ffffec]">
                 {formatPrice(subscriptionInfo.unitPriceCents)}/ud
               </strong>
               . Envío gratis, cancela cuando quieras.
@@ -381,7 +381,7 @@ export default function SuscripcionPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="section bg-neutral-900 text-white">
+      <section className="section bg-neutral-900 text-[#ffffec]">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
             ¿Listo para ahorrar en tu granola favorita?

@@ -84,7 +84,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
         {/* Low stock warning */}
         {product.stock > 0 && product.stock <= 10 && (
           <div className="absolute top-4 right-4">
-            <span className="badge bg-earth-500/95 text-white backdrop-blur-sm">
+            <span className="badge bg-earth-500/95 text-[#ffffec] backdrop-blur-sm">
               Ultimas unidades
             </span>
           </div>
@@ -183,7 +183,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
               className={cn(
                 'btn w-full justify-center py-3.5',
                 isAdding
-                  ? 'bg-olive-500 text-white hover:bg-olive-500'
+                  ? 'bg-olive-500 text-[#ffffec] hover:bg-olive-500'
                   : 'btn-primary'
               )}
             >

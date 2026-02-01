@@ -150,7 +150,7 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
               onClick={handleIncrement}
               className={cn(
                 'w-8 h-8 rounded-full flex items-center justify-center',
-                'bg-earth-500 text-white hover:bg-earth-600',
+                'bg-earth-500 text-[#ffffec] hover:bg-earth-600',
                 'transition-colors duration-200'
               )}
               aria-label="Aumentar cantidad"

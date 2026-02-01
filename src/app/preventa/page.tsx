@@ -216,7 +216,7 @@ export default function PreventaPage() {
 
             <div className="space-y-4">
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-semibold text-sm">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-[#ffffec] rounded-full flex items-center justify-center font-semibold text-sm">
                   1
                 </div>
                 <div>
@@ -231,7 +231,7 @@ export default function PreventaPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-semibold text-sm">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-[#ffffec] rounded-full flex items-center justify-center font-semibold text-sm">
                   2
                 </div>
                 <div>
@@ -246,7 +246,7 @@ export default function PreventaPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center font-semibold text-sm">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-[#ffffec] rounded-full flex items-center justify-center font-semibold text-sm">
                   3
                 </div>
                 <div>
