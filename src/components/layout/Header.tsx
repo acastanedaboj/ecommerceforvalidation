@@ -35,7 +35,7 @@ export function Header() {
           <span className="mx-2">|</span>
           <Link
             href="/suscripcion"
-            className="underline underline-offset-2 hover:text-[#ffffec] transition-colors font-semibold"
+            className="underline underline-offset-2 hover:opacity-80 transition-opacity font-semibold"
           >
             Suscribete y ahorra 15%
           </Link>
