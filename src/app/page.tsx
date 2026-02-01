@@ -272,7 +272,7 @@ export default function HomePage() {
                   <span className="text-stone-500 text-sm">/ud.</span>
                 </div>
                 {pack.discountPercentage > 0 && (
-                  <p className="text-xs text-olive-600 mb-4">
+                  <p className="inline-block text-xs text-olive-600 bg-olive-100 px-2 py-1 rounded mb-4">
                     -{pack.discountPercentage}% por unidad
                   </p>
                 )}
