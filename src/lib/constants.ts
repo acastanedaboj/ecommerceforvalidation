@@ -115,7 +115,7 @@ export const NAVIGATION = {
     { name: 'Suscripción', href: '/suscripcion' },
     { name: 'Recetas', href: '/blog' },
     { name: 'Nosotros', href: '/nosotros' },
-    { name: 'B2B / Horeca', href: '/mayorista' },
+    // { name: 'B2B / Horeca', href: '/mayorista' }, // Hidden until ready
   ],
   footer: {
     tienda: [
@@ -126,7 +126,7 @@ export const NAVIGATION = {
     empresa: [
       { name: 'Sobre nosotros', href: '/nosotros' },
       { name: 'Blog & Recetas', href: '/blog' },
-      { name: 'Mayorista / B2B', href: '/mayorista' },
+      // { name: 'Mayorista / B2B', href: '/mayorista' }, // Hidden until ready
       { name: 'Contacto', href: '/contacto' },
     ],
     ayuda: [
