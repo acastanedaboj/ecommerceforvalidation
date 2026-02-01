@@ -12,14 +12,14 @@ import { SITE_URL, BRAND_NAME, getCanonicalUrl } from '@/lib/seo';
 export const metadata: Metadata = {
   title: `${BRAND_NAME} | Granola Sin Gluten Artesanal con Miel Ecológica`,
   description:
-    'Granola artesanal sin gluten elaborada con avena remojada, miel ecológica de apicultores locales y frutos secos premium. Envío gratis desde 4 unidades. Compra online en España.',
+    'Granola artesanal sin gluten elaborada con avena certificada, miel ecológica de apicultores locales y frutos secos premium remojados. Envío gratis desde 4 unidades. Compra online en España.',
   alternates: {
     canonical: getCanonicalUrl('/'),
   },
   openGraph: {
     title: `${BRAND_NAME} - Granola Sin Gluten Artesanal`,
     description:
-      'Granola artesanal sin gluten con avena remojada, miel ecológica y frutos secos premium. Opción vegana disponible. Envío gratis +4 unidades.',
+      'Granola artesanal sin gluten con avena certificada, miel ecológica y frutos secos premium remojados. Opción vegana disponible. Envío gratis +4 unidades.',
     url: SITE_URL,
     type: 'website',
   },
@@ -74,8 +74,8 @@ export default function HomePage() {
 
               <p className="text-base md:text-lg text-stone-600 mb-10 leading-relaxed animate-fade-in-up animation-delay-100">
                 Elaborada a mano con avena sin gluten certificada, miel ecológica
-                de apicultores locales y los mejores frutos secos.
-                Remojada para facilitar la digestión.
+                de apicultores locales y los mejores frutos secos y semillas,
+                remojados para facilitar la digestión.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-200">
@@ -156,10 +156,10 @@ export default function HomePage() {
             <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
               <Wheat className="w-8 h-8 text-earth-600 mx-auto mb-6" strokeWidth={1} />
               <h3 className="font-display text-lg text-stone-800 mb-3">
-                Avena remojada
+                Ingredientes remojados
               </h3>
               <p className="text-stone-600 text-sm leading-relaxed">
-                Reducimos el ácido fítico para mejorar la digestibilidad.
+                Frutos secos y semillas remojados para mejor digestibilidad.
               </p>
             </div>
 

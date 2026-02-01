@@ -49,7 +49,7 @@ export const products: Product[] = [
     slug: 'granola-clasica-250g',
     description: `Nuestra granola clásica es la receta original que dio vida a Poppy. Un equilibrio perfecto entre la avena sin gluten, la miel ecológica de apicultores locales y una mezcla premium de frutos secos que define nuestro sabor característico.
 
-La avena se remoja cuidadosamente antes de hornear, lo que le otorga esa textura crujiente pero delicada que tanto gusta. La miel ecológica carameliza suavemente durante el tostado lento, creando clusters perfectos.
+Los frutos secos y las semillas de girasol y calabaza se remojan cuidadosamente antes de hornear para mejorar su digestibilidad. La miel ecológica carameliza suavemente durante el tostado lento, creando clusters perfectos.
 
 Nueces pecanas, almendras, avellanas y anacardos se tuestan junto con semillas de girasol y calabaza, aportando un perfil de sabor complejo y satisfactorio. El toque sutil de canela y jengibre completa la experiencia.
 
@@ -91,7 +91,7 @@ Nueces pecanas, almendras, avellanas y anacardos se tuestan junto con semillas d
     slug: 'granola-chocolate-250g',
     description: `Para los amantes del chocolate, nuestra granola de chocolate es un capricho saludable que no decepciona. El cacao puro en polvo, sin azúcares añadidos, se combina con pepitas de chocolate negro 70% para crear una experiencia irresistible.
 
-La base sigue siendo nuestra avena sin gluten remojada y la miel ecológica, pero aquí el protagonista es el cacao crudo de comercio justo. Añadimos nibs de cacao para ese crunch extra que tanto gusta.
+La base sigue siendo nuestra avena sin gluten certificada y la miel ecológica, pero aquí el protagonista es el cacao crudo de comercio justo. Añadimos nibs de cacao para ese crunch extra que tanto gusta.
 
 Perfecta para el desayuno, como topping de yogur o simplemente para picar entre horas cuando necesitas ese momento dulce sin remordimientos.
 

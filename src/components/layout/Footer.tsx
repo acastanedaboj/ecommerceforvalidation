@@ -25,7 +25,7 @@ export function Footer() {
                 className="h-8 w-auto brightness-0 invert sepia saturate-[10] hue-rotate-[15deg] transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
-            <p className="mt-5 text-[#f1e978]/70 max-w-sm leading-relaxed">
+            <p className="mt-5 text-[#f1e978] max-w-sm leading-relaxed">
               Granola elaborada con amor, ingredientes ecológicos y sin gluten real.
               Tostada lentamente con miel de apicultores locales.
             </p>
@@ -59,7 +59,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-[#f1e978]/70 hover:text-[#f1e978] transition-colors text-sm"
+                    className="text-[#f1e978] hover:text-[#f1e978] transition-colors text-sm"
                   >
                     {item.name}
                   </Link>
@@ -76,7 +76,7 @@ export function Footer() {
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-[#f1e978]/70 hover:text-[#f1e978] transition-colors text-sm"
+                    className="text-[#f1e978] hover:text-[#f1e978] transition-colors text-sm"
                   >
                     {item.name}
                   </Link>
@@ -92,23 +92,23 @@ export function Footer() {
               <li>
                 <a
                   href={`mailto:${BUSINESS.email}`}
-                  className="flex items-center gap-3 text-[#f1e978]/70 hover:text-[#f1e978] transition-colors text-sm group"
+                  className="flex items-center gap-3 text-[#f1e978] hover:text-[#f1e978] transition-colors text-sm group"
                 >
-                  <Mail className="w-4 h-4 text-[#f1e978]/50 group-hover:text-[#f1e978] transition-colors" strokeWidth={1.5} />
+                  <Mail className="w-4 h-4 text-[#f1e978] group-hover:text-[#f1e978] transition-colors" strokeWidth={1.5} />
                   {BUSINESS.email}
                 </a>
               </li>
               <li>
                 <a
                   href={`tel:${BUSINESS.phone}`}
-                  className="flex items-center gap-3 text-[#f1e978]/70 hover:text-[#f1e978] transition-colors text-sm group"
+                  className="flex items-center gap-3 text-[#f1e978] hover:text-[#f1e978] transition-colors text-sm group"
                 >
-                  <Phone className="w-4 h-4 text-[#f1e978]/50 group-hover:text-[#f1e978] transition-colors" strokeWidth={1.5} />
+                  <Phone className="w-4 h-4 text-[#f1e978] group-hover:text-[#f1e978] transition-colors" strokeWidth={1.5} />
                   {BUSINESS.phone}
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-[#f1e978]/70 text-sm">
-                <MapPin className="w-4 h-4 text-[#f1e978]/50" strokeWidth={1.5} />
+              <li className="flex items-center gap-3 text-[#f1e978] text-sm">
+                <MapPin className="w-4 h-4 text-[#f1e978]" strokeWidth={1.5} />
                 {BUSINESS.address.city}, {BUSINESS.address.country}
               </li>
             </ul>
@@ -124,7 +124,7 @@ export function Footer() {
       {/* Bottom bar */}
       <div className="container-custom py-8">
         <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-sm text-[#f1e978]/60">
+          <p className="text-sm text-[#f1e978]">
             {currentYear} {BUSINESS.name}. Todos los derechos reservados.
           </p>
 
@@ -134,7 +134,7 @@ export function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-[#f1e978]/60 hover:text-[#f1e978] transition-colors"
+                className="text-[#f1e978] hover:text-[#f1e978] transition-colors"
               >
                 {item.name}
               </Link>
@@ -146,14 +146,14 @@ export function Footer() {
       {/* Payment methods - Minimal */}
       <div className="bg-[#5a3f38] py-5">
         <div className="container-custom">
-          <div className="flex flex-wrap justify-center items-center gap-4 text-xs text-[#f1e978]/60">
+          <div className="flex flex-wrap justify-center items-center gap-4 text-xs text-[#f1e978]">
             <span>Pago seguro:</span>
             <div className="flex items-center gap-2">
               <span className="px-2.5 py-1 bg-[#4a322c] rounded-md">Visa</span>
               <span className="px-2.5 py-1 bg-[#4a322c] rounded-md">Mastercard</span>
               <span className="px-2.5 py-1 bg-[#4a322c] rounded-md">Stripe</span>
             </div>
-            <span className="hidden sm:inline text-[#f1e978]/40">|</span>
+            <span className="hidden sm:inline text-[#f1e978]">|</span>
             <span>Envío seguro a toda España</span>
           </div>
         </div>
