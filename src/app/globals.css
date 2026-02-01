@@ -99,9 +99,9 @@
     @apply max-w-4xl mx-auto px-5 sm:px-8 lg:px-12;
   }
 
-  /* Buttons - Elegant with subtle interactions */
+  /* Buttons - Editorial Style (no rounded corners) */
   .btn {
-    @apply inline-flex items-center justify-center px-7 py-3.5 font-medium rounded-full
+    @apply inline-flex items-center justify-center px-7 py-3.5 font-medium
            transition-all duration-300 ease-out
            focus:outline-none focus:ring-2 focus:ring-offset-2
            disabled:opacity-50 disabled:cursor-not-allowed
@@ -110,28 +110,25 @@
 
   .btn-primary {
     @apply btn bg-earth-600 text-white
-           hover:bg-earth-700 hover:shadow-soft
-           active:scale-[0.98]
+           hover:bg-earth-700
            focus:ring-earth-400;
   }
 
   .btn-secondary {
     @apply btn bg-cream-500 text-stone-800
-           hover:bg-cream-600 hover:shadow-soft
-           active:scale-[0.98]
+           hover:bg-cream-600
            focus:ring-cream-400;
   }
 
   .btn-outline {
-    @apply btn border-2 border-earth-600 text-earth-600 bg-transparent
-           hover:bg-earth-600 hover:text-white
-           active:scale-[0.98]
-           focus:ring-earth-400;
+    @apply btn border border-stone-300 text-stone-800 bg-transparent
+           hover:border-stone-400
+           focus:ring-stone-300;
   }
 
   .btn-ghost {
     @apply btn text-stone-800 bg-transparent
-           hover:bg-cream-200 hover:text-stone-900
+           hover:bg-cream-100
            focus:ring-cream-400;
   }
 
@@ -143,9 +140,9 @@
     @apply px-9 py-4 text-base;
   }
 
-  /* Badges - Subtle & Refined */
+  /* Badges - Editorial Style */
   .badge {
-    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium tracking-wide;
+    @apply inline-flex items-center px-3 py-1 text-xs font-medium tracking-widest uppercase;
   }
 
   .badge-primary {
@@ -164,24 +161,24 @@
     @apply badge bg-stone-800 text-white;
   }
 
-  /* Cards - Clean with subtle shadows */
+  /* Cards - Editorial Style (sharp corners) */
   .card {
-    @apply bg-white rounded-2xl shadow-soft border border-stone-200
+    @apply bg-white shadow-soft border border-stone-200
            overflow-hidden transition-all duration-400
-           hover:shadow-soft-lg hover:border-cream-500;
+           hover:shadow-soft-lg;
   }
 
   .card-flat {
-    @apply bg-cream-100 rounded-2xl border border-stone-200
+    @apply bg-cream-100 border border-stone-200
            overflow-hidden transition-all duration-300;
   }
 
-  /* Form inputs - Minimal & Elegant */
+  /* Form inputs - Editorial Style */
   .input {
     @apply w-full px-5 py-3.5
-           bg-white border border-stone-300 rounded-xl
+           bg-white border border-stone-300
            text-stone-800 placeholder-stone-400
-           focus:outline-none focus:ring-2 focus:ring-cream-500 focus:border-cream-500
+           focus:outline-none focus:ring-1 focus:ring-stone-400 focus:border-stone-400
            transition-all duration-300;
   }
 
@@ -275,30 +272,30 @@
      Premium UI Components
      ========================================== */
 
-  /* Pills - Pack selectors */
+  /* Pills - Pack selectors (editorial style) */
   .pill {
     @apply relative inline-flex items-center justify-center px-4 py-2.5
-           rounded-full border-2 border-cream-200
+           border border-stone-300
            text-sm font-medium text-stone-600 bg-white
            transition-all duration-300
-           hover:border-cream-300 hover:bg-cream-50
-           focus-visible:ring-2 focus-visible:ring-earth-400 focus-visible:ring-offset-2;
+           hover:border-stone-400 hover:bg-cream-50
+           focus-visible:ring-1 focus-visible:ring-stone-400;
   }
 
   .pill-active {
-    @apply border-earth-600 bg-earth-50 text-earth-700 shadow-inner-glow;
+    @apply border-earth-600 bg-earth-50 text-earth-700;
   }
 
   .pill-savings {
     @apply absolute -top-2 -right-2 px-2 py-0.5
            bg-olive-500 text-stone-900 text-[10px] font-bold
-           rounded-full shadow-sm z-10;
+           shadow-sm z-10;
   }
 
   .pill-shipping {
     @apply absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5
            bg-earth-600 text-white text-[10px] font-bold
-           rounded-full shadow-sm whitespace-nowrap z-10;
+           shadow-sm whitespace-nowrap z-10;
   }
 
   /* Collapsible sections */
@@ -350,25 +347,24 @@
     @apply scale-110;
   }
 
-  /* Trust badges premium */
+  /* Trust badges (editorial style) */
   .trust-badge {
     @apply flex items-center gap-3 p-4
-           bg-cream-100/50 rounded-xl
-           border border-cream-200/50;
+           bg-cream-100/50
+           border border-stone-200;
   }
 
   .trust-badge-compact {
     @apply flex items-center gap-2 text-sm text-stone-500;
   }
 
-  /* Progress bar premium */
+  /* Progress bar */
   .progress-bar {
-    @apply h-1.5 bg-stone-200 rounded-full overflow-hidden;
+    @apply h-1 bg-stone-200 overflow-hidden;
   }
 
   .progress-fill {
-    @apply h-full bg-gradient-to-r from-cream-500 to-earth-600
-           rounded-full transition-all duration-500;
+    @apply h-full bg-earth-600 transition-all duration-500;
   }
 
   /* Testimonial card */
@@ -378,18 +374,18 @@
 
   /* Rating stars */
   .rating-star {
-    @apply w-4 h-4 fill-amber-400 text-amber-400;
+    @apply w-4 h-4 fill-olive-500 text-olive-500;
   }
 
   .rating-star-empty {
-    @apply w-4 h-4 fill-cream-300 text-cream-300;
+    @apply w-4 h-4 fill-stone-200 text-stone-200;
   }
 
-  /* Premium card hover effect */
+  /* Card hover effect (editorial style) */
   .card-premium {
-    @apply bg-white rounded-2xl shadow-soft border border-stone-100
+    @apply bg-white shadow-soft border border-stone-100
            overflow-hidden transition-all duration-400
-           hover:shadow-card-hover hover:border-cream-500 hover:-translate-y-1;
+           hover:shadow-card-hover;
   }
 
   /* Skeleton loading */
