@@ -52,7 +52,7 @@ export function TestimonialCard({
               'w-4 h-4',
               i < rating
                 ? 'fill-amber-400 text-amber-400'
-                : 'fill-cream-200 text-cream-200'
+                : 'fill-stone-200 text-stone-200'
             )}
           />
         ))}
