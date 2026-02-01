@@ -118,10 +118,10 @@ export default function TiendaPage() {
         {horecaProducts.length > 0 && (
           <section className="mb-16">
             <div className="bg-stone-800 rounded-2xl p-8 md:p-10 text-[#ffffec]">
-              <h2 className="font-display text-2xl font-medium mb-3">
+              <h2 className="font-display text-2xl font-medium mb-3 text-[#ffffec]">
                 Formato profesional (Horeca)
               </h2>
-              <p className="text-stone-300 mb-6">
+              <p className="text-[#ffffec] mb-6">
                 ¿Tienes una cafetería, hotel o tienda? Ofrecemos formatos de 1kg
                 y condiciones especiales para profesionales.
               </p>
