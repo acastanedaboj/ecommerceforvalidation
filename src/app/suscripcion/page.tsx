@@ -43,7 +43,7 @@ export default function SuscripcionPage() {
               <RefreshCw className="w-4 h-4" />
               Suscripción mensual
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6">
               Suscríbete y ahorra un {subscriptionInfo.discountPercentage}%
             </h1>
             <p className="text-xl text-primary-100 mb-8">
@@ -70,7 +70,7 @@ export default function SuscripcionPage() {
       <section className="section">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-display text-neutral-900 mb-4">
               Compara y ahorra
             </h2>
             <p className="text-neutral-600 max-w-2xl mx-auto">
@@ -81,7 +81,7 @@ export default function SuscripcionPage() {
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {/* Single purchase */}
             <div className="bg-white rounded-2xl p-6 border border-neutral-200">
-              <h3 className="font-semibold text-neutral-900 mb-2">Compra única</h3>
+              <h3 className="text-neutral-900 mb-2">Compra única</h3>
               <p className="text-sm text-neutral-500 mb-4">1 bolsa</p>
               <div className="text-3xl font-bold text-neutral-900 mb-4">
                 {formatPrice(PRICING.BASE_PRICE_CENTS)}
@@ -101,7 +101,7 @@ export default function SuscripcionPage() {
 
             {/* Pack 6 */}
             <div className="bg-white rounded-2xl p-6 border border-neutral-200">
-              <h3 className="font-semibold text-neutral-900 mb-2">Pack 6</h3>
+              <h3 className="text-neutral-900 mb-2">Pack 6</h3>
               <p className="text-sm text-neutral-500 mb-4">Compra única</p>
               <div className="text-3xl font-bold text-neutral-900 mb-4">
                 {formatPrice(pack6Price)}
@@ -124,7 +124,7 @@ export default function SuscripcionPage() {
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 badge-primary">
                 Mejor precio
               </span>
-              <h3 className="font-semibold text-neutral-900 mb-2">Suscripción</h3>
+              <h3 className="text-neutral-900 mb-2">Suscripción</h3>
               <p className="text-sm text-neutral-500 mb-4">Pack 6 mensual</p>
               <div className="text-3xl font-bold text-primary-600 mb-4">
                 {formatPrice(subscriptionInfo.unitPriceCents)}
@@ -164,7 +164,7 @@ export default function SuscripcionPage() {
       <section className="section bg-neutral-50">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-display text-neutral-900 mb-4">
               Cómo funciona
             </h2>
           </div>
@@ -172,9 +172,9 @@ export default function SuscripcionPage() {
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary-600">1</span>
+                <span className="text-2xl text-primary-600">1</span>
               </div>
-              <h3 className="font-semibold text-neutral-900 mb-2">Elige tu sabor</h3>
+              <h3 className="text-neutral-900 mb-2">Elige tu sabor</h3>
               <p className="text-sm text-neutral-600">
                 Selecciona la variedad de granola que más te guste
               </p>
@@ -182,9 +182,9 @@ export default function SuscripcionPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary-600">2</span>
+                <span className="text-2xl text-primary-600">2</span>
               </div>
-              <h3 className="font-semibold text-neutral-900 mb-2">Activa tu suscripción</h3>
+              <h3 className="text-neutral-900 mb-2">Activa tu suscripción</h3>
               <p className="text-sm text-neutral-600">
                 Marca la opción de suscripción al añadir al carrito
               </p>
@@ -192,9 +192,9 @@ export default function SuscripcionPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary-600">3</span>
+                <span className="text-2xl text-primary-600">3</span>
               </div>
-              <h3 className="font-semibold text-neutral-900 mb-2">Recibe cada mes</h3>
+              <h3 className="text-neutral-900 mb-2">Recibe cada mes</h3>
               <p className="text-sm text-neutral-600">
                 Tu pack de 6 bolsas llega a casa automáticamente
               </p>
@@ -202,9 +202,9 @@ export default function SuscripcionPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary-600">4</span>
+                <span className="text-2xl text-primary-600">4</span>
               </div>
-              <h3 className="font-semibold text-neutral-900 mb-2">Gestiona fácilmente</h3>
+              <h3 className="text-neutral-900 mb-2">Gestiona fácilmente</h3>
               <p className="text-sm text-neutral-600">
                 Pausa, modifica o cancela desde tu cuenta
               </p>
@@ -218,7 +218,7 @@ export default function SuscripcionPage() {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-6">
+              <h2 className="text-3xl md:text-4xl font-display text-neutral-900 mb-6">
                 Ventajas de ser suscriptor
               </h2>
               <ul className="space-y-4">
@@ -227,7 +227,7 @@ export default function SuscripcionPage() {
                     <Gift className="w-5 h-5 text-accent-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-neutral-900">15% de descuento permanente</h3>
+                    <h3 className="text-neutral-900">15% de descuento permanente</h3>
                     <p className="text-neutral-600 text-sm">
                       El mejor precio por unidad, garantizado
                     </p>
@@ -238,7 +238,7 @@ export default function SuscripcionPage() {
                     <Truck className="w-5 h-5 text-accent-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-neutral-900">Envío gratis siempre</h3>
+                    <h3 className="text-neutral-900">Envío gratis siempre</h3>
                     <p className="text-neutral-600 text-sm">
                       Sin mínimos, sin condiciones
                     </p>
@@ -249,7 +249,7 @@ export default function SuscripcionPage() {
                     <RefreshCw className="w-5 h-5 text-accent-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-neutral-900">Flexibilidad total</h3>
+                    <h3 className="text-neutral-900">Flexibilidad total</h3>
                     <p className="text-neutral-600 text-sm">
                       Pausa, modifica o cancela cuando quieras
                     </p>
@@ -260,7 +260,7 @@ export default function SuscripcionPage() {
                     <CreditCard className="w-5 h-5 text-accent-600" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-neutral-900">Sin sorpresas</h3>
+                    <h3 className="text-neutral-900">Sin sorpresas</h3>
                     <p className="text-neutral-600 text-sm">
                       Siempre el mismo precio, sin subidas
                     </p>
@@ -270,7 +270,7 @@ export default function SuscripcionPage() {
             </div>
 
             <div className="bg-primary-50 rounded-3xl p-8">
-              <h3 className="text-xl font-bold text-neutral-900 mb-4">
+              <h3 className="text-xl text-neutral-900 mb-4">
                 Resumen de tu suscripción
               </h3>
               <div className="space-y-3 mb-6">
@@ -287,7 +287,7 @@ export default function SuscripcionPage() {
                   <span className="font-medium text-accent-600">Gratis</span>
                 </div>
                 <div className="border-t border-primary-200 pt-3 flex justify-between">
-                  <span className="font-semibold">Total mensual</span>
+                  <span>Total mensual</span>
                   <span className="text-xl font-bold text-primary-600">
                     {formatPrice(subscriptionInfo.totalPriceCents)}
                   </span>
@@ -311,14 +311,14 @@ export default function SuscripcionPage() {
       <section className="section bg-neutral-50">
         <div className="container-custom max-w-3xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
+            <h2 className="text-3xl md:text-4xl font-display text-neutral-900 mb-4">
               Preguntas frecuentes sobre la suscripción
             </h2>
           </div>
 
           <div className="space-y-4">
             <details className="bg-white rounded-xl p-6 group">
-              <summary className="font-semibold text-neutral-900 cursor-pointer list-none flex justify-between items-center">
+              <summary className="text-neutral-900 cursor-pointer list-none flex justify-between items-center">
                 ¿Puedo cancelar mi suscripción en cualquier momento?
                 <span className="text-primary-600 group-open:rotate-180 transition-transform">
                   ↓
@@ -332,7 +332,7 @@ export default function SuscripcionPage() {
             </details>
 
             <details className="bg-white rounded-xl p-6 group">
-              <summary className="font-semibold text-neutral-900 cursor-pointer list-none flex justify-between items-center">
+              <summary className="text-neutral-900 cursor-pointer list-none flex justify-between items-center">
                 ¿Puedo pausar la suscripción temporalmente?
                 <span className="text-primary-600 group-open:rotate-180 transition-transform">
                   ↓
@@ -345,7 +345,7 @@ export default function SuscripcionPage() {
             </details>
 
             <details className="bg-white rounded-xl p-6 group">
-              <summary className="font-semibold text-neutral-900 cursor-pointer list-none flex justify-between items-center">
+              <summary className="text-neutral-900 cursor-pointer list-none flex justify-between items-center">
                 ¿Puedo cambiar el sabor de mi suscripción?
                 <span className="text-primary-600 group-open:rotate-180 transition-transform">
                   ↓
@@ -359,7 +359,7 @@ export default function SuscripcionPage() {
             </details>
 
             <details className="bg-white rounded-xl p-6 group">
-              <summary className="font-semibold text-neutral-900 cursor-pointer list-none flex justify-between items-center">
+              <summary className="text-neutral-900 cursor-pointer list-none flex justify-between items-center">
                 ¿Cuándo se cobra cada mes?
                 <span className="text-primary-600 group-open:rotate-180 transition-transform">
                   ↓
@@ -383,7 +383,7 @@ export default function SuscripcionPage() {
       {/* Final CTA */}
       <section className="section bg-neutral-900 text-[#ffffec]">
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-display font-bold mb-4">
+          <h2 className="text-3xl md:text-4xl font-display mb-4">
             ¿Listo para ahorrar en tu granola favorita?
           </h2>
           <p className="text-neutral-300 mb-8 max-w-xl mx-auto">

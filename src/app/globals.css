@@ -55,19 +55,19 @@
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-display-lg font-medium leading-tight;
+    @apply text-4xl md:text-5xl lg:text-display-lg leading-tight;
   }
 
   h2 {
-    @apply text-3xl md:text-display-sm font-medium;
+    @apply text-3xl md:text-display-sm;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl font-medium;
+    @apply text-2xl md:text-3xl;
   }
 
   h4 {
-    @apply text-xl md:text-2xl font-medium;
+    @apply text-xl md:text-2xl;
   }
 
   p {
@@ -230,7 +230,7 @@
   .prose-custom h2,
   .prose-custom h3,
   .prose-custom h4 {
-    @apply font-display text-black font-medium mb-4;
+    @apply font-display text-black mb-4;
   }
 
   .prose-custom p {
@@ -305,7 +305,7 @@
 
   .collapsible-trigger {
     @apply flex items-center justify-between w-full py-5
-           text-left font-display text-lg font-medium text-black
+           text-left font-display text-lg text-black
            hover:text-earth-700 transition-colors;
   }
 

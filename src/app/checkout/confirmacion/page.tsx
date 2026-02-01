@@ -15,7 +15,7 @@ function ConfirmacionContent() {
           </div>
 
           {/* Heading */}
-          <h1 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
+          <h1 className="text-3xl md:text-4xl font-display text-neutral-900 mb-4">
             ¡Gracias por tu pedido!
           </h1>
           <p className="text-lg text-neutral-600 mb-8">
@@ -24,14 +24,14 @@ function ConfirmacionContent() {
 
           {/* Order info card */}
           <div className="bg-white rounded-xl p-6 shadow-sm border border-neutral-200 mb-8 text-left">
-            <h2 className="font-semibold text-neutral-900 mb-4">¿Qué pasa ahora?</h2>
+            <h2 className="text-neutral-900 mb-4">¿Qué pasa ahora?</h2>
             <div className="space-y-4">
               <div className="flex gap-4">
                 <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
                   <Mail className="w-5 h-5 text-primary-600" />
                 </div>
                 <div>
-                  <p className="font-medium text-neutral-900">Email de confirmación</p>
+                  <p className="text-neutral-900">Email de confirmación</p>
                   <p className="text-sm text-neutral-600">
                     Recibirás un email con los detalles de tu pedido en los próximos minutos.
                   </p>
@@ -42,7 +42,7 @@ function ConfirmacionContent() {
                   <Package className="w-5 h-5 text-primary-600" />
                 </div>
                 <div>
-                  <p className="font-medium text-neutral-900">Preparación y envío</p>
+                  <p className="text-neutral-900">Preparación y envío</p>
                   <p className="text-sm text-neutral-600">
                     Tu pedido se enviará en 1-2 días laborables. Te enviaremos el número de
                     seguimiento cuando esté en camino.
@@ -55,7 +55,7 @@ function ConfirmacionContent() {
           {/* Delivery estimate */}
           <div className="bg-primary-50 rounded-xl p-6 mb-8">
             <p className="text-primary-800">
-              <span className="font-semibold">Entrega estimada:</span> 2-4 días laborables
+              <span>Entrega estimada:</span> 2-4 días laborables
               para Península
             </p>
           </div>
