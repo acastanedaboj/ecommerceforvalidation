@@ -411,6 +411,11 @@
    ========================================== */
 
 @layer utilities {
+  /* Text earth-600 with display font italic */
+  .text-earth-600-display-italic {
+    @apply text-earth-600 font-display italic;
+  }
+
   /* Text gradient */
   .text-gradient-earth {
     @apply bg-gradient-to-r from-earth-600 to-taupe-500 bg-clip-text text-transparent;
