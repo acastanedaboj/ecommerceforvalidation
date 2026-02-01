@@ -41,7 +41,7 @@ export default function ContactoPage() {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-display text-neutral-900 mb-4">
             Contacto
           </h1>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
@@ -54,7 +54,7 @@ export default function ContactoPage() {
           {/* Contact info */}
           <div className="lg:col-span-1">
             <div className="bg-primary-50 rounded-2xl p-8">
-              <h2 className="text-xl font-bold text-neutral-900 mb-6">
+              <h2 className="text-xl text-neutral-900 mb-6">
                 Información de contacto
               </h2>
 
@@ -154,7 +154,7 @@ export default function ContactoPage() {
           {/* Contact form */}
           <div className="lg:col-span-2">
             <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-200">
-              <h2 className="text-xl font-bold text-neutral-900 mb-6">
+              <h2 className="text-xl text-neutral-900 mb-6">
                 Envíanos un mensaje
               </h2>
 

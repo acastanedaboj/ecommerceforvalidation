@@ -94,7 +94,7 @@ export default function CheckoutPage() {
     return (
       <div className="section">
         <div className="container-custom text-center">
-          <h1 className="text-2xl font-bold mb-4">Tu carrito está vacío</h1>
+          <h1 className="text-2xl mb-4">Tu carrito está vacío</h1>
           <p className="text-neutral-600 mb-6">
             Añade algunos productos antes de continuar con el checkout.
           </p>
@@ -261,7 +261,7 @@ export default function CheckoutPage() {
             <ChevronLeft className="w-4 h-4 mr-1" />
             Volver a la tienda
           </Link>
-          <h1 className="text-3xl font-display font-bold text-neutral-900">
+          <h1 className="text-3xl font-display text-neutral-900">
             Finalizar compra
           </h1>
         </div>
@@ -272,7 +272,7 @@ export default function CheckoutPage() {
             <div className="lg:col-span-2 space-y-8">
               {/* Contact info */}
               <section className="bg-white rounded-xl p-6 shadow-sm">
-                <h2 className="text-xl font-semibold text-neutral-900 mb-4">
+                <h2 className="text-xl text-neutral-900 mb-4">
                   Información de contacto
                 </h2>
                 <div className="space-y-4">
@@ -311,7 +311,7 @@ export default function CheckoutPage() {
 
               {/* Shipping address */}
               <section className="bg-white rounded-xl p-6 shadow-sm">
-                <h2 className="text-xl font-semibold text-neutral-900 mb-4 flex items-center gap-2">
+                <h2 className="text-xl text-neutral-900 mb-4 flex items-center gap-2">
                   <Truck className="w-5 h-5 text-primary-600" />
                   Dirección de envío
                 </h2>
@@ -366,7 +366,7 @@ export default function CheckoutPage() {
 
               {/* Payment method */}
               <section className="bg-white rounded-xl p-6 shadow-sm">
-                <h2 className="text-xl font-semibold text-neutral-900 mb-4 flex items-center gap-2">
+                <h2 className="text-xl text-neutral-900 mb-4 flex items-center gap-2">
                   <CreditCard className="w-5 h-5 text-primary-600" />
                   Método de pago
                 </h2>
@@ -455,7 +455,7 @@ export default function CheckoutPage() {
 
               {/* Terms and conditions */}
               <section className="bg-white rounded-xl p-6 shadow-sm">
-                <h2 className="text-xl font-semibold text-neutral-900 mb-4">
+                <h2 className="text-xl text-neutral-900 mb-4">
                   Condiciones legales
                 </h2>
                 <div className="space-y-3">
@@ -503,7 +503,7 @@ export default function CheckoutPage() {
             {/* Right column - Order summary */}
             <div className="lg:col-span-1">
               <div className="bg-white rounded-xl p-6 shadow-sm sticky top-24">
-                <h2 className="text-xl font-semibold text-neutral-900 mb-4">
+                <h2 className="text-xl text-neutral-900 mb-4">
                   Resumen del pedido
                 </h2>
 

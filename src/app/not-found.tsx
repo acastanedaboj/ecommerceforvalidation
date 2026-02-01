@@ -7,10 +7,10 @@ export default function NotFound() {
       <div className="text-center">
         {/* 404 illustration */}
         <div className="mb-8">
-          <span className="text-9xl font-display font-bold text-primary-200">404</span>
+          <span className="text-9xl font-display text-primary-200">404</span>
         </div>
 
-        <h1 className="text-3xl md:text-4xl font-display font-bold text-neutral-900 mb-4">
+        <h1 className="text-3xl md:text-4xl font-display text-neutral-900 mb-4">
           ¡Ups! Página no encontrada
         </h1>
 

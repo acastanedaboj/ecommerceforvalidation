@@ -71,7 +71,7 @@ export function StickyAddToCart({
           <p className="text-sm font-medium text-stone-800 truncate">
             {productName}
           </p>
-          <p className="text-lg font-display font-semibold text-earth-600">
+          <p className="text-lg font-display text-earth-600">
             {formatPrice(totalPrice)}
           </p>
         </div>

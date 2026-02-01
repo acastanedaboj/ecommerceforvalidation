@@ -47,7 +47,7 @@ export default function FAQPage() {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-display text-neutral-900 mb-4">
             Preguntas frecuentes
           </h1>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
@@ -83,7 +83,7 @@ export default function FAQPage() {
                   <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">
                     {categoryIcons[category.id]}
                   </div>
-                  <h2 className="text-2xl font-display font-bold text-neutral-900">
+                  <h2 className="text-2xl font-display text-neutral-900">
                     {category.name}
                   </h2>
                 </div>
@@ -94,7 +94,7 @@ export default function FAQPage() {
                       key={faq.id}
                       className="bg-white rounded-xl border border-neutral-200 group"
                     >
-                      <summary className="p-6 font-semibold text-neutral-900 cursor-pointer list-none flex justify-between items-center hover:text-primary-600 transition-colors">
+                      <summary className="p-6 text-neutral-900 cursor-pointer list-none flex justify-between items-center hover:text-primary-600 transition-colors">
                         {faq.question}
                         <span className="text-primary-600 group-open:rotate-180 transition-transform ml-4 flex-shrink-0">
                           ↓
@@ -125,7 +125,7 @@ export default function FAQPage() {
 
         {/* Contact CTA */}
         <div className="mt-16 bg-primary-50 rounded-2xl p-8 text-center max-w-2xl mx-auto">
-          <h3 className="text-xl font-bold text-neutral-900 mb-2">
+          <h3 className="text-xl text-neutral-900 mb-2">
             ¿No encuentras lo que buscas?
           </h3>
           <p className="text-neutral-600 mb-4">

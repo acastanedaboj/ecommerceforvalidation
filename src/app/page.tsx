@@ -128,7 +128,7 @@ export default function HomePage() {
                       ))}
                     </div>
                     <div>
-                      <p className="font-display font-semibold text-stone-800">4.9/5</p>
+                      <p className="font-display text-stone-800">4.9/5</p>
                       <p className="text-xs text-stone-500">+500 reseñas</p>
                     </div>
                   </div>
