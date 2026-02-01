@@ -27,15 +27,16 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40">
       {/* Announcement bar - Modern & Clean */}
-      <div className="bg-[#333333] text-[#FFFFEC] text-center py-2.5 px-4">
-        <p className="text-sm tracking-wide font-medium">
+      <div className="text-center py-2.5 px-4" style={{ backgroundColor: '#333333' }}>
+        <p className="text-sm tracking-wide font-medium" style={{ color: '#FFFFEC' }}>
           <span className="font-semibold">Envio gratis</span>
           <span className="mx-2 opacity-70">|</span>
           a partir de 4 bolsas o 35 EUR
           <span className="mx-2 opacity-70">|</span>
           <Link
             href="/suscripcion"
-            className="underline underline-offset-2 hover:text-[#ffffec] transition-colors font-semibold"
+            className="underline underline-offset-2 hover:opacity-80 transition-opacity font-semibold"
+            style={{ color: '#FFFFEC' }}
           >
             Suscribete y ahorra 15%
           </Link>
