@@ -287,7 +287,7 @@ export default function ProductDetailPage() {
               </div>
 
               {/* Total and add to cart */}
-              <div id="main-cta" className="bg-stone-900 text-white rounded-2xl p-6 shadow-soft-lg">
+              <div id="main-cta" className="bg-stone-900 text-[#ffffec] rounded-2xl p-6 shadow-soft-lg">
                 <div className="flex items-center justify-between mb-4">
                   <span className="text-stone-300">Total:</span>
                   <div className="text-right">
@@ -305,7 +305,7 @@ export default function ProductDetailPage() {
                   onClick={handleAddToCart}
                   disabled={product.stock === 0 || isAdding}
                   className={cn(
-                    'btn w-full justify-center bg-earth-500 hover:bg-earth-600 text-white text-base py-4',
+                    'btn w-full justify-center bg-earth-500 hover:bg-earth-600 text-[#ffffec] text-base py-4',
                     'disabled:opacity-50 disabled:cursor-not-allowed'
                   )}
                 >
