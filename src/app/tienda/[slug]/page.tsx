@@ -254,7 +254,7 @@ export default function ProductDetailPage() {
                     >
                       <Minus className="w-4 h-4 text-stone-500" />
                     </button>
-                    <span className="w-14 text-center font-semibold text-stone-800">{quantity}</span>
+                    <span className="w-14 text-center text-stone-800">{quantity}</span>
                     <button
                       type="button"
                       onClick={() => setQuantity(quantity + 1)}

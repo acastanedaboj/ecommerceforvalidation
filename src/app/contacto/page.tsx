@@ -64,7 +64,7 @@ export default function ContactoPage() {
                     <Mail className="w-5 h-5 text-primary-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-neutral-900">Email</p>
+                    <p className="text-neutral-900">Email</p>
                     <a
                       href={`mailto:${BUSINESS.email}`}
                       className="text-primary-600 hover:underline"
@@ -79,7 +79,7 @@ export default function ContactoPage() {
                     <Phone className="w-5 h-5 text-primary-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-neutral-900">Teléfono</p>
+                    <p className="text-neutral-900">Teléfono</p>
                     <a
                       href={`tel:${BUSINESS.phone}`}
                       className="text-primary-600 hover:underline"
@@ -94,7 +94,7 @@ export default function ContactoPage() {
                     <MapPin className="w-5 h-5 text-primary-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-neutral-900">Dirección</p>
+                    <p className="text-neutral-900">Dirección</p>
                     <p className="text-neutral-600">
                       {BUSINESS.address.street}
                       <br />
@@ -110,7 +110,7 @@ export default function ContactoPage() {
                     <Clock className="w-5 h-5 text-primary-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-neutral-900">Horario de atención</p>
+                    <p className="text-neutral-900">Horario de atención</p>
                     <p className="text-neutral-600">
                       Lunes a Viernes: 9:00 - 18:00
                       <br />
@@ -122,7 +122,7 @@ export default function ContactoPage() {
 
               {/* Social links */}
               <div className="mt-8 pt-6 border-t border-primary-200">
-                <p className="font-medium text-neutral-900 mb-3">Síguenos en redes</p>
+                <p className="text-neutral-900 mb-3">Síguenos en redes</p>
                 <div className="flex gap-3">
                   <a
                     href={BUSINESS.socialMedia.instagram}

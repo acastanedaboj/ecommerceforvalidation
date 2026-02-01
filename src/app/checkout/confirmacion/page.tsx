@@ -31,7 +31,7 @@ function ConfirmacionContent() {
                   <Mail className="w-5 h-5 text-primary-600" />
                 </div>
                 <div>
-                  <p className="font-medium text-neutral-900">Email de confirmación</p>
+                  <p className="text-neutral-900">Email de confirmación</p>
                   <p className="text-sm text-neutral-600">
                     Recibirás un email con los detalles de tu pedido en los próximos minutos.
                   </p>
@@ -42,7 +42,7 @@ function ConfirmacionContent() {
                   <Package className="w-5 h-5 text-primary-600" />
                 </div>
                 <div>
-                  <p className="font-medium text-neutral-900">Preparación y envío</p>
+                  <p className="text-neutral-900">Preparación y envío</p>
                   <p className="text-sm text-neutral-600">
                     Tu pedido se enviará en 1-2 días laborables. Te enviaremos el número de
                     seguimiento cuando esté en camino.
@@ -55,7 +55,7 @@ function ConfirmacionContent() {
           {/* Delivery estimate */}
           <div className="bg-primary-50 rounded-xl p-6 mb-8">
             <p className="text-primary-800">
-              <span className="font-semibold">Entrega estimada:</span> 2-4 días laborables
+              <span>Entrega estimada:</span> 2-4 días laborables
               para Península
             </p>
           </div>

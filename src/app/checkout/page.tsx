@@ -591,7 +591,7 @@ export default function CheckoutPage() {
                 {/* Total */}
                 <div className="border-t border-neutral-200 mt-4 pt-4">
                   <div className="flex justify-between items-center">
-                    <span className="font-semibold">Total</span>
+                    <span>Total</span>
                     <span className="text-2xl font-bold">
                       {formatPrice(
                         cartTotal.totalCents +

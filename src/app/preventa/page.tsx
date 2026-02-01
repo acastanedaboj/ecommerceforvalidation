@@ -216,7 +216,7 @@ export default function PreventaPage() {
 
             <div className="space-y-4">
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-[#ffffec] rounded-full flex items-center justify-center font-semibold text-sm">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-[#ffffec] rounded-full flex items-center justify-center text-sm">
                   1
                 </div>
                 <div>
@@ -231,7 +231,7 @@ export default function PreventaPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-[#ffffec] rounded-full flex items-center justify-center font-semibold text-sm">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-[#ffffec] rounded-full flex items-center justify-center text-sm">
                   2
                 </div>
                 <div>
@@ -246,7 +246,7 @@ export default function PreventaPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-[#ffffec] rounded-full flex items-center justify-center font-semibold text-sm">
+                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-[#ffffec] rounded-full flex items-center justify-center text-sm">
                   3
                 </div>
                 <div>
@@ -353,10 +353,10 @@ export default function PreventaPage() {
                 <div className="bg-cream-50 rounded-xl p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-neutral-700 text-sm">Precio por unidad:</span>
-                    <span className="font-semibold text-neutral-900">9,00€</span>
+                    <span className="text-neutral-900">9,00€</span>
                   </div>
                   <div className="flex justify-between items-center pt-2 border-t border-neutral-200">
-                    <span className="font-semibold text-neutral-900">Total:</span>
+                    <span className="text-neutral-900">Total:</span>
                     <span className="text-2xl font-bold text-primary-600">
                       {totalPrice}
                     </span>

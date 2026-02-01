@@ -354,7 +354,7 @@ export default function HomePage() {
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
                 <div>
-                  <p className="font-medium text-stone-800 text-sm">{testimonial.author}</p>
+                  <p className="text-stone-800 text-sm">{testimonial.author}</p>
                   <p className="text-xs text-stone-500">{testimonial.role}</p>
                 </div>
               </div>

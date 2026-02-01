@@ -172,7 +172,7 @@ export default function MayoristaPage() {
                     Caducidad: 6 meses desde fabricación
                   </li>
                 </ul>
-                <p className="mt-4 text-primary-600 font-medium">
+                <p className="mt-4 text-primary-600">
                   Precio: Consultar según volumen
                 </p>
               </div>
@@ -204,7 +204,7 @@ export default function MayoristaPage() {
                     Pedido mínimo: 24 unidades
                   </li>
                 </ul>
-                <p className="mt-4 text-primary-600 font-medium">
+                <p className="mt-4 text-primary-600">
                   Precio: Desde 6,50€/ud (según volumen)
                 </p>
               </div>
