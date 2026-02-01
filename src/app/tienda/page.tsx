@@ -118,10 +118,10 @@ export default function TiendaPage() {
         {horecaProducts.length > 0 && (
           <section className="mb-16">
             <div className="bg-stone-800 rounded-2xl p-8 md:p-10 text-[#ffffec]">
-              <h2 className="font-display text-2xl font-medium mb-3">
+              <h2 className="font-display text-2xl font-medium mb-3 text-[#ffffec]">
                 Formato profesional (Horeca)
               </h2>
-              <p className="text-stone-300 mb-6">
+              <p className="text-[#ffffec] mb-6">
                 ¿Tienes una cafetería, hotel o tienda? Ofrecemos formatos de 1kg
                 y condiciones especiales para profesionales.
               </p>
@@ -148,7 +148,7 @@ export default function TiendaPage() {
               <p className="text-stone-500 mb-4">
                 Todos nuestros sabores comparten la misma base de calidad: avena sin gluten
                 y frutos secos premium. La mayoría están endulzados con miel ecológica,
-                y tenemos una opción vegana (Dátiles) sin miel.
+                y tenemos una opción vegana endulzada con sirope de ágave.
               </p>
               <p className="text-sm text-earth-600 font-medium">
                 Consejo: Empieza con el sabor clásico y luego explora los demás.
