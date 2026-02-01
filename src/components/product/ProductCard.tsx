@@ -93,7 +93,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
         {/* Out of stock overlay */}
         {product.stock === 0 && (
           <div className="absolute inset-0 bg-stone-900/40 backdrop-blur-[2px] flex items-center justify-center">
-            <span className="bg-white text-stone-800 px-5 py-2.5 rounded-full font-medium text-sm shadow-soft">
+            <span className="bg-white text-stone-800 px-5 py-2.5 font-medium text-sm shadow-soft">
               Agotado
             </span>
           </div>
@@ -158,15 +158,15 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
                     type="button"
                     onClick={() => setSelectedPack(pack)}
                     className={cn(
-                      'relative flex-1 py-2.5 text-xs font-medium rounded-full border-2 transition-all duration-300',
+                      'relative flex-1 py-2.5 text-xs font-medium border transition-all duration-300',
                       isSelected
-                        ? 'border-earth-500 bg-earth-50 text-earth-700 shadow-inner-glow'
-                        : 'border-cream-200 hover:border-cream-300 text-stone-500 bg-white'
+                        ? 'border-earth-600 bg-earth-50 text-earth-700'
+                        : 'border-stone-300 hover:border-stone-400 text-stone-600 bg-white'
                     )}
                   >
                     {pack === 1 ? '1 ud' : `Pack ${pack}`}
                     {packDiscount > 0 && (
-                      <span className="absolute -top-1.5 -right-1 px-1.5 py-0.5 bg-olive-500 text-white text-[8px] font-bold rounded-full">
+                      <span className="absolute -top-1.5 -right-1 px-1.5 py-0.5 bg-olive-500 text-stone-900 text-[8px] font-bold">
                         -{Math.round(packDiscount * 100)}%
                       </span>
                     )}

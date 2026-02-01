@@ -56,51 +56,47 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section - Modern & Clean */}
+      {/* Hero Section - Editorial Style */}
       <section className="relative bg-white overflow-hidden">
-        <div className="container-custom py-24 md:py-32 lg:py-40">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+        <div className="container-custom py-20 md:py-28 lg:py-36">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Hero Content */}
             <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
-              <span className="inline-block px-4 py-2 bg-cream-200 text-cream-800 rounded-full text-sm font-medium mb-8 animate-fade-in">
+              <span className="inline-block text-xs tracking-widest uppercase text-stone-500 mb-6 animate-fade-in">
                 Sin gluten certificado
               </span>
 
-              <h1 className="font-display text-stone-800 mb-10 animate-fade-in-up">
+              <h1 className="font-display text-stone-800 mb-8 animate-fade-in-up">
                 Granola artesanal
                 <br />
                 <span className="text-earth-600">sin gluten real</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-stone-800 mb-12 leading-relaxed animate-fade-in-up animation-delay-100">
+              <p className="text-base md:text-lg text-stone-600 mb-10 leading-relaxed animate-fade-in-up animation-delay-100">
                 Elaborada a mano con avena sin gluten certificada, miel ecológica
                 de apicultores locales y los mejores frutos secos.
                 Remojada para facilitar la digestión.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-200">
-                <Link href="/tienda" className="btn-primary btn-lg group hover:scale-[1.02] transition-transform">
+                <Link href="/tienda" className="btn-primary btn-lg group">
                   Comprar ahora
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </Link>
-                <Link href="/suscripcion" className="btn-outline btn-lg hover:scale-[1.02] transition-transform">
+                <Link href="/suscripcion" className="btn-outline btn-lg">
                   Suscríbete -15%
                 </Link>
               </div>
 
               {/* Trust indicators */}
-              <div className="flex flex-wrap gap-10 mt-16 justify-center lg:justify-start text-sm text-stone-800 animate-fade-in-up animation-delay-300">
-                <span className="flex items-center gap-3">
-                  <Truck className="w-5 h-5 text-earth-600" strokeWidth={1.5} />
+              <div className="flex flex-wrap gap-8 mt-12 justify-center lg:justify-start text-xs tracking-wide uppercase text-stone-500 animate-fade-in-up animation-delay-300">
+                <span className="flex items-center gap-2">
+                  <Truck className="w-4 h-4" strokeWidth={1.5} />
                   Envío gratis +4 bolsas
                 </span>
-                <span className="flex items-center gap-3">
-                  <Leaf className="w-5 h-5 text-cream-600" strokeWidth={1.5} />
+                <span className="flex items-center gap-2">
+                  <Leaf className="w-4 h-4" strokeWidth={1.5} />
                   100% Natural
-                </span>
-                <span className="flex items-center gap-3">
-                  <Heart className="w-5 h-5 text-taupe-500" strokeWidth={1.5} />
-                  Hecho con amor
                 </span>
               </div>
             </div>
@@ -108,8 +104,8 @@ export default function HomePage() {
             {/* Hero Image */}
             <div className="relative animate-fade-in animation-delay-200">
               <div className="relative aspect-[4/5] max-w-lg mx-auto">
-                {/* Main image */}
-                <div className="relative w-full h-full rounded-[2.5rem] overflow-hidden shadow-soft-xl">
+                {/* Main image - sharp corners */}
+                <div className="relative w-full h-full overflow-hidden">
                   <Image
                     src="/products/hero.jpg"
                     alt="Poppy granola con frutos secos y miel"
@@ -121,103 +117,81 @@ export default function HomePage() {
                 </div>
 
                 {/* Floating badge - Reviews */}
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-card-hover p-5 animate-pulse-soft border border-stone-100">
-                  <div className="flex items-center gap-4">
-                    <div className="flex -space-x-1">
+                <div className="absolute -bottom-4 -left-4 bg-white shadow-lg p-4 animate-pulse-soft">
+                  <div className="flex items-center gap-3">
+                    <div className="flex">
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className="w-5 h-5 fill-olive-500 text-olive-500"
+                          className="w-4 h-4 fill-olive-500 text-olive-500"
                         />
                       ))}
                     </div>
                     <div>
-                      <p className="font-display font-semibold text-stone-800 text-lg">4.9/5</p>
+                      <p className="font-display font-semibold text-stone-800">4.9/5</p>
                       <p className="text-xs text-stone-500">+500 reseñas</p>
                     </div>
                   </div>
                 </div>
-
-                {/* Decorative elements */}
-                <div className="absolute -top-10 -right-10 w-32 h-32 bg-cream-400/30 rounded-full blur-3xl" />
-                <div className="absolute -bottom-8 -left-8 w-24 h-24 bg-olive-300/30 rounded-full blur-2xl" />
               </div>
             </div>
           </div>
         </div>
-
-        {/* Subtle wave divider */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-cream-100" style={{
-          clipPath: 'ellipse(70% 100% at 50% 100%)'
-        }} />
       </section>
 
-      {/* Benefits Section - Modern & Clean */}
-      <section className="section bg-cream-100">
+      {/* Benefits Section - Editorial Style */}
+      <section className="py-20 md:py-28 bg-cream-100">
         <div className="container-custom">
-          <div className="text-center mb-20">
+          <div className="text-center mb-16">
+            <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
+              Calidad artesanal
+            </p>
             <h2 className="font-display text-stone-800 mb-6">
               Por qué nuestra granola es diferente
             </h2>
-            <p className="text-lg text-stone-800 max-w-2xl mx-auto">
-              No es solo granola. Es el resultado de años perfeccionando
-              una receta artesanal con ingredientes de verdad.
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-200">
             {/* Benefit 1 */}
-            <div className="card-premium p-8 text-center group">
-              <div className="w-16 h-16 bg-cream-200 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-cream-300 transition-colors">
-                <Wheat className="w-8 h-8 text-earth-600" strokeWidth={1.5} />
-              </div>
-              <h3 className="font-display text-xl font-medium text-stone-800 mb-4">
+            <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
+              <Wheat className="w-8 h-8 text-earth-600 mx-auto mb-6" strokeWidth={1} />
+              <h3 className="font-display text-lg text-stone-800 mb-3">
                 Avena remojada
               </h3>
-              <p className="text-stone-800 text-sm leading-relaxed">
-                Remojamos la avena para reducir el ácido fítico y mejorar
-                la digestibilidad. Tu intestino te lo agradecerá.
+              <p className="text-stone-600 text-sm leading-relaxed">
+                Reducimos el ácido fítico para mejorar la digestibilidad.
               </p>
             </div>
 
             {/* Benefit 2 */}
-            <div className="card-premium p-8 text-center group">
-              <div className="w-16 h-16 bg-olive-100 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-olive-200 transition-colors">
-                <Droplets className="w-8 h-8 text-olive-600" strokeWidth={1.5} />
-              </div>
-              <h3 className="font-display text-xl font-medium text-stone-800 mb-4">
+            <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
+              <Droplets className="w-8 h-8 text-olive-600 mx-auto mb-6" strokeWidth={1} />
+              <h3 className="font-display text-lg text-stone-800 mb-3">
                 Miel ecológica local
               </h3>
-              <p className="text-stone-800 text-sm leading-relaxed">
-                Endulzada únicamente con miel de apicultores de pueblo.
-                Sin azúcares refinados, sin edulcorantes artificiales.
+              <p className="text-stone-600 text-sm leading-relaxed">
+                De apicultores de pueblo. Sin azúcares refinados.
               </p>
             </div>
 
             {/* Benefit 3 */}
-            <div className="card-premium p-8 text-center group">
-              <div className="w-16 h-16 bg-taupe-100 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-taupe-200 transition-colors">
-                <TreeDeciduous className="w-8 h-8 text-taupe-600" strokeWidth={1.5} />
-              </div>
-              <h3 className="font-display text-xl font-medium text-stone-800 mb-4">
+            <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
+              <TreeDeciduous className="w-8 h-8 text-taupe-600 mx-auto mb-6" strokeWidth={1} />
+              <h3 className="font-display text-lg text-stone-800 mb-3">
                 Frutos secos premium
               </h3>
-              <p className="text-stone-800 text-sm leading-relaxed">
-                Pecanas, almendras, avellanas y anacardos de primera calidad.
-                Nada de rellenos baratos ni saborizantes.
+              <p className="text-stone-600 text-sm leading-relaxed">
+                Pecanas, almendras, avellanas y anacardos de primera.
               </p>
             </div>
 
             {/* Benefit 4 */}
-            <div className="card-premium p-8 text-center group">
-              <div className="w-16 h-16 bg-earth-100 rounded-2xl flex items-center justify-center mb-6 mx-auto group-hover:bg-earth-200 transition-colors">
-                <Sparkles className="w-8 h-8 text-earth-600" strokeWidth={1.5} />
-              </div>
-              <h3 className="font-display text-xl font-medium text-stone-800 mb-4">
+            <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
+              <Sparkles className="w-8 h-8 text-earth-600 mx-auto mb-6" strokeWidth={1} />
+              <h3 className="font-display text-lg text-stone-800 mb-3">
                 Sin aditivos
               </h3>
-              <p className="text-stone-800 text-sm leading-relaxed">
-                Sin conservantes, sin colorantes, sin potenciadores del sabor.
+              <p className="text-stone-600 text-sm leading-relaxed">
                 Solo ingredientes que reconocerías en tu cocina.
               </p>
             </div>
@@ -260,132 +234,129 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pricing/Packs Section - Modern Pricing Table */}
-      <section className="section bg-white">
+      {/* Pricing/Packs Section - Editorial Style */}
+      <section className="py-20 md:py-28 bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="font-display text-stone-800 mb-6">
+            <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
+              Precios
+            </p>
+            <h2 className="font-display text-stone-800 mb-4">
               Cuanto más compras, más ahorras
             </h2>
-            <p className="text-lg text-stone-800 max-w-2xl mx-auto">
-              Elige el pack que mejor se adapte a tu consumo.
+            <p className="text-stone-600 max-w-md mx-auto">
               A partir de 4 bolsas, el envío es gratis.
             </p>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-            {packOptions.map((pack, index) => (
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-200 max-w-5xl mx-auto">
+            {packOptions.map((pack) => (
               <div
                 key={pack.size}
-                className={`relative bg-white rounded-2xl p-7 transition-all duration-400 animate-fade-in-up ${
-                  pack.size === 4
-                    ? 'ring-2 ring-earth-600 shadow-card-hover scale-[1.02] z-10'
-                    : 'shadow-soft hover:shadow-soft-lg hover:-translate-y-1 border border-stone-100'
+                className={`relative bg-white p-8 transition-all ${
+                  pack.size === 4 ? 'bg-cream-50' : ''
                 }`}
-                style={{ animationDelay: `${index * 100}ms` }}
               >
                 {pack.size === 4 && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 bg-earth-600 text-white px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap">
-                    Más popular
+                  <span className="absolute top-4 right-4 text-xs tracking-widest uppercase text-earth-600">
+                    Popular
                   </span>
                 )}
-                <h3 className="font-display text-xl font-medium text-stone-800 mb-3 mt-2">
+                <h3 className="font-display text-lg text-stone-800 mb-2">
                   {pack.size === 1 ? '1 bolsa' : `Pack ${pack.size}`}
                 </h3>
-                <div className="flex items-baseline gap-2 mb-4">
-                  <span className="text-4xl font-display font-semibold text-earth-600">
+                <div className="flex items-baseline gap-1 mb-4">
+                  <span className="text-3xl font-display text-earth-600">
                     {formatPrice(pack.unitPriceCents)}
                   </span>
-                  <span className="text-stone-500">/ud.</span>
+                  <span className="text-stone-500 text-sm">/ud.</span>
                 </div>
                 {pack.discountPercentage > 0 && (
-                  <p className="text-sm text-olive-600 font-medium mb-4">
-                    Ahorras {pack.discountPercentage}% por unidad
+                  <p className="text-xs text-olive-600 mb-4">
+                    -{pack.discountPercentage}% por unidad
                   </p>
                 )}
-                <ul className="space-y-3 text-sm text-stone-800 mb-6">
-                  <li className="flex items-center gap-3">
-                    <Check className="w-4 h-4 text-cream-600 flex-shrink-0" strokeWidth={2.5} />
+                <ul className="space-y-2 text-sm text-stone-600 mb-6">
+                  <li className="flex items-center gap-2">
+                    <Check className="w-3 h-3 text-stone-400" strokeWidth={2} />
                     Total: {formatPrice(pack.totalPriceCents)}
                   </li>
-                  <li className="flex items-center gap-3">
+                  <li className="flex items-center gap-2">
+                    <Truck className="w-3 h-3 text-stone-400" strokeWidth={2} />
                     {pack.freeShipping ? (
-                      <>
-                        <Truck className="w-4 h-4 text-earth-600 flex-shrink-0" strokeWidth={2} />
-                        <span className="text-earth-600 font-medium">Envío gratis</span>
-                      </>
+                      <span className="text-earth-600">Envío gratis</span>
                     ) : (
-                      <>
-                        <Truck className="w-4 h-4 text-stone-400 flex-shrink-0" strokeWidth={2} />
-                        <span>Envío: 4,95 EUR</span>
-                      </>
+                      <span>Envío: 4,95€</span>
                     )}
                   </li>
                 </ul>
                 <Link
                   href="/tienda"
-                  className={`btn w-full justify-center text-sm ${
-                    pack.size === 4 ? 'btn-primary' : 'btn-outline'
+                  className={`block text-center py-3 text-sm font-medium transition-colors ${
+                    pack.size === 4
+                      ? 'bg-earth-600 text-white hover:bg-earth-700'
+                      : 'border border-stone-300 text-stone-800 hover:border-stone-400'
                   }`}
                 >
-                  Elegir pack
+                  Elegir
                 </Link>
               </div>
             ))}
           </div>
 
           {/* Subscription CTA */}
-          <div className="mt-16 bg-earth-600 rounded-3xl p-12 md:p-16 text-center overflow-hidden relative">
-            {/* Background decoration */}
-            <div className="absolute top-0 right-0 w-80 h-80 bg-earth-700/30 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-cream-500/20 rounded-full blur-3xl" />
-
-            <div className="relative">
-              <div className="flex items-center justify-center gap-3 mb-6">
-                <RefreshCw className="w-5 h-5 text-white/80" strokeWidth={1.5} />
-                <span className="bg-white/10 text-white border border-white/20 px-3 py-1 rounded-full text-xs font-medium">
-                  Suscripción mensual
-                </span>
-              </div>
-              <h3 className="font-display text-3xl md:text-4xl font-medium text-white mb-5">
-                Suscríbete y ahorra un {subscriptionInfo.discountPercentage}%
-              </h3>
-              <p className="text-white/80 mb-10 max-w-xl mx-auto text-lg">
-                Recibe 6 bolsas cada mes a solo {formatPrice(subscriptionInfo.unitPriceCents)}/ud.
-                Cancela cuando quieras, sin compromisos.
-              </p>
-              <Link
-                href="/suscripcion"
-                className="btn bg-white text-earth-700 hover:bg-cream-100 hover:scale-[1.02] btn-lg group transition-all"
-              >
-                Empezar suscripción
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
+          <div className="mt-20 bg-earth-600 p-12 md:p-16 text-center">
+            <p className="text-xs tracking-widest uppercase text-white/60 mb-4">
+              Suscripción mensual
+            </p>
+            <h3 className="font-display text-3xl md:text-4xl text-white mb-4">
+              Suscríbete y ahorra un {subscriptionInfo.discountPercentage}%
+            </h3>
+            <p className="text-white/70 mb-8 max-w-lg mx-auto">
+              Recibe 6 bolsas cada mes a solo {formatPrice(subscriptionInfo.unitPriceCents)}/ud.
+              Cancela cuando quieras.
+            </p>
+            <Link
+              href="/suscripcion"
+              className="inline-flex items-center gap-2 bg-white text-earth-700 px-8 py-4 font-medium hover:bg-cream-100 transition-colors"
+            >
+              Empezar suscripción
+              <ArrowRight className="w-4 h-4" />
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Testimonials Section */}
-      <section className="section bg-cream-100">
+      <section className="py-20 md:py-28 bg-cream-100">
         <div className="container-custom">
           <div className="text-center mb-16">
-            <h2 className="font-display text-stone-800 mb-5">
+            <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
+              Testimonios
+            </p>
+            <h2 className="font-display text-stone-800">
               Lo que dicen nuestros clientes
             </h2>
-            <p className="text-stone-800 text-lg">
-              Más de 500 familias ya disfrutan de nuestra granola cada día
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-px bg-stone-200">
             {testimonials.map((testimonial, index) => (
               <div
                 key={index}
-                className="animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
+                className="bg-cream-100 p-8 md:p-10"
               >
-                <TestimonialCard {...testimonial} />
+                <div className="flex mb-4">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-olive-500 text-olive-500" />
+                  ))}
+                </div>
+                <p className="text-stone-700 text-sm leading-relaxed mb-6 italic">
+                  &ldquo;{testimonial.quote}&rdquo;
+                </p>
+                <div>
+                  <p className="font-medium text-stone-800 text-sm">{testimonial.author}</p>
+                  <p className="text-xs text-stone-500">{testimonial.role}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -393,22 +364,22 @@ export default function HomePage() {
       </section>
 
       {/* CTA Section */}
-      <section className="section bg-white">
-        <div className="container-custom text-center">
+      <section className="py-20 md:py-28 bg-white">
+        <div className="container-custom text-center max-w-2xl mx-auto">
           <h2 className="font-display text-stone-800 mb-6">
-            ¿Listo para probar la diferencia?
+            ¿Lista para probar la diferencia?
           </h2>
-          <p className="text-stone-800 mb-12 max-w-xl mx-auto text-lg">
+          <p className="text-stone-600 mb-10">
             Únete a cientos de familias que han descubierto el sabor de la granola
-            artesanal de verdad. Envío gratis a partir de 4 bolsas.
+            artesanal de verdad.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/tienda" className="btn-primary btn-lg group hover:scale-[1.02] transition-transform">
+            <Link href="/tienda" className="inline-flex items-center justify-center gap-2 bg-earth-600 text-white px-8 py-4 font-medium hover:bg-earth-700 transition-colors">
               Comprar ahora
-              <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+              <ArrowRight className="w-4 h-4" />
             </Link>
-            <Link href="/nosotros" className="btn-ghost btn-lg hover:scale-[1.02] transition-transform">
-              Conocer nuestra historia
+            <Link href="/nosotros" className="inline-flex items-center justify-center gap-2 border border-stone-300 text-stone-800 px-8 py-4 font-medium hover:border-stone-400 transition-colors">
+              Nuestra historia
             </Link>
           </div>
         </div>
