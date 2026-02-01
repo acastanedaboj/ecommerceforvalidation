@@ -117,7 +117,7 @@ export default function TiendaPage() {
         {/* Horeca CTA - Link to B2B page */}
         {horecaProducts.length > 0 && (
           <section className="mb-16">
-            <div className="bg-stone-800 rounded-2xl p-8 md:p-10 text-white">
+            <div className="bg-stone-800 rounded-2xl p-8 md:p-10 text-[#ffffec]">
               <h2 className="font-display text-2xl font-medium mb-3">
                 Formato profesional (Horeca)
               </h2>

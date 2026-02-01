@@ -294,7 +294,7 @@ export default function HomePage() {
                   href="/tienda"
                   className={`block text-center py-3 text-sm font-medium transition-colors ${
                     pack.size === 4
-                      ? 'bg-earth-600 text-white hover:bg-earth-700'
+                      ? 'bg-earth-600 text-[#ffffec] hover:bg-earth-700'
                       : 'border border-stone-300 text-stone-800 hover:border-stone-400'
                   }`}
                 >
@@ -306,19 +306,19 @@ export default function HomePage() {
 
           {/* Subscription CTA */}
           <div className="mt-20 bg-earth-600 p-12 md:p-16 text-center">
-            <p className="text-xs tracking-widest uppercase text-white/60 mb-4">
+            <p className="text-xs tracking-widest uppercase text-[#ffffec]/60 mb-4">
               Suscripción mensual
             </p>
-            <h3 className="font-display text-3xl md:text-4xl text-white mb-4">
+            <h3 className="font-display text-3xl md:text-4xl text-[#ffffec] mb-4">
               Suscríbete y ahorra un {subscriptionInfo.discountPercentage}%
             </h3>
-            <p className="text-white/70 mb-8 max-w-lg mx-auto">
+            <p className="text-[#ffffec]/70 mb-8 max-w-lg mx-auto">
               Recibe 6 bolsas cada mes a solo {formatPrice(subscriptionInfo.unitPriceCents)}/ud.
               Cancela cuando quieras.
             </p>
             <Link
               href="/suscripcion"
-              className="inline-flex items-center gap-2 bg-white text-earth-700 px-8 py-4 font-medium hover:bg-cream-100 transition-colors"
+              className="inline-flex items-center gap-2 bg-[#ffffec] text-earth-700 px-8 py-4 font-medium hover:bg-cream-100 transition-colors"
             >
               Empezar suscripción
               <ArrowRight className="w-4 h-4" />
@@ -374,7 +374,7 @@ export default function HomePage() {
             artesanal de verdad.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/tienda" className="inline-flex items-center justify-center gap-2 bg-earth-600 text-white px-8 py-4 font-medium hover:bg-earth-700 transition-colors">
+            <Link href="/tienda" className="inline-flex items-center justify-center gap-2 bg-earth-600 text-[#ffffec] px-8 py-4 font-medium hover:bg-earth-700 transition-colors">
               Comprar ahora
               <ArrowRight className="w-4 h-4" />
             </Link>

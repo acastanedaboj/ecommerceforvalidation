@@ -45,7 +45,7 @@ export default function PedidosPage() {
           </p>
           <Link
             href="/tienda"
-            className="inline-flex items-center gap-2 bg-earth-600 text-white px-6 py-3 rounded-full hover:bg-earth-700 transition-colors"
+            className="inline-flex items-center gap-2 bg-earth-600 text-[#ffffec] px-6 py-3 rounded-full hover:bg-earth-700 transition-colors"
           >
             <span>Explorar productos</span>
             <ArrowRight className="w-4 h-4" />

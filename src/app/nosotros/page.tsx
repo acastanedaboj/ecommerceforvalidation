@@ -183,7 +183,7 @@ export default function NosotrosPage() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <p className="text-4xl sm:text-5xl font-serif text-white mb-2">
+                <p className="text-4xl sm:text-5xl font-serif text-[#ffffec] mb-2">
                   {stat.number}
                 </p>
                 <p className="text-earth-200">{stat.label}</p>
@@ -348,7 +348,7 @@ export default function NosotrosPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/tienda"
-              className="inline-flex items-center justify-center gap-2 bg-earth-600 text-white px-8 py-4 rounded-full hover:bg-earth-700 transition-colors font-medium"
+              className="inline-flex items-center justify-center gap-2 bg-earth-600 text-[#ffffec] px-8 py-4 rounded-full hover:bg-earth-700 transition-colors font-medium"
             >
               <span>Ver productos</span>
               <ArrowRight className="w-4 h-4" />

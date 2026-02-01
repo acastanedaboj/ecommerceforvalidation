@@ -99,7 +99,7 @@ export function ImageGallery({
 
         {/* Image counter */}
         {hasMultipleImages && (
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-stone-900/70 backdrop-blur-sm text-white text-xs font-medium rounded-full">
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-stone-900/70 backdrop-blur-sm text-[#ffffec] text-xs font-medium rounded-full">
             {selectedIndex + 1} / {images.length}
           </div>
         )}

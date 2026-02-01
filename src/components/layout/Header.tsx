@@ -96,7 +96,7 @@ export function Header() {
               >
                 <ShoppingBag className="w-5 h-5" strokeWidth={1.5} />
                 {itemCount > 0 && (
-                  <span className="absolute top-1 right-1 bg-earth-600 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
+                  <span className="absolute top-1 right-1 bg-earth-600 text-[#ffffec] text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
                     {itemCount > 9 ? '9+' : itemCount}
                   </span>
                 )}
