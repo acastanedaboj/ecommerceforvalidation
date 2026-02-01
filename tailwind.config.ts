@@ -22,18 +22,18 @@ const config: Config = {
           800: '#516969',
           900: '#3D4F4F',
         },
-        // Brown/Terracotta - Primary CTA (#8C442A)
+        // Brown - Primary CTA (#6d4d45)
         earth: {
-          50: '#FDF8F6',
-          100: '#F9EDE8',
-          200: '#F0D5CA',
-          300: '#E4B8A6',
-          400: '#D49578',
-          500: '#B86B4A',
-          600: '#8C442A',
-          700: '#703620',
-          800: '#5A2C1A',
-          900: '#4A2416',
+          50: '#FAF8F7',
+          100: '#F3EDEB',
+          200: '#E5D9D5',
+          300: '#D1BEB8',
+          400: '#B8A099',
+          500: '#8A6B63',
+          600: '#6d4d45',
+          700: '#5a3f38',
+          800: '#48322d',
+          900: '#3a2925',
         },
         // Gold/Yellow - Highlights (#F2D95C, #F2E963)
         olive: {
@@ -61,7 +61,7 @@ const config: Config = {
           800: '#5C4742',
           900: '#4A3A36',
         },
-        // Stone/Neutral - Text (black 80% base)
+        // Stone/Neutral - Text (pure black for headlines/text)
         stone: {
           50: '#FAFAFA',
           100: '#F5F5F5',
@@ -71,21 +71,21 @@ const config: Config = {
           500: '#737373',
           600: '#525252',
           700: '#404040',
-          800: 'rgba(0, 0, 0, 0.8)',
-          900: 'rgba(0, 0, 0, 0.9)',
+          800: '#000000',
+          900: '#000000',
         },
         // Legacy mappings for compatibility
         primary: {
-          50: '#FDF8F6',
-          100: '#F9EDE8',
-          200: '#F0D5CA',
-          300: '#E4B8A6',
-          400: '#D49578',
-          500: '#B86B4A',
-          600: '#8C442A',
-          700: '#703620',
-          800: '#5A2C1A',
-          900: '#4A2416',
+          50: '#FAF8F7',
+          100: '#F3EDEB',
+          200: '#E5D9D5',
+          300: '#D1BEB8',
+          400: '#B8A099',
+          500: '#8A6B63',
+          600: '#6d4d45',
+          700: '#5a3f38',
+          800: '#48322d',
+          900: '#3a2925',
         },
         secondary: {
           50: '#FFFFFF',
@@ -120,8 +120,8 @@ const config: Config = {
           500: '#737373',
           600: '#525252',
           700: '#404040',
-          800: 'rgba(0, 0, 0, 0.8)',
-          900: 'rgba(0, 0, 0, 0.9)',
+          800: '#000000',
+          900: '#000000',
         },
       },
       fontFamily: {
