@@ -242,7 +242,7 @@ export default function HomePage() {
               Precios
             </p>
             <h2 className="font-display text-stone-800 mb-4">
-              Cuanto más compras, más <span className="text-earth-600-display-italic">ahorras</span>
+              Cuanto más compras, <span className="text-earth-600-display-italic">más ahorras</span>
             </h2>
             <p className="text-stone-600 max-w-md mx-auto">
               A partir de 4 bolsas, el envío es gratis.
