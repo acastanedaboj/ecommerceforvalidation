@@ -100,8 +100,10 @@ export default function RootLayout({
   return (
     <html lang="es">
       <head>
-        {/* Favicon */}
-        <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" />
+        {/* Favicon - Multiple formats for better browser/Google support */}
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/images/favicon.svg" type="image/svg+xml" sizes="any" />
+        <link rel="shortcut icon" href="/favicon.svg" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
 
