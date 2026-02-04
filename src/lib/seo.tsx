@@ -33,7 +33,6 @@ export interface SchemaOrganization {
   logo: string;
   description: string;
   email: string;
-  telephone: string;
   address: {
     '@type': 'PostalAddress';
     streetAddress: string;
@@ -58,7 +57,6 @@ export function buildOrganizationSchema(): SchemaOrganization {
     description:
       'Poppy elabora granola artesanal sin gluten con avena certificada, miel ecológica y frutos secos premium. Envíos a toda España.',
     email: BUSINESS.email,
-    telephone: BUSINESS.phone,
     address: {
       '@type': 'PostalAddress',
       streetAddress: BUSINESS.address.street,
@@ -288,7 +286,6 @@ export function buildLocalBusinessSchema() {
     image: `${SITE_URL}/logo.svg`,
     '@id': SITE_URL,
     url: SITE_URL,
-    telephone: BUSINESS.phone,
     email: BUSINESS.email,
     address: {
       '@type': 'PostalAddress',

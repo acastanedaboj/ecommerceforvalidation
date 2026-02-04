@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Clock } from 'lucide-react';
+import { Mail, MapPin, Send, Clock } from 'lucide-react';
 import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { BUSINESS } from '@/lib/constants';
@@ -70,21 +70,6 @@ export default function ContactoPage() {
                       className="text-primary-600 hover:underline"
                     >
                       {BUSINESS.email}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex gap-4">
-                  <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Phone className="w-5 h-5 text-primary-600" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-neutral-900">Teléfono</p>
-                    <a
-                      href={`tel:${BUSINESS.phone}`}
-                      className="text-primary-600 hover:underline"
-                    >
-                      {BUSINESS.phone}
                     </a>
                   </div>
                 </div>

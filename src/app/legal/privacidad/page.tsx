@@ -27,8 +27,7 @@ export default function PrivacidadPage() {
           <p>
             <strong>Identidad:</strong> {BUSINESS.name}<br />
             <strong>Domicilio:</strong> {BUSINESS.address.street}, {BUSINESS.address.postalCode} {BUSINESS.address.city}<br />
-            <strong>Email:</strong> {BUSINESS.email}<br />
-            <strong>Teléfono:</strong> {BUSINESS.phone}
+            <strong>Email:</strong> {BUSINESS.email}
           </p>
 
           <h2>2. Datos personales que recopilamos</h2>

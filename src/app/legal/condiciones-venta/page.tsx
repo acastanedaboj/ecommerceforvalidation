@@ -27,8 +27,7 @@ export default function CondicionesVentaPage() {
           <p>
             <strong>Denominación:</strong> {BUSINESS.name}<br />
             <strong>Domicilio:</strong> {BUSINESS.address.street}, {BUSINESS.address.postalCode} {BUSINESS.address.city}<br />
-            <strong>Email:</strong> {BUSINESS.email}<br />
-            <strong>Teléfono:</strong> {BUSINESS.phone}
+            <strong>Email:</strong> {BUSINESS.email}
           </p>
 
           <h2>2. Ámbito de aplicación</h2>
@@ -167,7 +166,6 @@ export default function CondicionesVentaPage() {
           </p>
           <ul>
             <li>Email: {BUSINESS.email}</li>
-            <li>Teléfono: {BUSINESS.phone}</li>
           </ul>
         </div>
       </div>

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Instagram, Mail, MapPin } from 'lucide-react';
 import { NAVIGATION, BUSINESS } from '@/lib/constants';
 
 export function Footer() {
@@ -96,15 +96,6 @@ export function Footer() {
                 >
                   <Mail className="w-4 h-4 text-[#ffffec] group-hover:text-[#ffffec] transition-colors" strokeWidth={1.5} />
                   {BUSINESS.email}
-                </a>
-              </li>
-              <li>
-                <a
-                  href={`tel:${BUSINESS.phone}`}
-                  className="flex items-center gap-3 text-[#ffffec] hover:text-[#ffffec] transition-colors text-sm group"
-                >
-                  <Phone className="w-4 h-4 text-[#ffffec] group-hover:text-[#ffffec] transition-colors" strokeWidth={1.5} />
-                  {BUSINESS.phone}
                 </a>
               </li>
               <li className="flex items-start gap-3 text-[#ffffec] text-sm">

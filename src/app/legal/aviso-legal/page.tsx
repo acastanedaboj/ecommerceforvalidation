@@ -33,7 +33,6 @@ export default function AvisoLegalPage() {
             <li><strong>Denominación social:</strong> {BUSINESS.name}</li>
             <li><strong>Domicilio social:</strong> {BUSINESS.address.street}, {BUSINESS.address.postalCode} {BUSINESS.address.city}</li>
             <li><strong>Email:</strong> {BUSINESS.email}</li>
-            <li><strong>Teléfono:</strong> {BUSINESS.phone}</li>
           </ul>
 
           <h2>2. Objeto</h2>
