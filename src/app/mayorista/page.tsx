@@ -71,7 +71,7 @@ export default function MayoristaPage() {
           <div className="inline-flex items-center justify-center w-20 h-20 bg-accent-100 rounded-full mb-6">
             <CheckCircle className="w-10 h-10 text-accent-600" />
           </div>
-          <h1 className="text-3xl font-display font-bold text-neutral-900 mb-4">
+          <h1 className="text-3xl font-display text-neutral-900 mb-4">
             ¡Gracias por tu interés!
           </h1>
           <p className="text-neutral-600 mb-8">
@@ -92,7 +92,7 @@ export default function MayoristaPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <span className="badge-secondary mb-4">B2B / Horeca</span>
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-display text-neutral-900 mb-4">
             Soluciones para profesionales
           </h1>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
@@ -108,7 +108,7 @@ export default function MayoristaPage() {
             <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
               <Package className="w-6 h-6 text-primary-600" />
             </div>
-            <h3 className="font-semibold text-neutral-900 mb-2">Formato profesional</h3>
+            <h3 className="text-neutral-900 mb-2">Formato profesional</h3>
             <p className="text-neutral-600 text-sm">
               Bolsas de 1kg ideales para preparación en cocina, buffets de desayuno
               o venta a granel.
@@ -119,7 +119,7 @@ export default function MayoristaPage() {
             <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
               <Building className="w-6 h-6 text-primary-600" />
             </div>
-            <h3 className="font-semibold text-neutral-900 mb-2">Precios mayoristas</h3>
+            <h3 className="text-neutral-900 mb-2">Precios mayoristas</h3>
             <p className="text-neutral-600 text-sm">
               Descuentos progresivos según volumen. Condiciones especiales para
               pedidos recurrentes.
@@ -130,7 +130,7 @@ export default function MayoristaPage() {
             <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
               <Truck className="w-6 h-6 text-primary-600" />
             </div>
-            <h3 className="font-semibold text-neutral-900 mb-2">Logística adaptada</h3>
+            <h3 className="text-neutral-900 mb-2">Logística adaptada</h3>
             <p className="text-neutral-600 text-sm">
               Envíos programados según tus necesidades. Plazos de entrega acordados.
             </p>
@@ -140,7 +140,7 @@ export default function MayoristaPage() {
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Product info */}
           <div>
-            <h2 className="text-2xl font-display font-bold text-neutral-900 mb-6">
+            <h2 className="text-2xl font-display text-neutral-900 mb-6">
               Nuestros formatos profesionales
             </h2>
 
@@ -149,7 +149,7 @@ export default function MayoristaPage() {
               <div className="bg-neutral-50 rounded-xl p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="font-semibold text-neutral-900">Granola Clásica 1kg</h3>
+                    <h3 className="text-neutral-900">Granola Clásica 1kg</h3>
                     <p className="text-sm text-neutral-500">SKU: GRAN-1KG</p>
                   </div>
                   <span className="badge-primary">Horeca</span>
@@ -172,7 +172,7 @@ export default function MayoristaPage() {
                     Caducidad: 6 meses desde fabricación
                   </li>
                 </ul>
-                <p className="mt-4 text-primary-600 font-medium">
+                <p className="mt-4 text-primary-600">
                   Precio: Consultar según volumen
                 </p>
               </div>
@@ -181,7 +181,7 @@ export default function MayoristaPage() {
               <div className="bg-neutral-50 rounded-xl p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="font-semibold text-neutral-900">Granola 250g (retail)</h3>
+                    <h3 className="text-neutral-900">Granola 250g (retail)</h3>
                     <p className="text-sm text-neutral-500">Varios sabores</p>
                   </div>
                   <span className="badge-secondary">Tiendas</span>
@@ -204,7 +204,7 @@ export default function MayoristaPage() {
                     Pedido mínimo: 24 unidades
                   </li>
                 </ul>
-                <p className="mt-4 text-primary-600 font-medium">
+                <p className="mt-4 text-primary-600">
                   Precio: Desde 6,50€/ud (según volumen)
                 </p>
               </div>
@@ -212,7 +212,7 @@ export default function MayoristaPage() {
 
             {/* Why choose us */}
             <div className="mt-8 bg-primary-50 rounded-xl p-6">
-              <h3 className="font-semibold text-neutral-900 mb-4">
+              <h3 className="text-neutral-900 mb-4">
                 ¿Por qué elegir Poppy?
               </h3>
               <ul className="space-y-3 text-sm text-neutral-700">
@@ -228,7 +228,7 @@ export default function MayoristaPage() {
           {/* Contact form */}
           <div>
             <div className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-200 sticky top-24">
-              <h2 className="text-xl font-bold text-neutral-900 mb-6">
+              <h2 className="text-xl text-neutral-900 mb-6">
                 Solicitar información comercial
               </h2>
 

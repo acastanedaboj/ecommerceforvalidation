@@ -147,7 +147,7 @@ export function ImageGallery({
                 'w-2 h-2 rounded-full transition-all duration-300',
                 selectedIndex === index
                   ? 'w-6 bg-earth-500'
-                  : 'bg-cream-300 hover:bg-cream-400'
+                  : 'bg-stone-300 hover:bg-stone-400'
               )}
               aria-label={`Ir a imagen ${index + 1}`}
             />

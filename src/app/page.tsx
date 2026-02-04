@@ -128,7 +128,7 @@ export default function HomePage() {
                       ))}
                     </div>
                     <div>
-                      <p className="font-display font-semibold text-stone-800">4.9/5</p>
+                      <p className="font-display text-stone-800">4.9/5</p>
                       <p className="text-xs text-stone-500">+500 reseñas</p>
                     </div>
                   </div>
@@ -147,7 +147,7 @@ export default function HomePage() {
               Calidad artesanal
             </p>
             <h2 className="font-display text-stone-800 mb-6">
-              Por qué nuestra granola es diferente
+              Por qué nuestra granola es <span className="text-earth-600-display-italic">diferente</span>
             </h2>
           </div>
 
@@ -242,7 +242,7 @@ export default function HomePage() {
               Precios
             </p>
             <h2 className="font-display text-stone-800 mb-4">
-              Cuanto más compras, más ahorras
+              Cuanto más compras, más <span className="text-earth-600-display-italic">ahorras</span>
             </h2>
             <p className="text-stone-600 max-w-md mx-auto">
               A partir de 4 bolsas, el envío es gratis.
@@ -335,7 +335,7 @@ export default function HomePage() {
               Testimonios
             </p>
             <h2 className="font-display text-stone-800">
-              Lo que dicen nuestros clientes
+              Lo que dicen nuestros <span className="text-earth-600-display-italic">clientes</span>
             </h2>
           </div>
 
@@ -354,7 +354,7 @@ export default function HomePage() {
                   &ldquo;{testimonial.quote}&rdquo;
                 </p>
                 <div>
-                  <p className="font-medium text-stone-800 text-sm">{testimonial.author}</p>
+                  <p className="text-stone-800 text-sm">{testimonial.author}</p>
                   <p className="text-xs text-stone-500">{testimonial.role}</p>
                 </div>
               </div>
@@ -367,7 +367,7 @@ export default function HomePage() {
       <section className="py-20 md:py-28 bg-white">
         <div className="container-custom text-center max-w-2xl mx-auto">
           <h2 className="font-display text-stone-800 mb-6">
-            ¿Lista para probar la diferencia?
+            ¿Lista para probar la <span className="text-earth-600-display-italic">diferencia</span>?
           </h2>
           <p className="text-stone-600 mb-10">
             Únete a cientos de familias que han descubierto el sabor de la granola

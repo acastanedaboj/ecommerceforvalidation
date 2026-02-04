@@ -121,7 +121,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
 
         {/* Price */}
         <div className="flex items-baseline gap-2.5 mb-5">
-          <span className="text-2xl font-display font-semibold text-earth-600">
+          <span className="text-2xl font-display text-earth-600">
             {formatPrice(packPrice)}
           </span>
           <span className="text-sm text-stone-400">/ud</span>

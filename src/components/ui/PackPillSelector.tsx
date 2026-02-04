@@ -53,7 +53,7 @@ export function PackPillSelector({
               'transition-all duration-200 focus-visible:ring-2 focus-visible:ring-earth-400 focus-visible:ring-offset-2',
               isSelected
                 ? 'border-earth-500 bg-earth-50 shadow-md'
-                : 'border-cream-200 hover:border-cream-300 hover:bg-cream-50'
+                : 'border-stone-200 hover:border-stone-300 hover:bg-sky-50'
             )}
           >
             {/* Selection indicator */}
@@ -65,7 +65,7 @@ export function PackPillSelector({
 
             {/* Pack name */}
             <span className={cn(
-              'font-display text-lg font-semibold',
+              'font-display text-lg',
               isSelected ? 'text-earth-700' : 'text-stone-700'
             )}>
               {option.size === 1 ? '1 bolsa' : `Pack ${option.size}`}

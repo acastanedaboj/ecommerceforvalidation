@@ -41,7 +41,7 @@ export default function ContactoPage() {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-display font-bold text-neutral-900 mb-4">
+          <h1 className="text-4xl md:text-5xl font-display text-neutral-900 mb-4">
             Contacto
           </h1>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
@@ -54,7 +54,7 @@ export default function ContactoPage() {
           {/* Contact info */}
           <div className="lg:col-span-1">
             <div className="bg-primary-50 rounded-2xl p-8">
-              <h2 className="text-xl font-bold text-neutral-900 mb-6">
+              <h2 className="text-xl text-neutral-900 mb-6">
                 Información de contacto
               </h2>
 
@@ -64,7 +64,7 @@ export default function ContactoPage() {
                     <Mail className="w-5 h-5 text-primary-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-neutral-900">Email</p>
+                    <p className="text-neutral-900">Email</p>
                     <a
                       href={`mailto:${BUSINESS.email}`}
                       className="text-primary-600 hover:underline"
@@ -79,7 +79,7 @@ export default function ContactoPage() {
                     <MapPin className="w-5 h-5 text-primary-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-neutral-900">Dirección</p>
+                    <p className="text-neutral-900">Dirección</p>
                     <p className="text-neutral-600">
                       {BUSINESS.address.street}
                       <br />
@@ -95,7 +95,7 @@ export default function ContactoPage() {
                     <Clock className="w-5 h-5 text-primary-600" />
                   </div>
                   <div>
-                    <p className="font-medium text-neutral-900">Horario de atención</p>
+                    <p className="text-neutral-900">Horario de atención</p>
                     <p className="text-neutral-600">
                       Lunes a Viernes: 9:00 - 18:00
                       <br />
@@ -107,7 +107,7 @@ export default function ContactoPage() {
 
               {/* Social links */}
               <div className="mt-8 pt-6 border-t border-primary-200">
-                <p className="font-medium text-neutral-900 mb-3">Síguenos en redes</p>
+                <p className="text-neutral-900 mb-3">Síguenos en redes</p>
                 <div className="flex gap-3">
                   <a
                     href={BUSINESS.socialMedia.instagram}
@@ -139,7 +139,7 @@ export default function ContactoPage() {
           {/* Contact form */}
           <div className="lg:col-span-2">
             <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-200">
-              <h2 className="text-xl font-bold text-neutral-900 mb-6">
+              <h2 className="text-xl text-neutral-900 mb-6">
                 Envíanos un mensaje
               </h2>
 

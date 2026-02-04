@@ -98,12 +98,9 @@ export function Footer() {
                   {BUSINESS.email}
                 </a>
               </li>
-              <li className="flex items-start gap-3 text-[#ffffec] text-sm">
-                <MapPin className="w-4 h-4 text-[#ffffec] mt-0.5 flex-shrink-0" strokeWidth={1.5} />
-                <span>
-                  {BUSINESS.address.street}<br />
-                  {BUSINESS.address.postalCode} {BUSINESS.address.city}
-                </span>
+              <li className="flex items-center gap-3 text-[#ffffec] text-sm">
+                <MapPin className="w-4 h-4 text-[#ffffec]" strokeWidth={1.5} />
+                Málaga, España
               </li>
             </ul>
           </div>
