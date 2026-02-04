@@ -107,9 +107,12 @@ export function Footer() {
                   {BUSINESS.phone}
                 </a>
               </li>
-              <li className="flex items-center gap-3 text-[#ffffec] text-sm">
-                <MapPin className="w-4 h-4 text-[#ffffec]" strokeWidth={1.5} />
-                {BUSINESS.address.city}, {BUSINESS.address.country}
+              <li className="flex items-start gap-3 text-[#ffffec] text-sm">
+                <MapPin className="w-4 h-4 text-[#ffffec] mt-0.5 flex-shrink-0" strokeWidth={1.5} />
+                <span>
+                  {BUSINESS.address.street}<br />
+                  {BUSINESS.address.postalCode} {BUSINESS.address.city}
+                </span>
               </li>
             </ul>
           </div>

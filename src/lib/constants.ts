@@ -8,9 +8,9 @@ export const BUSINESS = {
   email: 'hola@poppy.es',
   phone: '+34 600 000 000',
   address: {
-    street: 'Calle Ejemplo, 123',
-    city: 'Madrid',
-    postalCode: '28001',
+    street: 'Avda. Sor Teresa Prat, 15',
+    city: 'Málaga',
+    postalCode: '29003',
     country: 'España',
   },
   socialMedia: {
