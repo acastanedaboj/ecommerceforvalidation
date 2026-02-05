@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Truck, Leaf, Heart, RefreshCw, Star, Check, Wheat, Droplets, Sparkles, TreeDeciduous } from 'lucide-react';
 import { ProductCard } from '@/components/product/ProductCard';
-import { TestimonialCard } from '@/components/ui/TestimonialCard';
 import { getRetailProducts } from '@/data/products';
 import { formatPrice } from '@/lib/utils';
 import { getPackOptions, getSubscriptionInfo } from '@/lib/pricing';
@@ -30,29 +29,6 @@ export default function HomePage() {
   const packOptions = getPackOptions();
   const subscriptionInfo = getSubscriptionInfo();
 
-  const testimonials = [
-    {
-      quote: 'Por fin una granola que puedo comer sin problemas. Soy celíaca y siempre tenía miedo de la contaminación cruzada. Esta es la primera que me sienta bien de verdad.',
-      author: 'María L.',
-      role: 'Cliente verificada',
-      rating: 5,
-      verified: true,
-    },
-    {
-      quote: 'El sabor es increíble, se nota que está hecha con ingredientes de calidad. Mis hijos la devoran y me encanta saber que están comiendo algo nutritivo.',
-      author: 'Carlos G.',
-      role: 'Cliente verificado',
-      rating: 5,
-      verified: true,
-    },
-    {
-      quote: 'La suscripción es genial. No tengo que preocuparme de hacer pedidos y siempre tengo granola en casa. Además, el ahorro se nota a final de mes.',
-      author: 'Ana S.',
-      role: 'Suscriptora',
-      rating: 5,
-      verified: true,
-    },
-  ];
 
   return (
     <>
@@ -327,41 +303,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 md:py-28 bg-cream-100">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
-              Testimonios
-            </p>
-            <h2 className="font-display text-stone-800">
-              Lo que dicen nuestros <span className="text-earth-600-display-italic">clientes</span>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-px bg-stone-200">
-            {testimonials.map((testimonial, index) => (
-              <div
-                key={index}
-                className="bg-cream-100 p-8 md:p-10"
-              >
-                <div className="flex mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-olive-500 text-olive-500" />
-                  ))}
-                </div>
-                <p className="text-stone-700 text-sm leading-relaxed mb-6 italic">
-                  &ldquo;{testimonial.quote}&rdquo;
-                </p>
-                <div>
-                  <p className="text-stone-800 text-sm">{testimonial.author}</p>
-                  <p className="text-xs text-stone-500">{testimonial.role}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-white">

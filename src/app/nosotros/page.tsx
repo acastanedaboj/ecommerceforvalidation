@@ -47,23 +47,6 @@ const stats = [
   { number: '0', label: 'Azúcares refinados' },
 ];
 
-const team = [
-  {
-    name: 'María García',
-    role: 'Fundadora & Chef',
-    description: 'Apasionada por la alimentación saludable desde hace más de 15 años.',
-  },
-  {
-    name: 'Carlos Ruiz',
-    role: 'Producción',
-    description: 'Experto en técnicas de tostado artesanal y control de calidad.',
-  },
-  {
-    name: 'Ana Martínez',
-    role: 'Atención al cliente',
-    description: 'Siempre dispuesta a ayudarte con cualquier consulta.',
-  },
-];
 
 export default function NosotrosPage() {
   return (
@@ -246,34 +229,6 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="py-16 sm:py-24 bg-cream-100">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
-              El equipo
-            </h2>
-            <p className="text-stone-600 max-w-2xl mx-auto">
-              Personas apasionadas que hacen posible que disfrutes de la mejor granola
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-2xl p-6 text-center shadow-soft"
-              >
-                <div className="w-20 h-20 bg-earth-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <Users className="w-10 h-10 text-earth-500" strokeWidth={1.5} />
-                </div>
-                <h3 className="text-lg font-serif text-stone-800">{member.name}</h3>
-                <p className="text-earth-600 text-sm mb-3">{member.role}</p>
-                <p className="text-stone-600 text-sm">{member.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Commitments Section */}
       <section className="py-16 sm:py-24">
