@@ -31,10 +31,12 @@ interface CustomerInfo {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { items, customer, paymentMethod } = body as {
+    const { items, customer, paymentMethod, couponCode, couponDiscountCents } = body as {
       items: CheckoutItem[];
       customer: CustomerInfo;
       paymentMethod: 'card' | 'cash_on_delivery';
+      couponCode?: string;
+      couponDiscountCents?: number;
     };
 
     // Validate items
@@ -45,7 +47,7 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Calculate totals
+    // Calculate totals with coupon if provided
     const cartTotal = calculateCartTotal(
       items.map((item) => ({
         productId: item.productId,
@@ -53,11 +55,28 @@ export async function POST(request: NextRequest) {
         packSize: item.packSize,
         isSubscription: item.isSubscription,
         priceInCents: item.priceInCents || PRICING.BASE_PRICE_CENTS,
-      }))
+      })),
+      couponDiscountCents,
+      couponCode
     );
 
     // Check for subscription items
     const hasSubscription = items.some((item) => item.isSubscription);
+
+    // Calculate coupon discount ratio to apply proportionally to items
+    const subtotalBeforeCoupon = calculateCartTotal(
+      items.map((item) => ({
+        productId: item.productId,
+        quantity: item.quantity,
+        packSize: item.packSize,
+        isSubscription: item.isSubscription,
+        priceInCents: item.priceInCents || PRICING.BASE_PRICE_CENTS,
+      }))
+    ).subtotalCents;
+
+    const couponDiscountRatio = couponDiscountCents && subtotalBeforeCoupon > 0
+      ? couponDiscountCents / subtotalBeforeCoupon
+      : 0;
 
     // Build line items for Stripe
     const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = items.map((item) => {
@@ -68,19 +87,23 @@ export async function POST(request: NextRequest) {
           i.isSubscription === item.isSubscription
       );
 
+      const baseUnitPrice = itemTotal?.unitPriceCents || item.priceInCents;
+      // Apply coupon discount proportionally to each item
+      const finalUnitPrice = Math.round(baseUnitPrice * (1 - couponDiscountRatio));
+
       return {
         price_data: {
           currency: 'eur',
           product_data: {
             name: item.productName,
-            description: `${item.packSize > 1 ? `Pack ${item.packSize}` : '1 unidad'}${item.isSubscription ? ' - Suscripción mensual' : ''}`,
+            description: `${item.packSize > 1 ? `Pack ${item.packSize}` : '1 unidad'}${item.isSubscription ? ' - Suscripción mensual' : ''}${couponCode ? ` (Cupón: ${couponCode})` : ''}`,
             metadata: {
               productId: item.productId,
               packSize: item.packSize.toString(),
               isSubscription: item.isSubscription.toString(),
             },
           },
-          unit_amount: itemTotal?.unitPriceCents || item.priceInCents,
+          unit_amount: finalUnitPrice,
           ...(item.isSubscription && {
             recurring: {
               interval: 'month',
@@ -126,6 +149,10 @@ export async function POST(request: NextRequest) {
         shippingCity: customer.city,
         shippingProvince: customer.province,
         shippingPostalCode: customer.postalCode,
+        ...(couponCode && {
+          couponCode,
+          couponDiscountCents: couponDiscountCents?.toString() || '0',
+        }),
       },
       locale: 'es',
       // Allow promotion codes

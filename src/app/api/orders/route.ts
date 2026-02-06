@@ -29,11 +29,13 @@ const orders: Map<string, object> = new Map();
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { items, customer, paymentMethod, totals } = body as {
+    const { items, customer, paymentMethod, totals, couponCode, couponDiscountCents } = body as {
       items: OrderItem[];
       customer: CustomerInfo;
       paymentMethod: 'card' | 'cash_on_delivery';
       totals?: CartPriceCalculation;
+      couponCode?: string;
+      couponDiscountCents?: number;
     };
 
     // Validate required fields
@@ -61,7 +63,9 @@ export async function POST(request: NextRequest) {
           packSize: item.packSize,
           isSubscription: item.isSubscription,
           priceInCents: item.priceInCents || PRICING.BASE_PRICE_CENTS,
-        }))
+        })),
+        couponDiscountCents,
+        couponCode
       );
 
     // Generate order number
@@ -113,6 +117,12 @@ export async function POST(request: NextRequest) {
         totalInCents:
           cartTotal.totalCents + (paymentMethod === 'cash_on_delivery' ? 200 : 0),
       },
+      ...(couponCode && {
+        coupon: {
+          code: couponCode,
+          discountInCents: couponDiscountCents || 0,
+        },
+      }),
       createdAt: new Date().toISOString(),
     };
 
