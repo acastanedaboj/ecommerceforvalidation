@@ -46,8 +46,8 @@ export const PRICING = {
 // ==========================================
 
 export const SHIPPING = {
-  // Standard shipping cost in cents (4.95€)
-  STANDARD_COST_CENTS: 495,
+  // Standard shipping cost in cents (2.00€)
+  STANDARD_COST_CENTS: 200,
 
   // Free shipping thresholds
   FREE_SHIPPING_MIN_ITEMS: 4,
