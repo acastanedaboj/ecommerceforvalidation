@@ -132,10 +132,18 @@ export async function POST(request: NextRequest) {
 
     // Create Stripe checkout session
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
+      // Enable card payments (includes Apple Pay, Google Pay automatically)
       payment_method_types: ['card'],
       mode: hasSubscription ? 'subscription' : 'payment',
       line_items: lineItems,
       customer_email: customer.email,
+      // Enable automatic payment methods (Apple Pay, Google Pay, Link)
+      payment_method_options: {
+        card: {
+          // Request 3D Secure when required
+          request_three_d_secure: 'automatic',
+        },
+      },
       billing_address_collection: 'auto',
       shipping_address_collection: {
         allowed_countries: ['ES'],
