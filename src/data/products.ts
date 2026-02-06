@@ -1,7 +1,7 @@
 /**
  * Product Data - Poppy
  *
- * All prices are in cents (900 = 9.00€)
+ * All prices are in cents (700 = 7.00€)
  * Weights are in grams
  */
 
@@ -44,9 +44,9 @@ export interface NutritionalInfo {
 export const products: Product[] = [
   {
     id: 'prod_granola_clasica',
-    sku: 'GRAN-250-CLA',
+    sku: 'GRAN-150-CLA',
     name: 'Granola Clásica',
-    slug: 'granola-clasica-250g',
+    slug: 'granola-clasica-150g',
     description: `Nuestra granola clásica es la receta original que dio vida a Poppy. Un equilibrio perfecto entre la avena sin gluten, la miel ecológica de apicultores locales y una mezcla premium de frutos secos que define nuestro sabor característico.
 
 Los frutos secos y las semillas de girasol y calabaza se remojan cuidadosamente antes de hornear para mejorar su digestibilidad. La miel ecológica carameliza suavemente durante el tostado lento, creando clusters perfectos.
@@ -56,8 +56,8 @@ Nueces pecanas, almendras, avellanas y anacardos se tuestan junto con semillas d
 **El sabor que nos hizo famosos. Sencillo, auténtico, irresistible.**`,
     shortDescription:
       'Nuestra receta original con miel ecológica y frutos secos premium. El sabor clásico que nos define.',
-    priceInCents: 900,
-    weight: 250,
+    priceInCents: 700,
+    weight: 150,
     ingredients:
       'Copos de avena sin gluten* (40%), miel ecológica* (12%), nueces pecanas (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), sal marina (0.5%). *De agricultura ecológica.',
     allergens:
@@ -78,17 +78,17 @@ Nueces pecanas, almendras, avellanas y anacardos se tuestan junto con semillas d
     isActive: true,
     categoryId: 'cat_granola',
     tags: ['sin-gluten', 'ecológico', 'artesanal', 'clásico', 'original', 'con-miel'],
-    metaTitle: 'Granola Clásica 250g | Sin Gluten | Poppy',
+    metaTitle: 'Granola Clásica 150g | Sin Gluten | Poppy',
     metaDescription:
-      'Granola Poppy clásica 250g. Sin gluten, con miel ecológica y frutos secos premium. Nuestra receta original. Envío gratis +4 bolsas.',
+      'Granola Poppy clásica 150g. Sin gluten, con miel ecológica y frutos secos premium. Nuestra receta original. Envío gratis +4 bolsas.',
     hasHoney: true,
     isVegan: false,
   },
   {
     id: 'prod_granola_chocolate',
-    sku: 'GRAN-250-CHO',
+    sku: 'GRAN-150-CHO',
     name: 'Granola de Chocolate',
-    slug: 'granola-chocolate-250g',
+    slug: 'granola-chocolate-150g',
     description: `Para los amantes del chocolate, nuestra granola de chocolate es un capricho saludable que no decepciona. El cacao puro en polvo, sin azúcares añadidos, se combina con pepitas de chocolate negro 70% para crear una experiencia irresistible.
 
 La base sigue siendo nuestra avena sin gluten certificada y la miel ecológica, pero aquí el protagonista es el cacao crudo de comercio justo. Añadimos nibs de cacao para ese crunch extra que tanto gusta.
@@ -98,8 +98,8 @@ Perfecta para el desayuno, como topping de yogur o simplemente para picar entre 
 **El sabor del chocolate, pero con ingredientes reales.**`,
     shortDescription:
       'Granola con cacao puro y pepitas de chocolate negro 70%. Endulzada con miel ecológica. La opción perfecta para los amantes del chocolate saludable.',
-    priceInCents: 900,
-    weight: 250,
+    priceInCents: 700,
+    weight: 150,
     ingredients:
       'Copos de avena sin gluten* (38%), miel ecológica* (10%), pepitas de chocolate negro 70% (12%), cacao en polvo puro* (8%), nibs de cacao* (5%), almendras (8%), avellanas (6%), aceite de coco virgen extra* (4%), pipas de girasol (4%), lino molido (3%), vainilla natural (1%), sal marina (0.5%). *De agricultura ecológica.',
     allergens:
@@ -128,9 +128,9 @@ Perfecta para el desayuno, como topping de yogur o simplemente para picar entre 
   },
   {
     id: 'prod_granola_naranja',
-    sku: 'GRAN-250-NAR',
+    sku: 'GRAN-150-NAR',
     name: 'Granola de Naranja',
-    slug: 'granola-naranja-250g',
+    slug: 'granola-naranja-150g',
     description: `Nuestra granola de naranja es una explosión de frescura mediterránea en cada bocado. Elaborada con ralladura de naranja natural y trocitos de naranja confitada, ofrece un perfil aromático único que despierta los sentidos.
 
 La base de avena certificada sin gluten se combina con miel ecológica de azahar, que complementa perfectamente los cítricos. Las almendras marcona y las nueces aportan el equilibrio perfecto de textura y sabor.
@@ -140,8 +140,8 @@ El toque de canela de Ceilán y jengibre fresco realzan los aromas naturales de 
 **Frescura mediterránea en tu desayuno.**`,
     shortDescription:
       'Granola con naranja natural y miel de azahar ecológica. Un toque cítrico y refrescante para empezar el día.',
-    priceInCents: 900,
-    weight: 250,
+    priceInCents: 700,
+    weight: 150,
     ingredients:
       'Copos de avena sin gluten* (40%), miel de azahar ecológica* (12%), almendras marcona (10%), nueces (8%), naranja confitada (8%), ralladura de naranja natural (3%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%). *De agricultura ecológica.',
     allergens:
@@ -162,17 +162,17 @@ El toque de canela de Ceilán y jengibre fresco realzan los aromas naturales de 
     isActive: true,
     categoryId: 'cat_granola',
     tags: ['sin-gluten', 'ecologico', 'artesanal', 'citricos', 'naranja', 'con-miel'],
-    metaTitle: 'Granola de Naranja 250g | Sin Gluten | Poppy',
+    metaTitle: 'Granola de Naranja 150g | Sin Gluten | Poppy',
     metaDescription:
-      'Granola Poppy de naranja 250g sin gluten. Ralladura de naranja natural y miel de azahar ecológica. Frescura mediterránea. Envío gratis +4 bolsas.',
+      'Granola Poppy de naranja 150g sin gluten. Ralladura de naranja natural y miel de azahar ecológica. Frescura mediterránea. Envío gratis +4 bolsas.',
     hasHoney: true,
     isVegan: false,
   },
   {
     id: 'prod_granola_datiles',
-    sku: 'GRAN-250-DAT',
+    sku: 'GRAN-150-DAT',
     name: 'Granola de Dátiles',
-    slug: 'granola-datiles-250g',
+    slug: 'granola-datiles-150g',
     description: `Nuestra granola de dátiles es un homenaje a los sabores del Mediterráneo. Los dátiles Medjool, conocidos como el "fruto de los reyes", aportan una dulzura natural y caramelizada que hace innecesario cualquier azúcar añadido.
 
 Combinamos los dátiles con nuestra base de avena sin gluten y los enriquecemos con almendras, nueces pecanas y semillas de sésamo tostado. El resultado es una granola con un dulzor natural intenso pero equilibrado.
@@ -182,8 +182,8 @@ El toque de cardamomo y canela transporta a los zocos del Mediterráneo, mientra
 **Dulzura natural, sin azúcares añadidos.**`,
     shortDescription:
       'Granola con dátiles Medjool y frutos secos. Sin miel, apta para veganos. Dulzura 100% natural sin azúcares añadidos.',
-    priceInCents: 900,
-    weight: 250,
+    priceInCents: 700,
+    weight: 150,
     ingredients:
       'Copos de avena sin gluten* (38%), dátiles Medjool (18%), almendras (10%), nueces pecanas (8%), anacardos (6%), semillas de sésamo tostado (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), cardamomo molido (1%), canela de Ceilán (1%), sal marina (0.5%). *De agricultura ecológica.',
     allergens:
@@ -204,9 +204,9 @@ El toque de cardamomo y canela transporta a los zocos del Mediterráneo, mientra
     isActive: true,
     categoryId: 'cat_granola',
     tags: ['sin-gluten', 'ecológico', 'artesanal', 'dátiles', 'sin-azúcar', 'vegano', 'sin-miel'],
-    metaTitle: 'Granola de Dátiles 250g | Vegana Sin Miel | Poppy',
+    metaTitle: 'Granola de Dátiles 150g | Vegana Sin Miel | Poppy',
     metaDescription:
-      'Granola Poppy de dátiles Medjool 250g. Sin gluten, vegana, sin miel. Dulzura 100% natural. Envío gratis +4 bolsas.',
+      'Granola Poppy de dátiles Medjool 150g. Sin gluten, vegana, sin miel. Dulzura 100% natural. Envío gratis +4 bolsas.',
     hasHoney: false,
     isVegan: true,
   },
@@ -257,10 +257,10 @@ Solicita información sobre precios mayoristas y condiciones de distribución a 
 export const categories = [
   {
     id: 'cat_granola',
-    name: 'Granola 250g',
-    slug: 'granola-250g',
-    description: 'Nuestra línea de granola Poppy en formato 250g, perfecta para consumo individual.',
-    image: '/images/categories/granola-250g.jpg',
+    name: 'Granola 150g',
+    slug: 'granola-150g',
+    description: 'Nuestra línea de granola Poppy en formato 150g, perfecta para consumo individual.',
+    image: '/images/categories/granola-150g.jpg',
   },
   {
     id: 'cat_horeca',
