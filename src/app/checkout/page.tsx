@@ -4,13 +4,15 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronLeft, CreditCard, Truck, Shield, Lock } from 'lucide-react';
+import { ChevronLeft, CreditCard, Truck, Shield, Lock, Tag, X } from 'lucide-react';
 import { useCartStore, isCartBundleItem } from '@/store/cart-store';
 import { generateBundleSummary } from '@/lib/bundle';
 import { Input } from '@/components/ui/Input';
 import { Select } from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
 import { formatPrice, cn } from '@/lib/utils';
+import { getCouponByCode, isCouponValid, calculateCouponDiscount, type Coupon } from '@/data/coupons';
+import { calculateCartTotal } from '@/lib/pricing';
 import toast from 'react-hot-toast';
 
 const spanishProvinces = [
@@ -68,13 +70,40 @@ const spanishProvinces = [
 
 export default function CheckoutPage() {
   const router = useRouter();
-  const { items, getCartTotal, clearCart } = useCartStore();
-  const cartTotal = getCartTotal();
+  const { items, clearCart } = useCartStore();
 
   const [isLoading, setIsLoading] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState<'card' | 'cash_on_delivery'>('card');
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [acceptedPrivacy, setAcceptedPrivacy] = useState(false);
+
+  // Coupon state
+  const [couponCode, setCouponCode] = useState('');
+  const [appliedCoupon, setAppliedCoupon] = useState<Coupon | null>(null);
+  const [couponError, setCouponError] = useState('');
+  const [isApplyingCoupon, setIsApplyingCoupon] = useState(false);
+
+  // Calculate cart total with coupon discount
+  const cartItemsForCalculation = items.map((item) => ({
+    productId: isCartBundleItem(item) ? item.bundleId : item.productId,
+    quantity: item.quantity,
+    packSize: item.packSize,
+    isSubscription: item.isSubscription,
+    priceInCents: item.priceInCents,
+  }));
+
+  const couponDiscountCents = appliedCoupon
+    ? calculateCouponDiscount(
+        appliedCoupon,
+        calculateCartTotal(cartItemsForCalculation).subtotalCents
+      )
+    : 0;
+
+  const cartTotal = calculateCartTotal(
+    cartItemsForCalculation,
+    couponDiscountCents,
+    appliedCoupon?.code
+  );
 
   const [formData, setFormData] = useState({
     email: '',
@@ -88,6 +117,48 @@ export default function CheckoutPage() {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  // Handle coupon application
+  const handleApplyCoupon = () => {
+    if (!couponCode.trim()) {
+      setCouponError('Introduce un código de cupón');
+      return;
+    }
+
+    setIsApplyingCoupon(true);
+    setCouponError('');
+
+    const coupon = getCouponByCode(couponCode.trim());
+
+    if (!coupon) {
+      setCouponError('Cupón no válido');
+      setIsApplyingCoupon(false);
+      return;
+    }
+
+    // Calculate subtotal without coupon to validate
+    const subtotalWithoutCoupon = calculateCartTotal(cartItemsForCalculation).subtotalCents;
+    const validation = isCouponValid(coupon, subtotalWithoutCoupon);
+
+    if (!validation.valid) {
+      setCouponError(validation.reason || 'Cupón no válido');
+      setIsApplyingCoupon(false);
+      return;
+    }
+
+    setAppliedCoupon(coupon);
+    setCouponCode('');
+    setCouponError('');
+    setIsApplyingCoupon(false);
+    toast.success('Cupón aplicado correctamente');
+  };
+
+  const handleRemoveCoupon = () => {
+    setAppliedCoupon(null);
+    setCouponCode('');
+    setCouponError('');
+    toast.success('Cupón eliminado');
+  };
 
   // Redirect if cart is empty
   if (items.length === 0) {
@@ -186,6 +257,8 @@ export default function CheckoutPage() {
             }),
             customer: formData,
             paymentMethod,
+            couponCode: appliedCoupon?.code,
+            couponDiscountCents,
           }),
         });
 
@@ -229,6 +302,8 @@ export default function CheckoutPage() {
             customer: formData,
             paymentMethod,
             totals: cartTotal,
+            couponCode: appliedCoupon?.code,
+            couponDiscountCents,
           }),
         });
 
@@ -554,16 +629,91 @@ export default function CheckoutPage() {
                   })}
                 </div>
 
+                {/* Coupon section */}
+                <div className="border-t border-neutral-200 pt-4 pb-4">
+                  {appliedCoupon ? (
+                    <div className="flex items-center justify-between p-3 bg-accent-50 rounded-lg">
+                      <div className="flex items-center gap-2">
+                        <Tag className="w-4 h-4 text-accent-600" />
+                        <div>
+                          <p className="text-sm font-medium text-neutral-900">
+                            {appliedCoupon.code}
+                          </p>
+                          <p className="text-xs text-neutral-600">
+                            {appliedCoupon.description}
+                          </p>
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={handleRemoveCoupon}
+                        className="text-neutral-500 hover:text-neutral-700 transition-colors"
+                        aria-label="Eliminar cupón"
+                      >
+                        <X className="w-4 h-4" />
+                      </button>
+                    </div>
+                  ) : (
+                    <div>
+                      <label className="block text-sm font-medium text-neutral-700 mb-2">
+                        Código de descuento
+                      </label>
+                      <div className="flex gap-2">
+                        <input
+                          type="text"
+                          value={couponCode}
+                          onChange={(e) => {
+                            setCouponCode(e.target.value);
+                            setCouponError('');
+                          }}
+                          placeholder="Introduce tu código"
+                          className={cn(
+                            'flex-1 px-3 py-2 border rounded-lg text-sm',
+                            'focus:outline-none focus:ring-2 focus:ring-primary-500',
+                            couponError
+                              ? 'border-red-300 focus:ring-red-500'
+                              : 'border-neutral-300'
+                          )}
+                          disabled={isApplyingCoupon}
+                        />
+                        <Button
+                          type="button"
+                          onClick={handleApplyCoupon}
+                          size="sm"
+                          variant="outline"
+                          isLoading={isApplyingCoupon}
+                          disabled={!couponCode.trim()}
+                        >
+                          Aplicar
+                        </Button>
+                      </div>
+                      {couponError && (
+                        <p className="text-xs text-red-600 mt-1">{couponError}</p>
+                      )}
+                    </div>
+                  )}
+                </div>
+
                 {/* Totals */}
                 <div className="border-t border-neutral-200 pt-4 space-y-2 text-sm">
                   <div className="flex justify-between">
                     <span className="text-neutral-600">Subtotal</span>
-                    <span>{formatPrice(cartTotal.subtotalCents)}</span>
+                    <span>
+                      {formatPrice(
+                        calculateCartTotal(cartItemsForCalculation).subtotalCents
+                      )}
+                    </span>
                   </div>
-                  {cartTotal.discountCents > 0 && (
+                  {cartTotal.discountCents > 0 && !appliedCoupon && (
                     <div className="flex justify-between text-accent-600">
-                      <span>Descuento</span>
+                      <span>Descuento por pack</span>
                       <span>-{formatPrice(cartTotal.discountCents)}</span>
+                    </div>
+                  )}
+                  {appliedCoupon && couponDiscountCents > 0 && (
+                    <div className="flex justify-between text-accent-600">
+                      <span>Cupón ({appliedCoupon.code})</span>
+                      <span>-{formatPrice(couponDiscountCents)}</span>
                     </div>
                   )}
                   <div className="flex justify-between">

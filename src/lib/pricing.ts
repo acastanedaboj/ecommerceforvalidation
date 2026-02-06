@@ -28,6 +28,8 @@ export interface PriceCalculation {
 export interface CartPriceCalculation extends PriceCalculation {
   itemCount: number;
   items: CartItemPrice[];
+  couponCode?: string;
+  couponDiscountCents?: number;
 }
 
 export interface CartItemPrice {
@@ -137,7 +139,9 @@ export function calculateCartTotal(
     packSize: number;
     isSubscription: boolean;
     priceInCents?: number; // Optional override for product price
-  }>
+  }>,
+  couponDiscountCents?: number,
+  couponCode?: string
 ): CartPriceCalculation {
   let totalUnits = 0;
   let subtotalCents = 0;
@@ -170,13 +174,19 @@ export function calculateCartTotal(
     };
   });
 
-  // Discount total
-  const discountCents = originalTotalCents - subtotalCents;
+  // Discount total (pack/subscription discounts)
+  const packDiscountCents = originalTotalCents - subtotalCents;
+
+  // Apply coupon discount if provided
+  const totalDiscountCents = packDiscountCents + (couponDiscountCents || 0);
+
+  // Adjust subtotal with coupon
+  const finalSubtotalCents = subtotalCents - (couponDiscountCents || 0);
 
   // Average discount percentage
   const discountPercentage =
     originalTotalCents > 0
-      ? Math.round((discountCents / originalTotalCents) * 100)
+      ? Math.round((totalDiscountCents / originalTotalCents) * 100)
       : 0;
 
   // Check free shipping eligibility
@@ -208,24 +218,24 @@ export function calculateCartTotal(
   // Shipping cost
   const shippingCents = isFreeShipping ? 0 : SHIPPING.STANDARD_COST_CENTS;
 
-  // Calculate VAT (extracted from VAT-inclusive prices)
-  const netAmount = Math.round(subtotalCents / (1 + PRICING.VAT_RATE));
-  const taxCents = subtotalCents - netAmount;
+  // Calculate VAT (extracted from VAT-inclusive prices, after coupon discount)
+  const netAmount = Math.round(finalSubtotalCents / (1 + PRICING.VAT_RATE));
+  const taxCents = finalSubtotalCents - netAmount;
 
-  // Total
-  const totalCents = subtotalCents + shippingCents;
+  // Total (using subtotal after coupon discount)
+  const totalCents = finalSubtotalCents + shippingCents;
 
   // Average unit price
-  const unitPriceCents = totalUnits > 0 ? Math.round(subtotalCents / totalUnits) : 0;
+  const unitPriceCents = totalUnits > 0 ? Math.round(finalSubtotalCents / totalUnits) : 0;
 
   // Average savings per unit
   const savingsPerUnit =
-    totalUnits > 0 ? Math.round(discountCents / totalUnits) : 0;
+    totalUnits > 0 ? Math.round(totalDiscountCents / totalUnits) : 0;
 
   return {
     unitPriceCents,
-    subtotalCents,
-    discountCents,
+    subtotalCents: finalSubtotalCents,
+    discountCents: totalDiscountCents,
     discountPercentage,
     shippingCents,
     taxCents,
@@ -234,6 +244,8 @@ export function calculateCartTotal(
     savingsPerUnit,
     itemCount: totalUnits,
     items: itemPrices,
+    couponCode,
+    couponDiscountCents,
   };
 }
 
