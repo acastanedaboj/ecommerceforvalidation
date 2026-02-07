@@ -10,6 +10,7 @@ import { SEO } from '@/lib/constants';
 import {
   buildOrganizationSchema,
   buildWebsiteSchema,
+  buildLocalBusinessSchema,
   SITE_URL,
   BRAND_NAME,
 } from '@/lib/seo';
@@ -124,6 +125,14 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(buildWebsiteSchema()),
+          }}
+        />
+
+        {/* JSON-LD: LocalBusiness Schema for Málaga local SEO */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(buildLocalBusinessSchema()),
           }}
         />
       </head>

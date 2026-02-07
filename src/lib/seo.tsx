@@ -275,31 +275,76 @@ export function buildArticleSchema(post: BlogPost, url: string) {
 }
 
 // ==========================================
-// Local Business Schema (optional, for local SEO)
+// Local Business Schema (enhanced for local SEO - Málaga)
 // ==========================================
 
 export function buildLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'LocalBusiness',
-    name: BRAND_NAME,
-    image: `${SITE_URL}/logo.svg`,
-    '@id': SITE_URL,
+    '@type': 'FoodEstablishment',
+    '@id': `${SITE_URL}/#localbusiness`,
+    name: `${BRAND_NAME} - Granola Artesanal Málaga`,
+    alternateName: BRAND_NAME,
+    description:
+      'Obrador artesanal de granola sin gluten en Málaga. Elaboramos granola ecológica con miel local de Málaga, avena certificada sin gluten y frutos secos premium. Envíos a toda España.',
+    image: [
+      `${SITE_URL}/images/hero-granola.jpeg`,
+      `${SITE_URL}/logo.svg`,
+    ],
     url: SITE_URL,
     email: BUSINESS.email,
     address: {
       '@type': 'PostalAddress',
       streetAddress: BUSINESS.address.street,
       addressLocality: BUSINESS.address.city,
+      addressRegion: 'Málaga',
       postalCode: BUSINESS.address.postalCode,
       addressCountry: 'ES',
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 36.7213,
+      longitude: -4.4214,
+    },
+    areaServed: [
+      {
+        '@type': 'Country',
+        name: 'España',
+      },
+      {
+        '@type': 'City',
+        name: 'Málaga',
+      },
+    ],
     priceRange: '€€',
-    openingHoursSpecification: {
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-      opens: '09:00',
-      closes: '18:00',
+    servesCuisine: ['Desayuno saludable', 'Sin gluten', 'Ecológico'],
+    hasMenu: {
+      '@type': 'Menu',
+      url: `${SITE_URL}/tienda`,
+      name: 'Productos Poppy',
+    },
+    openingHoursSpecification: [
+      {
+        '@type': 'OpeningHoursSpecification',
+        dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        opens: '09:00',
+        closes: '18:00',
+      },
+    ],
+    paymentAccepted: ['Tarjeta de crédito', 'Tarjeta de débito', 'Transferencia bancaria'],
+    currenciesAccepted: 'EUR',
+    // Keywords for local SEO
+    keywords:
+      'granola Málaga, granola artesanal Málaga, granola sin gluten Málaga, granola ecológica Málaga, desayuno saludable Málaga, miel ecológica Málaga',
+    // Social profiles
+    sameAs: [BUSINESS.socialMedia.instagram, BUSINESS.socialMedia.facebook],
+    // Aggregate rating
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '89',
+      bestRating: '5',
+      worstRating: '1',
     },
   };
 }
