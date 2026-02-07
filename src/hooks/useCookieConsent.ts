@@ -42,7 +42,7 @@ export function useCookieConsent() {
     setShowBanner(false);
 
     // Reload page to enable analytics if accepted
-    if (typeof window !== 'undefined' && window.gtag) {
+    if (typeof window !== 'undefined') {
       window.location.reload();
     }
   };
