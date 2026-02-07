@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     type: 'article',
     images: [
       {
-        url: `${SITE_URL}/images/hero-granola.jpeg`,
+        url: `${SITE_URL}/images/hero-comparativa-granola.jpg`,
         width: 1200,
         height: 630,
         alt: 'Comparativa Granola Sin Gluten España',

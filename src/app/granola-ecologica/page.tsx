@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: `${SITE_URL}/images/hero-granola.jpeg`,
+        url: `${SITE_URL}/images/hero-granola-ecologica.jpg`,
         width: 1200,
         height: 630,
         alt: 'Granola Ecológica Poppy',

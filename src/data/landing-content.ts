@@ -1651,7 +1651,7 @@ export const ecologicaContent = {
       href: '#ingredientes',
     },
     badges: ['Ingredientes Eco', 'Sin gluten', 'Artesanal'],
-    image: '/images/hero-granola.jpeg',
+    image: '/images/hero-granola-ecologica.jpg',
   },
   intro: {
     title: '¿Qué hace ecológica a nuestra granola?',
@@ -1844,7 +1844,7 @@ export const mejorGranolaContent = {
     ctaText: 'Ver nuestra granola',
     ctaHref: '/tienda',
     badges: ['Guía actualizada', 'Análisis independiente'],
-    image: '/images/hero-granola.jpeg',
+    image: '/images/hero-comparativa-granola.jpg',
   },
   intro: {
     title: '¿Cómo elegir la mejor granola sin gluten?',
