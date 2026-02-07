@@ -411,3 +411,317 @@ export const celiacosContent = {
     },
   },
 };
+
+// ==========================================
+// /granola-sin-gluten-mercadona
+// ==========================================
+
+export const mercadonaContent = {
+  hero: {
+    title: 'Granola Sin Gluten',
+    highlight: 'Poppy vs Mercadona',
+    subtitle:
+      'Comparamos nuestra granola artesanal con las opciones de Mercadona. Descubre las diferencias y elige la mejor opción para tu desayuno.',
+    ctaText: 'Comprar Poppy',
+    ctaHref: '/tienda',
+    secondaryCta: {
+      text: 'Ver comparativa',
+      href: '#comparativa',
+    },
+    badges: ['Artesanal', 'Apta celíacos', 'Ingredientes premium'],
+    image: '/images/hero-sin-gluten.jpeg',
+  },
+  intro: {
+    title: '¿Granola de Mercadona o granola artesanal?',
+    description:
+      'Muchas personas buscan "granola sin gluten Mercadona" porque es conveniente y conocido. Pero ¿cuál es realmente la diferencia entre la granola de supermercado y una artesanal? Te lo explicamos todo.',
+  },
+  comparison: {
+    title: 'Comparativa: Poppy vs Opciones de Supermercado',
+    subtitle: 'Las diferencias que importan',
+    items: [
+      {
+        feature: 'Producción',
+        poppy: 'Artesanal, pequeños lotes (<50kg)',
+        mercadona: 'Industrial, grandes volúmenes',
+      },
+      {
+        feature: 'Avena',
+        poppy: 'Certificada sin gluten, remojada',
+        mercadona: 'Sin gluten (según producto)',
+      },
+      {
+        feature: 'Endulzante',
+        poppy: 'Miel ecológica local o dátiles',
+        mercadona: 'Azúcar, jarabes industriales',
+      },
+      {
+        feature: 'Frutos secos',
+        poppy: 'Premium, selección manual',
+        mercadona: 'Estándar, cantidad variable',
+      },
+      {
+        feature: 'Aditivos',
+        poppy: 'Sin conservantes ni aditivos',
+        mercadona: 'Puede contener aditivos',
+      },
+      {
+        feature: 'Frescura',
+        poppy: 'Elaborada bajo pedido',
+        mercadona: 'Stock de almacén',
+      },
+      {
+        feature: 'Precio',
+        poppy: '7.65-9€ / 250g',
+        mercadona: '4-6€ / 375-500g',
+      },
+      {
+        feature: 'Envío',
+        poppy: 'Gratis desde 4 uds',
+        mercadona: 'Recogida en tienda',
+      },
+    ],
+  },
+  benefits: {
+    title: 'Por qué elegir Poppy',
+    subtitle: 'Vale la pena la diferencia',
+    items: [
+      {
+        title: 'Ingredientes que puedes pronunciar',
+        description:
+          'Solo avena, miel, frutos secos, aceite de oliva y especias. Sin maltodextrina, jarabe de glucosa ni saborizantes.',
+      },
+      {
+        title: 'Tostado lento artesanal',
+        description:
+          'Horneamos a baja temperatura durante más tiempo. El resultado: crujiente perfecto que no se deshace en la leche.',
+      },
+      {
+        title: 'Hecha en Málaga',
+        description:
+          'Conocemos cada lote, cada ingrediente. Apoyar a Poppy es apoyar la producción local y artesanal.',
+      },
+      {
+        title: 'Realmente apta para celíacos',
+        description:
+          'No solo "sin gluten", sino elaborada con proceso controlado y avena certificada. Seguridad garantizada.',
+      },
+    ],
+  },
+  mercadonaSection: {
+    title: '¿Qué granola sin gluten tiene Mercadona?',
+    description:
+      'Mercadona ofrece varias opciones de granola, pero no todas son sin gluten. La disponibilidad varía según la tienda y temporada. Las opciones más comunes incluyen:',
+    options: [
+      {
+        name: 'Hacendado Granola 0% Azúcares Añadidos',
+        glutenFree: 'No siempre',
+        note: 'Verifica etiqueta - puede contener cereales con gluten',
+      },
+      {
+        name: 'Marcas especializadas sin gluten',
+        glutenFree: 'Sí',
+        note: 'Disponibilidad limitada, precio más alto',
+      },
+    ],
+  },
+  faqs: [
+    {
+      question: '¿Es mejor la granola de Mercadona o la de Poppy?',
+      answer:
+        'Depende de lo que valores. Mercadona ofrece conveniencia y precio bajo. Poppy ofrece ingredientes premium, elaboración artesanal, sabor superior y proceso controlado para celíacos. Si buscas calidad y quieres apoyar producción local, Poppy es tu opción.',
+    },
+    {
+      question: '¿Por qué es más cara la granola Poppy?',
+      answer:
+        'Usamos miel ecológica de apicultores de Málaga (no azúcar industrial), frutos secos premium (no estándar), avena certificada sin gluten remojada, y elaboración artesanal en pequeños lotes. Cada bolsa lleva horas de trabajo manual y control de calidad.',
+    },
+    {
+      question: '¿Puedo comprar Poppy en Mercadona?',
+      answer:
+        'No. Poppy es una marca artesanal independiente que vende exclusivamente online en poppy.es. Esto nos permite controlar la calidad y frescura de cada envío.',
+    },
+    {
+      question: '¿Cuánto tarda el envío de Poppy?',
+      answer:
+        'Preparamos tu pedido en 24-48h laborables y lo enviamos a toda España. Envío gratis a partir de 4 bolsas. Lo recibes en 3-5 días laborables.',
+    },
+    {
+      question: '¿La granola de Mercadona es apta para celíacos?',
+      answer:
+        'Depende del producto específico. No todas las granolas de Mercadona son sin gluten. Debes verificar siempre la etiqueta. La ventaja de Poppy es que TODAS nuestras granolas son aptas para celíacos con avena certificada.',
+    },
+  ],
+  cta: {
+    title: 'Prueba la diferencia artesanal',
+    description:
+      'Envío gratis desde 4 unidades. Si no te convence, te devolvemos el dinero.',
+    ctaText: 'Comprar granola Poppy',
+    ctaHref: '/tienda',
+    secondaryCta: {
+      text: 'Ver todos los sabores',
+      href: '/tienda',
+    },
+  },
+};
+
+// ==========================================
+// /granola-sin-gluten-carrefour
+// ==========================================
+
+export const carrefourContent = {
+  hero: {
+    title: 'Granola Sin Gluten',
+    highlight: 'Poppy vs Carrefour',
+    subtitle:
+      'Comparativa completa entre granola artesanal Poppy y las opciones sin gluten de Carrefour. Descubre qué te conviene más.',
+    ctaText: 'Comprar Poppy',
+    ctaHref: '/tienda',
+    secondaryCta: {
+      text: 'Ver tabla comparativa',
+      href: '#comparativa',
+    },
+    badges: ['Artesanal', 'Sin gluten', 'Málaga'],
+    image: '/images/hero-sin-gluten.jpeg',
+  },
+  intro: {
+    title: '¿Carrefour o granola artesanal?',
+    description:
+      'Carrefour tiene una selección amplia de productos sin gluten, pero ¿cómo se comparan con una granola artesanal premium? Analizamos precio, ingredientes, sabor y calidad.',
+  },
+  comparison: {
+    title: 'Tabla comparativa completa',
+    subtitle: 'Poppy Artesanal vs Carrefour',
+    items: [
+      {
+        feature: 'Producción',
+        poppy: 'Artesanal, lotes pequeños',
+        carrefour: 'Industrial, producción masiva',
+      },
+      {
+        feature: 'Avena',
+        poppy: 'Certificada sin gluten, remojada',
+        carrefour: 'Sin gluten certificada',
+      },
+      {
+        feature: 'Endulzante',
+        poppy: 'Miel ecológica Málaga / Dátiles',
+        carrefour: 'Azúcar, jarabes (según marca)',
+      },
+      {
+        feature: 'Frutos secos',
+        poppy: 'Premium, alta proporción',
+        carrefour: 'Variedad según producto',
+      },
+      {
+        feature: 'Aditivos',
+        poppy: 'Cero',
+        carrefour: 'Según marca (leer etiqueta)',
+      },
+      {
+        feature: 'Origen',
+        poppy: 'Málaga, España',
+        carrefour: 'Múltiples proveedores',
+      },
+      {
+        feature: 'Frescura',
+        poppy: 'Elaboración bajo pedido',
+        carrefour: 'Depende de rotación stock',
+      },
+      {
+        feature: 'Precio aprox.',
+        poppy: '7.65-9€ / 250g',
+        carrefour: '5-8€ / 300-500g',
+      },
+    ],
+  },
+  benefits: {
+    title: 'Ventajas de elegir Poppy',
+    subtitle: 'Calidad artesanal certificada',
+    items: [
+      {
+        title: 'Ingredientes reales',
+        description:
+          'Sin "saborizantes naturales" ni nombres raros. Solo lo que usarías en tu cocina: avena, miel, frutos secos, aceite de oliva.',
+      },
+      {
+        title: 'Trazabilidad total',
+        description:
+          'Conocemos el origen de cada ingrediente. Miel de apicultores de Málaga, avena certificada, frutos secos seleccionados.',
+      },
+      {
+        title: 'Producción local',
+        description:
+          'Hecha en Málaga con amor e ingredientes locales. Apoyar a Poppy es apoyar el comercio local y sostenible.',
+      },
+      {
+        title: 'Garantía celiaca',
+        description:
+          'Todos nuestros sabores son sin gluten, siempre. No hace falta leer letras pequeñas o buscar entre opciones.',
+      },
+    ],
+  },
+  carrefourSection: {
+    title: 'Opciones sin gluten en Carrefour',
+    description:
+      'Carrefour tiene una sección amplia de productos sin gluten con varias marcas disponibles:',
+    options: [
+      {
+        name: 'Carrefour Bio Granola Sin Gluten',
+        glutenFree: 'Sí',
+        note: 'Certificada. Opción ecológica. Ingredientes estándar.',
+        price: '~6-7€ / 375g',
+      },
+      {
+        name: 'Schär Muesli Crujiente',
+        glutenFree: 'Sí',
+        note: 'Marca especializada celíacos. Más cara que otras opciones.',
+        price: '~8€ / 375g',
+      },
+      {
+        name: 'Otras marcas generales',
+        glutenFree: 'Variable',
+        note: 'Siempre verificar etiqueta "sin gluten".',
+        price: '~5-8€',
+      },
+    ],
+  },
+  faqs: [
+    {
+      question: '¿Es mejor la granola de Carrefour o la de Poppy?',
+      answer:
+        'Depende de tus prioridades. Carrefour ofrece variedad de marcas y conveniencia de compra presencial. Poppy ofrece granola artesanal premium con ingredientes locales, elaboración controlada y sabor superior. Si valoras la calidad artesanal, Poppy gana.',
+    },
+    {
+      question: '¿Cuál es más económica?',
+      answer:
+        'Por cantidad bruta (gramos), Carrefour puede ser más barato. Pero Poppy tiene mayor densidad de frutos secos premium y no contiene rellenos baratos. Por porción de calidad, la diferencia es menor de lo que parece.',
+    },
+    {
+      question: '¿Puedo comprar Poppy en Carrefour?',
+      answer:
+        'No. Poppy es una marca artesanal independiente que vende exclusivamente online en poppy.es. Esto nos permite mantener precios justos, controlar la frescura y ofrecer envío directo a tu casa.',
+    },
+    {
+      question: '¿La granola de Carrefour es apta para celíacos?',
+      answer:
+        'Carrefour tiene varias opciones certificadas sin gluten (marca Carrefour Bio, Schär, etc.). Siempre verifica el símbolo de espiga barrada y la etiqueta. Con Poppy, todos los sabores son automáticamente aptos para celíacos.',
+    },
+    {
+      question: '¿Qué pasa si no me gusta Poppy?',
+      answer:
+        'Ofrecemos garantía de satisfacción. Si no te convence, contacta con nosotros en hola@poppy.es. Queremos que pruebes granola artesanal sin riesgo.',
+    },
+  ],
+  cta: {
+    title: 'Siente la diferencia artesanal',
+    description:
+      'Envío gratis desde 4 bolsas. Hecho en Málaga, directo a tu mesa.',
+    ctaText: 'Comprar granola Poppy',
+    ctaHref: '/tienda',
+    secondaryCta: {
+      text: 'Ver todos los sabores',
+      href: '/tienda',
+    },
+  },
+};

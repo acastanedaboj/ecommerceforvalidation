@@ -1,0 +1,46 @@
+# Robots.txt para Poppy - Granola Sin Gluten
+# https://poppy.es
+
+# Permitir todos los crawlers
+User-agent: *
+Allow: /
+
+# Bloquear áreas privadas y admin
+Disallow: /api/
+Disallow: /cuenta/
+Disallow: /checkout/
+Disallow: /auth/
+
+# Bloquear archivos internos
+Disallow: /*.json$
+Disallow: /manifest.json
+
+# Permitir explícitamente páginas importantes para SEO
+Allow: /tienda/
+Allow: /granola-sin-gluten
+Allow: /granola-vegana
+Allow: /granola-artesanal
+Allow: /granola-para-celiacos
+Allow: /blog/
+
+# Crawlers específicos
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /products/
+
+# Bingbot
+User-agent: Bingbot
+Allow: /
+
+# Evitar crawlers maliciosos
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+# Sitemap
+Sitemap: https://poppy.es/sitemap.xml
