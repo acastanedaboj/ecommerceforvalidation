@@ -233,26 +233,8 @@ export default function RootLayout({
         />
         </SessionProvider>
 
-        {/* Cookie Banner - Outside SessionProvider */}
+        {/* Cookie Banner */}
         <CookieBanner />
-
-        {/* DEBUG: Force show banner with vanilla JS */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              console.log('[DEBUG] Script in layout.tsx is executing');
-              (function() {
-                console.log('[DEBUG] Creating test banner with vanilla JS');
-                const banner = document.createElement('div');
-                banner.id = 'test-cookie-banner';
-                banner.style.cssText = 'position:fixed;bottom:0;left:0;right:0;background:orange;color:black;padding:20px;z-index:99999;font-size:24px;text-align:center;border:5px solid black;';
-                banner.textContent = 'TEST BANNER - Vanilla JS - Si ves esto, el problema es con React';
-                document.body.appendChild(banner);
-                console.log('[DEBUG] Banner appended to body');
-              })();
-            `,
-          }}
-        />
       </body>
     </html>
   );
