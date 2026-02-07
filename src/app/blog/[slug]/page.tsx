@@ -90,60 +90,130 @@ export default function BlogPostPage({ params }: Props) {
       return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     };
 
-    return content
-      .split('\n')
-      .map((line, index) => {
-        // Headers
-        if (line.startsWith('# ')) {
-          return (
-            <h1
-              key={index}
-              className="text-3xl font-display text-neutral-900 mt-8 mb-4"
-              dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
-            />
-          );
-        }
-        if (line.startsWith('## ')) {
-          return (
-            <h2
-              key={index}
-              className="text-2xl font-display text-neutral-900 mt-8 mb-4"
-              dangerouslySetInnerHTML={{ __html: parseInline(line.slice(3)) }}
-            />
-          );
-        }
-        if (line.startsWith('### ')) {
-          return (
-            <h3
-              key={index}
-              className="text-xl text-neutral-900 mt-6 mb-3"
-              dangerouslySetInnerHTML={{ __html: parseInline(line.slice(4)) }}
-            />
-          );
-        }
-        // List items
-        if (line.startsWith('- ')) {
-          return (
-            <li
-              key={index}
-              className="text-neutral-600 ml-4"
-              dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
-            />
-          );
-        }
-        // Empty lines
-        if (line.trim() === '') {
-          return <br key={index} />;
-        }
-        // Regular paragraphs
-        return (
-          <p
-            key={index}
-            className="text-neutral-600 mb-4"
-            dangerouslySetInnerHTML={{ __html: parseInline(line) }}
+    const lines = content.split('\n');
+    const elements: React.ReactNode[] = [];
+    let i = 0;
+
+    while (i < lines.length) {
+      const line = lines[i];
+
+      // Skip empty lines (don't render <br/>)
+      if (line.trim() === '') {
+        i++;
+        continue;
+      }
+
+      // Headers
+      if (line.startsWith('# ')) {
+        elements.push(
+          <h1
+            key={i}
+            className="text-3xl font-display text-neutral-900 mt-8 mb-4"
+            dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
           />
         );
-      });
+        i++;
+        continue;
+      }
+      if (line.startsWith('## ')) {
+        elements.push(
+          <h2
+            key={i}
+            className="text-2xl font-display text-neutral-900 mt-8 mb-4"
+            dangerouslySetInnerHTML={{ __html: parseInline(line.slice(3)) }}
+          />
+        );
+        i++;
+        continue;
+      }
+      if (line.startsWith('### ')) {
+        elements.push(
+          <h3
+            key={i}
+            className="text-xl font-semibold text-neutral-900 mt-6 mb-3"
+            dangerouslySetInnerHTML={{ __html: parseInline(line.slice(4)) }}
+          />
+        );
+        i++;
+        continue;
+      }
+
+      // Collect consecutive list items into a <ul>
+      if (line.startsWith('- ')) {
+        const listItems: React.ReactNode[] = [];
+        const startIndex = i;
+        while (i < lines.length && lines[i].startsWith('- ')) {
+          listItems.push(
+            <li
+              key={i}
+              className="text-neutral-600"
+              dangerouslySetInnerHTML={{ __html: parseInline(lines[i].slice(2)) }}
+            />
+          );
+          i++;
+        }
+        elements.push(
+          <ul key={`ul-${startIndex}`} className="list-disc list-inside space-y-1 mb-4 ml-2">
+            {listItems}
+          </ul>
+        );
+        continue;
+      }
+
+      // Numbered list items
+      if (/^\d+\.\s/.test(line)) {
+        const listItems: React.ReactNode[] = [];
+        const startIndex = i;
+        while (i < lines.length && /^\d+\.\s/.test(lines[i])) {
+          listItems.push(
+            <li
+              key={i}
+              className="text-neutral-600"
+              dangerouslySetInnerHTML={{ __html: parseInline(lines[i].replace(/^\d+\.\s/, '')) }}
+            />
+          );
+          i++;
+        }
+        elements.push(
+          <ol key={`ol-${startIndex}`} className="list-decimal list-inside space-y-1 mb-4 ml-2">
+            {listItems}
+          </ol>
+        );
+        continue;
+      }
+
+      // Horizontal rule
+      if (line.trim() === '---') {
+        elements.push(<hr key={i} className="my-8 border-neutral-200" />);
+        i++;
+        continue;
+      }
+
+      // Blockquote
+      if (line.startsWith('> ')) {
+        elements.push(
+          <blockquote
+            key={i}
+            className="border-l-4 border-primary-300 pl-4 py-2 my-4 italic text-neutral-600 bg-neutral-50 rounded-r"
+            dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
+          />
+        );
+        i++;
+        continue;
+      }
+
+      // Regular paragraphs
+      elements.push(
+        <p
+          key={i}
+          className="text-neutral-600 mb-4 leading-relaxed"
+          dangerouslySetInnerHTML={{ __html: parseInline(line) }}
+        />
+      );
+      i++;
+    }
+
+    return elements;
   };
 
   return (
