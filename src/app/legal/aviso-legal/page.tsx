@@ -20,20 +20,27 @@ export default function AvisoLegalPage() {
 
         <div className="prose-custom">
           <p className="text-neutral-600 mb-6">
-            Última actualización: Enero 2024
+            Última actualización: Febrero 2026
           </p>
 
           <h2>1. Datos identificativos</h2>
           <p>
             En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio,
-            de Servicios de la Sociedad de la Información y Comercio Electrónico,
-            se informa:
+            de Servicios de la Sociedad de la Información y Comercio Electrónico (LSSI-CE),
+            se proporciona la siguiente información:
           </p>
           <ul>
-            <li><strong>Denominación social:</strong> {BUSINESS.name}</li>
-            <li><strong>Domicilio social:</strong> {BUSINESS.address.street}, {BUSINESS.address.postalCode} {BUSINESS.address.city}</li>
-            <li><strong>Email:</strong> {BUSINESS.email}</li>
+            <li><strong>Titular:</strong> {BUSINESS.name}</li>
+            <li><strong>Forma jurídica:</strong> Empresario Individual / Autónomo</li>
+            <li><strong>NIF:</strong> [Pendiente de inscripción]</li>
+            <li><strong>Domicilio:</strong> {BUSINESS.address.street}, {BUSINESS.address.postalCode} {BUSINESS.address.city}, {BUSINESS.address.country}</li>
+            <li><strong>Correo electrónico:</strong> {BUSINESS.email}</li>
+            <li><strong>Sitio web:</strong> https://poppy.es</li>
           </ul>
+          <p className="text-sm text-neutral-600 mt-2">
+            <em>Nota: Este negocio está inscrito como empresario individual.
+            El NIF se facilitará una vez completado el proceso de alta censal en Hacienda.</em>
+          </p>
 
           <h2>2. Objeto</h2>
           <p>
@@ -100,31 +107,69 @@ export default function AvisoLegalPage() {
 
           <h2>7. Comunicaciones comerciales</h2>
           <p>
-            De acuerdo con la LSSI-CE, {BUSINESS.name} no enviará comunicaciones
-            comerciales por correo electrónico que no hayan sido solicitadas
-            expresamente por el usuario.
+            De acuerdo con la LSSI-CE y el artículo 21 de la Ley 34/2002, {BUSINESS.name} no enviará comunicaciones
+            comerciales por correo electrónico sin el consentimiento previo y expreso
+            del destinatario.
+          </p>
+          <p>
+            Los usuarios pueden darse de baja de estas comunicaciones en cualquier momento
+            a través del enlace incluido en cada email o contactando a {BUSINESS.email}.
           </p>
 
           <h2>8. Protección de datos</h2>
           <p>
-            El tratamiento de datos personales se rige por nuestra{' '}
+            El tratamiento de datos personales se rige por lo dispuesto en el
+            Reglamento (UE) 2016/679 del Parlamento Europeo (RGPD) y la
+            Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales
+            y garantía de los derechos digitales (LOPDGDD).
+          </p>
+          <p>
+            Para más información, consulte nuestra{' '}
             <a href="/legal/privacidad">Política de Privacidad</a>.
           </p>
 
-          <h2>9. Legislación aplicable y jurisdicción</h2>
+          <h2>9. Resolución de litigios en línea</h2>
           <p>
-            Las presentes condiciones se rigen por la legislación española.
-            Para cualquier controversia que pudiera derivarse del acceso o uso
-            del sitio web, las partes se someten a los Juzgados y Tribunales
-            de {BUSINESS.address.city}.
+            De conformidad con el Reglamento (UE) 524/2013, la Comisión Europea
+            facilita una plataforma de resolución de litigios en línea para
+            los consumidores, accesible en:{' '}
+            <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener noreferrer">
+              https://ec.europa.eu/consumers/odr/
+            </a>
           </p>
 
-          <h2>10. Modificaciones</h2>
+          <h2>10. Legislación aplicable y jurisdicción</h2>
+          <p>
+            Las presentes condiciones se rigen por la legislación española vigente.
+          </p>
+          <p>
+            Para cualquier controversia que pudiera derivarse del acceso o uso
+            del sitio web, las partes, con renuncia expresa a cualquier otro fuero
+            que pudiera corresponderles, se someten a los Juzgados y Tribunales
+            del domicilio del consumidor, de conformidad con la normativa de protección
+            de consumidores y usuarios.
+          </p>
+
+          <h2>11. Modificaciones</h2>
           <p>
             {BUSINESS.name} se reserva el derecho de modificar, en cualquier
             momento y sin previo aviso, la presentación y configuración del
             sitio web, así como las presentes condiciones.
           </p>
+          <p>
+            Se recomienda a los usuarios revisar periódicamente este aviso legal
+            para estar informados de cualquier cambio.
+          </p>
+
+          <h2>12. Contacto</h2>
+          <p>
+            Para cualquier consulta relacionada con este aviso legal, puede
+            contactar con nosotros a través de:
+          </p>
+          <ul>
+            <li><strong>Email:</strong> {BUSINESS.email}</li>
+            <li><strong>Dirección postal:</strong> {BUSINESS.address.street}, {BUSINESS.address.postalCode} {BUSINESS.address.city}</li>
+          </ul>
         </div>
       </div>
     </div>

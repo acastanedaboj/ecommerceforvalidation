@@ -3,6 +3,7 @@ import './globals.css';
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/cart/CartDrawer';
+import { CookieBanner } from '@/components/layout/CookieBanner';
 import { SessionProvider } from '@/components/providers/SessionProvider';
 import { Toaster } from 'react-hot-toast';
 import { SEO } from '@/lib/constants';
@@ -147,6 +148,9 @@ export default function RootLayout({
           {/* Cart Drawer */}
           <CartDrawer />
 
+          {/* Cookie Banner */}
+          <CookieBanner />
+
           {/* Toast notifications */}
           <Toaster
           position="bottom-right"
@@ -172,31 +176,63 @@ export default function RootLayout({
           }}
         />
 
-        {/* Google Analytics - placeholder */}
-        {process.env.NEXT_PUBLIC_GA_ID && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-                `,
-              }}
-            />
-          </>
-        )}
-
-        {/* Ahrefs Analytics */}
+        {/* Google Analytics - only loads if user has given consent */}
         <script
-          src="https://analytics.ahrefs.com/analytics.js"
-          data-key="h5AGfn3DdpbaDrNA9emzVQ"
-          async
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const consent = localStorage.getItem('poppy-cookie-consent');
+                  if (consent) {
+                    const parsed = JSON.parse(consent);
+                    if (parsed.analytics && '${process.env.NEXT_PUBLIC_GA_ID}') {
+                      // Load Google Analytics
+                      var script = document.createElement('script');
+                      script.async = true;
+                      script.src = 'https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}';
+                      document.head.appendChild(script);
+
+                      window.dataLayer = window.dataLayer || [];
+                      function gtag(){dataLayer.push(arguments);}
+                      gtag('js', new Date());
+                      gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
+                        'anonymize_ip': true,
+                        'cookie_flags': 'SameSite=None;Secure'
+                      });
+                    }
+                  }
+                } catch (e) {
+                  console.error('Error loading analytics:', e);
+                }
+              })();
+            `,
+          }}
+        />
+
+        {/* Ahrefs Analytics - only loads if user has given consent */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  const consent = localStorage.getItem('poppy-cookie-consent');
+                  if (consent) {
+                    const parsed = JSON.parse(consent);
+                    if (parsed.analytics) {
+                      // Load Ahrefs Analytics
+                      var script = document.createElement('script');
+                      script.async = true;
+                      script.src = 'https://analytics.ahrefs.com/analytics.js';
+                      script.setAttribute('data-key', 'h5AGfn3DdpbaDrNA9emzVQ');
+                      document.head.appendChild(script);
+                    }
+                  }
+                } catch (e) {
+                  console.error('Error loading Ahrefs analytics:', e);
+                }
+              })();
+            `,
+          }}
         />
         </SessionProvider>
       </body>
