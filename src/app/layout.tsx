@@ -148,9 +148,6 @@ export default function RootLayout({
           {/* Cart Drawer */}
           <CartDrawer />
 
-          {/* Cookie Banner */}
-          <CookieBanner />
-
           {/* Toast notifications */}
           <Toaster
           position="bottom-right"
@@ -235,6 +232,9 @@ export default function RootLayout({
           }}
         />
         </SessionProvider>
+
+        {/* Cookie Banner - Outside SessionProvider */}
+        <CookieBanner />
       </body>
     </html>
   );
