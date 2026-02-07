@@ -64,13 +64,12 @@ Aquí viene lo divertido: añade la granola en una sección, los frutos rojos fr
 
 ## Información nutricional aproximada
 
-| Nutriente | Por ración |
-|-----------|------------|
-| Calorías | 380 kcal |
-| Proteínas | 10g |
-| Carbohidratos | 55g |
-| Grasas | 14g |
-| Fibra | 9g |
+**Por ración:**
+- Calorías: 380 kcal
+- Proteínas: 10g
+- Carbohidratos: 55g
+- Grasas: 14g
+- Fibra: 9g
 
 ¡Comparte tu creación en Instagram con el hashtag #Poppy!
     `,
@@ -645,14 +644,12 @@ Los frutos secos son el alma de una buena granola. Aportan textura, sabor, prote
 
 Cuando mezclas diferentes frutos secos, obtienes:
 
-| Nutriente | Beneficio |
-|-----------|-----------|
-| Proteína vegetal | Saciedad y músculo |
-| Omega-3 y 6 | Salud cardiovascular |
-| Fibra | Digestión |
-| Vitamina E | Antioxidante |
-| Magnesio | Sistema nervioso |
-| Zinc | Inmunidad |
+- **Proteína vegetal** → Saciedad y músculo
+- **Omega-3 y 6** → Salud cardiovascular
+- **Fibra** → Digestión
+- **Vitamina E** → Antioxidante
+- **Magnesio** → Sistema nervioso
+- **Zinc** → Inmunidad
 
 ## Alérgenos: información importante
 
@@ -728,13 +725,12 @@ Tras el ejercicio, tienes una "ventana anabólica" de 30-60 minutos donde tu cue
 
 ## Información Nutricional
 
-| Macronutriente | Cantidad |
-|----------------|----------|
-| Calorías | 550-600 kcal |
-| Proteína | 35-40g |
-| Carbohidratos | 55-65g |
-| Grasas | 18-22g |
-| Fibra | 8g |
+**Por ración:**
+- Calorías: 550-600 kcal
+- Proteína: 35-40g
+- Carbohidratos: 55-65g
+- Grasas: 18-22g
+- Fibra: 8g
 
 ## Variaciones según objetivo
 
@@ -839,14 +835,12 @@ Desarrollamos una versión sin miel específicamente para veganos. Los dátiles 
 
 Este desayuno aporta:
 
-| Nutriente | Cantidad | % VRN |
-|-----------|----------|-------|
-| Proteína | 22g | 44% |
-| Hierro | 6mg | 43% |
-| Calcio | 350mg | 44% |
-| Omega-3 | 2.5g | - |
-| Fibra | 10g | 40% |
-| B12 | (de la bebida fortificada) | 100% |
+- **Proteína:** 22g (44% VRN)
+- **Hierro:** 6mg (43% VRN)
+- **Calcio:** 350mg (44% VRN)
+- **Omega-3:** 2.5g
+- **Fibra:** 10g (40% VRN)
+- **B12:** de la bebida fortificada (100% VRN)
 
 ## Variaciones por estación
 
@@ -1048,15 +1042,15 @@ Nuestra etiqueta:
 
 ## Comparativa detallada
 
-| Aspecto | Industrial | Artesanal |
-|---------|------------|-----------|
-| Azúcares | 20-25g/100g | 12-14g/100g |
-| Frutos secos | 5-10% | 25-30% |
-| Tipo de grasa | Girasol/palma | Coco virgen |
-| Endulzante | Azúcar/jarabe | Miel ecológica |
-| Procesado | Extrusión masiva | Horneado en lotes |
-| Clusters | Artificiales | Naturales |
-| Conservantes | A menudo sí | No |
+**Industrial vs Artesanal:**
+
+- **Azúcares:** 20-25g/100g vs 12-14g/100g
+- **Frutos secos:** 5-10% vs 25-30%
+- **Tipo de grasa:** Girasol/palma vs Coco virgen
+- **Endulzante:** Azúcar/jarabe vs Miel ecológica
+- **Procesado:** Extrusión masiva vs Horneado en lotes
+- **Clusters:** Artificiales vs Naturales
+- **Conservantes:** A menudo sí vs No
 
 ## El proceso marca la diferencia
 
@@ -1177,11 +1171,9 @@ Para que una avena pueda etiquetarse como "sin gluten" en la Unión Europea, deb
 
 ### Símbolos que debes buscar
 
-| Símbolo | Significado |
-|---------|-------------|
-| **Espiga Barrada** | Certificación oficial europea de producto sin gluten (<20 ppm) |
-| **FACE** | Certificado por la Federación de Asociaciones de Celíacos de España |
-| **Sin gluten** | Declaración que debe cumplir <20 ppm según normativa |
+- **Espiga Barrada:** Certificación oficial europea de producto sin gluten (<20 ppm)
+- **FACE:** Certificado por la Federación de Asociaciones de Celíacos de España
+- **Sin gluten:** Declaración que debe cumplir <20 ppm según normativa
 
 **Importante:** Si la etiqueta solo dice "sin gluten añadido" o "naturalmente sin gluten" sin certificación, **NO es segura para celíacos**.
 
@@ -1216,14 +1208,13 @@ Antes de comprar avena, verifica:
 
 La avena es uno de los cereales más completos:
 
-| Nutriente (por 100g) | Cantidad |
-|----------------------|----------|
-| Fibra | 10-11g |
-| Proteína | 13-17g |
-| Beta-glucanos | 4-5g |
-| Hierro | 4.7mg |
-| Magnesio | 177mg |
-| Zinc | 4mg |
+**Nutrientes por 100g:**
+- Fibra: 10-11g
+- Proteína: 13-17g
+- Beta-glucanos: 4-5g
+- Hierro: 4.7mg
+- Magnesio: 177mg
+- Zinc: 4mg
 
 ### Beta-glucanos: el supernutriente de la avena
 
@@ -1316,12 +1307,10 @@ El desayuno es la comida más importante del día, pero para las personas con en
 
 Según las guías nutricionales, un desayuno completo debe aportar aproximadamente el **20-25% de las calorías diarias** e incluir:
 
-| Macronutriente | Función | Fuentes sin gluten |
-|----------------|---------|-------------------|
-| **Carbohidratos complejos** | Energía sostenida | Avena sin gluten, pan sin gluten, frutas |
-| **Proteína** | Saciedad y músculos | Huevos, yogur, frutos secos, semillas |
-| **Grasas saludables** | Absorción de vitaminas | Frutos secos, aguacate, aceite de oliva |
-| **Fibra** | Digestión y saciedad | Frutas, verduras, cereales integrales sin gluten |
+- **Carbohidratos complejos:** Energía sostenida → Avena sin gluten, pan sin gluten, frutas
+- **Proteína:** Saciedad y músculos → Huevos, yogur, frutos secos, semillas
+- **Grasas saludables:** Absorción de vitaminas → Frutos secos, aguacate, aceite de oliva
+- **Fibra:** Digestión y saciedad → Frutas, verduras, cereales integrales sin gluten
 
 ## Lunes: Yogur con Granola y Fruta Fresca
 
@@ -1574,13 +1563,13 @@ La granola tiene fama de ser un alimento saludable, pero muchas granolas comerci
 
 La realidad puede sorprenderte. Analizamos las etiquetas de granolas de supermercado:
 
-| Tipo de granola | Azúcar por 100g | Azúcar por ración (50g) |
-|-----------------|-----------------|-------------------------|
-| Granola industrial típica | 20-25g | 10-12.5g |
-| Granola "fitness" | 15-20g | 7.5-10g |
-| Granola "sin azúcar añadido" | 12-18g | 6-9g |
-| Granola artesanal con miel | 12-14g | 6-7g |
-| Granola con dátiles (sin azúcar añadido) | 15-18g | 7.5-9g |
+**Contenido de azúcar por tipo de granola:**
+
+- **Granola industrial típica:** 20-25g/100g (10-12.5g por ración)
+- **Granola "fitness":** 15-20g/100g (7.5-10g por ración)
+- **Granola "sin azúcar añadido":** 12-18g/100g (6-9g por ración)
+- **Granola artesanal con miel:** 12-14g/100g (6-7g por ración)
+- **Granola con dátiles:** 15-18g/100g (7.5-9g por ración)
 
 **Según la OMS**, el consumo diario de azúcares libres no debería superar los **25g para adultos**. Una sola ración de granola industrial puede aportar el **40-50% de este límite**.
 
@@ -1607,23 +1596,19 @@ Es fundamental entender la diferencia:
 
 El **índice glucémico (IG)** mide la velocidad a la que un alimento eleva el azúcar en sangre:
 
-| IG | Clasificación | Efecto |
-|----|---------------|--------|
-| <55 | Bajo | Elevación lenta y gradual |
-| 55-70 | Medio | Elevación moderada |
-| >70 | Alto | Pico rápido de glucosa |
+- **IG bajo (<55):** Elevación lenta y gradual
+- **IG medio (55-70):** Elevación moderada
+- **IG alto (>70):** Pico rápido de glucosa
 
 ### IG de componentes típicos de la granola
 
-| Ingrediente | IG aproximado |
-|-------------|---------------|
-| Avena | 55-58 |
-| Miel | 45-64 |
-| Dátiles | 42 |
-| Almendras | 15 |
-| Nueces | 15 |
-| Coco | 35 |
-| Pasas | 64 |
+- Avena: IG 55-58
+- Miel: IG 45-64
+- Dátiles: IG 42
+- Almendras: IG 15
+- Nueces: IG 15
+- Coco: IG 35
+- Pasas: IG 64
 
 **La buena noticia:** Una granola bien formulada con alta proporción de frutos secos (bajo IG) puede tener un **IG medio o bajo** a pesar de contener algo de azúcar.
 
@@ -1719,12 +1704,10 @@ A diferencia del azúcar refinado, el dulzor de los dátiles viene "empaquetado"
 
 ## Porciones recomendadas
 
-| Situación | Porción sugerida |
-|-----------|------------------|
-| Diabético tipo 2 controlado | 30-40g |
-| Prediabético | 40g |
-| Reducción de azúcar general | 40-50g |
-| Deportista | 50g |
+- **Diabético tipo 2 controlado:** 30-40g
+- **Prediabético:** 40g
+- **Reducción de azúcar general:** 40-50g
+- **Deportista:** 50g
 
 **Consejo:** Pesa tu granola las primeras veces. Es fácil servirse 80-100g sin darse cuenta, duplicando la ingesta de azúcar.
 
@@ -1802,25 +1785,23 @@ Según el consenso de expertos de Salerno (2015), la SGNC se define como:
 
 ### Prevalencia: más común de lo que crees
 
-| Condición | Prevalencia estimada |
-|-----------|---------------------|
-| Enfermedad celíaca | 1% de la población |
-| **Sensibilidad al gluten no celíaca** | **6-10% de la población** |
-| Alergia al trigo | 0.1-0.5% |
+- **Enfermedad celíaca:** 1% de la población
+- **Sensibilidad al gluten no celíaca:** 6-10% de la población
+- **Alergia al trigo:** 0.1-0.5%
 
 Esto significa que **por cada celíaco diagnosticado, hay entre 6 y 10 personas con SGNC**. Es una condición mucho más frecuente de lo que se pensaba hace una década.
 
 ## Diferencias entre celiaquía y sensibilidad al gluten
 
-| Característica | Enfermedad celíaca | SGNC |
-|----------------|-------------------|------|
-| **Causa** | Autoinmune | No autoinmune |
-| **Genética** | HLA-DQ2/DQ8 en 95% | Variable (50% tienen marcadores) |
-| **Anticuerpos** | Positivos (anti-tTG, anti-EMA) | Negativos |
-| **Daño intestinal** | Atrofia de vellosidades | Sin daño o mínimo |
-| **Riesgo de complicaciones** | Alto si no se trata | Bajo (sin complicaciones autoinmunes) |
-| **Necesidad de dieta estricta** | 100% sin gluten, de por vida | Puede tolerar trazas, intensidad variable |
-| **Diagnóstico** | Biopsia + serología | Por exclusión |
+**Enfermedad celíaca vs SGNC:**
+
+- **Causa:** Autoinmune vs No autoinmune
+- **Genética:** HLA-DQ2/DQ8 en 95% vs Variable (50% tienen marcadores)
+- **Anticuerpos:** Positivos (anti-tTG, anti-EMA) vs Negativos
+- **Daño intestinal:** Atrofia de vellosidades vs Sin daño o mínimo
+- **Riesgo complicaciones:** Alto si no se trata vs Bajo (sin complicaciones autoinmunes)
+- **Dieta:** 100% sin gluten, de por vida vs Puede tolerar trazas, intensidad variable
+- **Diagnóstico:** Biopsia + serología vs Por exclusión
 
 ### La diferencia fundamental
 
@@ -1897,13 +1878,13 @@ El estándar de oro sería una prueba de provocación doble ciego con placebo (e
 
 ### Diferencias con la dieta celíaca
 
-| Aspecto | Celíacos | SGNC |
-|---------|----------|------|
-| **Nivel de restricción** | Absoluto (<20 ppm) | Variable según tolerancia |
-| **Trazas** | Prohibidas | Muchos toleran pequeñas cantidades |
-| **Contaminación cruzada** | Crítica | Menos crítica |
-| **Duración** | De por vida | Puede reevaluarse periódicamente |
-| **Consecuencias de transgresión** | Daño intestinal | Síntomas, sin daño permanente |
+**Celíacos vs SGNC:**
+
+- **Nivel de restricción:** Absoluto (<20 ppm) vs Variable según tolerancia
+- **Trazas:** Prohibidas vs Muchos toleran pequeñas cantidades
+- **Contaminación cruzada:** Crítica vs Menos crítica
+- **Duración:** De por vida vs Puede reevaluarse periódicamente
+- **Consecuencias de transgresión:** Daño intestinal vs Síntomas, sin daño permanente
 
 ### ¿Es necesario eliminar el gluten completamente?
 
