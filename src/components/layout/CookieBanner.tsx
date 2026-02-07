@@ -7,6 +7,8 @@ import { X, Cookie, Settings } from 'lucide-react';
 import Link from 'next/link';
 
 export function CookieBanner() {
+  console.log('[CookieBanner] Component loaded - INICIO');
+
   const { showBanner, mounted, acceptAll, rejectAll, savePreferences } = useCookieConsent();
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState<CookieConsent>({
@@ -16,10 +18,15 @@ export function CookieBanner() {
   });
 
   // Debug logging
-  console.log('CookieBanner render:', { mounted, showBanner });
+  console.log('[CookieBanner] render:', { mounted, showBanner });
 
   // Don't render on server or if banner shouldn't show
-  if (!mounted || !showBanner) return null;
+  if (!mounted || !showBanner) {
+    console.log('[CookieBanner] Returning null -', { mounted, showBanner });
+    return null;
+  }
+
+  console.log('[CookieBanner] RENDERIZANDO BANNER!');
 
   const handleSavePreferences = () => {
     savePreferences(preferences);
