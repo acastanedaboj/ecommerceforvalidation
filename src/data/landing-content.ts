@@ -357,7 +357,7 @@ export const artesanalContent = {
       },
       {
         title: 'Avena sin gluten',
-        description: 'Certificada, remojada para mejor digestibilidad.',
+        description: 'Certificada, tostado lento a baja temperatura.',
       },
       {
         title: 'Aceite de oliva virgen extra',
@@ -558,7 +558,7 @@ export const mercadonaContent = {
       },
       {
         feature: 'Avena',
-        poppy: 'Certificada sin gluten, remojada',
+        poppy: 'Certificada sin gluten, frutos secos remojados',
         mercadona: 'Sin gluten (según producto)',
       },
       {
@@ -645,7 +645,7 @@ export const mercadonaContent = {
     {
       question: '¿Por qué es más cara la granola Poppy?',
       answer:
-        'Usamos miel ecológica de apicultores de Málaga (no azúcar industrial), frutos secos premium (no estándar), avena certificada sin gluten remojada, y elaboración artesanal en pequeños lotes. Cada bolsa lleva horas de trabajo manual y control de calidad.',
+        'Usamos miel ecológica de apicultores de Málaga (no azúcar industrial), frutos secos premium remojados para mejor absorción de nutrientes, avena certificada sin gluten, y elaboración artesanal en pequeños lotes. Cada bolsa lleva horas de trabajo manual y control de calidad.',
     },
     {
       question: '¿Puedo comprar Poppy en Mercadona?',
@@ -711,7 +711,7 @@ export const carrefourContent = {
       },
       {
         feature: 'Avena',
-        poppy: 'Certificada sin gluten, remojada',
+        poppy: 'Certificada sin gluten, frutos secos remojados',
         carrefour: 'Sin gluten certificada',
       },
       {
