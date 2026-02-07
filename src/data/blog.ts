@@ -1138,6 +1138,925 @@ No competimos con la granola industrial. Somos otra categoría. Hacemos granola 
     metaDescription:
       'Comparativa completa entre granola artesanal e industrial. Analizamos ingredientes, proceso, precio y sabor para que tomes la mejor decisión.',
   },
+  {
+    id: 'post_avena_sin_gluten',
+    slug: 'avena-sin-gluten-guia-completa-celiacos',
+    title: 'Avena Sin Gluten: Todo lo que Necesitas Saber',
+    excerpt:
+      '¿La avena tiene gluten? ¿Es segura para celíacos? Guía completa sobre avena certificada sin gluten, contaminación cruzada y cómo elegir avena segura.',
+    content: `
+# Avena Sin Gluten: Guía Completa para Celíacos
+
+La avena es uno de los cereales más nutritivos y versátiles, pero genera muchas dudas entre las personas con enfermedad celíaca o sensibilidad al gluten. ¿Es segura? ¿Qué significa "certificada sin gluten"? En esta guía respondemos todas tus preguntas con información basada en fuentes oficiales.
+
+## ¿La avena contiene gluten naturalmente?
+
+**No, la avena no contiene gluten de forma natural.** La avena es un cereal que pertenece a una familia botánica diferente al trigo, la cebada y el centeno. Su proteína se llama **avenina**, no gluten.
+
+Sin embargo, existe un problema importante: la **contaminación cruzada**.
+
+### El problema de la contaminación cruzada
+
+La avena convencional se contamina con gluten durante:
+
+1. **El cultivo:** Los campos de avena suelen estar junto a campos de trigo o cebada, y las semillas se mezclan
+2. **La cosecha:** Se utilizan las mismas cosechadoras para diferentes cereales
+3. **El transporte:** Los camiones transportan avena y trigo indistintamente
+4. **El procesado:** Las fábricas procesan múltiples cereales en las mismas líneas
+
+Según la **Federación de Asociaciones de Celíacos de España (FACE)**, la avena convencional puede contener entre 100 y 1.000 ppm de gluten por contaminación, muy por encima del límite seguro de 20 ppm.
+
+## ¿Qué significa "avena certificada sin gluten"?
+
+Para que una avena pueda etiquetarse como "sin gluten" en la Unión Europea, debe cumplir el **Reglamento (UE) 828/2014**:
+
+- Contener **menos de 20 partes por millón (ppm)** de gluten
+- Proceder de **cultivos dedicados exclusivamente a avena**
+- Procesarse en **instalaciones libres de gluten** o con protocolos estrictos de limpieza
+- Someterse a **análisis de cada lote** para verificar los niveles de gluten
+
+### Símbolos que debes buscar
+
+| Símbolo | Significado |
+|---------|-------------|
+| **Espiga Barrada** | Certificación oficial europea de producto sin gluten (<20 ppm) |
+| **FACE** | Certificado por la Federación de Asociaciones de Celíacos de España |
+| **Sin gluten** | Declaración que debe cumplir <20 ppm según normativa |
+
+**Importante:** Si la etiqueta solo dice "sin gluten añadido" o "naturalmente sin gluten" sin certificación, **NO es segura para celíacos**.
+
+## ¿Pueden los celíacos comer avena?
+
+Según las guías médicas actuales y la FACE:
+
+**Sí, la mayoría de celíacos pueden consumir avena certificada sin gluten**, pero con algunas consideraciones:
+
+### Recomendaciones oficiales
+
+1. **No introducir avena hasta 1 año después del diagnóstico** - El intestino necesita recuperarse completamente primero
+2. **Introducirla gradualmente** - Comenzar con pequeñas cantidades (20-25g/día)
+3. **Vigilar síntomas** - Algunas personas pueden reaccionar a la avenina
+4. **Consultar con tu médico** - Especialmente si tienes celiaquía refractaria
+
+### El caso especial de la avenina
+
+Un pequeño porcentaje de celíacos (estimado en 1-5%) puede reaccionar también a la **avenina**, la proteína propia de la avena. Si tras introducir avena certificada sin gluten experimentas síntomas, consulta con tu gastroenterólogo.
+
+## Cómo elegir avena segura: checklist
+
+Antes de comprar avena, verifica:
+
+- [ ] Tiene el **símbolo de espiga barrada** o certificación FACE
+- [ ] Indica explícitamente **"sin gluten"** (no solo "sin gluten añadido")
+- [ ] Especifica que procede de **cultivos dedicados**
+- [ ] La marca tiene **trazabilidad verificable**
+- [ ] El fabricante realiza **análisis de cada lote**
+
+## Beneficios nutricionales de la avena
+
+La avena es uno de los cereales más completos:
+
+| Nutriente (por 100g) | Cantidad |
+|----------------------|----------|
+| Fibra | 10-11g |
+| Proteína | 13-17g |
+| Beta-glucanos | 4-5g |
+| Hierro | 4.7mg |
+| Magnesio | 177mg |
+| Zinc | 4mg |
+
+### Beta-glucanos: el supernutriente de la avena
+
+Los **beta-glucanos** son un tipo de fibra soluble exclusiva de la avena con beneficios demostrados:
+
+- Ayudan a mantener niveles normales de colesterol
+- Contribuyen a la regulación del azúcar en sangre
+- Proporcionan saciedad prolongada
+
+La EFSA (Autoridad Europea de Seguridad Alimentaria) ha aprobado declaraciones de salud para los beta-glucanos de la avena.
+
+## Cómo usamos la avena en Poppy
+
+En Poppy utilizamos exclusivamente **avena certificada sin gluten** de proveedores con trazabilidad completa:
+
+- **Origen:** Cultivos dedicados sin rotación con cereales con gluten
+- **Procesado:** Molinos exclusivos para avena sin gluten
+- **Verificación:** Certificado de análisis en cada lote (<20 ppm)
+- **Almacenamiento:** Separación total de otros ingredientes
+
+Nuestro proceso garantiza que cada bolsa de granola Poppy es segura para personas con enfermedad celíaca.
+
+## Preguntas frecuentes sobre avena sin gluten
+
+### ¿La avena de Mercadona es sin gluten?
+
+Mercadona comercializa avena certificada sin gluten bajo su marca Hacendado. Busca específicamente los copos de avena con el símbolo de espiga barrada, no la avena convencional.
+
+### ¿Por qué la avena sin gluten es más cara?
+
+La avena certificada sin gluten cuesta más porque:
+- Requiere campos dedicados exclusivamente a avena
+- El procesado en líneas separadas es más costoso
+- Los análisis de cada lote añaden costes
+- La producción a menor escala reduce eficiencias
+
+### ¿La avena sin gluten sabe diferente?
+
+No, el sabor es idéntico. La diferencia está únicamente en el proceso de producción que evita la contaminación cruzada.
+
+### ¿Cuánta avena sin gluten puedo comer al día?
+
+La recomendación general para celíacos es **no superar 50-70g de avena sin gluten al día**. Una ración típica de granola (40-50g) está dentro de estos límites.
+
+### ¿Los niños celíacos pueden comer avena sin gluten?
+
+Sí, pero siguiendo las recomendaciones pediátricas: no antes del año de edad, tras al menos 6 meses de dieta sin gluten estricta, y siempre bajo supervisión médica.
+
+### ¿La avena sin gluten es apta para sensibilidad al gluten no celíaca?
+
+Generalmente sí. Las personas con SGNC suelen tolerar bien la avena certificada sin gluten, aunque cada caso es individual.
+
+### ¿Qué diferencia hay entre avena sin gluten y avena normal?
+
+Ninguna diferencia nutricional ni de sabor. La única diferencia es el proceso de producción que garantiza ausencia de contaminación cruzada con gluten.
+
+---
+
+## Fuentes y referencias
+
+- Federación de Asociaciones de Celíacos de España (FACE): [celiacos.org](https://celiacos.org)
+- Reglamento (UE) 828/2014 sobre información alimentaria
+- Sociedad Española de Enfermedad Celíaca (SEEC)
+- EFSA: Declaraciones de salud sobre beta-glucanos de avena
+
+*Última actualización: Febrero 2026*
+    `,
+    coverImage: '/images/blog/avena-sin-gluten.jpg',
+    category: 'nutricion',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-02-07',
+    readingTime: 9,
+    tags: ['avena', 'sin-gluten', 'celiacos', 'nutricion', 'certificacion', 'guia'],
+    metaTitle: 'Avena Sin Gluten: Guía Completa para Celíacos | Poppy',
+    metaDescription:
+      '¿La avena tiene gluten? Guía completa sobre avena certificada sin gluten para celíacos. Contaminación cruzada, certificaciones, beneficios y cómo elegir avena segura.',
+  },
+  {
+    id: 'post_desayuno_sin_gluten_semana',
+    slug: 'ideas-desayuno-sin-gluten-semana-completa',
+    title: 'Ideas de Desayuno Sin Gluten para Toda la Semana',
+    excerpt:
+      '7 ideas de desayunos sin gluten fáciles y nutritivos para cada día de la semana. Recetas rápidas, equilibradas y deliciosas para celíacos.',
+    content: `
+# Ideas de Desayuno Sin Gluten para Toda la Semana
+
+El desayuno es la comida más importante del día, pero para las personas con enfermedad celíaca o sensibilidad al gluten, encontrar opciones variadas, nutritivas y seguras puede ser un desafío diario. En esta guía te proponemos **7 desayunos sin gluten**, uno para cada día de la semana, con recetas fáciles y equilibradas.
+
+## ¿Qué necesita un desayuno sin gluten equilibrado?
+
+Según las guías nutricionales, un desayuno completo debe aportar aproximadamente el **20-25% de las calorías diarias** e incluir:
+
+| Macronutriente | Función | Fuentes sin gluten |
+|----------------|---------|-------------------|
+| **Carbohidratos complejos** | Energía sostenida | Avena sin gluten, pan sin gluten, frutas |
+| **Proteína** | Saciedad y músculos | Huevos, yogur, frutos secos, semillas |
+| **Grasas saludables** | Absorción de vitaminas | Frutos secos, aguacate, aceite de oliva |
+| **Fibra** | Digestión y saciedad | Frutas, verduras, cereales integrales sin gluten |
+
+## Lunes: Yogur con Granola y Fruta Fresca
+
+El clásico que nunca falla. Rápido, nutritivo y personalizable.
+
+**Ingredientes:**
+- 150g de yogur natural (griego para más proteína)
+- 40g de granola sin gluten Poppy
+- Fruta de temporada al gusto
+- 1 cucharada de semillas de chía (opcional)
+
+**Preparación:**
+1. Vierte el yogur en un bol
+2. Añade la fruta cortada
+3. Corona con la granola justo antes de comer
+4. Espolvorea semillas de chía
+
+**Valor nutricional aproximado:** 380 kcal | 15g proteína | 8g fibra
+
+**Tip:** Prepara la fruta cortada la noche anterior para ganar tiempo por la mañana.
+
+---
+
+## Martes: Tostadas con Aguacate y Huevo
+
+Un desayuno saciante con grasas saludables y proteína de alta calidad.
+
+**Ingredientes:**
+- 2 rebanadas de pan sin gluten (verificar certificación)
+- 1/2 aguacate maduro
+- 1-2 huevos
+- Sal en escamas, pimienta
+- Tomates cherry (opcional)
+
+**Preparación:**
+1. Tuesta el pan sin gluten
+2. Machaca el aguacate con un tenedor, añade sal y pimienta
+3. Prepara los huevos al gusto (escalfados, revueltos o a la plancha)
+4. Monta las tostadas con aguacate y huevo encima
+5. Añade tomates cherry cortados
+
+**Valor nutricional aproximado:** 420 kcal | 18g proteína | 25g grasas saludables
+
+**Tip:** Busca pan sin gluten con certificación espiga barrada. Muchos panes "sin gluten" de panadería convencional pueden tener contaminación cruzada.
+
+---
+
+## Miércoles: Smoothie Bowl Energético
+
+Perfecto para días de calor o cuando quieres algo fresco y ligero.
+
+**Ingredientes:**
+- 1 plátano congelado
+- 100g de frutos rojos congelados
+- 100ml de bebida vegetal sin gluten
+- 30g de granola sin gluten
+- Toppings: coco rallado, semillas, fruta fresca
+
+**Preparación:**
+1. Bate el plátano y los frutos rojos con la bebida vegetal
+2. La textura debe ser espesa, como un helado
+3. Vierte en un bol ancho
+4. Decora con granola, coco y fruta fresca
+
+**Valor nutricional aproximado:** 350 kcal | 8g proteína | 10g fibra
+
+**Tip:** Congela plátanos maduros cortados en rodajas. Son la base perfecta para smoothie bowls cremosos.
+
+---
+
+## Jueves: Tortitas de Avena Sin Gluten
+
+Un capricho saludable que lleva solo 15 minutos.
+
+**Ingredientes:**
+- 60g de copos de avena sin gluten
+- 1 huevo
+- 1 plátano maduro
+- 1/2 cucharadita de canela
+- Fruta y miel para servir
+
+**Preparación:**
+1. Tritura la avena hasta obtener harina gruesa
+2. Añade el huevo, el plátano machacado y la canela
+3. Mezcla bien hasta obtener una masa homogénea
+4. Cocina en sartén antiadherente a fuego medio (2-3 min por lado)
+5. Sirve con fruta fresca y un chorrito de miel
+
+**Valor nutricional aproximado:** 320 kcal | 12g proteína | 6g fibra
+
+**Tip:** Puedes preparar la masa la noche anterior y refrigerar. Por la mañana solo tendrás que cocinar.
+
+---
+
+## Viernes: Overnight Oats (Avena Nocturna)
+
+Prepáralo la noche anterior y ten el desayuno listo al despertar.
+
+**Ingredientes:**
+- 40g de copos de avena sin gluten
+- 100ml de leche o bebida vegetal
+- 50g de yogur natural
+- 1 cucharada de semillas de chía
+- Miel o sirope de agave al gusto
+- 30g de granola sin gluten (para el crunch)
+
+**Preparación (la noche anterior):**
+1. Mezcla avena, leche, yogur, chía y endulzante en un tarro
+2. Remueve bien y refrigera toda la noche
+
+**Por la mañana:**
+1. Añade fruta fresca
+2. Corona con granola justo antes de comer
+
+**Valor nutricional aproximado:** 380 kcal | 14g proteína | 9g fibra
+
+**Tip:** Prepara varios tarros el domingo para tener desayunos listos toda la semana. Solo añade la granola en el momento de comer para que mantenga el crujiente.
+
+---
+
+## Sábado: Huevos Revueltos con Verduras
+
+El sábado hay más tiempo. Un desayuno proteico y reconfortante.
+
+**Ingredientes:**
+- 2-3 huevos
+- Espinacas frescas
+- Champiñones
+- Tomate
+- Pan sin gluten tostado
+- Aceite de oliva virgen extra
+
+**Preparación:**
+1. Saltea las verduras en aceite de oliva
+2. Bate los huevos con sal y pimienta
+3. Añade los huevos a la sartén y cocina a fuego bajo removiendo
+4. Sirve con pan sin gluten tostado
+
+**Valor nutricional aproximado:** 380 kcal | 22g proteína | 4g fibra
+
+**Tip:** Los huevos revueltos perfectos se cocinan a fuego bajo, removiendo constantemente. Quedan cremosos, nunca secos.
+
+---
+
+## Domingo: Bowl Brunch Completo
+
+El domingo merece un desayuno especial con todos los grupos de alimentos.
+
+**Ingredientes:**
+- 150g de yogur griego
+- 40g de granola sin gluten
+- 1 huevo cocido
+- 1/2 aguacate
+- Fruta variada (fresas, arándanos, plátano)
+- Semillas de calabaza
+- Miel
+
+**Montaje:**
+Organiza todos los ingredientes en un bol grande, cada uno en su sección:
+1. Yogur en el centro
+2. Granola a un lado
+3. Huevo cortado
+4. Aguacate en láminas
+5. Frutas variadas
+6. Semillas por encima
+7. Chorrito de miel
+
+**Valor nutricional aproximado:** 520 kcal | 24g proteína | 12g fibra
+
+---
+
+## Consejos para desayunos sin gluten exitosos
+
+### 1. Planifica con antelación
+Dedica 15 minutos el domingo a planificar los desayunos de la semana. Compra los ingredientes necesarios y prepara lo que puedas por adelantado.
+
+### 2. Ten básicos siempre en casa
+- Avena certificada sin gluten
+- Granola sin gluten
+- Huevos
+- Frutas frescas y congeladas
+- Yogur natural
+- Frutos secos y semillas
+
+### 3. Verifica siempre las etiquetas
+Aunque un alimento parezca naturalmente sin gluten, verifica:
+- Que tenga certificación (espiga barrada, FACE)
+- Que no haya contaminación cruzada
+- Los ingredientes ocultos (almidones, espesantes)
+
+### 4. Cuidado con las bebidas vegetales
+No todas las bebidas vegetales son sin gluten. Algunas pueden contener avena convencional o aditivos con gluten. Busca específicamente las certificadas.
+
+### 5. Evita la contaminación en casa
+Si compartes cocina con personas que comen gluten:
+- Usa tostadora exclusiva para pan sin gluten
+- Mantén la mantequilla y mermelada separadas
+- Limpia bien las superficies antes de preparar
+
+## Preguntas frecuentes
+
+### ¿Los celíacos pueden desayunar cereales?
+
+Sí, pero deben ser cereales específicamente certificados sin gluten. Evita los cereales convencionales, incluso los que parecen no contener gluten, ya que suelen procesarse en líneas compartidas.
+
+### ¿El café tiene gluten?
+
+El café puro (en grano o molido) no contiene gluten. Sin embargo, algunas bebidas de café preparadas, cafés instantáneos aromatizados o sustitutos del café pueden contenerlo. Verifica siempre.
+
+### ¿Puedo desayunar fuera de casa siendo celíaco?
+
+Sí, pero con precauciones:
+- Elige establecimientos con certificación de FACE
+- Comunica tu condición claramente
+- Pregunta sobre protocolos de contaminación cruzada
+- En caso de duda, opta por opciones seguras (fruta, yogur natural)
+
+### ¿Cuántas calorías debe tener un desayuno sin gluten?
+
+Las mismas que cualquier desayuno equilibrado: entre 300-500 kcal dependiendo de tu actividad física y necesidades. Ser sin gluten no significa que deba ser más ligero.
+
+---
+
+**¿Cuál es tu desayuno sin gluten favorito?** Comparte tus ideas con nosotros en redes sociales.
+
+*Nota: Este artículo tiene fines informativos. Si tienes dudas sobre tu dieta sin gluten, consulta con tu médico o nutricionista especializado.*
+    `,
+    coverImage: '/images/blog/desayuno-sin-gluten-semana.jpg',
+    category: 'recetas',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-02-06',
+    readingTime: 10,
+    tags: ['desayuno', 'sin-gluten', 'recetas', 'celiacos', 'meal-prep', 'saludable'],
+    metaTitle: 'Ideas de Desayuno Sin Gluten: 7 Recetas para Toda la Semana | Poppy',
+    metaDescription:
+      '7 ideas de desayunos sin gluten fáciles y nutritivos para cada día de la semana. Recetas rápidas, equilibradas y deliciosas para celíacos. Incluye valores nutricionales.',
+  },
+  {
+    id: 'post_granola_sin_azucar',
+    slug: 'granola-sin-azucar-guia-diabeticos',
+    title: 'Granola Sin Azúcar: Guía para Diabéticos y Dietas Bajas en Azúcar',
+    excerpt:
+      '¿Cuánto azúcar tiene la granola? Guía completa sobre granola para diabéticos: índice glucémico, cómo leer etiquetas y alternativas saludables.',
+    content: `
+# Granola Sin Azúcar: Guía para Diabéticos y Dietas Bajas en Azúcar
+
+La granola tiene fama de ser un alimento saludable, pero muchas granolas comerciales contienen cantidades sorprendentes de azúcar. Si tienes diabetes, prediabetes o simplemente quieres reducir tu consumo de azúcar, esta guía te ayudará a elegir la granola adecuada.
+
+## ¿Cuánto azúcar tiene la granola comercial?
+
+La realidad puede sorprenderte. Analizamos las etiquetas de granolas de supermercado:
+
+| Tipo de granola | Azúcar por 100g | Azúcar por ración (50g) |
+|-----------------|-----------------|-------------------------|
+| Granola industrial típica | 20-25g | 10-12.5g |
+| Granola "fitness" | 15-20g | 7.5-10g |
+| Granola "sin azúcar añadido" | 12-18g | 6-9g |
+| Granola artesanal con miel | 12-14g | 6-7g |
+| Granola con dátiles (sin azúcar añadido) | 15-18g | 7.5-9g |
+
+**Según la OMS**, el consumo diario de azúcares libres no debería superar los **25g para adultos**. Una sola ración de granola industrial puede aportar el **40-50% de este límite**.
+
+## Azúcares añadidos vs azúcares naturales
+
+Es fundamental entender la diferencia:
+
+### Azúcares añadidos (a evitar)
+- Azúcar blanco o moreno
+- Jarabe de glucosa, fructosa o maíz
+- Maltodextrina
+- Dextrosa
+- Sirope de arroz
+
+### Azúcares naturales (con moderación)
+- Miel (IG: 45-64)
+- Dátiles (IG: 42)
+- Pasas y frutas deshidratadas
+- Sirope de agave (IG: 15-30)
+
+**Importante:** Aunque los azúcares naturales tienen mejor perfil nutricional, **siguen siendo azúcares** y afectan la glucemia. La diferencia está en que vienen acompañados de fibra, vitaminas y minerales que ralentizan su absorción.
+
+## Índice glucémico: la clave para diabéticos
+
+El **índice glucémico (IG)** mide la velocidad a la que un alimento eleva el azúcar en sangre:
+
+| IG | Clasificación | Efecto |
+|----|---------------|--------|
+| <55 | Bajo | Elevación lenta y gradual |
+| 55-70 | Medio | Elevación moderada |
+| >70 | Alto | Pico rápido de glucosa |
+
+### IG de componentes típicos de la granola
+
+| Ingrediente | IG aproximado |
+|-------------|---------------|
+| Avena | 55-58 |
+| Miel | 45-64 |
+| Dátiles | 42 |
+| Almendras | 15 |
+| Nueces | 15 |
+| Coco | 35 |
+| Pasas | 64 |
+
+**La buena noticia:** Una granola bien formulada con alta proporción de frutos secos (bajo IG) puede tener un **IG medio o bajo** a pesar de contener algo de azúcar.
+
+## Cómo leer etiquetas: lo que debes buscar
+
+### Paso 1: Mira la tabla nutricional
+- Busca "Azúcares" dentro de "Hidratos de carbono"
+- Compara siempre por 100g (no por ración, que puede variar)
+- Ideal: **menos de 15g de azúcar por 100g**
+
+### Paso 2: Lee la lista de ingredientes
+Los ingredientes van por orden de cantidad. Si el azúcar (o sus sinónimos) está entre los 3 primeros, busca otra opción.
+
+**Nombres ocultos del azúcar:**
+- Jarabe de glucosa-fructosa
+- Maltodextrina
+- Dextrosa
+- Concentrado de zumo de frutas
+- Sirope de arroz
+- Azúcar invertido
+
+### Paso 3: "Sin azúcar añadido" ≠ "Sin azúcar"
+Un producto "sin azúcar añadido" puede contener:
+- Azúcares naturales de las frutas deshidratadas
+- Miel (que es un azúcar natural pero añadido)
+
+Lee siempre la tabla nutricional, no solo los claims del frontal.
+
+## La granola en dietas para diabéticos tipo 2
+
+### ¿Pueden los diabéticos comer granola?
+
+**Sí, con las elecciones correctas y porciones controladas.** Según las guías de la Asociación Americana de Diabetes:
+
+1. **Controla la porción:** 30-40g máximo por ración
+2. **Combina con proteína:** Añade yogur griego o frutos secos extra
+3. **Vigila los picos:** Mide tu glucosa 2h después de comer para ver cómo te afecta
+4. **Elige granolas con:** Alto contenido en fibra, frutos secos, bajo IG
+
+### Granolas recomendadas para diabéticos
+
+Busca estas características:
+
+- [ ] Azúcar total < 15g/100g
+- [ ] Fibra > 7g/100g
+- [ ] Frutos secos > 20%
+- [ ] Sin jarabes ni azúcares refinados
+- [ ] Endulzada con miel, dátiles o agave (mejor perfil glucémico)
+
+## Nuestra granola de dátiles: dulzor sin azúcar añadido
+
+En Poppy desarrollamos una granola específicamente pensada para quienes buscan reducir azúcar:
+
+### Características
+- **Endulzante:** 100% dátiles Medjool (sin miel ni azúcar añadido)
+- **Azúcar total:** 18g/100g (todo procedente de los dátiles)
+- **Fibra:** 7g/100g
+- **Frutos secos:** 29% (almendras, nueces pecanas, anacardos)
+- **IG estimado:** Medio-bajo gracias a la alta proporción de frutos secos
+
+### Por qué dátiles
+
+Los dátiles Medjool aportan:
+- Dulzor natural intenso
+- Fibra que ralentiza la absorción
+- Potasio (696mg/100g)
+- Magnesio
+- Antioxidantes
+
+A diferencia del azúcar refinado, el dulzor de los dátiles viene "empaquetado" con nutrientes que moderan su impacto glucémico.
+
+## Recetas bajas en azúcar con granola
+
+### Desayuno proteico estabilizador
+
+**Ingredientes:**
+- 30g de granola de dátiles
+- 150g de yogur griego natural (sin azúcar)
+- 1 cucharada de semillas de chía
+- Frutos rojos frescos (bajo IG)
+
+**Por qué funciona:** La proteína del yogur y la fibra de las semillas ralentizan la absorción de azúcares.
+
+### Smoothie bowl equilibrado
+
+**Ingredientes:**
+- 1/2 aguacate
+- 100ml de bebida de almendras sin azúcar
+- Espinacas
+- 25g de granola sin azúcar
+
+**Por qué funciona:** Las grasas del aguacate y las verduras de hoja verde moderan el impacto glucémico.
+
+## Porciones recomendadas
+
+| Situación | Porción sugerida |
+|-----------|------------------|
+| Diabético tipo 2 controlado | 30-40g |
+| Prediabético | 40g |
+| Reducción de azúcar general | 40-50g |
+| Deportista | 50g |
+
+**Consejo:** Pesa tu granola las primeras veces. Es fácil servirse 80-100g sin darse cuenta, duplicando la ingesta de azúcar.
+
+## Preguntas frecuentes
+
+### ¿La granola "keto" es mejor para diabéticos?
+
+Las granolas keto suelen ser muy bajas en carbohidratos, lo que puede ser útil. Sin embargo, verifica que no contengan edulcorantes que te afecten individualmente. Muchas usan eritritol o stevia, que no elevan la glucosa pero pueden causar molestias digestivas en algunas personas.
+
+### ¿El índice glucémico de la miel es mejor que el del azúcar?
+
+La miel tiene un IG de 45-64 (varía según el tipo) frente al 65 del azúcar blanco. La diferencia es modesta, pero la miel aporta además enzimas, antioxidantes y nutrientes que el azúcar refinado no tiene.
+
+### ¿Puedo comer granola si tengo resistencia a la insulina?
+
+Sí, eligiendo versiones bajas en azúcar, controlando porciones y combinándola siempre con proteína y grasas saludables para moderar la respuesta glucémica.
+
+### ¿La granola sin gluten tiene más azúcar?
+
+No necesariamente. El contenido en azúcar depende de la receta, no de si tiene gluten o no. Verifica siempre la etiqueta nutricional independientemente del claim "sin gluten".
+
+---
+
+## Conclusión
+
+La granola puede formar parte de una dieta para diabéticos o baja en azúcar si eliges bien y controlas las porciones. Busca granolas con:
+
+- Menos de 15g de azúcar por 100g
+- Alta proporción de frutos secos y semillas
+- Endulzantes naturales (miel, dátiles) en lugar de jarabes
+- Sin azúcares ocultos en los ingredientes
+
+Y recuerda: la mejor forma de saber cómo te afecta un alimento es **medir tu glucosa** antes y 2 horas después de consumirlo.
+
+*Este artículo tiene fines informativos. Si tienes diabetes, consulta con tu médico o educador en diabetes antes de modificar tu dieta.*
+
+---
+
+**Fuentes:**
+- Asociación Americana de Diabetes (ADA)
+- Organización Mundial de la Salud: Directrices sobre azúcares
+- Fundación para la Diabetes Novo Nordisk
+- Tablas de Índice Glucémico - Universidad de Sydney
+    `,
+    coverImage: '/images/blog/granola-sin-azucar-diabeticos.jpg',
+    category: 'nutricion',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-02-05',
+    readingTime: 11,
+    tags: ['sin-azucar', 'diabetes', 'nutricion', 'salud', 'indice-glucemico', 'guia'],
+    metaTitle: 'Granola Sin Azúcar para Diabéticos: Guía Completa | Poppy',
+    metaDescription:
+      '¿Cuánto azúcar tiene la granola? Guía completa sobre granola para diabéticos: índice glucémico, cómo leer etiquetas, porciones recomendadas y alternativas saludables.',
+  },
+  {
+    id: 'post_sensibilidad_gluten',
+    slug: 'sensibilidad-gluten-no-celiaca-sintomas-dieta',
+    title: 'Sensibilidad al Gluten No Celíaca: Síntomas, Diagnóstico y Alimentación',
+    excerpt:
+      '¿Reaccionas al gluten pero no eres celíaco? Guía completa sobre la sensibilidad al gluten no celíaca (SGNC): síntomas, diagnóstico, diferencias con la celiaquía y dieta.',
+    content: `
+# Sensibilidad al Gluten No Celíaca: Guía Completa
+
+¿Experimentas síntomas digestivos o extradigestivos cuando comes gluten, pero las pruebas de celiaquía salen negativas? Podrías tener **sensibilidad al gluten no celíaca (SGNC)**, una condición reconocida médicamente que afecta a un porcentaje significativo de la población.
+
+## ¿Qué es la sensibilidad al gluten no celíaca?
+
+La **sensibilidad al gluten no celíaca (SGNC)**, también llamada intolerancia al gluten no celíaca, es una condición caracterizada por síntomas intestinales y extraintestinales relacionados con la ingesta de gluten, en personas en las que se ha descartado tanto la enfermedad celíaca como la alergia al trigo.
+
+### Definición médica
+
+Según el consenso de expertos de Salerno (2015), la SGNC se define como:
+
+> "Una entidad clínica inducida por la ingesta de gluten que provoca síntomas intestinales y/o extraintestinales, que mejoran cuando se elimina el gluten de la dieta, una vez excluidas la enfermedad celíaca y la alergia al trigo."
+
+### Prevalencia: más común de lo que crees
+
+| Condición | Prevalencia estimada |
+|-----------|---------------------|
+| Enfermedad celíaca | 1% de la población |
+| **Sensibilidad al gluten no celíaca** | **6-10% de la población** |
+| Alergia al trigo | 0.1-0.5% |
+
+Esto significa que **por cada celíaco diagnosticado, hay entre 6 y 10 personas con SGNC**. Es una condición mucho más frecuente de lo que se pensaba hace una década.
+
+## Diferencias entre celiaquía y sensibilidad al gluten
+
+| Característica | Enfermedad celíaca | SGNC |
+|----------------|-------------------|------|
+| **Causa** | Autoinmune | No autoinmune |
+| **Genética** | HLA-DQ2/DQ8 en 95% | Variable (50% tienen marcadores) |
+| **Anticuerpos** | Positivos (anti-tTG, anti-EMA) | Negativos |
+| **Daño intestinal** | Atrofia de vellosidades | Sin daño o mínimo |
+| **Riesgo de complicaciones** | Alto si no se trata | Bajo (sin complicaciones autoinmunes) |
+| **Necesidad de dieta estricta** | 100% sin gluten, de por vida | Puede tolerar trazas, intensidad variable |
+| **Diagnóstico** | Biopsia + serología | Por exclusión |
+
+### La diferencia fundamental
+
+En la **enfermedad celíaca**, el gluten desencadena una respuesta autoinmune que daña el intestino delgado. Este daño es visible en una biopsia y medible con anticuerpos en sangre.
+
+En la **SGNC**, el mecanismo es diferente: hay una respuesta inmune innata (no adaptativa), sin los marcadores ni el daño característicos de la celiaquía. Los síntomas son reales, pero el intestino no sufre el daño autoinmune.
+
+## Síntomas de la sensibilidad al gluten no celíaca
+
+Los síntomas de la SGNC son muy similares a los de la celiaquía y aparecen generalmente **horas o días después de consumir gluten**.
+
+### Síntomas digestivos (más frecuentes)
+
+- **Hinchazón abdominal** - El síntoma más común (87% de los casos)
+- **Dolor abdominal** - Difuso, tipo cólico
+- **Diarrea o estreñimiento** - O alternancia de ambos
+- **Náuseas**
+- **Gases excesivos**
+- **Reflujo gastroesofágico**
+
+### Síntomas extradigestivos
+
+- **Fatiga y cansancio** - Muy frecuente (64%)
+- **Cefalea o migraña** - En el 54% de los casos
+- **Niebla mental** - Dificultad para concentrarse
+- **Dolor articular y muscular**
+- **Hormigueo en extremidades**
+- **Erupciones cutáneas**
+- **Ansiedad o depresión**
+- **Anemia**
+
+### ¿Cuándo aparecen los síntomas?
+
+A diferencia de la alergia al trigo (reacción inmediata), los síntomas de SGNC suelen aparecer:
+
+- **Horas después:** Los más comunes (hinchazón, dolor)
+- **1-2 días después:** Síntomas extradigestivos
+- **Acumulativo:** Algunos pacientes toleran pequeñas cantidades, pero los síntomas aparecen con exposición repetida
+
+## Cómo se diagnostica la SGNC
+
+No existe una prueba específica para diagnosticar la SGNC. El diagnóstico se hace **por exclusión** siguiendo este protocolo:
+
+### Paso 1: Descartar enfermedad celíaca
+
+- Análisis de anticuerpos (anti-transglutaminasa IgA, anti-endomisio)
+- Biopsia intestinal si los anticuerpos son positivos
+- Estudio genético HLA-DQ2/DQ8 (opcional)
+
+**Importante:** Estas pruebas deben hacerse MIENTRAS se consume gluten. Si ya has eliminado el gluten, los resultados pueden ser falsos negativos.
+
+### Paso 2: Descartar alergia al trigo
+
+- Pruebas cutáneas (prick test)
+- IgE específica al trigo
+- Prueba de provocación oral (en entorno controlado)
+
+### Paso 3: Dieta de eliminación y reintroducción
+
+Una vez descartadas celiaquía y alergia:
+
+1. **Eliminar gluten durante 4-6 semanas**
+2. **Documentar la mejora de síntomas**
+3. **Reintroducir gluten de forma controlada**
+4. **Observar si reaparecen los síntomas**
+
+Si los síntomas desaparecen sin gluten y reaparecen al reintroducirlo, el diagnóstico de SGNC es probable.
+
+### El "doble ciego" ideal
+
+El estándar de oro sería una prueba de provocación doble ciego con placebo (el paciente no sabe si consume gluten o placebo). Sin embargo, en la práctica clínica habitual se usa el protocolo de eliminación-reintroducción abierto.
+
+## Tratamiento: dieta sin gluten (pero diferente a la celiaquía)
+
+### Diferencias con la dieta celíaca
+
+| Aspecto | Celíacos | SGNC |
+|---------|----------|------|
+| **Nivel de restricción** | Absoluto (<20 ppm) | Variable según tolerancia |
+| **Trazas** | Prohibidas | Muchos toleran pequeñas cantidades |
+| **Contaminación cruzada** | Crítica | Menos crítica |
+| **Duración** | De por vida | Puede reevaluarse periódicamente |
+| **Consecuencias de transgresión** | Daño intestinal | Síntomas, sin daño permanente |
+
+### ¿Es necesario eliminar el gluten completamente?
+
+La investigación actual sugiere que **no todos los pacientes con SGNC necesitan una dieta 100% estricta**. Muchos toleran:
+
+- Pequeñas cantidades ocasionales
+- Trazas por contaminación cruzada
+- Algunos tipos de cereales con gluten mejor que otros
+
+**La recomendación:** Empieza con una dieta sin gluten estricta durante 6 semanas. Una vez controlados los síntomas, puedes probar tu tolerancia individual introduciendo pequeñas cantidades.
+
+### La hipótesis de los FODMAPs
+
+Investigaciones recientes sugieren que algunos pacientes diagnosticados con SGNC podrían estar reaccionando a los **FODMAPs** (oligosacáridos fermentables) presentes en el trigo, no al gluten en sí.
+
+El trigo contiene fructanos, un tipo de FODMAP. Esto explicaría por qué algunos "sensibles al gluten" toleran:
+- Espelta (menor contenido en fructanos)
+- Pan de masa madre (los fructanos se degradan en la fermentación)
+- Pequeñas cantidades de trigo
+
+Si sospechas que tu problema son los FODMAPs más que el gluten, consulta con un dietista especializado en dieta baja en FODMAPs.
+
+## Alimentos seguros para SGNC
+
+### Cereales y pseudocereales sin gluten
+
+- Arroz
+- Maíz
+- Quinoa
+- Trigo sarraceno (no es trigo, a pesar del nombre)
+- Mijo
+- Amaranto
+- Teff
+- Avena sin gluten certificada
+
+### Otros alimentos naturalmente sin gluten
+
+- Carnes y pescados frescos
+- Huevos
+- Frutas y verduras
+- Legumbres
+- Frutos secos y semillas
+- Lácteos naturales
+- Aceites
+
+### Alimentos a evitar
+
+- Trigo, cebada, centeno y sus derivados
+- Pan, pasta, galletas convencionales
+- Cerveza (salvo sin gluten)
+- Rebozados y empanados
+- Salsas espesadas con harina
+- Productos procesados (verificar siempre etiquetas)
+
+## El papel de la avena en la SGNC
+
+A diferencia de los celíacos, las personas con SGNC **generalmente toleran bien la avena**, incluso la convencional. Sin embargo:
+
+- **Por precaución**, se recomienda empezar con avena certificada sin gluten
+- **Observa tu tolerancia** individual
+- **Algunos pacientes** reportan mejor tolerancia a la avena que a otros cereales con gluten
+
+En Poppy usamos avena certificada sin gluten, apta tanto para celíacos como para personas con SGNC.
+
+## Consejos prácticos para el día a día
+
+### 1. Documenta tus síntomas
+
+Lleva un diario de alimentación durante las primeras semanas:
+- Qué comes
+- Cuándo aparecen síntomas
+- Intensidad de los síntomas
+
+Esto te ayudará a identificar tu umbral de tolerancia.
+
+### 2. Lee las etiquetas
+
+Aunque la SGNC no requiere la misma estrictez que la celiaquía, es útil conocer qué alimentos contienen gluten para poder controlar tu ingesta.
+
+### 3. En restaurantes
+
+- Explica que tienes sensibilidad al gluten
+- No necesitas el mismo nivel de precaución que un celíaco
+- Evita platos con trigo como ingrediente principal
+- Las opciones "sin gluten" del menú serán seguras
+
+### 4. En viajes
+
+- Lleva snacks sin gluten por si acaso
+- Investiga opciones de restaurantes antes de viajar
+- La avena sin gluten en formato granola es ideal para viajes
+
+### 5. Reevalúa periódicamente
+
+A diferencia de la celiaquía (de por vida), algunos estudios sugieren que la SGNC puede ser temporal o fluctuante. Cada 1-2 años, bajo supervisión médica, puedes reevaluar tu tolerancia.
+
+## Preguntas frecuentes
+
+### ¿La SGNC puede convertirse en celiaquía?
+
+No. Son condiciones diferentes. La celiaquía es una enfermedad autoinmune con base genética que no "se desarrolla" a partir de la SGNC. Sin embargo, si tienes SGNC, es recomendable repetir las pruebas de celiaquía si los síntomas empeoran significativamente.
+
+### ¿Es real la sensibilidad al gluten o es "invención"?
+
+Es una condición reconocida por la comunidad científica desde 2011 (consenso de Oslo) y mejor definida en 2015 (consenso de Salerno). Hay evidencia de que provoca una respuesta inmune innata diferente a la celiaquía.
+
+### ¿Puedo diagnosticarme yo mismo?
+
+No es recomendable. Antes de eliminar el gluten, debes descartar celiaquía (que requiere gluten en la dieta para diagnosticarse). Una vez descartada, puedes hacer la dieta de eliminación-reintroducción, idealmente con seguimiento médico.
+
+### ¿Los niños pueden tener SGNC?
+
+Sí, aunque es más difícil de diagnosticar. Se debe descartar primero celiaquía (más común en niños) y realizar la eliminación-reintroducción con supervisión pediátrica.
+
+### ¿La SGNC tiene complicaciones a largo plazo?
+
+A diferencia de la celiaquía no tratada (que aumenta riesgo de osteoporosis, linfoma, etc.), la SGNC no se asocia con complicaciones graves a largo plazo. Los síntomas son molestos pero no hay daño intestinal permanente.
+
+---
+
+## Conclusión
+
+La sensibilidad al gluten no celíaca es una condición real que afecta a millones de personas. Aunque no es tan grave como la celiaquía, sus síntomas pueden impactar significativamente la calidad de vida.
+
+**Si sospechas que tienes SGNC:**
+
+1. No elimines el gluten antes de hacerte las pruebas de celiaquía
+2. Consulta con un gastroenterólogo
+3. Descarta celiaquía y alergia al trigo
+4. Haz una dieta de eliminación supervisada
+5. Encuentra tu nivel de tolerancia individual
+
+*Este artículo tiene fines informativos y no sustituye el consejo médico profesional. Si experimentas síntomas relacionados con el gluten, consulta con un especialista.*
+
+---
+
+**Fuentes:**
+- Consenso de Salerno sobre SGNC (2015)
+- Catassi et al. "Non-Celiac Gluten Sensitivity" - Gastroenterology 2015
+- Sociedad Española de Enfermedad Celíaca (SEEC)
+- Federación de Asociaciones de Celíacos de España (FACE)
+- World Gastroenterology Organisation (WGO)
+    `,
+    coverImage: '/images/blog/sensibilidad-gluten-no-celiaca.jpg',
+    category: 'nutricion',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-02-04',
+    readingTime: 14,
+    tags: ['sensibilidad-gluten', 'SGNC', 'intolerancia', 'nutricion', 'salud', 'guia'],
+    metaTitle: 'Sensibilidad al Gluten No Celíaca: Síntomas, Diagnóstico y Dieta | Poppy',
+    metaDescription:
+      '¿Reaccionas al gluten pero no eres celíaco? Guía completa sobre la sensibilidad al gluten no celíaca (SGNC): síntomas, diagnóstico por exclusión, diferencias con celiaquía y dieta.',
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
