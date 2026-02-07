@@ -15,6 +15,7 @@ import { PackPillSelector } from '@/components/ui/PackPillSelector';
 import { Collapsible } from '@/components/ui/Collapsible';
 import { StickyAddToCart } from '@/components/ui/StickyAddToCart';
 import { BundleBuilderModal } from '@/components/bundle';
+import { JsonLd, buildProductSchema, buildBreadcrumbSchema, SITE_URL } from '@/lib/seo';
 import toast from 'react-hot-toast';
 
 export default function ProductDetailPage() {
@@ -96,8 +97,18 @@ export default function ProductDetailPage() {
     .filter((p) => p.id !== product.id)
     .slice(0, 3);
 
+  // Structured data schemas
+  const productSchema = buildProductSchema(product, `/tienda/${product.slug}`);
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: 'Inicio', url: SITE_URL },
+    { name: 'Tienda', url: `${SITE_URL}/tienda` },
+    { name: product.name, url: `${SITE_URL}/tienda/${product.slug}` },
+  ]);
+
   return (
     <>
+      <JsonLd data={[productSchema, breadcrumbSchema]} />
+
       <div className="section-sm bg-cream-50">
         <div className="container-custom">
           {/* Breadcrumb */}

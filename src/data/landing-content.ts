@@ -18,10 +18,96 @@ export const sinGlutenContent = {
     ctaHref: '/tienda',
     secondaryCta: {
       text: 'Más información',
-      href: '#beneficios',
+      href: '#que-es',
     },
     badges: ['Apta celíacos', 'Envío gratis +4 uds'],
     image: '/images/hero-sin-gluten.jpeg',
+  },
+  intro: {
+    title: '¿Qué hace que nuestra granola sea sin gluten?',
+    description:
+      'No basta con decir "sin gluten". En Poppy, cada paso del proceso está diseñado para garantizar que nuestras granolas sean 100% seguras para personas con celiaquía o sensibilidad al gluten. Desde la selección de la avena hasta el empaquetado final, controlamos todo.',
+  },
+  whatIsGlutenFree: {
+    title: 'Granola Sin Gluten: Más que una etiqueta',
+    subtitle: 'Entendiendo qué significa realmente',
+    content: [
+      {
+        title: '¿Qué es el gluten?',
+        description:
+          'El gluten es una proteína presente en cereales como el trigo, la cebada y el centeno. Para personas con celiaquía, el gluten provoca una reacción autoinmune que daña el intestino delgado. Para quienes tienen sensibilidad al gluten no celíaca, puede causar malestar digestivo, fatiga y otros síntomas.',
+      },
+      {
+        title: 'El problema de la avena',
+        description:
+          'La avena naturalmente no contiene gluten, PERO suele cultivarse cerca de campos de trigo y procesarse en las mismas instalaciones. Esto causa contaminación cruzada. Por eso, no toda avena es apta para celíacos, solo la avena certificada sin gluten.',
+      },
+      {
+        title: 'Certificación sin gluten',
+        description:
+          'Un producto certificado sin gluten debe contener menos de 20 ppm (partes por millón) de gluten. Esto requiere cultivo controlado, instalaciones dedicadas y pruebas de laboratorio. La avena que usamos cumple estos estándares estrictos.',
+      },
+    ],
+  },
+  whoShouldEat: {
+    title: '¿Para quién es nuestra granola sin gluten?',
+    subtitle: 'Perfecta si te identificas con alguno de estos grupos',
+    groups: [
+      {
+        title: 'Personas con celiaquía',
+        description:
+          'Si tienes celiaquía diagnosticada, nuestra granola es 100% segura para ti. Usamos avena certificada y controlamos todo el proceso para evitar cualquier contaminación cruzada.',
+        icon: '🩺',
+      },
+      {
+        title: 'Sensibilidad al gluten no celíaca',
+        description:
+          'Aunque no tengas celiaquía, puedes experimentar síntomas como hinchazón, fatiga o malestar digestivo con el gluten. Nuestra granola te permite disfrutar de un desayuno delicioso sin estos problemas.',
+        icon: '🤝',
+      },
+      {
+        title: 'Familias con niños celíacos',
+        description:
+          'Criar a un niño celíaco es un desafío. Con Poppy, toda la familia puede disfrutar del mismo desayuno sin preocupaciones. Sin riesgo de confusiones o contaminación cruzada en casa.',
+        icon: '👨‍👩‍👧‍👦',
+      },
+      {
+        title: 'Deportistas y vida saludable',
+        description:
+          'Muchos deportistas adoptan dietas sin gluten para mejorar digestión y recuperación. Nuestra granola ofrece proteínas, fibra y energía de calidad sin el gluten.',
+        icon: '🏃',
+      },
+    ],
+  },
+  certification: {
+    title: 'Nuestro proceso de garantía sin gluten',
+    subtitle: 'Cómo aseguramos que cada bolsa sea segura',
+    steps: [
+      {
+        number: 1,
+        title: 'Avena certificada',
+        description:
+          'Compramos únicamente avena con certificación sin gluten de proveedores verificados. Esta avena se cultiva en campos dedicados y se procesa en instalaciones libres de trigo, cebada y centeno.',
+      },
+      {
+        number: 2,
+        title: 'Verificación de ingredientes',
+        description:
+          'Todos los demás ingredientes (frutos secos, miel, aceite de oliva, especias) provienen de proveedores que garantizan productos sin gluten. Pedimos documentación de cada lote.',
+      },
+      {
+        number: 3,
+        title: 'Producción controlada',
+        description:
+          'Elaboramos la granola en un espacio donde NO se manipulan productos con gluten. Limpiamos y desinfectamos todo el equipo antes de cada lote.',
+      },
+      {
+        number: 4,
+        title: 'Etiquetado transparente',
+        description:
+          'Cada bolsa incluye información clara de alérgenos. Si en el futuro añadimos un producto con gluten, lo indicaremos claramente y lo procesaremos en horarios separados.',
+      },
+    ],
   },
   benefits: {
     title: 'Por qué nuestra granola es apta para celíacos',
@@ -58,27 +144,52 @@ export const sinGlutenContent = {
     {
       question: '¿Puedo consumir esta granola si soy celíaco?',
       answer:
-        'Sí. Nuestra granola está elaborada con avena certificada sin gluten y seguimos un proceso de producción controlado. Todos nuestros productos son aptos para personas con celiaquía.',
+        'Sí, absolutamente. Nuestra granola está elaborada con avena certificada sin gluten y seguimos un proceso de producción controlado en instalaciones donde no se manipulan productos con gluten. Todos nuestros productos son 100% aptos para personas con celiaquía.',
     },
     {
       question: '¿Qué tipo de avena utilizan?',
       answer:
-        'Utilizamos avena certificada sin gluten. Esta avena se cultiva en campos dedicados y se procesa en instalaciones que evitan la contaminación cruzada con cereales que contienen gluten.',
+        'Utilizamos avena certificada sin gluten que cumple el estándar de menos de 20 ppm de gluten. Esta avena se cultiva en campos dedicados y se procesa en instalaciones que evitan la contaminación cruzada con trigo, cebada o centeno.',
     },
     {
       question: '¿Cómo es el proceso de elaboración?',
       answer:
-        'Elaboramos nuestra granola en pequeños lotes, controlando cada paso del proceso. Seleccionamos cuidadosamente todos los ingredientes para asegurar que sean aptos para dietas sin gluten.',
+        'Elaboramos nuestra granola en pequeños lotes artesanales en Málaga, controlando cada paso del proceso. Seleccionamos cuidadosamente todos los ingredientes para asegurar que sean aptos para dietas sin gluten. Cada lote se tuesta lentamente a baja temperatura.',
     },
     {
       question: '¿Contiene trazas de otros alérgenos?',
       answer:
-        'Nuestra granola contiene frutos secos (almendras, avellanas, nueces pecanas, anacardos según la variedad). Consulta la información de cada producto para conocer los alérgenos específicos.',
+        'Nuestra granola contiene frutos secos (almendras, avellanas, nueces pecanas, anacardos según el sabor). Siempre verifica la información específica de cada producto. Si tienes alergia a frutos secos, lamentablemente nuestros productos actuales no son aptos.',
     },
     {
-      question: '¿Tienen alguna certificación oficial?',
+      question: '¿Tienen alguna certificación oficial sin gluten?',
       answer:
-        'Elaboramos nuestra granola cumpliendo los criterios para productos aptos para celíacos, utilizando avena certificada sin gluten y un proceso de producción controlado.',
+        'Elaboramos nuestra granola cumpliendo los criterios para productos aptos para celíacos establecidos por el Reglamento (UE) 828/2014, utilizando avena certificada sin gluten (<20 ppm) y un proceso de producción controlado.',
+    },
+    {
+      question: '¿La avena sin gluten es realmente segura para celíacos?',
+      answer:
+        'Sí, siempre que sea avena certificada sin gluten. La avena pura no contiene gluten, pero la avena normal suele contaminarse durante cultivo y procesamiento. La avena certificada se cultiva en campos dedicados y se procesa en instalaciones separadas, garantizando menos de 20 ppm de gluten.',
+    },
+    {
+      question: '¿Puedo comer granola Poppy si tengo sensibilidad al gluten no celíaca?',
+      answer:
+        'Sí, nuestra granola es perfecta para personas con sensibilidad al gluten no celíaca (SGNC). Al estar libre de gluten, no experimentarás los síntomas digestivos o de malestar asociados con el consumo de gluten.',
+    },
+    {
+      question: '¿Dónde puedo comprar granola sin gluten Poppy?',
+      answer:
+        'Vendemos exclusivamente online en poppy.es. Esto nos permite controlar la calidad y frescura de cada envío. Hacemos envíos a toda España, y es gratis a partir de 4 bolsas. Tu pedido llega en 3-5 días laborables.',
+    },
+    {
+      question: '¿Cuánto dura la granola sin gluten una vez abierta?',
+      answer:
+        'Una vez abierta, la granola se conserva perfectamente durante 3-4 semanas en un recipiente hermético a temperatura ambiente. Para mantener el crujiente, asegúrate de cerrar bien el envase después de cada uso y evita humedad.',
+    },
+    {
+      question: '¿Es más cara la granola sin gluten que la normal?',
+      answer:
+        'La granola sin gluten suele tener un coste ligeramente superior porque la avena certificada es más cara de producir (requiere campos dedicados y procesos especiales). En Poppy, nuestro precio (7.65-9€/250g) es competitivo considerando que es artesanal, con ingredientes premium y proceso controlado.',
     },
   ],
   cta: {
@@ -718,6 +829,283 @@ export const carrefourContent = {
     description:
       'Envío gratis desde 4 bolsas. Hecho en Málaga, directo a tu mesa.',
     ctaText: 'Comprar granola Poppy',
+    ctaHref: '/tienda',
+    secondaryCta: {
+      text: 'Ver todos los sabores',
+      href: '/tienda',
+    },
+  },
+};
+
+// ==========================================
+// /como-hacer-granola-sin-gluten
+// ==========================================
+
+export const recetaGranolaContent = {
+  hero: {
+    title: 'Cómo Hacer Granola Sin Gluten',
+    highlight: 'Receta Casera Paso a Paso',
+    subtitle:
+      'Aprende a preparar granola sin gluten en casa con esta receta detallada. Perfecta para celíacos, fácil de personalizar y más económica que comprarla.',
+    ctaText: 'Comprar granola Poppy',
+    ctaHref: '/tienda',
+    secondaryCta: {
+      text: 'Ver ingredientes',
+      href: '#ingredientes',
+    },
+    badges: ['Receta fácil', 'Apta celíacos', '45 min total'],
+    image: '/images/hero-sin-gluten.jpeg',
+  },
+  intro: {
+    title: '¿Por qué hacer granola sin gluten en casa?',
+    description:
+      'Hacer tu propia granola sin gluten es más fácil de lo que crees. Controlas los ingredientes, evitas contaminación cruzada y ahorras dinero. Esta receta rinde aproximadamente 500g de granola crujiente y deliciosa.',
+    features: [
+      '✓ Control total de ingredientes',
+      '✓ Sin contaminación cruzada',
+      '✓ Más económica que comprar',
+      '✓ Personalizable a tu gusto',
+    ],
+  },
+  ingredients: {
+    title: 'Ingredientes para Granola Sin Gluten (500g)',
+    subtitle: 'Lo que necesitas para tu receta',
+    base: {
+      title: 'Base (avena y cereales)',
+      items: [
+        '300g de copos de avena certificada sin gluten',
+        '50g de quinoa inflada (opcional, sin gluten)',
+        '30g de arroz inflado (opcional, sin gluten)',
+      ],
+    },
+    frutoSecos: {
+      title: 'Frutos secos y semillas',
+      items: [
+        '80g de almendras fileteadas o troceadas',
+        '40g de nueces pecanas o nueces normales troceadas',
+        '30g de semillas de girasol',
+        '20g de semillas de calabaza',
+        '10g de semillas de chía o lino',
+      ],
+    },
+    endulzante: {
+      title: 'Endulzante y grasa',
+      items: [
+        '80-100ml de miel (o sirope de arce/agave)',
+        '60ml de aceite de oliva virgen extra o aceite de coco',
+        '1 cucharadita de extracto de vainilla',
+        '1/2 cucharadita de canela molida',
+        'Pizca de sal marina',
+      ],
+    },
+    extras: {
+      title: 'Extras (después de hornear)',
+      items: [
+        '50g de arándanos rojos secos',
+        '50g de coco rallado (opcional)',
+        '30g de chips de chocolate negro sin gluten (opcional)',
+      ],
+    },
+  },
+  instructions: {
+    title: 'Paso a Paso: Cómo Hacer Granola Sin Gluten',
+    subtitle: 'Sigue estos pasos para una granola perfecta',
+    steps: [
+      {
+        number: 1,
+        title: 'Precalienta el horno',
+        description:
+          'Precalienta tu horno a 150°C (300°F) con calor arriba y abajo. Prepara una bandeja de horno grande forrada con papel de hornear.',
+        time: '5 min',
+      },
+      {
+        number: 2,
+        title: 'Mezcla los ingredientes secos',
+        description:
+          'En un bol grande, mezcla la avena, quinoa inflada, arroz inflado, todos los frutos secos, semillas, canela y sal. Remueve bien para distribuir todos los ingredientes uniformemente.',
+        time: '5 min',
+      },
+      {
+        number: 3,
+        title: 'Prepara el líquido endulzante',
+        description:
+          'En un cazo pequeño a fuego bajo, calienta ligeramente la miel y el aceite hasta que se vuelvan más líquidos (no hirviendo). Retira del fuego y añade el extracto de vainilla.',
+        time: '3 min',
+      },
+      {
+        number: 4,
+        title: 'Combina todo',
+        description:
+          'Vierte la mezcla líquida sobre los ingredientes secos. Mezcla muy bien con una cuchara de madera o espátula hasta que todos los ingredientes estén bien cubiertos y ligeramente húmedos.',
+        time: '3 min',
+      },
+      {
+        number: 5,
+        title: 'Extiende en la bandeja',
+        description:
+          'Extiende la mezcla en la bandeja de horno forrada, distribuyéndola uniformemente en una capa fina. No la amontones demasiado para que tueste uniformemente.',
+        time: '2 min',
+      },
+      {
+        number: 6,
+        title: 'Hornea',
+        description:
+          'Hornea durante 25-30 minutos, removiendo cada 10 minutos para que se dore uniformemente. La granola estará lista cuando esté dorada y crujiente. Recuerda que se endurecerá más al enfriarse.',
+        time: '25-30 min',
+      },
+      {
+        number: 7,
+        title: 'Enfría completamente',
+        description:
+          'Saca la bandeja del horno y déjala enfriar completamente sobre una rejilla (unos 30 minutos). NO remuevas mientras está caliente o se desmigará. Al enfriarse formará grupos crujientes.',
+        time: '30 min',
+      },
+      {
+        number: 8,
+        title: 'Añade extras y almacena',
+        description:
+          'Una vez fría, mezcla con los arándanos secos, coco rallado y chips de chocolate si los usas. Guarda en un tarro hermético. Se conserva hasta 3-4 semanas a temperatura ambiente.',
+        time: '5 min',
+      },
+    ],
+    totalTime: '45 min activos + 30 min enfriado',
+    yield: '500g (aprox. 10 raciones de 50g)',
+  },
+  tips: {
+    title: 'Consejos para una Granola Sin Gluten Perfecta',
+    subtitle: 'Trucos de experto',
+    items: [
+      {
+        title: 'Usa avena certificada sin gluten',
+        description:
+          'CRÍTICO: Asegúrate de que tu avena tenga el símbolo de espiga barrada. La avena regular puede tener trazas de trigo. Marcas como Santiveri, Prozis o Quaker Sin Gluten son seguras.',
+      },
+      {
+        title: 'Evita contaminación cruzada',
+        description:
+          'Usa utensilios, boles y bandejas limpias que no hayan estado en contacto con gluten. Verifica que todos los ingredientes (frutos secos, semillas) sean de paquetes sin gluten certificados.',
+      },
+      {
+        title: 'No remuevas al salir del horno',
+        description:
+          'La granola está blanda cuando sale del horno, pero se endurecerá al enfriarse. Si la remueves caliente, quedará suelta y no formará grupos crujientes.',
+      },
+      {
+        title: 'Personaliza a tu gusto',
+        description:
+          'Cambia los frutos secos según tu preferencia (anacardos, avellanas, pistachos). Ajusta el dulzor según tu gusto (menos miel = menos dulce). Añade cacao puro para versión chocolate.',
+      },
+      {
+        title: 'Temperatura baja es clave',
+        description:
+          'Hornear a 150°C (no más) permite que se tueste lentamente sin quemarse. Si tu horno calienta mucho, baja a 140°C y hornea un poco más tiempo.',
+      },
+      {
+        title: 'Almacenamiento correcto',
+        description:
+          'Guarda en tarro de cristal hermético en lugar fresco y seco. Evita humedad o perderá el crujiente. Dura hasta 1 mes, aunque probablemente la termines antes.',
+      },
+    ],
+  },
+  benefits: {
+    title: '¿Por qué hacer tu granola en lugar de comprarla?',
+    subtitle: 'Ventajas caseras',
+    items: [
+      {
+        title: 'Control de ingredientes',
+        description:
+          'Sabes exactamente qué lleva. Sin aditivos, conservantes ni azúcares añadidos innecesarios. Perfecto si tienes alergias o intolerancias múltiples.',
+      },
+      {
+        title: 'Más económica',
+        description:
+          'Esta receta cuesta aprox. 8-10€ en ingredientes y obtienes 500g de granola premium. Equivalente a 2 bolsas de granola artesanal.',
+      },
+      {
+        title: 'Sin contaminación cruzada',
+        description:
+          'Al hacerla en tu cocina, controlas el proceso 100%. Ideal si eres muy sensible al gluten o tienes celiaquía severa.',
+      },
+      {
+        title: 'Personalización total',
+        description:
+          'Ajusta dulzor, añade tus frutos secos favoritos, haz versión chocolate, sin azúcar, con superalimentos... Las posibilidades son infinitas.',
+      },
+    ],
+  },
+  comparison: {
+    title: 'Granola Casera vs Comprada',
+    subtitle: 'La comparativa honesta',
+    items: [
+      {
+        feature: 'Coste',
+        casera: '8-10€ / 500g',
+        comprada: '15-18€ / 500g (artesanal)',
+      },
+      {
+        feature: 'Tiempo',
+        casera: '45 min + enfriado',
+        comprada: '5 min (añadir al carrito)',
+      },
+      {
+        feature: 'Control ingredientes',
+        casera: '100% control',
+        comprada: 'Lees la etiqueta',
+      },
+      {
+        feature: 'Frescura',
+        casera: 'Recién hecha',
+        comprada: 'Depende de stock',
+      },
+      {
+        feature: 'Consistencia',
+        casera: 'Varía según horneado',
+        comprada: 'Siempre igual',
+      },
+      {
+        feature: 'Conveniencia',
+        casera: 'Requiere tiempo',
+        comprada: 'Llega a tu puerta',
+      },
+    ],
+  },
+  faqs: [
+    {
+      question: '¿Puedo usar avena normal en lugar de avena sin gluten?',
+      answer:
+        'NO. Si eres celíaco o sensible al gluten, debes usar SIEMPRE avena certificada sin gluten. La avena normal suele procesarse en instalaciones con trigo y puede tener contaminación cruzada. Busca el símbolo de espiga barrada.',
+    },
+    {
+      question: '¿Qué hago si mi granola no queda crujiente?',
+      answer:
+        'Probablemente no la horneaste suficiente tiempo o la removiste cuando estaba caliente. Debe estar bien dorada y DEBE enfriarse completamente sin tocar. Si aún así queda blanda, vuelve a meterla al horno 10 minutos más.',
+    },
+    {
+      question: '¿Puedo sustituir la miel por otro endulzante?',
+      answer:
+        'Sí. Usa sirope de arce, sirope de agave, o incluso dátiles triturados con un poco de agua. Para versión sin azúcar, usa eritritol líquido o stevia líquida (aunque el sabor cambia).',
+    },
+    {
+      question: '¿Se puede hacer granola sin frutos secos por alergias?',
+      answer:
+        'Sí. Sustituye los frutos secos por más semillas (girasol, calabaza, sésamo), coco en láminas, o simplemente aumenta la cantidad de avena y cereales inflados.',
+    },
+    {
+      question: '¿Cuánto dura la granola casera?',
+      answer:
+        'En un tarro hermético a temperatura ambiente: 3-4 semanas. En la nevera: hasta 2 meses. En el congelador: hasta 6 meses. Siempre que esté bien sellada para que no pierda el crujiente.',
+    },
+    {
+      question: '¿Por qué comprar granola Poppy si puedo hacerla en casa?',
+      answer:
+        'Hacer granola casera es genial si tienes tiempo. Poppy es para cuando valoras la conveniencia: ingredientes premium seleccionados, proceso artesanal perfeccionado, y llega lista a tu puerta. Muchos clientes hacen ambas: casera para consumo diario, Poppy para regalar o caprichos especiales.',
+    },
+  ],
+  cta: {
+    title: '¿Prefieres la versión artesanal lista para comer?',
+    description:
+      'Si no tienes tiempo para hacer granola casera, prueba nuestras recetas artesanales. Hecha con los mejores ingredientes y el mismo amor que le pondrías tú.',
+    ctaText: 'Comprar granola artesanal Poppy',
     ctaHref: '/tienda',
     secondaryCta: {
       text: 'Ver todos los sabores',

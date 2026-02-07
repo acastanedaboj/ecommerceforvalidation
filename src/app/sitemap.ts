@@ -101,6 +101,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
+    // Recipe/Guide pages
+    {
+      url: `${SITE_URL}/como-hacer-granola-sin-gluten`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
     // Legal pages
     {
       url: `${SITE_URL}/legal/aviso-legal`,
