@@ -17,19 +17,24 @@ export function useCookieConsent() {
 
   useEffect(() => {
     setMounted(true);
+    console.log('[Cookie] Hook mounted, showBanner:', showBanner);
     // Load consent from localStorage
     const stored = localStorage.getItem(CONSENT_KEY);
+    console.log('[Cookie] localStorage:', stored);
     if (stored) {
       try {
         const parsed = JSON.parse(stored);
         setConsent(parsed);
         setShowBanner(false);
+        console.log('[Cookie] Found consent, hiding');
       } catch (e) {
         console.error('Error parsing cookie consent:', e);
         setShowBanner(true);
+        console.log('[Cookie] Parse error, showing');
       }
     } else {
       setShowBanner(true);
+      console.log('[Cookie] No consent, SHOWING BANNER');
     }
   }, []);
 

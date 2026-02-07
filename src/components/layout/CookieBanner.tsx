@@ -15,7 +15,11 @@ export function CookieBanner() {
     marketing: false,
   });
 
-  if (!showBanner) return null;
+  // Debug logging
+  console.log('CookieBanner render:', { mounted, showBanner });
+
+  // Don't render on server or if banner shouldn't show
+  if (!mounted || !showBanner) return null;
 
   const handleSavePreferences = () => {
     savePreferences(preferences);
