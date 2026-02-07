@@ -120,9 +120,9 @@ Perfecta para el desayuno, como topping de yogur o simplemente para picar entre 
     isActive: true,
     categoryId: 'cat_granola',
     tags: ['sin-gluten', 'ecologico', 'artesanal', 'cacao', 'chocolate', 'con-miel'],
-    metaTitle: 'Granola de Chocolate 250g | Sin Gluten | Poppy',
+    metaTitle: 'Granola de Chocolate 150g | Sin Gluten | Poppy',
     metaDescription:
-      'Granola Poppy de chocolate con cacao puro 250g. Sin gluten, endulzada con miel ecológica. Envío gratis +4 bolsas.',
+      'Granola Poppy de chocolate con cacao puro 150g. Sin gluten, endulzada con miel ecológica. Envío gratis +4 bolsas.',
     hasHoney: true,
     isVegan: false,
   },

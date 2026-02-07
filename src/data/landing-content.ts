@@ -189,7 +189,7 @@ export const sinGlutenContent = {
     {
       question: '¿Es más cara la granola sin gluten que la normal?',
       answer:
-        'La granola sin gluten suele tener un coste ligeramente superior porque la avena certificada es más cara de producir (requiere campos dedicados y procesos especiales). En Poppy, nuestro precio (7.65-9€/250g) es competitivo considerando que es artesanal, con ingredientes premium y proceso controlado.',
+        'La granola sin gluten suele tener un coste ligeramente superior porque la avena certificada es más cara de producir (requiere campos dedicados y procesos especiales). En Poppy, nuestro precio (7€/150g) es competitivo considerando que es artesanal, con ingredientes premium y proceso controlado.',
     },
   ],
   cta: {
@@ -216,7 +216,7 @@ export const veganaContent = {
     subtitle:
       'Endulzada naturalmente con dátiles Medjool y sirope de agave ecológico. Todo el sabor, 0% productos de origen animal.',
     ctaText: 'Comprar ahora',
-    ctaHref: '/tienda/granola-datiles-250g',
+    ctaHref: '/tienda/granola-datiles-150g',
     badges: ['100% Vegana', 'Sin gluten', 'Ecológica'],
     image: '/products/granola-datiles.jpg',
   },
@@ -290,7 +290,7 @@ export const veganaContent = {
     description:
       'Prueba nuestra Granola de Dátiles: todo el sabor artesanal de Poppy, sin ningún producto de origen animal.',
     ctaText: 'Comprar Granola de Dátiles',
-    ctaHref: '/tienda/granola-datiles-250g',
+    ctaHref: '/tienda/granola-datiles-150g',
     secondaryCta: {
       text: 'Ver todas las granolas',
       href: '/tienda',
@@ -583,7 +583,7 @@ export const mercadonaContent = {
       },
       {
         feature: 'Precio',
-        poppy: '7.65-9€ / 250g',
+        poppy: '7€ / 150g',
         mercadona: '4-6€ / 375-500g',
       },
       {
@@ -741,7 +741,7 @@ export const carrefourContent = {
       },
       {
         feature: 'Precio aprox.',
-        poppy: '7.65-9€ / 250g',
+        poppy: '7€ / 150g',
         carrefour: '5-8€ / 300-500g',
       },
     ],

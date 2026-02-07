@@ -2,7 +2,7 @@
  * Pricing Logic for Poppy
  *
  * Business Rules:
- * - Base price: 9.00€ per 250g bag
+ * - Base price: 7.00€ per 150g bag
  * - Pack 3: 3% discount per unit (8.70€/unit)
  * - Pack 4: 5% discount per unit (8.55€/unit) + free shipping
  * - Pack 6: 10% discount per unit (8.10€/unit) + free shipping

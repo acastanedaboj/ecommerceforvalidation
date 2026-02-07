@@ -170,7 +170,7 @@ export default function PreventaPage() {
           </h1>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
             Forma parte de nuestra campaña de validación. Reserva tu granola ahora y
-            recíbela directamente de nuestras manos. Solo 9€ por bolsa de 250g.
+            recíbela directamente de nuestras manos. Solo 7€ por bolsa de 150g.
           </p>
         </div>
 

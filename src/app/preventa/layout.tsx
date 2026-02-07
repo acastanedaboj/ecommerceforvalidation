@@ -4,7 +4,7 @@ import { getCanonicalUrl } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Preventa Especial - Granola Artesanal | Poppy',
   description:
-    'Sé de los primeros en probar nuestra granola artesanal. Preventa especial con entrega en mano. Solo 9€ por bolsa de 250g.',
+    'Sé de los primeros en probar nuestra granola artesanal. Preventa especial con entrega en mano. Solo 7€ por bolsa de 150g.',
   alternates: {
     canonical: getCanonicalUrl('/preventa'),
   },

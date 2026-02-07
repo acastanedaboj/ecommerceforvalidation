@@ -1077,8 +1077,8 @@ Nuestra etiqueta:
 
 ## ¿Por qué la diferencia de precio?
 
-Una granola industrial de supermercado cuesta 3-4€/250g.
-Una granola artesanal como Poppy cuesta 9€/250g.
+Una granola industrial de supermercado cuesta 3-4€/300g.
+Una granola artesanal como Poppy cuesta 7€/150g.
 
 ¿Dónde está la diferencia?
 

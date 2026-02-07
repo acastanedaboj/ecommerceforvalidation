@@ -251,7 +251,7 @@ export function BundleBuilder({
                   <p className="font-medium text-stone-800 truncate">
                     {flavor.productName.replace(/^Granola de /i, '')}
                   </p>
-                  <p className="text-sm text-stone-500">250g</p>
+                  <p className="text-sm text-stone-500">150g</p>
                 </div>
 
                 {/* Quantity controls */}

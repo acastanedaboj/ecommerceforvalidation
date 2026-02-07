@@ -55,7 +55,7 @@ export default function SuscripcionPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/tienda/granola-clasica-250g"
+                href="/tienda/granola-clasica-150g"
                 className="btn bg-[#ffffec] text-primary-700 hover:bg-[#ffffec]/90 btn-lg"
               >
                 Empezar suscripción
@@ -276,7 +276,7 @@ export default function SuscripcionPage() {
               <div className="space-y-3 mb-6">
                 <div className="flex justify-between">
                   <span className="text-neutral-600">Pack mensual</span>
-                  <span className="font-medium">6 bolsas de 250g</span>
+                  <span className="font-medium">6 bolsas de 150g</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-neutral-600">Precio por unidad</span>
@@ -294,7 +294,7 @@ export default function SuscripcionPage() {
                 </div>
               </div>
               <Link
-                href="/tienda/granola-clasica-250g"
+                href="/tienda/granola-clasica-150g"
                 className="btn-primary w-full justify-center"
               >
                 Empezar ahora

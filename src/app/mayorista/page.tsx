@@ -181,7 +181,7 @@ export default function MayoristaPage() {
               <div className="bg-neutral-50 rounded-xl p-6">
                 <div className="flex items-start justify-between mb-4">
                   <div>
-                    <h3 className="text-neutral-900">Granola 250g (retail)</h3>
+                    <h3 className="text-neutral-900">Granola 150g (retail)</h3>
                     <p className="text-sm text-neutral-500">Varios sabores</p>
                   </div>
                   <span className="badge-secondary">Tiendas</span>
