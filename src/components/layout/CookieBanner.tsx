@@ -7,7 +7,7 @@ import { X, Cookie, Settings } from 'lucide-react';
 import Link from 'next/link';
 
 export function CookieBanner() {
-  const { showBanner, acceptAll, rejectAll, savePreferences } = useCookieConsent();
+  const { showBanner, mounted, acceptAll, rejectAll, savePreferences } = useCookieConsent();
   const [showSettings, setShowSettings] = useState(false);
   const [preferences, setPreferences] = useState<CookieConsent>({
     necessary: true,

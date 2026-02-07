@@ -13,8 +13,10 @@ const CONSENT_KEY = 'poppy-cookie-consent';
 export function useCookieConsent() {
   const [consent, setConsent] = useState<CookieConsent | null>(null);
   const [showBanner, setShowBanner] = useState(false);
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
+    setMounted(true);
     // Load consent from localStorage
     const stored = localStorage.getItem(CONSENT_KEY);
     if (stored) {
@@ -82,6 +84,7 @@ export function useCookieConsent() {
   return {
     consent,
     showBanner,
+    mounted,
     acceptAll,
     rejectAll,
     savePreferences,
