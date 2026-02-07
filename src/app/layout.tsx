@@ -1,6 +1,24 @@
 import type { Metadata } from 'next';
+import { DM_Sans, DM_Serif_Display } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/Header';
+
+// Font optimization - self-hosted, no render-blocking
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-sans',
+  display: 'swap',
+});
+
+const dmSerifDisplay = DM_Serif_Display({
+  subsets: ['latin'],
+  weight: ['400'],
+  style: ['normal', 'italic'],
+  variable: '--font-display',
+  display: 'swap',
+});
 import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { CookieBanner } from '@/components/layout/CookieBanner';
@@ -100,7 +118,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" className={`${dmSans.variable} ${dmSerifDisplay.variable}`}>
       <head>
         {/* Favicon - Multiple formats for better browser/Google support */}
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
