@@ -1113,3 +1113,523 @@ export const recetaGranolaContent = {
     },
   },
 };
+
+// ==========================================
+// /guia-celiaquia-dieta-sin-gluten
+// Guía completa optimizada para AI Citations
+// ==========================================
+
+export const guiaCeliaquiaContent = {
+  hero: {
+    title: 'Guía Completa de Celiaquía',
+    highlight: 'y Dieta Sin Gluten',
+    subtitle:
+      'Todo lo que necesitas saber sobre la enfermedad celíaca: síntomas, diagnóstico, tratamiento y cómo llevar una vida sin gluten de forma segura y saludable.',
+    ctaText: 'Ver granolas sin gluten',
+    ctaHref: '/tienda',
+    secondaryCta: {
+      text: 'Ir a síntomas',
+      href: '#sintomas',
+    },
+    badges: ['Guía actualizada 2026', 'Fuentes oficiales', 'Para celíacos y familiares'],
+    image: '/images/hero-sin-gluten.jpeg',
+  },
+  intro: {
+    title: '¿Por qué esta guía?',
+    description:
+      'Hemos creado esta guía porque sabemos lo difícil que es recibir un diagnóstico de celiaquía. La información contradictoria, los mitos y la falta de recursos claros hacen que el proceso sea abrumador. Aquí encontrarás información basada en evidencia científica y fuentes oficiales como FACE (Federación de Asociaciones de Celíacos de España) y la normativa europea.',
+    stats: [
+      { value: '1%', label: 'de la población mundial tiene celiaquía' },
+      { value: '500.000', label: 'celíacos estimados en España' },
+      { value: '75%', label: 'de celíacos no están diagnosticados' },
+      { value: '20 ppm', label: 'límite legal para "sin gluten" en la UE' },
+    ],
+  },
+  queEsCeliaquia: {
+    title: '¿Qué es la celiaquía?',
+    subtitle: 'Definición, causas y mecanismo',
+    content: [
+      {
+        title: 'Definición médica',
+        text: 'La enfermedad celíaca es una patología autoinmune crónica del intestino delgado causada por la ingestión de gluten en personas genéticamente predispuestas. Cuando una persona celíaca consume gluten, su sistema inmunitario ataca por error las vellosidades del intestino delgado, impidiendo la correcta absorción de nutrientes.',
+        source: 'Federación de Asociaciones de Celíacos de España (FACE)',
+      },
+      {
+        title: '¿Qué es el gluten?',
+        text: 'El gluten es un conjunto de proteínas (gliadinas y gluteninas) presentes en cereales como el trigo, la cebada, el centeno y sus derivados (espelta, kamut, triticale). La avena, aunque naturalmente no contiene gluten, suele estar contaminada por procesarse junto a estos cereales.',
+        source: 'Codex Alimentarius - FAO/OMS',
+      },
+      {
+        title: 'Factor genético',
+        text: 'La celiaquía tiene una base genética fuerte. El 95% de los celíacos son portadores de los genes HLA-DQ2 o HLA-DQ8. Sin embargo, portar estos genes no significa desarrollar la enfermedad: el 30-40% de la población general los tiene, pero solo el 1% desarrolla celiaquía. Se necesita un "desencadenante" ambiental.',
+        source: 'Sociedad Española de Enfermedad Celíaca (SEEC)',
+      },
+      {
+        title: 'No es alergia ni intolerancia',
+        text: 'Es importante diferenciar: la celiaquía es una ENFERMEDAD AUTOINMUNE, no una alergia al trigo (reacción IgE) ni una intolerancia al gluten (sensibilidad no celíaca). El mecanismo, diagnóstico y tratamiento son diferentes. La celiaquía causa daño intestinal objetivable; la sensibilidad no celíaca causa síntomas sin daño detectable.',
+        source: 'World Gastroenterology Organisation (WGO)',
+      },
+    ],
+  },
+  sintomas: {
+    title: 'Síntomas de la celiaquía',
+    subtitle: 'Cómo se manifiesta la enfermedad',
+    intro:
+      'Los síntomas de la celiaquía varían enormemente de persona a persona. Algunos celíacos tienen síntomas digestivos severos, mientras que otros tienen síntomas extradigestivos o incluso son asintomáticos (celiaquía silente). Esta variabilidad dificulta el diagnóstico.',
+    digestivos: {
+      title: 'Síntomas digestivos (clásicos)',
+      items: [
+        'Diarrea crónica o intermitente',
+        'Distensión abdominal (hinchazón)',
+        'Dolor abdominal recurrente',
+        'Náuseas y vómitos',
+        'Estreñimiento (menos común, pero posible)',
+        'Gases excesivos',
+        'Pérdida de peso inexplicada',
+        'Heces grasas, malolientes o flotantes (esteatorrea)',
+      ],
+    },
+    extradigestivos: {
+      title: 'Síntomas extradigestivos',
+      items: [
+        'Anemia ferropénica que no responde a suplementos',
+        'Fatiga crónica y debilidad',
+        'Dermatitis herpetiforme (erupción cutánea con ampollas)',
+        'Aftas bucales recurrentes',
+        'Dolores articulares y musculares',
+        'Osteoporosis o osteopenia prematura',
+        'Alteraciones del esmalte dental',
+        'Infertilidad inexplicada o abortos recurrentes',
+        'Neuropatía periférica (hormigueo en extremidades)',
+        'Depresión, ansiedad o irritabilidad',
+        'Retraso del crecimiento en niños',
+      ],
+    },
+    ninos: {
+      title: 'Síntomas en niños',
+      items: [
+        'Retraso del crecimiento (peso y talla)',
+        'Irritabilidad y cambios de humor',
+        'Diarrea crónica con heces abundantes',
+        'Distensión abdominal marcada',
+        'Pérdida de masa muscular (nalgas aplanadas)',
+        'Anemia',
+        'Retraso en la pubertad',
+      ],
+    },
+    importante:
+      'IMPORTANTE: Muchos celíacos son diagnosticados en la edad adulta después de años con síntomas vagos o atribuidos a otras causas. Si tienes síntomas crónicos sin explicación, especialmente combinados, consulta sobre celiaquía.',
+  },
+  diagnostico: {
+    title: 'Diagnóstico de la celiaquía',
+    subtitle: 'Cómo se detecta la enfermedad',
+    intro:
+      'El diagnóstico de celiaquía requiere un proceso específico. NUNCA elimines el gluten de tu dieta antes de hacerte las pruebas, ya que esto puede dar resultados falsos negativos.',
+    pasos: [
+      {
+        numero: 1,
+        titulo: 'Análisis de sangre (serología)',
+        descripcion:
+          'Se miden anticuerpos específicos: anti-transglutaminasa tisular IgA (anti-tTG IgA) y anticuerpos antiendomisio (EMA). También se mide la IgA total para descartar déficit de IgA (presente en 2-3% de celíacos), que daría falsos negativos.',
+        nota: 'Sensibilidad: 95-98%. Es la primera prueba de cribado.',
+      },
+      {
+        numero: 2,
+        titulo: 'Estudio genético (HLA)',
+        descripcion:
+          'Detecta la presencia de genes HLA-DQ2 y HLA-DQ8. El 95% de celíacos tiene DQ2 y casi todos los demás tienen DQ8. Un resultado negativo prácticamente descarta la celiaquía. Un resultado positivo NO confirma la enfermedad, solo indica predisposición.',
+        nota: 'Útil para descartar celiaquía en familiares de primer grado.',
+      },
+      {
+        numero: 3,
+        titulo: 'Biopsia intestinal',
+        descripcion:
+          'Se realiza mediante endoscopia digestiva alta. Se toman muestras del duodeno para evaluar el daño en las vellosidades intestinales. Se clasifica según la escala de Marsh (0-3). Es la prueba definitiva para confirmar el diagnóstico en adultos.',
+        nota: 'En niños con síntomas claros y anticuerpos muy elevados (>10x), puede omitirse según guías ESPGHAN.',
+      },
+      {
+        numero: 4,
+        titulo: 'Respuesta a la dieta sin gluten',
+        descripcion:
+          'Tras el diagnóstico, se inicia dieta sin gluten estricta. La mejoría clínica y la normalización de anticuerpos confirman el diagnóstico. Las vellosidades intestinales pueden tardar 6-24 meses en recuperarse completamente.',
+        nota: 'Si no hay mejoría, revisar posible contaminación cruzada o diagnóstico alternativo.',
+      },
+    ],
+    advertencia:
+      '⚠️ ADVERTENCIA: No inicies una dieta sin gluten por tu cuenta antes del diagnóstico. Si ya has eliminado el gluten, deberás reintroducirlo durante al menos 6-8 semanas (consumiendo gluten diariamente) antes de las pruebas. Consulta siempre con tu médico.',
+  },
+  tratamiento: {
+    title: 'Tratamiento de la celiaquía',
+    subtitle: 'La dieta sin gluten estricta de por vida',
+    intro:
+      'Actualmente, el ÚNICO tratamiento efectivo para la celiaquía es una dieta sin gluten estricta y de por vida. No existen medicamentos que curen la enfermedad ni que permitan consumir gluten de forma segura.',
+    principios: [
+      {
+        titulo: 'Eliminación total del gluten',
+        descripcion:
+          'Debes eliminar completamente el trigo, cebada, centeno y sus derivados de tu dieta. Esto incluye alimentos obvios (pan, pasta, galletas) y ocultos (salsas, embutidos, medicamentos).',
+      },
+      {
+        titulo: 'Evitar contaminación cruzada',
+        descripcion:
+          'Incluso cantidades mínimas de gluten pueden causar daño intestinal. Usa utensilios separados, tostadoras exclusivas, y cuidado con superficies compartidas.',
+      },
+      {
+        titulo: 'Leer siempre las etiquetas',
+        descripcion:
+          'Los ingredientes pueden cambiar. Lee las etiquetas cada vez que compres, incluso productos que ya conoces. Busca la mención "sin gluten" o el símbolo de la espiga barrada.',
+      },
+      {
+        titulo: 'Seguimiento médico regular',
+        descripcion:
+          'Controles periódicos con analíticas para verificar anticuerpos y niveles nutricionales. El gastroenterólogo debe supervisar tu evolución.',
+      },
+    ],
+    beneficios: {
+      titulo: 'Beneficios de seguir la dieta correctamente',
+      items: [
+        'Desaparición de síntomas en semanas/meses',
+        'Recuperación de las vellosidades intestinales',
+        'Normalización de la absorción de nutrientes',
+        'Reducción del riesgo de complicaciones (osteoporosis, linfoma)',
+        'Mejora de la calidad de vida',
+        'Recuperación del peso y crecimiento normal en niños',
+      ],
+    },
+    consecuencias: {
+      titulo: 'Consecuencias de NO seguir la dieta',
+      items: [
+        'Daño intestinal persistente y malabsorción',
+        'Anemia crónica y déficits nutricionales',
+        'Osteoporosis y riesgo de fracturas',
+        'Mayor riesgo de linfoma intestinal',
+        'Problemas de fertilidad',
+        'Otras enfermedades autoinmunes asociadas',
+      ],
+    },
+  },
+  alimentosPermitidos: {
+    title: 'Alimentos permitidos y prohibidos',
+    subtitle: 'Qué puedes comer y qué debes evitar',
+    permitidos: {
+      titulo: 'Alimentos SIEMPRE seguros (naturalmente sin gluten)',
+      categorias: [
+        {
+          nombre: 'Cereales y pseudocereales',
+          items: [
+            'Arroz (todos los tipos)',
+            'Maíz y derivados (polenta, harina de maíz)',
+            'Quinoa',
+            'Mijo',
+            'Sorgo',
+            'Trigo sarraceno (alforfón) - a pesar del nombre, NO es trigo',
+            'Amaranto',
+            'Teff',
+            'Avena certificada sin gluten (con precaución)',
+          ],
+        },
+        {
+          nombre: 'Proteínas',
+          items: [
+            'Carnes frescas (ternera, cerdo, pollo, cordero)',
+            'Pescados y mariscos frescos',
+            'Huevos',
+            'Legumbres (lentejas, garbanzos, alubias, soja)',
+            'Tofu y tempeh (verificar etiqueta)',
+          ],
+        },
+        {
+          nombre: 'Lácteos',
+          items: [
+            'Leche',
+            'Yogur natural (sin añadidos)',
+            'Quesos curados (verificar etiqueta en frescos)',
+            'Mantequilla',
+            'Nata',
+          ],
+        },
+        {
+          nombre: 'Frutas y verduras',
+          items: [
+            'Todas las frutas frescas',
+            'Todas las verduras y hortalizas frescas',
+            'Frutas desecadas (pasas, dátiles, orejones) - verificar',
+            'Frutos secos naturales (sin procesar)',
+          ],
+        },
+        {
+          nombre: 'Otros',
+          items: [
+            'Aceites (oliva, girasol, coco)',
+            'Vinagre de vino, manzana (NO de malta)',
+            'Miel pura',
+            'Azúcar',
+            'Sal',
+            'Especias puras (sin mezclas)',
+            'Café e infusiones naturales',
+          ],
+        },
+      ],
+    },
+    prohibidos: {
+      titulo: 'Alimentos SIEMPRE prohibidos (contienen gluten)',
+      items: [
+        'Trigo y todas sus variedades (espelta, kamut, escanda, bulgur, cuscús, sémola)',
+        'Cebada y malta de cebada',
+        'Centeno',
+        'Triticale (híbrido de trigo y centeno)',
+        'Pan, pasta, galletas, bollería convencionales',
+        'Cerveza (excepto las certificadas sin gluten)',
+        'Rebozados y empanados',
+        'Seitán (es gluten puro de trigo)',
+      ],
+    },
+    peligrosos: {
+      titulo: 'Alimentos que PUEDEN contener gluten (verificar siempre)',
+      items: [
+        'Embutidos y fiambres (pueden usar almidón de trigo)',
+        'Salsas comerciales (soja, ketchup, mayonesas)',
+        'Sopas y caldos preparados',
+        'Patés y untables',
+        'Caramelos y golosinas',
+        'Helados (algunos sabores)',
+        'Medicamentos y suplementos',
+        'Comida preparada y precocinados',
+        'Frutos secos fritos o con sabores',
+        'Productos "sin azúcar" (pueden usar almidón)',
+      ],
+    },
+  },
+  etiquetado: {
+    title: 'Cómo leer etiquetas: Normativa europea',
+    subtitle: 'Entendiendo la legislación de la UE',
+    intro:
+      'El Reglamento (UE) 828/2014 establece las normas sobre etiquetado de alimentos sin gluten en Europa. Conocer esta normativa te ayudará a comprar con seguridad.',
+    categorias: [
+      {
+        etiqueta: '"Sin gluten"',
+        limite: 'Máximo 20 ppm (partes por millón) de gluten',
+        significado:
+          'Producto apto para celíacos. Este es el límite de seguridad establecido por el Codex Alimentarius y adoptado por la UE. La mayoría de celíacos toleran este nivel sin daño intestinal.',
+        color: 'green',
+      },
+      {
+        etiqueta: '"Muy bajo en gluten"',
+        limite: 'Entre 21 y 100 ppm de gluten',
+        significado:
+          'Solo para productos elaborados a partir de trigo, cebada o centeno especialmente procesados. NO es apto para todos los celíacos, solo para aquellos que toleran pequeñas cantidades.',
+        color: 'yellow',
+      },
+      {
+        etiqueta: 'Sin mención',
+        limite: 'Puede contener cualquier cantidad',
+        significado:
+          'Si el producto no indica "sin gluten" y contiene cereales o derivados, asume que NO es seguro. Los 14 alérgenos principales (incluido el gluten) deben declararse obligatoriamente.',
+        color: 'red',
+      },
+    ],
+    simbolos: {
+      titulo: 'Símbolos a buscar',
+      items: [
+        {
+          nombre: 'Espiga barrada (FACE/AOECS)',
+          descripcion:
+            'El símbolo más reconocido. Una espiga de trigo tachada dentro de un círculo. Indica que el producto ha sido analizado y certificado por asociaciones de celíacos.',
+        },
+        {
+          nombre: 'Certificación FACE',
+          descripcion:
+            'En España, el sello de la Federación de Asociaciones de Celíacos de España garantiza que el producto cumple los estándares y ha sido verificado.',
+        },
+        {
+          nombre: '"Gluten Free" internacional',
+          descripcion:
+            'En productos importados, busca "Gluten Free", "Sans Gluten" (francés), "Senza Glutine" (italiano), "Glutenfrei" (alemán).',
+        },
+      ],
+    },
+    alergenos:
+      'OBLIGACIÓN LEGAL: Según el Reglamento (UE) 1169/2011, el gluten (trigo, cebada, centeno, avena) debe declararse SIEMPRE en la lista de ingredientes, destacado en negrita o mayúsculas. Si no aparece en ingredientes, el producto es naturalmente libre de gluten (pero puede haber contaminación cruzada).',
+  },
+  contaminacionCruzada: {
+    title: 'Contaminación cruzada',
+    subtitle: 'El enemigo invisible del celíaco',
+    intro:
+      'La contaminación cruzada ocurre cuando un alimento sin gluten entra en contacto con gluten. Aunque la cantidad sea mínima, puede ser suficiente para dañar el intestino de un celíaco.',
+    enCasa: {
+      titulo: 'Evitar contaminación en casa',
+      items: [
+        'Usa una tostadora exclusiva para pan sin gluten',
+        'Ten utensilios separados o lávalos muy bien antes de usar',
+        'Usa tablas de cortar diferentes o exclusivas',
+        'Almacena los productos sin gluten en estantes superiores (evita que caigan migas)',
+        'Cuidado con mantequilla, mermelada y untables compartidos (usa cucharas limpias)',
+        'Limpia bien las superficies antes de preparar comida sin gluten',
+        'El aceite de freír no debe haberse usado para rebozados con gluten',
+        'Coladores, escurridores y agua de cocción NO deben compartirse',
+      ],
+    },
+    fueraDeCasa: {
+      titulo: 'Comer fuera de casa',
+      items: [
+        'Avisa siempre de tu condición de celíaco, no solo de "dieta sin gluten"',
+        'Pregunta por el proceso de preparación, no solo los ingredientes',
+        'Evita buffets donde los cubiertos se comparten entre platos',
+        'Las freidoras compartidas son un riesgo (croquetas, rebozados)',
+        'Cuidado con las salsas y aliños (pueden contener harina)',
+        'Las pizzerías sin gluten deben tener horno o zona separada',
+        'En caso de duda, mejor no consumir',
+      ],
+    },
+    cantidadSegura:
+      'NO EXISTE una cantidad "segura" de gluten para un celíaco. Incluso cantidades de 10-50 mg diarios pueden causar daño intestinal en algunas personas. Una miga de pan contiene aproximadamente 30-40 mg de gluten.',
+  },
+  avena: {
+    title: 'La avena y la celiaquía',
+    subtitle: 'Un caso especial que requiere atención',
+    intro:
+      'La avena es un cereal único en el contexto de la celiaquía. Aunque no contiene las proteínas del gluten (gliadina), su proteína (avenina) puede ser problemática para algunos celíacos.',
+    puntos: [
+      {
+        titulo: '¿La avena tiene gluten?',
+        descripcion:
+          'La avena pura NO contiene gliadina (la proteína del trigo). Contiene avenina, una proteína similar pero que la mayoría de celíacos (>95%) tolera sin problemas.',
+      },
+      {
+        titulo: 'El problema de la contaminación',
+        descripcion:
+          'El 99% de la avena comercial está contaminada con trigo porque se cultiva en campos cercanos, se cosecha con la misma maquinaria, y se procesa en las mismas instalaciones. Esta avena NO es segura para celíacos.',
+      },
+      {
+        titulo: 'Avena certificada sin gluten',
+        descripcion:
+          'Existe avena cultivada en campos dedicados y procesada en instalaciones libres de trigo. Esta avena se analiza para garantizar menos de 20 ppm de gluten. Busca siempre la certificación y el símbolo de espiga barrada.',
+      },
+      {
+        titulo: 'Recomendaciones oficiales',
+        descripcion:
+          'FACE recomienda que los celíacos recién diagnosticados esperen 1-2 años con intestino recuperado antes de introducir avena certificada. Debe hacerse gradualmente y bajo supervisión médica.',
+      },
+    ],
+    advertencia:
+      'Un pequeño porcentaje de celíacos (estimado 1-5%) también reacciona a la avenina de la avena pura. Si tras consumir avena certificada sin gluten experimentas síntomas, consulta con tu médico.',
+  },
+  vivirSinGluten: {
+    title: 'Vivir sin gluten: Guía práctica',
+    subtitle: 'Consejos para el día a día',
+    consejos: [
+      {
+        titulo: 'Organiza tu cocina',
+        descripcion:
+          'Dedica un espacio exclusivo para productos sin gluten. Etiqueta claramente los alimentos. Si vives con personas que comen gluten, establece normas claras de separación.',
+      },
+      {
+        titulo: 'Planifica tus comidas',
+        descripcion:
+          'Cocinar en casa es la forma más segura de controlar tu alimentación. Planifica menús semanales y ten siempre opciones sin gluten disponibles.',
+      },
+      {
+        titulo: 'Lleva siempre algo de emergencia',
+        descripcion:
+          'Ten snacks sin gluten en el bolso, coche o trabajo. Barritas, frutos secos, o galletas sin gluten te salvarán cuando no encuentres opciones seguras.',
+      },
+      {
+        titulo: 'Únete a asociaciones',
+        descripcion:
+          'FACE y las asociaciones locales ofrecen información actualizada, listas de productos y restaurantes seguros, y apoyo emocional. No estás solo.',
+      },
+      {
+        titulo: 'Comunica tu condición',
+        descripcion:
+          'Informa a familiares, amigos, compañeros de trabajo y personal escolar (si tienes hijos celíacos). La celiaquía no es una "frescura", es una enfermedad seria.',
+      },
+      {
+        titulo: 'Viaja preparado',
+        descripcion:
+          'Investiga opciones sin gluten en tu destino. Lleva tarjetas en el idioma local explicando la celiaquía. Considera alojamientos con cocina para mayor control.',
+      },
+    ],
+    apps: {
+      titulo: 'Apps útiles para celíacos',
+      items: [
+        'FACEMOVIL (FACE) - Lista de productos y establecimientos en España',
+        'Yuka - Escanea productos y detecta alérgenos',
+        'Find Me Gluten Free - Restaurantes sin gluten',
+        'Gluten Free Scanner - Escáner de códigos de barras',
+      ],
+    },
+  },
+  faqs: [
+    {
+      question: '¿Qué es exactamente la celiaquía?',
+      answer:
+        'La celiaquía es una enfermedad autoinmune del intestino delgado causada por el consumo de gluten en personas genéticamente predispuestas. Cuando un celíaco ingiere gluten, su sistema inmunitario ataca las vellosidades intestinales, causando inflamación y malabsorción de nutrientes. Afecta aproximadamente al 1% de la población mundial.',
+    },
+    {
+      question: '¿La celiaquía es lo mismo que la intolerancia al gluten?',
+      answer:
+        'No. La celiaquía es una enfermedad AUTOINMUNE que causa daño intestinal objetivable. La sensibilidad al gluten no celíaca (SGNC) causa síntomas similares pero sin daño intestinal detectable ni marcadores en sangre. La alergia al trigo es una reacción IgE diferente. Los tres requieren dieta sin gluten, pero el mecanismo y gravedad son distintos.',
+    },
+    {
+      question: '¿Cuánto gluten puede consumir un celíaco?',
+      answer:
+        'Idealmente, CERO. El límite legal para etiquetar un producto como "sin gluten" es 20 ppm (partes por millón), que se considera seguro para la mayoría. Pero no existe una "cantidad segura" universal. Estudios sugieren que ingestas de 10-50 mg/día pueden causar daño. Una rebanada de pan normal contiene unos 4.000 mg de gluten.',
+    },
+    {
+      question: '¿Puedo comer avena si soy celíaco?',
+      answer:
+        'Solo avena CERTIFICADA SIN GLUTEN. La avena pura no contiene gluten (gliadina), pero el 99% de la avena comercial está contaminada con trigo. La avena certificada se cultiva y procesa sin contacto con cereales con gluten. Se recomienda introducirla después de 1-2 años de dieta sin gluten, gradualmente y supervisada por tu médico.',
+    },
+    {
+      question: '¿Cómo sé si un producto es sin gluten?',
+      answer:
+        'Busca la mención "sin gluten" en la etiqueta o el símbolo de la espiga barrada. Por ley (Reglamento UE 828/2014), esto garantiza menos de 20 ppm de gluten. Lee siempre los ingredientes: el gluten debe destacarse obligatoriamente. Si no hay mención y contiene cereales, no es seguro.',
+    },
+    {
+      question: '¿Qué pasa si un celíaco come gluten accidentalmente?',
+      answer:
+        'Los síntomas varían: algunos experimentan dolor abdominal, diarrea o náuseas en horas; otros no notan nada. La ausencia de síntomas NO significa que no haya daño. El intestino puede tardar semanas en recuperarse de una exposición. Mantén la calma, bebe agua, descansa y continúa con tu dieta estricta. Si los síntomas son severos, consulta a tu médico.',
+    },
+    {
+      question: '¿La celiaquía se cura?',
+      answer:
+        'No. La celiaquía es una condición crónica de por vida. Con una dieta sin gluten estricta, el intestino se recupera y los síntomas desaparecen, pero la predisposición genética permanece. Si vuelves a consumir gluten, el daño intestinal regresará. Actualmente no existe medicamento ni vacuna que cure la celiaquía.',
+    },
+    {
+      question: '¿Qué es la contaminación cruzada?',
+      answer:
+        'Es cuando un alimento sin gluten entra en contacto con gluten durante su producción, almacenamiento o preparación. Puede ocurrir por usar los mismos utensilios, superficies, aceites de fritura, o almacenar productos juntos. Incluso migas invisibles pueden causar daño. Por eso es fundamental separar utensilios y ser meticuloso en la cocina.',
+    },
+    {
+      question: '¿Mis hijos tienen riesgo de ser celíacos?',
+      answer:
+        'Sí, la celiaquía tiene un fuerte componente genético. Los familiares de primer grado (hijos, hermanos, padres) tienen un riesgo del 10-15% de desarrollar la enfermedad, frente al 1% de la población general. Se recomienda realizar analíticas periódicas a familiares directos, incluso sin síntomas, especialmente en la infancia.',
+    },
+    {
+      question: '¿Dónde puedo comprar productos sin gluten en España?',
+      answer:
+        'Hoy en día, la mayoría de supermercados tienen sección sin gluten. Mercadona, Carrefour, Lidl y otros ofrecen opciones. También existen tiendas especializadas online y físicas. Las asociaciones de celíacos (FACE) publican listados actualizados de productos certificados. Para granola sin gluten artesanal, en Poppy elaboramos con avena certificada y proceso controlado.',
+    },
+    {
+      question: '¿Es más cara la dieta sin gluten?',
+      answer:
+        'Sí, los productos específicos sin gluten suelen ser más caros que sus equivalentes con gluten (entre un 30% y 200% más, según estudios). Sin embargo, una dieta basada en alimentos naturalmente sin gluten (carnes, pescados, verduras, frutas, arroz, legumbres) no es más cara. El sobrecoste viene de los productos procesados específicos.',
+    },
+    {
+      question: '¿Puedo comer en restaurantes siendo celíaco?',
+      answer:
+        'Sí, pero con precauciones. Elige restaurantes que ofrezcan menú sin gluten o que conozcan la celiaquía. Avisa SIEMPRE de tu condición (no solo pidas "sin gluten"). Pregunta por la preparación, no solo los ingredientes. Evita buffets y freidoras compartidas. Apps como FACEMOVIL listan establecimientos verificados.',
+    },
+  ],
+  cta: {
+    title: '¿Buscas una granola segura para celíacos?',
+    description:
+      'En Poppy elaboramos granola artesanal con avena certificada sin gluten (<20 ppm) y un proceso de producción controlado. Todos nuestros sabores son aptos para celíacos. Envío gratis desde 4 unidades.',
+    ctaText: 'Ver granolas sin gluten',
+    ctaHref: '/tienda',
+    secondaryCta: {
+      text: 'Conoce nuestro proceso',
+      href: '/granola-sin-gluten',
+    },
+  },
+};

@@ -108,6 +108,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
+    {
+      url: `${SITE_URL}/guia-celiaquia-dieta-sin-gluten`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
     // Legal pages
     {
       url: `${SITE_URL}/legal/aviso-legal`,
