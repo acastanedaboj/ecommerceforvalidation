@@ -2,6 +2,7 @@
  * Order Confirmation Email Template
  *
  * Sent when a payment is completed successfully.
+ * Tone: Cercano, cuidado del bienestar, healthy, premium
  */
 
 import { emailLayout, formatCurrency, formatDate } from './base';
@@ -67,13 +68,14 @@ export function orderConfirmationEmail(data: OrderConfirmationData): { subject: 
     .join('');
 
   const content = `
-    <h1>Pedido confirmado</h1>
+    <h1>¡Tu granola está en camino, ${firstName}!</h1>
 
     <p>
-      Hola ${firstName}, gracias por tu pedido. Hemos recibido tu compra y la estamos preparando con mucho cariño.
+      Gracias por elegirnos para cuidarte. Tu pedido ya está confirmado y en estos momentos
+      estamos preparándolo con todo el mimo que merece.
     </p>
 
-    <div class="card">
+    <div class="card" style="background-color: #FFFEF8;">
       <table width="100%" cellpadding="0" cellspacing="0" style="font-size: 14px;">
         <tr>
           <td><strong>Pedido:</strong></td>
@@ -84,13 +86,13 @@ export function orderConfirmationEmail(data: OrderConfirmationData): { subject: 
           <td style="text-align: right;">${formatDate(orderDate)}</td>
         </tr>
         <tr>
-          <td><strong>Entrega estimada:</strong></td>
-          <td style="text-align: right;">${estimatedDelivery}</td>
+          <td><strong>Llegada estimada:</strong></td>
+          <td style="text-align: right;"><strong style="color: #6D4D45;">${estimatedDelivery}</strong></td>
         </tr>
       </table>
     </div>
 
-    <h2>Resumen del pedido</h2>
+    <h2>Lo que hemos preparado para ti</h2>
 
     <table width="100%" cellpadding="0" cellspacing="0">
       ${itemsHtml}
@@ -102,7 +104,7 @@ export function orderConfirmationEmail(data: OrderConfirmationData): { subject: 
         discountCents > 0
           ? `
       <tr>
-        <td style="padding: 8px 0; color: #7D9160;">Descuento</td>
+        <td style="padding: 8px 0; color: #7D9160;">Tu descuento</td>
         <td style="padding: 8px 0; text-align: right; color: #7D9160;">-${formatCurrency(discountCents)}</td>
       </tr>
       `
@@ -110,7 +112,7 @@ export function orderConfirmationEmail(data: OrderConfirmationData): { subject: 
       }
       <tr>
         <td style="padding: 8px 0; color: #6B7280;">Envío</td>
-        <td style="padding: 8px 0; text-align: right;">${shippingCents === 0 ? '<span style="color: #7D9160;">Gratis</span>' : formatCurrency(shippingCents)}</td>
+        <td style="padding: 8px 0; text-align: right;">${shippingCents === 0 ? '<span style="color: #6D4D45;">Gratis</span>' : formatCurrency(shippingCents)}</td>
       </tr>
       <tr style="font-size: 18px; font-weight: 600;">
         <td style="padding: 16px 0; border-top: 2px solid #E5E7EB;">Total</td>
@@ -118,7 +120,7 @@ export function orderConfirmationEmail(data: OrderConfirmationData): { subject: 
       </tr>
     </table>
 
-    <h2>Dirección de envío</h2>
+    <h2>Te lo enviamos a</h2>
 
     <div class="card">
       <p style="margin: 0;">
@@ -137,19 +139,27 @@ export function orderConfirmationEmail(data: OrderConfirmationData): { subject: 
 
     <hr class="divider">
 
+    <div class="card" style="background-color: #E1EDF5;">
+      <p style="margin: 0; color: #3B6280;">
+        <strong>Mientras esperas...</strong> ¿Sabías que nuestra granola se conserva perfectamente
+        durante 3 meses? Guárdala en un lugar fresco y seco, y cada mañana será como abrir
+        un paquete nuevo.
+      </p>
+    </div>
+
     <p class="text-small">
-      Te enviaremos otro email cuando tu pedido haya sido enviado con el número de seguimiento.
-      Si tienes alguna pregunta, escríbenos a <a href="mailto:hola@poppy.es">hola@poppy.es</a>.
+      Te avisaremos en cuanto tu pedido salga de nuestro obrador con el número de seguimiento.
+      Si tienes cualquier pregunta, estamos en <a href="mailto:hola@poppy.es">hola@poppy.es</a>.
     </p>
 
     <p>
-      ¡Gracias por elegir Poppy!<br>
-      <strong>El equipo de Poppy</strong>
+      Gracias por cuidarte con Poppy,<br>
+      <strong>El equipo Poppy</strong>
     </p>
   `;
 
   return {
-    subject: `Pedido #${orderId} confirmado`,
-    html: emailLayout(content, `Tu pedido #${orderId} ha sido confirmado. Entrega estimada: ${estimatedDelivery}.`).replace('{{email}}', email),
+    subject: `¡Pedido #${orderId} confirmado! Tu granola está en camino`,
+    html: emailLayout(content, `Tu pedido #${orderId} ha sido confirmado. Llegada estimada: ${estimatedDelivery}.`).replace('{{email}}', email),
   };
 }

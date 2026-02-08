@@ -128,6 +128,12 @@ export const NAVIGATION = {
       // { name: 'Mayorista / B2B', href: '/mayorista' }, // Hidden until ready
       { name: 'Contacto', href: '/contacto' },
     ],
+    recursos: [
+      { name: 'Granola sin gluten', href: '/granola-sin-gluten' },
+      { name: 'Granola para celíacos', href: '/granola-para-celiacos' },
+      { name: 'Guía celíaquía', href: '/guia-celiaquia-dieta-sin-gluten' },
+      { name: 'Cómo hacer granola', href: '/como-hacer-granola-sin-gluten' },
+    ],
     ayuda: [
       { name: 'FAQ', href: '/faq' },
       { name: 'Envíos', href: '/faq#envios' },

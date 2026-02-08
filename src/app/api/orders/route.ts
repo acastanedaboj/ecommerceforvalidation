@@ -1,4 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { getServerSession } from 'next-auth';
+import { authOptions } from '@/lib/auth';
+import prisma from '@/lib/db';
 import { generateOrderNumber } from '@/lib/utils';
 import { calculateCartTotal, type CartPriceCalculation } from '@/lib/pricing';
 import { PRICING } from '@/lib/constants';
@@ -6,10 +9,13 @@ import { PRICING } from '@/lib/constants';
 interface OrderItem {
   productId: string;
   productName: string;
+  productDescription?: string;
   quantity: number;
   packSize: number;
   isSubscription: boolean;
   priceInCents: number;
+  isBundle?: boolean;
+  flavors?: Array<{ productId: string; flavorName: string }>;
 }
 
 interface CustomerInfo {
@@ -22,9 +28,6 @@ interface CustomerInfo {
   province: string;
   postalCode: string;
 }
-
-// In-memory storage for demo (replace with database in production)
-const orders: Map<string, object> = new Map();
 
 export async function POST(request: NextRequest) {
   try {
@@ -53,6 +56,18 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    // Get session to link order to user if logged in
+    const session = await getServerSession(authOptions);
+
+    // Find user by email if logged in
+    let userId: string | null = null;
+    if (session?.user?.email) {
+      const user = await prisma.user.findUnique({
+        where: { email: session.user.email },
+      });
+      userId = user?.id || null;
+    }
+
     // Calculate totals if not provided
     const cartTotal =
       totals ||
@@ -71,76 +86,74 @@ export async function POST(request: NextRequest) {
     // Generate order number
     const orderNumber = generateOrderNumber();
 
-    // Create order object
-    const order = {
-      orderNumber,
-      status: 'PENDING',
-      paymentStatus: paymentMethod === 'cash_on_delivery' ? 'PENDING' : 'PENDING',
-      paymentMethod,
-      customer: {
-        email: customer.email,
-        name: customer.name,
-        phone: customer.phone,
-      },
-      shippingAddress: {
-        line1: customer.address,
-        line2: customer.addressLine2,
-        city: customer.city,
-        province: customer.province,
-        postalCode: customer.postalCode,
-        country: 'ES',
-      },
-      items: items.map((item) => {
-        const itemPrice = cartTotal.items.find(
-          (i) =>
-            i.productId === item.productId &&
-            i.packSize === item.packSize &&
-            i.isSubscription === item.isSubscription
-        );
-        return {
-          productId: item.productId,
-          productName: item.productName,
-          quantity: item.quantity,
-          packSize: item.packSize,
-          isSubscription: item.isSubscription,
-          unitPriceInCents: itemPrice?.unitPriceCents || item.priceInCents,
-          totalPriceInCents: itemPrice?.lineTotalCents || 0,
-        };
-      }),
-      totals: {
+    // Add cash on delivery fee if applicable
+    const cashOnDeliveryFee = paymentMethod === 'cash_on_delivery' ? 200 : 0;
+    const finalTotal = cartTotal.totalCents + cashOnDeliveryFee;
+
+    // Create order in database
+    const order = await prisma.order.create({
+      data: {
+        orderNumber,
+        userId,
+        status: 'PENDING',
+        paymentStatus: 'PENDING',
+        paymentMethod,
+        customerEmail: customer.email,
+        customerName: customer.name,
+        customerPhone: customer.phone,
+        shippingName: customer.name,
+        shippingLine1: customer.address,
+        shippingLine2: customer.addressLine2,
+        shippingCity: customer.city,
+        shippingState: customer.province,
+        shippingPostal: customer.postalCode,
+        shippingCountry: 'ES',
         subtotalInCents: cartTotal.subtotalCents,
-        discountInCents: cartTotal.discountCents,
+        discountInCents: cartTotal.discountCents + (couponDiscountCents || 0),
         shippingInCents: cartTotal.shippingCents,
         taxInCents: cartTotal.taxCents,
-        // Add cash on delivery fee if applicable
-        cashOnDeliveryFee: paymentMethod === 'cash_on_delivery' ? 200 : 0,
-        totalInCents:
-          cartTotal.totalCents + (paymentMethod === 'cash_on_delivery' ? 200 : 0),
-      },
-      ...(couponCode && {
-        coupon: {
-          code: couponCode,
-          discountInCents: couponDiscountCents || 0,
+        totalInCents: finalTotal,
+        discountCode: couponCode,
+        items: {
+          create: items.map((item) => {
+            const itemPrice = cartTotal.items.find(
+              (i) =>
+                i.productId === item.productId &&
+                i.packSize === item.packSize &&
+                i.isSubscription === item.isSubscription
+            );
+            return {
+              productId: item.productId,
+              productName: item.isBundle
+                ? `${item.productName}: ${item.productDescription || ''}`
+                : item.productName,
+              productSku: item.productId,
+              quantity: item.quantity,
+              packSize: item.packSize,
+              unitPriceInCents: itemPrice?.unitPriceCents || item.priceInCents,
+              totalPriceInCents: itemPrice?.lineTotalCents || 0,
+            };
+          }),
         },
-      }),
-      createdAt: new Date().toISOString(),
-    };
+      },
+      include: {
+        items: true,
+      },
+    });
 
-    // Store order (in production, save to database)
-    orders.set(orderNumber, order);
-
-    // In production, you would:
-    // 1. Save to database
-    // 2. Send confirmation email
-    // 3. Update inventory
-    // 4. Notify admin
-
-    console.log('Order created:', orderNumber);
+    console.log('Order created:', orderNumber, 'for user:', userId || 'guest', 'email:', customer.email);
 
     return NextResponse.json({
       success: true,
       orderNumber,
-      order,
+      order: {
+        id: order.id,
+        orderNumber: order.orderNumber,
+        status: order.status,
+        paymentStatus: order.paymentStatus,
+        totalInCents: order.totalInCents,
+        createdAt: order.createdAt,
+      },
     });
   } catch (error) {
     console.error('Order creation error:', error);
@@ -152,19 +165,62 @@ export async function POST(request: NextRequest) {
 }
 
 export async function GET(request: NextRequest) {
-  const { searchParams } = new URL(request.url);
-  const orderNumber = searchParams.get('orderNumber');
+  try {
+    const { searchParams } = new URL(request.url);
+    const orderNumber = searchParams.get('orderNumber');
 
-  if (orderNumber) {
-    const order = orders.get(orderNumber);
-    if (order) {
-      return NextResponse.json({ order });
+    // Get specific order by order number
+    if (orderNumber) {
+      const order = await prisma.order.findUnique({
+        where: { orderNumber },
+        include: {
+          items: true,
+        },
+      });
+
+      if (order) {
+        return NextResponse.json({ order });
+      }
+      return NextResponse.json({ error: 'Pedido no encontrado' }, { status: 404 });
     }
-    return NextResponse.json({ error: 'Pedido no encontrado' }, { status: 404 });
-  }
 
-  // Return all orders (in production, this should be protected and paginated)
-  return NextResponse.json({
-    orders: Array.from(orders.values()),
-  });
+    // Get orders for authenticated user
+    const session = await getServerSession(authOptions);
+
+    if (!session?.user?.email) {
+      return NextResponse.json(
+        { error: 'Debes iniciar sesión para ver tus pedidos' },
+        { status: 401 }
+      );
+    }
+
+    // Find user
+    const user = await prisma.user.findUnique({
+      where: { email: session.user.email },
+    });
+
+    // Get orders by userId or by email (for orders made before user was created)
+    const orders = await prisma.order.findMany({
+      where: {
+        OR: [
+          ...(user ? [{ userId: user.id }] : []),
+          { customerEmail: session.user.email },
+        ],
+      },
+      include: {
+        items: true,
+      },
+      orderBy: {
+        createdAt: 'desc',
+      },
+    });
+
+    return NextResponse.json({ orders });
+  } catch (error) {
+    console.error('Get orders error:', error);
+    return NextResponse.json(
+      { error: 'Error al obtener los pedidos' },
+      { status: 500 }
+    );
+  }
 }

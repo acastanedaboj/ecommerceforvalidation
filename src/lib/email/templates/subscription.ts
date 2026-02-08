@@ -2,6 +2,7 @@
  * Subscription Email Templates
  *
  * Templates for subscription lifecycle events.
+ * Tone: Cercano, cuidado del bienestar, healthy, premium
  */
 
 import { emailLayout, formatCurrency, formatDate } from './base';
@@ -31,22 +32,22 @@ export function subscriptionActiveEmail(data: SubscriptionActiveData): { subject
     frequency,
     pricePerDeliveryCents,
     nextDeliveryDate,
-    subscriptionId,
   } = data;
 
   const firstName = customerName?.split(' ')[0] || 'Cliente';
   const frequencyText = frequency === 'monthly' ? 'cada mes' : 'cada 2 meses';
 
   const content = `
-    <h1>Suscripción activada</h1>
+    <h1>${firstName}, tu bienestar ya está automatizado</h1>
 
     <p>
-      Hola ${firstName}, tu suscripción ha sido activada correctamente.
-      A partir de ahora, recibirás tu granola favorita ${frequencyText} sin tener que preocuparte de nada.
+      ¡Enhorabuena! Has dado el paso más inteligente: asegurarte de que nunca te falte
+      tu granola favorita. A partir de ahora, ${frequencyText} recibirás tu dosis de
+      crujiente sin mover un dedo.
     </p>
 
-    <div class="card">
-      <h2 style="margin-top: 0;">Detalles de tu suscripción</h2>
+    <div class="card" style="background-color: #FFFEF8;">
+      <h2 style="margin-top: 0; color: #6D4D45;">Tu suscripción</h2>
       <table width="100%" cellpadding="0" cellspacing="0" style="font-size: 14px;">
         <tr>
           <td><strong>Producto:</strong></td>
@@ -62,50 +63,51 @@ export function subscriptionActiveEmail(data: SubscriptionActiveData): { subject
         </tr>
         <tr>
           <td><strong>Próximo envío:</strong></td>
-          <td style="text-align: right;">${formatDate(nextDeliveryDate)}</td>
+          <td style="text-align: right;"><strong style="color: #6D4D45;">${formatDate(nextDeliveryDate)}</strong></td>
         </tr>
         <tr>
           <td><strong>Envío:</strong></td>
-          <td style="text-align: right;"><span style="color: #7D9160;">Siempre gratis</span></td>
+          <td style="text-align: right;"><span style="color: #6D4D45;">Siempre gratis</span></td>
         </tr>
       </table>
     </div>
 
-    <div class="card" style="background-color: #F0FDF4;">
-      <p style="margin: 0; color: #166534;">
-        <strong>Ahorro del 15%</strong><br>
-        Con tu suscripción ahorras un 15% en cada envío respecto al precio normal.
+    <div class="card" style="background-color: #E1EDF5;">
+      <p style="margin: 0; color: #3B6280;">
+        <strong>Ahorras un 15% en cada envío</strong><br>
+        Porque cuidarte a largo plazo tiene premio. Tu constancia merece ese descuento.
       </p>
     </div>
 
     <p class="text-center">
       <a href="${EMAIL_CONFIG.baseUrl}/cuenta/suscripciones" class="button">
-        Gestionar suscripción
+        Gestionar mi suscripción
       </a>
     </p>
 
     <hr class="divider">
 
-    <h2>Información importante</h2>
+    <h2>Tienes el control total</h2>
 
     <p>
-      <strong>Flexibilidad total:</strong> Puedes pausar, modificar o cancelar tu suscripción en cualquier momento desde tu cuenta.<br><br>
-      <strong>Aviso de cobro:</strong> Te avisaremos por email 3 días antes de cada cobro.<br><br>
-      <strong>Cambiar dirección:</strong> Puedes actualizar tu dirección de envío antes de cada renovación.
+      <strong>Flexibilidad absoluta:</strong> Pausa, modifica o cancela cuando quieras desde tu cuenta.<br><br>
+      <strong>Sin sorpresas:</strong> Te avisamos 3 días antes de cada cobro por si necesitas hacer cambios.<br><br>
+      <strong>Cambio de dirección:</strong> Actualiza tu dirección de envío antes de cada renovación si lo necesitas.
     </p>
 
     <p class="text-small">
-      ¿Tienes dudas? Escríbenos a <a href="mailto:hola@poppy.es">hola@poppy.es</a>.
+      ¿Dudas sobre tu suscripción? Escríbenos a <a href="mailto:hola@poppy.es">hola@poppy.es</a>.
+      Estamos aquí para ayudarte.
     </p>
 
     <p>
-      ¡Gracias por suscribirte!<br>
-      <strong>El equipo de Poppy</strong>
+      Gracias por confiar en nosotros,<br>
+      <strong>El equipo Poppy</strong>
     </p>
   `;
 
   return {
-    subject: 'Tu suscripción Poppy está activa',
+    subject: `${firstName}, tu suscripción Poppy está activa`,
     html: emailLayout(content, `Tu suscripción a ${productName} está activa. Próximo envío: ${formatDate(nextDeliveryDate)}.`).replace('{{email}}', email),
   };
 }
@@ -140,21 +142,21 @@ export function subscriptionRenewedEmail(data: SubscriptionRenewedData): { subje
   const firstName = customerName?.split(' ')[0] || 'Cliente';
 
   const content = `
-    <h1>Renovación confirmada</h1>
+    <h1>${firstName}, tu granola del mes está en marcha</h1>
 
     <p>
-      Hola ${firstName}, tu suscripción se ha renovado correctamente.
-      Estamos preparando tu pedido.
+      Todo listo. Tu suscripción se ha renovado correctamente y ya estamos preparando
+      tu próximo envío con el mismo cariño de siempre.
     </p>
 
-    <div class="card">
+    <div class="card" style="background-color: #FFFEF8;">
       <table width="100%" cellpadding="0" cellspacing="0" style="font-size: 14px;">
         <tr>
           <td><strong>Producto:</strong></td>
           <td style="text-align: right;">${productName} x${quantity}</td>
         </tr>
         <tr>
-          <td><strong>Importe cobrado:</strong></td>
+          <td><strong>Importe:</strong></td>
           <td style="text-align: right;">${formatCurrency(amountPaidCents)}</td>
         </tr>
         <tr>
@@ -164,10 +166,10 @@ export function subscriptionRenewedEmail(data: SubscriptionRenewedData): { subje
       </table>
     </div>
 
-    <div class="card" style="background-color: #FEF3C7;">
-      <p style="margin: 0; color: #92400E;">
-        <strong>Próximos pasos:</strong><br>
-        Tu pedido será enviado en las próximas 24-48h. Te avisaremos con el número de seguimiento.
+    <div class="card" style="background-color: #E1EDF5;">
+      <p style="margin: 0; color: #3B6280;">
+        <strong>Tu pedido sale en 24-48h</strong><br>
+        Te enviaremos el número de seguimiento en cuanto salga de nuestro obrador.
       </p>
     </div>
 
@@ -181,18 +183,18 @@ export function subscriptionRenewedEmail(data: SubscriptionRenewedData): { subje
 
     <p class="text-small">
       <strong>Próxima renovación:</strong> ${formatDate(nextPaymentDate)}<br>
-      Puedes gestionar tu suscripción en cualquier momento desde
+      Recuerda que puedes gestionar tu suscripción en cualquier momento desde
       <a href="${EMAIL_CONFIG.baseUrl}/cuenta/suscripciones">tu cuenta</a>.
     </p>
 
     <p>
-      ¡Gracias por seguir confiando en nosotros!<br>
-      <strong>El equipo de Poppy</strong>
+      Gracias por seguir cuidándote con nosotros,<br>
+      <strong>El equipo Poppy</strong>
     </p>
   `;
 
   return {
-    subject: 'Renovación de suscripción confirmada',
+    subject: `${firstName}, tu suscripción Poppy se ha renovado`,
     html: emailLayout(content, `Tu suscripción se ha renovado. Importe: ${formatCurrency(amountPaidCents)}.`).replace('{{email}}', email),
   };
 }
@@ -225,21 +227,22 @@ export function subscriptionFailedEmail(data: SubscriptionFailedData): { subject
   const firstName = customerName?.split(' ')[0] || 'Cliente';
 
   const content = `
-    <h1>Problema con el pago de tu suscripción</h1>
+    <h1>${firstName}, necesitamos tu ayuda</h1>
 
     <p>
-      Hola ${firstName}, no hemos podido procesar el pago de tu suscripción a <strong>${productName}</strong>.
+      Hemos intentado procesar el pago de tu suscripción a <strong>${productName}</strong>,
+      pero algo no ha funcionado. No te preocupes, tiene fácil solución.
     </p>
 
     <div class="card" style="background-color: #FEF2F2;">
-      <p style="margin: 0; color: #991B1B;">
+      <p style="margin: 0; color: #DC2626;">
         <strong>Importe pendiente:</strong> ${formatCurrency(amountCents)}<br>
-        ${failureReason ? `<strong>Motivo:</strong> ${failureReason}` : ''}
+        ${failureReason ? `<strong>Motivo:</strong> ${failureReason}` : 'Puede ser un problema temporal con tu tarjeta.'}
       </p>
     </div>
 
     <p>
-      Para evitar que tu suscripción se cancele, por favor actualiza tu método de pago:
+      Para que tu granola siga llegando puntual, solo tienes que actualizar tu método de pago:
     </p>
 
     <p class="text-center">
@@ -252,7 +255,7 @@ export function subscriptionFailedEmail(data: SubscriptionFailedData): { subject
       retryDate
         ? `
     <p class="text-small text-center">
-      Intentaremos el cobro de nuevo el <strong>${formatDate(retryDate)}</strong>.
+      Volveremos a intentar el cobro el <strong>${formatDate(retryDate)}</strong>.
     </p>
     `
         : ''
@@ -260,26 +263,32 @@ export function subscriptionFailedEmail(data: SubscriptionFailedData): { subject
 
     <hr class="divider">
 
-    <h2>¿Qué puedes hacer?</h2>
+    <h2>¿Qué puede haber pasado?</h2>
 
     <p>
-      <strong>1. Verificar tu tarjeta:</strong> Asegúrate de que tu tarjeta no haya caducado y tenga fondos suficientes.<br><br>
-      <strong>2. Actualizar el método de pago:</strong> Añade una nueva tarjeta desde tu cuenta.<br><br>
-      <strong>3. Contactarnos:</strong> Si necesitas ayuda, escríbenos a <a href="mailto:hola@poppy.es">hola@poppy.es</a>.
+      <strong>Tarjeta caducada:</strong> Comprueba que tu tarjeta sigue vigente.<br><br>
+      <strong>Fondos insuficientes:</strong> Asegúrate de tener saldo disponible.<br><br>
+      <strong>Límite de compras:</strong> Algunos bancos bloquean pagos recurrentes. Contacta con tu banco si es el caso.
     </p>
 
     <p class="text-small">
-      Si no actualizas tu método de pago, tu suscripción podría cancelarse automáticamente tras varios intentos fallidos.
+      Si no actualizas el método de pago, tu suscripción podría cancelarse automáticamente.
+      ¡No queremos que te quedes sin tu granola!
     </p>
 
     <p>
-      Estamos aquí para ayudarte,<br>
-      <strong>El equipo de Poppy</strong>
+      ¿Necesitas ayuda? Escríbenos a <a href="mailto:hola@poppy.es">hola@poppy.es</a>
+      y lo resolvemos juntos.
+    </p>
+
+    <p>
+      Estamos aquí para ti,<br>
+      <strong>El equipo Poppy</strong>
     </p>
   `;
 
   return {
-    subject: 'Acción requerida: Problema con tu suscripción',
+    subject: `${firstName}, hay un problema con tu suscripción Poppy`,
     html: emailLayout(content, `No pudimos procesar el pago de tu suscripción. Por favor, actualiza tu método de pago.`).replace('{{email}}', email),
   };
 }
@@ -308,10 +317,11 @@ export function subscriptionCancelledEmail(data: SubscriptionCancelledData): { s
   const firstName = customerName?.split(' ')[0] || 'Cliente';
 
   const content = `
-    <h1>Suscripción cancelada</h1>
+    <h1>${firstName}, vamos a echarte de menos</h1>
 
     <p>
-      Hola ${firstName}, confirmamos que tu suscripción a <strong>${productName}</strong> ha sido cancelada.
+      Tu suscripción a <strong>${productName}</strong> ha sido cancelada.
+      Aunque nos da pena, respetamos tu decisión.
     </p>
 
     <div class="card">
@@ -344,29 +354,40 @@ export function subscriptionCancelledEmail(data: SubscriptionCancelledData): { s
 
     <hr class="divider">
 
-    <p>
-      Lamentamos verte marchar. Si cambiaste de opinión o fue un error, puedes reactivar tu suscripción en cualquier momento:
-    </p>
+    <div class="card" style="background-color: #FFFEF8;">
+      <p style="margin: 0; color: #6D4D45;">
+        <strong>La puerta siempre está abierta</strong><br>
+        Si cambias de opinión o fue un error, puedes reactivar tu suscripción
+        cuando quieras. Tu bienestar nos importa.
+      </p>
+    </div>
 
     <p class="text-center">
       <a href="${EMAIL_CONFIG.baseUrl}/suscripcion" class="button button-secondary">
-        Reactivar suscripción
+        Volver a suscribirme
       </a>
     </p>
 
     <p class="text-small">
-      Si tienes comentarios sobre cómo podemos mejorar, nos encantaría escucharte.
-      Escríbenos a <a href="mailto:hola@poppy.es">hola@poppy.es</a>.
+      Si hay algo que podamos mejorar, nos encantaría saberlo.
+      Escríbenos a <a href="mailto:hola@poppy.es">hola@poppy.es</a>,
+      tu opinión nos ayuda a ser mejores.
     </p>
 
     <p>
-      ¡Esperamos verte pronto!<br>
-      <strong>El equipo de Poppy</strong>
+      Gracias por haber sido parte de Poppy,<br>
+      <strong>El equipo Poppy</strong>
+    </p>
+
+    <p class="text-small" style="color: #A3A3A3;">
+      P.D. También puedes comprar packs puntuales en nuestra
+      <a href="${EMAIL_CONFIG.baseUrl}/tienda">tienda</a> cuando quieras.
+      Siempre serás bienvenid@.
     </p>
   `;
 
   return {
-    subject: 'Confirmación de cancelación de suscripción',
+    subject: `${firstName}, tu suscripción Poppy ha sido cancelada`,
     html: emailLayout(content, `Tu suscripción a ${productName} ha sido cancelada. Activa hasta: ${formatDate(endDate)}.`).replace('{{email}}', email),
   };
 }

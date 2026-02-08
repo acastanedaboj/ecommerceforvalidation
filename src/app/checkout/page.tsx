@@ -1,10 +1,11 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronLeft, CreditCard, Truck, Shield, Lock, Tag, X } from 'lucide-react';
+import { ChevronLeft, CreditCard, Truck, Shield, Lock, Tag, X, Check } from 'lucide-react';
 import { useCartStore, isCartBundleItem } from '@/store/cart-store';
 import { generateBundleSummary } from '@/lib/bundle';
 import { Input } from '@/components/ui/Input';
@@ -70,6 +71,7 @@ const spanishProvinces = [
 
 export default function CheckoutPage() {
   const router = useRouter();
+  const { data: session } = useSession();
   const { items, clearCart } = useCartStore();
 
   const [isLoading, setIsLoading] = useState(false);
@@ -117,6 +119,17 @@ export default function CheckoutPage() {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
+
+  // Pre-fill form data from session when user is logged in
+  useEffect(() => {
+    if (session?.user) {
+      setFormData((prev) => ({
+        ...prev,
+        email: session.user.email || prev.email,
+        name: session.user.name || prev.name,
+      }));
+    }
+  }, [session]);
 
   // Handle coupon application
   const handleApplyCoupon = () => {
@@ -351,16 +364,31 @@ export default function CheckoutPage() {
                   Información de contacto
                 </h2>
                 <div className="space-y-4">
-                  <Input
-                    label="Email"
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleInputChange}
-                    error={errors.email}
-                    placeholder="tu@email.com"
-                    required
-                  />
+                  {session?.user?.email ? (
+                    <div>
+                      <label className="block text-sm font-medium text-neutral-700 mb-2">
+                        Email
+                      </label>
+                      <div className="flex items-center gap-2 px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-lg">
+                        <Check className="w-4 h-4 text-green-600" />
+                        <span className="text-neutral-900">{session.user.email}</span>
+                        <span className="ml-auto text-xs text-neutral-500">
+                          Conectado como {session.user.name?.split(' ')[0] || 'usuario'}
+                        </span>
+                      </div>
+                    </div>
+                  ) : (
+                    <Input
+                      label="Email"
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      error={errors.email}
+                      placeholder="tu@email.com"
+                      required
+                    />
+                  )}
                   <div className="grid sm:grid-cols-2 gap-4">
                     <Input
                       label="Nombre completo"

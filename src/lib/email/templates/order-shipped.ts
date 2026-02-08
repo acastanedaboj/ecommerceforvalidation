@@ -2,9 +2,10 @@
  * Order Shipped Email Template
  *
  * Sent when an order has been shipped.
+ * Tone: Cercano, cuidado del bienestar, healthy, premium
  */
 
-import { emailLayout, formatDate } from './base';
+import { emailLayout } from './base';
 
 export interface OrderShippedData {
   email: string;
@@ -30,13 +31,14 @@ export function orderShippedEmail(data: OrderShippedData): { subject: string; ht
   const firstName = customerName?.split(' ')[0] || 'Cliente';
 
   const content = `
-    <h1>Tu pedido está en camino</h1>
+    <h1>${firstName}, tu granola ya viaja hacia ti</h1>
 
     <p>
-      Hola ${firstName}, buenas noticias: tu pedido <strong>#${orderId}</strong> ha sido enviado y pronto llegará a tu puerta.
+      ¡Buenas noticias! Tu pedido <strong>#${orderId}</strong> acaba de salir de nuestro obrador
+      en Málaga y está de camino a tu casa. Pronto podrás disfrutar de ese primer bocado crujiente.
     </p>
 
-    <div class="card">
+    <div class="card" style="background-color: #FFFEF8;">
       <table width="100%" cellpadding="0" cellspacing="0" style="font-size: 14px;">
         <tr>
           <td><strong>Pedido:</strong></td>
@@ -60,8 +62,8 @@ export function orderShippedEmail(data: OrderShippedData): { subject: string; ht
           estimatedDelivery
             ? `
         <tr>
-          <td><strong>Entrega estimada:</strong></td>
-          <td style="text-align: right;">${estimatedDelivery}</td>
+          <td><strong>Llegada prevista:</strong></td>
+          <td style="text-align: right;"><strong style="color: #6D4D45;">${estimatedDelivery}</strong></td>
         </tr>
         `
             : ''
@@ -83,26 +85,40 @@ export function orderShippedEmail(data: OrderShippedData): { subject: string; ht
 
     <hr class="divider">
 
-    <h2>¿Qué puedes esperar?</h2>
+    <h2>Prepárate para recibirla</h2>
+
+    <div class="card" style="background-color: #E1EDF5;">
+      <p style="margin: 0; color: #3B6280;">
+        <strong>Horario de entrega:</strong> De lunes a viernes en horario laboral.<br><br>
+        <strong>Si no estás:</strong> El transportista dejará un aviso e intentará entregarlo
+        al día siguiente. También puedes contactar con ${carrier} para reprogramar.
+      </p>
+    </div>
 
     <p>
-      <strong>Horario de entrega:</strong> De lunes a viernes, en horario laboral.<br>
-      <strong>Si no estás en casa:</strong> El transportista dejará un aviso e intentará la entrega al día siguiente.
+      Cuando llegue tu granola, recuerda guardarla en un lugar fresco y seco.
+      Así mantendrá todo su crujiente durante meses.
     </p>
 
     <p class="text-small">
-      Si tienes alguna pregunta sobre tu envío, escríbenos a
-      <a href="mailto:hola@poppy.es">hola@poppy.es</a> indicando tu número de pedido.
+      ¿Algún problema con el envío? Escríbenos a
+      <a href="mailto:hola@poppy.es">hola@poppy.es</a> con tu número de pedido
+      y lo solucionamos juntos.
     </p>
 
     <p>
-      ¡Esperamos que disfrutes tu granola!<br>
-      <strong>El equipo de Poppy</strong>
+      ¡Que lo disfrutes!<br>
+      <strong>El equipo Poppy</strong>
+    </p>
+
+    <p class="text-small" style="color: #A3A3A3;">
+      P.D. Nos encantaría ver cómo disfrutas tu granola.
+      Etiquétanos en Instagram <a href="https://instagram.com/poppy.granola">@poppy.granola</a>
     </p>
   `;
 
   return {
-    subject: `Tu pedido #${orderId} está en camino`,
-    html: emailLayout(content, `Tu pedido #${orderId} ha sido enviado. ${trackingNumber ? `Seguimiento: ${trackingNumber}` : ''}`).replace('{{email}}', email),
+    subject: `${firstName}, tu pedido #${orderId} está en camino`,
+    html: emailLayout(content, `Tu pedido #${orderId} ha sido enviado. ${trackingNumber ? `Seguimiento: ${trackingNumber}` : 'Pronto llegará a tu casa.'}`).replace('{{email}}', email),
   };
 }

@@ -7,6 +7,8 @@ import {
   sendSubscriptionFailedEmail,
   sendSubscriptionCancelledEmail,
 } from '@/lib/email';
+import prisma from '@/lib/db';
+import { generateOrderNumber } from '@/lib/utils';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_placeholder', {
   apiVersion: '2023-10-16',
@@ -45,7 +47,7 @@ export async function POST(request: NextRequest) {
         const session = event.data.object as Stripe.Checkout.Session;
         console.log('Checkout session completed:', session.id);
 
-        // Send order confirmation email for one-time purchases
+        // Send order confirmation email and save to database for one-time purchases
         if (session.mode === 'payment' && session.customer_email) {
           try {
             // Get line items from session
@@ -57,10 +59,67 @@ export async function POST(request: NextRequest) {
               priceInCents: item.amount_total || 0,
             }));
 
+            // Generate order number
+            const orderNumber = generateOrderNumber();
+
+            // Find user by email if exists
+            let userId: string | null = null;
+            const user = await prisma.user.findUnique({
+              where: { email: session.customer_email },
+            });
+            if (user) {
+              userId = user.id;
+            }
+
+            // Save order to database
+            const order = await prisma.order.create({
+              data: {
+                orderNumber,
+                userId,
+                status: 'CONFIRMED',
+                paymentStatus: 'PAID',
+                paymentMethod: 'card',
+                stripeSessionId: session.id,
+                stripePaymentIntentId: session.payment_intent as string | null,
+                customerEmail: session.customer_email,
+                customerName: session.customer_details?.name || null,
+                customerPhone: session.customer_details?.phone || null,
+                shippingName: session.shipping_details?.name || session.customer_details?.name || null,
+                shippingLine1: session.shipping_details?.address?.line1 || null,
+                shippingLine2: session.shipping_details?.address?.line2 || null,
+                shippingCity: session.shipping_details?.address?.city || null,
+                shippingState: session.shipping_details?.address?.state || null,
+                shippingPostal: session.shipping_details?.address?.postal_code || null,
+                shippingCountry: session.shipping_details?.address?.country || 'ES',
+                subtotalInCents: session.amount_subtotal || 0,
+                shippingInCents: session.shipping_cost?.amount_total || 0,
+                discountInCents: session.total_details?.amount_discount || 0,
+                totalInCents: session.amount_total || 0,
+                discountCode: session.metadata?.couponCode || null,
+                paidAt: new Date(),
+                items: {
+                  create: lineItems.data.map((item) => ({
+                    productId: item.price?.product as string || 'unknown',
+                    productName: item.description || 'Granola Poppy',
+                    productSku: item.price?.id || 'unknown',
+                    quantity: item.quantity || 1,
+                    unitPriceInCents: item.price?.unit_amount || 0,
+                    totalPriceInCents: item.amount_total || 0,
+                  })),
+                },
+              },
+              include: {
+                items: true,
+              },
+            });
+
+            console.log('Order saved to database:', orderNumber, 'for user:', userId || 'guest');
+
+            // Send order confirmation email
             await sendOrderConfirmationEmail({
               email: session.customer_email,
               customerName: session.customer_details?.name || 'Cliente',
-              orderId: session.id.slice(-8).toUpperCase(),
+              orderId: orderNumber,
               orderDate: new Date(),
               items,
               subtotalCents: session.amount_subtotal || 0,
@@ -76,8 +135,8 @@ export async function POST(request: NextRequest) {
               },
             });
             console.log('Order confirmation email sent');
-          } catch (emailError) {
-            console.error('Failed to send order confirmation email:', emailError);
+          } catch (orderError) {
+            console.error('Failed to save order or send email:', orderError);
           }
         }
 

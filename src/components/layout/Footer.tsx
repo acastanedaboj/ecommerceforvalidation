@@ -12,7 +12,7 @@ export function Footer() {
       <div className="container-custom py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
           {/* Brand column */}
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4">
             <Link
               href="/"
               className="inline-flex items-center group"
@@ -85,8 +85,25 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Recursos links */}
+          <div className="lg:col-span-2">
+            <h3 className="text-[#ffffec] font-display font-medium text-lg mb-5">Recursos</h3>
+            <ul className="space-y-3.5">
+              {NAVIGATION.footer.recursos.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-[#ffffec] hover:text-[#ffffec] transition-colors text-sm"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Contacto */}
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h3 className="text-[#ffffec] font-display font-medium text-lg mb-5">Contacto</h3>
             <ul className="space-y-4">
               <li>
