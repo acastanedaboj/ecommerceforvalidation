@@ -1,5 +1,6 @@
 import { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
+import { sendWelcomeEmail } from '@/lib/email';
 
 export const authOptions: NextAuthOptions = {
   providers: [
@@ -15,6 +16,23 @@ export const authOptions: NextAuthOptions = {
   pages: {
     signIn: '/auth/login',
     error: '/auth/error',
+  },
+  events: {
+    // Send welcome email on first sign in
+    async signIn({ user, isNewUser }) {
+      // Only send welcome email for new users
+      if (isNewUser && user.email) {
+        try {
+          await sendWelcomeEmail({
+            name: user.name || 'Amig@',
+            email: user.email,
+          });
+          console.log('Welcome email sent to:', user.email);
+        } catch (error) {
+          console.error('Failed to send welcome email:', error);
+        }
+      }
+    },
   },
   callbacks: {
     async jwt({ token, user, account, profile }) {
