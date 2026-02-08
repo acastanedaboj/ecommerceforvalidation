@@ -83,7 +83,7 @@ export default function HomePage() {
                 {/* Main image - sharp corners */}
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src="/products/hero.jpg"
+                    src="/products/hero1.jpg"
                     alt="Poppy granola con frutos secos y miel"
                     fill
                     className="object-cover"
