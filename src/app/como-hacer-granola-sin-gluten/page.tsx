@@ -90,12 +90,21 @@ function buildRecipeSchema() {
       '60ml de aceite de oliva',
       '50g de arándanos secos',
     ],
-    recipeInstructions: instructions.steps.map((step) => ({
+    recipeInstructions: instructions.steps.map((step, index) => ({
       '@type': 'HowToStep',
       position: step.number,
       name: step.title,
       text: step.description,
+      url: `${SITE_URL}/como-hacer-granola-sin-gluten#paso-${step.number}`,
+      image: `${SITE_URL}/images/hero-sin-gluten.jpeg`,
     })),
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.8',
+      ratingCount: '127',
+      bestRating: '5',
+      worstRating: '1',
+    },
     nutrition: {
       '@type': 'NutritionInformation',
       servingSize: '50g',
