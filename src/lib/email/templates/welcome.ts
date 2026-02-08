@@ -26,7 +26,7 @@ export function welcomeEmail(data: WelcomeEmailData): { subject: string; html: s
     </p>
 
     <p>
-      Elaboramos cada lote de granola <strong>a mano en Málaga</strong>, con ingredientes ecológicos
+      Elaboramos cada lote de granola de forma artesanal, <strong>en Málaga</strong>, con ingredientes ecológicos
       que seleccionamos personalmente: avena sin gluten certificada, miel de apicultores locales
       y frutos secos de primera calidad. Sin prisas, sin aditivos, solo lo bueno.
     </p>
