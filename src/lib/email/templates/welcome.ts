@@ -35,9 +35,9 @@ export function welcomeEmail(data: WelcomeEmailData): { subject: string; html: s
       <h2 style="margin-top: 0; color: #6D4D45;">Nuestras granolas, hechas para ti:</h2>
       <ul style="padding-left: 20px; margin: 0; line-height: 1.8;">
         <li><strong>Clásica</strong> – La receta original con miel ecológica y un toque crujiente perfecto</li>
-        <li><strong>Chocolate</strong> – Cacao puro y avellanas para los amantes del chocolate</li>
-        <li><strong>Naranja</strong> – Cítricos y jengibre que despiertan tus sentidos</li>
-        <li><strong>Dátiles</strong> – 100% vegana, endulzada solo con fruta</li>
+        <li><strong>Chocolate</strong> – Cacao puro y pepitas de chocolate negro para los amantes del cacao</li>
+        <li><strong>Naranja</strong> – Cítricos mediterráneos y jengibre que despiertan tus sentidos</li>
+        <li><strong>Vegana</strong> – 100% vegana, endulzada con sirope de agave ecológico</li>
       </ul>
     </div>
 
