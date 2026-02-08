@@ -10,15 +10,17 @@ import { Input } from '@/components/ui/Input';
 import { Button } from '@/components/ui/Button';
 import { Eye, EyeOff } from 'lucide-react';
 
-function LoginContent() {
+function RegisterContent() {
   const { data: session, status } = useSession();
   const router = useRouter();
   const searchParams = useSearchParams();
   const callbackUrl = searchParams.get('callbackUrl') || '/';
-  const error = searchParams.get('error');
 
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [acceptsNewsletter, setAcceptsNewsletter] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [formError, setFormError] = useState('');
@@ -29,25 +31,61 @@ function LoginContent() {
     }
   }, [status, router, callbackUrl]);
 
-  const handleCredentialsLogin = async (e: React.FormEvent) => {
+  const handleRegister = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
     setFormError('');
 
+    // Validate passwords match
+    if (password !== confirmPassword) {
+      setFormError('Las contraseñas no coinciden');
+      setIsLoading(false);
+      return;
+    }
+
+    // Validate password length
+    if (password.length < 8) {
+      setFormError('La contraseña debe tener al menos 8 caracteres');
+      setIsLoading(false);
+      return;
+    }
+
     try {
-      const result = await signIn('credentials', {
+      // Register the user
+      const res = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name,
+          email,
+          password,
+          acceptsNewsletter,
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setFormError(data.error || 'Error al crear la cuenta');
+        setIsLoading(false);
+        return;
+      }
+
+      // Auto-login after successful registration
+      const signInResult = await signIn('credentials', {
         email,
         password,
         redirect: false,
       });
 
-      if (result?.error) {
-        setFormError(result.error);
+      if (signInResult?.error) {
+        // Registration succeeded but login failed - redirect to login
+        router.push('/auth/login?registered=true');
       } else {
         router.push(callbackUrl);
       }
     } catch {
-      setFormError('Error al iniciar sesion. Intentalo de nuevo.');
+      setFormError('Error al crear la cuenta. Intentalo de nuevo.');
     } finally {
       setIsLoading(false);
     }
@@ -77,30 +115,31 @@ function LoginContent() {
             />
           </Link>
           <h1 className="font-display text-3xl font-medium text-stone-800 mb-3">
-            Iniciar sesion
+            Crear cuenta
           </h1>
           <p className="text-stone-500">
-            Accede a tu cuenta para gestionar tus pedidos y suscripciones
+            Registrate para gestionar tus pedidos y suscripciones
           </p>
         </div>
 
         {/* Error message */}
-        {(error || formError) && (
+        {formError && (
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm">
-            {formError ||
-              (error === 'OAuthSignin' && 'Error al iniciar sesion con el proveedor.') ||
-              (error === 'OAuthCallback' && 'Error en la respuesta del proveedor.') ||
-              (error === 'OAuthCreateAccount' && 'No se pudo crear la cuenta.') ||
-              (error === 'Callback' && 'Error en el proceso de autenticacion.') ||
-              (error === 'CredentialsSignin' && 'Email o contraseña incorrectos.') ||
-              'Ha ocurrido un error. Intentalo de nuevo.'}
+            {formError}
           </div>
         )}
 
-        {/* Login card */}
+        {/* Register card */}
         <div className="bg-white rounded-2xl shadow-soft p-8">
-          {/* Email/Password form */}
-          <form onSubmit={handleCredentialsLogin} className="space-y-4 mb-6">
+          {/* Registration form */}
+          <form onSubmit={handleRegister} className="space-y-4 mb-6">
+            <Input
+              label="Nombre"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Tu nombre"
+            />
             <Input
               label="Email"
               type="email"
@@ -115,7 +154,7 @@ function LoginContent() {
                 type={showPassword ? 'text' : 'password'}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="Tu contraseña"
+                placeholder="Minimo 8 caracteres"
                 required
               />
               <button
@@ -126,16 +165,39 @@ function LoginContent() {
                 {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
               </button>
             </div>
+            <Input
+              label="Confirmar contraseña"
+              type={showPassword ? 'text' : 'password'}
+              value={confirmPassword}
+              onChange={(e) => setConfirmPassword(e.target.value)}
+              placeholder="Repite tu contraseña"
+              required
+            />
+
+            {/* Newsletter checkbox */}
+            <div className="flex items-start gap-3 pt-2">
+              <input
+                type="checkbox"
+                id="newsletter"
+                checked={acceptsNewsletter}
+                onChange={(e) => setAcceptsNewsletter(e.target.checked)}
+                className="mt-1 h-4 w-4 rounded border-stone-300 text-earth-600 focus:ring-earth-500"
+              />
+              <label htmlFor="newsletter" className="text-sm text-stone-600">
+                Quiero recibir novedades, recetas y ofertas exclusivas por email
+              </label>
+            </div>
+
             <Button type="submit" variant="primary" className="w-full" disabled={isLoading}>
-              {isLoading ? 'Iniciando sesion...' : 'Iniciar sesion'}
+              {isLoading ? 'Creando cuenta...' : 'Crear cuenta'}
             </Button>
           </form>
 
-          {/* Register link */}
+          {/* Login link */}
           <p className="text-center text-sm text-stone-500 mb-6">
-            ¿No tienes cuenta?{' '}
-            <Link href="/auth/register" className="text-earth-600 hover:text-earth-700 font-medium">
-              Registrate
+            ¿Ya tienes cuenta?{' '}
+            <Link href="/auth/login" className="text-earth-600 hover:text-earth-700 font-medium">
+              Inicia sesion
             </Link>
           </p>
 
@@ -145,7 +207,7 @@ function LoginContent() {
               <div className="w-full border-t border-cream-200"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-white text-stone-400">o continua con</span>
+              <span className="px-4 bg-white text-stone-400">o registrate con</span>
             </div>
           </div>
 
@@ -176,32 +238,11 @@ function LoginContent() {
               Continuar con Google
             </span>
           </button>
-
-          {/* Divider */}
-          <div className="relative my-6">
-            <div className="absolute inset-0 flex items-center">
-              <div className="w-full border-t border-cream-200"></div>
-            </div>
-            <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-white text-stone-400">o</span>
-            </div>
-          </div>
-
-          {/* Guest checkout info */}
-          <div className="text-center">
-            <p className="text-sm text-stone-500 mb-4">Tambien puedes comprar sin cuenta</p>
-            <Link
-              href="/tienda"
-              className="text-earth-600 hover:text-earth-700 font-medium text-sm"
-            >
-              Ir a la tienda →
-            </Link>
-          </div>
         </div>
 
         {/* Footer */}
         <p className="mt-8 text-center text-xs text-stone-400">
-          Al iniciar sesion, aceptas nuestros{' '}
+          Al crear una cuenta, aceptas nuestros{' '}
           <Link href="/legal/condiciones-venta" className="underline hover:text-stone-600">
             Terminos de servicio
           </Link>{' '}
@@ -215,7 +256,7 @@ function LoginContent() {
   );
 }
 
-function LoginLoading() {
+function RegisterLoading() {
   return (
     <div className="min-h-[60vh] flex items-center justify-center">
       <div className="animate-pulse text-stone-500">Cargando...</div>
@@ -223,10 +264,10 @@ function LoginLoading() {
   );
 }
 
-export default function LoginPage() {
+export default function RegisterPage() {
   return (
-    <Suspense fallback={<LoginLoading />}>
-      <LoginContent />
+    <Suspense fallback={<RegisterLoading />}>
+      <RegisterContent />
     </Suspense>
   );
 }

@@ -82,6 +82,9 @@ model User {
   image         String?
   phone         String?
 
+  // Newsletter subscription
+  acceptsNewsletter Boolean @default(false)
+
   // Stripe
   stripeCustomerId String? @unique
 
