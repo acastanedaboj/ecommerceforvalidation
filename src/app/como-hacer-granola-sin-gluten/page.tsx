@@ -66,6 +66,17 @@ function buildRecipeSchema() {
     name: 'Granola Sin Gluten Casera',
     description:
       'Receta fácil de granola sin gluten casera, apta para celíacos. Crujiente, deliciosa y personalizable.',
+    image: [
+      `${SITE_URL}/images/hero-sin-gluten.jpeg`,
+    ],
+    author: {
+      '@type': 'Organization',
+      name: 'Poppy',
+      url: SITE_URL,
+    },
+    datePublished: '2026-01-15',
+    prepTime: 'PT15M',
+    cookTime: 'PT60M',
     keywords: 'granola sin gluten, receta celiaca, granola casera',
     totalTime: 'PT1H15M',
     recipeYield: '10 porciones',
