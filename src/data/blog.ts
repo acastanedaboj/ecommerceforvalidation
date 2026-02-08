@@ -657,14 +657,13 @@ Los frutos secos son uno de los 14 alérgenos de declaración obligatoria. Nuest
 
 - Almendras
 - Avellanas
-- Nueces pecanas
 - Anacardos
 
 Si tienes alergia a algún fruto seco, consulta siempre el etiquetado específico de cada producto.
 
-## ¿Cuántos frutos secos tiene nuestra granola?
+## ¿Cuántos frutos secos y semillas tiene nuestra granola?
 
-Aproximadamente el **25-30%** de nuestra granola son frutos secos y semillas. Es un porcentaje alto comparado con muchas granolas comerciales que apenas llegan al 10%.
+Aproximadamente el **40%** de nuestra granola son frutos secos y semillas (pipas de girasol, pipas de calabaza, almendras, anacardos, avellanas y lino). Es un porcentaje muy alto comparado con muchas granolas comerciales que apenas llegan al 10%.
 
 Esta proporción garantiza que en cada cucharada encuentres sabor, textura y nutrientes de los frutos secos, no solo avena con azúcar.
     `,
@@ -676,7 +675,7 @@ Esta proporción garantiza que en cada cucharada encuentres sabor, textura y nut
     tags: ['frutos-secos', 'nutricion', 'ingredientes', 'salud', 'proteina'],
     metaTitle: 'Frutos Secos en la Granola: Beneficios y Tipos | Poppy',
     metaDescription:
-      'Guía completa sobre los frutos secos en la granola: almendras, nueces pecanas, avellanas y anacardos. Beneficios nutricionales y cómo los elegimos.',
+      'Guía completa sobre los frutos secos y semillas en la granola: pipas de girasol, almendras, anacardos y avellanas. Beneficios nutricionales.',
   },
   {
     id: 'post_bowl_proteico',
@@ -1033,11 +1032,12 @@ Lee la etiqueta de una granola de supermercado y probablemente encuentres:
 ### Granola artesanal Poppy
 Nuestra etiqueta:
 
-- Copos de avena sin gluten (38-40%)
-- Miel ecológica (10-12%)
-- Frutos secos variados (25-30%)
-- Aceite de coco virgen extra
-- Especias naturales
+- Copos de avena sin gluten (50%)
+- Pipas de girasol y calabaza (25%)
+- Frutos secos: almendras, anacardos, avellanas (13%)
+- Miel ecológica (7%)
+- Aceite de coco virgen extra (4%)
+- Lino molido y especias naturales
 - Nada más
 
 ## Comparativa detallada
@@ -1045,7 +1045,7 @@ Nuestra etiqueta:
 **Industrial vs Artesanal:**
 
 - **Azúcares:** 20-25g/100g vs 12-14g/100g
-- **Frutos secos:** 5-10% vs 25-30%
+- **Frutos secos y semillas:** 5-10% vs 40%
 - **Tipo de grasa:** Girasol/palma vs Coco virgen
 - **Endulzante:** Azúcar/jarabe vs Miel ecológica
 - **Procesado:** Extrusión masiva vs Horneado en lotes
@@ -1087,7 +1087,7 @@ Una granola artesanal como Poppy cuesta 7€/150g.
 - Control artesanal vs automatizado
 
 **Cantidades:**
-- 25-30% de frutos secos vs 5-10%
+- 40% de frutos secos y semillas vs 5-10%
 - Menos azúcar, más ingredientes de calidad
 
 ## El test del sabor
@@ -1658,27 +1658,26 @@ Busca estas características:
 - [ ] Sin jarabes ni azúcares refinados
 - [ ] Endulzada con miel, dátiles o agave (mejor perfil glucémico)
 
-## Nuestra granola de dátiles: dulzor sin azúcar añadido
+## Nuestra granola vegana: alternativa sin miel
 
-En Poppy desarrollamos una granola específicamente pensada para quienes buscan reducir azúcar:
+En Poppy desarrollamos una granola específicamente pensada para quienes siguen una dieta vegana:
 
 ### Características
-- **Endulzante:** 100% dátiles Medjool (sin miel ni azúcar añadido)
-- **Azúcar total:** 18g/100g (todo procedente de los dátiles)
+- **Endulzante:** Sirope de agave ecológico (sin miel)
+- **Azúcar total:** 14g/100g
 - **Fibra:** 7g/100g
-- **Frutos secos:** 29% (almendras, nueces pecanas, anacardos)
-- **IG estimado:** Medio-bajo gracias a la alta proporción de frutos secos
+- **Frutos secos y semillas:** 40% (pipas de girasol, pipas de calabaza, almendras, anacardos, avellanas, lino)
+- **100% vegana:** Sin ningún ingrediente de origen animal
 
-### Por qué dátiles
+### Por qué sirope de agave
 
-Los dátiles Medjool aportan:
-- Dulzor natural intenso
-- Fibra que ralentiza la absorción
-- Potasio (696mg/100g)
-- Magnesio
-- Antioxidantes
+El sirope de agave ecológico aporta:
+- Dulzor natural equilibrado
+- Índice glucémico más bajo que el azúcar
+- Compatible con dietas veganas
+- Caramelización perfecta durante el horneado
 
-A diferencia del azúcar refinado, el dulzor de los dátiles viene "empaquetado" con nutrientes que moderan su impacto glucémico.
+A diferencia del azúcar refinado, el sirope de agave proporciona un dulzor suave que realza el sabor de los frutos secos y semillas.
 
 ## Recetas bajas en azúcar con granola
 

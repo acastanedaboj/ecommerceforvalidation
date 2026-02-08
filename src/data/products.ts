@@ -47,11 +47,11 @@ export const products: Product[] = [
     sku: 'GRAN-150-CLA',
     name: 'Granola Clásica',
     slug: 'granola-clasica-150g',
-    description: `Nuestra granola clásica es la receta original que dio vida a Poppy. Un equilibrio perfecto entre la avena sin gluten, la miel ecológica de apicultores locales y una mezcla premium de frutos secos que define nuestro sabor característico.
+    description: `Nuestra granola clásica es la receta original que dio vida a Poppy. Un equilibrio perfecto entre la avena sin gluten, la miel ecológica y una mezcla premium de semillas y frutos secos que define nuestro sabor característico.
 
-Los frutos secos y las semillas de girasol y calabaza se remojan cuidadosamente antes de hornear para mejorar su digestibilidad. La miel ecológica carameliza suavemente durante el tostado lento, creando clusters perfectos.
+Las pipas de girasol y calabaza son las protagonistas, junto con almendras, anacardos y avellanas seleccionadas. La miel ecológica carameliza suavemente durante el tostado lento, creando clusters perfectos.
 
-Nueces pecanas, almendras, avellanas y anacardos se tuestan junto con semillas de girasol y calabaza, aportando un perfil de sabor complejo y satisfactorio. El toque sutil de canela y jengibre completa la experiencia.
+El lino molido aporta omega-3 y el toque sutil de canela y jengibre completa la experiencia. Cada bolsa de 150g está elaborada con la proporción exacta para el crunch perfecto.
 
 **El sabor que nos hizo famosos. Sencillo, auténtico, irresistible.**`,
     shortDescription:
@@ -59,9 +59,9 @@ Nueces pecanas, almendras, avellanas y anacardos se tuestan junto con semillas d
     priceInCents: 700,
     weight: 150,
     ingredients:
-      'Copos de avena sin gluten* (40%), miel ecológica* (12%), nueces pecanas (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), sal marina (0.5%). *De agricultura ecológica.',
+      'Copos de avena sin gluten* (50%), pipas de girasol (17%), pipas de calabaza (8%), miel ecológica* (7%), almendras (6%), anacardos (5%), aceite de coco virgen extra* (4%), avellanas (2%), lino molido (1%), especias (canela, jengibre) (<1%). *De agricultura ecológica.',
     allergens:
-      'Contiene: frutos de cáscara (almendras, avellanas, anacardos, nueces pecanas). Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
+      'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
     nutritionalInfo: {
       servingSize: 'por 100g',
       calories: 445,
@@ -101,9 +101,9 @@ Perfecta para el desayuno, como topping de yogur o simplemente para picar entre 
     priceInCents: 700,
     weight: 150,
     ingredients:
-      'Copos de avena sin gluten* (38%), miel ecológica* (10%), pepitas de chocolate negro 70% (12%), cacao en polvo puro* (8%), nibs de cacao* (5%), almendras (8%), avellanas (6%), aceite de coco virgen extra* (4%), pipas de girasol (4%), lino molido (3%), vainilla natural (1%), sal marina (0.5%). *De agricultura ecológica.',
+      'Copos de avena sin gluten* (48%), pipas de girasol (16%), pipas de calabaza (8%), miel ecológica* (7%), almendras (5%), anacardos (5%), aceite de coco virgen extra* (4%), cacao en polvo puro* (3%), pepitas de chocolate negro 70% (2%), avellanas (2%), lino molido (1%), especias (canela, vainilla) (<1%). *De agricultura ecológica.',
     allergens:
-      'Contiene: frutos de cáscara (avellanas, almendras), cacao. Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
+      'Contiene: frutos de cáscara (almendras, avellanas, anacardos), cacao. Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
     nutritionalInfo: {
       servingSize: 'por 100g',
       calories: 460,
@@ -143,9 +143,9 @@ El toque de canela de Ceilán y jengibre fresco realzan los aromas naturales de 
     priceInCents: 700,
     weight: 150,
     ingredients:
-      'Copos de avena sin gluten* (40%), miel de azahar ecológica* (12%), almendras marcona (10%), nueces (8%), naranja confitada (8%), ralladura de naranja natural (3%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%). *De agricultura ecológica.',
+      'Copos de avena sin gluten* (48%), pipas de girasol (16%), pipas de calabaza (8%), miel ecológica* (7%), almendras (5%), anacardos (5%), aceite de coco virgen extra* (4%), naranja confitada (3%), ralladura de naranja natural (2%), avellanas (2%), lino molido (1%), especias (canela, jengibre) (<1%). *De agricultura ecológica.',
     allergens:
-      'Contiene: frutos de cáscara (almendras, nueces). Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
+      'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
     nutritionalInfo: {
       servingSize: 'por 100g',
       calories: 445,
@@ -170,24 +170,24 @@ El toque de canela de Ceilán y jengibre fresco realzan los aromas naturales de 
   },
   {
     id: 'prod_granola_datiles',
-    sku: 'GRAN-150-DAT',
-    name: 'Granola de Dátiles',
-    slug: 'granola-datiles-150g',
-    description: `Nuestra granola de dátiles es un homenaje a los sabores del Mediterráneo. Los dátiles Medjool, conocidos como el "fruto de los reyes", aportan una dulzura natural y caramelizada que hace innecesario cualquier azúcar añadido.
+    sku: 'GRAN-150-VEG',
+    name: 'Granola Vegana',
+    slug: 'granola-vegana-150g',
+    description: `Nuestra granola vegana tiene la misma receta deliciosa que la clásica, pero endulzada con sirope de agave en lugar de miel. Perfecta para quienes siguen una alimentación 100% vegetal.
 
-Combinamos los dátiles con nuestra base de avena sin gluten y los enriquecemos con almendras, nueces pecanas y semillas de sésamo tostado. El resultado es una granola con un dulzor natural intenso pero equilibrado.
+Las pipas de girasol y calabaza son las protagonistas, junto con almendras, anacardos y avellanas seleccionadas. El sirope de agave ecológico carameliza suavemente durante el tostado lento, creando clusters perfectos.
 
-El toque de cardamomo y canela transporta a los zocos del Mediterráneo, mientras que el aceite de coco virgen extra garantiza ese tostado perfecto.
+El lino molido aporta omega-3 y el toque sutil de canela y jengibre completa la experiencia. Mismos ingredientes premium, misma calidad artesanal, 100% vegana.
 
-**Dulzura natural, sin azúcares añadidos.**`,
+**Todo el sabor Poppy, apto para veganos.**`,
     shortDescription:
-      'Granola con dátiles Medjool y frutos secos. Sin miel, apta para veganos. Dulzura 100% natural sin azúcares añadidos.',
+      'Nuestra receta clásica endulzada con sirope de agave. Sin miel, 100% vegana. Mismo sabor, misma calidad.',
     priceInCents: 700,
     weight: 150,
     ingredients:
-      'Copos de avena sin gluten* (38%), dátiles Medjool (18%), almendras (10%), nueces pecanas (8%), anacardos (6%), semillas de sésamo tostado (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), cardamomo molido (1%), canela de Ceilán (1%), sal marina (0.5%). *De agricultura ecológica.',
+      'Copos de avena sin gluten* (50%), pipas de girasol (17%), pipas de calabaza (8%), sirope de agave* (7%), almendras (6%), anacardos (5%), aceite de coco virgen extra* (4%), avellanas (2%), lino molido (1%), especias (canela, jengibre) (<1%). *De agricultura ecológica.',
     allergens:
-      'Contiene: frutos de cáscara (almendras, nueces pecanas, anacardos), sésamo. Producido en instalaciones que procesan gluten y soja. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
+      'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
     nutritionalInfo: {
       servingSize: 'por 100g',
       calories: 440,
@@ -203,10 +203,10 @@ El toque de cardamomo y canela transporta a los zocos del Mediterráneo, mientra
     stock: 180,
     isActive: true,
     categoryId: 'cat_granola',
-    tags: ['sin-gluten', 'ecológico', 'artesanal', 'dátiles', 'sin-azúcar', 'vegano', 'sin-miel'],
-    metaTitle: 'Granola de Dátiles 150g | Vegana Sin Miel | Poppy',
+    tags: ['sin-gluten', 'ecológico', 'artesanal', 'vegano', 'sin-miel', 'sirope-agave'],
+    metaTitle: 'Granola Vegana 150g | Sin Miel, Con Sirope de Agave | Poppy',
     metaDescription:
-      'Granola Poppy de dátiles Medjool 150g. Sin gluten, vegana, sin miel. Dulzura 100% natural. Envío gratis +4 bolsas.',
+      'Granola Poppy vegana 150g. Sin gluten, sin miel, endulzada con sirope de agave ecológico. Envío gratis +4 bolsas.',
     hasHoney: false,
     isVegan: true,
   },
@@ -227,9 +227,9 @@ Solicita información sobre precios mayoristas y condiciones de distribución a 
     priceInCents: 2800,
     weight: 1000,
     ingredients:
-      'Copos de avena sin gluten* (40%), miel ecológica* (12%), nueces pecanas (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecológica.',
+      'Copos de avena sin gluten* (50%), pipas de girasol (17%), pipas de calabaza (8%), miel ecológica* (7%), almendras (6%), anacardos (5%), aceite de coco virgen extra* (4%), avellanas (2%), lino molido (1%), especias (canela, jengibre) (<1%). *De agricultura ecológica.',
     allergens:
-      'Contiene: frutos de cáscara (almendras, avellanas, anacardos, nueces pecanas). Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
+      'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
     nutritionalInfo: {
       servingSize: 'por 100g',
       calories: 445,
