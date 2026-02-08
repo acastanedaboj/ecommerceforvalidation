@@ -1,11 +1,9 @@
 import { NextAuthOptions } from 'next-auth';
 import GoogleProvider from 'next-auth/providers/google';
-import { PrismaAdapter } from '@auth/prisma-adapter';
 import prisma from '@/lib/db';
 import { sendWelcomeEmail } from '@/lib/email';
 
 export const authOptions: NextAuthOptions = {
-  adapter: PrismaAdapter(prisma) as NextAuthOptions['adapter'],
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID || '',
@@ -20,24 +18,39 @@ export const authOptions: NextAuthOptions = {
     signIn: '/auth/login',
     error: '/auth/error',
   },
-  events: {
-    // Send welcome email on first sign in
-    async signIn({ user, isNewUser }) {
-      // Only send welcome email for new users
-      if (isNewUser && user.email) {
+  callbacks: {
+    async signIn({ user, account, profile }) {
+      // Check if user exists and send welcome email if new
+      if (user.email) {
         try {
-          await sendWelcomeEmail({
-            name: user.name || 'Amig@',
-            email: user.email,
+          const existingUser = await prisma.user.findUnique({
+            where: { email: user.email },
           });
-          console.log('Welcome email sent to:', user.email);
+
+          if (!existingUser) {
+            // Create user in database
+            await prisma.user.create({
+              data: {
+                email: user.email,
+                name: user.name,
+                image: user.image,
+              },
+            });
+
+            // Send welcome email to new user
+            await sendWelcomeEmail({
+              name: user.name || 'Amig@',
+              email: user.email,
+            });
+            console.log('Welcome email sent to new user:', user.email);
+          }
         } catch (error) {
-          console.error('Failed to send welcome email:', error);
+          console.error('Error in signIn callback:', error);
+          // Don't block sign in if email fails
         }
       }
+      return true;
     },
-  },
-  callbacks: {
     async jwt({ token, user, account, profile }) {
       // Add user info to JWT token on sign in
       if (user) {
