@@ -131,6 +131,11 @@ export const NAVIGATION = {
     recursos: [
       { name: 'Granola sin gluten', href: '/granola-sin-gluten' },
       { name: 'Granola para celíacos', href: '/granola-para-celiacos' },
+      { name: 'Granola ecológica', href: '/granola-ecologica' },
+      { name: 'Granola vegana', href: '/granola-vegana' },
+      { name: 'Mejor granola España', href: '/mejor-granola-sin-gluten-espana' },
+      { name: 'vs. Mercadona', href: '/granola-sin-gluten-mercadona' },
+      { name: 'vs. Carrefour', href: '/granola-sin-gluten-carrefour' },
       { name: 'Guía celíaquía', href: '/guia-celiaquia-dieta-sin-gluten' },
       { name: 'Cómo hacer granola', href: '/como-hacer-granola-sin-gluten' },
     ],

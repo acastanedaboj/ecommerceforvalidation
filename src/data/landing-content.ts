@@ -256,7 +256,7 @@ export const veganaContent = {
   comparison: {
     title: 'Transparencia total',
     description:
-      'Queremos que sepas exactamente qué contiene cada producto. Nuestras otras granolas (Clásica, Chocolate y Naranja) contienen miel ecológica de apicultores locales.',
+      'Queremos que sepas exactamente qué contiene cada producto. Nuestras otras granolas (Clásica, Chocolate y Naranja) contienen <a href="/granola-ecologica" class="text-earth-600 hover:underline">miel ecológica</a> de apicultores locales. Todos los sabores son <a href="/granola-sin-gluten" class="text-earth-600 hover:underline">100% sin gluten</a>.',
   },
   faqs: [
     {
@@ -545,7 +545,7 @@ export const mercadonaContent = {
   intro: {
     title: '¿Granola de Mercadona o granola artesanal?',
     description:
-      'Muchas personas buscan "granola sin gluten Mercadona" porque es conveniente y conocido. Pero ¿cuál es realmente la diferencia entre la granola de supermercado y una artesanal? Te lo explicamos todo.',
+      'Muchas personas buscan "granola sin gluten Mercadona" porque es conveniente y conocido. Pero ¿cuál es realmente la diferencia entre la granola de supermercado y una artesanal? Te lo explicamos todo. También puedes ver nuestra <a href="/granola-sin-gluten-carrefour" class="text-earth-600 hover:underline">comparativa con Carrefour</a> y un <a href="/mejor-granola-sin-gluten-espana" class="text-earth-600 hover:underline">ranking completo de granolas sin gluten</a>.',
   },
   comparison: {
     title: 'Comparativa: Poppy vs Opciones de Supermercado',
@@ -698,7 +698,7 @@ export const carrefourContent = {
   intro: {
     title: '¿Carrefour o granola artesanal?',
     description:
-      'Carrefour tiene una selección amplia de productos sin gluten, pero ¿cómo se comparan con una granola artesanal premium? Analizamos precio, ingredientes, sabor y calidad.',
+      'Carrefour tiene una selección amplia de productos sin gluten, pero ¿cómo se comparan con una <a href="/granola-ecologica" class="text-earth-600 hover:underline">granola artesanal premium</a>? Analizamos precio, ingredientes, sabor y calidad. También puedes ver nuestra <a href="/granola-sin-gluten-mercadona" class="text-earth-600 hover:underline">comparativa con Mercadona</a> y un <a href="/mejor-granola-sin-gluten-espana" class="text-earth-600 hover:underline">ranking completo</a>.',
   },
   comparison: {
     title: 'Tabla comparativa completa',
@@ -1654,7 +1654,7 @@ export const ecologicaContent = {
   intro: {
     title: '¿Qué hace ecológica a nuestra granola?',
     description:
-      'En Poppy seleccionamos ingredientes de agricultura ecológica certificada porque creemos que la calidad empieza en el origen. Miel de apicultores que cuidan las abejas, avena cultivada sin pesticidas, aceites prensados en frío. No es solo una etiqueta, es un compromiso.',
+      'En Poppy seleccionamos ingredientes de agricultura ecológica certificada porque creemos que la calidad empieza en el origen. Miel de apicultores que cuidan las abejas, <a href="/granola-sin-gluten" class="text-earth-600 hover:underline">avena sin gluten</a> cultivada sin pesticidas, aceites prensados en frío. Además, ofrecemos <a href="/granola-vegana" class="text-earth-600 hover:underline">opciones 100% veganas</a> con sirope de agave. No es solo una etiqueta, es un compromiso.',
   },
   ingredientes: {
     title: 'Nuestros ingredientes ecológicos',
@@ -1847,7 +1847,7 @@ export const mejorGranolaContent = {
   intro: {
     title: '¿Cómo elegir la mejor granola sin gluten?',
     description:
-      'No todas las granolas sin gluten son iguales. Hay diferencias enormes en ingredientes, procesos y precios. En esta guía analizamos los criterios que debes considerar y comparamos las opciones más populares en España.',
+      'No todas las granolas sin gluten son iguales. Hay diferencias enormes en ingredientes, procesos y precios. En esta guía analizamos los criterios que debes considerar y comparamos las opciones más populares en España, incluyendo alternativas a las <a href="/granola-sin-gluten-mercadona" class="text-earth-600 hover:underline">granolas de Mercadona</a> y <a href="/granola-sin-gluten-carrefour" class="text-earth-600 hover:underline">Carrefour</a>.',
   },
   criterios: {
     title: 'Criterios de evaluación',

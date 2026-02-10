@@ -319,6 +319,14 @@ La avena es naturalmente libre de gluten, pero presenta un problema: la contamin
 
 En Poppy utilizamos avena de cultivos dedicados, procesada en instalaciones con estrictos protocolos de limpieza. Cada lote se analiza para garantizar niveles por debajo de 20 ppm.
 
+## Más recursos
+
+Si estás buscando opciones de granola sin gluten, te pueden interesar:
+- [Comparativa completa: mejor granola sin gluten en España](/mejor-granola-sin-gluten-espana)
+- [Granola sin gluten de Mercadona: análisis y alternativas](/granola-sin-gluten-mercadona)
+- [Granola sin gluten de Carrefour: comparativa](/granola-sin-gluten-carrefour)
+- [Granola vegana 100% sin miel](/granola-vegana)
+
 **Nota importante:** Si tienes enfermedad celíaca severa, consulta siempre con tu médico antes de introducir cualquier producto nuevo.
     `,
     coverImage: '/images/blog/granola-sin-gluten-celiacos.png',
@@ -1535,6 +1543,13 @@ Las mismas que cualquier desayuno equilibrado: entre 300-500 kcal dependiendo de
 ---
 
 **¿Cuál es tu desayuno sin gluten favorito?** Comparte tus ideas con nosotros en redes sociales.
+
+## Más información sobre granola sin gluten
+
+- [Guía completa sobre avena sin gluten](/blog/avena-sin-gluten-guia-completa-celiacos)
+- [Mejor granola sin gluten en España: comparativa](/mejor-granola-sin-gluten-espana)
+- [Granola ecológica con ingredientes BIO](/granola-ecologica)
+- [Opciones veganas sin miel](/granola-vegana)
 
 *Nota: Este artículo tiene fines informativos. Si tienes dudas sobre tu dieta sin gluten, consulta con tu médico o nutricionista especializado.*
     `,
