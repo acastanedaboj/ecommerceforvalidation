@@ -125,6 +125,36 @@ export function buildProductSchema(product: Product, url: string) {
     ? product.images[0]
     : `${SITE_URL}${product.images[0]}`;
 
+  // Build dietary suitability array
+  const suitableForDiet: string[] = ['https://schema.org/GlutenFreeDiet'];
+  if (product.isVegan) {
+    suitableForDiet.push('https://schema.org/VeganDiet');
+  }
+
+  // Build additional properties for rich attributes
+  const additionalProperty = [
+    {
+      '@type': 'PropertyValue',
+      name: 'Sin Gluten',
+      value: 'Sí - Avena certificada ≤20ppm',
+    },
+    {
+      '@type': 'PropertyValue',
+      name: 'Ecológico',
+      value: 'Sí - Ingredientes de agricultura ecológica',
+    },
+    {
+      '@type': 'PropertyValue',
+      name: 'Elaboración',
+      value: 'Artesanal - Tostado lento en pequeños lotes',
+    },
+    {
+      '@type': 'PropertyValue',
+      name: 'Vegano',
+      value: product.isVegan ? 'Sí' : 'No - Contiene miel',
+    },
+  ];
+
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -133,6 +163,7 @@ export function buildProductSchema(product: Product, url: string) {
     image: imageUrl,
     url: fullUrl,
     sku: product.sku,
+    gtin13: undefined, // Add EAN/GTIN when available
     brand: {
       '@type': 'Brand',
       name: BRAND_NAME,
@@ -140,6 +171,19 @@ export function buildProductSchema(product: Product, url: string) {
     manufacturer: {
       '@type': 'Organization',
       name: BRAND_NAME,
+    },
+    category: 'Alimentación > Cereales y Granola > Granola Sin Gluten',
+    weight: {
+      '@type': 'QuantitativeValue',
+      value: product.weight,
+      unitCode: 'GRM',
+      unitText: 'g',
+    },
+    additionalProperty,
+    suitableForDiet,
+    countryOfOrigin: {
+      '@type': 'Country',
+      name: 'España',
     },
     offers: {
       '@type': 'Offer',
@@ -153,36 +197,82 @@ export function buildProductSchema(product: Product, url: string) {
         product.stock > 0
           ? 'https://schema.org/InStock'
           : 'https://schema.org/OutOfStock',
+      itemCondition: 'https://schema.org/NewCondition',
       seller: {
         '@type': 'Organization',
         name: BRAND_NAME,
       },
-      shippingDetails: {
-        '@type': 'OfferShippingDetails',
-        shippingRate: {
-          '@type': 'MonetaryAmount',
-          value: '4.95',
-          currency: 'EUR',
-        },
-        shippingDestination: {
-          '@type': 'DefinedRegion',
-          addressCountry: 'ES',
-        },
-        deliveryTime: {
-          '@type': 'ShippingDeliveryTime',
-          handlingTime: {
-            '@type': 'QuantitativeValue',
-            minValue: 1,
-            maxValue: 2,
-            unitCode: 'DAY',
+      shippingDetails: [
+        {
+          '@type': 'OfferShippingDetails',
+          shippingRate: {
+            '@type': 'MonetaryAmount',
+            value: '4.95',
+            currency: 'EUR',
           },
-          transitTime: {
-            '@type': 'QuantitativeValue',
-            minValue: 2,
-            maxValue: 4,
-            unitCode: 'DAY',
+          shippingDestination: {
+            '@type': 'DefinedRegion',
+            addressCountry: 'ES',
+          },
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            handlingTime: {
+              '@type': 'QuantitativeValue',
+              minValue: 1,
+              maxValue: 2,
+              unitCode: 'DAY',
+            },
+            transitTime: {
+              '@type': 'QuantitativeValue',
+              minValue: 2,
+              maxValue: 4,
+              unitCode: 'DAY',
+            },
           },
         },
+        {
+          '@type': 'OfferShippingDetails',
+          shippingRate: {
+            '@type': 'MonetaryAmount',
+            value: '0',
+            currency: 'EUR',
+          },
+          shippingDestination: {
+            '@type': 'DefinedRegion',
+            addressCountry: 'ES',
+          },
+          freeShippingThreshold: {
+            '@type': 'DeliveryChargeSpecification',
+            freeShippingThreshold: {
+              '@type': 'MonetaryAmount',
+              value: '35.00',
+              currency: 'EUR',
+            },
+          },
+          deliveryTime: {
+            '@type': 'ShippingDeliveryTime',
+            handlingTime: {
+              '@type': 'QuantitativeValue',
+              minValue: 1,
+              maxValue: 2,
+              unitCode: 'DAY',
+            },
+            transitTime: {
+              '@type': 'QuantitativeValue',
+              minValue: 2,
+              maxValue: 4,
+              unitCode: 'DAY',
+            },
+          },
+        },
+      ],
+      hasMerchantReturnPolicy: {
+        '@type': 'MerchantReturnPolicy',
+        applicableCountry: 'ES',
+        returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
+        merchantReturnDays: 14,
+        returnMethod: 'https://schema.org/ReturnByMail',
+        returnFees: 'https://schema.org/FreeReturn',
       },
     },
     nutrition: {
@@ -190,24 +280,15 @@ export function buildProductSchema(product: Product, url: string) {
       servingSize: product.nutritionalInfo.servingSize,
       calories: `${product.nutritionalInfo.calories} kcal`,
       fatContent: `${product.nutritionalInfo.fat}g`,
+      saturatedFatContent: `${product.nutritionalInfo.saturatedFat}g`,
       carbohydrateContent: `${product.nutritionalInfo.carbohydrates}g`,
       sugarContent: `${product.nutritionalInfo.sugars}g`,
       fiberContent: `${product.nutritionalInfo.fiber}g`,
       proteinContent: `${product.nutritionalInfo.protein}g`,
       sodiumContent: `${product.nutritionalInfo.salt}g`,
     },
-    // Dietary attributes
-    ...(product.isVegan && {
-      suitableForDiet: 'https://schema.org/VeganDiet',
-    }),
-    // Aggregate rating placeholder (can be dynamic later)
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      reviewCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // aggregateRating: omitted until real reviews are collected.
+    // Hardcoded ratings violate Google's spam policy and risk manual action.
   };
 }
 
@@ -281,12 +362,12 @@ export function buildArticleSchema(post: BlogPost, url: string) {
 export function buildLocalBusinessSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'FoodEstablishment',
+    '@type': ['LocalBusiness', 'Store'],
     '@id': `${SITE_URL}/#localbusiness`,
-    name: `${BRAND_NAME} - Granola Artesanal Málaga`,
+    name: `${BRAND_NAME} - Granola Artesanal Sin Gluten`,
     alternateName: BRAND_NAME,
     description:
-      'Obrador artesanal de granola sin gluten en Málaga. Elaboramos granola ecológica con miel local de Málaga, avena certificada sin gluten y frutos secos premium. Envíos a toda España.',
+      'Compra granola artesanal sin gluten online. Obrador en Málaga. Elaboramos con avena certificada, miel ecológica y frutos secos premium. Envío gratis +4 uds a toda España.',
     image: [
       `${SITE_URL}/images/hero-granola.jpeg`,
       `${SITE_URL}/logo.svg`,
@@ -297,7 +378,7 @@ export function buildLocalBusinessSchema() {
       '@type': 'PostalAddress',
       streetAddress: BUSINESS.address.street,
       addressLocality: BUSINESS.address.city,
-      addressRegion: 'Málaga',
+      addressRegion: 'Andalucía',
       postalCode: BUSINESS.address.postalCode,
       addressCountry: 'ES',
     },
@@ -317,11 +398,44 @@ export function buildLocalBusinessSchema() {
       },
     ],
     priceRange: '€€',
-    servesCuisine: ['Desayuno saludable', 'Sin gluten', 'Ecológico'],
-    hasMenu: {
-      '@type': 'Menu',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Granola Artesanal Sin Gluten',
       url: `${SITE_URL}/tienda`,
-      name: 'Productos Poppy',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Granola Clásica Sin Gluten 150g',
+            url: `${SITE_URL}/tienda/granola-clasica-150g`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Granola de Chocolate Sin Gluten 150g',
+            url: `${SITE_URL}/tienda/granola-chocolate-150g`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Granola de Naranja Sin Gluten 150g',
+            url: `${SITE_URL}/tienda/granola-naranja-150g`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Product',
+            name: 'Granola Vegana Sin Gluten 150g',
+            url: `${SITE_URL}/tienda/granola-vegana-150g`,
+          },
+        },
+      ],
     },
     openingHoursSpecification: [
       {
@@ -333,19 +447,11 @@ export function buildLocalBusinessSchema() {
     ],
     paymentAccepted: ['Tarjeta de crédito', 'Tarjeta de débito', 'Transferencia bancaria'],
     currenciesAccepted: 'EUR',
-    // Keywords for local SEO
     keywords:
-      'granola Málaga, granola artesanal Málaga, granola sin gluten Málaga, granola ecológica Málaga, desayuno saludable Málaga, miel ecológica Málaga',
-    // Social profiles
+      'comprar granola artesanal, granola sin gluten Málaga, granola ecológica cerca de mí, comprar granola online España, granola artesanal a domicilio, mejor granola sin gluten',
     sameAs: [BUSINESS.socialMedia.instagram, BUSINESS.socialMedia.facebook],
-    // Aggregate rating
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.9',
-      reviewCount: '89',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // aggregateRating: omitted until real reviews are collected.
+    // Hardcoded ratings violate Google's spam policy and risk manual action.
   };
 }
 

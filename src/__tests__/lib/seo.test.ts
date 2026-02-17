@@ -177,7 +177,8 @@ describe('buildProductSchema', () => {
   });
 
   it('has shipping details', () => {
-    expect(schema.offers.shippingDetails['@type']).toBe('OfferShippingDetails');
+    expect(Array.isArray(schema.offers.shippingDetails)).toBe(true);
+    expect(schema.offers.shippingDetails[0]['@type']).toBe('OfferShippingDetails');
   });
 });
 
