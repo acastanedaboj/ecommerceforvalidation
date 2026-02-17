@@ -1143,13 +1143,13 @@ No competimos con la granola industrial. Somos otra categoría. Hacemos granola 
   {
     id: 'post_avena_sin_gluten',
     slug: 'avena-sin-gluten-guia-completa-celiacos',
-    title: 'Avena Sin Gluten: Todo lo que Necesitas Saber',
+    title: 'Avena Sin Gluten: Todo lo que Necesitas Saber sobre Contaminación Cruzada',
     excerpt:
-      '¿La avena tiene gluten? ¿Es segura para celíacos? Guía completa sobre avena certificada sin gluten, contaminación cruzada y cómo elegir avena segura.',
+      '¿La avena tiene gluten? Guía completa: cadena de contaminación cruzada paso a paso, cómo verificar etiquetas y qué hace Poppy en cada fase para garantizar tu seguridad.',
     content: `
-# Avena Sin Gluten: Guía Completa para Celíacos
+# Avena Sin Gluten: Guía Completa sobre Contaminación Cruzada
 
-La avena es uno de los cereales más nutritivos y versátiles, pero genera muchas dudas entre las personas con enfermedad celíaca o sensibilidad al gluten. ¿Es segura? ¿Qué significa "certificada sin gluten"? En esta guía respondemos todas tus preguntas con información basada en fuentes oficiales.
+La avena es uno de los cereales más nutritivos y versátiles, pero genera muchas dudas entre las personas con enfermedad celíaca o sensibilidad al gluten. ¿Es segura? ¿Qué significa "certificada sin gluten"? ¿Cómo puedes verificar que tu avena es realmente segura? En esta guía respondemos todas tus preguntas con información basada en fuentes oficiales.
 
 ## ¿La avena contiene gluten naturalmente?
 
@@ -1234,6 +1234,82 @@ Los **beta-glucanos** son un tipo de fibra soluble exclusiva de la avena con ben
 
 La EFSA (Autoridad Europea de Seguridad Alimentaria) ha aprobado declaraciones de salud para los beta-glucanos de la avena.
 
+## La cadena de contaminación: de campo a mesa
+
+La mayoría de guías mencionan la contaminación cruzada de pasada. Aquí te explicamos **exactamente dónde ocurre** y qué debería hacer un fabricante responsable en cada fase.
+
+### 1. El campo: donde empieza todo
+
+La avena convencional se cultiva en rotación con trigo y cebada. Las semillas de cosechas anteriores germinan entre la avena y se mezclan con ella. También los campos colindantes dispersan semillas por el viento.
+
+**Lo que exige la norma:** Campos dedicados exclusivamente a avena, sin rotación con cereales con gluten durante al menos 2 temporadas. Inspección visual de las parcelas antes de la cosecha.
+
+**Lo que hacemos en Poppy:** Trabajamos con proveedores que cultivan avena en parcelas dedicadas, verificadas por organismos de certificación independientes.
+
+### 2. La cosecha: maquinaria compartida
+
+Las cosechadoras, trilladoras y remolques procesan trigo por la mañana y avena por la tarde. Los restos de trigo se mezclan con la avena sin que nadie lo detecte.
+
+**Lo que exige la norma:** Maquinaria limpiada a fondo o dedicada. Registro documental de la limpieza.
+
+**Lo que hacemos en Poppy:** Nuestros proveedores usan cosechadoras que pasan protocolos de limpieza auditados antes de recoger avena certificada.
+
+### 3. El transporte: el eslabón invisible
+
+Los camiones y silos de almacenamiento transportan múltiples cereales. Un camión que llevó trigo ayer puede transportar avena hoy con restos de gluten en sus paredes.
+
+**Lo que exige la norma:** Transporte dedicado o limpieza verificada del vehículo. Documentación de la cadena de custodia.
+
+**Lo que hacemos en Poppy:** Transporte con trazabilidad documentada desde el campo hasta el molino.
+
+### 4. El molino: el punto crítico
+
+Aquí es donde se produce la mayor contaminación. Las fábricas convencionales procesan trigo, centeno, cebada y avena en las mismas líneas. Incluso con limpieza, los niveles de gluten residual pueden superar los 200 ppm.
+
+**Lo que exige la norma:** Líneas de procesado exclusivas para avena sin gluten, o protocolos de limpieza validados con análisis post-limpieza.
+
+**Lo que hacemos en Poppy:** Nuestra avena se procesa en **molinos exclusivos para avena sin gluten**. No comparten línea con ningún cereal con gluten. Cada lote se analiza antes de salir del molino.
+
+### 5. El obrador: nuestra responsabilidad directa
+
+Una vez la avena llega a nuestro obrador en Málaga, mantenemos la cadena de seguridad:
+
+- **Almacenamiento separado** de la avena respecto a otros ingredientes
+- **Protocolos de limpieza** entre lotes de producción
+- **Control de proveedores:** Todos nuestros ingredientes son verificados como aptos
+- **Certificado de análisis** de cada lote final de granola
+
+> El resultado: cada bolsa de granola Poppy contiene **menos de 20 ppm de gluten**, cumpliendo el Reglamento (UE) 828/2014. Puedes ver nuestros [4 sabores de granola sin gluten en la tienda](/tienda).
+
+## Cómo verificar que tu avena es realmente sin gluten
+
+No todas las etiquetas significan lo mismo. Aquí tienes una guía práctica para leer el envase de cualquier producto con avena:
+
+### Etiquetas que SÍ son seguras
+
+- **"Sin gluten" + Espiga Barrada:** Certificación oficial europea. El producto ha sido analizado y contiene <20 ppm.
+- **"Sin gluten" + logo FACE:** Certificado por la Federación de Asociaciones de Celíacos de España. Mismo estándar de <20 ppm.
+- **"Gluten-free" + certificación de terceros:** En productos importados, busca sellos como GFCO (Gluten-Free Certification Organization).
+
+### Etiquetas ENGAÑOSAS (no son garantía)
+
+- **"Sin gluten añadido"** — Solo significa que no han puesto gluten a propósito. **NO garantiza** ausencia de contaminación cruzada. Evítala si eres celíaco.
+- **"Naturalmente sin gluten"** — Correcto como dato botánico, pero **no dice nada** sobre contaminación en el procesado.
+- **"Puede contener trazas de gluten"** — El fabricante reconoce riesgo de contaminación. **No es segura para celíacos.**
+- **"Elaborado en instalaciones que procesan trigo"** — Riesgo real de contaminación cruzada. Recházala.
+
+### El checklist definitivo
+
+Antes de comprar cualquier producto con avena, verifica estos 5 puntos:
+
+1. **Símbolo de espiga barrada** o certificación FACE visible en el envase
+2. **Declaración explícita "sin gluten"** (no "sin gluten añadido")
+3. **Nombre del organismo certificador** (no solo una autodeclaración del fabricante)
+4. **Información sobre trazabilidad** (origen de la avena, tipo de cultivo)
+5. **Análisis por lotes** mencionado en la etiqueta o web del fabricante
+
+> En Poppy cumplimos los 5 puntos. Si quieres saber más sobre cómo adaptamos nuestros productos para celíacos, visita nuestra [guía de granola para celíacos](/granola-para-celiacos).
+
 ## Cómo usamos la avena en Poppy
 
 En Poppy utilizamos exclusivamente **avena certificada sin gluten** de proveedores con trazabilidad completa:
@@ -1243,7 +1319,7 @@ En Poppy utilizamos exclusivamente **avena certificada sin gluten** de proveedor
 - **Verificación:** Certificado de análisis en cada lote (<20 ppm)
 - **Almacenamiento:** Separación total de otros ingredientes
 
-Nuestro proceso garantiza que cada bolsa de granola Poppy es segura para personas con enfermedad celíaca.
+Nuestro proceso garantiza que cada bolsa de granola Poppy es segura para personas con enfermedad celíaca. Consulta la [tabla nutricional completa](/tabla-nutricional) de nuestras 4 variedades para comparar valores.
 
 ## Preguntas frecuentes sobre avena sin gluten
 
@@ -1293,12 +1369,12 @@ Ninguna diferencia nutricional ni de sabor. La única diferencia es el proceso d
     coverImage: '/images/blog/avena-sin-gluten.jpg',
     category: 'nutricion',
     author: 'Equipo Poppy',
-    publishedAt: '2026-02-05',
-    readingTime: 9,
-    tags: ['avena', 'sin-gluten', 'celiacos', 'nutricion', 'certificacion', 'guia'],
-    metaTitle: 'Avena Sin Gluten: Guía Completa para Celíacos | Poppy',
+    publishedAt: '2026-02-17',
+    readingTime: 12,
+    tags: ['avena', 'sin-gluten', 'celiacos', 'nutricion', 'certificacion', 'guia', 'contaminacion-cruzada', 'seguridad-alimentaria', 'etiquetado'],
+    metaTitle: 'Contaminación Cruzada del Gluten en Avena: Guía Completa | Poppy',
     metaDescription:
-      '¿La avena tiene gluten? Guía completa sobre avena certificada sin gluten para celíacos. Contaminación cruzada, certificaciones, beneficios y cómo elegir avena segura.',
+      'Cadena de contaminación cruzada del gluten en avena paso a paso: campo, cosecha, molino y obrador. Cómo verificar etiquetas y elegir avena realmente segura para celíacos.',
   },
   {
     id: 'post_desayuno_sin_gluten_semana',

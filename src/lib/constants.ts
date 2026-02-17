@@ -138,6 +138,7 @@ export const NAVIGATION = {
       { name: 'vs. Carrefour', href: '/granola-sin-gluten-carrefour' },
       { name: 'Guía celíaquía', href: '/guia-celiaquia-dieta-sin-gluten' },
       { name: 'Cómo hacer granola', href: '/como-hacer-granola-sin-gluten' },
+      { name: 'Tabla nutricional', href: '/tabla-nutricional' },
     ],
     ayuda: [
       { name: 'FAQ', href: '/faq' },

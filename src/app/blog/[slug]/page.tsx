@@ -85,9 +85,11 @@ export default function BlogPostPage({ params }: Props) {
 
   // Simple markdown-like parsing for the content
   const formatContent = (content: string) => {
-    // Helper function to parse inline markdown (bold)
+    // Helper function to parse inline markdown (bold + links)
     const parseInline = (text: string) => {
-      return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      return text
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-earth-600 underline hover:text-earth-700 transition-colors">$1</a>')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     };
 
     const lines = content.split('\n');
