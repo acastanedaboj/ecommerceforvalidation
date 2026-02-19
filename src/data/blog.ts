@@ -1923,6 +1923,8 @@ Los síntomas de la SGNC son muy similares a los de la celiaquía y aparecen gen
 - **Ansiedad o depresión**
 - **Anemia**
 
+%%BANNER:/images/blog/freepik__optimize-img1-for-affiliation-banner-display-in-we__24656.jpg|https://www.awin1.com/cread.php?awinmid=20039&awinaffid=2779502&campaign=HIVITAL&ued=https%3A%2F%2Fwww.hivital.com%2Fcategorias%2Fsistema-digestivo%2F|Hivital - Suplementos para el sistema digestivo%%
+
 ### ¿Cuándo aparecen los síntomas?
 
 A diferencia de la alergia al trigo (reacción inmediata), los síntomas de SGNC suelen aparecer:

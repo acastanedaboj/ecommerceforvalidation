@@ -191,6 +191,33 @@ export default function BlogPostPage({ params }: Props) {
         continue;
       }
 
+      // Affiliate banner: %%BANNER:imageUrl|href|altText%%
+      const bannerMatch = line.match(/^%%BANNER:([^|]+)\|([^|]+)\|([^%]+)%%$/);
+      if (bannerMatch) {
+        const [, src, href, alt] = bannerMatch;
+        elements.push(
+          <a
+            key={i}
+            href={href}
+            target="_blank"
+            rel="sponsored noopener noreferrer"
+            className="block my-8 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            aria-label={alt}
+          >
+            <Image
+              src={src}
+              alt={alt}
+              width={1200}
+              height={600}
+              className="w-full h-auto"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+          </a>
+        );
+        i++;
+        continue;
+      }
+
       // Blockquote
       if (line.startsWith('> ')) {
         elements.push(
