@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Truck, Leaf, Heart, RefreshCw, Star, Check, Wheat, Droplets, Sparkles, TreeDeciduous } from 'lucide-react';
+import { ArrowRight, Truck, Leaf, Check, Wheat, Droplets, Sparkles, TreeDeciduous } from 'lucide-react';
 import { ProductCard } from '@/components/product/ProductCard';
 import { getRetailProducts } from '@/data/products';
 import { formatPrice } from '@/lib/utils';
@@ -32,29 +32,41 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section - Editorial Style */}
+      {/* Hero Section - Goop-Style Horizontal Editorial */}
       <section className="relative bg-white overflow-hidden">
-        <div className="container-custom pt-10 pb-16 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Hero Content */}
-            <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
-              <span className="inline-block text-xs tracking-widest uppercase text-stone-500 mb-6 animate-fade-in">
+        <div className="grid lg:grid-cols-2 min-h-[85vh]">
+          {/* Hero Image - Edge to edge */}
+          <div className="relative min-h-[50vh] lg:min-h-full order-1 lg:order-1 animate-fade-in">
+            <Image
+              src="/products/hero1.jpg"
+              alt="Poppy granola con frutos secos y miel"
+              fill
+              className="object-cover"
+              priority
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+          </div>
+
+          {/* Hero Content */}
+          <div className="flex items-center order-2 lg:order-2">
+            <div className="px-8 py-16 md:px-16 lg:px-20 xl:px-28 max-w-2xl animate-fade-in-up">
+              <span className="inline-block text-[11px] tracking-[0.25em] uppercase text-stone-400 mb-8">
                 Sin gluten certificado
               </span>
 
-              <h1 className="font-display text-stone-800 mb-8 animate-fade-in-up">
+              <h1 className="font-display text-stone-800 mb-8 leading-[1.05]">
                 Granola artesanal
                 <br />
                 <span className="text-earth-600">sin gluten real</span>
               </h1>
 
-              <p className="text-base md:text-lg text-stone-600 mb-10 leading-relaxed animate-fade-in-up animation-delay-100">
+              <p className="text-base text-stone-500 mb-10 leading-relaxed max-w-md animation-delay-100 animate-fade-in-up">
                 Elaborada a mano con avena sin gluten certificada, miel ecológica
                 de apicultores locales y los mejores frutos secos y semillas,
                 remojados para facilitar la digestión.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-200">
+              <div className="flex flex-col sm:flex-row gap-4 animate-fade-in-up animation-delay-200">
                 <Link href="/tienda" className="btn-primary btn-lg group">
                   Comprar ahora
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
@@ -65,7 +77,7 @@ export default function HomePage() {
               </div>
 
               {/* Trust indicators */}
-              <div className="flex flex-wrap gap-8 mt-12 justify-center lg:justify-start text-xs tracking-wide uppercase text-stone-500 animate-fade-in-up animation-delay-300">
+              <div className="flex flex-wrap gap-8 mt-14 text-[11px] tracking-[0.2em] uppercase text-stone-400 animate-fade-in-up animation-delay-300">
                 <span className="flex items-center gap-2">
                   <Truck className="w-4 h-4" strokeWidth={1.5} />
                   Envío gratis +4 bolsas
@@ -74,41 +86,6 @@ export default function HomePage() {
                   <Leaf className="w-4 h-4" strokeWidth={1.5} />
                   100% Natural
                 </span>
-              </div>
-            </div>
-
-            {/* Hero Image */}
-            <div className="relative animate-fade-in animation-delay-200">
-              <div className="relative aspect-[4/5] max-w-lg mx-auto">
-                {/* Main image - sharp corners */}
-                <div className="relative w-full h-full overflow-hidden">
-                  <Image
-                    src="/products/hero1.jpg"
-                    alt="Poppy granola con frutos secos y miel"
-                    fill
-                    className="object-cover"
-                    priority
-                    sizes="(max-width: 1024px) 100vw, 50vw"
-                  />
-                </div>
-
-                {/* Floating badge - Reviews */}
-                <div className="absolute -bottom-4 -left-4 bg-white shadow-lg p-4 animate-pulse-soft">
-                  <div className="flex items-center gap-3">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-4 h-4 fill-olive-500 text-olive-500"
-                        />
-                      ))}
-                    </div>
-                    <div>
-                      <p className="font-display text-stone-800">4.9/5</p>
-                      <p className="text-xs text-stone-500">+500 reseñas</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
