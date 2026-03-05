@@ -99,7 +99,7 @@ export default function NosotrosPage() {
               está realmente bueno: todos querían más.
             </p>
             <p className="text-stone-800 font-medium text-xl font-serif">
-              Poppy es la granola que tomo cada mañana. Con ingredientes de
+              Poppy es la granola que tomo cuando quiero granola. Con ingredientes de
               calidad, un proceso pensado para cuidar la digestión y sin nada que
               sobre. Si no es buena para mí, no es buena para ti.
             </p>
