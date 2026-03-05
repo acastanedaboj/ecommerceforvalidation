@@ -111,7 +111,7 @@ export default function NosotrosPage() {
       <section className="w-full">
         <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
           <Image
-            src="/images/nosotros-divider.jpg"
+            src="/images/nosotros-divider.png"
             alt="Preparando granola artesanal en la cocina"
             fill
             className="object-cover"
