@@ -167,7 +167,7 @@ export default function HomePage() {
                 Ingredientes remojados
               </h3>
               <p className="text-stone-600 text-sm leading-relaxed">
-                Frutos secos y semillas remojados para mejor digestibilidad.
+                Frutos secos y semillas remojados para mejor digestión.
               </p>
             </div>
 
