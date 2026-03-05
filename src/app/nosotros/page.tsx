@@ -107,6 +107,18 @@ export default function NosotrosPage() {
         </div>
       </section>
 
+      {/* Divider Image */}
+      <section className="w-full">
+        <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
+          <Image
+            src="/images/nosotros-divider.jpg"
+            alt="Preparando granola artesanal en la cocina"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </section>
+
       {/* Values Section */}
       <section className="py-16 sm:py-24 bg-white">
         <div className="max-w-6xl mx-auto px-4">
