@@ -43,7 +43,7 @@ export default function SuscripcionPage() {
               <RefreshCw className="w-4 h-4" />
               Suscripción mensual
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6 text-[#ffffec]">
               Suscríbete y ahorra un {subscriptionInfo.discountPercentage}%
             </h1>
             <p className="text-xl text-[#ffffec]/80 mb-8">
