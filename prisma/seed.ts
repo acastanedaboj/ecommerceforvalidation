@@ -40,8 +40,8 @@ async function main() {
       shortDescription: 'Granola artesanal premium con avena sin gluten, miel ecológica y frutos secos selectos.',
       priceInCents: 900,
       weight: 250,
-      ingredients: 'Copos de avena certificada sin gluten* (40%), miel ecológica* (12%), pipas de girasol (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecológica.',
-      allergens: 'Contiene: frutos de cáscara (almendras, avellanas, anacardos, pipas de girasol). Producido en instalaciones que procesan gluten, soja y sésamo.',
+      ingredients: 'Copos de avena integral sin gluten* (34%), pipas de girasol (15%), almendras (10%), anacardos (10%), pipas de calabaza (8%), miel ecológica* (8%), avellanas (6%), aceite de coco virgen extra* (6%), lino molido (2%), canela (1,8%), jengibre (0,3%). *De agricultura ecológica.',
+      allergens: 'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo.',
       nutritionalInfo: {
         servingSize: 'por 100g',
         calories: 475,
@@ -124,8 +124,8 @@ async function main() {
       shortDescription: 'Formato 1kg para hostelería y tiendas. Misma receta artesanal, tamaño profesional.',
       priceInCents: 2800,
       weight: 1000,
-      ingredients: 'Copos de avena certificada sin gluten* (40%), miel ecológica* (12%), pipas de girasol (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecológica.',
-      allergens: 'Contiene: frutos de cáscara (almendras, avellanas, anacardos, pipas de girasol). Producido en instalaciones que procesan gluten, soja y sésamo.',
+      ingredients: 'Copos de avena integral sin gluten* (34%), pipas de girasol (15%), almendras (10%), anacardos (10%), pipas de calabaza (8%), miel ecológica* (8%), avellanas (6%), aceite de coco virgen extra* (6%), lino molido (2%), canela (1,8%), jengibre (0,3%). *De agricultura ecológica.',
+      allergens: 'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo.',
       nutritionalInfo: {
         servingSize: 'por 100g',
         calories: 475,

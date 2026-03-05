@@ -873,27 +873,27 @@ export const recetaGranolaContent = {
     base: {
       title: 'Base (avena)',
       items: [
-        '250g de copos de avena certificada sin gluten',
+        '170g de copos de avena integral sin gluten',
       ],
     },
     frutoSecos: {
       title: 'Frutos secos y semillas',
       items: [
-        '85g de pipas de girasol',
+        '75g de pipas de girasol',
+        '50g de almendras troceadas',
+        '50g de anacardos troceados',
         '40g de pipas de calabaza',
-        '30g de almendras troceadas',
-        '25g de anacardos troceados',
-        '10g de avellanas troceadas',
-        '6g de lino molido',
+        '30g de avellanas troceadas',
+        '10g de lino molido',
       ],
     },
     endulzante: {
       title: 'Endulzante y grasa',
       items: [
-        '40ml de miel ecológica (o sirope de agave para versión vegana)',
-        '20ml de aceite de coco virgen extra',
-        '1/2 cucharadita de canela molida',
-        '1/4 cucharadita de jengibre en polvo',
+        '40g de miel ecológica (o sirope de agave para versión vegana)',
+        '30g de aceite de coco virgen extra',
+        '9g de canela molida',
+        '1,5g de jengibre en polvo',
       ],
     },
     extras: {

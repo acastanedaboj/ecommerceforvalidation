@@ -277,7 +277,7 @@ export default function PreventaPage() {
                   <span className="text-primary-600 mt-0.5">•</span>
                   <div>
                     <strong>Granola de Naranja:</strong> Con ralladura de naranja
-                    natural y miel de azahar. Frescura mediterránea en cada bocado.
+                    natural y miel ecológica de apicultores locales. Frescura mediterránea en cada bocado.
                   </div>
                 </li>
               </ul>
