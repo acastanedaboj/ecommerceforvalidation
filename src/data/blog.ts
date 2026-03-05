@@ -607,17 +607,6 @@ Los frutos secos son el alma de una buena granola. Aportan textura, sabor, prote
 
 **En nuestra granola:** Usamos almendras españolas, cortadas en láminas para mejor distribución.
 
-### Nueces Pecanas
-**Por qué las usamos:** Aportan un sabor acaramelado único y textura mantecosa.
-
-**Beneficios:**
-- Alto contenido en antioxidantes
-- Ricas en zinc
-- Omega-3 vegetal
-- Fibra
-
-**En nuestra granola:** Las partimos en trozos grandes para que se noten en cada bocado.
-
 ### Avellanas
 **Por qué las usamos:** Combinan perfectamente con el chocolate y la vainilla.
 

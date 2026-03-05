@@ -157,7 +157,7 @@ export default function HomePage() {
                 Frutos secos premium
               </h3>
               <p className="text-stone-600 text-sm leading-relaxed">
-                Pecanas, almendras, avellanas y anacardos de primera.
+                Almendras, avellanas y anacardos de primera.
               </p>
             </div>
 
