@@ -148,9 +148,9 @@ export default function HomePage() {
       </section>
 
       {/* Benefits Section - Editorial Style */}
-      <section className="py-20 md:py-28 bg-cream-100">
+      <section className="py-14 md:py-20 bg-cream-100">
         <div className="container-custom">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
               Calidad artesanal
             </p>
@@ -210,7 +210,7 @@ export default function HomePage() {
       {/* Products Section */}
       <section className="section bg-white">
         <div className="container-custom">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-14">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
             <div>
               <h2 className="font-display text-stone-800 mb-4">
                 Nuestros productos
@@ -243,9 +243,9 @@ export default function HomePage() {
       </section>
 
       {/* Pricing/Packs Section - Editorial Style */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-14 md:py-20 bg-white">
         <div className="container-custom">
-          <div className="text-center mb-16">
+          <div className="text-center mb-10">
             <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
               Precios
             </p>
@@ -313,7 +313,7 @@ export default function HomePage() {
           </div>
 
           {/* Subscription CTA */}
-          <div className="mt-20 bg-earth-600 p-12 md:p-16 text-center">
+          <div className="mt-14 bg-earth-600 p-10 md:p-14 text-center">
             <p className="text-xs tracking-widest uppercase text-[#ffffec]/60 mb-4">
               Suscripción mensual
             </p>
@@ -337,7 +337,7 @@ export default function HomePage() {
 
 
       {/* CTA Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="py-14 md:py-20 bg-white">
         <div className="container-custom text-center max-w-2xl mx-auto">
           <h2 className="font-display text-stone-800 mb-6">
             ¿Lista para probar la <span className="text-earth-600-display-italic">diferencia</span>?

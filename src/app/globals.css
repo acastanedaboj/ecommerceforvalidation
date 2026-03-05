@@ -194,7 +194,7 @@
 
   /* Section spacing - Generous & Breathing */
   .section {
-    @apply py-20 md:py-28 lg:py-32;
+    @apply py-14 md:py-20 lg:py-24;
     content-visibility: auto;
     contain-intrinsic-size: auto 500px;
   }
