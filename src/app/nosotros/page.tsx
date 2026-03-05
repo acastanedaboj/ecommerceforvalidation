@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Image from 'next/image';
 import Link from 'next/link';
 import { Leaf, Heart, Sun, Users, Award, Truck, ArrowRight } from 'lucide-react';
 import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
@@ -7,14 +6,14 @@ import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/
 export const metadata: Metadata = {
   title: 'Nuestra Historia | Granola Artesanal Sin Gluten',
   description:
-    'Conoce la historia de Poppy. Desde 2019 elaboramos granola artesanal sin gluten con ingredientes naturales y miel local. 100% natural, hecha con amor.',
+    'Conoce la historia de Poppy. Elaboramos granola artesanal sin gluten con ingredientes naturales, remojo de frutos secos y miel local. La granola que Pilar tomaría.',
   alternates: {
     canonical: getCanonicalUrl('/nosotros'),
   },
   openGraph: {
     title: 'Nuestra Historia | Poppy',
     description:
-      'Granola artesanal sin gluten elaborada con pasión. Ingredientes naturales, tostado lento, hecha a mano.',
+      'Granola artesanal sin gluten nacida de una necesidad real. Ingredientes naturales, proceso de remojo, tostado lento.',
     url: `${SITE_URL}/nosotros`,
   },
 };
@@ -41,10 +40,10 @@ const values = [
 ];
 
 const stats = [
-  { number: '2019', label: 'Año de fundación' },
-  { number: '15K+', label: 'Clientes felices' },
+  { number: '100%', label: 'Sin gluten certificado' },
   { number: '100%', label: 'Ingredientes naturales' },
   { number: '0', label: 'Azúcares refinados' },
+  { number: '0', label: 'Aditivos artificiales' },
 ];
 
 
@@ -63,66 +62,55 @@ export default function NosotrosPage() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-b from-earth-100 to-cream-50 py-20 sm:py-28">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <span className="inline-block px-4 py-1.5 bg-olive-100 text-olive-700 rounded-full text-sm font-medium mb-6">
+          <span className="inline-block px-4 py-1.5 bg-olive-100 text-olive-700 text-sm font-medium mb-6">
             Nuestra historia
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-stone-800 mb-6">
-            Granola hecha con{' '}
-            <span className="text-earth-600">pasion</span> y{' '}
-            <span className="text-olive-600">naturaleza</span>
+            Nacida de una{' '}
+            <span className="text-earth-600">necesidad</span>,{' '}
+            hecha con <span className="text-olive-600">cuidado</span>
           </h1>
           <p className="text-lg sm:text-xl text-stone-600 max-w-2xl mx-auto">
-            Nacimos de un sueño simple: crear la granola perfecta. Sin ingredientes
-            artificiales, sin prisas, sin compromisos. Solo lo mejor de la naturaleza
-            en cada bocado.
+            Poppy nació porque Pilar no encontraba una granola que cumpliera con lo que
+            su cuerpo necesitaba. Así que decidió hacerla ella misma.
           </p>
         </div>
       </section>
 
       {/* Story Section */}
       <section className="py-16 sm:py-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-6">
-                Todo empezó en una pequeña <span className="text-earth-600-display-italic">cocina</span>
-              </h2>
-              <div className="space-y-4 text-stone-600">
-                <p>
-                  En 2019, cansados de las opciones procesadas del supermercado,
-                  decidimos crear nuestra propia granola. Lo que empezó como un
-                  experimento casero pronto se convirtió en una obsesión por la
-                  perfección.
-                </p>
-                <p>
-                  Probamos cientos de combinaciones hasta encontrar el equilibrio
-                  perfecto: crujiente pero no dura, dulce pero sin azúcares refinados,
-                  nutritiva pero irresistiblemente deliciosa.
-                </p>
-                <p>
-                  Hoy, seguimos elaborando cada lote con el mismo cuidado y atención
-                  que el primer día. Porque creemos que lo artesanal no es solo un
-                  método de producción, es una filosofía de vida.
-                </p>
-              </div>
-            </div>
-            <div className="order-1 md:order-2">
-              <div className="relative aspect-square overflow-hidden bg-earth-100">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 bg-earth-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Leaf className="w-12 h-12 text-earth-600" strokeWidth={1} />
-                    </div>
-                    <p className="text-earth-700 font-serif text-xl">
-                      Desde 2019
-                    </p>
-                    <p className="text-earth-600 text-sm mt-1">
-                      Elaborando con amor
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div className="max-w-3xl mx-auto px-4">
+          <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-8 text-center">
+            Todo empezó con un <span className="text-earth-600-display-italic">diagnóstico</span>
+          </h2>
+          <div className="space-y-5 text-stone-600 text-lg leading-relaxed">
+            <p>
+              Cuando a Pilar le diagnosticaron Sensibilidad al Gluten No Celíaca,
+              su relación con la alimentación cambió por completo. Empezó una dieta
+              estricta sin gluten y, poco a poco, fue adentrándose en el mundo de la
+              nutrición consciente, buscando entender qué le sentaba bien y por qué.
+            </p>
+            <p>
+              Tras distintos problemas digestivos, descubrió que no bastaba con
+              eliminar el gluten: la calidad de los ingredientes, el proceso de
+              elaboración y lo que <em>no</em> lleva un alimento importan tanto como
+              lo que sí lleva.
+            </p>
+            <p>
+              Así empezó a hacer granola en casa. Para ella. Para controlar cada
+              ingrediente, cada paso del proceso, y evitar todo lo que pudiera dañar
+              su salud. Una granola sin azúcares refinados, sin aditivos, con frutos
+              secos remojados para facilitar la digestión.
+            </p>
+            <p>
+              La compartió con familia y amigos. Y lo que era un ritual personal se
+              convirtió en algo que todos querían repetir.
+            </p>
+            <p className="text-stone-800 font-medium text-xl font-serif">
+              Poppy es la granola que Pilar tomaría &mdash;y toma&mdash; cada día:
+              con ingredientes de calidad, un proceso pensado para optimizar la
+              digestión y sin nada que sobre.
+            </p>
           </div>
         </div>
       </section>
@@ -184,7 +172,7 @@ export default function NosotrosPage() {
               Nuestro proceso
             </h2>
             <p className="text-stone-600 max-w-2xl mx-auto">
-              De la selección de ingredientes a tu mesa, cada paso importa
+              Cada paso está pensado para que tu cuerpo aproveche al máximo cada ingrediente
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -192,22 +180,22 @@ export default function NosotrosPage() {
               {
                 step: '01',
                 title: 'Selección',
-                description: 'Elegimos ingredientes naturales de productores locales de confianza',
+                description: 'Elegimos ingredientes naturales y de calidad: copos de avena sin gluten, frutos secos, semillas y miel ecológica',
               },
               {
                 step: '02',
-                title: 'Mezcla',
-                description: 'Combinamos los ingredientes siguiendo nuestra receta tradicional',
+                title: 'Remojo',
+                description: 'Los frutos secos y semillas se remojan durante horas para reducir fitatos y facilitar la digestión y absorción de nutrientes',
               },
               {
                 step: '03',
-                title: 'Tostado',
-                description: 'Horneamos a baja temperatura para conseguir el crujiente perfecto',
+                title: 'Mezcla',
+                description: 'Combinamos los ingredientes a mano siguiendo nuestra receta, con aceite de coco virgen extra y especias naturales',
               },
               {
                 step: '04',
-                title: 'Envío',
-                description: 'Empaquetamos con cariño y enviamos directamente a tu puerta',
+                title: 'Tostado lento',
+                description: 'Horneamos a baja temperatura para conseguir el crujiente perfecto preservando todos los nutrientes',
               },
             ].map((item, index) => (
               <div key={index} className="relative">
