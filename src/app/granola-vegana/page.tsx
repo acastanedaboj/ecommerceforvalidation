@@ -148,11 +148,6 @@ export default function GranolaVeganaPage() {
                     <td className="py-3 text-center text-stone-400">No</td>
                     <td className="py-3 text-center">Miel ecológica</td>
                   </tr>
-                  <tr className="border-b border-stone-100">
-                    <td className="py-3">Granola de Chocolate</td>
-                    <td className="py-3 text-center text-stone-400">No</td>
-                    <td className="py-3 text-center">Miel ecológica</td>
-                  </tr>
                   <tr>
                     <td className="py-3">Granola de Naranja</td>
                     <td className="py-3 text-center text-stone-400">No</td>

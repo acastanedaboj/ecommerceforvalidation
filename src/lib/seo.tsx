@@ -415,14 +415,6 @@ export function buildLocalBusinessSchema() {
           '@type': 'Offer',
           itemOffered: {
             '@type': 'Product',
-            name: 'Granola de Chocolate Sin Gluten 150g',
-            url: `${SITE_URL}/tienda/granola-chocolate-150g`,
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
             name: 'Granola de Naranja Sin Gluten 150g',
             url: `${SITE_URL}/tienda/granola-naranja-150g`,
           },

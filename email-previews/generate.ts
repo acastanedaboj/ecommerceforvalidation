@@ -24,8 +24,8 @@ const orderConfirm = orderConfirmationEmail({
   orderId: 'POP12345',
   orderDate: new Date(),
   items: [
-    { name: 'Granola Clásica 350g', quantity: 2, priceInCents: 900 },
-    { name: 'Granola Chocolate 350g', quantity: 1, priceInCents: 900 },
+    { name: 'Granola Clásica 150g', quantity: 2, priceInCents: 700 },
+    { name: 'Granola de Naranja 150g', quantity: 1, priceInCents: 700 },
   ],
   subtotalCents: 2700,
   shippingCents: 0,

@@ -73,7 +73,7 @@ El lino molido aporta omega-3 y el toque sutil de canela y jengibre completa la 
       protein: 17,
       salt: 0.01,
     },
-    images: ['/products/granola-clasica.jpg'],
+    images: ['/images/granola clasica.png'],
     stock: 200,
     isActive: true,
     categoryId: 'cat_granola',
@@ -81,48 +81,6 @@ El lino molido aporta omega-3 y el toque sutil de canela y jengibre completa la 
     metaTitle: 'Comprar Granola Clásica Sin Gluten | Miel Ecológica | Poppy',
     metaDescription:
       'Compra granola artesanal sin gluten con miel ecológica y frutos secos premium. Desde 7€/ud. Envío gratis a partir de 4 uds. Entrega en 2-4 días en España.',
-    hasHoney: true,
-    isVegan: false,
-  },
-  {
-    id: 'prod_granola_chocolate',
-    sku: 'GRAN-150-CHO',
-    name: 'Granola de Chocolate',
-    slug: 'granola-chocolate-150g',
-    description: `Para los amantes del chocolate, nuestra granola de chocolate es un capricho saludable que no decepciona. El cacao puro en polvo, sin azúcares añadidos, se combina con pepitas de chocolate negro 70% para crear una experiencia irresistible.
-
-La base sigue siendo nuestra avena sin gluten certificada y la miel ecológica, pero aquí el protagonista es el cacao crudo de comercio justo. Añadimos nibs de cacao para ese crunch extra que tanto gusta.
-
-Perfecta para el desayuno, como topping de yogur o simplemente para picar entre horas cuando necesitas ese momento dulce sin remordimientos.
-
-**El sabor del chocolate, pero con ingredientes reales.**`,
-    shortDescription:
-      'Granola con cacao puro y pepitas de chocolate negro 70%. Endulzada con miel ecológica. La opción perfecta para los amantes del chocolate saludable.',
-    priceInCents: 700,
-    weight: 150,
-    ingredients:
-      'Copos de avena sin gluten* (48%), pipas de girasol (16%), pipas de calabaza (8%), miel ecológica* (7%), almendras (5%), anacardos (5%), aceite de coco virgen extra* (4%), cacao en polvo puro* (3%), pepitas de chocolate negro 70% (2%), avellanas (2%), lino molido (1%), especias (canela, vainilla) (<1%). *De agricultura ecológica.',
-    allergens:
-      'Contiene: frutos de cáscara (almendras, avellanas, anacardos), cacao. Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
-    nutritionalInfo: {
-      servingSize: 'por 100g',
-      calories: 485,
-      fat: 28,
-      saturatedFat: 7,
-      carbohydrates: 45,
-      sugars: 8,
-      fiber: 10,
-      protein: 17,
-      salt: 0.01,
-    },
-    images: ['/products/granola-chocolate.jpg'],
-    stock: 150,
-    isActive: true,
-    categoryId: 'cat_granola',
-    tags: ['sin-gluten', 'ecologico', 'artesanal', 'cacao', 'chocolate', 'con-miel'],
-    metaTitle: 'Comprar Granola Chocolate Sin Gluten | Cacao Puro 70% | Poppy',
-    metaDescription:
-      'Compra granola de chocolate sin gluten con cacao puro y pepitas de chocolate negro 70%. Miel ecológica. Envío gratis +4 uds. Entrega en 2-4 días.',
     hasHoney: true,
     isVegan: false,
   },
@@ -157,7 +115,7 @@ El toque de canela de Ceilán y jengibre fresco realzan los aromas naturales de 
       protein: 16,
       salt: 0.01,
     },
-    images: ['/products/granola-naranja.jpg'],
+    images: ['/images/granola naranja.png'],
     stock: 200,
     isActive: true,
     categoryId: 'cat_granola',
@@ -199,7 +157,7 @@ El lino molido aporta omega-3 y el toque sutil de canela y jengibre completa la 
       protein: 17,
       salt: 0.01,
     },
-    images: ['/products/granola-vegana.jpg'],
+    images: ['/images/vegana.png'],
     stock: 180,
     isActive: true,
     categoryId: 'cat_granola',

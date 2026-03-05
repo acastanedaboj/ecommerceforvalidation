@@ -397,7 +397,7 @@ La granola debe añadirse en el último momento. Si la mezclas con los overnight
 ### Chocolate
 - Añade 1 cucharada de cacao puro
 - Usa plátano congelado en rodajas
-- Perfecto con Granola de Chocolate Poppy
+- Perfecto con cualquier granola Poppy
 
 ### Frutas del bosque
 - Mezcla frutos rojos congelados con la avena

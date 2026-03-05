@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import { ChevronRight, Flame, Wheat, Droplets, Dumbbell, Leaf, ShieldCheck, XCircle } from 'lucide-react';
+import { ChevronRight, Flame, Droplets, Dumbbell, Leaf, ShieldCheck, XCircle } from 'lucide-react';
 import { getRetailProducts } from '@/data/products';
 import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/seo';
 
@@ -52,7 +52,6 @@ export const metadata: Metadata = {
 // Short display names for the table
 const shortNames: Record<string, string> = {
   prod_granola_clasica: 'Clásica',
-  prod_granola_chocolate: 'Chocolate',
   prod_granola_naranja: 'Naranja',
   prod_granola_datiles: 'Vegana',
 };
@@ -60,7 +59,6 @@ const shortNames: Record<string, string> = {
 // Key ingredient percentages extracted from ingredient strings
 const ingredientBreakdown: Record<string, { avena: number; semillas: number; frutosSecos: number; endulzante: string; endulzantePct: number; diferenciador: string }> = {
   prod_granola_clasica: { avena: 50, semillas: 25, frutosSecos: 13, endulzante: 'Miel ecológica', endulzantePct: 7, diferenciador: 'Especias (canela, jengibre)' },
-  prod_granola_chocolate: { avena: 48, semillas: 24, frutosSecos: 12, endulzante: 'Miel ecológica', endulzantePct: 7, diferenciador: 'Cacao puro + chocolate negro 70%' },
   prod_granola_naranja: { avena: 48, semillas: 24, frutosSecos: 12, endulzante: 'Miel ecológica', endulzantePct: 7, diferenciador: 'Naranja confitada + ralladura natural' },
   prod_granola_datiles: { avena: 50, semillas: 25, frutosSecos: 13, endulzante: 'Sirope de agave', endulzantePct: 7, diferenciador: '100% vegana' },
 };
@@ -117,7 +115,7 @@ export default function TablaNutricionalPage() {
           {/* Header */}
           <div className="text-center mb-14">
             <h1 className="font-display text-stone-800 mb-5">
-              Tabla Nutricional: Compara Nuestras 4 Granolas
+              Tabla Nutricional: Compara Nuestras 3 Granolas
             </h1>
             <p className="text-lg text-stone-500 max-w-2xl mx-auto">
               Todas nuestras granolas son sin gluten, ecológicas y artesanales. Aquí puedes comparar
@@ -201,7 +199,7 @@ export default function TablaNutricionalPage() {
               Según tus objetivos nutricionales, te recomendamos:
             </p>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <div className="grid sm:grid-cols-3 gap-5">
               <div className="bg-white rounded-xl p-6 shadow-soft border border-cream-100">
                 <div className="w-10 h-10 bg-earth-50 rounded-lg flex items-center justify-center mb-4">
                   <Dumbbell className="w-5 h-5 text-earth-500" strokeWidth={1.5} />
@@ -211,20 +209,7 @@ export default function TablaNutricionalPage() {
                   17g/100g — Ideal para deportistas y para mantener masa muscular.
                 </p>
                 <p className="text-earth-600 font-medium text-sm">
-                  Clásica, Chocolate o Vegana
-                </p>
-              </div>
-
-              <div className="bg-white rounded-xl p-6 shadow-soft border border-cream-100">
-                <div className="w-10 h-10 bg-earth-50 rounded-lg flex items-center justify-center mb-4">
-                  <Wheat className="w-5 h-5 text-earth-500" strokeWidth={1.5} />
-                </div>
-                <h3 className="font-display text-lg text-stone-800 mb-2">Más fibra</h3>
-                <p className="text-stone-500 text-sm mb-3">
-                  10g/100g — Para mejorar la digestión y la saciedad.
-                </p>
-                <p className="text-earth-600 font-medium text-sm">
-                  Chocolate
+                  Clásica o Vegana
                 </p>
               </div>
 
@@ -237,7 +222,7 @@ export default function TablaNutricionalPage() {
                   8g/100g — Para dietas bajas en azúcar o control glucémico.
                 </p>
                 <p className="text-earth-600 font-medium text-sm">
-                  Clásica, Chocolate o Vegana
+                  Clásica o Vegana
                 </p>
               </div>
 
