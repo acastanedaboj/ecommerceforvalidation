@@ -45,10 +45,10 @@ export default function CuentaLayout({
               <img
                 src={session.user.image}
                 alt={session.user.name || 'Usuario'}
-                className="w-16 h-16 rounded-full"
+                className="w-16 h-16"
               />
             ) : (
-              <div className="w-16 h-16 bg-earth-100 rounded-full flex items-center justify-center">
+              <div className="w-16 h-16 bg-earth-100 flex items-center justify-center">
                 <User className="w-8 h-8 text-earth-600" />
               </div>
             )}

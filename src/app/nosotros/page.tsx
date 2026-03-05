@@ -107,7 +107,7 @@ export default function NosotrosPage() {
               </div>
             </div>
             <div className="order-1 md:order-2">
-              <div className="relative aspect-square rounded-3xl overflow-hidden bg-earth-100">
+              <div className="relative aspect-square overflow-hidden bg-earth-100">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center p-8">
                     <div className="w-24 h-24 bg-earth-200 rounded-full flex items-center justify-center mx-auto mb-4">

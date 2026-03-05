@@ -48,7 +48,7 @@ export function ImageGallery({
       <div className="relative">
         <div
           className={cn(
-            'relative aspect-square overflow-hidden rounded-2xl bg-cream-100',
+            'relative aspect-square overflow-hidden bg-cream-100',
             enableZoom && 'cursor-zoom-in'
           )}
           onMouseEnter={() => enableZoom && setIsZooming(true)}
@@ -114,7 +114,7 @@ export function ImageGallery({
               type="button"
               onClick={() => setSelectedIndex(index)}
               className={cn(
-                'relative flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden transition-all duration-300',
+                'relative flex-shrink-0 w-20 h-20 overflow-hidden transition-all duration-300',
                 'focus-visible:ring-2 focus-visible:ring-earth-400 focus-visible:ring-offset-2',
                 selectedIndex === index
                   ? 'ring-2 ring-earth-500 ring-offset-2'

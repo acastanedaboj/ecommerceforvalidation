@@ -201,7 +201,7 @@ export default function BlogPostPage({ params }: Props) {
             href={href}
             target="_blank"
             rel="sponsored noopener noreferrer"
-            className="block my-8 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            className="block my-8 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
             aria-label={alt}
           >
             <Image
@@ -296,7 +296,7 @@ export default function BlogPostPage({ params }: Props) {
 
         {/* Featured image */}
         {post.coverImage && (
-          <div className="relative aspect-video max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden">
+          <div className="relative aspect-video max-w-4xl mx-auto mb-12 overflow-hidden">
             <Image
               src={post.coverImage}
               alt={post.title}

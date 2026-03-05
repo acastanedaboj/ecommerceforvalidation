@@ -42,7 +42,7 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
     return (
       <div className="flex items-center gap-3 py-3">
         {/* Image */}
-        <div className="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-cream-100">
+        <div className="relative w-12 h-12 overflow-hidden flex-shrink-0 bg-cream-100">
           <Package className="w-6 h-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-earth-400" />
         </div>
 
@@ -68,7 +68,7 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
   return (
     <div className="group relative flex gap-4 py-5 border-b border-cream-200 last:border-b-0">
       {/* Product images collage */}
-      <div className="relative w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-gradient-earth">
+      <div className="relative w-20 h-20 overflow-hidden flex-shrink-0 bg-gradient-earth">
         <div className="absolute inset-0 flex items-center justify-center">
           <Package className="w-8 h-8 text-earth-400" />
         </div>
@@ -80,7 +80,7 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
             .map((flavor, index) => (
               <div
                 key={flavor.productId}
-                className="w-6 h-6 rounded-full border-2 border-white overflow-hidden"
+                className="w-6 h-6 border-2 border-white overflow-hidden"
                 style={{ zIndex: 10 - index }}
               >
                 <Image

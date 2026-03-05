@@ -236,7 +236,7 @@ export function BundleBuilder({
                 )}
               >
                 {/* Product image */}
-                <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                <div className="relative w-16 h-16 overflow-hidden flex-shrink-0">
                   <Image
                     src={flavor.productImage}
                     alt={flavor.productName}

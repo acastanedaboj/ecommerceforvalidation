@@ -76,7 +76,7 @@ export function LandingHero({
           {image && (
             <div className="relative">
               <div className="relative aspect-[4/5] max-w-lg mx-auto">
-                <div className="relative w-full h-full overflow-hidden rounded-lg">
+                <div className="relative w-full h-full overflow-hidden">
                   <Image
                     src={image}
                     alt={title}

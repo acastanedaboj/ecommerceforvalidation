@@ -132,7 +132,7 @@ export function CartDrawer() {
                       <Link
                         href={`/tienda/${item.productSlug}`}
                         onClick={() => setIsOpen(false)}
-                        className="relative w-20 h-20 bg-cream-100 rounded-xl overflow-hidden flex-shrink-0 group"
+                        className="relative w-20 h-20 bg-cream-100 overflow-hidden flex-shrink-0 group"
                       >
                         <Image
                           src={item.productImage || '/images/placeholder-product.jpg'}

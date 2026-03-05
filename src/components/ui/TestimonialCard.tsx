@@ -72,10 +72,10 @@ export function TestimonialCard({
           <img
             src={avatar}
             alt={author}
-            className="w-12 h-12 rounded-full object-cover"
+            className="w-12 h-12 object-cover"
           />
         ) : (
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-earth-100 to-earth-200 flex items-center justify-center">
+          <div className="w-12 h-12 bg-gradient-to-br from-earth-100 to-earth-200 flex items-center justify-center">
             <span className="text-earth-600 font-medium text-sm">
               {initials}
             </span>

@@ -631,7 +631,7 @@ export default function CheckoutPage() {
 
                     return (
                       <div key={itemKey} className="flex gap-3">
-                        <div className="relative w-16 h-16 bg-neutral-100 rounded-lg overflow-hidden flex-shrink-0">
+                        <div className="relative w-16 h-16 bg-neutral-100 overflow-hidden flex-shrink-0">
                           <Image
                             src={itemImage}
                             alt={itemName}

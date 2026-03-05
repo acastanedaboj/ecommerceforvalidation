@@ -73,7 +73,7 @@ export default function BlogPage() {
         {featuredPost && (
           <article className="mb-16">
             <Link href={`/blog/${featuredPost.slug}`} className="group">
-              <div className="grid md:grid-cols-2 gap-8 items-center bg-white rounded-2xl overflow-hidden shadow-sm border border-neutral-200">
+              <div className="grid md:grid-cols-2 gap-8 items-center bg-white overflow-hidden shadow-sm border border-neutral-200">
                 <div className="relative aspect-video md:aspect-square">
                   <Image
                     src={featuredPost.coverImage || '/images/blog/placeholder.jpg'}

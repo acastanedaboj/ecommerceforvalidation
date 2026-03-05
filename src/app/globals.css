@@ -246,7 +246,7 @@
   }
 
   .prose-custom img {
-    @apply rounded-2xl;
+    @apply rounded-none;
   }
 
   /* Glass effect */
@@ -472,7 +472,7 @@
 
   .aspect-square-rounded {
     aspect-ratio: 1 / 1;
-    @apply rounded-2xl;
+    @apply rounded-none;
   }
 
   /* Subtle background patterns */

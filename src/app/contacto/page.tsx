@@ -223,7 +223,7 @@ export default function ContactoPage() {
 
         {/* Google Maps */}
         <div className="mt-12">
-          <div className="rounded-2xl overflow-hidden h-64 md:h-96">
+          <div className="overflow-hidden h-64 md:h-96">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.0!2d-4.4295!3d36.7213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f7be5c5c8a7d%3A0x0!2sAvda.%20Sor%20Teresa%20Prat%2C%2015%2C%2029003%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1706000000000"
               width="100%"
