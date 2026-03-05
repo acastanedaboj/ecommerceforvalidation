@@ -49,7 +49,7 @@ export const products: Product[] = [
     slug: 'granola-clasica-150g',
     description: `Nuestra granola clásica es la receta original que dio vida a Poppy. Un equilibrio perfecto entre la avena sin gluten, la miel ecológica y una mezcla premium de semillas y frutos secos que define nuestro sabor característico.
 
-Las pipas de girasol y calabaza son las protagonistas, junto con almendras, anacardos y avellanas seleccionadas. La miel ecológica carameliza suavemente durante el tostado lento, creando clusters perfectos.
+Las pipas de girasol y calabaza son las protagonistas, junto con almendras, anacardos y avellanas seleccionadas. Todos nuestros frutos secos y semillas pasan por un proceso de **remojo previo** para reducir los antinutrientes naturales (fitatos e inhibidores enzimáticos), seguido de un **secado y tostado lento a baja temperatura**. La miel ecológica carameliza suavemente durante el horneado final, creando clusters perfectos.
 
 El lino molido aporta omega-3 y el toque sutil de canela y jengibre completa la experiencia. Cada bolsa de 150g está elaborada con la proporción exacta para el crunch perfecto.
 
@@ -91,7 +91,7 @@ El lino molido aporta omega-3 y el toque sutil de canela y jengibre completa la 
     slug: 'granola-chocolate-150g',
     description: `Para los amantes del chocolate, nuestra granola de chocolate es un capricho saludable que no decepciona. El cacao puro en polvo, sin azúcares añadidos, se combina con pepitas de chocolate negro 70% para crear una experiencia irresistible.
 
-La base sigue siendo nuestra avena sin gluten certificada y la miel ecológica, pero aquí el protagonista es el cacao crudo de comercio justo. Añadimos nibs de cacao para ese crunch extra que tanto gusta.
+La base sigue siendo nuestra avena sin gluten certificada y la miel ecológica, pero aquí el protagonista es el cacao crudo de comercio justo. Añadimos nibs de cacao para ese crunch extra que tanto gusta. Como en todas nuestras granolas, los frutos secos y semillas se **remojan, secan y tuestan artesanalmente** para reducir antinutrientes y conseguir un sabor más limpio y digestivo.
 
 Perfecta para el desayuno, como topping de yogur o simplemente para picar entre horas cuando necesitas ese momento dulce sin remordimientos.
 
@@ -133,7 +133,7 @@ Perfecta para el desayuno, como topping de yogur o simplemente para picar entre 
     slug: 'granola-naranja-150g',
     description: `Nuestra granola de naranja es una explosión de frescura mediterránea en cada bocado. Elaborada con ralladura de naranja natural y trocitos de naranja confitada, ofrece un perfil aromático único que despierta los sentidos.
 
-La base de avena certificada sin gluten se combina con miel ecológica de azahar, que complementa perfectamente los cítricos. Las almendras marcona y las nueces aportan el equilibrio perfecto de textura y sabor.
+La base de avena certificada sin gluten se combina con miel ecológica de azahar, que complementa perfectamente los cítricos. Las almendras marcona y las nueces aportan el equilibrio perfecto de textura y sabor. Todos los frutos secos y semillas se **remojan previamente, se secan y se tuestan a baja temperatura**, un proceso artesanal que reduce los antinutrientes y realza los sabores naturales.
 
 El toque de canela de Ceilán y jengibre fresco realzan los aromas naturales de la naranja, creando una experiencia sensorial completa.
 
@@ -175,7 +175,7 @@ El toque de canela de Ceilán y jengibre fresco realzan los aromas naturales de 
     slug: 'granola-vegana-150g',
     description: `Nuestra granola vegana tiene la misma receta deliciosa que la clásica, pero endulzada con sirope de agave en lugar de miel. Perfecta para quienes siguen una alimentación 100% vegetal.
 
-Las pipas de girasol y calabaza son las protagonistas, junto con almendras, anacardos y avellanas seleccionadas. El sirope de agave ecológico carameliza suavemente durante el tostado lento, creando clusters perfectos.
+Las pipas de girasol y calabaza son las protagonistas, junto con almendras, anacardos y avellanas seleccionadas. Como en todas nuestras granolas, **remojamos los frutos secos y semillas durante horas, los secamos y los tostamos lentamente** a baja temperatura para reducir los antinutrientes naturales y mejorar su sabor y digestibilidad. El sirope de agave ecológico carameliza suavemente durante el horneado final, creando clusters perfectos.
 
 El lino molido aporta omega-3 y el toque sutil de canela y jengibre completa la experiencia. Mismos ingredientes premium, misma calidad artesanal, 100% vegana.
 
