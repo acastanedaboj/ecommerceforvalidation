@@ -56,7 +56,7 @@ export default function NosotrosPage() {
       {/* Hero Section with Image */}
       <section className="relative h-[50vh] sm:h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
         <Image
-          src="/images/nosotros-hero.jpg"
+          src="/images/freepik__natural-lifestyle-editorial-photograph-in-a-bright__8947.png"
           alt="Pilar preparando granola artesanal en su cocina"
           fill
           className="object-cover"
