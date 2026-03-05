@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Leaf, Heart, Sun, Award, Truck, ArrowRight } from 'lucide-react';
+import { Leaf, Heart, Sun, ArrowRight } from 'lucide-react';
 import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -23,7 +23,7 @@ const values = [
     icon: Leaf,
     title: 'Ingredientes naturales',
     description:
-      'Seleccionamos cuidadosamente cada ingrediente de productores locales de confianza.',
+      'Seleccionamos cuidadosamente ingredientes de calidad que funcionan bien juntos.',
   },
   {
     icon: Heart,
@@ -33,17 +33,10 @@ const values = [
   },
   {
     icon: Sun,
-    title: 'Tostado artesanal',
+    title: 'Elaboración consciente',
     description:
-      'Utilizamos técnicas tradicionales de tostado lento a baja temperatura para preservar todos los nutrientes.',
+      'Utilizamos técnicas como el remojo de frutos secos y semillas para que digieras todos sus nutrientes.',
   },
-];
-
-const stats = [
-  { number: '100%', label: 'Sin gluten certificado' },
-  { number: '100%', label: 'Ingredientes naturales' },
-  { number: '0', label: 'Azúcares refinados' },
-  { number: '0', label: 'Aditivos artificiales' },
 ];
 
 
@@ -67,12 +60,10 @@ export default function NosotrosPage() {
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-stone-800 mb-6">
             Si no existe,{' '}
-            <span className="text-earth-600">la haces</span>{' '}
-            <span className="text-olive-600">tú</span>
+            <span className="text-earth-600">la hacemos</span>
           </h1>
           <p className="text-lg sm:text-xl text-stone-600 max-w-2xl mx-auto">
-            Pilar buscaba una granola sin gluten que de verdad mereciera la pena.
-            No la encontró. Así que se metió en la cocina y la creó.
+            De la cocina de casa al mundo
           </p>
         </div>
       </section>
@@ -85,33 +76,29 @@ export default function NosotrosPage() {
           </h2>
           <div className="space-y-5 text-stone-600 text-lg leading-relaxed">
             <p>
-              Cuando a Pilar le diagnosticaron Sensibilidad al Gluten No Celíaca,
-              no se quedó de brazos cruzados. Empezó una dieta estricta sin gluten
-              y, de paso, se obsesionó (de la forma buena) con entender cómo funciona
-              lo que comemos: qué nos sienta bien, qué nos sienta mal y, sobre todo,
-              por qué.
+              Un día, el médico te dice &quot;tienes que eliminar el gluten de manera
+              estricta y para siempre&quot; y tu vida cambia por completo. Dicen que
+              ante las limitaciones podemos sacar todo nuestro potencial, y así fue
+              como nació la granola Poppy. Tras un diagnóstico crónico y varias
+              patologías digestivas superadas, empecé a crear recetas de manera
+              consciente, con ingredientes que tuvieran sentido para mí y que
+              respetaran a mi organismo.
             </p>
             <p>
-              Después de darle bastantes vueltas a su digestión, descubrió algo que
-              parece obvio pero que casi nadie aplica: no basta con quitar lo malo.
-              La calidad de los ingredientes, cómo se elaboran y lo que <em>no</em> llevan
-              importa tanto como lo que sí.
+              Así que hizo lo que haría cualquier persona razonable con algo de
+              tiempo y un horno en casa: empezó a hacer su propia granola. Sin
+              azúcares refinados, sin aditivos, con los frutos secos remojados
+              para facilitar la digestión. Una granola pensada desde el cariño y
+              el sentido común.
             </p>
             <p>
-              Así que hizo lo que haría cualquier persona razonable con demasiado
-              tiempo libre y un horno en casa: empezó a hacer su propia granola.
-              Sin azúcares refinados, sin aditivos, con los frutos secos remojados
-              para facilitar la digestión. Una granola pensada desde el cariño y el
-              sentido común.
-            </p>
-            <p>
-              La compartió con familia y amigos. Y pasó lo que pasa cuando algo está
-              realmente bueno: todos querían más.
+              La compartió con familia y amigos. Y pasó lo que pasa cuando algo
+              está realmente bueno: todos querían más.
             </p>
             <p className="text-stone-800 font-medium text-xl font-serif">
               Poppy es la granola que Pilar toma cada mañana. Con ingredientes de
-              calidad, un proceso pensado para cuidar la digestión y sin nada que sobre.
-              Si no es buena para ella, no es buena para ti.
+              calidad, un proceso pensado para cuidar la digestión y sin nada que
+              sobre. Si no es buena para ella, no es buena para ti.
             </p>
           </div>
         </div>
@@ -146,22 +133,6 @@ export default function NosotrosPage() {
                 </div>
               );
             })}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-earth-600 to-earth-700">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <p className="text-4xl sm:text-5xl font-serif text-[#ffffec] mb-2">
-                  {stat.number}
-                </p>
-                <p className="text-earth-200">{stat.label}</p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -219,56 +190,6 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-
-      {/* Commitments Section */}
-      <section className="py-16 sm:py-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="bg-white rounded-3xl shadow-soft-lg p-8 sm:p-12">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
-                Nuestros <span className="text-earth-600-display-italic">compromisos</span>
-              </h2>
-            </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: Leaf,
-                  title: 'Sin gluten',
-                  description: 'Apta para celíacos, elaborada en instalaciones libres de gluten',
-                },
-                {
-                  icon: Heart,
-                  title: 'Sin azúcares refinados',
-                  description: 'Endulzada naturalmente con miel o dátiles',
-                },
-                {
-                  icon: Award,
-                  title: 'Calidad artesanal',
-                  description: 'Tostamos cada semana bajo demanda en lotes pequeños',
-                },
-                {
-                  icon: Truck,
-                  title: 'Envío sostenible',
-                  description: 'Packaging 100% reciclable',
-                },
-              ].map((item, index) => {
-                const Icon = item.icon;
-                return (
-                  <div key={index} className="flex gap-4">
-                    <div className="w-10 h-10 bg-olive-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-olive-600" strokeWidth={1.5} />
-                    </div>
-                    <div>
-                      <h3 className="font-medium text-stone-800 mb-1">{item.title}</h3>
-                      <p className="text-stone-600 text-sm">{item.description}</p>
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-16 sm:py-24 bg-earth-50">
