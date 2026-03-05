@@ -394,10 +394,10 @@ La granola debe añadirse en el último momento. Si la mezclas con los overnight
 - Usa leche de coco
 - Corona con coco rallado y nuestra granola
 
-### Chocolate
-- Añade 1 cucharada de cacao puro
+### Cítrico
+- Añade zumo de naranja natural
 - Usa plátano congelado en rodajas
-- Perfecto con Granola de Chocolate Poppy
+- Perfecto con nuestra Granola con Toque de Naranja
 
 ### Frutas del bosque
 - Mezcla frutos rojos congelados con la avena

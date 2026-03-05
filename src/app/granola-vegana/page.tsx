@@ -139,24 +139,19 @@ export default function GranolaVeganaPage() {
                 </thead>
                 <tbody className="text-stone-600">
                   <tr className="border-b border-stone-100 bg-olive-50">
-                    <td className="py-3 font-medium text-stone-800">Granola de Dátiles</td>
+                    <td className="py-3 font-medium text-stone-800">Granola Vegana (Bajo Demanda)</td>
                     <td className="py-3 text-center text-olive-600 font-semibold">Sí ✓</td>
-                    <td className="py-3 text-center">Dátiles + Sirope de agave</td>
+                    <td className="py-3 text-center">Sirope de ágave</td>
                   </tr>
                   <tr className="border-b border-stone-100">
                     <td className="py-3">Granola Clásica</td>
                     <td className="py-3 text-center text-stone-400">No</td>
-                    <td className="py-3 text-center">Miel ecológica</td>
-                  </tr>
-                  <tr className="border-b border-stone-100">
-                    <td className="py-3">Granola de Chocolate</td>
-                    <td className="py-3 text-center text-stone-400">No</td>
-                    <td className="py-3 text-center">Miel ecológica</td>
+                    <td className="py-3 text-center">Miel de apicultores locales</td>
                   </tr>
                   <tr>
-                    <td className="py-3">Granola de Naranja</td>
+                    <td className="py-3">Granola con Toque de Naranja</td>
                     <td className="py-3 text-center text-stone-400">No</td>
-                    <td className="py-3 text-center">Miel ecológica</td>
+                    <td className="py-3 text-center">Miel de apicultores locales</td>
                   </tr>
                 </tbody>
               </table>

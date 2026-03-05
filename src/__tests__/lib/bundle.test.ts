@@ -114,7 +114,7 @@ describe('Bundle Validation', () => {
       const config: BundleConfig = {
         packSize: 4,
         flavors: [
-          { productId: '1', productName: 'Chocolate', productSlug: 'chocolate', productImage: '', quantity: 2 },
+          { productId: '1', productName: 'Clásica', productSlug: 'clasica', productImage: '', quantity: 2 },
           { productId: '2', productName: 'Naranja', productSlug: 'naranja', productImage: '', quantity: 2 },
         ],
         isSubscription: false,
@@ -126,7 +126,7 @@ describe('Bundle Validation', () => {
       const config: BundleConfig = {
         packSize: 4,
         flavors: [
-          { productId: '1', productName: 'Chocolate', productSlug: 'chocolate', productImage: '', quantity: 2 },
+          { productId: '1', productName: 'Clásica', productSlug: 'clasica', productImage: '', quantity: 2 },
           { productId: '2', productName: 'Naranja', productSlug: 'naranja', productImage: '', quantity: 1 },
         ],
         isSubscription: false,
@@ -138,7 +138,7 @@ describe('Bundle Validation', () => {
       const config: BundleConfig = {
         packSize: 4,
         flavors: [
-          { productId: '1', productName: 'Chocolate', productSlug: 'chocolate', productImage: '', quantity: 3 },
+          { productId: '1', productName: 'Clásica', productSlug: 'clasica', productImage: '', quantity: 3 },
           { productId: '2', productName: 'Naranja', productSlug: 'naranja', productImage: '', quantity: 3 },
         ],
         isSubscription: false,
@@ -159,7 +159,7 @@ describe('Bundle Validation', () => {
   describe('getBundleTotalUnits', () => {
     it('should sum all flavor quantities', () => {
       const flavors: BundleFlavorSelection[] = [
-        { productId: '1', productName: 'Chocolate', productSlug: 'chocolate', productImage: '', quantity: 2 },
+        { productId: '1', productName: 'Clásica', productSlug: 'clasica', productImage: '', quantity: 2 },
         { productId: '2', productName: 'Naranja', productSlug: 'naranja', productImage: '', quantity: 1 },
         { productId: '3', productName: 'Datiles', productSlug: 'datiles', productImage: '', quantity: 3 },
       ];
@@ -174,7 +174,7 @@ describe('Bundle Validation', () => {
   describe('isBundleComplete', () => {
     it('should return true when total equals pack size', () => {
       const flavors: BundleFlavorSelection[] = [
-        { productId: '1', productName: 'Chocolate', productSlug: 'chocolate', productImage: '', quantity: 2 },
+        { productId: '1', productName: 'Clásica', productSlug: 'clasica', productImage: '', quantity: 2 },
         { productId: '2', productName: 'Naranja', productSlug: 'naranja', productImage: '', quantity: 2 },
       ];
       expect(isBundleComplete(flavors, 4)).toBe(true);
@@ -182,7 +182,7 @@ describe('Bundle Validation', () => {
 
     it('should return false when total is less than pack size', () => {
       const flavors: BundleFlavorSelection[] = [
-        { productId: '1', productName: 'Chocolate', productSlug: 'chocolate', productImage: '', quantity: 1 },
+        { productId: '1', productName: 'Clásica', productSlug: 'clasica', productImage: '', quantity: 1 },
         { productId: '2', productName: 'Naranja', productSlug: 'naranja', productImage: '', quantity: 1 },
       ];
       expect(isBundleComplete(flavors, 4)).toBe(false);
@@ -192,21 +192,21 @@ describe('Bundle Validation', () => {
   describe('getRemainingUnits', () => {
     it('should return remaining units needed', () => {
       const flavors: BundleFlavorSelection[] = [
-        { productId: '1', productName: 'Chocolate', productSlug: 'chocolate', productImage: '', quantity: 1 },
+        { productId: '1', productName: 'Clásica', productSlug: 'clasica', productImage: '', quantity: 1 },
       ];
       expect(getRemainingUnits(flavors, 4)).toBe(3);
     });
 
     it('should return 0 when bundle is complete', () => {
       const flavors: BundleFlavorSelection[] = [
-        { productId: '1', productName: 'Chocolate', productSlug: 'chocolate', productImage: '', quantity: 4 },
+        { productId: '1', productName: 'Clásica', productSlug: 'clasica', productImage: '', quantity: 4 },
       ];
       expect(getRemainingUnits(flavors, 4)).toBe(0);
     });
 
     it('should return 0 when over pack size (edge case)', () => {
       const flavors: BundleFlavorSelection[] = [
-        { productId: '1', productName: 'Chocolate', productSlug: 'chocolate', productImage: '', quantity: 5 },
+        { productId: '1', productName: 'Clásica', productSlug: 'clasica', productImage: '', quantity: 5 },
       ];
       expect(getRemainingUnits(flavors, 4)).toBe(0);
     });
@@ -217,19 +217,19 @@ describe('Bundle Summary', () => {
   describe('generateBundleSummary', () => {
     it('should generate comma-separated summary', () => {
       const flavors: BundleFlavorSelection[] = [
-        { productId: '1', productName: 'Granola de Chocolate', productSlug: 'chocolate', productImage: '', quantity: 2 },
+        { productId: '1', productName: 'Granola Clásica', productSlug: 'clasica', productImage: '', quantity: 2 },
         { productId: '2', productName: 'Granola de Naranja', productSlug: 'naranja', productImage: '', quantity: 1 },
       ];
-      expect(generateBundleSummary(flavors)).toBe('2x Chocolate, 1x Naranja');
+      expect(generateBundleSummary(flavors)).toBe('2x Clásica, 1x Naranja');
     });
 
     it('should filter out zero-quantity items', () => {
       const flavors: BundleFlavorSelection[] = [
-        { productId: '1', productName: 'Granola de Chocolate', productSlug: 'chocolate', productImage: '', quantity: 2 },
+        { productId: '1', productName: 'Granola Clásica', productSlug: 'clasica', productImage: '', quantity: 2 },
         { productId: '2', productName: 'Granola de Naranja', productSlug: 'naranja', productImage: '', quantity: 0 },
-        { productId: '3', productName: 'Granola de Datiles', productSlug: 'datiles', productImage: '', quantity: 1 },
+        { productId: '3', productName: 'Granola Vegana', productSlug: 'vegana', productImage: '', quantity: 1 },
       ];
-      expect(generateBundleSummary(flavors)).toBe('2x Chocolate, 1x Datiles');
+      expect(generateBundleSummary(flavors)).toBe('2x Clásica, 1x Vegana');
     });
 
     it('should return empty string for empty/zero flavors', () => {
@@ -238,9 +238,9 @@ describe('Bundle Summary', () => {
 
     it('should handle products without "Granola de" prefix', () => {
       const flavors: BundleFlavorSelection[] = [
-        { productId: '1', productName: 'Chocolate Premium', productSlug: 'chocolate', productImage: '', quantity: 3 },
+        { productId: '1', productName: 'Naranja Premium', productSlug: 'naranja', productImage: '', quantity: 3 },
       ];
-      expect(generateBundleSummary(flavors)).toBe('3x Chocolate Premium');
+      expect(generateBundleSummary(flavors)).toBe('3x Naranja Premium');
     });
   });
 
@@ -293,7 +293,7 @@ describe('Bundle Pack Options', () => {
 describe('Bundle Flavor Management', () => {
   describe('updateFlavorQuantity', () => {
     const initialFlavors: BundleFlavorSelection[] = [
-      { productId: '1', productName: 'Chocolate', productSlug: 'chocolate', productImage: '', quantity: 1 },
+      { productId: '1', productName: 'Clásica', productSlug: 'clasica', productImage: '', quantity: 1 },
       { productId: '2', productName: 'Naranja', productSlug: 'naranja', productImage: '', quantity: 2 },
     ];
 
@@ -316,7 +316,7 @@ describe('Bundle Flavor Management', () => {
 
   describe('initializeBundleFlavors', () => {
     const products = [
-      { id: 'prod_1', name: 'Granola de Chocolate', slug: 'chocolate', images: ['/img1.jpg'] },
+      { id: 'prod_1', name: 'Granola Clásica', slug: 'clasica', images: ['/img1.jpg'] },
       { id: 'prod_2', name: 'Granola de Naranja', slug: 'naranja', images: ['/img2.jpg'] },
     ];
 

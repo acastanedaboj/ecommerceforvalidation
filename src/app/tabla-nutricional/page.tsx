@@ -52,17 +52,15 @@ export const metadata: Metadata = {
 // Short display names for the table
 const shortNames: Record<string, string> = {
   prod_granola_clasica: 'Clásica',
-  prod_granola_chocolate: 'Chocolate',
   prod_granola_naranja: 'Naranja',
   prod_granola_datiles: 'Vegana',
 };
 
 // Key ingredient percentages extracted from ingredient strings
 const ingredientBreakdown: Record<string, { avena: number; semillas: number; frutosSecos: number; endulzante: string; endulzantePct: number; diferenciador: string }> = {
-  prod_granola_clasica: { avena: 50, semillas: 25, frutosSecos: 13, endulzante: 'Miel ecológica', endulzantePct: 7, diferenciador: 'Especias (canela, jengibre)' },
-  prod_granola_chocolate: { avena: 48, semillas: 24, frutosSecos: 12, endulzante: 'Miel ecológica', endulzantePct: 7, diferenciador: 'Cacao puro + chocolate negro 70%' },
-  prod_granola_naranja: { avena: 48, semillas: 24, frutosSecos: 12, endulzante: 'Miel ecológica', endulzantePct: 7, diferenciador: 'Naranja confitada + ralladura natural' },
-  prod_granola_datiles: { avena: 50, semillas: 25, frutosSecos: 13, endulzante: 'Sirope de agave', endulzantePct: 7, diferenciador: '100% vegana' },
+  prod_granola_clasica: { avena: 50, semillas: 25, frutosSecos: 13, endulzante: 'Miel de apicultores locales', endulzantePct: 7, diferenciador: 'Especias (canela, jengibre)' },
+  prod_granola_naranja: { avena: 49, semillas: 24, frutosSecos: 12, endulzante: 'Miel de apicultores locales', endulzantePct: 7, diferenciador: 'Piel de naranja natural' },
+  prod_granola_datiles: { avena: 50, semillas: 25, frutosSecos: 13, endulzante: 'Sirope de ágave', endulzantePct: 7, diferenciador: '100% vegana (bajo demanda)' },
 };
 
 type NutrientKey = 'calories' | 'fat' | 'saturatedFat' | 'carbohydrates' | 'sugars' | 'fiber' | 'protein' | 'salt';

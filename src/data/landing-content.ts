@@ -900,8 +900,7 @@ export const recetaGranolaContent = {
       title: 'Extras opcionales (después de hornear)',
       items: [
         '50g de fruta deshidratada (opcional)',
-        '30g de chips de chocolate negro sin gluten (opcional, para versión chocolate)',
-        'Ralladura de naranja (opcional, para versión naranja)',
+        'Piel de naranja natural (opcional, para versión naranja)',
       ],
     },
   },
@@ -962,7 +961,7 @@ export const recetaGranolaContent = {
         number: 8,
         title: 'Añade extras y almacena',
         description:
-          'Una vez fría, añade los extras opcionales (fruta deshidratada, chips de chocolate, ralladura de naranja). Guarda en un tarro hermético. Se conserva hasta 3-4 semanas a temperatura ambiente.',
+          'Una vez fría, añade los extras opcionales (fruta deshidratada, piel de naranja). Guarda en un tarro hermético. Se conserva hasta 3-4 semanas a temperatura ambiente.',
         time: '5 min',
       },
     ],
@@ -991,7 +990,7 @@ export const recetaGranolaContent = {
       {
         title: 'Personaliza a tu gusto',
         description:
-          'Cambia los frutos secos según tu preferencia (anacardos, avellanas, pistachos). Ajusta el dulzor según tu gusto (menos miel = menos dulce). Añade cacao puro para versión chocolate.',
+          'Cambia los frutos secos según tu preferencia (anacardos, avellanas, pistachos). Ajusta el dulzor según tu gusto (menos miel = menos dulce). Añade piel de naranja para un toque cítrico.',
       },
       {
         title: 'Temperatura baja es clave',
@@ -1027,7 +1026,7 @@ export const recetaGranolaContent = {
       {
         title: 'Personalización total',
         description:
-          'Ajusta dulzor, añade tus frutos secos favoritos, haz versión chocolate, sin azúcar, con superalimentos... Las posibilidades son infinitas.',
+          'Ajusta dulzor, añade tus frutos secos favoritos, prueba con piel de naranja, con sirope de ágave para versión vegana... Las posibilidades son infinitas.',
       },
     ],
   },
