@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ShoppingBag, Truck, RefreshCw, Shield, Plus, Minus, FileText, List, BarChart2, AlertTriangle, Package } from 'lucide-react';
+import { ShoppingBag, Truck, RefreshCw, Shield, Plus, Minus, FileText, List, BarChart2, AlertTriangle, Package, Leaf, Clock } from 'lucide-react';
 import { getProductBySlug, getRetailProducts } from '@/data/products';
 import { useCartStore } from '@/store/cart-store';
 import { formatPrice, cn } from '@/lib/utils';
@@ -143,9 +143,6 @@ export default function ProductDetailPage() {
               <div className="flex gap-2 mt-4">
                 {product.tags.includes('sin-gluten') && (
                   <span className="badge-primary">Sin gluten</span>
-                )}
-                {product.tags.includes('ecologico') && (
-                  <span className="badge-accent">Ecologico</span>
                 )}
               </div>
             </div>
@@ -421,6 +418,28 @@ export default function ProductDetailPage() {
             >
               <div className="bg-amber-50 rounded-xl p-4 border border-amber-200">
                 <p className="text-amber-800">{product.allergens}</p>
+              </div>
+            </Collapsible>
+
+            <Collapsible
+              title="Frescura y envío"
+              icon={<Clock className="w-5 h-5" />}
+            >
+              <div className="space-y-4">
+                <p className="text-stone-600">
+                  Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenamos. Eso significa que recibirás tu granola solo unas horas o días tras su elaboración.
+                </p>
+              </div>
+            </Collapsible>
+
+            <Collapsible
+              title="Packaging sostenible"
+              icon={<Leaf className="w-5 h-5" />}
+            >
+              <div className="space-y-4">
+                <p className="text-stone-600">
+                  Nuestras granolas se envían en un packaging de papel sostenible y 100% reciclable. Te recomendamos que cuando lleguen a casa las vuelques en un tarro de cristal para conservarla mejor.
+                </p>
               </div>
             </Collapsible>
           </div>

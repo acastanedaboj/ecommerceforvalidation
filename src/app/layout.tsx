@@ -36,16 +36,14 @@ import {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${BRAND_NAME} - Granola Sin Gluten Premium, Ecológica y Artesanal`,
+    default: `${BRAND_NAME} - Granola Sin Gluten Premium y Artesanal`,
     template: `%s | ${BRAND_NAME}`,
   },
   description:
-    'Granola artesanal sin gluten elaborada con avena certificada (≤20ppm), miel ecológica y frutos secos premium. Opción vegana disponible. Envío gratis desde 4 unidades. Compra online en España.',
+    'Granola artesanal sin gluten elaborada con avena certificada (≤20ppm), miel y frutos secos premium. Opción vegana disponible. Envío gratis desde 4 unidades. Compra online en España.',
   keywords: [
     'granola sin gluten',
     'granola sin gluten españa',
-    'granola ecológica',
-    'granola orgánica',
     'granola premium',
     'granola vegana',
     'avena sin gluten',
@@ -53,7 +51,7 @@ export const metadata: Metadata = {
     'desayuno sin gluten',
     'snack saludable sin gluten',
     'granola artesanal',
-    'granola miel ecológica',
+    'granola miel',
     'granola dátiles',
     'poppy granola',
     'comprar granola online',
@@ -76,13 +74,13 @@ export const metadata: Metadata = {
     siteName: BRAND_NAME,
     title: `${BRAND_NAME} - Granola Sin Gluten Premium`,
     description:
-      'Granola artesanal sin gluten con avena certificada, miel ecológica y frutos secos premium. Opción vegana disponible. Envío gratis +4 unidades.',
+      'Granola artesanal sin gluten con avena certificada, miel y frutos secos premium. Opción vegana disponible. Envío gratis +4 unidades.',
     images: [
       {
         url: `${SITE_URL}/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Poppy - Granola sin gluten premium, ecológica y artesanal',
+        alt: 'Poppy - Granola sin gluten premium y artesanal',
       },
     ],
   },
@@ -90,7 +88,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${BRAND_NAME} - Granola Sin Gluten Premium`,
     description:
-      'Granola artesanal sin gluten con avena certificada y miel ecológica. Opción vegana. Envío gratis +4 unidades.',
+      'Granola artesanal sin gluten con avena certificada y miel. Opción vegana. Envío gratis +4 unidades.',
     images: [`${SITE_URL}/images/og-image.jpg`],
     creator: SEO.twitterHandle,
     site: SEO.twitterHandle,

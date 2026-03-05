@@ -269,15 +269,15 @@ export default function PreventaPage() {
                 <li className="flex items-start gap-2">
                   <span className="text-primary-600 mt-0.5">•</span>
                   <div>
-                    <strong>Granola Clásica:</strong> Nuestra receta original con miel
-                    ecológica, avena sin gluten y frutos secos premium.
+                    <strong>Granola original:</strong> Nuestra receta original con miel,
+                    avena sin gluten y frutos secos premium.
                   </div>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary-600 mt-0.5">•</span>
                   <div>
-                    <strong>Granola de Naranja:</strong> Con ralladura de naranja
-                    natural y miel de azahar. Frescura mediterránea en cada bocado.
+                    <strong>Granola con naranja:</strong> Con piel de naranja deshidratada
+                    y miel de azahar. Frescura mediterránea en cada bocado.
                   </div>
                 </li>
               </ul>

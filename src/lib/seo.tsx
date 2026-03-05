@@ -55,7 +55,7 @@ export function buildOrganizationSchema(): SchemaOrganization {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.svg`,
     description:
-      'Poppy elabora granola artesanal sin gluten con avena certificada, miel ecológica y frutos secos premium. Envíos a toda España.',
+      'Poppy elabora granola artesanal sin gluten con avena certificada, miel y frutos secos premium. Envíos a toda España.',
     email: BUSINESS.email,
     address: {
       '@type': 'PostalAddress',
@@ -286,7 +286,7 @@ export function buildLocalBusinessSchema() {
     name: `${BRAND_NAME} - Granola Artesanal Málaga`,
     alternateName: BRAND_NAME,
     description:
-      'Obrador artesanal de granola sin gluten en Málaga. Elaboramos granola ecológica con miel local de Málaga, avena certificada sin gluten y frutos secos premium. Envíos a toda España.',
+      'Obrador artesanal de granola sin gluten en Málaga. Elaboramos granola artesanal con miel local de Málaga, avena certificada sin gluten y frutos secos premium. Envíos a toda España.',
     image: [
       `${SITE_URL}/images/hero-granola.jpeg`,
       `${SITE_URL}/logo.svg`,
@@ -335,7 +335,7 @@ export function buildLocalBusinessSchema() {
     currenciesAccepted: 'EUR',
     // Keywords for local SEO
     keywords:
-      'granola Málaga, granola artesanal Málaga, granola sin gluten Málaga, granola ecológica Málaga, desayuno saludable Málaga, miel ecológica Málaga',
+      'granola Málaga, granola artesanal Málaga, granola sin gluten Málaga, desayuno saludable Málaga, miel Málaga',
     // Social profiles
     sameAs: [BUSINESS.socialMedia.instagram, BUSINESS.socialMedia.facebook],
     // Aggregate rating

@@ -26,9 +26,9 @@ Nuestro producto cumple con el estándar europeo de ≤20 ppm (partes por milló
   {
     id: 'faq_honey',
     question: '¿Por qué usáis miel si es "sin azúcares añadidos"?',
-    answer: `Queremos ser totalmente transparentes: **nuestra granola NO es "sin azúcares añadidos"** porque utilizamos miel ecológica como endulzante natural.
+    answer: `Queremos ser totalmente transparentes: **nuestra granola NO es "sin azúcares añadidos"** porque utilizamos miel como endulzante natural.
 
-La miel es un azúcar natural que aporta dulzor y ayuda a tostar los ingredientes. Elegimos miel ecológica de apicultores locales porque:
+La miel es un azúcar natural que aporta dulzor y ayuda a tostar los ingredientes. Elegimos miel de apicultores locales porque:
 
 - Tiene un índice glucémico más bajo que el azúcar refinado
 - Aporta antioxidantes y nutrientes
@@ -44,13 +44,13 @@ Si buscas una opción sin ningún tipo de azúcar añadido, nuestra granola no e
     question: '¿Tenéis opciones veganas?',
     answer: `**Sí, nuestra Granola de Dátiles es 100% vegana**, ya que no contiene miel ni ningún ingrediente de origen animal.
 
-La mayoría de nuestras granolas contienen miel ecológica como endulzante natural. Elegimos miel porque:
+La mayoría de nuestras granolas contienen miel como endulzante natural. Elegimos miel porque:
 
 - Es el endulzante que mejor resultado da en textura y sabor
 - Proviene de apicultores locales con prácticas éticas
 - Aporta propiedades beneficiosas adicionales
 
-**Para veganos:** Nuestra Granola de Dátiles utiliza dátiles Medjool como endulzante natural, ofreciendo una dulzura intensa sin necesidad de miel. Está claramente etiquetada como "Sin miel (vegana)" en nuestra tienda.`,
+**Para veganos:** Nuestra Granola vegana utiliza dátiles Medjool como endulzante natural, ofreciendo una dulzura intensa sin necesidad de miel. Está claramente etiquetada como "Sin miel (vegana)" en nuestra tienda.`,
     category: 'producto',
     order: 3,
   },
@@ -78,7 +78,9 @@ Aunque no son ingredientes directos, nuestra granola se produce en instalaciones
   {
     id: 'faq_conservation',
     question: '¿Cómo debo conservar la granola?',
-    answer: `Para mantener la frescura y el crujiente de tu granola:
+    answer: `Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenamos. Eso significa que recibirás tu granola solo unas horas o días tras su elaboración.
+
+Nuestras granolas se envían en un packaging de papel sostenible y 100% reciclable. Te recomendamos que cuando lleguen a casa las vuelques en un tarro de cristal para conservarla mejor.
 
 **Antes de abrir:**
 - Conservar en lugar fresco y seco
@@ -86,9 +88,9 @@ Aunque no son ingredientes directos, nuestra granola se produce en instalaciones
 - Consumir preferentemente antes de la fecha indicada en el envase
 
 **Una vez abierta:**
-- Cerrar bien el envase después de cada uso
+- Vuelca la granola en un tarro de cristal hermético
 - Consumir en un plazo de 4-6 semanas
-- Si vives en un clima húmedo, puedes transferirla a un recipiente hermético
+- Si vives en un clima húmedo, asegúrate de cerrar bien el tarro
 
 **Fecha de caducidad:** Nuestras granolas tienen una vida útil de 6 meses desde la fecha de fabricación.`,
     category: 'producto',
@@ -285,7 +287,7 @@ Consulta nuestra Política de Privacidad completa para más detalles. Cumplimos 
     answer: `**Certificaciones y garantías:**
 
 - **Avena sin gluten certificada:** Nuestra avena proviene de proveedores con certificación de cultivo y procesado sin gluten
-- **Ingredientes ecológicos:** La miel, aceite de coco y parte de los ingredientes cuentan con certificación ecológica
+- **Ingredientes de calidad:** La miel de apicultores locales, aceite de coco virgen extra y frutos secos premium
 - **Registro sanitario:** Cumplimos con toda la normativa sanitaria española y europea para producción alimentaria
 
 **Control de calidad:**

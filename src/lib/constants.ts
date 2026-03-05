@@ -97,7 +97,7 @@ export const SEO = {
   titleTemplate: '%s | Poppy',
   defaultTitle: 'Poppy - Granola Sin Gluten, Orgánica, Premium',
   defaultDescription:
-    'Granola artesanal 150g sin gluten real, elaborada con avena certificada, miel ecológica y frutos secos premium. Envío gratis a partir de 4 bolsas.',
+    'Granola artesanal 150g sin gluten real, elaborada con avena certificada, miel y frutos secos premium. Envío gratis a partir de 4 bolsas.',
   siteUrl: process.env.NEXT_PUBLIC_APP_URL || 'https://poppy.es',
   ogImage: '/images/og-image.jpg',
   twitterHandle: '@poppy_granola',

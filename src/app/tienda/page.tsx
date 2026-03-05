@@ -76,9 +76,6 @@ export default function TiendaPage() {
             <button className="pill pill-active">
               Sin gluten
             </button>
-            <button className="pill hover:border-olive-300">
-              Ecológico
-            </button>
           </div>
           <div className="flex items-center gap-3">
             <span className="text-sm text-stone-500">Ordenar:</span>
@@ -147,8 +144,8 @@ export default function TiendaPage() {
               </h3>
               <p className="text-stone-500 mb-4">
                 Todos nuestros sabores comparten la misma base de calidad: avena sin gluten
-                y frutos secos premium. La mayoría están endulzados con miel ecológica,
-                y tenemos una opción vegana endulzada con sirope de ágave.
+                y frutos secos premium. La mayoría están endulzados con miel,
+                y tenemos una opción vegana endulzada con dátiles Medjool.
               </p>
               <p className="text-sm text-earth-600 font-medium">
                 Consejo: Empieza con el sabor clásico y luego explora los demás.
