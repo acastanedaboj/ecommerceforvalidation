@@ -25,35 +25,35 @@ describe('Bundle Pricing', () => {
   describe('calculateBundlePrice', () => {
     it('should apply 3% discount for pack 3', () => {
       const result = calculateBundlePrice(3, 1, false);
-      expect(result.unitPriceCents).toBe(873); // 900 * 0.97 = 873
-      expect(result.subtotalCents).toBe(2619); // 873 * 3
+      expect(result.unitPriceCents).toBe(679); // 700 * 0.97 = 679
+      expect(result.subtotalCents).toBe(2037); // 679 * 3
       expect(result.discountPercentage).toBe(3);
     });
 
     it('should apply 5% discount for pack 4', () => {
       const result = calculateBundlePrice(4, 1, false);
-      expect(result.unitPriceCents).toBe(855); // 900 * 0.95 = 855
-      expect(result.subtotalCents).toBe(3420); // 855 * 4
+      expect(result.unitPriceCents).toBe(665); // 700 * 0.95 = 665
+      expect(result.subtotalCents).toBe(2660); // 665 * 4
       expect(result.discountPercentage).toBe(5);
     });
 
     it('should apply 10% discount for pack 6', () => {
       const result = calculateBundlePrice(6, 1, false);
-      expect(result.unitPriceCents).toBe(810); // 900 * 0.90 = 810
-      expect(result.subtotalCents).toBe(4860); // 810 * 6
+      expect(result.unitPriceCents).toBe(630); // 700 * 0.90 = 630
+      expect(result.subtotalCents).toBe(3780); // 630 * 6
       expect(result.discountPercentage).toBe(10);
     });
 
     it('should apply 15% discount for subscription bundles', () => {
       const result = calculateBundlePrice(6, 1, true);
-      expect(result.unitPriceCents).toBe(765); // 900 * 0.85 = 765
-      expect(result.subtotalCents).toBe(4590); // 765 * 6
+      expect(result.unitPriceCents).toBe(595); // 700 * 0.85 = 595
+      expect(result.subtotalCents).toBe(3570); // 595 * 6
       expect(result.discountPercentage).toBe(15);
     });
 
     it('should multiply by quantity correctly', () => {
       const result = calculateBundlePrice(4, 2, false);
-      expect(result.subtotalCents).toBe(6840); // 855 * 4 * 2
+      expect(result.subtotalCents).toBe(5320); // 665 * 4 * 2
     });
   });
 
@@ -78,32 +78,32 @@ describe('Bundle Pricing', () => {
   describe('calculateBundleSavings', () => {
     it('should calculate savings for pack 3 (3% off)', () => {
       const savings = calculateBundleSavings(3, 1);
-      // Original: 900 * 3 = 2700
-      // Discounted: 873 * 3 = 2619
-      // Savings: 2700 - 2619 = 81
-      expect(savings).toBe(81);
+      // Original: 700 * 3 = 2100
+      // Discounted: 679 * 3 = 2037
+      // Savings: 2100 - 2037 = 63
+      expect(savings).toBe(63);
     });
 
     it('should calculate savings for pack 4 (5% off)', () => {
       const savings = calculateBundleSavings(4, 1);
-      // Original: 900 * 4 = 3600
-      // Discounted: 855 * 4 = 3420
-      // Savings: 3600 - 3420 = 180
-      expect(savings).toBe(180);
+      // Original: 700 * 4 = 2800
+      // Discounted: 665 * 4 = 2660
+      // Savings: 2800 - 2660 = 140
+      expect(savings).toBe(140);
     });
 
     it('should calculate savings for pack 6 (10% off)', () => {
       const savings = calculateBundleSavings(6, 1);
-      // Original: 900 * 6 = 5400
-      // Discounted: 810 * 6 = 4860
-      // Savings: 5400 - 4860 = 540
-      expect(savings).toBe(540);
+      // Original: 700 * 6 = 4200
+      // Discounted: 630 * 6 = 3780
+      // Savings: 4200 - 3780 = 420
+      expect(savings).toBe(420);
     });
 
     it('should multiply savings by quantity', () => {
       const savings = calculateBundleSavings(4, 2);
-      // 180 * 2 = 360
-      expect(savings).toBe(360);
+      // 140 * 2 = 280
+      expect(savings).toBe(280);
     });
   });
 });
@@ -276,9 +276,9 @@ describe('Bundle Pack Options', () => {
 
     it('should have correct unit prices', () => {
       const options = getBundlePackOptions();
-      expect(options[0].unitPriceCents).toBe(873); // Pack 3
-      expect(options[1].unitPriceCents).toBe(855); // Pack 4
-      expect(options[2].unitPriceCents).toBe(810); // Pack 6
+      expect(options[0].unitPriceCents).toBe(679); // Pack 3
+      expect(options[1].unitPriceCents).toBe(665); // Pack 4
+      expect(options[2].unitPriceCents).toBe(630); // Pack 6
     });
 
     it('should indicate free shipping for pack 4 and 6', () => {

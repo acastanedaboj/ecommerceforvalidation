@@ -31,7 +31,7 @@ describe('Utils', () => {
 
   describe('formatPrice', () => {
     it('should format cents to euros', () => {
-      expect(formatPrice(900)).toBe('9,00 €');
+      expect(formatPrice(700)).toBe('7,00 €');
     });
 
     it('should format zero correctly', () => {
@@ -47,18 +47,18 @@ describe('Utils', () => {
 
   describe('formatUnitPrice', () => {
     it('should format with unit suffix', () => {
-      expect(formatUnitPrice(900)).toBe('9,00 €/ud.');
+      expect(formatUnitPrice(700)).toBe('7,00 €/ud.');
     });
   });
 
   describe('eurosToCents / centsToEuros', () => {
     it('should convert euros to cents', () => {
-      expect(eurosToCents(9.00)).toBe(900);
+      expect(eurosToCents(7.00)).toBe(700);
       expect(eurosToCents(0.50)).toBe(50);
     });
 
     it('should convert cents to euros', () => {
-      expect(centsToEuros(900)).toBe(9);
+      expect(centsToEuros(700)).toBe(7);
       expect(centsToEuros(50)).toBe(0.5);
     });
   });
@@ -66,7 +66,7 @@ describe('Utils', () => {
   describe('calculateSavingsPercentage', () => {
     it('should calculate correct percentage', () => {
       expect(calculateSavingsPercentage(100, 90)).toBe(10);
-      expect(calculateSavingsPercentage(900, 765)).toBe(15);
+      expect(calculateSavingsPercentage(700, 595)).toBe(15);
     });
 
     it('should return 0 when original is 0', () => {

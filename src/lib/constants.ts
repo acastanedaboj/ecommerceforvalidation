@@ -23,19 +23,19 @@ export const BUSINESS = {
 // ==========================================
 
 export const PRICING = {
-  // Base price in cents (9.00€)
-  BASE_PRICE_CENTS: 900,
+  // Base price in cents (7.00€)
+  BASE_PRICE_CENTS: 700,
 
   // Pack discounts (percentage off per unit)
   PACK_DISCOUNTS: {
     1: 0,      // No discount for single
-    3: 0.03,   // 3% off = 8.73€/unit
-    4: 0.05,   // 5% off = 8.55€/unit
-    6: 0.10,   // 10% off = 8.10€/unit
+    3: 0.03,   // 3% off = 6.79€/unit
+    4: 0.05,   // 5% off = 6.65€/unit
+    6: 0.10,   // 10% off = 6.30€/unit
   } as Record<number, number>,
 
   // Subscription additional discount (on top of pack 6)
-  SUBSCRIPTION_DISCOUNT: 0.15, // 15% off = 7.65€/unit
+  SUBSCRIPTION_DISCOUNT: 0.15, // 15% off = 5.95€/unit
 
   // VAT rate (Spain - reduced rate for food)
   VAT_RATE: 0.10, // 10%

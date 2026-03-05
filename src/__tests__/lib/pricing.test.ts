@@ -33,51 +33,51 @@ describe('Pricing Logic', () => {
   });
 
   describe('calculatePackUnitPrice', () => {
-    it('should return base price for single unit (900 cents = 9.00€)', () => {
-      expect(calculatePackUnitPrice(1)).toBe(900);
+    it('should return base price for single unit (700 cents = 7.00€)', () => {
+      expect(calculatePackUnitPrice(1)).toBe(700);
     });
 
-    it('should return 870 cents (8.70€) for pack of 3 (3% off)', () => {
-      expect(calculatePackUnitPrice(3)).toBe(873); // 900 * 0.97 = 873
+    it('should return 679 cents (6.79€) for pack of 3 (3% off)', () => {
+      expect(calculatePackUnitPrice(3)).toBe(679); // 700 * 0.97 = 679
     });
 
-    it('should return 855 cents (8.55€) for pack of 4 (5% off)', () => {
-      expect(calculatePackUnitPrice(4)).toBe(855); // 900 * 0.95 = 855
+    it('should return 665 cents (6.65€) for pack of 4 (5% off)', () => {
+      expect(calculatePackUnitPrice(4)).toBe(665); // 700 * 0.95 = 665
     });
 
-    it('should return 810 cents (8.10€) for pack of 6 (10% off)', () => {
-      expect(calculatePackUnitPrice(6)).toBe(810); // 900 * 0.90 = 810
+    it('should return 630 cents (6.30€) for pack of 6 (10% off)', () => {
+      expect(calculatePackUnitPrice(6)).toBe(630); // 700 * 0.90 = 630
     });
   });
 
   describe('calculateSubscriptionUnitPrice', () => {
-    it('should return 765 cents (7.65€) for subscription (15% off)', () => {
-      expect(calculateSubscriptionUnitPrice()).toBe(765); // 900 * 0.85 = 765
+    it('should return 595 cents (5.95€) for subscription (15% off)', () => {
+      expect(calculateSubscriptionUnitPrice()).toBe(595); // 700 * 0.85 = 595
     });
   });
 
   describe('calculateLinePrice', () => {
     it('should calculate correct price for single unit', () => {
       const result = calculateLinePrice(1, 1, false);
-      expect(result.unitPriceCents).toBe(900);
-      expect(result.subtotalCents).toBe(900);
+      expect(result.unitPriceCents).toBe(700);
+      expect(result.subtotalCents).toBe(700);
       expect(result.discountCents).toBe(0);
       expect(result.isFreeShipping).toBe(false);
     });
 
     it('should calculate correct price for pack of 4', () => {
       const result = calculateLinePrice(1, 4, false);
-      expect(result.unitPriceCents).toBe(855);
-      expect(result.subtotalCents).toBe(3420); // 855 * 4
-      expect(result.discountCents).toBe(180); // (900 - 855) * 4 = 180
+      expect(result.unitPriceCents).toBe(665);
+      expect(result.subtotalCents).toBe(2660); // 665 * 4
+      expect(result.discountCents).toBe(140); // (700 - 665) * 4 = 140
       expect(result.isFreeShipping).toBe(true);
     });
 
     it('should calculate correct price for subscription', () => {
       const result = calculateLinePrice(1, 6, true);
-      expect(result.unitPriceCents).toBe(765);
-      expect(result.subtotalCents).toBe(4590); // 765 * 6
-      expect(result.discountCents).toBe(810); // (900 - 765) * 6 = 810
+      expect(result.unitPriceCents).toBe(595);
+      expect(result.subtotalCents).toBe(3570); // 595 * 6
+      expect(result.discountCents).toBe(630); // (700 - 595) * 6 = 630
       expect(result.isFreeShipping).toBe(true);
     });
 
@@ -117,7 +117,7 @@ describe('Pricing Logic', () => {
         { productId: '1', quantity: 1, packSize: 6, isSubscription: true },
       ]);
 
-      const expectedSubtotal = 765 * 6; // 4590
+      const expectedSubtotal = 595 * 6; // 3570
       expect(result.subtotalCents).toBe(expectedSubtotal);
       expect(result.isFreeShipping).toBe(true);
     });
@@ -128,7 +128,7 @@ describe('Pricing Logic', () => {
       ]);
 
       // Price is VAT-inclusive, so we extract it
-      // Total = 900, Net = 900 / 1.10 ≈ 818, VAT = 900 - 818 = 82
+      // Total = 700, Net = 700 / 1.10 ≈ 636, VAT = 700 - 636 = 64
       expect(result.taxCents).toBeGreaterThan(0);
       expect(result.taxCents).toBeLessThan(result.subtotalCents);
     });
@@ -163,8 +163,8 @@ describe('Pricing Logic', () => {
       const info = getSubscriptionInfo();
       expect(info.packSize).toBe(6);
       expect(info.discountPercentage).toBe(15);
-      expect(info.unitPriceCents).toBe(765);
-      expect(info.totalPriceCents).toBe(4590);
+      expect(info.unitPriceCents).toBe(595);
+      expect(info.totalPriceCents).toBe(3570);
     });
 
     it('should calculate monthly savings correctly', () => {
@@ -177,7 +177,7 @@ describe('Pricing Logic', () => {
 
 describe('Free Shipping Rules', () => {
   it('should apply free shipping for orders >= 35€', () => {
-    // 4 single items = 4 * 900 = 3600 cents = 36€
+    // 4 single items = 4 * 700 = 2800 cents = 28€
     const result = calculateCartTotal([
       { productId: '1', quantity: 4, packSize: 1, isSubscription: false },
     ]);
@@ -185,7 +185,7 @@ describe('Free Shipping Rules', () => {
   });
 
   it('should not apply free shipping for orders < 35€ with less than 4 items', () => {
-    // 3 single items = 3 * 900 = 2700 cents = 27€
+    // 3 single items = 3 * 700 = 2100 cents = 21€
     const result = calculateCartTotal([
       { productId: '1', quantity: 3, packSize: 1, isSubscription: false },
     ]);

@@ -23,7 +23,7 @@ model Product {
   shortDescription String? @db.Text
 
   // Pricing (in cents to avoid floating point issues)
-  priceInCents Int      @default(900) // 9.00€ = 900 cents
+  priceInCents Int      @default(700) // 7.00€ = 700 cents
 
   // Product details
   weight      Int      @default(250) // grams
@@ -343,7 +343,7 @@ model Subscription {
   quantity              Int                @default(1)
 
   // Billing
-  pricePerUnitInCents   Int                // 765 cents = 7.65€ with 15% discount
+  pricePerUnitInCents   Int                // 595 cents = 5.95€ with 15% discount
   intervalMonths        Int                @default(1)
 
   // Next billing
