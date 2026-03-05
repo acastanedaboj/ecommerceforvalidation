@@ -88,7 +88,7 @@ Aquí viene lo divertido: añade la granola en una sección, los frutos rojos fr
     slug: 'por-que-remojamos-frutos-secos-semillas',
     title: 'Por qué remojamos los frutos secos y semillas en Poppy',
     excerpt:
-      'Descubre el proceso tradicional de remojo de frutos secos y semillas que utilizamos en nuestra granola. Una técnica ancestral que puede mejorar la digestibilidad.',
+      'Descubre el proceso tradicional de remojo de frutos secos y semillas que utilizamos en nuestra granola. Una técnica ancestral que puede mejorar la digestión.',
     content: `
 # Por qué remojamos los frutos secos y semillas
 

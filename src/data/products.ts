@@ -49,7 +49,7 @@ export const products: Product[] = [
     slug: 'granola-clasica-150g',
     description: `Nuestra granola original es la receta que dio vida a Poppy. Un equilibrio perfecto entre la avena sin gluten, la miel ecológica de apicultores locales y una mezcla premium de semillas y frutos secos que define nuestro sabor característico.
 
-Los frutos secos y las semillas de girasol y calabaza se remojan cuidadosamente antes de hornear para mejorar su digestibilidad. La miel ecológica carameliza suavemente durante el tostado lento y, junto con el aceite de coco virgen extra, da ese toque crujiente y un aroma suave y delicioso, creando clusters perfectos.
+Los frutos secos y las semillas de girasol y calabaza se remojan cuidadosamente antes de hornear para mejorar su digestión. La miel ecológica carameliza suavemente durante el tostado lento y, junto con el aceite de coco virgen extra, da ese toque crujiente y un aroma suave y delicioso, creando clusters perfectos.
 
 El lino molido aporta omega-3 y el toque sutil de canela y jengibre completa la experiencia. Cada bolsa de 150g está elaborada con la proporción exacta para el crunch perfecto.
 
