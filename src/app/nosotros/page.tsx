@@ -7,14 +7,14 @@ import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/
 export const metadata: Metadata = {
   title: 'Nuestra Historia | Granola Artesanal Sin Gluten',
   description:
-    'Conoce la historia de Poppy. Desde 2019 elaboramos granola artesanal sin gluten con ingredientes ecológicos y miel local. 100% natural, hecha con amor.',
+    'Conoce la historia de Poppy. Desde 2019 elaboramos granola artesanal sin gluten con ingredientes naturales y miel local. 100% natural, hecha con amor.',
   alternates: {
     canonical: getCanonicalUrl('/nosotros'),
   },
   openGraph: {
     title: 'Nuestra Historia | Poppy',
     description:
-      'Granola artesanal sin gluten elaborada con pasión. Ingredientes ecológicos, tostado lento, hecha a mano.',
+      'Granola artesanal sin gluten elaborada con pasión. Ingredientes naturales, tostado lento, hecha a mano.',
     url: `${SITE_URL}/nosotros`,
   },
 };
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
 const values = [
   {
     icon: Leaf,
-    title: 'Ingredientes ecológicos',
+    title: 'Ingredientes naturales',
     description:
-      'Seleccionamos cuidadosamente cada ingrediente de productores locales certificados en agricultura ecológica.',
+      'Seleccionamos cuidadosamente cada ingrediente de productores locales de confianza.',
   },
   {
     icon: Heart,
@@ -192,7 +192,7 @@ export default function NosotrosPage() {
               {
                 step: '01',
                 title: 'Selección',
-                description: 'Elegimos ingredientes ecológicos de productores locales de confianza',
+                description: 'Elegimos ingredientes naturales de productores locales de confianza',
               },
               {
                 step: '02',
@@ -249,12 +249,12 @@ export default function NosotrosPage() {
                 {
                   icon: Heart,
                   title: 'Sin azúcares refinados',
-                  description: 'Endulzada naturalmente con sirope de arce ecológico',
+                  description: 'Endulzada naturalmente con miel o dátiles',
                 },
                 {
                   icon: Award,
-                  title: 'Certificación ecológica',
-                  description: 'Todos nuestros ingredientes tienen certificación eco',
+                  title: 'Calidad artesanal',
+                  description: 'Tostamos cada semana bajo demanda en lotes pequeños',
                 },
                 {
                   icon: Truck,

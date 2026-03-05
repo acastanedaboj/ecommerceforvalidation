@@ -15,7 +15,7 @@ import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/
 export const metadata: Metadata = {
   title: 'Granola Vegana 100% Sin Miel | Poppy',
   description:
-    'Granola vegana endulzada con dátiles Medjool y sirope de agave. Sin miel ni productos animales. Artesanal, ecológica y sin gluten. Envío gratis +4 uds.',
+    'Granola vegana endulzada con dátiles Medjool. Sin miel ni productos animales. Artesanal y sin gluten. Envío gratis +4 uds.',
   keywords: [
     'granola vegana',
     'granola sin miel',
@@ -146,12 +146,12 @@ export default function GranolaVeganaPage() {
                   <tr className="border-b border-stone-100">
                     <td className="py-3">Granola Clásica</td>
                     <td className="py-3 text-center text-stone-400">No</td>
-                    <td className="py-3 text-center">Miel ecológica</td>
+                    <td className="py-3 text-center">Miel</td>
                   </tr>
                   <tr>
                     <td className="py-3">Granola de Naranja</td>
                     <td className="py-3 text-center text-stone-400">No</td>
-                    <td className="py-3 text-center">Miel ecológica</td>
+                    <td className="py-3 text-center">Miel</td>
                   </tr>
                 </tbody>
               </table>

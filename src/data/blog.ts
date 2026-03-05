@@ -147,7 +147,7 @@ Queremos ser transparentes sobre este proceso:
 2. **Remojo:** Varias horas en agua filtrada
 3. **Escurrido y secado:** Eliminamos el exceso de agua
 4. **Tostado artesanal:** A baja temperatura para un tostado uniforme
-5. **Mezclado:** Con avena sin gluten, miel ecológica y aceite de coco
+5. **Mezclado:** Con avena sin gluten, miel y aceite de coco
 
 ## ¿Por qué nos tomamos esta molestia?
 
@@ -427,13 +427,13 @@ Esta receta aporta aproximadamente:
   {
     id: 'post_miel_beneficios',
     slug: 'beneficios-miel-ecologica-granola',
-    title: 'Miel Ecológica en la Granola: Por qué Marca la Diferencia',
+    title: 'Miel en la Granola: Por qué Marca la Diferencia',
     excerpt:
-      'Descubre los beneficios de la miel ecológica frente al azúcar refinado y por qué elegimos este endulzante natural para nuestra granola artesanal.',
+      'Descubre los beneficios de la miel frente al azúcar refinado y por qué elegimos este endulzante natural para nuestra granola artesanal.',
     content: `
-# Miel Ecológica: Por qué Marca la Diferencia
+# Miel: Por qué Marca la Diferencia
 
-En un mercado lleno de granolas endulzadas con azúcar refinado, jarabes de maíz o edulcorantes artificiales, nosotros elegimos la miel ecológica. Y hay razones científicas detrás de esta decisión.
+En un mercado lleno de granolas endulzadas con azúcar refinado, jarabes de maíz o edulcorantes artificiales, nosotros elegimos la miel. Y hay razones científicas detrás de esta decisión.
 
 ## Miel vs Azúcar Refinado
 
@@ -449,9 +449,9 @@ Aunque ambos aportan dulzor, hay diferencias importantes:
 
 La miel tiene un impacto ligeramente menor en los niveles de azúcar en sangre, aunque sigue siendo un azúcar y debe consumirse con moderación.
 
-## ¿Qué hace "ecológica" a una miel?
+## ¿Qué hace especial a nuestra miel?
 
-Para que una miel se certifique como ecológica debe cumplir:
+Para que una miel sea de calidad debe cumplir:
 
 1. **Ubicación de las colmenas** en zonas libres de pesticidas
 2. **Alimentación natural** de las abejas (no jarabe de azúcar)
@@ -492,10 +492,10 @@ Entendemos que la miel no es apta para veganos. Por eso, nuestra Granola de Dát
     author: 'Equipo Poppy',
     publishedAt: '2024-01-12',
     readingTime: 6,
-    tags: ['miel', 'ecologico', 'nutricion', 'ingredientes', 'salud'],
+    tags: ['miel', 'nutricion', 'ingredientes', 'salud'],
     metaTitle: 'Beneficios de la Miel Ecológica en la Granola | Poppy',
     metaDescription:
-      'Descubre por qué elegimos miel ecológica para endulzar nuestra granola. Beneficios frente al azúcar, propiedades y diferencias con miel convencional.',
+      'Descubre por qué elegimos miel para endulzar nuestra granola. Beneficios frente al azúcar, propiedades y diferencias con miel convencional.',
   },
   {
     id: 'post_snack_saludable',
@@ -1044,7 +1044,7 @@ Nuestra etiqueta:
 - **Azúcares:** 20-25g/100g vs 12-14g/100g
 - **Frutos secos y semillas:** 5-10% vs 40%
 - **Tipo de grasa:** Girasol/palma vs Coco virgen
-- **Endulzante:** Azúcar/jarabe vs Miel ecológica
+- **Endulzante:** Azúcar/jarabe vs Miel
 - **Procesado:** Extrusión masiva vs Horneado en lotes
 - **Clusters:** Artificiales vs Naturales
 - **Conservantes:** A menudo sí vs No
@@ -1075,7 +1075,7 @@ Una granola artesanal como Poppy cuesta 7€/150g.
 
 **Ingredientes:**
 - Frutos secos premium vs económicos
-- Miel ecológica vs azúcar
+- Miel vs azúcar
 - Aceite de coco vs girasol
 
 **Proceso:**

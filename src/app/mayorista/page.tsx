@@ -165,7 +165,7 @@ export default function MayoristaPage() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-accent-600" />
-                    Miel ecológica y frutos secos premium
+                    Miel y frutos secos premium
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-accent-600" />

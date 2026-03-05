@@ -86,11 +86,6 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
               Sin gluten
             </span>
           )}
-          {product.tags.includes('ecologico') && (
-            <span className="badge bg-olive-500/95 text-stone-700 backdrop-blur-sm">
-              Ecologico
-            </span>
-          )}
         </div>
 
         {/* Low stock warning */}

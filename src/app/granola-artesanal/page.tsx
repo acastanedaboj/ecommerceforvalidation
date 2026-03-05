@@ -14,7 +14,7 @@ import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/
 export const metadata: Metadata = {
   title: 'Granola Artesanal Premium de Málaga | Poppy',
   description:
-    'Granola elaborada artesanalmente en pequeños lotes con ingredientes de Málaga. Miel ecológica local, frutos secos premium. 4 sabores únicos. Envío gratis +4 uds.',
+    'Granola elaborada artesanalmente en pequeños lotes con ingredientes de Málaga. Miel local, frutos secos premium. 4 sabores únicos. Envío gratis +4 uds.',
   keywords: [
     'granola artesanal',
     'granola casera premium',

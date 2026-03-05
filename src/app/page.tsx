@@ -9,16 +9,16 @@ import { getPackOptions, getSubscriptionInfo } from '@/lib/pricing';
 import { SITE_URL, BRAND_NAME, getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: `${BRAND_NAME} | Granola Sin Gluten Artesanal con Miel Ecológica`,
+  title: `${BRAND_NAME} | Granola Sin Gluten Artesanal con Miel`,
   description:
-    'Granola artesanal sin gluten elaborada con avena certificada, miel ecológica de apicultores locales y frutos secos premium remojados. Envío gratis desde 4 unidades. Compra online en España.',
+    'Granola artesanal sin gluten elaborada con avena certificada, miel de apicultores locales y frutos secos premium remojados. Envío gratis desde 4 unidades. Compra online en España.',
   alternates: {
     canonical: getCanonicalUrl('/'),
   },
   openGraph: {
     title: `${BRAND_NAME} - Granola Sin Gluten Artesanal`,
     description:
-      'Granola artesanal sin gluten con avena certificada, miel ecológica y frutos secos premium remojados. Opción vegana disponible. Envío gratis +4 unidades.',
+      'Granola artesanal sin gluten con avena certificada, miel y frutos secos premium remojados. Opción vegana disponible. Envío gratis +4 unidades.',
     url: SITE_URL,
     type: 'website',
   },
@@ -49,7 +49,7 @@ export default function HomePage() {
               </h1>
 
               <p className="text-base md:text-lg text-stone-600 mb-10 leading-relaxed animate-fade-in-up animation-delay-100">
-                Elaborada a mano con avena sin gluten certificada, miel ecológica
+                Elaborada a mano con avena sin gluten certificada, miel
                 de apicultores locales y los mejores frutos secos y semillas,
                 remojados para facilitar la digestión.
               </p>
@@ -175,7 +175,7 @@ export default function HomePage() {
             <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
               <Droplets className="w-8 h-8 text-olive-600 mx-auto mb-6" strokeWidth={1} />
               <h3 className="font-display text-lg text-stone-800 mb-3">
-                Miel ecológica local
+                Miel local
               </h3>
               <p className="text-stone-600 text-sm leading-relaxed">
                 De apicultores de pueblo. Sin azúcares refinados.

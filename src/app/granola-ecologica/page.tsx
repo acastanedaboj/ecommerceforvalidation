@@ -12,26 +12,26 @@ import { ecologicaContent } from '@/data/landing-content';
 import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Granola Ecológica Sin Gluten | Ingredientes BIO | Poppy',
+  title: 'Granola Artesanal Sin Gluten | Ingredientes Naturales | Poppy',
   description:
-    'Granola ecológica artesanal con miel eco de Málaga, avena ecológica sin gluten y aceite de coco virgen. 25-30% frutos secos. Envío gratis desde 4 uds.',
+    'Granola artesanal con miel de Málaga, avena sin gluten y aceite de coco virgen. 25-30% frutos secos. Envío gratis desde 4 uds.',
   keywords: [
-    'granola ecológica',
-    'granola bio',
-    'granola ecológica sin gluten',
-    'comprar granola ecológica',
-    'granola orgánica',
-    'granola ingredientes ecológicos',
-    'miel ecológica granola',
-    'granola natural ecológica',
+    'granola artesanal',
+    'granola natural',
+    'granola artesanal sin gluten',
+    'comprar granola artesanal',
+    'granola premium',
+    'granola ingredientes naturales',
+    'miel granola',
+    'granola natural',
   ],
   alternates: {
     canonical: getCanonicalUrl('/granola-ecologica'),
   },
   openGraph: {
-    title: 'Granola Ecológica con Ingredientes BIO | Poppy',
+    title: 'Granola Artesanal con Ingredientes Naturales | Poppy',
     description:
-      'Miel ecológica de Málaga, avena eco sin gluten, aceite de coco virgen. Granola artesanal con 25-30% de frutos secos.',
+      'Miel de Málaga, avena sin gluten, aceite de coco virgen. Granola artesanal con 25-30% de frutos secos.',
     url: `${SITE_URL}/granola-ecologica`,
     type: 'website',
     images: [
@@ -234,7 +234,7 @@ export default function GranolaEcologicaPage() {
       {/* FAQs */}
       <div className="bg-neutral-50">
         <LandingFAQ
-          title="Preguntas frecuentes sobre granola ecológica"
+          title="Preguntas frecuentes sobre granola artesanal"
           subtitle="Resolvemos tus dudas"
           faqs={faqs}
         />
