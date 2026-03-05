@@ -66,7 +66,7 @@ export default function NosotrosPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-white drop-shadow-lg">
             Si no existe,{' '}
-            <span className="text-cream-100">la hacemos</span>
+            <span className="text-cream-100">la creamos</span>
           </h1>
         </div>
       </section>
