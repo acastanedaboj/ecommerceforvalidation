@@ -384,7 +384,7 @@ export default function SuscripcionPage() {
       <section className="section bg-[#f6ee87] text-neutral-900">
         <div className="container-custom text-center">
           <h2 className="text-3xl md:text-4xl font-display mb-4">
-            ¿Listo para ahorrar en tu granola favorita?
+            ¿Quieres ahorrar en tu granola favorita?
           </h2>
           <p className="text-neutral-900/80 mb-8 max-w-xl mx-auto">
             Únete a cientos de suscriptores que reciben su granola Poppy cada mes
