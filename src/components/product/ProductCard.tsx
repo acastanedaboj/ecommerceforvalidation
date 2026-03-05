@@ -63,9 +63,21 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
           src={product.images[0] || '/images/placeholder-product.jpg'}
           alt={product.name}
           fill
-          className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+          className={cn(
+            'object-cover transition-all duration-500 ease-out',
+            product.images[1] ? 'group-hover:opacity-0 group-hover:scale-[1.03]' : 'group-hover:scale-[1.03]'
+          )}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
+        {product.images[1] && (
+          <Image
+            src={product.images[1]}
+            alt={`${product.name} - detalle`}
+            fill
+            className="object-cover transition-all duration-500 ease-out opacity-0 group-hover:opacity-100 group-hover:scale-[1.03]"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          />
+        )}
 
         {/* Badges - Minimal style */}
         <div className="absolute top-4 left-4 flex flex-col gap-2">
