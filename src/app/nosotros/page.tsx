@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { Leaf, Heart, Sun, Users, Award, Truck, ArrowRight } from 'lucide-react';
+import { Leaf, Heart, Sun, Award, Truck, ArrowRight } from 'lucide-react';
 import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -249,17 +249,7 @@ export default function NosotrosPage() {
                 {
                   icon: Truck,
                   title: 'Envío sostenible',
-                  description: 'Packaging 100% reciclable y envíos con huella de carbono compensada',
-                },
-                {
-                  icon: Users,
-                  title: 'Comercio justo',
-                  description: 'Trabajamos directamente con productores locales',
-                },
-                {
-                  icon: Sun,
-                  title: 'Energía renovable',
-                  description: 'Nuestro obrador funciona con energía 100% solar',
+                  description: 'Packaging 100% reciclable',
                 },
               ].map((item, index) => {
                 const Icon = item.icon;
@@ -284,7 +274,7 @@ export default function NosotrosPage() {
       <section className="py-16 sm:py-24 bg-earth-50">
         <div className="max-w-3xl mx-auto px-4 text-center">
           <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
-            ¿Listo para probar la <span className="text-earth-600-display-italic">diferencia</span>?
+            ¿Quieres probar la <span className="text-earth-600-display-italic">diferencia</span>?
           </h2>
           <p className="text-stone-600 mb-8">
             Descubre por qué miles de personas han elegido Poppy
