@@ -337,9 +337,9 @@ export const artesanalContent = {
           'Solo ingredientes que reconocerías en tu cocina. Sin conservantes, colorantes ni saborizantes artificiales.',
       },
       {
-        title: 'Tostado lento',
+        title: 'Remojo, secado y tostado lento',
         description:
-          'Horneamos a baja temperatura durante más tiempo para conseguir ese crujiente perfecto que dura hasta el último bocado.',
+          'Remojamos los frutos secos y semillas para activarlos, los secamos y tostamos a baja temperatura. Un proceso que añade horas pero consigue un crujiente y sabor incomparables.',
       },
     ],
   },
@@ -352,8 +352,8 @@ export const artesanalContent = {
         description: 'De apicultores locales de la provincia de Málaga. Cruda y sin procesar.',
       },
       {
-        title: 'Frutos secos premium',
-        description: 'Almendras, avellanas, anacardos y anacardos seleccionados a mano.',
+        title: 'Frutos secos premium activados',
+        description: 'Almendras, avellanas, anacardos y semillas seleccionados a mano, remojados para reducir antinutrientes, secados y tostados artesanalmente.',
       },
       {
         title: 'Avena sin gluten',
@@ -568,7 +568,7 @@ export const mercadonaContent = {
       },
       {
         feature: 'Frutos secos',
-        poppy: 'Premium, selección manual',
+        poppy: 'Premium, remojados, secados y tostados artesanalmente',
         mercadona: 'Estándar, cantidad variable',
       },
       {
@@ -1737,12 +1737,12 @@ export const ecologicaContent = {
       },
       {
         aspect: 'Frutos secos y semillas',
-        eco: '40% del producto',
-        industrial: '5-10% del producto',
+        eco: '40% del producto, remojados, secados y tostados',
+        industrial: '5-10% del producto, sin activar',
       },
       {
         aspect: 'Proceso',
-        eco: 'Horneado lento en pequeños lotes',
+        eco: 'Remojo + secado + tostado lento en pequeños lotes',
         industrial: 'Extrusión masiva a alta temperatura',
       },
       {

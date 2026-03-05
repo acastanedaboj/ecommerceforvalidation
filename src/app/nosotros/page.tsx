@@ -187,7 +187,7 @@ export default function NosotrosPage() {
               De la selección de ingredientes a tu mesa, cada paso importa
             </p>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {[
               {
                 step: '01',
@@ -196,16 +196,21 @@ export default function NosotrosPage() {
               },
               {
                 step: '02',
-                title: 'Mezcla',
-                description: 'Combinamos los ingredientes siguiendo nuestra receta tradicional',
+                title: 'Remojo y activación',
+                description: 'Remojamos los frutos secos y semillas durante horas para reducir antinutrientes y mejorar su digestibilidad',
               },
               {
                 step: '03',
-                title: 'Tostado',
-                description: 'Horneamos a baja temperatura para conseguir el crujiente perfecto',
+                title: 'Secado y tostado',
+                description: 'Secamos a baja temperatura y tostamos de forma lenta y artesanal para un crujiente perfecto',
               },
               {
                 step: '04',
+                title: 'Mezcla y horneado',
+                description: 'Combinamos los ingredientes siguiendo nuestra receta tradicional y horneamos a baja temperatura',
+              },
+              {
+                step: '05',
                 title: 'Envío',
                 description: 'Empaquetamos con cariño y enviamos directamente a tu puerta',
               },
@@ -218,7 +223,7 @@ export default function NosotrosPage() {
                   </h3>
                   <p className="text-stone-600 text-sm">{item.description}</p>
                 </div>
-                {index < 3 && (
+                {index < 4 && (
                   <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-earth-300">
                     <ArrowRight className="w-6 h-6" />
                   </div>

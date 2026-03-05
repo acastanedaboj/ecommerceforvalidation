@@ -92,72 +92,124 @@ Aquí viene lo divertido: añade la granola en una sección, los frutos rojos fr
     content: `
 # Por qué remojamos los frutos secos y semillas
 
-En Poppy aplicamos una técnica tradicional que muchos han olvidado: el **remojo previo de los frutos secos y las semillas**. Este proceso ancestral, utilizado durante generaciones en diversas culturas, forma parte de nuestra manera de elaborar granola.
+En Poppy aplicamos una técnica tradicional que muchos han olvidado: el **remojo previo de los frutos secos y las semillas**. Este proceso ancestral, utilizado durante generaciones en diversas culturas, forma parte de nuestra manera de elaborar granola. Pero no nos quedamos ahí: después del remojo, **secamos y tostamos** cada fruto seco y semilla con cuidado para conseguir el resultado perfecto.
 
 ## ¿Qué remojamos exactamente?
 
 Antes de incorporarlos a nuestra granola, remojamos:
 
-- **Almendras**
-- **Anacardos**
-- **Pipas de calabaza**
-- **Pipas de girasol**
-- **Semillas de lino**
+- **Almendras** — contienen una cantidad considerable de fitatos e inhibidores enzimáticos
+- **Anacardos** — más blandos, pero igualmente beneficiados por el proceso
+- **Pipas de calabaza** — ricas en zinc y magnesio, el remojo favorece su aprovechamiento
+- **Pipas de girasol** — con notable contenido de antinutrientes que se reducen con el remojo
+- **Semillas de lino** — aportan omega-3 y fibra
 
-Cada uno de estos ingredientes pasa por un proceso de remojo en agua durante varias horas antes del tostado.
+Cada uno de estos ingredientes pasa por un proceso completo de **remojo, secado y tostado** antes de incorporarse a la granola.
 
-## La tradición del remojo
+## La tradición del remojo: "activar" los frutos secos
 
-El remojo de frutos secos y semillas es una práctica que se ha utilizado durante siglos en muchas culturas alrededor del mundo. Nuestras abuelas lo hacían de forma natural, sin necesidad de explicaciones científicas.
+El remojo de frutos secos y semillas es una práctica que se ha utilizado durante siglos en muchas culturas alrededor del mundo. Nuestras abuelas lo hacían de forma natural, sin necesidad de explicaciones científicas. Hoy se conoce como **"activación"**: al sumergir los frutos secos en agua, les damos la señal biológica de que "ha llovido", y la semilla desactiva sus mecanismos de protección para empezar a brotar.
+
+### ¿Qué son los antinutrientes?
+
+Los frutos secos y semillas crudos contienen de forma natural una serie de compuestos conocidos como **antinutrientes**. No son "malos" en sí mismos: son el mecanismo de defensa de la semilla para sobrevivir hasta encontrar las condiciones ideales para germinar. Los principales son:
+
+- **Ácido fítico (fitatos):** Se une a minerales como el hierro, zinc, calcio y magnesio, formando sales insolubles que dificultan su absorción. Es el antinutriente más abundante en frutos secos y semillas.
+- **Inhibidores enzimáticos:** Bloquean enzimas digestivas como la tripsina y la pepsina, lo que puede hacer la digestión más pesada.
+- **Taninos:** Compuestos polifenólicos que pueden interferir con la absorción de proteínas y minerales, además de dar un sabor astringente.
+- **Oxalatos:** Presentes en menor medida, pueden unirse al calcio reduciendo su biodisponibilidad.
 
 ### ¿Qué ocurre durante el remojo?
 
-Los frutos secos y semillas contienen **fitatos** (ácido fítico), compuestos naturales que forman parte de la estructura de estos alimentos. El remojo en agua puede:
+Cuando sumergimos los frutos secos y semillas en agua durante varias horas, se inicia un proceso natural:
 
-- **Reducir parcialmente los fitatos** presentes en estos alimentos
-- **Ablandar la textura** de los frutos secos
-- **Suavizar el sabor**, haciéndolo más delicado
+1. **Se activan las enzimas propias de la semilla** — como la fitasa, que descompone el ácido fítico
+2. **Se reducen los inhibidores enzimáticos** — facilitando la posterior digestión
+3. **Se liberan nutrientes** que estaban "bloqueados" por los fitatos
+4. **Se ablandan las fibras externas** — lo que prepara el fruto seco para un secado y tostado más uniforme
+5. **Se suaviza el sabor** — desaparecen notas amargas asociadas a los taninos
+
+Es importante saber que el **agua de remojo se descarta siempre**, ya que arrastra buena parte de los antinutrientes disueltos.
+
+### Un matiz importante sobre los fitatos
+
+No todo es blanco o negro. Algunas investigaciones sugieren que una porción de ácido fítico puede tener efectos antioxidantes y antiinflamatorios. El objetivo del remojo no es eliminar todos los fitatos, sino **reducirlos lo suficiente** para mejorar la absorción de minerales sin perder por completo sus posibles beneficios.
+
+## Nuestro proceso completo: remojo, secado y tostado
+
+En Poppy no solo remojamos: realizamos un proceso de tres pasos que marca la diferencia.
+
+### 1. Selección de ingredientes premium
+
+Elegimos frutos secos y semillas ecológicos de productores de confianza. Solo trabajamos con producto **crudo y sin tostar**, que es el que responde al proceso de activación.
+
+### 2. Remojo en agua
+
+Sumergimos cada tipo de fruto seco y semilla en agua filtrada durante el tiempo adecuado según su naturaleza:
+
+| Ingrediente | Tiempo aproximado de remojo |
+|---|---|
+| Almendras | 8-12 horas |
+| Anacardos | 2-4 horas |
+| Pipas de calabaza | 6-8 horas |
+| Pipas de girasol | 6-8 horas |
+| Semillas de lino | 2-4 horas |
+
+Al finalizar el remojo, **escurrimos y desechamos el agua**, que arrastra los antinutrientes disueltos.
+
+### 3. Secado
+
+Este paso es fundamental y a menudo se omite en explicaciones del proceso. Tras el remojo, los frutos secos están empapados y no se pueden tostar directamente (resultarían cocidos en lugar de tostados). Por eso los **secamos cuidadosamente a baja temperatura** hasta que recuperan una textura firme y sin humedad. Un buen secado es clave para que el tostado posterior sea uniforme y crujiente.
+
+### 4. Tostado artesanal a baja temperatura
+
+Una vez secos, tostamos los frutos secos y semillas **a baja temperatura y de forma lenta**. A diferencia del tostado industrial a alta temperatura (que puede degradar aceites y nutrientes), nuestro tostado artesanal:
+
+- **Preserva los ácidos grasos** saludables sin oxidarlos
+- **Desarrolla sabores más complejos** y redondeados
+- **Consigue un crujiente uniforme** sin puntos quemados
+- **Mantiene el perfil nutricional** lo más intacto posible
+
+El resultado de este triple proceso — remojo, secado, tostado — es un fruto seco con un sabor notablemente más limpio, suave y redondo que el que se consigue tostando directamente.
+
+### 5. Mezclado final
+
+Los frutos secos y semillas ya activados y tostados se mezclan con la avena sin gluten, la miel ecológica (o sirope de agave en la versión vegana) y el aceite de coco virgen extra. Se hornea todo el conjunto a baja temperatura para crear los clusters crujientes que caracterizan a Poppy.
 
 ## Nuestra experiencia
 
 Llevamos años elaborando granola con este método y hemos observado que:
 
-1. **El sabor es más suave y redondo** - Los frutos secos remojados y luego tostados tienen un perfil de sabor más delicado
-2. **La textura mejora** - Conseguimos un tostado más uniforme
-3. **Algunos clientes nos comentan** que la encuentran más fácil de digerir que otras granolas
+1. **El sabor es más suave y redondo** — Los frutos secos remojados, secados y luego tostados tienen un perfil de sabor más delicado y limpio, sin amargor
+2. **La textura mejora notablemente** — Conseguimos un tostado más uniforme y un crujiente que dura más tiempo
+3. **Muchos clientes nos comentan** que la encuentran más fácil de digerir que otras granolas
 
 ## Lo que podemos decir (y lo que no)
 
 Queremos ser transparentes sobre este proceso:
 
 **Lo que sí podemos afirmar:**
-- Es una técnica tradicional utilizada durante generaciones
-- Puede ayudar a algunas personas con digestiones sensibles
-- Mejora el sabor y la textura de los frutos secos
-- Forma parte de nuestro proceso artesanal
+- Es una técnica tradicional utilizada durante generaciones en múltiples culturas
+- El remojo reduce parcialmente los fitatos y otros antinutrientes
+- El proceso de activación puede facilitar la digestión a personas con estómagos sensibles
+- Mejora notablemente el sabor y la textura de los frutos secos
+- El secado posterior garantiza un tostado uniforme y crujiente
 
 **Lo que NO afirmamos:**
-- No hacemos declaraciones de salud
-- No decimos que "elimine" los antinutrientes (solo los reduce parcialmente)
+- No hacemos declaraciones de salud ni curativas
+- No decimos que "elimine" todos los antinutrientes (solo los reduce parcialmente)
 - Cada persona es diferente y los efectos pueden variar
-
-## Nuestro proceso completo
-
-1. **Selección:** Frutos secos y semillas de calidad premium
-2. **Remojo:** Varias horas en agua filtrada
-3. **Escurrido y secado:** Eliminamos el exceso de agua
-4. **Tostado artesanal:** A baja temperatura para un tostado uniforme
-5. **Mezclado:** Con avena sin gluten, miel ecológica y aceite de coco
+- Los frutos secos sin activar también son nutritivos y saludables
 
 ## ¿Por qué nos tomamos esta molestia?
 
-Sería mucho más fácil (y rápido) mezclar todos los ingredientes directamente. Pero en Poppy creemos en hacer las cosas bien, no en hacerlas rápido.
+Sería mucho más fácil (y rápido) mezclar todos los ingredientes directamente y tostarlos. La mayoría de fabricantes de granola lo hacen así. Pero en Poppy creemos en hacer las cosas bien, no en hacerlas rápido.
 
-Este proceso lleva más tiempo, pero creemos que el resultado merece la pena: una granola elaborada con mimo y siguiendo técnicas tradicionales que respetan los ingredientes.
+El proceso de remojo, secado y tostado **añade entre 12 y 24 horas** a nuestra elaboración. Pero creemos que el resultado merece la pena: una granola donde cada ingrediente ha sido tratado con respeto, siguiendo técnicas tradicionales que honran la materia prima.
 
 ## Pruébala y cuéntanos
 
-Al final, lo importante es cómo te sienta a ti. Algunas personas notan diferencia con granolas elaboradas con este proceso, otras simplemente disfrutan del sabor.
+Al final, lo importante es cómo te sienta a ti. Muchas personas notan la diferencia en sabor y digestión con granolas elaboradas con este proceso, otras simplemente disfrutan del crujiente perfecto.
 
 **¿Has probado nuestra granola?** Nos encantaría saber tu experiencia.
     `,
