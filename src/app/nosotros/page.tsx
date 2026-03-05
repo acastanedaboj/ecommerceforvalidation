@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Leaf, Heart, Sun, ArrowRight } from 'lucide-react';
 import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
@@ -52,19 +53,21 @@ export default function NosotrosPage() {
       />
 
       <div className="min-h-screen bg-cream-50">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-earth-100 to-cream-50 py-20 sm:py-28">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <span className="inline-block px-4 py-1.5 bg-olive-100 text-olive-700 text-sm font-medium mb-6">
-            Nuestra historia
-          </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-stone-800 mb-6">
+      {/* Hero Section with Image */}
+      <section className="relative h-[50vh] sm:h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+        <Image
+          src="/images/nosotros-hero.jpg"
+          alt="Pilar preparando granola artesanal en su cocina"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/30" />
+        <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-white drop-shadow-lg">
             Si no existe,{' '}
-            <span className="text-earth-600">la hacemos</span>
+            <span className="text-cream-100">la hacemos</span>
           </h1>
-          <p className="text-lg sm:text-xl text-stone-600 max-w-2xl mx-auto">
-            De la cocina de casa al mundo
-          </p>
         </div>
       </section>
 
@@ -76,29 +79,29 @@ export default function NosotrosPage() {
           </h2>
           <div className="space-y-5 text-stone-600 text-lg leading-relaxed">
             <p>
-              Un día, el médico te dice &quot;tienes que eliminar el gluten de manera
-              estricta y para siempre&quot; y tu vida cambia por completo. Dicen que
-              ante las limitaciones podemos sacar todo nuestro potencial, y así fue
+              Un día, el médico me dijo &quot;tienes que eliminar el gluten de manera
+              estricta y para siempre&quot; y mi vida cambió por completo. Dicen que
+              ante las limitaciones sacamos todo nuestro potencial, y así fue
               como nació la granola Poppy. Tras un diagnóstico crónico y varias
               patologías digestivas superadas, empecé a crear recetas de manera
               consciente, con ingredientes que tuvieran sentido para mí y que
-              respetaran a mi organismo.
+              respetaran mi organismo.
             </p>
             <p>
-              Así que hizo lo que haría cualquier persona razonable con algo de
-              tiempo y un horno en casa: empezó a hacer su propia granola. Sin
+              Así que hice lo que haría cualquier persona razonable con algo de
+              tiempo y un horno en casa: empecé a hacer mi propia granola. Sin
               azúcares refinados, sin aditivos, con los frutos secos remojados
               para facilitar la digestión. Una granola pensada desde el cariño y
               el sentido común.
             </p>
             <p>
-              La compartió con familia y amigos. Y pasó lo que pasa cuando algo
+              La compartí con familia y amigos. Y pasó lo que pasa cuando algo
               está realmente bueno: todos querían más.
             </p>
             <p className="text-stone-800 font-medium text-xl font-serif">
-              Poppy es la granola que Pilar toma cada mañana. Con ingredientes de
+              Poppy es la granola que tomo cada mañana. Con ingredientes de
               calidad, un proceso pensado para cuidar la digestión y sin nada que
-              sobre. Si no es buena para ella, no es buena para ti.
+              sobre. Si no es buena para mí, no es buena para ti.
             </p>
           </div>
         </div>
