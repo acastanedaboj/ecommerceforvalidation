@@ -319,6 +319,14 @@ La avena es naturalmente libre de gluten, pero presenta un problema: la contamin
 
 En Poppy utilizamos avena de cultivos dedicados, procesada en instalaciones con estrictos protocolos de limpieza. Cada lote se analiza para garantizar niveles por debajo de 20 ppm.
 
+## Más recursos
+
+Si estás buscando opciones de granola sin gluten, te pueden interesar:
+- [Comparativa completa: mejor granola sin gluten en España](/mejor-granola-sin-gluten-espana)
+- [Granola sin gluten de Mercadona: análisis y alternativas](/granola-sin-gluten-mercadona)
+- [Granola sin gluten de Carrefour: comparativa](/granola-sin-gluten-carrefour)
+- [Granola vegana 100% sin miel](/granola-vegana)
+
 **Nota importante:** Si tienes enfermedad celíaca severa, consulta siempre con tu médico antes de introducir cualquier producto nuevo.
     `,
     coverImage: '/images/blog/granola-sin-gluten-celiacos.png',
@@ -389,7 +397,7 @@ La granola debe añadirse en el último momento. Si la mezclas con los overnight
 ### Chocolate
 - Añade 1 cucharada de cacao puro
 - Usa plátano congelado en rodajas
-- Perfecto con Granola de Chocolate Poppy
+- Perfecto con cualquier granola Poppy
 
 ### Frutas del bosque
 - Mezcla frutos rojos congelados con la avena
@@ -599,17 +607,6 @@ Los frutos secos son el alma de una buena granola. Aportan textura, sabor, prote
 
 **En nuestra granola:** Usamos almendras españolas, cortadas en láminas para mejor distribución.
 
-### Nueces Pecanas
-**Por qué las usamos:** Aportan un sabor acaramelado único y textura mantecosa.
-
-**Beneficios:**
-- Alto contenido en antioxidantes
-- Ricas en zinc
-- Omega-3 vegetal
-- Fibra
-
-**En nuestra granola:** Las partimos en trozos grandes para que se noten en cada bocado.
-
 ### Avellanas
 **Por qué las usamos:** Combinan perfectamente con el chocolate y la vainilla.
 
@@ -657,14 +654,13 @@ Los frutos secos son uno de los 14 alérgenos de declaración obligatoria. Nuest
 
 - Almendras
 - Avellanas
-- Nueces pecanas
 - Anacardos
 
 Si tienes alergia a algún fruto seco, consulta siempre el etiquetado específico de cada producto.
 
-## ¿Cuántos frutos secos tiene nuestra granola?
+## ¿Cuántos frutos secos y semillas tiene nuestra granola?
 
-Aproximadamente el **25-30%** de nuestra granola son frutos secos y semillas. Es un porcentaje alto comparado con muchas granolas comerciales que apenas llegan al 10%.
+Aproximadamente el **40%** de nuestra granola son frutos secos y semillas (pipas de girasol, pipas de calabaza, almendras, anacardos, avellanas y lino). Es un porcentaje muy alto comparado con muchas granolas comerciales que apenas llegan al 10%.
 
 Esta proporción garantiza que en cada cucharada encuentres sabor, textura y nutrientes de los frutos secos, no solo avena con azúcar.
     `,
@@ -676,7 +672,7 @@ Esta proporción garantiza que en cada cucharada encuentres sabor, textura y nut
     tags: ['frutos-secos', 'nutricion', 'ingredientes', 'salud', 'proteina'],
     metaTitle: 'Frutos Secos en la Granola: Beneficios y Tipos | Poppy',
     metaDescription:
-      'Guía completa sobre los frutos secos en la granola: almendras, nueces pecanas, avellanas y anacardos. Beneficios nutricionales y cómo los elegimos.',
+      'Guía completa sobre los frutos secos y semillas en la granola: pipas de girasol, almendras, anacardos y avellanas. Beneficios nutricionales.',
   },
   {
     id: 'post_bowl_proteico',
@@ -1033,11 +1029,12 @@ Lee la etiqueta de una granola de supermercado y probablemente encuentres:
 ### Granola artesanal Poppy
 Nuestra etiqueta:
 
-- Copos de avena sin gluten (38-40%)
-- Miel ecológica (10-12%)
-- Frutos secos variados (25-30%)
-- Aceite de coco virgen extra
-- Especias naturales
+- Copos de avena sin gluten (50%)
+- Pipas de girasol y calabaza (25%)
+- Frutos secos: almendras, anacardos, avellanas (13%)
+- Miel ecológica (7%)
+- Aceite de coco virgen extra (4%)
+- Lino molido y especias naturales
 - Nada más
 
 ## Comparativa detallada
@@ -1045,7 +1042,7 @@ Nuestra etiqueta:
 **Industrial vs Artesanal:**
 
 - **Azúcares:** 20-25g/100g vs 12-14g/100g
-- **Frutos secos:** 5-10% vs 25-30%
+- **Frutos secos y semillas:** 5-10% vs 40%
 - **Tipo de grasa:** Girasol/palma vs Coco virgen
 - **Endulzante:** Azúcar/jarabe vs Miel ecológica
 - **Procesado:** Extrusión masiva vs Horneado en lotes
@@ -1087,7 +1084,7 @@ Una granola artesanal como Poppy cuesta 7€/150g.
 - Control artesanal vs automatizado
 
 **Cantidades:**
-- 25-30% de frutos secos vs 5-10%
+- 40% de frutos secos y semillas vs 5-10%
 - Menos azúcar, más ingredientes de calidad
 
 ## El test del sabor
@@ -1135,13 +1132,13 @@ No competimos con la granola industrial. Somos otra categoría. Hacemos granola 
   {
     id: 'post_avena_sin_gluten',
     slug: 'avena-sin-gluten-guia-completa-celiacos',
-    title: 'Avena Sin Gluten: Todo lo que Necesitas Saber',
+    title: 'Avena Sin Gluten: Todo lo que Necesitas Saber sobre Contaminación Cruzada',
     excerpt:
-      '¿La avena tiene gluten? ¿Es segura para celíacos? Guía completa sobre avena certificada sin gluten, contaminación cruzada y cómo elegir avena segura.',
+      '¿La avena tiene gluten? Guía completa: cadena de contaminación cruzada paso a paso, cómo verificar etiquetas y qué hace Poppy en cada fase para garantizar tu seguridad.',
     content: `
-# Avena Sin Gluten: Guía Completa para Celíacos
+# Avena Sin Gluten: Guía Completa sobre Contaminación Cruzada
 
-La avena es uno de los cereales más nutritivos y versátiles, pero genera muchas dudas entre las personas con enfermedad celíaca o sensibilidad al gluten. ¿Es segura? ¿Qué significa "certificada sin gluten"? En esta guía respondemos todas tus preguntas con información basada en fuentes oficiales.
+La avena es uno de los cereales más nutritivos y versátiles, pero genera muchas dudas entre las personas con enfermedad celíaca o sensibilidad al gluten. ¿Es segura? ¿Qué significa "certificada sin gluten"? ¿Cómo puedes verificar que tu avena es realmente segura? En esta guía respondemos todas tus preguntas con información basada en fuentes oficiales.
 
 ## ¿La avena contiene gluten naturalmente?
 
@@ -1226,6 +1223,82 @@ Los **beta-glucanos** son un tipo de fibra soluble exclusiva de la avena con ben
 
 La EFSA (Autoridad Europea de Seguridad Alimentaria) ha aprobado declaraciones de salud para los beta-glucanos de la avena.
 
+## La cadena de contaminación: de campo a mesa
+
+La mayoría de guías mencionan la contaminación cruzada de pasada. Aquí te explicamos **exactamente dónde ocurre** y qué debería hacer un fabricante responsable en cada fase.
+
+### 1. El campo: donde empieza todo
+
+La avena convencional se cultiva en rotación con trigo y cebada. Las semillas de cosechas anteriores germinan entre la avena y se mezclan con ella. También los campos colindantes dispersan semillas por el viento.
+
+**Lo que exige la norma:** Campos dedicados exclusivamente a avena, sin rotación con cereales con gluten durante al menos 2 temporadas. Inspección visual de las parcelas antes de la cosecha.
+
+**Lo que hacemos en Poppy:** Trabajamos con proveedores que cultivan avena en parcelas dedicadas, verificadas por organismos de certificación independientes.
+
+### 2. La cosecha: maquinaria compartida
+
+Las cosechadoras, trilladoras y remolques procesan trigo por la mañana y avena por la tarde. Los restos de trigo se mezclan con la avena sin que nadie lo detecte.
+
+**Lo que exige la norma:** Maquinaria limpiada a fondo o dedicada. Registro documental de la limpieza.
+
+**Lo que hacemos en Poppy:** Nuestros proveedores usan cosechadoras que pasan protocolos de limpieza auditados antes de recoger avena certificada.
+
+### 3. El transporte: el eslabón invisible
+
+Los camiones y silos de almacenamiento transportan múltiples cereales. Un camión que llevó trigo ayer puede transportar avena hoy con restos de gluten en sus paredes.
+
+**Lo que exige la norma:** Transporte dedicado o limpieza verificada del vehículo. Documentación de la cadena de custodia.
+
+**Lo que hacemos en Poppy:** Transporte con trazabilidad documentada desde el campo hasta el molino.
+
+### 4. El molino: el punto crítico
+
+Aquí es donde se produce la mayor contaminación. Las fábricas convencionales procesan trigo, centeno, cebada y avena en las mismas líneas. Incluso con limpieza, los niveles de gluten residual pueden superar los 200 ppm.
+
+**Lo que exige la norma:** Líneas de procesado exclusivas para avena sin gluten, o protocolos de limpieza validados con análisis post-limpieza.
+
+**Lo que hacemos en Poppy:** Nuestra avena se procesa en **molinos exclusivos para avena sin gluten**. No comparten línea con ningún cereal con gluten. Cada lote se analiza antes de salir del molino.
+
+### 5. El obrador: nuestra responsabilidad directa
+
+Una vez la avena llega a nuestro obrador en Málaga, mantenemos la cadena de seguridad:
+
+- **Almacenamiento separado** de la avena respecto a otros ingredientes
+- **Protocolos de limpieza** entre lotes de producción
+- **Control de proveedores:** Todos nuestros ingredientes son verificados como aptos
+- **Certificado de análisis** de cada lote final de granola
+
+> El resultado: cada bolsa de granola Poppy contiene **menos de 20 ppm de gluten**, cumpliendo el Reglamento (UE) 828/2014. Puedes ver nuestros [4 sabores de granola sin gluten en la tienda](/tienda).
+
+## Cómo verificar que tu avena es realmente sin gluten
+
+No todas las etiquetas significan lo mismo. Aquí tienes una guía práctica para leer el envase de cualquier producto con avena:
+
+### Etiquetas que SÍ son seguras
+
+- **"Sin gluten" + Espiga Barrada:** Certificación oficial europea. El producto ha sido analizado y contiene <20 ppm.
+- **"Sin gluten" + logo FACE:** Certificado por la Federación de Asociaciones de Celíacos de España. Mismo estándar de <20 ppm.
+- **"Gluten-free" + certificación de terceros:** En productos importados, busca sellos como GFCO (Gluten-Free Certification Organization).
+
+### Etiquetas ENGAÑOSAS (no son garantía)
+
+- **"Sin gluten añadido"** — Solo significa que no han puesto gluten a propósito. **NO garantiza** ausencia de contaminación cruzada. Evítala si eres celíaco.
+- **"Naturalmente sin gluten"** — Correcto como dato botánico, pero **no dice nada** sobre contaminación en el procesado.
+- **"Puede contener trazas de gluten"** — El fabricante reconoce riesgo de contaminación. **No es segura para celíacos.**
+- **"Elaborado en instalaciones que procesan trigo"** — Riesgo real de contaminación cruzada. Recházala.
+
+### El checklist definitivo
+
+Antes de comprar cualquier producto con avena, verifica estos 5 puntos:
+
+1. **Símbolo de espiga barrada** o certificación FACE visible en el envase
+2. **Declaración explícita "sin gluten"** (no "sin gluten añadido")
+3. **Nombre del organismo certificador** (no solo una autodeclaración del fabricante)
+4. **Información sobre trazabilidad** (origen de la avena, tipo de cultivo)
+5. **Análisis por lotes** mencionado en la etiqueta o web del fabricante
+
+> En Poppy cumplimos los 5 puntos. Si quieres saber más sobre cómo adaptamos nuestros productos para celíacos, visita nuestra [guía de granola para celíacos](/granola-para-celiacos).
+
 ## Cómo usamos la avena en Poppy
 
 En Poppy utilizamos exclusivamente **avena certificada sin gluten** de proveedores con trazabilidad completa:
@@ -1235,7 +1308,7 @@ En Poppy utilizamos exclusivamente **avena certificada sin gluten** de proveedor
 - **Verificación:** Certificado de análisis en cada lote (<20 ppm)
 - **Almacenamiento:** Separación total de otros ingredientes
 
-Nuestro proceso garantiza que cada bolsa de granola Poppy es segura para personas con enfermedad celíaca.
+Nuestro proceso garantiza que cada bolsa de granola Poppy es segura para personas con enfermedad celíaca. Consulta la [tabla nutricional completa](/tabla-nutricional) de nuestras 4 variedades para comparar valores.
 
 ## Preguntas frecuentes sobre avena sin gluten
 
@@ -1285,12 +1358,12 @@ Ninguna diferencia nutricional ni de sabor. La única diferencia es el proceso d
     coverImage: '/images/blog/avena-sin-gluten.jpg',
     category: 'nutricion',
     author: 'Equipo Poppy',
-    publishedAt: '2026-02-05',
-    readingTime: 9,
-    tags: ['avena', 'sin-gluten', 'celiacos', 'nutricion', 'certificacion', 'guia'],
-    metaTitle: 'Avena Sin Gluten: Guía Completa para Celíacos | Poppy',
+    publishedAt: '2026-02-17',
+    readingTime: 12,
+    tags: ['avena', 'sin-gluten', 'celiacos', 'nutricion', 'certificacion', 'guia', 'contaminacion-cruzada', 'seguridad-alimentaria', 'etiquetado'],
+    metaTitle: 'Contaminación Cruzada del Gluten en Avena: Guía Completa | Poppy',
     metaDescription:
-      '¿La avena tiene gluten? Guía completa sobre avena certificada sin gluten para celíacos. Contaminación cruzada, certificaciones, beneficios y cómo elegir avena segura.',
+      'Cadena de contaminación cruzada del gluten en avena paso a paso: campo, cosecha, molino y obrador. Cómo verificar etiquetas y elegir avena realmente segura para celíacos.',
   },
   {
     id: 'post_desayuno_sin_gluten_semana',
@@ -1536,6 +1609,13 @@ Las mismas que cualquier desayuno equilibrado: entre 300-500 kcal dependiendo de
 
 **¿Cuál es tu desayuno sin gluten favorito?** Comparte tus ideas con nosotros en redes sociales.
 
+## Más información sobre granola sin gluten
+
+- [Guía completa sobre avena sin gluten](/blog/avena-sin-gluten-guia-completa-celiacos)
+- [Mejor granola sin gluten en España: comparativa](/mejor-granola-sin-gluten-espana)
+- [Granola ecológica con ingredientes BIO](/granola-ecologica)
+- [Opciones veganas sin miel](/granola-vegana)
+
 *Nota: Este artículo tiene fines informativos. Si tienes dudas sobre tu dieta sin gluten, consulta con tu médico o nutricionista especializado.*
     `,
     coverImage: '/images/blog/desayuno-sin-gluten-semana.jpg',
@@ -1658,27 +1738,26 @@ Busca estas características:
 - [ ] Sin jarabes ni azúcares refinados
 - [ ] Endulzada con miel, dátiles o agave (mejor perfil glucémico)
 
-## Nuestra granola de dátiles: dulzor sin azúcar añadido
+## Nuestra granola vegana: alternativa sin miel
 
-En Poppy desarrollamos una granola específicamente pensada para quienes buscan reducir azúcar:
+En Poppy desarrollamos una granola específicamente pensada para quienes siguen una dieta vegana:
 
 ### Características
-- **Endulzante:** 100% dátiles Medjool (sin miel ni azúcar añadido)
-- **Azúcar total:** 18g/100g (todo procedente de los dátiles)
+- **Endulzante:** Sirope de agave ecológico (sin miel)
+- **Azúcar total:** 14g/100g
 - **Fibra:** 7g/100g
-- **Frutos secos:** 29% (almendras, nueces pecanas, anacardos)
-- **IG estimado:** Medio-bajo gracias a la alta proporción de frutos secos
+- **Frutos secos y semillas:** 40% (pipas de girasol, pipas de calabaza, almendras, anacardos, avellanas, lino)
+- **100% vegana:** Sin ningún ingrediente de origen animal
 
-### Por qué dátiles
+### Por qué sirope de agave
 
-Los dátiles Medjool aportan:
-- Dulzor natural intenso
-- Fibra que ralentiza la absorción
-- Potasio (696mg/100g)
-- Magnesio
-- Antioxidantes
+El sirope de agave ecológico aporta:
+- Dulzor natural equilibrado
+- Índice glucémico más bajo que el azúcar
+- Compatible con dietas veganas
+- Caramelización perfecta durante el horneado
 
-A diferencia del azúcar refinado, el dulzor de los dátiles viene "empaquetado" con nutrientes que moderan su impacto glucémico.
+A diferencia del azúcar refinado, el sirope de agave proporciona un dulzor suave que realza el sabor de los frutos secos y semillas.
 
 ## Recetas bajas en azúcar con granola
 
@@ -1832,6 +1911,8 @@ Los síntomas de la SGNC son muy similares a los de la celiaquía y aparecen gen
 - **Erupciones cutáneas**
 - **Ansiedad o depresión**
 - **Anemia**
+
+%%BANNER:/images/blog/freepik__optimize-img1-for-affiliation-banner-display-in-we__24656.jpg|https://www.awin1.com/cread.php?awinmid=20039&awinaffid=2779502&campaign=HIVITAL&ued=https%3A%2F%2Fwww.hivital.com%2Fcategorias%2Fsistema-digestivo%2F|Hivital - Suplementos para el sistema digestivo%%
 
 ### ¿Cuándo aparecen los síntomas?
 

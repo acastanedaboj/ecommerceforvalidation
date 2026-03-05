@@ -63,7 +63,6 @@ La mayoría de nuestras granolas contienen miel ecológica como endulzante natur
 - Almendras
 - Avellanas
 - Anacardos
-- Nueces pecanas
 
 **Otros alérgenos (trazas posibles):**
 Aunque no son ingredientes directos, nuestra granola se produce en instalaciones que también procesan:

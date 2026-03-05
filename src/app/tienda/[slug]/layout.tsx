@@ -35,8 +35,8 @@ export async function generateMetadata({
       canonical: getCanonicalUrl(productUrl),
     },
     openGraph: {
-      title: product.name,
-      description: product.shortDescription,
+      title: product.metaTitle,
+      description: product.metaDescription,
       url: `${SITE_URL}${productUrl}`,
       type: 'website',
       images: [
@@ -46,7 +46,7 @@ export async function generateMetadata({
             : `${SITE_URL}${product.images[0]}`,
           width: 800,
           height: 800,
-          alt: product.name,
+          alt: `${product.name} - Granola artesanal sin gluten Poppy`,
         },
       ],
     },

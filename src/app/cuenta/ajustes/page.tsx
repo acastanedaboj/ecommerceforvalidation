@@ -1,10 +1,64 @@
 'use client';
 
 import { useSession, signOut } from 'next-auth/react';
-import { Settings, Mail, Bell, Shield, LogOut } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Settings, Mail, Bell, Shield, LogOut, Check } from 'lucide-react';
 
 export default function AjustesPage() {
   const { data: session } = useSession();
+  const [acceptsNewsletter, setAcceptsNewsletter] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
+  const [saveSuccess, setSaveSuccess] = useState(false);
+
+  // Fetch user preferences on mount
+  useEffect(() => {
+    async function fetchPreferences() {
+      try {
+        const res = await fetch('/api/user/preferences');
+        if (res.ok) {
+          const data = await res.json();
+          setAcceptsNewsletter(data.acceptsNewsletter || false);
+        }
+      } catch (error) {
+        console.error('Error fetching preferences:', error);
+      } finally {
+        setIsLoading(false);
+      }
+    }
+
+    if (session?.user) {
+      fetchPreferences();
+    } else {
+      setIsLoading(false);
+    }
+  }, [session]);
+
+  // Update newsletter preference
+  const handleNewsletterChange = async (checked: boolean) => {
+    setAcceptsNewsletter(checked);
+    setIsSaving(true);
+    setSaveSuccess(false);
+
+    try {
+      const res = await fetch('/api/user/preferences', {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ acceptsNewsletter: checked }),
+      });
+
+      if (res.ok) {
+        setSaveSuccess(true);
+        setTimeout(() => setSaveSuccess(false), 2000);
+      }
+    } catch (error) {
+      console.error('Error updating preferences:', error);
+      // Revert on error
+      setAcceptsNewsletter(!checked);
+    } finally {
+      setIsSaving(false);
+    }
+  };
 
   return (
     <div className="space-y-6">
@@ -25,7 +79,7 @@ export default function AjustesPage() {
               <h3 className="font-medium text-stone-800 mb-1">Correo electronico</h3>
               <p className="text-stone-500">{session?.user?.email}</p>
               <p className="text-sm text-stone-400 mt-2">
-                Vinculado con tu cuenta de Google
+                {session?.user?.image ? 'Vinculado con tu cuenta de Google' : 'Cuenta con email y contraseña'}
               </p>
             </div>
           </div>
@@ -45,24 +99,37 @@ export default function AjustesPage() {
                   <input
                     type="checkbox"
                     defaultChecked
+                    disabled
                     className="w-4 h-4 text-earth-600 border-cream-300 rounded focus:ring-earth-500"
                   />
                   <span className="text-stone-700">Actualizaciones de pedidos</span>
+                  <span className="text-xs text-stone-400">(siempre activo)</span>
                 </label>
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"
                     defaultChecked
+                    disabled
                     className="w-4 h-4 text-earth-600 border-cream-300 rounded focus:ring-earth-500"
                   />
                   <span className="text-stone-700">Recordatorios de suscripcion</span>
+                  <span className="text-xs text-stone-400">(siempre activo)</span>
                 </label>
                 <label className="flex items-center gap-3 cursor-pointer">
                   <input
                     type="checkbox"
+                    checked={acceptsNewsletter}
+                    onChange={(e) => handleNewsletterChange(e.target.checked)}
+                    disabled={isLoading || isSaving}
                     className="w-4 h-4 text-earth-600 border-cream-300 rounded focus:ring-earth-500"
                   />
-                  <span className="text-stone-700">Ofertas y novedades</span>
+                  <span className="text-stone-700">Ofertas, recetas y novedades</span>
+                  {isSaving && <span className="text-xs text-stone-400">Guardando...</span>}
+                  {saveSuccess && (
+                    <span className="text-xs text-green-600 flex items-center gap-1">
+                      <Check className="w-3 h-3" /> Guardado
+                    </span>
+                  )}
                 </label>
               </div>
             </div>

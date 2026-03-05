@@ -79,16 +79,48 @@ export default function HomePage() {
 
             {/* Hero Image */}
             <div className="relative animate-fade-in animation-delay-200">
-              <div className="relative aspect-[4/5] max-w-lg mx-auto">
-                {/* Main image - sharp corners */}
+              {/* Desktop: vertical 4:5 image */}
+              <div className="hidden lg:block relative aspect-[4/5] max-w-lg mx-auto">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src="/products/hero.jpg"
-                    alt="Poppy granola con frutos secos y miel"
+                    src="/images/home 4-5.png"
+                    alt="Elaboración artesanal de granola Poppy con ingredientes naturales"
                     fill
                     className="object-cover"
                     priority
-                    sizes="(max-width: 1024px) 100vw, 50vw"
+                    sizes="50vw"
+                  />
+                </div>
+
+                {/* Floating badge - Reviews */}
+                <div className="absolute -bottom-4 -left-4 bg-white shadow-lg p-4 animate-pulse-soft">
+                  <div className="flex items-center gap-3">
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-4 h-4 fill-olive-500 text-olive-500"
+                        />
+                      ))}
+                    </div>
+                    <div>
+                      <p className="font-display text-stone-800">4.9/5</p>
+                      <p className="text-xs text-stone-500">+500 reseñas</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Mobile/Tablet: horizontal image */}
+              <div className="lg:hidden relative aspect-[3/2] max-w-2xl mx-auto">
+                <div className="relative w-full h-full overflow-hidden">
+                  <Image
+                    src="/images/home horizntal.png"
+                    alt="Elaboración artesanal de granola Poppy con ingredientes naturales"
+                    fill
+                    className="object-cover"
+                    priority
+                    sizes="100vw"
                   />
                 </div>
 
@@ -157,7 +189,7 @@ export default function HomePage() {
                 Frutos secos premium
               </h3>
               <p className="text-stone-600 text-sm leading-relaxed">
-                Pecanas, almendras, avellanas y anacardos de primera.
+                Almendras, avellanas y anacardos de primera.
               </p>
             </div>
 
@@ -239,7 +271,7 @@ export default function HomePage() {
                   </span>
                 )}
                 <h3 className="font-display text-lg text-stone-800 mb-2">
-                  {pack.size === 1 ? '1 bolsa' : `Pack ${pack.size}`}
+                  {pack.size === 1 ? '1 bolsa' : `Pack ${pack.size} bolsas`}
                 </h3>
                 <div className="flex items-baseline gap-1 mb-4">
                   <span className="text-3xl font-display text-earth-600">

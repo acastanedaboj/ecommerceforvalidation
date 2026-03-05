@@ -85,9 +85,11 @@ export default function BlogPostPage({ params }: Props) {
 
   // Simple markdown-like parsing for the content
   const formatContent = (content: string) => {
-    // Helper function to parse inline markdown (bold)
+    // Helper function to parse inline markdown (bold + links)
     const parseInline = (text: string) => {
-      return text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+      return text
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-earth-600 underline hover:text-earth-700 transition-colors">$1</a>')
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     };
 
     const lines = content.split('\n');
@@ -185,6 +187,33 @@ export default function BlogPostPage({ params }: Props) {
       // Horizontal rule
       if (line.trim() === '---') {
         elements.push(<hr key={i} className="my-8 border-neutral-200" />);
+        i++;
+        continue;
+      }
+
+      // Affiliate banner: %%BANNER:imageUrl|href|altText%%
+      const bannerMatch = line.match(/^%%BANNER:([^|]+)\|([^|]+)\|([^%]+)%%$/);
+      if (bannerMatch) {
+        const [, src, href, alt] = bannerMatch;
+        elements.push(
+          <a
+            key={i}
+            href={href}
+            target="_blank"
+            rel="sponsored noopener noreferrer"
+            className="block my-8 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            aria-label={alt}
+          >
+            <Image
+              src={src}
+              alt={alt}
+              width={1200}
+              height={600}
+              className="w-full h-auto"
+              sizes="(max-width: 768px) 100vw, 768px"
+            />
+          </a>
+        );
         i++;
         continue;
       }

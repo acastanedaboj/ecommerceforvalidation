@@ -1,11 +1,14 @@
 'use client';
 
-import { Suspense } from 'react';
+import { Suspense, useState } from 'react';
 import { signIn, useSession } from 'next-auth/react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Input } from '@/components/ui/Input';
+import { Button } from '@/components/ui/Button';
+import { Eye, EyeOff } from 'lucide-react';
 
 function LoginContent() {
   const { data: session, status } = useSession();
@@ -14,11 +17,41 @@ function LoginContent() {
   const callbackUrl = searchParams.get('callbackUrl') || '/';
   const error = searchParams.get('error');
 
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [formError, setFormError] = useState('');
+
   useEffect(() => {
     if (status === 'authenticated') {
       router.push(callbackUrl);
     }
   }, [status, router, callbackUrl]);
+
+  const handleCredentialsLogin = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsLoading(true);
+    setFormError('');
+
+    try {
+      const result = await signIn('credentials', {
+        email,
+        password,
+        redirect: false,
+      });
+
+      if (result?.error) {
+        setFormError(result.error);
+      } else {
+        router.push(callbackUrl);
+      }
+    } catch {
+      setFormError('Error al iniciar sesion. Intentalo de nuevo.');
+    } finally {
+      setIsLoading(false);
+    }
+  };
 
   if (status === 'loading') {
     return (
@@ -52,20 +85,70 @@ function LoginContent() {
         </div>
 
         {/* Error message */}
-        {error && (
+        {(error || formError) && (
           <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm">
-            {error === 'OAuthSignin' && 'Error al iniciar sesion con el proveedor.'}
-            {error === 'OAuthCallback' && 'Error en la respuesta del proveedor.'}
-            {error === 'OAuthCreateAccount' && 'No se pudo crear la cuenta.'}
-            {error === 'Callback' && 'Error en el proceso de autenticacion.'}
-            {error === 'Default' && 'Ha ocurrido un error. Intentalo de nuevo.'}
-            {!['OAuthSignin', 'OAuthCallback', 'OAuthCreateAccount', 'Callback', 'Default'].includes(error) &&
+            {formError ||
+              (error === 'OAuthSignin' && 'Error al iniciar sesion con el proveedor.') ||
+              (error === 'OAuthCallback' && 'Error en la respuesta del proveedor.') ||
+              (error === 'OAuthCreateAccount' && 'No se pudo crear la cuenta.') ||
+              (error === 'Callback' && 'Error en el proceso de autenticacion.') ||
+              (error === 'CredentialsSignin' && 'Email o contraseña incorrectos.') ||
               'Ha ocurrido un error. Intentalo de nuevo.'}
           </div>
         )}
 
         {/* Login card */}
         <div className="bg-white rounded-2xl shadow-soft p-8">
+          {/* Email/Password form */}
+          <form onSubmit={handleCredentialsLogin} className="space-y-4 mb-6">
+            <Input
+              label="Email"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="tu@email.com"
+              required
+            />
+            <div className="relative">
+              <Input
+                label="Contraseña"
+                type={showPassword ? 'text' : 'password'}
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="Tu contraseña"
+                required
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-3 top-9 text-stone-400 hover:text-stone-600"
+              >
+                {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+              </button>
+            </div>
+            <Button type="submit" variant="primary" className="w-full" disabled={isLoading}>
+              {isLoading ? 'Iniciando sesion...' : 'Iniciar sesion'}
+            </Button>
+          </form>
+
+          {/* Register link */}
+          <p className="text-center text-sm text-stone-500 mb-6">
+            ¿No tienes cuenta?{' '}
+            <Link href="/auth/register" className="text-earth-600 hover:text-earth-700 font-medium">
+              Registrate
+            </Link>
+          </p>
+
+          {/* Divider */}
+          <div className="relative my-6">
+            <div className="absolute inset-0 flex items-center">
+              <div className="w-full border-t border-cream-200"></div>
+            </div>
+            <div className="relative flex justify-center text-sm">
+              <span className="px-4 bg-white text-stone-400">o continua con</span>
+            </div>
+          </div>
+
           {/* Google Sign In */}
           <button
             onClick={() => signIn('google', { callbackUrl })}
@@ -95,7 +178,7 @@ function LoginContent() {
           </button>
 
           {/* Divider */}
-          <div className="relative my-8">
+          <div className="relative my-6">
             <div className="absolute inset-0 flex items-center">
               <div className="w-full border-t border-cream-200"></div>
             </div>
@@ -106,9 +189,7 @@ function LoginContent() {
 
           {/* Guest checkout info */}
           <div className="text-center">
-            <p className="text-sm text-stone-500 mb-4">
-              Tambien puedes comprar sin cuenta
-            </p>
+            <p className="text-sm text-stone-500 mb-4">Tambien puedes comprar sin cuenta</p>
             <Link
               href="/tienda"
               className="text-earth-600 hover:text-earth-700 font-medium text-sm"

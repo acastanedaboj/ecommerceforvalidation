@@ -4,8 +4,9 @@ import { useState } from 'react';
 import Link from 'next/link';
 import { ProductCard } from '@/components/product/ProductCard';
 import { BundleBuilderModal } from '@/components/bundle';
-import { getActiveProducts } from '@/data/products';
+import { getActiveProducts, getRetailProducts } from '@/data/products';
 import { Lightbulb, SlidersHorizontal, Package, ChevronRight } from 'lucide-react';
+import { JsonLd, buildProductListSchema, buildBreadcrumbSchema } from '@/lib/seo';
 
 export default function TiendaPage() {
   const [isBundleModalOpen, setIsBundleModalOpen] = useState(false);
@@ -13,8 +14,19 @@ export default function TiendaPage() {
   const products = getActiveProducts();
   const retailProducts = products.filter((p) => p.categoryId === 'cat_granola');
   const horecaProducts = products.filter((p) => p.categoryId === 'cat_horeca');
+  const allRetailProducts = getRetailProducts();
 
   return (
+    <>
+      {/* JSON-LD: Only on listing page, not on product detail pages */}
+      <JsonLd data={buildProductListSchema(allRetailProducts, 'Granola Sin Gluten Poppy')} />
+      <JsonLd
+        data={buildBreadcrumbSchema([
+          { name: 'Inicio', url: '/' },
+          { name: 'Tienda', url: '/tienda' },
+        ])}
+      />
+
     <div className="section bg-cream-50">
       <div className="container-custom">
         {/* Breadcrumbs */}
@@ -164,5 +176,6 @@ export default function TiendaPage() {
         onClose={() => setIsBundleModalOpen(false)}
       />
     </div>
+    </>
   );
 }
