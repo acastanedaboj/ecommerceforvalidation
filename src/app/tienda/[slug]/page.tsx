@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ShoppingBag, Truck, RefreshCw, Shield, Plus, Minus, FileText, List, BarChart2, AlertTriangle, Package, Leaf, Clock } from 'lucide-react';
+import { ShoppingBag, Truck, RefreshCw, Shield, Plus, Minus, FileText, List, BarChart2, AlertTriangle, Package, Leaf, Clock, WheatOff } from 'lucide-react';
 import { getProductBySlug, getRetailProducts } from '@/data/products';
 import { useCartStore } from '@/store/cart-store';
 import { formatPrice, cn } from '@/lib/utils';
@@ -402,11 +402,34 @@ export default function ProductDetailPage() {
             </Collapsible>
 
             <Collapsible
-              title="Alergenos"
+              title="Alergenos e informacion dietetica"
               icon={<AlertTriangle className="w-5 h-5" />}
             >
+              {/* Dietary badges */}
+              <div className="flex flex-wrap gap-2 mb-4">
+                {product.tags.includes('sin-gluten') && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 text-sm font-medium border border-emerald-200">
+                    <WheatOff className="w-4 h-4" />
+                    Sin gluten
+                  </span>
+                )}
+                {product.isVegan && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-green-50 text-green-700 text-sm font-medium border border-green-200">
+                    <Leaf className="w-4 h-4" />
+                    Vegano
+                  </span>
+                )}
+                {product.hasHoney && (
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-amber-50 text-amber-700 text-sm font-medium border border-amber-200">
+                    Con miel
+                  </span>
+                )}
+              </div>
+
+              {/* Allergen warning */}
               <div className="bg-amber-50 rounded-xl p-4 border border-amber-200">
-                <p className="text-amber-800">{product.allergens}</p>
+                <p className="text-amber-800 font-medium mb-1">Informacion sobre alergenos</p>
+                <p className="text-amber-700 text-sm">{product.allergens}</p>
               </div>
             </Collapsible>
 

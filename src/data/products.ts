@@ -63,7 +63,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     ingredients:
       'Copos de avena sin gluten* (50%), pipas de girasol (17%), pipas de calabaza (8%), miel ecológica* (7%), almendras (6%), anacardos (5%), aceite de coco virgen extra* (4%), avellanas (2%), lino molido (1%), especias (canela, jengibre) (<1%). *De agricultura ecológica.',
     allergens:
-      'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
+      'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Puede contener trazas de soja y sésamo.',
     nutritionalInfo: {
       servingSize: 'por 100g',
       calories: 475,
@@ -107,7 +107,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     ingredients:
       'Copos de avena sin gluten* (48%), pipas de girasol (16%), pipas de calabaza (8%), miel ecológica* (7%), almendras (5%), anacardos (5%), aceite de coco virgen extra* (4%), naranja confitada (3%), ralladura de naranja natural (2%), avellanas (2%), lino molido (1%), especias (canela, jengibre) (<1%). *De agricultura ecológica.',
     allergens:
-      'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
+      'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Puede contener trazas de soja y sésamo.',
     nutritionalInfo: {
       servingSize: 'por 100g',
       calories: 470,
@@ -151,7 +151,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     ingredients:
       'Copos de avena sin gluten* (50%), pipas de girasol (17%), pipas de calabaza (8%), sirope de agave* (7%), almendras (6%), anacardos (5%), aceite de coco virgen extra* (4%), avellanas (2%), lino molido (1%), especias (canela, jengibre) (<1%). *De agricultura ecológica.',
     allergens:
-      'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
+      'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Puede contener trazas de soja y sésamo.',
     nutritionalInfo: {
       servingSize: 'por 100g',
       calories: 475,
@@ -195,7 +195,7 @@ Solicita información sobre precios mayoristas y condiciones de distribución a 
     ingredients:
       'Copos de avena sin gluten* (50%), pipas de girasol (17%), pipas de calabaza (8%), miel ecológica* (7%), almendras (6%), anacardos (5%), aceite de coco virgen extra* (4%), avellanas (2%), lino molido (1%), especias (canela, jengibre) (<1%). *De agricultura ecológica.',
     allergens:
-      'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo. Control de contaminación cruzada según estándar ≤20 ppm de gluten.',
+      'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Puede contener trazas de soja y sésamo.',
     nutritionalInfo: {
       servingSize: 'por 100g',
       calories: 475,
