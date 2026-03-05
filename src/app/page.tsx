@@ -157,7 +157,7 @@ export default function HomePage() {
                 Frutos secos premium
               </h3>
               <p className="text-stone-600 text-sm leading-relaxed">
-                Pecanas, almendras, avellanas y anacardos de primera.
+                Almendras, avellanas y anacardos de primera.
               </p>
             </div>
 
@@ -239,7 +239,7 @@ export default function HomePage() {
                   </span>
                 )}
                 <h3 className="font-display text-lg text-stone-800 mb-2">
-                  {pack.size === 1 ? '1 bolsa' : `Pack ${pack.size}`}
+                  {pack.size === 1 ? '1 bolsa' : `Pack ${pack.size} bolsas`}
                 </h3>
                 <div className="flex items-baseline gap-1 mb-4">
                   <span className="text-3xl font-display text-earth-600">

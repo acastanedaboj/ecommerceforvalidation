@@ -68,7 +68,7 @@ export function PackPillSelector({
               'font-display text-lg',
               isSelected ? 'text-earth-700' : 'text-stone-700'
             )}>
-              {option.size === 1 ? '1 bolsa' : `Pack ${option.size}`}
+              {option.size === 1 ? '1 bolsa' : `Pack ${option.size} bolsas`}
             </span>
 
             {/* Price */}
