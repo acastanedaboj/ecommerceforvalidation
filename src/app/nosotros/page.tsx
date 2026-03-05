@@ -66,13 +66,13 @@ export default function NosotrosPage() {
             Nuestra historia
           </span>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-stone-800 mb-6">
-            Nacida de una{' '}
-            <span className="text-earth-600">necesidad</span>,{' '}
-            hecha con <span className="text-olive-600">cuidado</span>
+            Si no existe,{' '}
+            <span className="text-earth-600">la haces</span>{' '}
+            <span className="text-olive-600">tú</span>
           </h1>
           <p className="text-lg sm:text-xl text-stone-600 max-w-2xl mx-auto">
-            Poppy nació porque Pilar no encontraba una granola que cumpliera con lo que
-            su cuerpo necesitaba. Así que decidió hacerla ella misma.
+            Pilar buscaba una granola sin gluten que de verdad mereciera la pena.
+            No la encontró. Así que se metió en la cocina y la creó.
           </p>
         </div>
       </section>
@@ -81,35 +81,37 @@ export default function NosotrosPage() {
       <section className="py-16 sm:py-24">
         <div className="max-w-3xl mx-auto px-4">
           <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-8 text-center">
-            Todo empezó con un <span className="text-earth-600-display-italic">diagnóstico</span>
+            De la cocina de casa al <span className="text-earth-600-display-italic">mundo</span>
           </h2>
           <div className="space-y-5 text-stone-600 text-lg leading-relaxed">
             <p>
               Cuando a Pilar le diagnosticaron Sensibilidad al Gluten No Celíaca,
-              su relación con la alimentación cambió por completo. Empezó una dieta
-              estricta sin gluten y, poco a poco, fue adentrándose en el mundo de la
-              nutrición consciente, buscando entender qué le sentaba bien y por qué.
+              no se quedó de brazos cruzados. Empezó una dieta estricta sin gluten
+              y, de paso, se obsesionó (de la forma buena) con entender cómo funciona
+              lo que comemos: qué nos sienta bien, qué nos sienta mal y, sobre todo,
+              por qué.
             </p>
             <p>
-              Tras distintos problemas digestivos, descubrió que no bastaba con
-              eliminar el gluten: la calidad de los ingredientes, el proceso de
-              elaboración y lo que <em>no</em> lleva un alimento importan tanto como
-              lo que sí lleva.
+              Después de darle bastantes vueltas a su digestión, descubrió algo que
+              parece obvio pero que casi nadie aplica: no basta con quitar lo malo.
+              La calidad de los ingredientes, cómo se elaboran y lo que <em>no</em> llevan
+              importa tanto como lo que sí.
             </p>
             <p>
-              Así empezó a hacer granola en casa. Para ella. Para controlar cada
-              ingrediente, cada paso del proceso, y evitar todo lo que pudiera dañar
-              su salud. Una granola sin azúcares refinados, sin aditivos, con frutos
-              secos remojados para facilitar la digestión.
+              Así que hizo lo que haría cualquier persona razonable con demasiado
+              tiempo libre y un horno en casa: empezó a hacer su propia granola.
+              Sin azúcares refinados, sin aditivos, con los frutos secos remojados
+              para facilitar la digestión. Una granola pensada desde el cariño y el
+              sentido común.
             </p>
             <p>
-              La compartió con familia y amigos. Y lo que era un ritual personal se
-              convirtió en algo que todos querían repetir.
+              La compartió con familia y amigos. Y pasó lo que pasa cuando algo está
+              realmente bueno: todos querían más.
             </p>
             <p className="text-stone-800 font-medium text-xl font-serif">
-              Poppy es la granola que Pilar tomaría &mdash;y toma&mdash; cada día:
-              con ingredientes de calidad, un proceso pensado para optimizar la
-              digestión y sin nada que sobre.
+              Poppy es la granola que Pilar toma cada mañana. Con ingredientes de
+              calidad, un proceso pensado para cuidar la digestión y sin nada que sobre.
+              Si no es buena para ella, no es buena para ti.
             </p>
           </div>
         </div>
