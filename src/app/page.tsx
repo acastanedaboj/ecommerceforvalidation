@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Truck, Star, Check } from 'lucide-react';
+import { ArrowRight, Truck, Leaf, Star, Check } from 'lucide-react';
 import { ProductCard } from '@/components/product/ProductCard';
 import { getRetailProducts } from '@/data/products';
 import { formatPrice } from '@/lib/utils';
@@ -31,29 +31,31 @@ export default function HomePage() {
 
   return (
     <>
-      {/* 1. HERO - Impacto inmediato */}
+      {/* Hero Section - Editorial Style */}
       <section className="relative bg-white overflow-hidden">
         <div className="container-custom pt-10 pb-16 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Hero Content */}
             <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
-              <p className="text-xs tracking-widest uppercase text-stone-400 mb-6 animate-fade-in">
-                Crafted for pleasure
-              </p>
+              <span className="inline-block text-xs tracking-widest uppercase text-stone-500 mb-6 animate-fade-in">
+                Sin gluten certificado
+              </span>
 
               <h1 className="font-display text-stone-800 mb-8 animate-fade-in-up">
-                <span className="italic">Poppy</span>
+                Granola artesanal
+                <br />
+                <span className="text-earth-600">sin gluten real</span>
               </h1>
 
               <p className="text-base md:text-lg text-stone-600 mb-10 leading-relaxed animate-fade-in-up animation-delay-100">
-                Granola crujiente y especiada, elaborada con intención.
-                <br className="hidden sm:block" />
-                Ingredientes reales. Sin gluten. Sin ruido.
+                Elaborada a mano con avena sin gluten certificada, miel
+                de apicultores locales y los mejores frutos secos y semillas,
+                remojados para facilitar la digestión.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-200">
                 <Link href="/tienda" className="btn-primary btn-lg group">
-                  Comprar granola
+                  Comprar ahora
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link href="/suscripcion" className="btn-outline btn-lg">
@@ -68,7 +70,8 @@ export default function HomePage() {
                   Envío gratis +4 bolsas
                 </span>
                 <span className="flex items-center gap-2">
-                  Sin gluten certificado
+                  <Leaf className="w-4 h-4" strokeWidth={1.5} />
+                  100% natural
                 </span>
               </div>
             </div>
