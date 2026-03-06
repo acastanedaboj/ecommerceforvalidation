@@ -190,19 +190,13 @@ export default function HomePage() {
       <section className="py-14 md:py-20 bg-white">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-4 text-center">
-              Lo que nos hace diferentes
-            </p>
             <h2 className="font-display text-stone-800 mb-8 text-center">
               Por qué <span className="italic">Poppy</span> es <span className="text-earth-600-display-italic">diferente</span>
             </h2>
             <div className="space-y-6 text-stone-600 text-lg leading-relaxed">
               <p>
-                La mayoría de granolas son dulces, blandas o demasiado procesadas.
-              </p>
-              <p>
                 <span className="italic">Poppy</span> se elabora lentamente para conseguir un punto de tostado que la hace
-                especialmente crujiente, con especias que aportan carácter y profundidad de sabor.
+                especialmente crujiente, con especias sin gluten que aportan carácter y profundidad de sabor.
               </p>
               <p>
                 Además, los frutos secos se remojan antes de hornearse para mejorar su digestión.
