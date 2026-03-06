@@ -217,27 +217,29 @@ export default function HomePage() {
         />
       </div>
 
-      <section className="py-14 md:py-20 bg-cream-100">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-stone-800 mb-8 text-center">
-              Ingredientes <span className="text-earth-600-display-italic">reales</span>. Nada que sobre.
-            </h2>
-            <div className="space-y-6 text-stone-600 text-lg leading-relaxed">
-              <p>
-                La granola que hago para mí. Después de muchas pruebas conseguí una granola sin gluten que me convencía: crujiente de verdad, especiada con carácter y con un proceso que cuida la digestión. Si no es buena para mí, no es buena para ti.
-              </p>
-            </div>
-            <div className="text-center mt-8">
-              <Link
-                href="/nosotros"
-                className="text-earth-600 hover:text-earth-700 font-medium inline-flex items-center gap-2 group"
-              >
-                Conoce nuestra historia
-                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </div>
-          </div>
+      <section className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden">
+        <Image
+          src="/images/ingredientes-hero.png"
+          alt="Ingredientes naturales Poppy granola"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-black/25" />
+        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
+          <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl drop-shadow-lg mb-4">
+            Ingredientes <span className="italic">reales</span>. Nada que sobre.
+          </h2>
+          <p className="text-white/80 text-lg max-w-2xl">
+            La granola que hago para mí. Crujiente de verdad, especiada con carácter y con un proceso que cuida la digestión.
+          </p>
+          <Link
+            href="/nosotros"
+            className="mt-6 text-white/90 hover:text-white font-medium inline-flex items-center gap-2 group"
+          >
+            Conoce nuestra historia
+            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          </Link>
         </div>
       </section>
 
