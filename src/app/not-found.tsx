@@ -50,7 +50,7 @@ export default function NotFound() {
               Contacto
             </Link>
             <Link href="/blog" className="text-primary-600 hover:underline">
-              Blog & Recetas
+              Blog & recetas
             </Link>
             <Link href="/suscripcion" className="text-primary-600 hover:underline">
               Suscripción

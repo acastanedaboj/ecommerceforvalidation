@@ -13,7 +13,7 @@ import { celiacosContent } from '@/data/landing-content';
 import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Granola Apta para Celíacos | Poppy',
+  title: 'Granola apta para celíacos | Poppy',
   description:
     'Granola artesanal apta para celíacos. Elaborada con avena certificada sin gluten y proceso controlado. 4 sabores deliciosos. Envío gratis desde 4 unidades.',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/granola-para-celiacos'),
   },
   openGraph: {
-    title: 'Granola Apta para Celíacos | Poppy',
+    title: 'Granola apta para celíacos | Poppy',
     description:
       'Granola artesanal elaborada pensando en celíacos. Avena certificada sin gluten y proceso controlado. 4 sabores.',
     url: `${SITE_URL}/granola-para-celiacos`,

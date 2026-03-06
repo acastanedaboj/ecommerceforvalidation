@@ -3,7 +3,7 @@ import { BUSINESS } from '@/lib/constants';
 import { getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Política de Cookies',
+  title: 'Política de cookies',
   description: 'Política de cookies de Poppy.',
   alternates: {
     canonical: getCanonicalUrl('/legal/cookies'),

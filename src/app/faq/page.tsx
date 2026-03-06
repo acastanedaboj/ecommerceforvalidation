@@ -5,14 +5,14 @@ import { faqs, faqCategories, getFAQsByCategory, getAllFAQs } from '@/data/faqs'
 import { SITE_URL, getCanonicalUrl, buildFaqSchema, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Preguntas Frecuentes (FAQ) | Granola Sin Gluten',
+  title: 'Preguntas frecuentes (FAQ) | Granola sin gluten',
   description:
     'Resuelve tus dudas sobre granola Poppy: ingredientes sin gluten, opciones veganas, envíos a España, métodos de pago, suscripciones y política de devoluciones.',
   alternates: {
     canonical: getCanonicalUrl('/faq'),
   },
   openGraph: {
-    title: 'Preguntas Frecuentes | Poppy',
+    title: 'Preguntas frecuentes | Poppy',
     description:
       'Todo lo que necesitas saber sobre nuestra granola sin gluten: ingredientes, envíos, pagos y suscripciones.',
     url: `${SITE_URL}/faq`,

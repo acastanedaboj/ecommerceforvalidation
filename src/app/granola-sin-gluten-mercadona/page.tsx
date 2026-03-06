@@ -14,7 +14,7 @@ import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Granola Sin Gluten Mercadona vs Poppy: Comparativa 2026',
+  title: 'Granola sin gluten Mercadona vs Poppy: comparativa 2026',
   description:
     '¿Granola sin gluten de Mercadona o artesanal Poppy? Comparamos ingredientes, precio, calidad y sabor. Descubre cuál es mejor para tu desayuno.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/granola-sin-gluten-mercadona'),
   },
   openGraph: {
-    title: 'Granola Sin Gluten: Mercadona vs Poppy Artesanal',
+    title: 'Granola sin gluten: Mercadona vs Poppy artesanal',
     description:
       'Comparativa completa entre granola de Mercadona y granola artesanal Poppy. Ingredientes, precio, calidad.',
     url: `${SITE_URL}/granola-sin-gluten-mercadona`,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/images/hero-sin-gluten.jpeg`,
         width: 1200,
         height: 630,
-        alt: 'Comparativa Granola Sin Gluten Mercadona vs Poppy',
+        alt: 'Comparativa granola sin gluten Mercadona vs Poppy',
       },
     ],
   },
@@ -86,7 +86,7 @@ export default function GranolaSinGlutenMercadonaPage() {
 
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Inicio', url: SITE_URL },
-    { name: 'Granola Sin Gluten', url: `${SITE_URL}/granola-sin-gluten` },
+    { name: 'Granola sin gluten', url: `${SITE_URL}/granola-sin-gluten` },
     {
       name: 'Comparativa Mercadona',
       url: `${SITE_URL}/granola-sin-gluten-mercadona`,

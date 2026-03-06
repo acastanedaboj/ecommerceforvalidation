@@ -7,7 +7,7 @@ import { PRICING } from '@/lib/constants';
 import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Suscripción Mensual de Granola Sin Gluten | 15% Descuento',
+  title: 'Suscripción mensual de granola sin gluten | 15% descuento',
   description:
     'Suscríbete y ahorra un 15% en granola Poppy sin gluten. Recibe 6 bolsas cada mes con envío gratis. Sin permanencia, cancela cuando quieras.',
   alternates: {

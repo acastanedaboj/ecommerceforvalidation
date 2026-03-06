@@ -5,14 +5,14 @@ import { Leaf, Heart, Sun, ArrowRight } from 'lucide-react';
 import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Nuestra Historia | Granola Artesanal Sin Gluten',
+  title: 'Nuestra historia | Granola artesanal sin gluten',
   description:
     'Conoce la historia de Poppy. Elaboramos granola artesanal sin gluten con ingredientes naturales, remojo de frutos secos y miel local. La granola que Pilar tomaría.',
   alternates: {
     canonical: getCanonicalUrl('/nosotros'),
   },
   openGraph: {
-    title: 'Nuestra Historia | Poppy',
+    title: 'Nuestra historia | Poppy',
     description:
       'Granola artesanal sin gluten nacida de una necesidad real. Ingredientes naturales, proceso de remojo, tostado lento.',
     url: `${SITE_URL}/nosotros`,

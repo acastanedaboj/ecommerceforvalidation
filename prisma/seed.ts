@@ -21,7 +21,7 @@ async function main() {
     where: { slug: 'horeca' },
     update: {},
     create: {
-      name: 'Formato Horeca',
+      name: 'Formato horeca',
       slug: 'horeca',
       description: 'Formatos profesionales para hostelería y distribución',
       image: '/images/categories/horeca.jpg',
@@ -118,7 +118,7 @@ async function main() {
     },
     {
       sku: 'GRAN-1KG',
-      name: 'Granola Clásica - Formato Horeca',
+      name: 'Granola clásica - Formato horeca',
       slug: 'granola-clasica-1kg-horeca',
       description: `El mismo producto artesanal que adoran nuestros clientes, ahora en formato de 1kg pensado para profesionales.`,
       shortDescription: 'Formato 1kg para hostelería y tiendas. Misma receta artesanal, tamaño profesional.',

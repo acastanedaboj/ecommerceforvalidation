@@ -3,7 +3,7 @@ import { BUSINESS, SHIPPING, PRICING } from '@/lib/constants';
 import { getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Condiciones de Venta',
+  title: 'Condiciones de venta',
   description: 'Condiciones generales de venta de Poppy.',
   alternates: {
     canonical: getCanonicalUrl('/legal/condiciones-venta'),

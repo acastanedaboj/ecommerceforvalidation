@@ -36,7 +36,7 @@ import {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${BRAND_NAME} - Granola Sin Gluten Premium y Artesanal`,
+    default: `${BRAND_NAME} - Granola sin gluten premium y Artesanal`,
     template: `%s | ${BRAND_NAME}`,
   },
   description:
@@ -78,7 +78,7 @@ export const metadata: Metadata = {
     locale: 'es_ES',
     url: SITE_URL,
     siteName: BRAND_NAME,
-    title: `${BRAND_NAME} - Granola Sin Gluten Premium`,
+    title: `${BRAND_NAME} - Granola sin gluten premium`,
     description:
       'Granola artesanal sin gluten con avena certificada, miel y frutos secos premium. Opción vegana disponible. Envío gratis +4 unidades.',
     images: [
@@ -92,7 +92,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${BRAND_NAME} - Granola Sin Gluten Premium`,
+    title: `${BRAND_NAME} - Granola sin gluten premium`,
     description:
       'Granola artesanal sin gluten con avena certificada y miel. Opción vegana. Envío gratis +4 unidades.',
     images: [`${SITE_URL}/images/og-image.jpg`],

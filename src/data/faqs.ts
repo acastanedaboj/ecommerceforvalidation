@@ -50,7 +50,7 @@ La mayoría de nuestras granolas contienen miel como endulzante natural. Elegimo
 - Proviene de apicultores locales con prácticas éticas
 - Aporta propiedades beneficiosas adicionales
 
-**Para veganos:** Nuestra Granola vegana utiliza dátiles Medjool como endulzante natural, ofreciendo una dulzura intensa sin necesidad de miel. Está claramente etiquetada como "Sin miel (vegana)" en nuestra tienda.`,
+**Para veganos:** Nuestra granola vegana utiliza dátiles medjool como endulzante natural, ofreciendo una dulzura intensa sin necesidad de miel. Está claramente etiquetada como "Sin miel (vegana)" en nuestra tienda.`,
     category: 'producto',
     order: 3,
   },
@@ -312,8 +312,8 @@ export function getAllFAQs(): FAQ[] {
 
 export const faqCategories = [
   { id: 'producto', name: 'Producto', icon: 'Package' },
-  { id: 'envio', name: 'Envíos y Devoluciones', icon: 'Truck' },
-  { id: 'pago', name: 'Pagos y Facturas', icon: 'CreditCard' },
+  { id: 'envio', name: 'Envíos y devoluciones', icon: 'Truck' },
+  { id: 'pago', name: 'Pagos y facturas', icon: 'CreditCard' },
   { id: 'suscripcion', name: 'Suscripción', icon: 'RefreshCw' },
-  { id: 'legal', name: 'Legal y Privacidad', icon: 'Shield' },
+  { id: 'legal', name: 'Legal y privacidad', icon: 'Shield' },
 ];

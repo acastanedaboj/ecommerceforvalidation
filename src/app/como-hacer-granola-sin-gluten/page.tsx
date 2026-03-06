@@ -14,7 +14,7 @@ import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Cómo Hacer Granola Sin Gluten Casera: Receta Paso a Paso 2026',
+  title: 'Cómo hacer granola sin gluten casera: receta paso a paso 2026',
   description:
     'Receta completa de granola sin gluten casera apta para celíacos. Paso a paso con ingredientes, tiempos y consejos de experto. Fácil, económica y deliciosa.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/como-hacer-granola-sin-gluten'),
   },
   openGraph: {
-    title: 'Receta: Cómo Hacer Granola Sin Gluten en Casa',
+    title: 'Receta: cómo hacer granola sin gluten en casa',
     description:
       'Aprende a hacer granola sin gluten casera con esta receta detallada. Perfecta para celíacos, económica y fácil de personalizar.',
     url: `${SITE_URL}/como-hacer-granola-sin-gluten`,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/images/hero-sin-gluten.jpeg`,
         width: 1200,
         height: 630,
-        alt: 'Receta Granola Sin Gluten Casera',
+        alt: 'Receta granola sin gluten casera',
       },
     ],
   },
@@ -63,7 +63,7 @@ function buildRecipeSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Recipe',
-    name: 'Granola Sin Gluten Casera',
+    name: 'Granola sin gluten casera',
     description:
       'Receta fácil de granola sin gluten casera, apta para celíacos. Crujiente, deliciosa y personalizable.',
     image: [
@@ -155,7 +155,7 @@ export default function ComoHacerGranolaSinGlutenPage() {
 
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Inicio', url: SITE_URL },
-    { name: 'Granola Sin Gluten', url: `${SITE_URL}/granola-sin-gluten` },
+    { name: 'Granola sin gluten', url: `${SITE_URL}/granola-sin-gluten` },
     {
       name: 'Receta Casera',
       url: `${SITE_URL}/como-hacer-granola-sin-gluten`,

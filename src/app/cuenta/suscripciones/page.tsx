@@ -2,7 +2,7 @@ import { Heart, Sparkles, ArrowRight, Calendar, Package } from 'lucide-react';
 import Link from 'next/link';
 
 export const metadata = {
-  title: 'Mis Suscripciones | Poppy',
+  title: 'Mis suscripciones | Poppy',
   description: 'Gestiona tus suscripciones de granola Poppy',
 };
 

@@ -19,7 +19,7 @@ export default function TiendaPage() {
   return (
     <>
       {/* JSON-LD: Only on listing page, not on product detail pages */}
-      <JsonLd data={buildProductListSchema(allRetailProducts, 'Granola Sin Gluten Poppy')} />
+      <JsonLd data={buildProductListSchema(allRetailProducts, 'Granola sin gluten Poppy')} />
       <JsonLd
         data={buildBreadcrumbSchema([
           { name: 'Inicio', url: '/' },

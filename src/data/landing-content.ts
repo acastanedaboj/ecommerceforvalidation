@@ -10,8 +10,8 @@
 
 export const sinGlutenContent = {
   hero: {
-    title: 'Granola Sin Gluten',
-    highlight: 'Apta para Celíacos',
+    title: 'Granola sin gluten',
+    highlight: 'Apta para celíacos',
     subtitle:
       'Elaborada con avena certificada sin gluten y un proceso de producción controlado. Disfruta de un desayuno seguro y delicioso.',
     ctaText: 'Ver productos',
@@ -29,7 +29,7 @@ export const sinGlutenContent = {
       'No basta con decir "sin gluten". En Poppy, cada paso del proceso está diseñado para garantizar que nuestras granolas sean 100% seguras para personas con celiaquía o sensibilidad al gluten. Desde la selección de la avena hasta el empaquetado final, controlamos todo.',
   },
   whatIsGlutenFree: {
-    title: 'Granola Sin Gluten: Más que una etiqueta',
+    title: 'Granola sin gluten: más que una etiqueta',
     subtitle: 'Entendiendo qué significa realmente',
     content: [
       {
@@ -211,13 +211,13 @@ export const sinGlutenContent = {
 
 export const veganaContent = {
   hero: {
-    title: 'Granola 100% Vegana',
-    highlight: 'Sin Miel ni Productos Animales',
+    title: 'Granola 100% vegana',
+    highlight: 'Sin miel ni productos animales',
     subtitle:
       'Endulzada naturalmente con dátiles Medjool. Todo el sabor, 0% productos de origen animal.',
     ctaText: 'Comprar ahora',
     ctaHref: '/tienda/granola-datiles-150g',
-    badges: ['100% Vegana', 'Sin gluten', 'Artesanal'],
+    badges: ['100% vegana', 'Sin gluten', 'Artesanal'],
     image: '/products/granola-datiles.jpg',
   },
   benefits: {
@@ -225,7 +225,7 @@ export const veganaContent = {
     subtitle: 'Dulzura vegetal',
     items: [
       {
-        title: 'Dátiles Medjool',
+        title: 'Dátiles medjool',
         description:
           'Dulzura natural con alto contenido en fibra, potasio y antioxidantes. El "caramelo de la naturaleza".',
       },
@@ -248,9 +248,9 @@ export const veganaContent = {
   },
   products: {
     title: 'Nuestra granola vegana',
-    subtitle: 'Granola de Dátiles',
+    subtitle: 'Granola de dátiles',
     description:
-      'La Granola de Dátiles es nuestra única variedad 100% vegana. Endulzada con dátiles Medjool y sirope de agave, sin miel ni ningún producto de origen animal.',
+      'La granola de dátiles es nuestra única variedad 100% vegana. Endulzada con dátiles medjool y sirope de agave, sin miel ni ningún producto de origen animal.',
     highlightProductId: 'prod_granola_datiles',
   },
   comparison: {
@@ -262,12 +262,12 @@ export const veganaContent = {
     {
       question: '¿Las otras granolas de Poppy son veganas?',
       answer:
-        'No. Nuestras granolas Clásica, Chocolate y Naranja contienen miel de apicultores locales. Solo la Granola de Dátiles es 100% vegana.',
+        'No. Nuestras granolas Clásica, Chocolate y Naranja contienen miel de apicultores locales. Solo la Granola de dátiles es 100% vegana.',
     },
     {
       question: '¿Por qué usáis miel en las otras variedades?',
       answer:
-        'La miel de apicultores locales de Málaga aporta un sabor único y beneficios nutricionales. Sin embargo, entendemos que muchas personas prefieren opciones veganas, por eso creamos la Granola de Dátiles.',
+        'La miel de apicultores locales de Málaga aporta un sabor único y beneficios nutricionales. Sin embargo, entendemos que muchas personas prefieren opciones veganas, por eso creamos la Granola de dátiles.',
     },
     {
       question: '¿Qué beneficios tienen los dátiles y el sirope de agave?',
@@ -282,14 +282,14 @@ export const veganaContent = {
     {
       question: '¿Es apta para dietas plant-based estrictas?',
       answer:
-        'Sí. La Granola de Dátiles no contiene ningún ingrediente de origen animal. Es apta para veganos, vegetarianos y cualquier persona que siga una dieta plant-based.',
+        'Sí. La Granola de dátiles no contiene ningún ingrediente de origen animal. Es apta para veganos, vegetarianos y cualquier persona que siga una dieta plant-based.',
     },
   ],
   cta: {
     title: '¿Buscas una granola 100% vegana?',
     description:
-      'Prueba nuestra Granola de Dátiles: todo el sabor artesanal de Poppy, sin ningún producto de origen animal.',
-    ctaText: 'Comprar Granola de Dátiles',
+      'Prueba nuestra Granola de dátiles: todo el sabor artesanal de Poppy, sin ningún producto de origen animal.',
+    ctaText: 'Comprar granola de dátiles',
     ctaHref: '/tienda/granola-datiles-150g',
     secondaryCta: {
       text: 'Ver todas las granolas',
@@ -304,7 +304,7 @@ export const veganaContent = {
 
 export const artesanalContent = {
   hero: {
-    title: 'Granola Artesanal',
+    title: 'Granola artesanal',
     highlight: 'Premium de Málaga',
     subtitle:
       'Elaborada a mano en pequeños lotes con ingredientes locales de Málaga. Tostada lentamente para conseguir el crujiente perfecto.',
@@ -417,8 +417,8 @@ export const artesanalContent = {
 
 export const celiacosContent = {
   hero: {
-    title: 'Granola Apta',
-    highlight: 'para Celíacos',
+    title: 'Granola apta',
+    highlight: 'para celíacos',
     subtitle:
       'Sabemos lo difícil que es encontrar productos seguros. Nuestra granola está elaborada pensando en ti: avena certificada sin gluten y proceso controlado.',
     ctaText: 'Ver opciones seguras',
@@ -529,7 +529,7 @@ export const celiacosContent = {
 
 export const mercadonaContent = {
   hero: {
-    title: 'Granola Sin Gluten',
+    title: 'Granola sin gluten',
     highlight: 'Poppy vs Mercadona',
     subtitle:
       'Comparamos nuestra granola artesanal con las opciones de Mercadona. Descubre las diferencias y elige la mejor opción para tu desayuno.',
@@ -548,7 +548,7 @@ export const mercadonaContent = {
       'Muchas personas buscan "granola sin gluten Mercadona" porque es conveniente y conocido. Pero ¿cuál es realmente la diferencia entre la granola de supermercado y una artesanal? Te lo explicamos todo. También puedes ver nuestra <a href="/granola-sin-gluten-carrefour" class="text-earth-600 hover:underline">comparativa con Carrefour</a> y un <a href="/mejor-granola-sin-gluten-espana" class="text-earth-600 hover:underline">ranking completo de granolas sin gluten</a>.',
   },
   comparison: {
-    title: 'Comparativa: Poppy vs Opciones de Supermercado',
+    title: 'Comparativa: Poppy vs opciones de supermercado',
     subtitle: 'Las diferencias que importan',
     items: [
       {
@@ -682,7 +682,7 @@ export const mercadonaContent = {
 
 export const carrefourContent = {
   hero: {
-    title: 'Granola Sin Gluten',
+    title: 'Granola sin gluten',
     highlight: 'Poppy vs Carrefour',
     subtitle:
       'Comparativa completa entre granola artesanal Poppy y las opciones sin gluten de Carrefour. Descubre qué te conviene más.',
@@ -702,7 +702,7 @@ export const carrefourContent = {
   },
   comparison: {
     title: 'Tabla comparativa completa',
-    subtitle: 'Poppy Artesanal vs Carrefour',
+    subtitle: 'Poppy artesanal vs Carrefour',
     items: [
       {
         feature: 'Producción',
@@ -843,8 +843,8 @@ export const carrefourContent = {
 
 export const recetaGranolaContent = {
   hero: {
-    title: 'Cómo Hacer Granola Sin Gluten',
-    highlight: 'Receta Casera Paso a Paso',
+    title: 'Cómo hacer granola sin gluten',
+    highlight: 'Receta casera paso a paso',
     subtitle:
       'Aprende a preparar granola sin gluten en casa con esta receta detallada. Perfecta para celíacos, fácil de personalizar y más económica que comprarla.',
     ctaText: 'Comprar granola Poppy',
@@ -868,7 +868,7 @@ export const recetaGranolaContent = {
     ],
   },
   ingredients: {
-    title: 'Ingredientes para Granola Sin Gluten (500g)',
+    title: 'Ingredientes para granola sin gluten (500g)',
     subtitle: 'Lo que necesitas para tu receta casera',
     base: {
       title: 'Base (avena)',
@@ -906,7 +906,7 @@ export const recetaGranolaContent = {
     },
   },
   instructions: {
-    title: 'Paso a Paso: Cómo Hacer Granola Sin Gluten',
+    title: 'Paso a paso: cómo hacer granola sin gluten',
     subtitle: 'Sigue estos pasos para una granola perfecta',
     steps: [
       {
@@ -970,7 +970,7 @@ export const recetaGranolaContent = {
     yield: '500g (aprox. 10 raciones de 50g)',
   },
   tips: {
-    title: 'Consejos para una Granola Sin Gluten Perfecta',
+    title: 'Consejos para una granola sin gluten perfecta',
     subtitle: 'Trucos de experto',
     items: [
       {
@@ -1032,7 +1032,7 @@ export const recetaGranolaContent = {
     ],
   },
   comparison: {
-    title: 'Granola Casera vs Comprada',
+    title: 'Granola casera vs comprada',
     subtitle: 'La comparativa honesta',
     items: [
       {
@@ -1119,7 +1119,7 @@ export const recetaGranolaContent = {
 
 export const guiaCeliaquiaContent = {
   hero: {
-    title: 'Guía Completa de Celiaquía',
+    title: 'Guía completa de celiaquía',
     highlight: 'y Dieta Sin Gluten',
     subtitle:
       'Todo lo que necesitas saber sobre la enfermedad celíaca: síntomas, diagnóstico, tratamiento y cómo llevar una vida sin gluten de forma segura y saludable.',
@@ -1638,8 +1638,8 @@ export const guiaCeliaquiaContent = {
 
 export const ecologicaContent = {
   hero: {
-    title: 'Granola Artesanal',
-    highlight: 'Ingredientes BIO Certificados',
+    title: 'Granola artesanal',
+    highlight: 'Ingredientes BIO certificados',
     subtitle:
       'Elaborada con miel de apicultores locales, avena de agricultura artesanal y aceite de coco virgen extra. Calidad premium, sabor auténtico.',
     ctaText: 'Comprar granola eco',
@@ -1648,7 +1648,7 @@ export const ecologicaContent = {
       text: 'Ver ingredientes',
       href: '#ingredientes',
     },
-    badges: ['Ingredientes Eco', 'Sin gluten', 'Artesanal'],
+    badges: ['Ingredientes eco', 'Sin gluten', 'Artesanal'],
     image: '/images/hero-granola-ecologica.jpg',
   },
   intro: {
@@ -1835,7 +1835,7 @@ export const ecologicaContent = {
 
 export const mejorGranolaContent = {
   hero: {
-    title: 'Mejor Granola Sin Gluten España',
+    title: 'Mejor granola sin gluten España',
     highlight: 'Comparativa 2026',
     subtitle:
       'Analizamos las principales granolas sin gluten del mercado español: ingredientes, precios, certificaciones y calidad. Una guía para celíacos que buscan la mejor opción.',
@@ -1886,7 +1886,7 @@ export const mejorGranolaContent = {
     ],
   },
   ranking: {
-    title: 'Top Granolas Sin Gluten España 2026',
+    title: 'Top granolas sin gluten España 2026',
     subtitle: 'Nuestra valoración honesta',
     items: [
       {

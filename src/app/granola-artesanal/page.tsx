@@ -12,7 +12,7 @@ import { artesanalContent } from '@/data/landing-content';
 import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Granola Artesanal Premium de Málaga | Poppy',
+  title: 'Granola artesanal premium de Málaga | Poppy',
   description:
     'Granola elaborada artesanalmente en pequeños lotes con ingredientes de Málaga. Miel local, frutos secos premium. 4 sabores únicos. Envío gratis +4 uds.',
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/granola-artesanal'),
   },
   openGraph: {
-    title: 'Granola Artesanal Premium de Málaga | Poppy',
+    title: 'Granola artesanal premium de Málaga | Poppy',
     description:
       'Granola elaborada artesanalmente en pequeños lotes con ingredientes de Málaga.',
     url: `${SITE_URL}/granola-artesanal`,

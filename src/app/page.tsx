@@ -9,14 +9,14 @@ import { getPackOptions, getSubscriptionInfo } from '@/lib/pricing';
 import { SITE_URL, BRAND_NAME, getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: `${BRAND_NAME} | Granola Sin Gluten Artesanal con Miel`,
+  title: `${BRAND_NAME} | Granola sin gluten artesanal con miel`,
   description:
     'Granola artesanal sin gluten elaborada con avena certificada, miel de apicultores locales y frutos secos premium remojados. Envío gratis desde 4 unidades. Compra online en España.',
   alternates: {
     canonical: getCanonicalUrl('/'),
   },
   openGraph: {
-    title: `${BRAND_NAME} - Granola Sin Gluten Artesanal`,
+    title: `${BRAND_NAME} - Granola sin gluten artesanal`,
     description:
       'Granola artesanal sin gluten con avena certificada, miel y frutos secos premium remojados. Opción vegana disponible. Envío gratis +4 unidades.',
     url: SITE_URL,
@@ -72,7 +72,7 @@ export default function HomePage() {
                 </span>
                 <span className="flex items-center gap-2">
                   <Leaf className="w-4 h-4" strokeWidth={1.5} />
-                  100% Natural
+                  100% natural
                 </span>
               </div>
             </div>
