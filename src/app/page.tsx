@@ -340,7 +340,7 @@ export default function HomePage() {
       <section className="py-14 md:py-20 bg-white">
         <div className="container-custom text-center max-w-2xl mx-auto">
           <h2 className="font-display text-stone-800 mb-6">
-            ¿Lista para probar la <span className="text-earth-600-display-italic">diferencia</span>?
+            ¿Quieres probar la <span className="text-earth-600-display-italic">diferencia</span>?
           </h2>
           <p className="text-stone-600 mb-10">
             Únete a cientos de familias que han descubierto el sabor de la granola
