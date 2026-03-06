@@ -217,12 +217,8 @@ export default function HomePage() {
               Ingredientes <span className="text-earth-600-display-italic">reales</span>
             </h2>
             <p className="text-stone-600 text-lg leading-relaxed">
-              Copos de avena sin gluten, frutos secos premium, semillas, miel ecológica y especias.
-              <br />
-              <span className="text-stone-800 font-medium">Nada más.</span>
-            </p>
-            <p className="text-stone-500 mt-4">
-              Sin aditivos. Sin ultraprocesados. Solo ingredientes que reconoces y que
+              Copos de avena integral sin gluten, frutos secos premium, semillas, miel ecológica, aceite de coco y especias.
+              <span className="text-stone-800 font-medium"> Nada más.</span> Sin aditivos. Sin ultraprocesados. Solo ingredientes que reconoces y que
               trabajan juntos para crear sabor y textura.
             </p>
           </div>
