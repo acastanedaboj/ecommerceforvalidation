@@ -5,14 +5,14 @@ import { Leaf, Heart, Sun, ArrowRight } from 'lucide-react';
 import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Nuestra Historia | Granola Artesanal Sin Gluten',
+  title: 'Nuestra historia | Granola artesanal sin gluten',
   description:
     'Conoce la historia de Poppy. Elaboramos granola artesanal sin gluten con ingredientes naturales, remojo de frutos secos y miel local. La granola que Pilar tomaría.',
   alternates: {
     canonical: getCanonicalUrl('/nosotros'),
   },
   openGraph: {
-    title: 'Nuestra Historia | Poppy',
+    title: 'Nuestra historia | Poppy',
     description:
       'Granola artesanal sin gluten nacida de una necesidad real. Ingredientes naturales, proceso de remojo, tostado lento.',
     url: `${SITE_URL}/nosotros`,
@@ -66,7 +66,7 @@ export default function NosotrosPage() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-white drop-shadow-lg">
             Si no existe,{' '}
-            <span className="text-cream-100">la hacemos</span>
+            <span className="text-cream-100">la creamos</span>
           </h1>
         </div>
       </section>
@@ -99,7 +99,7 @@ export default function NosotrosPage() {
               está realmente bueno: todos querían más.
             </p>
             <p className="text-stone-800 font-medium text-xl font-serif">
-              Poppy es la granola que tomo cada mañana. Con ingredientes de
+              Poppy es la granola que tomo cuando quiero granola. Con ingredientes de
               calidad, un proceso pensado para cuidar la digestión y sin nada que
               sobre. Si no es buena para mí, no es buena para ti.
             </p>
@@ -108,15 +108,16 @@ export default function NosotrosPage() {
       </section>
 
       {/* Divider Image */}
-      <div className="relative w-full h-[40vh] sm:h-[50vh] overflow-hidden">
-        <Image
-          src="/images/nosotros-divider.png"
-          alt="Pilar preparando granola artesanal en su cocina"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-      </div>
+      <section className="w-full">
+        <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
+          <Image
+            src="/images/nosotros-divider.png"
+            alt="Preparando granola artesanal en la cocina"
+            fill
+            className="object-cover"
+          />
+        </div>
+      </section>
 
       {/* Values Section */}
       <section className="py-16 sm:py-24 bg-white">

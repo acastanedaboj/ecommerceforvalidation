@@ -80,7 +80,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     isActive: true,
     categoryId: 'cat_granola',
     tags: ['sin-gluten', 'ecológico', 'artesanal', 'clásico', 'original', 'con-miel'],
-    metaTitle: 'Comprar Granola Clásica Sin Gluten | Miel Ecológica | Poppy',
+    metaTitle: 'Comprar granola clásica sin gluten | Miel ecológica | Poppy',
     metaDescription:
       'Compra granola artesanal sin gluten con miel ecológica y frutos secos premium. Desde 7€/ud. Envío gratis a partir de 4 uds. Entrega en 2-4 días en España.',
     hasHoney: true,
@@ -124,7 +124,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     isActive: true,
     categoryId: 'cat_granola',
     tags: ['sin-gluten', 'ecologico', 'artesanal', 'citricos', 'naranja', 'con-miel'],
-    metaTitle: 'Comprar Granola de Naranja Sin Gluten | Ecológica | Poppy',
+    metaTitle: 'Comprar granola de naranja sin gluten | Ecológica | Poppy',
     metaDescription:
       'Compra granola de naranja sin gluten con ralladura natural y miel de azahar ecológica. Sabor mediterráneo. Envío gratis +4 uds. Entrega en toda España.',
     hasHoney: true,
@@ -133,7 +133,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
   {
     id: 'prod_granola_datiles',
     sku: 'GRAN-150-VEG',
-    name: 'Granola Vegana',
+    name: 'Granola vegana',
     slug: 'granola-vegana-150g',
     description: `Nuestra granola vegana tiene la misma receta deliciosa que la clásica, pero endulzada con sirope de agave en lugar de miel. Perfecta para quienes siguen una alimentación 100% vegetal.
 
@@ -168,7 +168,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     isActive: true,
     categoryId: 'cat_granola',
     tags: ['sin-gluten', 'ecológico', 'artesanal', 'vegano', 'sin-miel', 'sirope-agave'],
-    metaTitle: 'Comprar Granola Vegana Sin Gluten | 100% Vegetal | Poppy',
+    metaTitle: 'Comprar granola vegana sin gluten | 100% vegetal | Poppy',
     metaDescription:
       'Compra granola vegana sin gluten endulzada con sirope de agave ecológico. 100% vegetal, misma calidad artesanal. Envío gratis +4 uds. Entrega en 2-4 días.',
     hasHoney: false,
@@ -177,7 +177,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
   {
     id: 'prod_granola_horeca',
     sku: 'GRAN-1KG',
-    name: 'Granola Original - Formato Horeca',
+    name: 'Granola original - Formato horeca',
     slug: 'granola-clasica-1kg-horeca',
     description: `El mismo producto artesanal que adoran nuestros clientes, ahora en formato de 1kg pensado para profesionales de la hostelería, cafeterías y tiendas especializadas.
 
@@ -212,7 +212,7 @@ Solicita información sobre precios mayoristas y condiciones de distribución a 
     isActive: true,
     categoryId: 'cat_horeca',
     tags: ['sin-gluten', 'ecologico', 'artesanal', 'horeca', 'b2b', 'con-miel'],
-    metaTitle: 'Granola Artesanal 1kg Hostelería | Sin Gluten | Poppy',
+    metaTitle: 'Granola artesanal 1kg hostelería | Sin gluten | Poppy',
     metaDescription:
       'Granola artesanal sin gluten 1kg para hostelería, cafeterías y tiendas. Miel ecológica y frutos secos premium. Solicita precios mayoristas.',
     hasHoney: true,
@@ -230,7 +230,7 @@ export const categories = [
   },
   {
     id: 'cat_horeca',
-    name: 'Formato Horeca',
+    name: 'Formato horeca',
     slug: 'horeca',
     description: 'Formatos profesionales para hostelería, cafeterías y distribución.',
     image: '/images/categories/horeca.jpg',

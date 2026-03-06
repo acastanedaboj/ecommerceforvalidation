@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { SITE_URL, getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Blog de Recetas y Nutrición | Granola Sin Gluten',
+  title: 'Blog de recetas y nutrición | Granola sin gluten',
   description:
     'Recetas con granola, consejos de nutrición sin gluten y artículos sobre alimentación saludable. Smoothie bowls, overnight oats, tostadas y más ideas para tu desayuno.',
   alternates: {
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Blog de Recetas y Nutrición | Poppy',
+    title: 'Blog de recetas y nutrición | Poppy',
     description:
       'Ideas deliciosas para disfrutar tu granola, consejos de nutrición y recetas saludables.',
     url: `${SITE_URL}/blog`,

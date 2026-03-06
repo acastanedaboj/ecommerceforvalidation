@@ -172,7 +172,7 @@ export function buildProductSchema(product: Product, url: string) {
       '@type': 'Organization',
       name: BRAND_NAME,
     },
-    category: 'Alimentación > Cereales y Granola > Granola Sin Gluten',
+    category: 'Alimentación > Cereales y granola > Granola sin gluten',
     weight: {
       '@type': 'QuantitativeValue',
       value: product.weight,

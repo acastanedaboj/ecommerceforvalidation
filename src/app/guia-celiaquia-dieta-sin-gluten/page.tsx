@@ -17,7 +17,7 @@ import { guiaCeliaquiaContent } from '@/data/landing-content';
 import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Guía Completa de Celiaquía y Dieta Sin Gluten 2026 | Poppy',
+  title: 'Guía completa de celiaquía y dieta sin gluten 2026 | Poppy',
   description:
     'Guía definitiva sobre celiaquía: qué es, síntomas, diagnóstico, tratamiento y cómo seguir una dieta sin gluten. Información basada en evidencia científica y fuentes oficiales (FACE, normativa UE). Actualizada 2026.',
   keywords: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/guia-celiaquia-dieta-sin-gluten'),
   },
   openGraph: {
-    title: 'Guía Completa de Celiaquía y Dieta Sin Gluten',
+    title: 'Guía completa de celiaquía y dieta sin gluten',
     description:
       'Todo lo que necesitas saber sobre la enfermedad celíaca: síntomas, diagnóstico, tratamiento y vida sin gluten. Fuentes oficiales y actualizada.',
     url: `${SITE_URL}/guia-celiaquia-dieta-sin-gluten`,

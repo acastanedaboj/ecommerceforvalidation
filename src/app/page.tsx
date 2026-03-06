@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Truck, Leaf, Heart, RefreshCw, Star, Check, Wheat, Droplets, Sparkles, TreeDeciduous } from 'lucide-react';
+import { ArrowRight, Truck, Star, Check } from 'lucide-react';
 import { ProductCard } from '@/components/product/ProductCard';
 import { getRetailProducts } from '@/data/products';
 import { formatPrice } from '@/lib/utils';
@@ -9,16 +9,16 @@ import { getPackOptions, getSubscriptionInfo } from '@/lib/pricing';
 import { SITE_URL, BRAND_NAME, getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: `${BRAND_NAME} | Granola Sin Gluten Artesanal con Miel`,
+  title: `${BRAND_NAME} | Granola sin gluten artesanal con miel`,
   description:
-    'Granola artesanal sin gluten elaborada con avena certificada, miel de apicultores locales y frutos secos premium remojados. Envío gratis desde 4 unidades. Compra online en España.',
+    'Granola crujiente y especiada, elaborada con intención. Ingredientes reales, sin gluten, sin ruido. Envío gratis desde 4 unidades.',
   alternates: {
     canonical: getCanonicalUrl('/'),
   },
   openGraph: {
-    title: `${BRAND_NAME} - Granola Sin Gluten Artesanal`,
+    title: `${BRAND_NAME} - Crafted for pleasure`,
     description:
-      'Granola artesanal sin gluten con avena certificada, miel y frutos secos premium remojados. Opción vegana disponible. Envío gratis +4 unidades.',
+      'Granola crujiente y especiada, elaborada con intención. Ingredientes reales. Sin gluten. Sin ruido.',
     url: SITE_URL,
     type: 'website',
   },
@@ -29,34 +29,31 @@ export default function HomePage() {
   const packOptions = getPackOptions();
   const subscriptionInfo = getSubscriptionInfo();
 
-
   return (
     <>
-      {/* Hero Section - Editorial Style */}
+      {/* 1. HERO - Impacto inmediato */}
       <section className="relative bg-white overflow-hidden">
         <div className="container-custom pt-10 pb-16 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Hero Content */}
             <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
-              <span className="inline-block text-xs tracking-widest uppercase text-stone-500 mb-6 animate-fade-in">
-                Sin gluten certificado
-              </span>
+              <p className="text-xs tracking-widest uppercase text-stone-400 mb-6 animate-fade-in">
+                Crafted for pleasure
+              </p>
 
               <h1 className="font-display text-stone-800 mb-8 animate-fade-in-up">
-                Granola artesanal
-                <br />
-                <span className="text-earth-600">sin gluten real</span>
+                <span className="italic">Poppy</span>
               </h1>
 
               <p className="text-base md:text-lg text-stone-600 mb-10 leading-relaxed animate-fade-in-up animation-delay-100">
-                Elaborada a mano con avena sin gluten certificada, miel
-                de apicultores locales y los mejores frutos secos y semillas,
-                remojados para facilitar la digestión.
+                Granola crujiente y especiada, elaborada con intención.
+                <br className="hidden sm:block" />
+                Ingredientes reales. Sin gluten. Sin ruido.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-200">
                 <Link href="/tienda" className="btn-primary btn-lg group">
-                  Comprar ahora
+                  Comprar granola
                   <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
                 </Link>
                 <Link href="/suscripcion" className="btn-outline btn-lg">
@@ -71,8 +68,7 @@ export default function HomePage() {
                   Envío gratis +4 bolsas
                 </span>
                 <span className="flex items-center gap-2">
-                  <Leaf className="w-4 h-4" strokeWidth={1.5} />
-                  100% Natural
+                  Sin gluten certificado
                 </span>
               </div>
             </div>
@@ -84,7 +80,7 @@ export default function HomePage() {
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
                     src="/images/home 4-5.png"
-                    alt="Elaboración artesanal de granola Poppy con ingredientes naturales"
+                    alt="Granola Poppy crujiente y especiada con ingredientes reales"
                     fill
                     className="object-cover"
                     priority
@@ -116,7 +112,7 @@ export default function HomePage() {
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
                     src="/images/home horizntal.png"
-                    alt="Elaboración artesanal de granola Poppy con ingredientes naturales"
+                    alt="Granola Poppy crujiente y especiada con ingredientes reales"
                     fill
                     className="object-cover"
                     priority
@@ -147,85 +143,21 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Benefits Section - Editorial Style */}
+      {/* 2. PRODUCTO - Granola con carácter */}
       <section className="py-14 md:py-20 bg-cream-100">
         <div className="container-custom">
-          <div className="text-center mb-10">
-            <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
-              Calidad artesanal
-            </p>
+          <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="font-display text-stone-800 mb-6">
-              Por qué nuestra granola es <span className="text-earth-600-display-italic">diferente</span>
+              Granola con <span className="text-earth-600-display-italic">carácter</span>
             </h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-200">
-            {/* Benefit 1 */}
-            <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
-              <Wheat className="w-8 h-8 text-earth-600 mx-auto mb-6" strokeWidth={1} />
-              <h3 className="font-display text-lg text-stone-800 mb-3">
-                Ingredientes remojados
-              </h3>
-              <p className="text-stone-600 text-sm leading-relaxed">
-                Frutos secos y semillas remojados para mejor digestión.
-              </p>
-            </div>
-
-            {/* Benefit 2 */}
-            <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
-              <Droplets className="w-8 h-8 text-olive-600 mx-auto mb-6" strokeWidth={1} />
-              <h3 className="font-display text-lg text-stone-800 mb-3">
-                Miel local
-              </h3>
-              <p className="text-stone-600 text-sm leading-relaxed">
-                De apicultores de pueblo. Sin azúcares refinados.
-              </p>
-            </div>
-
-            {/* Benefit 3 */}
-            <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
-              <TreeDeciduous className="w-8 h-8 text-taupe-600 mx-auto mb-6" strokeWidth={1} />
-              <h3 className="font-display text-lg text-stone-800 mb-3">
-                Frutos secos premium
-              </h3>
-              <p className="text-stone-600 text-sm leading-relaxed">
-                Almendras, avellanas y anacardos de primera.
-              </p>
-            </div>
-
-            {/* Benefit 4 */}
-            <div className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors">
-              <Sparkles className="w-8 h-8 text-earth-600 mx-auto mb-6" strokeWidth={1} />
-              <h3 className="font-display text-lg text-stone-800 mb-3">
-                Sin aditivos
-              </h3>
-              <p className="text-stone-600 text-sm leading-relaxed">
-                Solo ingredientes que reconocerías en tu cocina.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Products Section */}
-      <section className="section bg-white">
-        <div className="container-custom">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-10">
-            <div>
-              <h2 className="font-display text-stone-800 mb-4">
-                Nuestros productos
-              </h2>
-              <p className="text-stone-800 text-lg">
-                Elige tu sabor favorito o pruébalos todos
-              </p>
-            </div>
-            <Link
-              href="/tienda"
-              className="mt-6 md:mt-0 text-earth-600 hover:text-earth-700 font-medium inline-flex items-center gap-2 group"
-            >
-              Ver todos
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
+            <p className="text-stone-600 text-lg leading-relaxed">
+              Crujiente de verdad, con frutos secos y especias que despiertan el sabor.
+              Elaborada en pequeños lotes con avena sin gluten, miel ecológica
+              y frutos secos seleccionados.
+            </p>
+            <p className="text-stone-500 mt-4">
+              Pensada para disfrutar a diario, sin pesadez.
+            </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -239,16 +171,110 @@ export default function HomePage() {
               </div>
             ))}
           </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/tienda"
+              className="text-earth-600 hover:text-earth-700 font-medium inline-flex items-center gap-2 group"
+            >
+              Ver todos los sabores
+              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
         </div>
       </section>
 
-      {/* Pricing/Packs Section - Editorial Style */}
+      {/* 3. DIFERENCIAL - Por qué Poppy es diferente */}
       <section className="py-14 md:py-20 bg-white">
         <div className="container-custom">
-          <div className="text-center mb-10">
-            <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
-              Precios
+          <div className="max-w-3xl mx-auto">
+            <p className="text-xs tracking-widest uppercase text-stone-400 mb-4 text-center">
+              Lo que nos hace diferentes
             </p>
+            <h2 className="font-display text-stone-800 mb-8 text-center">
+              Por qué <span className="italic">Poppy</span> es <span className="text-earth-600-display-italic">diferente</span>
+            </h2>
+            <div className="space-y-6 text-stone-600 text-lg leading-relaxed">
+              <p>
+                La mayoría de granolas son dulces, blandas o demasiado procesadas.
+              </p>
+              <p>
+                <span className="italic">Poppy</span> se elabora lentamente para conseguir un punto de tostado que la hace
+                especialmente crujiente, con especias que aportan carácter y profundidad de sabor.
+              </p>
+              <p>
+                Además, los frutos secos se remojan antes de hornearse para mejorar su digestión.
+              </p>
+              <p className="text-stone-800 font-medium">
+                Ingredientes simples. Proceso cuidado. El resultado: una granola que sabe bien y sienta bien.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 4. INGREDIENTES - Ingredientes reales */}
+      <section className="py-14 md:py-20 bg-cream-100">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto text-center mb-10">
+            <h2 className="font-display text-stone-800 mb-6">
+              Ingredientes <span className="text-earth-600-display-italic">reales</span>
+            </h2>
+            <p className="text-stone-600 text-lg leading-relaxed">
+              Copos de avena sin gluten, frutos secos premium, semillas, miel ecológica y especias.
+              <br />
+              <span className="text-stone-800 font-medium">Nada más.</span>
+            </p>
+            <p className="text-stone-500 mt-4">
+              Sin aditivos. Sin ultraprocesados. Solo ingredientes que reconoces y que
+              trabajan juntos para crear sabor y textura.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* 5. HISTORIA - Cómo empezó Poppy */}
+      <section className="py-14 md:py-20 bg-white">
+        <div className="container-custom">
+          <div className="max-w-3xl mx-auto">
+            <p className="text-xs tracking-widest uppercase text-stone-400 mb-4 text-center">
+              Nuestra historia
+            </p>
+            <h2 className="font-display text-stone-800 mb-8 text-center">
+              Cómo empezó <span className="italic">Poppy</span>
+            </h2>
+            <div className="space-y-5 text-stone-600 text-lg leading-relaxed">
+              <p>
+                Un día, el médico me dijo &quot;tienes que eliminar el gluten de manera
+                estricta y para siempre&quot; y mi vida cambió por completo.
+              </p>
+              <p>
+                Así que hice lo que haría cualquier persona razonable con algo de
+                tiempo y un horno en casa: empecé a hacer mi propia granola. Sin
+                azúcares refinados, sin aditivos, con los frutos secos remojados
+                para facilitar la digestión.
+              </p>
+              <p className="text-stone-800 font-medium text-xl font-display">
+                <span className="italic">Poppy</span> es la granola que tomo cuando quiero granola. Si no es buena para mí, no es buena para ti.
+              </p>
+            </div>
+            <div className="text-center mt-8">
+              <Link
+                href="/nosotros"
+                className="text-earth-600 hover:text-earth-700 font-medium inline-flex items-center gap-2 group"
+              >
+                Conocer toda la historia
+                <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 6. CONVERSIÓN - Packs y precios */}
+      <section className="py-14 md:py-20 bg-cream-100">
+        <div className="container-custom">
+          <div className="text-center mb-10">
             <h2 className="font-display text-stone-800 mb-4">
               Cuanto más compras, más <span className="text-earth-600-display-italic">ahorras</span>
             </h2>
@@ -335,20 +361,23 @@ export default function HomePage() {
         </div>
       </section>
 
-
-      {/* CTA Section */}
+      {/* 7. CIERRE */}
       <section className="py-14 md:py-20 bg-white">
         <div className="container-custom text-center max-w-2xl mx-auto">
-          <h2 className="font-display text-stone-800 mb-6">
-            ¿Lista para probar la <span className="text-earth-600-display-italic">diferencia</span>?
-          </h2>
-          <p className="text-stone-600 mb-10">
-            Únete a cientos de familias que han descubierto el sabor de la granola
-            artesanal de verdad.
+          <p className="text-stone-500 text-lg leading-relaxed mb-6">
+            Pequeños placeres de despensa, hechos a mano.
+            <br />
+            Ingredientes reales, seleccionados con criterio.
+          </p>
+          <p className="font-display text-stone-800 text-2xl mb-2">
+            <span className="italic">Poppy</span>
+          </p>
+          <p className="text-xs tracking-widest uppercase text-stone-400 mb-10">
+            Crafted for pleasure
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/tienda" className="inline-flex items-center justify-center gap-2 bg-earth-600 text-[#ffffec] px-8 py-4 font-medium hover:bg-earth-700 transition-colors">
-              Comprar ahora
+              Comprar granola
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link href="/nosotros" className="inline-flex items-center justify-center gap-2 border border-stone-300 text-stone-800 px-8 py-4 font-medium hover:border-stone-400 transition-colors">

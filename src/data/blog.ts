@@ -22,11 +22,11 @@ export const blogPosts: BlogPost[] = [
   {
     id: 'post_smoothie_bowl',
     slug: 'smoothie-bowl-granola-frutos-rojos',
-    title: 'Smoothie Bowl con Granola y Frutos Rojos',
+    title: 'Smoothie bowl con granola y frutos rojos',
     excerpt:
       'El desayuno perfecto para empezar el día con energía: un smoothie bowl cremoso coronado con nuestra granola crujiente y frutos rojos frescos.',
     content: `
-# Smoothie Bowl con Granola y Frutos Rojos
+# Smoothie bowl con granola y frutos rojos
 
 El desayuno es la comida más importante del día, y este smoothie bowl es la prueba de que puede ser delicioso, nutritivo y visualmente espectacular.
 
@@ -60,7 +60,7 @@ Aquí viene lo divertido: añade la granola en una sección, los frutos rojos fr
 
 - **Plátano congelado es clave:** Congela plátanos maduros cortados en rodajas. Son la base perfecta para conseguir esa textura cremosa sin añadir helado.
 - **No mezcles la granola:** Añádela justo antes de comer para que mantenga su crujiente.
-- **Variaciones:** Puedes usar mango congelado en lugar de frutos rojos para una versión tropical que combina genial con nuestra Granola Tropical.
+- **Variaciones:** Puedes usar mango congelado en lugar de frutos rojos para una versión tropical que combina genial con nuestra granola tropical.
 
 ## Información nutricional aproximada
 
@@ -79,7 +79,7 @@ Aquí viene lo divertido: añade la granola en una sección, los frutos rojos fr
     publishedAt: '2024-01-15',
     readingTime: 5,
     tags: ['recetas', 'desayuno', 'smoothie-bowl', 'frutos-rojos', 'saludable'],
-    metaTitle: 'Receta: Smoothie Bowl con Granola y Frutos Rojos | Poppy',
+    metaTitle: 'Receta: smoothie bowl con granola y frutos rojos | Poppy',
     metaDescription:
       'Aprende a preparar el smoothie bowl perfecto con granola Poppy y frutos rojos. Receta fácil, nutritiva y deliciosa para tus desayunos.',
   },
@@ -167,7 +167,7 @@ Al final, lo importante es cómo te sienta a ti. Algunas personas notan diferenc
     publishedAt: '2024-01-08',
     readingTime: 5,
     tags: ['nutricion', 'frutos-secos', 'proceso-artesanal', 'digestion', 'tradicion'],
-    metaTitle: 'Por qué Remojamos los Frutos Secos y Semillas | Poppy',
+    metaTitle: 'Por qué remojamos los frutos secos y semillas | Poppy',
     metaDescription:
       'Descubre el proceso tradicional de remojo de frutos secos y semillas que utilizamos en Poppy. Una técnica ancestral para una granola artesanal.',
   },
@@ -262,18 +262,18 @@ Sea cual sea la forma que elijas, recuerda: **añade la granola al final** para 
     publishedAt: '2024-01-01',
     readingTime: 4,
     tags: ['recetas', 'desayuno', 'ideas', 'saludable', 'energia'],
-    metaTitle: '5 Formas de Desayunar Granola con Energía | Poppy',
+    metaTitle: '5 formas de desayunar granola con energía | Poppy',
     metaDescription:
       'Descubre 5 ideas creativas para desayunar granola más allá del bol con leche. Recetas fáciles y deliciosas para empezar el día con energía.',
   },
   {
     id: 'post_celiacos_guia',
     slug: 'guia-completa-granola-sin-gluten-celiacos',
-    title: 'Guía Completa de Granola Sin Gluten para Celíacos',
+    title: 'Guía completa de granola sin gluten para celíacos',
     excerpt:
       'Todo lo que necesitas saber sobre la granola apta para celíacos: certificaciones, ingredientes seguros, cómo identificar contaminación cruzada y marcas de confianza.',
     content: `
-# Guía Completa de Granola Sin Gluten para Celíacos
+# Guía completa de granola sin gluten para celíacos
 
 Si eres celíaco o tienes sensibilidad al gluten, encontrar una granola verdaderamente segura puede ser todo un desafío. En esta guía te explicamos qué buscar y qué evitar.
 
@@ -335,18 +335,18 @@ Si estás buscando opciones de granola sin gluten, te pueden interesar:
     publishedAt: '2024-01-22',
     readingTime: 8,
     tags: ['sin-gluten', 'celiacos', 'nutricion', 'salud', 'guia'],
-    metaTitle: 'Granola Sin Gluten para Celíacos: Guía Completa | Poppy',
+    metaTitle: 'Granola sin gluten para celíacos: guía completa | Poppy',
     metaDescription:
       'Guía completa sobre granola sin gluten para celíacos. Aprende a identificar productos seguros, certificaciones y evitar contaminación cruzada.',
   },
   {
     id: 'post_overnight_oats',
     slug: 'overnight-oats-granola-receta-perfecta',
-    title: 'Overnight Oats con Granola: La Receta Perfecta para tus Mañanas',
+    title: 'Overnight oats con granola: la receta perfecta para tus mañanas',
     excerpt:
       'Aprende a preparar overnight oats cremosos y añade la granola en el momento justo para mantener ese crunch perfecto. Receta paso a paso con variaciones.',
     content: `
-# Overnight Oats con Granola: La Receta Perfecta
+# Overnight oats con granola: la receta perfecta
 
 Los overnight oats son la solución perfecta para quienes quieren un desayuno nutritivo sin dedicar tiempo por la mañana. Y si les añades granola en el momento justo, consigues la combinación perfecta de cremosidad y crujiente.
 
@@ -354,7 +354,7 @@ Los overnight oats son la solución perfecta para quienes quieren un desayuno nu
 
 Son copos de avena que se dejan remojando toda la noche en un líquido (leche, yogur o bebida vegetal). Durante esas horas, la avena absorbe el líquido y se ablanda, creando una textura cremosa sin necesidad de cocción.
 
-## Receta Base (1 ración)
+## Receta base (1 ración)
 
 **Ingredientes:**
 - 40g de copos de avena (usa avena sin gluten si eres celíaco)
@@ -420,22 +420,22 @@ Esta receta aporta aproximadamente:
     publishedAt: '2024-01-18',
     readingTime: 5,
     tags: ['recetas', 'overnight-oats', 'desayuno', 'meal-prep', 'saludable'],
-    metaTitle: 'Overnight Oats con Granola: Receta Perfecta Paso a Paso | Poppy',
+    metaTitle: 'Overnight oats con granola: receta perfecta paso a paso | Poppy',
     metaDescription:
       'Receta de overnight oats con granola. Aprende a preparar un desayuno nutritivo la noche anterior y añadir el crunch perfecto por la mañana.',
   },
   {
     id: 'post_miel_beneficios',
     slug: 'beneficios-miel-ecologica-granola',
-    title: 'Miel en la Granola: Por qué Marca la Diferencia',
+    title: 'Miel en la granola: por qué marca la diferencia',
     excerpt:
       'Descubre los beneficios de la miel frente al azúcar refinado y por qué elegimos este endulzante natural para nuestra granola artesanal.',
     content: `
-# Miel: Por qué Marca la Diferencia
+# Miel: por qué marca la diferencia
 
 En un mercado lleno de granolas endulzadas con azúcar refinado, jarabes de maíz o edulcorantes artificiales, nosotros elegimos la miel. Y hay razones científicas detrás de esta decisión.
 
-## Miel vs Azúcar Refinado
+## Miel vs azúcar refinado
 
 Aunque ambos aportan dulzor, hay diferencias importantes:
 
@@ -493,18 +493,18 @@ Entendemos que la miel no es apta para veganos. Por eso, nuestra Granola de Dát
     publishedAt: '2024-01-12',
     readingTime: 6,
     tags: ['miel', 'nutricion', 'ingredientes', 'salud'],
-    metaTitle: 'Beneficios de la Miel Ecológica en la Granola | Poppy',
+    metaTitle: 'Beneficios de la miel ecológica en la granola | Poppy',
     metaDescription:
       'Descubre por qué elegimos miel para endulzar nuestra granola. Beneficios frente al azúcar, propiedades y diferencias con miel convencional.',
   },
   {
     id: 'post_snack_saludable',
     slug: 'granola-snack-saludable-entre-horas',
-    title: 'Granola como Snack Saludable: Ideas para Picar entre Horas',
+    title: 'Granola como snack saludable: ideas para picar entre horas',
     excerpt:
       'La granola no es solo para el desayuno. Descubre formas creativas de disfrutarla como snack saludable a media mañana o merienda.',
     content: `
-# Granola como Snack: Ideas para Picar Sano
+# Granola como snack: ideas para picar sano
 
 ¿Quién dice que la granola es solo para el desayuno? Este alimento versátil puede convertirse en tu aliado perfecto para esos momentos del día en que necesitas un aporte de energía.
 
@@ -579,18 +579,18 @@ La clave está en el equilibrio: la granola es un snack excelente, pero como tod
     publishedAt: '2024-01-05',
     readingTime: 4,
     tags: ['snack', 'saludable', 'entre-horas', 'energia', 'deporte'],
-    metaTitle: 'Granola como Snack Saludable: Ideas para Entre Horas | Poppy',
+    metaTitle: 'Granola como snack saludable: ideas para entre horas | Poppy',
     metaDescription:
       'Ideas para usar la granola como snack saludable. Porciones recomendadas, momentos ideales y combinaciones deliciosas para picar entre horas.',
   },
   {
     id: 'post_frutos_secos',
     slug: 'frutos-secos-granola-beneficios-tipos',
-    title: 'Frutos Secos en la Granola: Tipos, Beneficios y Cómo Elegir',
+    title: 'Frutos secos en la granola: tipos, beneficios y cómo elegir',
     excerpt:
       'Conoce los frutos secos que usamos en nuestra granola, sus propiedades nutricionales y por qué elegimos cada uno de ellos.',
     content: `
-# Frutos Secos en la Granola: Guía Completa
+# Frutos secos en la granola: guía completa
 
 Los frutos secos son el alma de una buena granola. Aportan textura, sabor, proteínas y grasas saludables. Pero no todos son iguales. Te contamos por qué elegimos cada uno.
 
@@ -670,18 +670,18 @@ Esta proporción garantiza que en cada cucharada encuentres sabor, textura y nut
     publishedAt: '2023-12-28',
     readingTime: 6,
     tags: ['frutos-secos', 'nutricion', 'ingredientes', 'salud', 'proteina'],
-    metaTitle: 'Frutos Secos en la Granola: Beneficios y Tipos | Poppy',
+    metaTitle: 'Frutos secos en la granola: beneficios y tipos | Poppy',
     metaDescription:
       'Guía completa sobre los frutos secos y semillas en la granola: pipas de girasol, almendras, anacardos y avellanas. Beneficios nutricionales.',
   },
   {
     id: 'post_bowl_proteico',
     slug: 'bowl-proteico-granola-post-entreno',
-    title: 'Bowl Proteico con Granola: Receta Post-Entreno',
+    title: 'Bowl proteico con granola: receta post-entreno',
     excerpt:
       'Recupera después del ejercicio con este bowl proteico completo. Combina proteína, carbohidratos de la granola y grasas saludables.',
     content: `
-# Bowl Proteico con Granola: Receta Post-Entreno
+# Bowl proteico con granola: receta post-entreno
 
 Después de entrenar, tu cuerpo necesita nutrientes para recuperarse. Este bowl combina proteína para los músculos, carbohidratos para reponer energía y grasas saludables de los frutos secos.
 
@@ -694,7 +694,7 @@ Tras el ejercicio, tienes una "ventana anabólica" de 30-60 minutos donde tu cue
 - Carbohidratos: 40-60g para reponer glucógeno
 - Líquidos: rehidratación
 
-## Receta: Bowl Proteico Completo
+## Receta: bowl proteico completo
 
 ### Ingredientes (1 ración grande)
 
@@ -719,7 +719,7 @@ Tras el ejercicio, tienes una "ventana anabólica" de 30-60 minutos donde tu cue
 5. **Añade la mantequilla de almendras** en el centro
 6. **Decora** con arándanos y semillas
 
-## Información Nutricional
+## Información nutricional
 
 **Por ración:**
 - Calorías: 550-600 kcal
@@ -766,18 +766,18 @@ Este bowl es una comida completa. Si entrenas por la mañana, puede ser tu desay
     publishedAt: '2023-12-20',
     readingTime: 5,
     tags: ['recetas', 'proteina', 'post-entreno', 'fitness', 'desayuno'],
-    metaTitle: 'Bowl Proteico con Granola Post-Entreno | Receta | Poppy',
+    metaTitle: 'Bowl proteico con granola post-entreno | Receta | Poppy',
     metaDescription:
       'Receta de bowl proteico con granola para después del entrenamiento. Combina proteína, carbohidratos y grasas saludables para una recuperación óptima.',
   },
   {
     id: 'post_vegano_desayuno',
     slug: 'desayuno-vegano-completo-granola',
-    title: 'Desayuno Vegano Completo con Granola: Nutrientes que Necesitas',
+    title: 'Desayuno vegano completo con granola: nutrientes que necesitas',
     excerpt:
       'Cómo diseñar un desayuno vegano equilibrado usando granola. Asegura proteína, hierro, B12 y todos los nutrientes esenciales.',
     content: `
-# Desayuno Vegano Completo con Granola
+# Desayuno vegano completo con granola
 
 Diseñar un desayuno vegano nutritivo y saciante es más fácil de lo que parece. La granola puede ser la base perfecta si sabes cómo complementarla.
 
@@ -790,7 +790,7 @@ Cuando eliminas los productos de origen animal, debes prestar atención a cierto
 - **B12:** Requiere suplementación o alimentos fortificados
 - **Calcio:** Si evitas lácteos, busca alternativas
 
-## Nuestra Granola de Dátiles: 100% Vegana
+## Nuestra granola de dátiles: 100% vegana
 
 Desarrollamos una versión sin miel específicamente para veganos. Los dátiles Medjool aportan:
 
@@ -873,18 +873,18 @@ Un desayuno vegano bien planificado puede ser tan (o más) nutritivo que uno con
     publishedAt: '2023-12-15',
     readingTime: 7,
     tags: ['vegano', 'nutricion', 'desayuno', 'proteina', 'saludable'],
-    metaTitle: 'Desayuno Vegano Completo con Granola | Guía Nutricional | Poppy',
+    metaTitle: 'Desayuno vegano completo con granola | Guía nutricional | Poppy',
     metaDescription:
       'Cómo crear un desayuno vegano nutritivo con granola. Guía de nutrientes esenciales, recetas y consejos para una alimentación vegana equilibrada.',
   },
   {
     id: 'post_conservacion',
     slug: 'como-conservar-granola-frescura-crunch',
-    title: 'Cómo Conservar la Granola: Mantén la Frescura y el Crunch',
+    title: 'Cómo conservar la granola: mantén la frescura y el crunch',
     excerpt:
       'Aprende los trucos para mantener tu granola crujiente durante más tiempo. Almacenamiento, errores comunes y señales de que ha perdido frescura.',
     content: `
-# Cómo Conservar la Granola Perfectamente
+# Cómo conservar la granola perfectamente
 
 No hay nada peor que abrir tu bolsa de granola favorita y encontrarla blanda o rancia. Con estos consejos, mantendrás ese crunch perfecto hasta el último bocado.
 
@@ -998,18 +998,18 @@ Consulta siempre la fecha de consumo preferente en el envase.
     publishedAt: '2023-12-08',
     readingTime: 5,
     tags: ['conservacion', 'almacenamiento', 'frescura', 'tips', 'cocina'],
-    metaTitle: 'Cómo Conservar la Granola: Trucos para Mantener el Crunch | Poppy',
+    metaTitle: 'Cómo conservar la granola: trucos para mantener el crunch | Poppy',
     metaDescription:
       'Guía completa para conservar la granola fresca y crujiente. Almacenamiento correcto, errores comunes y cómo saber si ha perdido frescura.',
   },
   {
     id: 'post_comparativa',
     slug: 'granola-casera-vs-industrial-diferencias',
-    title: 'Granola Casera vs Industrial: ¿Cuál es Mejor?',
+    title: 'Granola casera vs industrial: ¿cuál es mejor?',
     excerpt:
       'Analizamos las diferencias reales entre la granola artesanal y la industrial. Ingredientes, proceso, sabor y nutrientes comparados.',
     content: `
-# Granola Casera vs Industrial: La Comparativa Definitiva
+# Granola casera vs industrial: la comparativa definitiva
 
 ¿Merece la pena pagar más por una granola artesanal? ¿Es realmente diferente de la que encuentras en el supermercado? Vamos a comparar con datos reales.
 
@@ -1125,18 +1125,18 @@ No competimos con la granola industrial. Somos otra categoría. Hacemos granola 
     publishedAt: '2023-12-01',
     readingTime: 6,
     tags: ['comparativa', 'artesanal', 'industrial', 'ingredientes', 'calidad'],
-    metaTitle: 'Granola Casera vs Industrial: Diferencias Reales | Poppy',
+    metaTitle: 'Granola casera vs industrial: diferencias reales | Poppy',
     metaDescription:
       'Comparativa completa entre granola artesanal e industrial. Analizamos ingredientes, proceso, precio y sabor para que tomes la mejor decisión.',
   },
   {
     id: 'post_avena_sin_gluten',
     slug: 'avena-sin-gluten-guia-completa-celiacos',
-    title: 'Avena Sin Gluten: Todo lo que Necesitas Saber sobre Contaminación Cruzada',
+    title: 'Avena sin gluten: todo lo que necesitas saber sobre contaminación cruzada',
     excerpt:
       '¿La avena tiene gluten? Guía completa: cadena de contaminación cruzada paso a paso, cómo verificar etiquetas y qué hace Poppy en cada fase para garantizar tu seguridad.',
     content: `
-# Avena Sin Gluten: Guía Completa sobre Contaminación Cruzada
+# Avena sin gluten: guía completa sobre contaminación cruzada
 
 La avena es uno de los cereales más nutritivos y versátiles, pero genera muchas dudas entre las personas con enfermedad celíaca o sensibilidad al gluten. ¿Es segura? ¿Qué significa "certificada sin gluten"? ¿Cómo puedes verificar que tu avena es realmente segura? En esta guía respondemos todas tus preguntas con información basada en fuentes oficiales.
 
@@ -1361,18 +1361,18 @@ Ninguna diferencia nutricional ni de sabor. La única diferencia es el proceso d
     publishedAt: '2026-02-17',
     readingTime: 12,
     tags: ['avena', 'sin-gluten', 'celiacos', 'nutricion', 'certificacion', 'guia', 'contaminacion-cruzada', 'seguridad-alimentaria', 'etiquetado'],
-    metaTitle: 'Contaminación Cruzada del Gluten en Avena: Guía Completa | Poppy',
+    metaTitle: 'Contaminación cruzada del gluten en avena: guía completa | Poppy',
     metaDescription:
       'Cadena de contaminación cruzada del gluten en avena paso a paso: campo, cosecha, molino y obrador. Cómo verificar etiquetas y elegir avena realmente segura para celíacos.',
   },
   {
     id: 'post_desayuno_sin_gluten_semana',
     slug: 'ideas-desayuno-sin-gluten-semana-completa',
-    title: 'Ideas de Desayuno Sin Gluten para Toda la Semana',
+    title: 'Ideas de desayuno sin gluten para toda la semana',
     excerpt:
       '7 ideas de desayunos sin gluten fáciles y nutritivos para cada día de la semana. Recetas rápidas, equilibradas y deliciosas para celíacos.',
     content: `
-# Ideas de Desayuno Sin Gluten para Toda la Semana
+# Ideas de desayuno sin gluten para toda la semana
 
 El desayuno es la comida más importante del día, pero para las personas con enfermedad celíaca o sensibilidad al gluten, encontrar opciones variadas, nutritivas y seguras puede ser un desafío diario. En esta guía te proponemos **7 desayunos sin gluten**, uno para cada día de la semana, con recetas fáciles y equilibradas.
 
@@ -1385,7 +1385,7 @@ Según las guías nutricionales, un desayuno completo debe aportar aproximadamen
 - **Grasas saludables:** Absorción de vitaminas → Frutos secos, aguacate, aceite de oliva
 - **Fibra:** Digestión y saciedad → Frutas, verduras, cereales integrales sin gluten
 
-## Lunes: Yogur con Granola y Fruta Fresca
+## Lunes: yogur con granola y fruta fresca
 
 El clásico que nunca falla. Rápido, nutritivo y personalizable.
 
@@ -1407,7 +1407,7 @@ El clásico que nunca falla. Rápido, nutritivo y personalizable.
 
 ---
 
-## Martes: Tostadas con Aguacate y Huevo
+## Martes: tostadas con aguacate y huevo
 
 Un desayuno saciante con grasas saludables y proteína de alta calidad.
 
@@ -1431,7 +1431,7 @@ Un desayuno saciante con grasas saludables y proteína de alta calidad.
 
 ---
 
-## Miércoles: Smoothie Bowl Energético
+## Miércoles: smoothie bowl energético
 
 Perfecto para días de calor o cuando quieres algo fresco y ligero.
 
@@ -1454,7 +1454,7 @@ Perfecto para días de calor o cuando quieres algo fresco y ligero.
 
 ---
 
-## Jueves: Tortitas de Avena Sin Gluten
+## Jueves: tortitas de avena sin gluten
 
 Un capricho saludable que lleva solo 15 minutos.
 
@@ -1478,7 +1478,7 @@ Un capricho saludable que lleva solo 15 minutos.
 
 ---
 
-## Viernes: Overnight Oats (Avena Nocturna)
+## Viernes: overnight oats (avena nocturna)
 
 Prepáralo la noche anterior y ten el desayuno listo al despertar.
 
@@ -1504,7 +1504,7 @@ Prepáralo la noche anterior y ten el desayuno listo al despertar.
 
 ---
 
-## Sábado: Huevos Revueltos con Verduras
+## Sábado: huevos revueltos con verduras
 
 El sábado hay más tiempo. Un desayuno proteico y reconfortante.
 
@@ -1528,7 +1528,7 @@ El sábado hay más tiempo. Un desayuno proteico y reconfortante.
 
 ---
 
-## Domingo: Bowl Brunch Completo
+## Domingo: bowl brunch completo
 
 El domingo merece un desayuno especial con todos los grupos de alimentos.
 
@@ -1624,18 +1624,18 @@ Las mismas que cualquier desayuno equilibrado: entre 300-500 kcal dependiendo de
     publishedAt: '2026-01-08',
     readingTime: 10,
     tags: ['desayuno', 'sin-gluten', 'recetas', 'celiacos', 'meal-prep', 'saludable'],
-    metaTitle: 'Ideas de Desayuno Sin Gluten: 7 Recetas para Toda la Semana | Poppy',
+    metaTitle: 'Ideas de desayuno sin gluten: 7 recetas para toda la semana | Poppy',
     metaDescription:
       '7 ideas de desayunos sin gluten fáciles y nutritivos para cada día de la semana. Recetas rápidas, equilibradas y deliciosas para celíacos. Incluye valores nutricionales.',
   },
   {
     id: 'post_granola_sin_azucar',
     slug: 'granola-sin-azucar-guia-diabeticos',
-    title: 'Granola Sin Azúcar: Guía para Diabéticos y Dietas Bajas en Azúcar',
+    title: 'Granola sin azúcar: guía para diabéticos y dietas bajas en azúcar',
     excerpt:
       '¿Cuánto azúcar tiene la granola? Guía completa sobre granola para diabéticos: índice glucémico, cómo leer etiquetas y alternativas saludables.',
     content: `
-# Granola Sin Azúcar: Guía para Diabéticos y Dietas Bajas en Azúcar
+# Granola sin azúcar: guía para diabéticos y dietas bajas en azúcar
 
 La granola tiene fama de ser un alimento saludable, pero muchas granolas comerciales contienen cantidades sorprendentes de azúcar. Si tienes diabetes, prediabetes o simplemente quieres reducir tu consumo de azúcar, esta guía te ayudará a elegir la granola adecuada.
 
@@ -1837,18 +1837,18 @@ Y recuerda: la mejor forma de saber cómo te afecta un alimento es **medir tu gl
     publishedAt: '2025-12-10',
     readingTime: 11,
     tags: ['sin-azucar', 'diabetes', 'nutricion', 'salud', 'indice-glucemico', 'guia'],
-    metaTitle: 'Granola Sin Azúcar para Diabéticos: Guía Completa | Poppy',
+    metaTitle: 'Granola sin azúcar para diabéticos: guía completa | Poppy',
     metaDescription:
       '¿Cuánto azúcar tiene la granola? Guía completa sobre granola para diabéticos: índice glucémico, cómo leer etiquetas, porciones recomendadas y alternativas saludables.',
   },
   {
     id: 'post_sensibilidad_gluten',
     slug: 'sensibilidad-gluten-no-celiaca-sintomas-dieta',
-    title: 'Sensibilidad al Gluten No Celíaca: Síntomas, Diagnóstico y Alimentación',
+    title: 'Sensibilidad al gluten no celíaca: síntomas, diagnóstico y alimentación',
     excerpt:
       '¿Reaccionas al gluten pero no eres celíaco? Guía completa sobre la sensibilidad al gluten no celíaca (SGNC): síntomas, diagnóstico, diferencias con la celiaquía y dieta.',
     content: `
-# Sensibilidad al Gluten No Celíaca: Guía Completa
+# Sensibilidad al gluten no celíaca: guía completa
 
 ¿Experimentas síntomas digestivos o extradigestivos cuando comes gluten, pero las pruebas de celiaquía salen negativas? Podrías tener **sensibilidad al gluten no celíaca (SGNC)**, una condición reconocida médicamente que afecta a un porcentaje significativo de la población.
 
@@ -2115,7 +2115,7 @@ La sensibilidad al gluten no celíaca es una condición real que afecta a millon
     publishedAt: '2025-11-15',
     readingTime: 14,
     tags: ['sensibilidad-gluten', 'SGNC', 'intolerancia', 'nutricion', 'salud', 'guia'],
-    metaTitle: 'Sensibilidad al Gluten No Celíaca: Síntomas, Diagnóstico y Dieta | Poppy',
+    metaTitle: 'Sensibilidad al gluten no celíaca: síntomas, diagnóstico y dieta | Poppy',
     metaDescription:
       '¿Reaccionas al gluten pero no eres celíaco? Guía completa sobre la sensibilidad al gluten no celíaca (SGNC): síntomas, diagnóstico por exclusión, diferencias con celiaquía y dieta.',
   },

@@ -12,7 +12,7 @@ import { ecologicaContent } from '@/data/landing-content';
 import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Granola Artesanal Sin Gluten | Ingredientes Naturales | Poppy',
+  title: 'Granola artesanal sin gluten | Ingredientes naturales | Poppy',
   description:
     'Granola artesanal con miel de Málaga, avena sin gluten y aceite de coco virgen. 25-30% frutos secos. Envío gratis desde 4 uds.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/granola-ecologica'),
   },
   openGraph: {
-    title: 'Granola Artesanal con Ingredientes Naturales | Poppy',
+    title: 'Granola artesanal con ingredientes naturales | Poppy',
     description:
       'Miel de Málaga, avena sin gluten, aceite de coco virgen. Granola artesanal con 25-30% de frutos secos.',
     url: `${SITE_URL}/granola-ecologica`,

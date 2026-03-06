@@ -34,7 +34,7 @@ export default function BlogPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl md:text-5xl font-display text-neutral-900 mb-4">
-            Blog & Recetas
+            Blog & recetas
           </h1>
           <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
             Ideas para disfrutar de tu granola, consejos de nutrición y todo lo que

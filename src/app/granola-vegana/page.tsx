@@ -13,7 +13,7 @@ import { veganaContent } from '@/data/landing-content';
 import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Granola Vegana 100% Sin Miel | Poppy',
+  title: 'Granola vegana 100% sin miel | Poppy',
   description:
     'Granola vegana endulzada con dátiles Medjool. Sin miel ni productos animales. Artesanal y sin gluten. Envío gratis +4 uds.',
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/granola-vegana'),
   },
   openGraph: {
-    title: 'Granola Vegana 100% Sin Miel | Poppy',
+    title: 'Granola vegana 100% sin miel | Poppy',
     description:
       'Granola vegana endulzada con dátiles Medjool y sirope de agave. Sin miel ni productos animales.',
     url: `${SITE_URL}/granola-vegana`,

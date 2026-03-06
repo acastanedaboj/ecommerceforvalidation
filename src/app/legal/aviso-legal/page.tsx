@@ -3,7 +3,7 @@ import { BUSINESS } from '@/lib/constants';
 import { getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Aviso Legal',
+  title: 'Aviso legal',
   description: 'Aviso legal e información corporativa de Poppy.',
   alternates: {
     canonical: getCanonicalUrl('/legal/aviso-legal'),

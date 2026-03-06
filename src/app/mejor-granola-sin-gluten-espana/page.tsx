@@ -11,7 +11,7 @@ import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Mejor Granola Sin Gluten España 2026 | Comparativa Completa',
+  title: 'Mejor granola sin gluten España 2026 | Comparativa completa',
   description:
     'Comparativa de las mejores granolas sin gluten en España: Poppy, CIVIA Foods, El Granero, Sanalocura. Análisis de ingredientes, precios y certificaciones.',
   keywords: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/mejor-granola-sin-gluten-espana'),
   },
   openGraph: {
-    title: 'Mejor Granola Sin Gluten España 2026 | Comparativa',
+    title: 'Mejor granola sin gluten España 2026 | Comparativa',
     description:
       'Analizamos las principales granolas sin gluten del mercado español: ingredientes, precios y certificaciones.',
     url: `${SITE_URL}/mejor-granola-sin-gluten-espana`,
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/images/hero-comparativa-granola.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Comparativa Granola Sin Gluten España',
+        alt: 'Comparativa granola sin gluten España',
       },
     ],
   },
@@ -75,7 +75,7 @@ function buildArticleSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: 'Mejor Granola Sin Gluten España 2026 - Comparativa Completa',
+    headline: 'Mejor granola sin gluten España 2026 - Comparativa completa',
     description:
       'Análisis detallado de las principales granolas sin gluten del mercado español.',
     author: {
@@ -102,7 +102,7 @@ export default function MejorGranolaSinGlutenPage() {
 
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Inicio', url: SITE_URL },
-    { name: 'Mejor Granola Sin Gluten España', url: `${SITE_URL}/mejor-granola-sin-gluten-espana` },
+    { name: 'Mejor granola sin gluten España', url: `${SITE_URL}/mejor-granola-sin-gluten-espana` },
   ]);
 
   // Helper to render markdown-like content

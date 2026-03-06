@@ -14,7 +14,7 @@ import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Granola Sin Gluten Carrefour vs Poppy: Comparativa 2026',
+  title: 'Granola sin gluten Carrefour vs Poppy: comparativa 2026',
   description:
     '¿Granola sin gluten de Carrefour o artesanal Poppy? Comparamos ingredientes, precio, calidad y sabor. Descubre cuál es mejor para ti.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/granola-sin-gluten-carrefour'),
   },
   openGraph: {
-    title: 'Granola Sin Gluten: Carrefour vs Poppy Artesanal',
+    title: 'Granola sin gluten: Carrefour vs Poppy artesanal',
     description:
       'Comparativa completa entre granola de Carrefour y granola artesanal Poppy. Ingredientes, precio, calidad.',
     url: `${SITE_URL}/granola-sin-gluten-carrefour`,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/images/hero-sin-gluten.jpeg`,
         width: 1200,
         height: 630,
-        alt: 'Comparativa Granola Sin Gluten Carrefour vs Poppy',
+        alt: 'Comparativa granola sin gluten Carrefour vs Poppy',
       },
     ],
   },
@@ -85,7 +85,7 @@ export default function GranolaSinGlutenCarrefourPage() {
 
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Inicio', url: SITE_URL },
-    { name: 'Granola Sin Gluten', url: `${SITE_URL}/granola-sin-gluten` },
+    { name: 'Granola sin gluten', url: `${SITE_URL}/granola-sin-gluten` },
     {
       name: 'Comparativa Carrefour',
       url: `${SITE_URL}/granola-sin-gluten-carrefour`,
