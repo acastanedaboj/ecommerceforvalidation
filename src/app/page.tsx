@@ -208,7 +208,7 @@ export default function HomePage() {
       {/* Ingredientes hero image */}
       <div className="w-full relative aspect-[3/1]">
         <Image
-          src="/images/ingredientes-hero.png"
+          src="/images/ingredientes-hero (1).png"
           alt="Ingredientes naturales de Poppy Granola"
           fill
           className="object-cover"
