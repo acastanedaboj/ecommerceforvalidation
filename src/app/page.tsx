@@ -206,9 +206,15 @@ export default function HomePage() {
       </section>
 
       {/* 4. INGREDIENTES - Ingredientes reales */}
-      {/* Horizontal image placeholder */}
-      <div className="w-full aspect-[3/1] bg-stone-200 flex items-center justify-center">
-        <span className="text-stone-400 text-sm tracking-wide uppercase">Imagen horizontal</span>
+      {/* Horizontal image - ingredientes hero */}
+      <div className="w-full relative aspect-[3/1]">
+        <Image
+          src="/images/ingredientes-hero.png"
+          alt="Ingredientes naturales de Poppy Granola"
+          fill
+          className="object-cover"
+          priority
+        />
       </div>
 
       <section className="py-14 md:py-20 bg-cream-100">
