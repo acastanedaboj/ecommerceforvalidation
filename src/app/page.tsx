@@ -195,11 +195,7 @@ export default function HomePage() {
             </h2>
             <div className="space-y-6 text-stone-600 text-lg leading-relaxed">
               <p>
-                <span className="italic">Poppy</span> se elabora lentamente para conseguir un punto de tostado que la hace
-                especialmente crujiente, con especias sin gluten que aportan carácter y profundidad de sabor.
-              </p>
-              <p>
-                Además, los frutos secos se remojan antes de hornearse para mejorar su digestión.
+                <span className="italic">Poppy</span> está hecha con intención. Los frutos secos se remojan antes del horneado para mejorar su digestión. El tostado lento crea una textura especialmente crujiente.
               </p>
               <p className="text-stone-800 font-medium">
                 Ingredientes simples. Proceso cuidado. El resultado: una granola que sabe bien y sienta bien.
@@ -212,42 +208,13 @@ export default function HomePage() {
       {/* 4. INGREDIENTES - Ingredientes reales */}
       <section className="py-14 md:py-20 bg-cream-100">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center mb-10">
-            <h2 className="font-display text-stone-800 mb-6">
-              Ingredientes <span className="text-earth-600-display-italic">reales</span>
-            </h2>
-            <p className="text-stone-600 text-lg leading-relaxed">
-              Copos de avena integral sin gluten, frutos secos premium, semillas, miel ecológica, aceite de coco y especias.
-              <span className="text-stone-800 font-medium"> Nada más.</span> Sin aditivos. Sin ultraprocesados. Solo ingredientes que reconoces y que
-              trabajan juntos para crear sabor y textura.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* 5. HISTORIA - Cómo empezó Poppy */}
-      <section className="py-14 md:py-20 bg-white">
-        <div className="container-custom">
           <div className="max-w-3xl mx-auto">
-            <p className="text-xs tracking-widest uppercase text-stone-400 mb-4 text-center">
-              Nuestra historia
-            </p>
             <h2 className="font-display text-stone-800 mb-8 text-center">
-              Cómo empezó <span className="italic">Poppy</span>
+              Ingredientes <span className="text-earth-600-display-italic">reales</span>. Nada que sobre.
             </h2>
-            <div className="space-y-5 text-stone-600 text-lg leading-relaxed">
+            <div className="space-y-6 text-stone-600 text-lg leading-relaxed">
               <p>
-                Un día, el médico me dijo &quot;tienes que eliminar el gluten de manera
-                estricta y para siempre&quot; y mi vida cambió por completo.
-              </p>
-              <p>
-                Así que hice lo que haría cualquier persona razonable con algo de
-                tiempo y un horno en casa: empecé a hacer mi propia granola. Sin
-                azúcares refinados, sin aditivos, con los frutos secos remojados
-                para facilitar la digestión.
-              </p>
-              <p className="text-stone-800 font-medium text-xl font-display">
-                <span className="italic">Poppy</span> es la granola que tomo cuando quiero granola. Si no es buena para mí, no es buena para ti.
+                La granola que hago para mí. Después de muchas pruebas conseguí una granola sin gluten que me convencía: crujiente de verdad, especiada con carácter y con un proceso que cuida la digestión. Si no es buena para mí, no es buena para ti.
               </p>
             </div>
             <div className="text-center mt-8">
@@ -255,7 +222,7 @@ export default function HomePage() {
                 href="/nosotros"
                 className="text-earth-600 hover:text-earth-700 font-medium inline-flex items-center gap-2 group"
               >
-                Conocer toda la historia
+                Conoce nuestra historia
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
