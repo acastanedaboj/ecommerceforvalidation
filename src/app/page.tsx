@@ -352,32 +352,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* 7. CIERRE */}
-      <section className="py-14 md:py-20 bg-white">
-        <div className="container-custom text-center max-w-2xl mx-auto">
-          <p className="text-stone-500 text-lg leading-relaxed mb-6">
-            Pequeños placeres de despensa, hechos a mano.
-            <br />
-            Ingredientes reales, seleccionados con criterio.
-          </p>
-          <p className="font-display text-stone-800 text-2xl mb-2">
-            <span className="italic">Poppy</span>
-          </p>
-          <p className="text-xs tracking-widest uppercase text-stone-400 mb-10">
-            Crafted for pleasure
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/tienda" className="inline-flex items-center justify-center gap-2 bg-earth-600 text-[#ffffec] px-8 py-4 font-medium hover:bg-earth-700 transition-colors">
-              Comprar granola
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link href="/nosotros" className="inline-flex items-center justify-center gap-2 border border-stone-300 text-stone-800 px-8 py-4 font-medium hover:border-stone-400 transition-colors">
-              Nuestra historia
-            </Link>
-          </div>
-        </div>
-      </section>
     </>
   );
 }
