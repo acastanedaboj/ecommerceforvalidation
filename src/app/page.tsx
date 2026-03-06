@@ -42,9 +42,9 @@ export default function HomePage() {
               </span>
 
               <h1 className="font-display text-stone-800 mb-8 animate-fade-in-up">
-                La granola que hago para mí,
+                Granola crujiente
                 <br />
-                <span className="text-earth-600">crujiente y especiada</span>
+                <span className="text-earth-600">y especiada</span>
               </h1>
 
               <p className="text-base md:text-lg text-stone-600 mb-10 leading-relaxed animate-fade-in-up animation-delay-100">
