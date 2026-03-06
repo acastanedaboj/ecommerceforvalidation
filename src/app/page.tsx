@@ -206,6 +206,11 @@ export default function HomePage() {
       </section>
 
       {/* 4. INGREDIENTES - Ingredientes reales */}
+      {/* Horizontal image placeholder */}
+      <div className="w-full aspect-[3/1] bg-stone-200 flex items-center justify-center">
+        <span className="text-stone-400 text-sm tracking-wide uppercase">Imagen horizontal</span>
+      </div>
+
       <section className="py-14 md:py-20 bg-cream-100">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto">
