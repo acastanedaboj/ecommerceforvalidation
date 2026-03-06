@@ -206,40 +206,30 @@ export default function HomePage() {
       </section>
 
       {/* 4. INGREDIENTES - Ingredientes reales */}
-      {/* Horizontal image - ingredientes hero */}
-      <div className="w-full relative aspect-[3/1]">
-        <Image
-          src="/images/ingredientes-hero.png"
-          alt="Ingredientes naturales de Poppy Granola"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-
-      <section className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px] overflow-hidden">
-        <Image
-          src="/images/ingredientes-hero.png"
-          alt="Ingredientes naturales Poppy granola"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        <div className="absolute inset-0 bg-black/25" />
-        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-4">
-          <h2 className="font-display text-white text-3xl sm:text-4xl lg:text-5xl drop-shadow-lg mb-4">
-            Ingredientes <span className="italic">reales</span>. Nada que sobre.
+      <section className="bg-white">
+        <div className="container-custom py-14 md:py-20 text-center max-w-3xl mx-auto">
+          <h2 className="font-display text-stone-800 text-3xl sm:text-4xl mb-4">
+            Ingredientes <span className="text-earth-600-display-italic">reales</span>. Nada que sobre.
           </h2>
-          <p className="text-white/80 text-lg max-w-2xl">
+          <p className="text-stone-600 text-lg leading-relaxed">
             La granola que hago para mí. Crujiente de verdad, especiada con carácter y con un proceso que cuida la digestión.
           </p>
           <Link
             href="/nosotros"
-            className="mt-6 text-white/90 hover:text-white font-medium inline-flex items-center gap-2 group"
+            className="mt-6 inline-flex text-earth-600 hover:text-earth-700 font-medium items-center gap-2 group"
           >
             Conoce nuestra historia
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
+        </div>
+        <div className="w-full relative aspect-[3/1]">
+          <Image
+            src="/images/ingredientes-hero.png"
+            alt="Ingredientes naturales de Poppy Granola"
+            fill
+            className="object-cover"
+            sizes="100vw"
+          />
         </div>
       </section>
 
