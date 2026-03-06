@@ -205,9 +205,20 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Ingredientes hero image */}
+      <div className="w-full relative aspect-[3/1]">
+        <Image
+          src="/images/ingredientes-hero.png"
+          alt="Ingredientes naturales de Poppy Granola"
+          fill
+          className="object-cover"
+          sizes="100vw"
+        />
+      </div>
+
       {/* 4. INGREDIENTES - Ingredientes reales */}
-      <section className="bg-white">
-        <div className="container-custom py-14 md:py-20 text-center max-w-3xl mx-auto">
+      <section className="py-14 md:py-20 bg-white">
+        <div className="container-custom text-center max-w-3xl mx-auto">
           <h2 className="font-display text-stone-800 text-3xl sm:text-4xl mb-4">
             Ingredientes <span className="text-earth-600-display-italic">reales</span>. Nada que sobre.
           </h2>
@@ -221,15 +232,6 @@ export default function HomePage() {
             Conoce nuestra historia
             <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
-        </div>
-        <div className="w-full relative aspect-[3/1]">
-          <Image
-            src="/images/ingredientes-hero.png"
-            alt="Ingredientes naturales de Poppy Granola"
-            fill
-            className="object-cover"
-            sizes="100vw"
-          />
         </div>
       </section>
 
