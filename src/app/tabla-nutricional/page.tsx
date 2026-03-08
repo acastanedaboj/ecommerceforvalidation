@@ -7,7 +7,7 @@ import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/
 export const metadata: Metadata = {
   title: 'Tabla nutricional granola sin gluten: compara 3 sabores | Poppy',
   description:
-    'Compara la información nutricional de las 4 granolas Poppy: calorías, proteína, fibra, azúcares y más. Descubre cuál se adapta mejor a tu dieta. Datos por 100g y por ración.',
+    'Compara la información nutricional de las 3 granolas Poppy: calorías, proteína, fibra, azúcares y más. Descubre cuál se adapta mejor a tu dieta. Datos por 100g y por ración.',
   keywords: [
     'tabla nutricional granola sin gluten',
     'información nutricional granola',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Tabla nutricional granola sin gluten: compara 3 sabores | Poppy',
     description:
-      'Compara calorías, proteína, fibra y azúcares de las 4 granolas Poppy. Encuentra la que mejor se adapta a tus objetivos.',
+      'Compara calorías, proteína, fibra y azúcares de las 3 granolas Poppy. Encuentra la que mejor se adapta a tus objetivos.',
     url: `${SITE_URL}/tabla-nutricional`,
     type: 'website',
     images: [
