@@ -163,7 +163,6 @@ export function buildProductSchema(product: Product, url: string) {
     image: imageUrl,
     url: fullUrl,
     sku: product.sku,
-    gtin13: undefined, // Add EAN/GTIN when available
     brand: {
       '@type': 'Brand',
       name: BRAND_NAME,
@@ -240,14 +239,6 @@ export function buildProductSchema(product: Product, url: string) {
           shippingDestination: {
             '@type': 'DefinedRegion',
             addressCountry: 'ES',
-          },
-          freeShippingThreshold: {
-            '@type': 'DeliveryChargeSpecification',
-            freeShippingThreshold: {
-              '@type': 'MonetaryAmount',
-              value: '35.00',
-              currency: 'EUR',
-            },
           },
           deliveryTime: {
             '@type': 'ShippingDeliveryTime',
