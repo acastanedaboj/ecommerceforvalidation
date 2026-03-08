@@ -393,32 +393,7 @@ export function buildLocalBusinessSchema() {
       '@type': 'OfferCatalog',
       name: 'Granola Artesanal Sin Gluten',
       url: `${SITE_URL}/tienda`,
-      itemListElement: [
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Granola Clásica Sin Gluten 150g',
-            url: `${SITE_URL}/tienda/granola-clasica-150g`,
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Granola de Naranja Sin Gluten 150g',
-            url: `${SITE_URL}/tienda/granola-naranja-150g`,
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'Product',
-            name: 'Granola Vegana Sin Gluten 150g',
-            url: `${SITE_URL}/tienda/granola-vegana-150g`,
-          },
-        },
-      ],
+      numberOfItems: 3,
     },
     openingHoursSpecification: [
       {
