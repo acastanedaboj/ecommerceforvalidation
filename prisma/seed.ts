@@ -41,7 +41,7 @@ async function main() {
       priceInCents: 700,
       weight: 250,
       ingredients: 'Copos de avena certificada sin gluten* (40%), miel ecológica* (12%), pipas de girasol (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecológica.',
-      allergens: 'Contiene: frutos de cáscara (almendras, avellanas, anacardos, pipas de girasol). Producido en instalaciones que procesan gluten, soja y sésamo.',
+      allergens: 'Contiene: frutos de cáscara (almendras, avellanas, anacardos, pipas de girasol). Elaborado en obrador dedicado sin gluten. Puede contener trazas de soja y sésamo.',
       nutritionalInfo: {
         servingSize: 'por 100g',
         calories: 475,
@@ -69,7 +69,7 @@ async function main() {
       priceInCents: 700,
       weight: 250,
       ingredients: 'Copos de avena certificada sin gluten* (36%), miel ecológica* (10%), coco rallado tostado (12%), mango deshidratado natural (10%), anacardos (8%), almendras (6%), pipas de calabaza (5%), aceite de coco virgen extra* (5%), semillas de chía* (3%), lino molido (3%), ralladura de lima natural (1%), jengibre en polvo (1%). *De agricultura ecológica.',
-      allergens: 'Contiene: frutos de cáscara (anacardos, almendras), coco. Producido en instalaciones que procesan gluten, soja y sésamo.',
+      allergens: 'Contiene: frutos de cáscara (anacardos, almendras), coco. Elaborado en obrador dedicado sin gluten. Puede contener trazas de soja y sésamo.',
       nutritionalInfo: {
         servingSize: 'por 100g',
         calories: 470,
@@ -97,7 +97,7 @@ async function main() {
       priceInCents: 2800,
       weight: 1000,
       ingredients: 'Copos de avena certificada sin gluten* (40%), miel ecológica* (12%), pipas de girasol (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecológica.',
-      allergens: 'Contiene: frutos de cáscara (almendras, avellanas, anacardos, pipas de girasol). Producido en instalaciones que procesan gluten, soja y sésamo.',
+      allergens: 'Contiene: frutos de cáscara (almendras, avellanas, anacardos, pipas de girasol). Elaborado en obrador dedicado sin gluten. Puede contener trazas de soja y sésamo.',
       nutritionalInfo: {
         servingSize: 'por 100g',
         calories: 475,
@@ -132,7 +132,7 @@ async function main() {
   const faqs = [
     {
       question: '¿Vuestra granola es realmente sin gluten?',
-      answer: 'Sí, nuestra granola está elaborada con avena certificada sin gluten. Cumplimos con el estándar europeo de ≤20 ppm de gluten.',
+      answer: 'Sí, nuestra granola está elaborada con avena certificada sin gluten en un obrador dedicado donde no entra gluten. Cumplimos con el estándar europeo de ≤20 ppm.',
       category: 'producto',
       order: 1,
     },

@@ -99,13 +99,13 @@ export const sinGlutenContent = {
         number: 3,
         title: 'Producción controlada',
         description:
-          'Elaboramos la granola en un espacio donde NO se manipulan productos con gluten. Limpiamos y desinfectamos todo el equipo antes de cada lote.',
+          'Elaboramos la granola en un obrador dedicado donde no entra gluten. No procesamos trigo, cebada ni centeno. Limpiamos y desinfectamos todo el equipo antes de cada lote.',
       },
       {
         number: 4,
         title: 'Etiquetado transparente',
         description:
-          'Cada bolsa incluye información clara de alérgenos. Si en el futuro añadimos un producto con gluten, lo indicaremos claramente y lo procesaremos en horarios separados.',
+          'Cada bolsa incluye información clara de alérgenos. Nuestro obrador es y será siempre un espacio libre de gluten.',
       },
     ],
   },
@@ -443,7 +443,7 @@ export const celiacosContent = {
       {
         title: 'Proceso controlado',
         description:
-          'Elaboramos en instalaciones donde controlamos todos los ingredientes. No utilizamos trigo, cebada ni centeno.',
+          'Elaboramos en un obrador dedicado sin gluten. No entra trigo, cebada ni centeno en nuestras instalaciones.',
       },
       {
         title: 'Ingredientes seguros',
@@ -467,7 +467,7 @@ export const celiacosContent = {
     {
       question: '¿Por qué es apta para celíacos?',
       answer:
-        'Utilizamos avena certificada sin gluten y elaboramos en un entorno controlado. No utilizamos trigo, cebada ni centeno en ninguno de nuestros productos.',
+        'Utilizamos avena certificada sin gluten y elaboramos en un obrador dedicado donde no entra gluten. No utilizamos trigo, cebada ni centeno en ninguno de nuestros productos.',
     },
     {
       question: '¿Qué tipo de avena utilizan exactamente?',
@@ -477,12 +477,12 @@ export const celiacosContent = {
     {
       question: '¿Cómo controlan la contaminación cruzada?',
       answer:
-        'Elaboramos nuestra granola en instalaciones donde controlamos todos los ingredientes. Verificamos cada materia prima antes de usarla y seguimos protocolos estrictos de limpieza.',
+        'Elaboramos en un obrador dedicado sin gluten en Málaga. No entra trigo, cebada ni centeno. Verificamos cada materia prima antes de usarla y seguimos protocolos estrictos de limpieza.',
     },
     {
       question: '¿Puedo consumirla si soy muy sensible al gluten?',
       answer:
-        'Nuestra granola está elaborada con avena certificada sin gluten y un proceso controlado. Sin embargo, si eres extremadamente sensible, te recomendamos consultar con tu médico antes de probar cualquier producto nuevo.',
+        'Nuestra granola está elaborada con avena certificada sin gluten en un obrador dedicado donde no entra gluten. Sin embargo, si eres extremadamente sensible, te recomendamos consultar con tu médico antes de probar cualquier producto nuevo.',
     },
     {
       question: '¿Qué otros alérgenos contiene?',

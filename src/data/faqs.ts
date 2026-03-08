@@ -19,7 +19,7 @@ export const faqs: FAQ[] = [
 
 Nuestro producto cumple con el estándar europeo de ≤20 ppm (partes por millón) de gluten, que es el umbral establecido para que un producto pueda etiquetarse como "sin gluten".
 
-**Nota importante:** Aunque utilizamos avena certificada, nuestra granola se produce en instalaciones que también manejan productos con gluten. Implementamos estrictos protocolos de limpieza y control, pero si tienes enfermedad celíaca severa, te recomendamos consultar con tu médico antes de consumir.`,
+Además, elaboramos en un **obrador dedicado** en Málaga donde no entra ni se manipula trigo, cebada, centeno ni ningún cereal con gluten. Esto elimina el riesgo de contaminación cruzada durante la producción.`,
     category: 'producto',
     order: 1,
   },
@@ -64,11 +64,12 @@ La mayoría de nuestras granolas contienen miel como endulzante natural. Elegimo
 - Avellanas
 - Anacardos
 
-**Otros alérgenos (trazas posibles):**
-Aunque no son ingredientes directos, nuestra granola se produce en instalaciones que también procesan:
-- Gluten (trigo, cebada, centeno)
+**Posibles trazas:**
+Aunque no son ingredientes directos, algunos de nuestros proveedores de frutos secos y semillas también procesan:
 - Soja
 - Sésamo
+
+Nuestro obrador es un espacio dedicado donde no entra gluten (trigo, cebada, centeno).
 
 **Recomendación:** Si tienes alergias alimentarias severas, revisa siempre el etiquetado y consulta con tu alergólogo. Puedes contactarnos para más información sobre nuestros procesos de producción.`,
     category: 'producto',
@@ -292,7 +293,7 @@ Consulta nuestra Política de Privacidad completa para más detalles. Cumplimos 
 **Control de calidad:**
 - Análisis periódicos de gluten (≤20 ppm)
 - Trazabilidad completa de ingredientes
-- Producción en instalaciones registradas
+- Obrador dedicado sin gluten, registrado
 
 Puedes solicitar información adicional sobre nuestras certificaciones escribiéndonos a hola@poppy.es`,
     category: 'legal',
