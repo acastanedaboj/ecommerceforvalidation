@@ -2,6 +2,7 @@
 
 import { useSession } from 'next-auth/react';
 import { redirect } from 'next/navigation';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Package, Heart, Settings, User } from 'lucide-react';
@@ -42,10 +43,13 @@ export default function CuentaLayout({
         <div className="mb-8">
           <div className="flex items-center gap-4 mb-2">
             {session.user.image ? (
-              <img
+              <Image
                 src={session.user.image}
                 alt={session.user.name || 'Usuario'}
+                width={64}
+                height={64}
                 className="w-16 h-16"
+                unoptimized
               />
             ) : (
               <div className="w-16 h-16 bg-earth-100 flex items-center justify-center">

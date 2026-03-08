@@ -12,7 +12,6 @@ Disallow: /checkout/
 Disallow: /auth/
 
 # Bloquear archivos internos
-Disallow: /*.json$
 Disallow: /manifest.json
 
 # Permitir explícitamente páginas importantes para SEO
@@ -43,4 +42,4 @@ User-agent: SemrushBot
 Crawl-delay: 10
 
 # Sitemap
-Sitemap: https://poppy.es/sitemap.xml
+Sitemap: https://www.poppy.es/sitemap.xml

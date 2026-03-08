@@ -50,6 +50,16 @@ export async function generateMetadata({
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: product.metaTitle,
+      description: product.metaDescription,
+      images: [
+        product.images[0]?.startsWith('http')
+          ? product.images[0]
+          : `${SITE_URL}${product.images[0]}`,
+      ],
+    },
   };
 }
 

@@ -62,6 +62,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [
+        post.coverImage?.startsWith('http')
+          ? post.coverImage
+          : `${SITE_URL}${post.coverImage || '/images/og-image.jpg'}`,
+      ],
+    },
   };
 }
 

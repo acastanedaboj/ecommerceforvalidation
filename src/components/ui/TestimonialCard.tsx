@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { Star, CheckCircle } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -69,10 +70,13 @@ export function TestimonialCard({
       <div className="flex items-center gap-3">
         {/* Avatar */}
         {avatar ? (
-          <img
+          <Image
             src={avatar}
             alt={author}
+            width={48}
+            height={48}
             className="w-12 h-12 object-cover"
+            unoptimized
           />
         ) : (
           <div className="w-12 h-12 bg-gradient-to-br from-earth-100 to-earth-200 flex items-center justify-center">

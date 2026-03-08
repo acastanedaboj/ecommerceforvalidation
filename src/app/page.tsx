@@ -81,7 +81,7 @@ export default function HomePage() {
               <div className="hidden lg:block relative aspect-[4/5] max-w-lg mx-auto">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src="/images/home 4-5.png"
+                    src="/images/home-vertical.png"
                     alt="Granola Poppy crujiente y especiada con ingredientes reales"
                     fill
                     className="object-cover"
@@ -96,7 +96,7 @@ export default function HomePage() {
               <div className="lg:hidden relative aspect-[3/2] max-w-2xl mx-auto">
                 <div className="relative w-full h-full overflow-hidden">
                   <Image
-                    src="/images/home horizntal.png"
+                    src="/images/home-horizontal.png"
                     alt="Granola Poppy crujiente y especiada con ingredientes reales"
                     fill
                     className="object-cover"
@@ -174,7 +174,7 @@ export default function HomePage() {
       {/* Ingredientes hero image */}
       <div className="w-full relative aspect-[3/1]">
         <Image
-          src="/images/ingredientes-hero (1).png"
+          src="/images/ingredientes-divider.png"
           alt="Ingredientes naturales de Poppy Granola"
           fill
           className="object-cover"
