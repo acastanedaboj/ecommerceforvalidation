@@ -102,13 +102,6 @@ function buildRecipeSchema() {
       url: `${SITE_URL}/como-hacer-granola-sin-gluten#paso-${step.number}`,
       image: `${SITE_URL}/images/hero-sin-gluten.jpeg`,
     })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
     nutrition: {
       '@type': 'NutritionInformation',
       servingSize: '50g',
