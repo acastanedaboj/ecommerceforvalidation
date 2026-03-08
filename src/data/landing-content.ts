@@ -256,7 +256,7 @@ export const veganaContent = {
   comparison: {
     title: 'Transparencia total',
     description:
-      'Queremos que sepas exactamente qué contiene cada producto. Nuestras otras granolas (Clásica y Naranja) contienen <a href="/granola-ecologica" class="text-earth-600 hover:underline">miel ecológica</a> de apicultores locales. Todos los sabores son <a href="/granola-sin-gluten" class="text-earth-600 hover:underline">100% sin gluten</a>.',
+      'Queremos que sepas exactamente qué contiene cada producto. Nuestras otras granolas (Clásica y Naranja) contienen miel ecológica de apicultores locales.',
   },
   faqs: [
     {

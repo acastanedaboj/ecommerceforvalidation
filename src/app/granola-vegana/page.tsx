@@ -125,7 +125,13 @@ export default function GranolaVeganaPage() {
             <h2 className="font-display text-2xl text-stone-800 mb-4">
               {comparison.title}
             </h2>
-            <p className="text-stone-600 mb-8">{comparison.description}</p>
+            <p className="text-stone-600 mb-8">
+              {comparison.description}{' '}
+              Todos los sabores son{' '}
+              <Link href="/granola-sin-gluten" className="text-earth-600 hover:underline">
+                100% sin gluten
+              </Link>.
+            </p>
 
             <div className="bg-white rounded-lg p-6 shadow-sm">
               <table className="w-full text-left">
