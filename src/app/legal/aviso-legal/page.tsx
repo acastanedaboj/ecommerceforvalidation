@@ -32,7 +32,7 @@ export default function AvisoLegalPage() {
           <ul>
             <li><strong>Titular:</strong> {BUSINESS.name}</li>
             <li><strong>Forma jurídica:</strong> Empresario Individual / Autónomo</li>
-            <li><strong>NIF:</strong> [Pendiente de inscripción]</li>
+            <li><strong>NIF:</strong> Disponible previa solicitud a {BUSINESS.email}</li>
             <li><strong>Domicilio:</strong> {BUSINESS.address.street}, {BUSINESS.address.postalCode} {BUSINESS.address.city}, {BUSINESS.address.country}</li>
             <li><strong>Correo electrónico:</strong> {BUSINESS.email}</li>
             <li><strong>Sitio web:</strong> https://poppy.es</li>

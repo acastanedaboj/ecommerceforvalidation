@@ -1308,7 +1308,7 @@ En Poppy utilizamos exclusivamente **avena certificada sin gluten** de proveedor
 - **Verificación:** Certificado de análisis en cada lote (<20 ppm)
 - **Almacenamiento:** Separación total de otros ingredientes
 
-Nuestro proceso garantiza que cada bolsa de granola Poppy es segura para personas con enfermedad celíaca. Consulta la [tabla nutricional completa](/tabla-nutricional) de nuestras 4 variedades para comparar valores.
+Nuestro proceso garantiza que cada bolsa de granola Poppy es segura para personas con enfermedad celíaca. Consulta la [tabla nutricional completa](/tabla-nutricional) de nuestras 3 variedades para comparar valores.
 
 ## Preguntas frecuentes sobre avena sin gluten
 

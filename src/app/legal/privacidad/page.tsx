@@ -35,7 +35,7 @@ export default function PrivacidadPage() {
           <p>
             <strong>Identidad:</strong> {BUSINESS.name}<br />
             <strong>Forma jurídica:</strong> Empresario Individual / Autónomo<br />
-            <strong>NIF:</strong> [Pendiente de inscripción]<br />
+            <strong>NIF:</strong> Disponible previa solicitud a {BUSINESS.email}<br />
             <strong>Domicilio:</strong> {BUSINESS.address.street}, {BUSINESS.address.postalCode} {BUSINESS.address.city}<br />
             <strong>Correo electrónico:</strong> {BUSINESS.email}
           </p>

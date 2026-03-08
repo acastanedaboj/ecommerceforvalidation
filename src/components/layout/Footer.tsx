@@ -26,8 +26,8 @@ export function Footer() {
               />
             </Link>
             <p className="mt-5 text-[#ffffec] max-w-sm leading-relaxed">
-              Granola elaborada con amor, ingredientes naturales y sin gluten real.
-              Tostada lentamente con miel de apicultores locales.
+              Granola artesanal sin gluten elaborada con ingredientes naturales.
+              Tostada lentamente en nuestro obrador dedicado en Málaga.
             </p>
 
             {/* Social links */}
