@@ -214,25 +214,25 @@ export const veganaContent = {
     title: 'Granola 100% vegana',
     highlight: 'Sin miel ni productos animales',
     subtitle:
-      'Endulzada naturalmente con dátiles Medjool. Todo el sabor, 0% productos de origen animal.',
+      'Endulzada naturalmente con sirope de agave ecológico. Todo el sabor, 0% productos de origen animal.',
     ctaText: 'Comprar ahora',
-    ctaHref: '/tienda/granola-datiles-150g',
+    ctaHref: '/tienda/granola-vegana-150g',
     badges: ['100% vegana', 'Sin gluten', 'Artesanal'],
-    image: '/products/granola-datiles.jpg',
+    image: '/images/vegana.png',
   },
   benefits: {
     title: 'Alternativas naturales a la miel',
     subtitle: 'Dulzura vegetal',
     items: [
       {
-        title: 'Dátiles medjool',
-        description:
-          'Dulzura natural con alto contenido en fibra, potasio y antioxidantes. El "caramelo de la naturaleza".',
-      },
-      {
-        title: 'Sirope de agave',
+        title: 'Sirope de agave ecológico',
         description:
           'Bajo índice glucémico y sabor suave. Una alternativa natural y sostenible a la miel.',
+      },
+      {
+        title: 'Frutos secos premium',
+        description:
+          'Almendras, anacardos y avellanas seleccionadas junto con pipas de girasol y calabaza como protagonistas.',
       },
       {
         title: 'Sin compromisos',
@@ -248,9 +248,9 @@ export const veganaContent = {
   },
   products: {
     title: 'Nuestra granola vegana',
-    subtitle: 'Granola de dátiles',
+    subtitle: 'Granola vegana',
     description:
-      'La granola de dátiles es nuestra única variedad 100% vegana. Endulzada con dátiles medjool y sirope de agave, sin miel ni ningún producto de origen animal.',
+      'Nuestra granola vegana es la única variedad 100% vegana. Endulzada con sirope de agave ecológico, sin miel ni ningún producto de origen animal.',
     highlightProductId: 'prod_granola_datiles',
   },
   comparison: {
@@ -262,17 +262,17 @@ export const veganaContent = {
     {
       question: '¿Las otras granolas de Poppy son veganas?',
       answer:
-        'No. Nuestras granolas Clásica, Chocolate y Naranja contienen miel de apicultores locales. Solo la Granola de dátiles es 100% vegana.',
+        'No. Nuestras granolas Clásica y Naranja contienen miel de apicultores locales. Solo la Granola Vegana es 100% vegana.',
     },
     {
       question: '¿Por qué usáis miel en las otras variedades?',
       answer:
-        'La miel de apicultores locales de Málaga aporta un sabor único y beneficios nutricionales. Sin embargo, entendemos que muchas personas prefieren opciones veganas, por eso creamos la Granola de dátiles.',
+        'La miel de apicultores locales de Málaga aporta un sabor único y beneficios nutricionales. Sin embargo, entendemos que muchas personas prefieren opciones veganas, por eso creamos la Granola Vegana.',
     },
     {
-      question: '¿Qué beneficios tienen los dátiles y el sirope de agave?',
+      question: '¿Qué beneficios tiene el sirope de agave?',
       answer:
-        'Los dátiles Medjool son ricos en fibra, potasio y antioxidantes. El sirope de agave tiene un índice glucémico más bajo que el azúcar. Juntos, proporcionan dulzura natural sin productos animales.',
+        'El sirope de agave ecológico tiene un índice glucémico más bajo que el azúcar y aporta dulzura natural sin productos animales.',
     },
     {
       question: '¿La granola vegana también es sin gluten?',
@@ -282,15 +282,15 @@ export const veganaContent = {
     {
       question: '¿Es apta para dietas plant-based estrictas?',
       answer:
-        'Sí. La Granola de dátiles no contiene ningún ingrediente de origen animal. Es apta para veganos, vegetarianos y cualquier persona que siga una dieta plant-based.',
+        'Sí. La Granola Vegana no contiene ningún ingrediente de origen animal. Es apta para veganos, vegetarianos y cualquier persona que siga una dieta plant-based.',
     },
   ],
   cta: {
     title: '¿Buscas una granola 100% vegana?',
     description:
-      'Prueba nuestra Granola de dátiles: todo el sabor artesanal de Poppy, sin ningún producto de origen animal.',
-    ctaText: 'Comprar granola de dátiles',
-    ctaHref: '/tienda/granola-datiles-150g',
+      'Prueba nuestra Granola Vegana: todo el sabor artesanal de Poppy, sin ningún producto de origen animal.',
+    ctaText: 'Comprar granola vegana',
+    ctaHref: '/tienda/granola-vegana-150g',
     secondaryCta: {
       text: 'Ver todas las granolas',
       href: '/tienda',

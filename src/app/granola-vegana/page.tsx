@@ -15,13 +15,12 @@ import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/
 export const metadata: Metadata = {
   title: 'Granola vegana 100% sin miel | Poppy',
   description:
-    'Granola vegana endulzada con dátiles Medjool. Sin miel ni productos animales. Artesanal y sin gluten. Envío gratis +4 uds.',
+    'Granola vegana endulzada con sirope de agave ecológico. Sin miel ni productos animales. Artesanal y sin gluten. Envío gratis +4 uds.',
   keywords: [
     'granola vegana',
     'granola sin miel',
     'granola plant-based',
     'granola 100% vegetal',
-    'granola datiles',
     'granola sirope agave',
   ],
   alternates: {
@@ -30,12 +29,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Granola vegana 100% sin miel | Poppy',
     description:
-      'Granola vegana endulzada con dátiles Medjool y sirope de agave. Sin miel ni productos animales.',
+      'Granola vegana endulzada con sirope de agave ecológico. Sin miel ni productos animales.',
     url: `${SITE_URL}/granola-vegana`,
     type: 'website',
     images: [
       {
-        url: `${SITE_URL}/products/granola-datiles.jpg`,
+        url: `${SITE_URL}/images/vegana.png`,
         width: 1200,
         height: 630,
         alt: 'Granola Vegana Poppy',
@@ -139,19 +138,19 @@ export default function GranolaVeganaPage() {
                 </thead>
                 <tbody className="text-stone-600">
                   <tr className="border-b border-stone-100 bg-olive-50">
-                    <td className="py-3 font-medium text-stone-800">Granola de Dátiles</td>
+                    <td className="py-3 font-medium text-stone-800">Granola Vegana</td>
                     <td className="py-3 text-center text-olive-600 font-semibold">Sí ✓</td>
-                    <td className="py-3 text-center">Dátiles + Sirope de agave</td>
+                    <td className="py-3 text-center">Sirope de agave ecológico</td>
                   </tr>
                   <tr className="border-b border-stone-100">
                     <td className="py-3">Granola Clásica</td>
                     <td className="py-3 text-center text-stone-400">No</td>
-                    <td className="py-3 text-center">Miel</td>
+                    <td className="py-3 text-center">Miel ecológica</td>
                   </tr>
                   <tr>
                     <td className="py-3">Granola de Naranja</td>
                     <td className="py-3 text-center text-stone-400">No</td>
-                    <td className="py-3 text-center">Miel</td>
+                    <td className="py-3 text-center">Miel ecológica</td>
                   </tr>
                 </tbody>
               </table>
