@@ -93,7 +93,7 @@ export const sinGlutenContent = {
         number: 2,
         title: 'Verificación de ingredientes',
         description:
-          'Todos los demás ingredientes (frutos secos, miel, aceite de oliva, especias) provienen de proveedores que garantizan productos sin gluten. Pedimos documentación de cada lote.',
+          'Todos los demás ingredientes (frutos secos, miel, aceite de coco, especias) provienen de proveedores que garantizan productos sin gluten. Pedimos documentación de cada lote.',
       },
       {
         number: 3,
@@ -179,7 +179,7 @@ export const sinGlutenContent = {
     {
       question: '¿Dónde puedo comprar granola sin gluten Poppy?',
       answer:
-        'Vendemos exclusivamente online en poppy.es. Esto nos permite controlar la calidad y frescura de cada envío. Hacemos envíos a toda España, y es gratis a partir de 4 bolsas. Tu pedido llega en 3-5 días laborables.',
+        'Vendemos exclusivamente online en poppy.es. Esto nos permite controlar la calidad y frescura de cada envío. Hacemos envíos a toda España, y es gratis a partir de 4 bolsas. Tu pedido llega en 2-4 días laborables.',
     },
     {
       question: '¿Cuánto dura la granola sin gluten una vez abierta?',
@@ -600,7 +600,7 @@ export const mercadonaContent = {
       {
         title: 'Ingredientes que puedes pronunciar',
         description:
-          'Solo avena, miel, frutos secos, aceite de oliva y especias. Sin maltodextrina, jarabe de glucosa ni saborizantes.',
+          'Solo avena, miel, frutos secos, aceite de coco virgen extra y especias. Sin maltodextrina, jarabe de glucosa ni saborizantes.',
       },
       {
         title: 'Tostado lento artesanal',
@@ -655,7 +655,7 @@ export const mercadonaContent = {
     {
       question: '¿Cuánto tarda el envío de Poppy?',
       answer:
-        'Preparamos tu pedido en 24-48h laborables y lo enviamos a toda España. Envío gratis a partir de 4 bolsas. Lo recibes en 3-5 días laborables.',
+        'Preparamos tu pedido en 24-48h laborables y lo enviamos a toda España. Envío gratis a partir de 4 bolsas. Lo recibes en 2-4 días laborables.',
     },
     {
       question: '¿La granola de Mercadona es apta para celíacos?',
@@ -753,7 +753,7 @@ export const carrefourContent = {
       {
         title: 'Ingredientes reales',
         description:
-          'Sin "saborizantes naturales" ni nombres raros. Solo lo que usarías en tu cocina: avena, miel, frutos secos, aceite de oliva.',
+          'Sin "saborizantes naturales" ni nombres raros. Solo lo que usarías en tu cocina: avena, miel, frutos secos, aceite de coco virgen extra.',
       },
       {
         title: 'Trazabilidad total',
@@ -1639,7 +1639,7 @@ export const guiaCeliaquiaContent = {
 export const ecologicaContent = {
   hero: {
     title: 'Granola artesanal',
-    highlight: 'Ingredientes BIO certificados',
+    highlight: 'Ingredientes naturales de calidad',
     subtitle:
       'Elaborada con miel de apicultores locales, avena de agricultura artesanal y aceite de coco virgen extra. Calidad premium, sabor auténtico.',
     ctaText: 'Comprar granola eco',
@@ -1648,30 +1648,30 @@ export const ecologicaContent = {
       text: 'Ver ingredientes',
       href: '#ingredientes',
     },
-    badges: ['Ingredientes eco', 'Sin gluten', 'Artesanal'],
+    badges: ['Ingredientes naturales', 'Sin gluten', 'Artesanal'],
     image: '/images/hero-granola-ecologica.jpg',
   },
   intro: {
     title: '¿Qué hace artesanal a nuestra granola?',
     description:
-      'En Poppy seleccionamos ingredientes de agricultura ecológica certificada porque creemos que la calidad empieza en el origen. Miel de apicultores que cuidan las abejas, <a href="/granola-sin-gluten" class="text-earth-600 hover:underline">avena sin gluten</a> cultivada sin pesticidas, aceites prensados en frío. Además, ofrecemos <a href="/granola-vegana" class="text-earth-600 hover:underline">opciones 100% veganas</a> con sirope de agave. No es solo una etiqueta, es un compromiso.',
+      'En Poppy seleccionamos ingredientes ecológicos de proveedores certificados porque creemos que la calidad empieza en el origen. Miel de apicultores locales, <a href="/granola-sin-gluten" class="text-earth-600 hover:underline">avena sin gluten</a> certificada, aceite de coco virgen extra prensado en frío. Además, ofrecemos <a href="/granola-vegana" class="text-earth-600 hover:underline">opciones 100% veganas</a> con sirope de agave ecológico.',
   },
   ingredientes: {
     title: 'Nuestros ingredientes artesanals',
     subtitle: 'Transparencia total sobre lo que comes',
     items: [
       {
-        title: 'Miel local',
-        percentage: '10-12%',
+        title: 'Miel ecológica local',
+        percentage: '7%',
         description:
-          'De apicultores de Málaga y alrededores. La miel proviene de colmenas situadas en zonas libres de cultivos intensivos y sin tratamientos químicos. Aporta dulzura natural, enzimas vivas y antioxidantes.',
+          'De apicultores de Málaga y alrededores. Colmenas en zonas libres de cultivos intensivos. Aporta dulzura natural, enzimas vivas y antioxidantes. La versión vegana usa sirope de agave ecológico.',
         icon: '🍯',
       },
       {
-        title: 'Avena artesanal sin gluten',
-        percentage: '38-40%',
+        title: 'Avena certificada sin gluten',
+        percentage: '48-50%',
         description:
-          'Cultivada en campos dedicados sin rotación con cereales con gluten, sin pesticidas ni herbicidas sintéticos. Certificada sin gluten (<20 ppm) y certificada artesanal.',
+          'Cultivada en campos dedicados sin rotación con cereales con gluten. Certificada sin gluten (<20 ppm). Elaboramos en obrador dedicado donde no entra gluten.',
         icon: '🌾',
       },
       {
@@ -1786,9 +1786,9 @@ export const ecologicaContent = {
   },
   faqs: [
     {
-      question: '¿Poppy tiene certificación artesanal oficial?',
+      question: '¿Poppy tiene certificación ecológica oficial?',
       answer:
-        'Utilizamos ingredientes de agricultura artesanal certificada (miel eco, avena eco, aceite de coco virgen). Nuestro proceso artesanal en Málaga garantiza la trazabilidad. La certificación oficial del producto final está en proceso.',
+        'Seleccionamos ingredientes ecológicos de proveedores certificados: miel ecológica de apicultores locales, avena certificada sin gluten y aceite de coco virgen extra. Nuestro obrador en Málaga garantiza trazabilidad completa. La certificación ecológica oficial del producto final está en proceso de obtención.',
     },
     {
       question: '¿De dónde viene la miel?',

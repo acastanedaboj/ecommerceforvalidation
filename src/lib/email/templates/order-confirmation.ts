@@ -46,7 +46,7 @@ export function orderConfirmationEmail(data: OrderConfirmationData): { subject: 
     discountCents = 0,
     totalCents,
     shippingAddress,
-    estimatedDelivery = '3-5 días laborables',
+    estimatedDelivery = '2-4 días laborables',
   } = data;
 
   const firstName = customerName?.split(' ')[0] || 'Cliente';
