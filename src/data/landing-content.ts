@@ -563,7 +563,7 @@ export const mercadonaContent = {
       },
       {
         feature: 'Endulzante',
-        poppy: 'Miel local o dátiles',
+        poppy: 'Miel local o sirope de agave',
         mercadona: 'Azúcar, jarabes industriales',
       },
       {
@@ -716,7 +716,7 @@ export const carrefourContent = {
       },
       {
         feature: 'Endulzante',
-        poppy: 'Miel Málaga / Dátiles',
+        poppy: 'Miel Málaga / Sirope de agave',
         carrefour: 'Azúcar, jarabes (según marca)',
       },
       {
@@ -1895,13 +1895,13 @@ export const mejorGranolaContent = {
         description: 'Artesanal, Málaga',
         price: '€4.67/100g',
         frutosSecos: '40%',
-        endulzante: 'Miel ecológica / Dátiles',
+        endulzante: 'Miel ecológica / Sirope de agave',
         certificacion: 'Sin gluten (<20 ppm)',
         pros: [
           'Mayor contenido de frutos secos del mercado',
           'Ingredientes artesanals',
           'Producción artesanal en pequeños lotes',
-          'Opción vegana disponible (dátiles)',
+          'Opción vegana disponible (sirope de agave)',
         ],
         contras: [
           'Precio más elevado',

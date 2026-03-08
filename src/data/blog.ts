@@ -486,7 +486,7 @@ Trabajamos con apicultores locales de la región de Castilla-La Mancha que pract
 
 ## ¿Y las opciones veganas?
 
-Entendemos que la miel no es apta para veganos. Por eso, nuestra Granola de Dátiles utiliza dátiles Medjool como endulzante 100% vegetal, ofreciendo una alternativa igual de deliciosa.
+Entendemos que la miel no es apta para veganos. Por eso, nuestra Granola Vegana utiliza sirope de agave ecológico como endulzante 100% vegetal, ofreciendo una alternativa igual de deliciosa.
     `,
     coverImage: '/images/blog/miel-ecologica.png',
     category: 'nutricion',
@@ -744,7 +744,7 @@ Tras el ejercicio, tienes una "ventana anabólica" de 30-60 minutos donde tu cue
 ### Versión vegana
 - Sustituye quark por yogur de soja o coco
 - Usa proteína vegetal (guisante + arroz)
-- Granola de Dátiles (sin miel)
+- Granola Vegana (sin miel)
 
 ## Cuándo tomarlo
 
@@ -791,14 +791,13 @@ Cuando eliminas los productos de origen animal, debes prestar atención a cierto
 - **B12:** Requiere suplementación o alimentos fortificados
 - **Calcio:** Si evitas lácteos, busca alternativas
 
-## Nuestra granola de dátiles: 100% vegana
+## Nuestra Granola Vegana: 100% vegetal
 
-Desarrollamos una versión sin miel específicamente para veganos. Los dátiles Medjool aportan:
+Desarrollamos una versión sin miel específicamente para veganos. El sirope de agave ecológico aporta:
 
-- Dulzor natural intenso
-- Fibra
-- Potasio
-- Magnesio
+- Dulzor natural equilibrado
+- Índice glucémico más bajo que el azúcar
+- Caramelización perfecta durante el horneado
 - Sin productos animales
 
 ## El desayuno vegano perfecto
@@ -806,7 +805,7 @@ Desarrollamos una versión sin miel específicamente para veganos. Los dátiles 
 ### Ingredientes para un desayuno completo:
 
 **Base:**
-- 50g de Granola de Dátiles Poppy
+- 50g de Granola Vegana Poppy
 - 150ml de bebida de soja fortificada (proteína + calcio + B12)
 - 100g de yogur de soja o coco
 
@@ -1795,7 +1794,7 @@ A diferencia del azúcar refinado, el sirope de agave proporciona un dulzor suav
 ### Desayuno proteico estabilizador
 
 **Ingredientes:**
-- 30g de granola de dátiles
+- 30g de Granola Vegana Poppy
 - 150g de yogur griego natural (sin azúcar)
 - 1 cucharada de semillas de chía
 - Frutos rojos frescos (bajo IG)

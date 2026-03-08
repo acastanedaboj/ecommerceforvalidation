@@ -42,7 +42,7 @@ Si buscas una opción sin ningún tipo de azúcar añadido, nuestra granola no e
   {
     id: 'faq_vegan',
     question: '¿Tenéis opciones veganas?',
-    answer: `**Sí, nuestra Granola de Dátiles es 100% vegana**, ya que no contiene miel ni ningún ingrediente de origen animal.
+    answer: `**Sí, nuestra Granola Vegana es 100% vegana**, ya que no contiene miel ni ningún ingrediente de origen animal.
 
 La mayoría de nuestras granolas contienen miel como endulzante natural. Elegimos miel porque:
 
@@ -50,7 +50,7 @@ La mayoría de nuestras granolas contienen miel como endulzante natural. Elegimo
 - Proviene de apicultores locales con prácticas éticas
 - Aporta propiedades beneficiosas adicionales
 
-**Para veganos:** Nuestra granola vegana utiliza dátiles medjool como endulzante natural, ofreciendo una dulzura intensa sin necesidad de miel. Está claramente etiquetada como "Sin miel (vegana)" en nuestra tienda.`,
+**Para veganos:** Nuestra Granola Vegana utiliza sirope de agave ecológico como endulzante natural, ofreciendo una dulzura suave sin necesidad de miel. Está claramente etiquetada como "Sin miel (vegana)" en nuestra tienda.`,
     category: 'producto',
     order: 3,
   },
@@ -195,7 +195,7 @@ Para compras B2B con volumen, ofrecemos condiciones especiales. Consulta nuestra
 
 **Qué incluye:**
 - Pack de 6 bolsas cada mes
-- **15% de descuento** sobre el precio unitario (7,65€/bolsa vs 9€)
+- **15% de descuento** sobre el precio unitario (5,95€/bolsa vs 7€)
 - Envío GRATIS siempre
 - Renovación automática mensual
 
