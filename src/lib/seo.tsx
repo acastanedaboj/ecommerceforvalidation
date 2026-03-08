@@ -296,7 +296,7 @@ export function buildProductSchema(product: Product, url: string) {
 // FAQ Schema
 // ==========================================
 
-export function buildFaqSchema(faqItems: FAQ[]) {
+export function buildFaqSchema(faqItems: Pick<FAQ, 'question' | 'answer'>[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',

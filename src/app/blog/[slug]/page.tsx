@@ -10,6 +10,7 @@ import {
   getCanonicalUrl,
   buildArticleSchema,
   buildBreadcrumbSchema,
+  buildFaqSchema,
   JsonLd,
 } from '@/lib/seo';
 
@@ -258,6 +259,11 @@ export default function BlogPostPage({ params }: Props) {
           { name: post.title, url: postUrl },
         ])}
       />
+
+      {/* JSON-LD: FAQ Schema (if post has FAQs) */}
+      {post.faqs && post.faqs.length > 0 && (
+        <JsonLd data={buildFaqSchema(post.faqs)} />
+      )}
 
       <article className="section">
         <div className="container-custom">
