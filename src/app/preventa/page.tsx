@@ -132,7 +132,7 @@ export default function PreventaPage() {
   };
 
   // Calculate price
-  const UNIT_PRICE_CENTS = 900; // 9.00€
+  const UNIT_PRICE_CENTS = 700; // 7.00€
   const totalCents = formData.cantidad * UNIT_PRICE_CENTS;
   const totalPrice = formatPrice(totalCents);
 
@@ -353,7 +353,7 @@ export default function PreventaPage() {
                 <div className="bg-cream-50 rounded-xl p-4">
                   <div className="flex justify-between items-center mb-2">
                     <span className="text-neutral-700 text-sm">Precio por unidad:</span>
-                    <span className="text-neutral-900">9,00€</span>
+                    <span className="text-neutral-900">7,00€</span>
                   </div>
                   <div className="flex justify-between items-center pt-2 border-t border-neutral-200">
                     <span className="text-neutral-900">Total:</span>
