@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Truck, Leaf, Star, Check } from 'lucide-react';
+import { ArrowRight, Truck, Leaf, Check } from 'lucide-react';
 import { ProductCard } from '@/components/product/ProductCard';
 import { getRetailProducts } from '@/data/products';
 import { formatPrice } from '@/lib/utils';
@@ -90,23 +90,6 @@ export default function HomePage() {
                   />
                 </div>
 
-                {/* Floating badge - Reviews */}
-                <div className="absolute -bottom-4 -left-4 bg-white shadow-lg p-4 animate-pulse-soft">
-                  <div className="flex items-center gap-3">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-4 h-4 fill-olive-500 text-olive-500"
-                        />
-                      ))}
-                    </div>
-                    <div>
-                      <p className="font-display text-stone-800">4.9/5</p>
-                      <p className="text-xs text-stone-500">+500 reseñas</p>
-                    </div>
-                  </div>
-                </div>
               </div>
 
               {/* Mobile/Tablet: horizontal image */}
@@ -122,23 +105,6 @@ export default function HomePage() {
                   />
                 </div>
 
-                {/* Floating badge - Reviews */}
-                <div className="absolute -bottom-4 -left-4 bg-white shadow-lg p-4 animate-pulse-soft">
-                  <div className="flex items-center gap-3">
-                    <div className="flex">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          className="w-4 h-4 fill-olive-500 text-olive-500"
-                        />
-                      ))}
-                    </div>
-                    <div>
-                      <p className="font-display text-stone-800">4.9/5</p>
-                      <p className="text-xs text-stone-500">+500 reseñas</p>
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
