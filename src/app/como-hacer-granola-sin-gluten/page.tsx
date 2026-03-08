@@ -410,7 +410,7 @@ export default function ComoHacerGranolaSinGlutenPage() {
       <div className="bg-neutral-50">
         <ProductsShowcase
           title="O prueba nuestras granolas artesanales"
-          subtitle="4 sabores únicos, todos sin gluten"
+          subtitle="3 sabores únicos, todos sin gluten"
           description="Si prefieres la conveniencia, nuestras granolas están listas para disfrutar. Ingredientes premium, proceso artesanal perfeccionado."
           products={products}
         />

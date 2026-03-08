@@ -1269,7 +1269,7 @@ Una vez la avena llega a nuestro obrador en Málaga, mantenemos la cadena de seg
 - **Control de proveedores:** Todos nuestros ingredientes son verificados como aptos
 - **Certificado de análisis** de cada lote final de granola
 
-> El resultado: cada bolsa de granola Poppy contiene **menos de 20 ppm de gluten**, cumpliendo el Reglamento (UE) 828/2014. Puedes ver nuestros [4 sabores de granola sin gluten en la tienda](/tienda).
+> El resultado: cada bolsa de granola Poppy contiene **menos de 20 ppm de gluten**, cumpliendo el Reglamento (UE) 828/2014. Puedes ver nuestros [3 sabores de granola sin gluten en la tienda](/tienda).
 
 ## Cómo verificar que tu avena es realmente sin gluten
 

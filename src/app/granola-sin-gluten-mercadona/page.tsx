@@ -241,7 +241,7 @@ export default function GranolaSinGlutenMercadonaPage() {
       <div className="bg-neutral-50">
         <ProductsShowcase
           title="Nuestras granolas sin gluten"
-          subtitle="4 sabores, todos aptos para celíacos"
+          subtitle="3 sabores, todos aptos para celíacos"
           description="No tienes que conformarte con una sola opción. Todos los sabores de Poppy son artesanales y sin gluten."
           products={products}
         />

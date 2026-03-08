@@ -218,7 +218,7 @@ export default function GranolaSinGlutenCarrefourPage() {
       <div className="bg-neutral-50">
         <ProductsShowcase
           title="Nuestras granolas sin gluten"
-          subtitle="4 sabores, todos artesanales"
+          subtitle="3 sabores, todos artesanales"
           description="Todos los sabores de Poppy son elaborados con avena certificada sin gluten y proceso controlado."
           products={products}
         />

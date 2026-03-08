@@ -138,7 +138,7 @@ export const sinGlutenContent = {
   products: {
     title: 'Nuestras granolas sin gluten',
     subtitle: 'Todos los sabores',
-    description: 'Los 4 sabores de Poppy son aptos para celíacos. Elige tu favorito o pruébalos todos.',
+    description: 'Los 3 sabores de Poppy son aptos para celíacos. Elige tu favorito o pruébalos todos.',
   },
   faqs: [
     {
@@ -366,7 +366,7 @@ export const artesanalContent = {
     ],
   },
   products: {
-    title: '4 sabores únicos',
+    title: '3 sabores únicos',
     subtitle: 'Nuestras granolas',
     description:
       'Cada sabor tiene su propia personalidad, pero todos comparten lo mismo: ingredientes premium y elaboración artesanal.',
@@ -423,7 +423,7 @@ export const celiacosContent = {
       'Sabemos lo difícil que es encontrar productos seguros. Nuestra granola está elaborada pensando en ti: avena certificada sin gluten y proceso controlado.',
     ctaText: 'Ver opciones seguras',
     ctaHref: '/tienda',
-    badges: ['Apta celíacos', 'Avena sin gluten', '4 sabores'],
+    badges: ['Apta celíacos', 'Avena sin gluten', '3 sabores'],
     image: '/images/hero-celiacos.jpeg',
   },
   intro: {
@@ -459,9 +459,9 @@ export const celiacosContent = {
   },
   products: {
     title: 'Todos nuestros sabores son aptos para celíacos',
-    subtitle: '4 opciones para ti',
+    subtitle: '3 opciones para ti',
     description:
-      'No tienes que elegir "la única opción sin gluten". Los 4 sabores de Poppy son seguros para personas con celiaquía.',
+      'No tienes que elegir "la única opción sin gluten". Los 3 sabores de Poppy son seguros para personas con celiaquía.',
   },
   faqs: [
     {
@@ -1780,7 +1780,7 @@ export const ecologicaContent = {
   },
   products: {
     title: 'Nuestras granolas con ingredientes artesanals',
-    subtitle: 'Cuatro sabores, misma calidad',
+    subtitle: 'Tres sabores, misma calidad',
     description:
       'Todas las granolas Poppy están elaboradas con ingredientes de origen artesanal. Elige tu favorita o prueba el pack mixto.',
   },
@@ -1906,7 +1906,7 @@ export const mejorGranolaContent = {
         contras: [
           'Precio más elevado',
           'Solo venta online',
-          '4 sabores (vs 8+ de competidores)',
+          '3 sabores (vs 8+ de competidores)',
         ],
         verdict:
           'Mejor relación calidad-ingredientes. Ideal para quien prioriza nutrición sobre precio.',
