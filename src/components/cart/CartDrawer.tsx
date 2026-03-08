@@ -94,8 +94,8 @@ export function CartDrawer() {
         <div className="flex-1 overflow-y-auto scrollbar-custom">
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full px-6 text-center">
-              <div className="w-20 h-20 bg-cream-100 rounded-full flex items-center justify-center mb-6">
-                <ShoppingBag className="w-10 h-10 text-cream-400" />
+              <div className="w-20 h-20 bg-earth-100 rounded-full flex items-center justify-center mb-6">
+                <ShoppingBag className="w-10 h-10 text-earth-400" />
               </div>
               <p className="font-display text-lg text-stone-700 mb-2">Tu carrito esta vacio</p>
               <p className="text-sm text-stone-400 mb-8">
