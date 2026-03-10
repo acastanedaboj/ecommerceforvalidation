@@ -87,7 +87,6 @@ export default function HomePage() {
             <Link href="/tienda" className="btn-pill-white">
               descubrir
             </Link>
->>>>>>> dc09ccb (feat: complete visual redesign with new design system)
           </div>
         </div>
 
