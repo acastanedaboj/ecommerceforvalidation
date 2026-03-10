@@ -23,26 +23,25 @@ export function ProductsShowcase({
   highlightProductId,
 }: ProductsShowcaseProps) {
   return (
-    <section className="section bg-white">
+    <section style={{ padding: '80px 0', background: 'var(--white)' }}>
       <div className="container-custom">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14">
           <div>
             {subtitle && (
-              <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
+              <p style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(17,17,17,.35)', marginBottom: '16px' }}>
                 {subtitle}
               </p>
             )}
-            <h2 className="font-display text-stone-800 mb-4">{title}</h2>
+            <h2 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>{title}</h2>
             {description && (
-              <p className="text-stone-600 text-lg max-w-2xl">{description}</p>
+              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, maxWidth: '520px' }}>{description}</p>
             )}
           </div>
           <Link
             href={ctaHref}
-            className="mt-6 md:mt-0 text-earth-600 hover:text-earth-700 font-medium inline-flex items-center gap-2 group"
+            className="btn-text mt-6 md:mt-0"
           >
             {ctaText}
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
           </Link>
         </div>
 
@@ -55,10 +54,10 @@ export function ProductsShowcase({
                 ? 'sm:grid-cols-2 lg:grid-cols-3'
                 : 'sm:grid-cols-2 lg:grid-cols-4'
         }`}>
-          {products.map((product, index) => (
+          {products.map((product) => (
             <div
               key={product.id}
-              className={highlightProductId === product.id ? 'ring-2 ring-earth-500 rounded-lg' : ''}
+              className={highlightProductId === product.id ? 'ring-2 ring-poppy-brown' : ''}
             >
               <ProductCard product={product} />
             </div>

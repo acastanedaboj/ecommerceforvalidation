@@ -12,14 +12,14 @@ export const metadata: Metadata = {
 
 export default function CondicionesVentaPage() {
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom max-w-3xl">
-        <h1 className="text-4xl font-display text-neutral-900 mb-8">
+        <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '32px' }}>
           Condiciones Generales de Venta
         </h1>
 
         <div className="prose-custom">
-          <p className="text-neutral-600 mb-6">
+          <p style={{ color: 'rgba(17,17,17,.4)', fontSize: '13px', marginBottom: '24px' }}>
             Última actualización: Febrero 2026
           </p>
 
@@ -199,7 +199,7 @@ export default function CondicionesVentaPage() {
           </p>
 
           <h3>8.4 Modelo de formulario de desistimiento</h3>
-          <div className="bg-neutral-50 p-4 rounded-lg text-sm">
+          <div className="p-4 text-sm" style={{ background: 'var(--off)' }}>
             <p className="font-medium mb-2">
               A la atención de {BUSINESS.name}:
             </p>

@@ -44,7 +44,6 @@ const values = [
 export default function NosotrosPage() {
   return (
     <>
-      {/* JSON-LD: Breadcrumb Schema */}
       <JsonLd
         data={buildBreadcrumbSchema([
           { name: 'Inicio', url: '/' },
@@ -52,9 +51,8 @@ export default function NosotrosPage() {
         ])}
       />
 
-      <div className="min-h-screen bg-cream-50">
       {/* Hero Section with Image */}
-      <section className="relative h-[50vh] sm:h-[60vh] min-h-[400px] flex items-center justify-center overflow-hidden">
+      <section className="relative flex items-center justify-center overflow-hidden" style={{ height: '70vh', minHeight: '400px' }}>
         <Image
           src="/images/freepik__haz-que-tenga-el-pelo-recogido-en-una-coleta-baja-__23407.png"
           alt="Pilar preparando granola artesanal en su cocina"
@@ -62,22 +60,30 @@ export default function NosotrosPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/30" />
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,.1), rgba(0,0,0,.45))' }} />
         <div className="relative z-10 max-w-4xl mx-auto px-4 text-center">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-white drop-shadow-lg">
+          <h1
+            style={{
+              fontFamily: 'var(--font-display)',
+              color: 'var(--white)',
+              fontSize: 'clamp(36px, 6vw, 64px)',
+              lineHeight: 0.95,
+              letterSpacing: '-0.02em',
+            }}
+          >
             Si no existe,{' '}
-            <span className="text-cream-100">la creamos</span>
+            <em>la creamos</em>
           </h1>
         </div>
       </section>
 
       {/* Story Section */}
-      <section className="py-16 sm:py-24">
+      <section style={{ padding: '96px 0' }}>
         <div className="max-w-3xl mx-auto px-4">
-          <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-8 text-center">
-            De la cocina de casa al <span className="text-earth-600-display-italic">mundo</span>
+          <h2 className="text-center mb-10" style={{ fontFamily: 'var(--font-display)' }}>
+            De la cocina de casa al <em>mundo</em>
           </h2>
-          <div className="space-y-5 text-stone-600 text-lg leading-relaxed">
+          <div className="space-y-5" style={{ fontSize: '14px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.85 }}>
             <p>
               Un día, el médico me dijo &quot;tienes que eliminar el gluten de manera
               estricta y para siempre&quot; y mi vida cambió por completo. Dicen que
@@ -98,7 +104,7 @@ export default function NosotrosPage() {
               La compartí con familia y amigos. Y pasó lo que pasa cuando algo
               está realmente bueno: todos querían más.
             </p>
-            <p className="text-stone-800 font-medium text-xl font-serif">
+            <p style={{ fontFamily: 'var(--font-display)', fontStyle: 'italic', fontSize: 'clamp(18px, 2vw, 22px)', color: 'var(--dark)', fontWeight: 400, lineHeight: 1.4 }}>
               Poppy es la granola que tomo cuando quiero granola. Con ingredientes de
               calidad, un proceso pensado para cuidar la digestión y sin nada que
               sobre. Si no es buena para mí, no es buena para ti.
@@ -109,7 +115,7 @@ export default function NosotrosPage() {
 
       {/* Divider Image */}
       <section className="w-full">
-        <div className="relative w-full h-[300px] sm:h-[400px] lg:h-[500px]">
+        <div className="relative w-full" style={{ height: 'clamp(300px, 40vw, 500px)' }}>
           <Image
             src="/images/nosotros-divider.png"
             alt="Preparando granola artesanal en la cocina"
@@ -120,13 +126,13 @@ export default function NosotrosPage() {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 sm:py-24 bg-white">
+      <section style={{ padding: '96px 0', background: 'var(--white)' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
-              Nuestros <span className="text-earth-600-display-italic">valores</span>
+            <h2 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
+              Nuestros <em>valores</em>
             </h2>
-            <p className="text-stone-600 max-w-2xl mx-auto">
+            <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, maxWidth: '480px', margin: '0 auto' }}>
               Cada decisión que tomamos está guiada por tres principios fundamentales
             </p>
           </div>
@@ -136,15 +142,18 @@ export default function NosotrosPage() {
               return (
                 <div
                   key={index}
-                  className="bg-cream-50 rounded-2xl p-8 text-center hover:shadow-soft transition-shadow"
+                  className="p-8 text-center transition-shadow hover:shadow-soft"
+                  style={{ background: 'var(--off)' }}
                 >
-                  <div className="w-16 h-16 bg-earth-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-8 h-8 text-earth-600" strokeWidth={1.5} />
+                  <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6" style={{ background: 'var(--white)' }}>
+                    <Icon className="w-8 h-8" style={{ color: 'var(--brown)' }} strokeWidth={1.5} />
                   </div>
-                  <h3 className="text-xl font-serif text-stone-800 mb-3">
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', marginBottom: '12px' }}>
                     {value.title}
                   </h3>
-                  <p className="text-stone-600">{value.description}</p>
+                  <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.7 }}>
+                    {value.description}
+                  </p>
                 </div>
               );
             })}
@@ -153,49 +162,35 @@ export default function NosotrosPage() {
       </section>
 
       {/* Process Section */}
-      <section className="py-16 sm:py-24">
+      <section style={{ padding: '96px 0', background: 'var(--off)' }}>
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
+            <h2 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
               Nuestro proceso
             </h2>
-            <p className="text-stone-600 max-w-2xl mx-auto">
+            <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, maxWidth: '480px', margin: '0 auto' }}>
               Cada paso está pensado para que tu cuerpo aproveche al máximo cada ingrediente
             </p>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              {
-                step: '01',
-                title: 'Selección',
-                description: 'Elegimos ingredientes naturales y de calidad: copos de avena sin gluten, frutos secos, semillas y miel ecológica',
-              },
-              {
-                step: '02',
-                title: 'Remojo',
-                description: 'Los frutos secos y semillas se remojan durante horas para reducir fitatos y facilitar la digestión y absorción de nutrientes',
-              },
-              {
-                step: '03',
-                title: 'Mezcla',
-                description: 'Combinamos los ingredientes a mano siguiendo nuestra receta, con aceite de coco virgen extra y especias naturales',
-              },
-              {
-                step: '04',
-                title: 'Tostado lento',
-                description: 'Horneamos a baja temperatura para conseguir el crujiente perfecto preservando todos los nutrientes',
-              },
+              { step: '01', title: 'Selección', description: 'Elegimos ingredientes naturales y de calidad: copos de avena sin gluten, frutos secos, semillas y miel ecológica' },
+              { step: '02', title: 'Remojo', description: 'Los frutos secos y semillas se remojan durante horas para reducir fitatos y facilitar la digestión y absorción de nutrientes' },
+              { step: '03', title: 'Mezcla', description: 'Combinamos los ingredientes a mano siguiendo nuestra receta, con aceite de coco virgen extra y especias naturales' },
+              { step: '04', title: 'Tostado lento', description: 'Horneamos a baja temperatura para conseguir el crujiente perfecto preservando todos los nutrientes' },
             ].map((item, index) => (
               <div key={index} className="relative">
-                <div className="bg-white rounded-2xl p-6 shadow-soft h-full">
-                  <span className="text-5xl font-serif text-earth-200">{item.step}</span>
-                  <h3 className="text-lg font-serif text-stone-800 mt-2 mb-2">
+                <div className="p-6 h-full" style={{ background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}>
+                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '48px', color: 'rgba(105,79,72,.15)' }}>{item.step}</span>
+                  <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '18px', marginTop: '8px', marginBottom: '8px' }}>
                     {item.title}
                   </h3>
-                  <p className="text-stone-600 text-sm">{item.description}</p>
+                  <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.7 }}>
+                    {item.description}
+                  </p>
                 </div>
                 {index < 3 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-earth-300">
+                  <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2" style={{ color: 'rgba(105,79,72,.2)' }}>
                     <ArrowRight className="w-6 h-6" />
                   </div>
                 )}
@@ -205,35 +200,27 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-
       {/* CTA Section */}
-      <section className="py-16 sm:py-24 bg-earth-50">
+      <section style={{ padding: '96px 0' }}>
         <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
-            ¿Quieres probar la <span className="text-earth-600-display-italic">diferencia</span>?
+          <h2 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
+            ¿Quieres probar la <em>diferencia</em>?
           </h2>
-          <p className="text-stone-600 mb-8">
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, marginBottom: '32px', lineHeight: 1.85 }}>
             Descubre por qué miles de personas han elegido Poppy
             para empezar el día con energía y sabor.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/tienda"
-              className="inline-flex items-center justify-center gap-2 bg-earth-600 text-[#ffffec] px-8 py-4 rounded-full hover:bg-earth-700 transition-colors font-medium"
-            >
-              <span>Ver productos</span>
-              <ArrowRight className="w-4 h-4" />
+            <Link href="/tienda" className="btn-pill" style={{ padding: '14px 32px' }}>
+              ver productos
+              <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
-            <Link
-              href="/contacto"
-              className="inline-flex items-center justify-center gap-2 bg-white text-earth-700 px-8 py-4 rounded-full hover:bg-cream-100 transition-colors font-medium border border-earth-200"
-            >
-              Contáctanos
+            <Link href="/contacto" className="btn-pill" style={{ padding: '14px 32px', borderColor: 'rgba(0,0,0,.15)' }}>
+              contáctanos
             </Link>
           </div>
         </div>
       </section>
-      </div>
     </>
   );
 }

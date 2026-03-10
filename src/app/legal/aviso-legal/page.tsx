@@ -12,14 +12,14 @@ export const metadata: Metadata = {
 
 export default function AvisoLegalPage() {
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom max-w-3xl">
-        <h1 className="text-4xl font-display text-neutral-900 mb-8">
+        <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '32px' }}>
           Aviso Legal
         </h1>
 
         <div className="prose-custom">
-          <p className="text-neutral-600 mb-6">
+          <p style={{ color: 'rgba(17,17,17,.4)', fontSize: '13px', marginBottom: '24px' }}>
             Última actualización: Febrero 2026
           </p>
 
@@ -37,7 +37,7 @@ export default function AvisoLegalPage() {
             <li><strong>Correo electrónico:</strong> {BUSINESS.email}</li>
             <li><strong>Sitio web:</strong> https://poppy.es</li>
           </ul>
-          <p className="text-sm text-neutral-600 mt-2">
+          <p className="mt-2" style={{ fontSize: '13px', color: 'rgba(17,17,17,.4)' }}>
             <em>Nota: Este negocio está inscrito como empresario individual.
             El NIF se facilitará una vez completado el proceso de alta censal en Hacienda.</em>
           </p>

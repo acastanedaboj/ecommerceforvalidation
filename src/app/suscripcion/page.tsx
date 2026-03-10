@@ -27,7 +27,6 @@ export default function SuscripcionPage() {
 
   return (
     <>
-      {/* JSON-LD: Breadcrumb Schema */}
       <JsonLd
         data={buildBreadcrumbSchema([
           { name: 'Inicio', url: '/' },
@@ -36,19 +35,19 @@ export default function SuscripcionPage() {
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-600 to-primary-800 text-[#ffffec] py-16 md:py-24">
+      <section style={{ background: 'var(--dark)', color: 'var(--white)', paddingTop: '160px', paddingBottom: '80px' }}>
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <span className="inline-flex items-center gap-2 badge bg-white/20 text-[#ffffec] mb-4">
-              <RefreshCw className="w-4 h-4" />
+            <span className="badge mb-4" style={{ background: 'rgba(255,255,255,.1)', color: 'rgba(255,255,255,.7)' }}>
+              <RefreshCw className="w-4 h-4 mr-2" />
               Suscripción mensual
             </span>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-display mb-6 text-[#ffffec]">
+            <h1 style={{ fontFamily: 'var(--font-display)', color: 'var(--white)', marginBottom: '24px' }}>
               Suscríbete y ahorra un {subscriptionInfo.discountPercentage}%
             </h1>
-            <p className="text-xl text-[#ffffec]/80 mb-8">
+            <p style={{ fontSize: '16px', color: 'rgba(255,255,255,.6)', fontWeight: 300, lineHeight: 1.8, marginBottom: '32px' }}>
               Recibe 6 bolsas de granola Poppy cada mes a solo{' '}
-              <strong className="text-[#ffffec]">
+              <strong style={{ color: 'var(--white)', fontWeight: 700 }}>
                 {formatPrice(subscriptionInfo.unitPriceCents)}/ud
               </strong>
               . Envío gratis, cancela cuando quieras.
@@ -56,10 +55,11 @@ export default function SuscripcionPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/tienda/granola-clasica-150g"
-                className="btn bg-[#ffffec] text-primary-700 hover:bg-[#ffffec]/90 btn-lg"
+                className="btn-pill-white"
+                style={{ padding: '14px 32px' }}
               >
-                Empezar suscripción
-                <ArrowRight className="w-5 h-5 ml-2" />
+                empezar suscripción
+                <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
           </div>
@@ -67,91 +67,90 @@ export default function SuscripcionPage() {
       </section>
 
       {/* Pricing comparison */}
-      <section className="section">
+      <section style={{ padding: '96px 0' }}>
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display text-neutral-900 mb-4">
+            <h2 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
               Compara y ahorra
             </h2>
-            <p className="text-neutral-600 max-w-2xl mx-auto">
+            <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, maxWidth: '480px', margin: '0 auto' }}>
               Con la suscripción, obtienes el mejor precio posible por unidad
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-px max-w-4xl mx-auto" style={{ background: 'rgba(0,0,0,.06)' }}>
             {/* Single purchase */}
-            <div className="bg-white rounded-2xl p-6 border border-neutral-200">
-              <h3 className="text-neutral-900 mb-2">Compra única</h3>
-              <p className="text-sm text-neutral-500 mb-4">1 bolsa</p>
-              <div className="text-3xl font-bold text-neutral-900 mb-4">
+            <div className="p-8" style={{ background: 'var(--white)' }}>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', marginBottom: '8px' }}>Compra única</h3>
+              <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.4)', fontWeight: 300, marginBottom: '16px' }}>1 bolsa</p>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: '36px', marginBottom: '16px' }}>
                 {formatPrice(PRICING.BASE_PRICE_CENTS)}
-                <span className="text-sm font-normal text-neutral-500">/ud</span>
+                <span style={{ fontSize: '14px', fontFamily: 'var(--font-sans)', fontWeight: 300, color: 'rgba(17,17,17,.4)' }}>/ud</span>
               </div>
-              <ul className="space-y-2 text-sm text-neutral-600">
+              <ul style={{ listStyle: 'none', fontSize: '13px', color: 'rgba(17,17,17,.5)' }} className="space-y-2">
                 <li className="flex items-center gap-2">
-                  <X className="w-4 h-4 text-neutral-400" />
+                  <X className="w-4 h-4" style={{ color: 'rgba(17,17,17,.2)' }} />
                   Sin descuento
                 </li>
                 <li className="flex items-center gap-2">
-                  <X className="w-4 h-4 text-neutral-400" />
+                  <X className="w-4 h-4" style={{ color: 'rgba(17,17,17,.2)' }} />
                   Gastos de envío
                 </li>
               </ul>
             </div>
 
             {/* Pack 6 */}
-            <div className="bg-white rounded-2xl p-6 border border-neutral-200">
-              <h3 className="text-neutral-900 mb-2">Pack 6</h3>
-              <p className="text-sm text-neutral-500 mb-4">Compra única</p>
-              <div className="text-3xl font-bold text-neutral-900 mb-4">
+            <div className="p-8" style={{ background: 'var(--white)' }}>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', marginBottom: '8px' }}>Pack 6</h3>
+              <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.4)', fontWeight: 300, marginBottom: '16px' }}>Compra única</p>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: '36px', marginBottom: '16px' }}>
                 {formatPrice(pack6Price)}
-                <span className="text-sm font-normal text-neutral-500">/ud</span>
+                <span style={{ fontSize: '14px', fontFamily: 'var(--font-sans)', fontWeight: 300, color: 'rgba(17,17,17,.4)' }}>/ud</span>
               </div>
-              <ul className="space-y-2 text-sm text-neutral-600">
+              <ul style={{ listStyle: 'none', fontSize: '13px', color: 'rgba(17,17,17,.5)' }} className="space-y-2">
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-accent-600" />
+                  <Check className="w-4 h-4" style={{ color: 'var(--brown)' }} />
                   10% descuento
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-accent-600" />
+                  <Check className="w-4 h-4" style={{ color: 'var(--brown)' }} />
                   Envío gratis
                 </li>
               </ul>
             </div>
 
             {/* Subscription */}
-            <div className="bg-primary-50 rounded-2xl p-6 border-2 border-primary-500 relative">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 badge-primary">
+            <div className="relative p-8" style={{ background: 'var(--off)', borderTop: '3px solid var(--yellow)' }}>
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 badge" style={{ background: 'var(--yellow)', color: 'var(--dark)', fontWeight: 700 }}>
                 Mejor precio
               </span>
-              <h3 className="text-neutral-900 mb-2">Suscripción</h3>
-              <p className="text-sm text-neutral-500 mb-4">Pack 6 mensual</p>
-              <div className="text-3xl font-bold text-primary-600 mb-4">
+              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', marginBottom: '8px' }}>Suscripción</h3>
+              <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.4)', fontWeight: 300, marginBottom: '16px' }}>Pack 6 mensual</p>
+              <div style={{ fontFamily: 'var(--font-display)', fontSize: '36px', color: 'var(--brown)', marginBottom: '16px' }}>
                 {formatPrice(subscriptionInfo.unitPriceCents)}
-                <span className="text-sm font-normal text-neutral-500">/ud</span>
+                <span style={{ fontSize: '14px', fontFamily: 'var(--font-sans)', fontWeight: 300, color: 'rgba(17,17,17,.4)' }}>/ud</span>
               </div>
-              <ul className="space-y-2 text-sm text-neutral-600">
+              <ul style={{ listStyle: 'none', fontSize: '13px', color: 'rgba(17,17,17,.5)' }} className="space-y-2">
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-accent-600" />
+                  <Check className="w-4 h-4" style={{ color: 'var(--brown)' }} />
                   15% descuento
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-accent-600" />
+                  <Check className="w-4 h-4" style={{ color: 'var(--brown)' }} />
                   Envío gratis siempre
                 </li>
                 <li className="flex items-center gap-2">
-                  <Check className="w-4 h-4 text-accent-600" />
+                  <Check className="w-4 h-4" style={{ color: 'var(--brown)' }} />
                   Cancela cuando quieras
                 </li>
               </ul>
             </div>
           </div>
 
-          {/* Savings calculation */}
           <div className="mt-8 text-center">
-            <p className="text-neutral-600">
+            <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
               Con la suscripción ahorras{' '}
-              <strong className="text-accent-600">
+              <strong style={{ color: 'var(--brown)', fontWeight: 700 }}>
                 {formatPrice(subscriptionInfo.monthlySavings)}
               </strong>{' '}
               cada mes respecto a la compra individual
@@ -161,134 +160,88 @@ export default function SuscripcionPage() {
       </section>
 
       {/* How it works */}
-      <section className="section bg-neutral-50">
+      <section style={{ padding: '96px 0', background: 'var(--off)' }}>
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display text-neutral-900 mb-4">
+            <h2 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
               Cómo funciona
             </h2>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-primary-600">1</span>
+            {[
+              { num: '1', title: 'Elige tu sabor', desc: 'Selecciona la variedad de granola que más te guste' },
+              { num: '2', title: 'Activa tu suscripción', desc: 'Marca la opción de suscripción al añadir al carrito' },
+              { num: '3', title: 'Recibe cada mes', desc: 'Tu pack de 6 bolsas llega a casa automáticamente' },
+              { num: '4', title: 'Gestiona fácilmente', desc: 'Pausa, modifica o cancela desde tu cuenta' },
+            ].map((step) => (
+              <div key={step.num} className="text-center">
+                <div className="w-16 h-16 flex items-center justify-center mx-auto mb-4" style={{ background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}>
+                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '24px', color: 'var(--brown)' }}>{step.num}</span>
+                </div>
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '18px', marginBottom: '8px' }}>{step.title}</h3>
+                <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.7 }}>
+                  {step.desc}
+                </p>
               </div>
-              <h3 className="text-neutral-900 mb-2">Elige tu sabor</h3>
-              <p className="text-sm text-neutral-600">
-                Selecciona la variedad de granola que más te guste
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-primary-600">2</span>
-              </div>
-              <h3 className="text-neutral-900 mb-2">Activa tu suscripción</h3>
-              <p className="text-sm text-neutral-600">
-                Marca la opción de suscripción al añadir al carrito
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-primary-600">3</span>
-              </div>
-              <h3 className="text-neutral-900 mb-2">Recibe cada mes</h3>
-              <p className="text-sm text-neutral-600">
-                Tu pack de 6 bolsas llega a casa automáticamente
-              </p>
-            </div>
-
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl text-primary-600">4</span>
-              </div>
-              <h3 className="text-neutral-900 mb-2">Gestiona fácilmente</h3>
-              <p className="text-sm text-neutral-600">
-                Pausa, modifica o cancela desde tu cuenta
-              </p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Benefits */}
-      <section className="section">
+      <section style={{ padding: '96px 0' }}>
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-display text-neutral-900 mb-6">
+              <h2 style={{ fontFamily: 'var(--font-display)', marginBottom: '24px' }}>
                 Ventajas de ser suscriptor
               </h2>
-              <ul className="space-y-4">
-                <li className="flex gap-4">
-                  <div className="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Gift className="w-5 h-5 text-accent-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-neutral-900">15% de descuento permanente</h3>
-                    <p className="text-neutral-600 text-sm">
-                      El mejor precio por unidad, garantizado
-                    </p>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Truck className="w-5 h-5 text-accent-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-neutral-900">Envío gratis siempre</h3>
-                    <p className="text-neutral-600 text-sm">
-                      Sin mínimos, sin condiciones
-                    </p>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <RefreshCw className="w-5 h-5 text-accent-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-neutral-900">Flexibilidad total</h3>
-                    <p className="text-neutral-600 text-sm">
-                      Pausa, modifica o cancela cuando quieras
-                    </p>
-                  </div>
-                </li>
-                <li className="flex gap-4">
-                  <div className="w-10 h-10 bg-accent-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <CreditCard className="w-5 h-5 text-accent-600" />
-                  </div>
-                  <div>
-                    <h3 className="text-neutral-900">Sin sorpresas</h3>
-                    <p className="text-neutral-600 text-sm">
-                      Siempre el mismo precio, sin subidas
-                    </p>
-                  </div>
-                </li>
+              <ul style={{ listStyle: 'none' }} className="space-y-5">
+                {[
+                  { icon: Gift, title: '15% de descuento permanente', desc: 'El mejor precio por unidad, garantizado' },
+                  { icon: Truck, title: 'Envío gratis siempre', desc: 'Sin mínimos, sin condiciones' },
+                  { icon: RefreshCw, title: 'Flexibilidad total', desc: 'Pausa, modifica o cancela cuando quieras' },
+                  { icon: CreditCard, title: 'Sin sorpresas', desc: 'Siempre el mismo precio, sin subidas' },
+                ].map((item, i) => {
+                  const Icon = item.icon;
+                  return (
+                    <li key={i} className="flex gap-4">
+                      <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ background: 'rgba(243,238,148,.2)' }}>
+                        <Icon className="w-5 h-5" style={{ color: 'var(--brown)' }} />
+                      </div>
+                      <div>
+                        <h3 style={{ fontSize: '15px', fontWeight: 700, marginBottom: '4px' }}>{item.title}</h3>
+                        <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
+                          {item.desc}
+                        </p>
+                      </div>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
 
-            <div className="bg-primary-50 rounded-3xl p-8">
-              <h3 className="text-xl text-neutral-900 mb-4">
+            <div className="p-8" style={{ background: 'var(--off)' }}>
+              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '22px', marginBottom: '16px' }}>
                 Resumen de tu suscripción
               </h3>
-              <div className="space-y-3 mb-6">
+              <div className="space-y-3 mb-6" style={{ fontSize: '14px' }}>
                 <div className="flex justify-between">
-                  <span className="text-neutral-600">Pack mensual</span>
-                  <span className="font-medium">6 bolsas de 150g</span>
+                  <span style={{ color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>Pack mensual</span>
+                  <span style={{ fontWeight: 700 }}>6 bolsas de 150g</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-neutral-600">Precio por unidad</span>
-                  <span className="font-medium">{formatPrice(subscriptionInfo.unitPriceCents)}</span>
+                  <span style={{ color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>Precio por unidad</span>
+                  <span style={{ fontWeight: 700 }}>{formatPrice(subscriptionInfo.unitPriceCents)}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span className="text-neutral-600">Envío</span>
-                  <span className="font-medium text-accent-600">Gratis</span>
+                  <span style={{ color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>Envío</span>
+                  <span style={{ fontWeight: 700, color: 'var(--brown)' }}>Gratis</span>
                 </div>
-                <div className="border-t border-primary-200 pt-3 flex justify-between">
+                <div className="flex justify-between pt-3" style={{ borderTop: '1px solid rgba(0,0,0,.07)' }}>
                   <span>Total mensual</span>
-                  <span className="text-xl font-bold text-primary-600">
+                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '24px', color: 'var(--brown)' }}>
                     {formatPrice(subscriptionInfo.totalPriceCents)}
                   </span>
                 </div>
@@ -297,9 +250,9 @@ export default function SuscripcionPage() {
                 href="/tienda/granola-clasica-150g"
                 className="btn-primary w-full justify-center"
               >
-                Empezar ahora
+                empezar ahora
               </Link>
-              <p className="text-xs text-neutral-500 mt-3 text-center">
+              <p className="mt-3 text-center" style={{ fontSize: '11px', color: 'rgba(17,17,17,.4)', fontWeight: 300 }}>
                 Sin permanencia. Cancela cuando quieras.
               </p>
             </div>
@@ -308,91 +261,56 @@ export default function SuscripcionPage() {
       </section>
 
       {/* FAQ */}
-      <section className="section bg-neutral-50">
+      <section style={{ padding: '96px 0', background: 'var(--off)' }}>
         <div className="container-custom max-w-3xl">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-display text-neutral-900 mb-4">
+            <h2 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
               Preguntas frecuentes sobre la suscripción
             </h2>
           </div>
 
-          <div className="space-y-4">
-            <details className="bg-white rounded-xl p-6 group">
-              <summary className="text-neutral-900 cursor-pointer list-none flex justify-between items-center">
-                ¿Puedo cancelar mi suscripción en cualquier momento?
-                <span className="text-primary-600 group-open:rotate-180 transition-transform">
-                  ↓
-                </span>
-              </summary>
-              <p className="mt-4 text-neutral-600">
-                Sí, puedes cancelar tu suscripción en cualquier momento desde tu cuenta.
-                No hay permanencia ni penalizaciones. La cancelación se hará efectiva al
-                final del período actual ya pagado.
-              </p>
-            </details>
-
-            <details className="bg-white rounded-xl p-6 group">
-              <summary className="text-neutral-900 cursor-pointer list-none flex justify-between items-center">
-                ¿Puedo pausar la suscripción temporalmente?
-                <span className="text-primary-600 group-open:rotate-180 transition-transform">
-                  ↓
-                </span>
-              </summary>
-              <p className="mt-4 text-neutral-600">
-                ¡Claro! Si te vas de vacaciones o tienes suficiente stock, puedes pausar
-                tu suscripción hasta 3 meses desde tu panel de cuenta.
-              </p>
-            </details>
-
-            <details className="bg-white rounded-xl p-6 group">
-              <summary className="text-neutral-900 cursor-pointer list-none flex justify-between items-center">
-                ¿Puedo cambiar el sabor de mi suscripción?
-                <span className="text-primary-600 group-open:rotate-180 transition-transform">
-                  ↓
-                </span>
-              </summary>
-              <p className="mt-4 text-neutral-600">
-                Sí, puedes modificar el sabor de tu suscripción antes de que se procese
-                el siguiente envío. Solo tienes que acceder a tu cuenta y editar la
-                suscripción.
-              </p>
-            </details>
-
-            <details className="bg-white rounded-xl p-6 group">
-              <summary className="text-neutral-900 cursor-pointer list-none flex justify-between items-center">
-                ¿Cuándo se cobra cada mes?
-                <span className="text-primary-600 group-open:rotate-180 transition-transform">
-                  ↓
-                </span>
-              </summary>
-              <p className="mt-4 text-neutral-600">
-                El cobro se realiza el mismo día de cada mes en que activaste tu
-                suscripción. Recibirás un recordatorio por email unos días antes.
-              </p>
-            </details>
+          <div className="space-y-3">
+            {[
+              { q: '¿Puedo cancelar mi suscripción en cualquier momento?', a: 'Sí, puedes cancelar tu suscripción en cualquier momento desde tu cuenta. No hay permanencia ni penalizaciones. La cancelación se hará efectiva al final del período actual ya pagado.' },
+              { q: '¿Puedo pausar la suscripción temporalmente?', a: '¡Claro! Si te vas de vacaciones o tienes suficiente stock, puedes pausar tu suscripción hasta 3 meses desde tu panel de cuenta.' },
+              { q: '¿Puedo cambiar el sabor de mi suscripción?', a: 'Sí, puedes modificar el sabor de tu suscripción antes de que se procese el siguiente envío. Solo tienes que acceder a tu cuenta y editar la suscripción.' },
+              { q: '¿Cuándo se cobra cada mes?', a: 'El cobro se realiza el mismo día de cada mes en que activaste tu suscripción. Recibirás un recordatorio por email unos días antes.' },
+            ].map((faq, i) => (
+              <details key={i} className="group" style={{ background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}>
+                <summary className="p-6 cursor-pointer list-none flex justify-between items-center" style={{ color: 'var(--dark)', fontWeight: 700, fontSize: '14px' }}>
+                  {faq.q}
+                  <span className="group-open:rotate-180 transition-transform" style={{ color: 'var(--brown)' }}>
+                    ↓
+                  </span>
+                </summary>
+                <p className="px-6 pb-6 -mt-2" style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85 }}>
+                  {faq.a}
+                </p>
+              </details>
+            ))}
           </div>
 
           <div className="mt-8 text-center">
-            <Link href="/faq" className="text-primary-600 hover:underline font-medium">
-              Ver todas las preguntas frecuentes →
+            <Link href="/faq" className="btn-text">
+              ver todas las preguntas frecuentes
             </Link>
           </div>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="section bg-[#f6ee87] text-neutral-900">
+      <section style={{ padding: '96px 0', background: 'var(--yellow)' }}>
         <div className="container-custom text-center">
-          <h2 className="text-3xl md:text-4xl font-display mb-4">
+          <h2 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
             ¿Quieres ahorrar en tu granola favorita?
           </h2>
-          <p className="text-neutral-900/80 mb-8 max-w-xl mx-auto">
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.6)', fontWeight: 300, maxWidth: '480px', margin: '0 auto 32px', lineHeight: 1.85 }}>
             Únete a cientos de suscriptores que reciben su granola Poppy cada mes
             sin preocupaciones.
           </p>
-          <Link href="/tienda" className="btn-primary btn-lg">
-            Ver productos y suscribirse
-            <ArrowRight className="w-5 h-5 ml-2" />
+          <Link href="/tienda" className="btn-pill" style={{ padding: '14px 32px' }}>
+            ver productos y suscribirse
+            <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>
       </section>

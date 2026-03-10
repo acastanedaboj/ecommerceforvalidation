@@ -9,33 +9,13 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        // Cream - Backgrounds (#ffffec)
-        cream: {
-          50: '#FFFFFF',
-          100: '#FFFEF8',
-          200: '#FFFFEC',
-          300: '#FFFDE0',
-          400: '#FFFCD4',
-          500: '#FFFBC8',
-          600: '#F5EDBA',
-          700: '#E8DEAA',
-          800: '#D4C890',
-          900: '#B8A870',
-        },
-        // Sky Blue - Accents (#72A6CC) - Poppy-2
-        sky: {
-          50: '#F0F6FA',
-          100: '#E1EDF5',
-          200: '#C3DBEB',
-          300: '#A5C9E1',
-          400: '#8CB9D8',
-          500: '#72A6CC',
-          600: '#5B93BC',
-          700: '#4A7A9E',
-          800: '#3B6280',
-          900: '#2D4A62',
-        },
-        // Brown - Primary CTA (#6D4D45) - Poppy-1
+        // New design system palette
+        dark: '#111111',
+        off: '#f6f5f2',
+        'poppy-brown': '#694F48',
+        'poppy-blue': '#7EA5C9',
+        'poppy-yellow': '#F3EE94',
+        // Brown - Primary CTA (#694F48)
         earth: {
           50: '#FAF8F7',
           100: '#F3EDEB',
@@ -43,25 +23,51 @@ const config: Config = {
           300: '#D1BEB8',
           400: '#B8A099',
           500: '#8A6B63',
-          600: '#6D4D45',
+          600: '#694F48',
           700: '#5A3F38',
           800: '#48322D',
           900: '#3A2925',
         },
-        // Yellow - Highlights (#FCF983) - Poppy-3
+        // Sky Blue - Accents (#7EA5C9)
+        sky: {
+          50: '#F0F6FA',
+          100: '#E1EDF5',
+          200: '#C3DBEB',
+          300: '#A5C9E1',
+          400: '#8CB9D8',
+          500: '#7EA5C9',
+          600: '#5B93BC',
+          700: '#4A7A9E',
+          800: '#3B6280',
+          900: '#2D4A62',
+        },
+        // Yellow - Highlights (#F3EE94)
         olive: {
           50: '#FFFEF5',
           100: '#FEFDE8',
           200: '#FDFCD0',
           300: '#FCFAB3',
-          400: '#FCF983',
-          500: '#F5ED60',
-          600: '#E8DC3D',
-          700: '#D4C42A',
-          800: '#A89A21',
-          900: '#7C721A',
+          400: '#F3EE94',
+          500: '#E8DC3D',
+          600: '#D4C42A',
+          700: '#A89A21',
+          800: '#7C721A',
+          900: '#5A5214',
         },
-        // Taupe - Secondary (#A0857E) - Poppy-4
+        // Cream - Background tones
+        cream: {
+          50: '#FFFFFF',
+          100: '#faf9f7',
+          200: '#f6f5f2',
+          300: '#efede8',
+          400: '#e5e3dc',
+          500: '#d8d5cc',
+          600: '#c2bfb4',
+          700: '#a9a598',
+          800: '#8a877c',
+          900: '#6b685f',
+        },
+        // Taupe - Secondary (#A0857E)
         taupe: {
           50: '#FAF8F7',
           100: '#F3EEEC',
@@ -74,7 +80,7 @@ const config: Config = {
           800: '#5C4742',
           900: '#4A3A36',
         },
-        // Dark Gray - Text (#303030) - Poppy-5
+        // Stone - Text/Neutral
         stone: {
           50: '#FAFAFA',
           100: '#F5F5F5',
@@ -95,7 +101,7 @@ const config: Config = {
           300: '#D1BEB8',
           400: '#B8A099',
           500: '#8A6B63',
-          600: '#6D4D45',
+          600: '#694F48',
           700: '#5A3F38',
           800: '#48322D',
           900: '#3A2925',
@@ -106,7 +112,7 @@ const config: Config = {
           200: '#C3DBEB',
           300: '#A5C9E1',
           400: '#8CB9D8',
-          500: '#72A6CC',
+          500: '#7EA5C9',
           600: '#5B93BC',
           700: '#4A7A9E',
           800: '#3B6280',
@@ -117,12 +123,12 @@ const config: Config = {
           100: '#FEFDE8',
           200: '#FDFCD0',
           300: '#FCFAB3',
-          400: '#FCF983',
-          500: '#F5ED60',
-          600: '#E8DC3D',
-          700: '#D4C42A',
-          800: '#A89A21',
-          900: '#7C721A',
+          400: '#F3EE94',
+          500: '#E8DC3D',
+          600: '#D4C42A',
+          700: '#A89A21',
+          800: '#7C721A',
+          900: '#5A5214',
         },
         neutral: {
           50: '#FAFAFA',
@@ -140,12 +146,13 @@ const config: Config = {
       fontFamily: {
         sans: ['var(--font-sans)', 'system-ui', 'sans-serif'],
         display: ['var(--font-display)', 'Georgia', 'serif'],
+        serif: ['var(--font-display)', 'Georgia', 'serif'],
         script: ['var(--font-script)', 'cursive'],
       },
       fontSize: {
-        'display-lg': ['4rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
-        'display-md': ['3rem', { lineHeight: '1.15', letterSpacing: '-0.02em' }],
-        'display-sm': ['2.25rem', { lineHeight: '1.2', letterSpacing: '-0.01em' }],
+        'display-lg': ['4rem', { lineHeight: '0.9', letterSpacing: '-0.02em' }],
+        'display-md': ['3rem', { lineHeight: '1.1', letterSpacing: '-0.02em' }],
+        'display-sm': ['2.25rem', { lineHeight: '1.15', letterSpacing: '-0.01em' }],
       },
       spacing: {
         '18': '4.5rem',
@@ -159,15 +166,15 @@ const config: Config = {
         '5xl': '2.5rem',
       },
       boxShadow: {
-        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
-        'soft-lg': '0 10px 40px -10px rgba(0, 0, 0, 0.1), 0 2px 10px -2px rgba(0, 0, 0, 0.04)',
-        'soft-xl': '0 20px 50px -12px rgba(0, 0, 0, 0.12), 0 4px 20px -4px rgba(0, 0, 0, 0.06)',
+        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.05), 0 10px 20px -2px rgba(0, 0, 0, 0.03)',
+        'soft-lg': '0 10px 40px -10px rgba(0, 0, 0, 0.08)',
+        'soft-xl': '0 20px 50px -12px rgba(0, 0, 0, 0.1)',
         'inner-soft': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.04)',
         'inner-glow': 'inset 0 1px 3px 0 rgba(0, 0, 0, 0.06)',
-        'card-hover': '0 25px 60px -15px rgba(0, 0, 0, 0.15), 0 10px 20px -10px rgba(0, 0, 0, 0.08)',
+        'card-hover': '0 25px 60px -15px rgba(0, 0, 0, 0.12)',
       },
       backgroundImage: {
-        'gradient-warm': 'linear-gradient(135deg, #FFFFFF 0%, #FFFEF8 50%, #FFFFEC 100%)',
+        'gradient-warm': 'linear-gradient(135deg, #FFFFFF 0%, #faf9f7 50%, #f6f5f2 100%)',
         'gradient-earth': 'linear-gradient(135deg, #FAF8F7 0%, #F3EDEB 100%)',
         'gradient-sky': 'linear-gradient(135deg, #F0F6FA 0%, #E1EDF5 100%)',
         'gradient-olive': 'linear-gradient(135deg, #FFFEF5 0%, #FEFDE8 100%)',

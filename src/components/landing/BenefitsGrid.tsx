@@ -26,37 +26,39 @@ export function BenefitsGrid({
   };
 
   return (
-    <section className="py-20 md:py-28 bg-cream-100">
+    <section style={{ padding: '80px 0', background: 'var(--off)' }}>
       <div className="container-custom">
         {(title || subtitle) && (
           <div className="text-center mb-16">
             {subtitle && (
-              <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
+              <p style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(17,17,17,.35)', marginBottom: '16px' }}>
                 {subtitle}
               </p>
             )}
             {title && (
-              <h2 className="font-display text-stone-800">{title}</h2>
+              <h2 style={{ fontFamily: 'var(--font-display)' }}>{title}</h2>
             )}
           </div>
         )}
 
-        <div className={`grid ${gridCols[columns]} gap-px bg-stone-200`}>
+        <div className={`grid ${gridCols[columns]} gap-px`} style={{ background: 'rgba(0,0,0,.06)' }}>
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
               <div
                 key={index}
-                className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors"
+                className="p-10 text-center group transition-colors"
+                style={{ background: 'var(--off)' }}
               >
                 <Icon
-                  className="w-8 h-8 text-earth-600 mx-auto mb-6"
+                  className="w-8 h-8 mx-auto mb-6"
+                  style={{ color: 'var(--brown)' }}
                   strokeWidth={1}
                 />
-                <h3 className="font-display text-lg text-stone-800 mb-3">
+                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '18px', marginBottom: '12px' }}>
                   {benefit.title}
                 </h3>
-                <p className="text-stone-600 text-sm leading-relaxed">
+                <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.7 }}>
                   {benefit.description}
                 </p>
               </div>

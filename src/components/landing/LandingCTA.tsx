@@ -23,18 +23,18 @@ export function LandingCTA({
 }: LandingCTAProps) {
   if (variant === 'primary') {
     return (
-      <section className="py-20 md:py-28 bg-earth-600">
+      <section style={{ padding: '80px 0', background: 'var(--brown)' }}>
         <div className="container-custom text-center max-w-2xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl text-[#ffffec] mb-6">
+          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 3vw, 36px)', color: 'var(--white)', marginBottom: '24px' }}>
             {title}
           </h2>
           {description && (
-            <p className="text-[#ffffec]/70 mb-10">{description}</p>
+            <p style={{ color: 'rgba(255,255,255,.65)', fontWeight: 300, fontSize: '14px', lineHeight: 1.85, marginBottom: '40px' }}>{description}</p>
           )}
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href={ctaHref}
-              className="inline-flex items-center justify-center gap-2 bg-[#ffffec] text-earth-700 px-8 py-4 font-medium hover:bg-cream-100 transition-colors"
+              className="btn-pill-white inline-flex items-center justify-center gap-2"
             >
               {ctaText}
               <ArrowRight className="w-4 h-4" />
@@ -42,7 +42,8 @@ export function LandingCTA({
             {secondaryCta && (
               <Link
                 href={secondaryCta.href}
-                className="inline-flex items-center justify-center gap-2 border border-[#ffffec]/30 text-[#ffffec] px-8 py-4 font-medium hover:bg-[#ffffec]/10 transition-colors"
+                className="btn-pill inline-flex items-center justify-center gap-2"
+                style={{ borderColor: 'rgba(255,255,255,.3)', color: 'var(--white)' }}
               >
                 {secondaryCta.text}
               </Link>
@@ -54,16 +55,16 @@ export function LandingCTA({
   }
 
   return (
-    <section className="py-20 md:py-28 bg-white">
+    <section style={{ padding: '80px 0', background: 'var(--white)' }}>
       <div className="container-custom text-center max-w-2xl mx-auto">
-        <h2 className="font-display text-stone-800 mb-6">{title}</h2>
+        <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 3vw, 36px)', marginBottom: '24px' }}>{title}</h2>
         {description && (
-          <p className="text-stone-600 mb-10">{description}</p>
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '40px' }}>{description}</p>
         )}
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href={ctaHref}
-            className="inline-flex items-center justify-center gap-2 bg-earth-600 text-[#ffffec] px-8 py-4 font-medium hover:bg-earth-700 transition-colors"
+            className="btn-pill inline-flex items-center justify-center gap-2"
           >
             {ctaText}
             <ArrowRight className="w-4 h-4" />
@@ -71,7 +72,8 @@ export function LandingCTA({
           {secondaryCta && (
             <Link
               href={secondaryCta.href}
-              className="inline-flex items-center justify-center gap-2 border border-stone-300 text-stone-800 px-8 py-4 font-medium hover:border-stone-400 transition-colors"
+              className="btn-pill inline-flex items-center justify-center gap-2"
+              style={{ borderColor: 'rgba(0,0,0,.15)' }}
             >
               {secondaryCta.text}
             </Link>

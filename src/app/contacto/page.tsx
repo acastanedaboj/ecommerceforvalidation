@@ -37,14 +37,14 @@ export default function ContactoPage() {
   };
 
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-display text-neutral-900 mb-4">
+          <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
             Contacto
           </h1>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, maxWidth: '520px', margin: '0 auto', lineHeight: 1.85 }}>
             ¿Tienes alguna pregunta o sugerencia? Nos encantaría escucharte.
             Rellena el formulario o contacta directamente con nosotros.
           </p>
@@ -53,21 +53,21 @@ export default function ContactoPage() {
         <div className="grid lg:grid-cols-3 gap-12">
           {/* Contact info */}
           <div className="lg:col-span-1">
-            <div className="bg-primary-50 rounded-2xl p-8">
-              <h2 className="text-xl text-neutral-900 mb-6">
+            <div className="p-8" style={{ background: 'var(--off)' }}>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', marginBottom: '24px' }}>
                 Información de contacto
               </h2>
 
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Mail className="w-5 h-5 text-primary-600" />
+                  <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ background: 'var(--white)' }}>
+                    <Mail className="w-5 h-5" style={{ color: 'var(--brown)' }} />
                   </div>
                   <div>
-                    <p className="text-neutral-900">Email</p>
+                    <p style={{ fontSize: '14px', fontWeight: 400, color: 'var(--dark)', marginBottom: '2px' }}>Email</p>
                     <a
                       href={`mailto:${BUSINESS.email}`}
-                      className="text-primary-600 hover:underline"
+                      style={{ fontSize: '13px', color: 'var(--brown)', textDecoration: 'none' }}
                     >
                       {BUSINESS.email}
                     </a>
@@ -75,12 +75,12 @@ export default function ContactoPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-5 h-5 text-primary-600" />
+                  <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ background: 'var(--white)' }}>
+                    <MapPin className="w-5 h-5" style={{ color: 'var(--brown)' }} />
                   </div>
                   <div>
-                    <p className="text-neutral-900">Dirección</p>
-                    <p className="text-neutral-600">
+                    <p style={{ fontSize: '14px', fontWeight: 400, color: 'var(--dark)', marginBottom: '2px' }}>Dirección</p>
+                    <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.7 }}>
                       {BUSINESS.address.street}
                       <br />
                       {BUSINESS.address.postalCode} {BUSINESS.address.city}
@@ -91,12 +91,12 @@ export default function ContactoPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Clock className="w-5 h-5 text-primary-600" />
+                  <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ background: 'var(--white)' }}>
+                    <Clock className="w-5 h-5" style={{ color: 'var(--brown)' }} />
                   </div>
                   <div>
-                    <p className="text-neutral-900">Horario de atención</p>
-                    <p className="text-neutral-600">
+                    <p style={{ fontSize: '14px', fontWeight: 400, color: 'var(--dark)', marginBottom: '2px' }}>Horario de atención</p>
+                    <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.7 }}>
                       Lunes a Viernes: 9:00 - 18:00
                       <br />
                       Fines de semana: Cerrado
@@ -106,14 +106,15 @@ export default function ContactoPage() {
               </div>
 
               {/* Social links */}
-              <div className="mt-8 pt-6 border-t border-primary-200">
-                <p className="text-neutral-900 mb-3">Síguenos en redes</p>
+              <div className="mt-8 pt-6" style={{ borderTop: '1px solid rgba(0,0,0,.07)' }}>
+                <p style={{ fontSize: '14px', fontWeight: 400, color: 'var(--dark)', marginBottom: '12px' }}>Síguenos en redes</p>
                 <div className="flex gap-3">
                   <a
                     href={BUSINESS.socialMedia.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-neutral-600 hover:text-primary-600 hover:bg-primary-100 transition-colors"
+                    className="w-10 h-10 flex items-center justify-center transition-colors"
+                    style={{ background: 'var(--white)', color: 'rgba(17,17,17,.5)' }}
                     aria-label="Instagram"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -124,7 +125,8 @@ export default function ContactoPage() {
                     href={BUSINESS.socialMedia.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-10 h-10 bg-white rounded-lg flex items-center justify-center text-neutral-600 hover:text-primary-600 hover:bg-primary-100 transition-colors"
+                    className="w-10 h-10 flex items-center justify-center transition-colors"
+                    style={{ background: 'var(--white)', color: 'rgba(17,17,17,.5)' }}
                     aria-label="Facebook"
                   >
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -138,8 +140,8 @@ export default function ContactoPage() {
 
           {/* Contact form */}
           <div className="lg:col-span-2">
-            <form onSubmit={handleSubmit} className="bg-white rounded-2xl p-8 shadow-sm border border-neutral-200">
-              <h2 className="text-xl text-neutral-900 mb-6">
+            <form onSubmit={handleSubmit} className="p-8" style={{ background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}>
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', marginBottom: '24px' }}>
                 Envíanos un mensaje
               </h2>
 
@@ -198,11 +200,11 @@ export default function ContactoPage() {
                     type="checkbox"
                     id="privacy"
                     required
-                    className="mt-1 w-4 h-4 rounded border-neutral-300 text-primary-600 focus:ring-primary-500"
+                    className="mt-1 w-4 h-4"
                   />
-                  <label htmlFor="privacy" className="text-sm text-neutral-600">
+                  <label htmlFor="privacy" style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
                     He leído y acepto la{' '}
-                    <a href="/legal/privacidad" className="text-primary-600 hover:underline">
+                    <a href="/legal/privacidad" style={{ color: 'var(--brown)', textDecoration: 'underline' }}>
                       política de privacidad
                     </a>
                   </label>

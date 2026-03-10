@@ -62,24 +62,17 @@ function LoginContent() {
   }
 
   return (
-    <div className="min-h-[60vh] flex items-center justify-center py-12 px-4">
+    <div className="min-h-[60vh] flex items-center justify-center px-4" style={{ paddingTop: '140px', paddingBottom: '48px' }}>
       <div className="max-w-md w-full">
         {/* Header */}
         <div className="text-center mb-10">
-          <Link href="/" className="inline-block mb-8">
-            <Image
-              src="/images/logo.svg"
-              alt="Poppy"
-              width={160}
-              height={56}
-              className="h-14 w-auto"
-              priority
-            />
+          <Link href="/" className="inline-block mb-8" style={{ fontFamily: 'var(--font-display)', fontSize: '20px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--dark)', textDecoration: 'none' }}>
+            Poppy
           </Link>
-          <h1 className="font-display text-3xl font-medium text-stone-800 mb-3">
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '28px', marginBottom: '12px' }}>
             Iniciar sesion
           </h1>
-          <p className="text-stone-500">
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
             Accede a tu cuenta para gestionar tus pedidos y suscripciones
           </p>
         </div>

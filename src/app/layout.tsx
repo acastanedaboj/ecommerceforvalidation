@@ -6,7 +6,7 @@ import { Header } from '@/components/layout/Header';
 // Font optimization - self-hosted, no render-blocking
 const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['300', '400', '700'],
   style: ['normal', 'italic'],
   variable: '--font-sans',
   display: 'swap',
@@ -158,7 +158,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased min-h-screen flex flex-col">
+      <body className="font-sans antialiased min-h-screen flex flex-col" style={{ fontWeight: 300 }}>
         <SessionProvider>
           {/* Skip to content link for accessibility */}
           <a
@@ -170,7 +170,7 @@ export default function RootLayout({
 
           <Header />
 
-          <main id="main-content" className="flex-grow">
+          <main id="main-content" className="flex-grow" style={{ paddingTop: 0 }}>
             {children}
           </main>
 

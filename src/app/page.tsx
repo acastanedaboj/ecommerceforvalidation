@@ -1,12 +1,10 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Truck, Leaf, Check } from 'lucide-react';
 import { ProductCard } from '@/components/product/ProductCard';
 import { getRetailProducts } from '@/data/products';
-import { formatPrice } from '@/lib/utils';
-import { getPackOptions, getSubscriptionInfo } from '@/lib/pricing';
 import { SITE_URL, BRAND_NAME, getCanonicalUrl } from '@/lib/seo';
+import { HomeClient } from '@/components/home/HomeClient';
 
 export const metadata: Metadata = {
   title: `${BRAND_NAME} | Granola sin gluten artesanal con miel`,
@@ -26,270 +24,378 @@ export const metadata: Metadata = {
 
 export default function HomePage() {
   const products = getRetailProducts();
-  const packOptions = getPackOptions();
-  const subscriptionInfo = getSubscriptionInfo();
 
   return (
     <>
-      {/* Hero Section - Editorial Style */}
-      <section className="relative bg-white overflow-hidden">
-        <div className="container-custom pt-10 pb-16 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            {/* Hero Content */}
-            <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
-              <span className="inline-block text-xs tracking-widest uppercase text-stone-500 mb-6 animate-fade-in">
-                Crafted for pleasure
-              </span>
+      {/* ── HERO ── */}
+      <section
+        className="relative overflow-hidden"
+        style={{ height: '100vh', background: '#1c1410' }}
+      >
+        {/* Hero background image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/home 4-5.png"
+            alt="Granola Poppy crujiente y especiada"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+            style={{ opacity: 0.5 }}
+          />
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                'linear-gradient(to bottom, rgba(0,0,0,.1) 0%, transparent 35%, transparent 55%, rgba(0,0,0,.65) 100%)',
+            }}
+          />
+        </div>
 
-              <h1 className="font-display text-stone-800 mb-8 animate-fade-in-up">
-                Granola crujiente
-                <br />
-                <span className="text-earth-600">y especiada</span>
-              </h1>
-
-              <p className="text-base md:text-lg text-stone-600 mb-10 leading-relaxed animate-fade-in-up animation-delay-100">
-                Ingredientes reales, proceso cuidado y nada que sobre.
-                Si no es buena para mí, no es buena para ti.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in-up animation-delay-200">
-                <Link href="/tienda" className="btn-primary btn-lg group">
-                  Comprar ahora
-                  <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
-                </Link>
-                <Link href="/suscripcion" className="btn-outline btn-lg">
-                  Suscríbete -15%
-                </Link>
-              </div>
-
-              {/* Trust indicators */}
-              <div className="flex flex-wrap gap-8 mt-12 justify-center lg:justify-start text-xs tracking-wide uppercase text-stone-500 animate-fade-in-up animation-delay-300">
-                <span className="flex items-center gap-2">
-                  <Truck className="w-4 h-4" strokeWidth={1.5} />
-                  Envío gratis +4 bolsas
-                </span>
-                <span className="flex items-center gap-2">
-                  <Leaf className="w-4 h-4" strokeWidth={1.5} />
-                  100% natural
-                </span>
-              </div>
-            </div>
-
-            {/* Hero Image */}
-            <div className="relative animate-fade-in animation-delay-200">
-              {/* Desktop: vertical 4:5 image */}
-              <div className="hidden lg:block relative aspect-[4/5] max-w-lg mx-auto">
-                <div className="relative w-full h-full overflow-hidden">
-                  <Image
-                    src="/images/home-vertical.png"
-                    alt="Granola Poppy crujiente y especiada con ingredientes reales"
-                    fill
-                    className="object-cover"
-                    priority
-                    sizes="50vw"
-                  />
-                </div>
-
-              </div>
-
-              {/* Mobile/Tablet: horizontal image */}
-              <div className="lg:hidden relative aspect-[3/2] max-w-2xl mx-auto">
-                <div className="relative w-full h-full overflow-hidden">
-                  <Image
-                    src="/images/home-horizontal.png"
-                    alt="Granola Poppy crujiente y especiada con ingredientes reales"
-                    fill
-                    className="object-cover"
-                    priority
-                    sizes="100vw"
-                  />
-                </div>
-
-              </div>
-            </div>
+        {/* Hero caption - bottom */}
+        <div
+          className="absolute bottom-0 left-0 right-0 z-10 hero-caption"
+          style={{ padding: '0 56px 52px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}
+        >
+          <h1
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontWeight: 400,
+              fontSize: 'clamp(60px, 8.5vw, 120px)',
+              lineHeight: 0.9,
+              color: 'var(--white)',
+              letterSpacing: '-0.02em',
+            }}
+          >
+            <em>Crafted</em>
+            <br />
+            for pleasure
+          </h1>
+          <div className="hero-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '20px', paddingBottom: '6px' }}>
+            <p
+              style={{
+                fontSize: '11px',
+                lineHeight: 1.8,
+                color: 'rgba(255,255,255,.45)',
+                maxWidth: '220px',
+                textAlign: 'right',
+                fontWeight: 300,
+              }}
+            >
+              Granola artesanal. Pequeños lotes. Málaga.
+            </p>
+            <Link href="/tienda" className="btn-pill-white">
+              descubrir
+            </Link>
+>>>>>>> dc09ccb (feat: complete visual redesign with new design system)
           </div>
+        </div>
+
+        {/* Scroll hint */}
+        <div
+          className="absolute z-10 flex flex-col items-center gap-2"
+          style={{
+            bottom: '52px',
+            left: '50%',
+            transform: 'translateX(-50%)',
+            opacity: 0.25,
+            pointerEvents: 'none',
+          }}
+        >
+          <div
+            style={{
+              width: '1px',
+              height: '32px',
+              background: 'linear-gradient(var(--white), transparent)',
+              animation: 'scroll-pulse 2.2s ease-in-out infinite',
+            }}
+          />
+          <span
+            style={{
+              fontSize: '8px',
+              letterSpacing: '0.22em',
+              textTransform: 'uppercase',
+              color: 'var(--white)',
+            }}
+          >
+            Scroll
+          </span>
         </div>
       </section>
 
-      {/* 2. PRODUCTO - Granola con carácter */}
-      <section className="py-14 md:py-20 bg-cream-100">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="font-display text-stone-800 mb-6">
-              Granola con <span className="text-earth-600-display-italic">carácter</span>
-            </h2>
-            <p className="text-stone-600 text-lg leading-relaxed">
-              Crujiente de verdad, con frutos secos y especias que despiertan el sabor.
-              Elaborada en pequeños lotes con avena sin gluten, miel ecológica
-              y frutos secos seleccionados.
-            </p>
-            <p className="text-stone-500 mt-4">
-              Pensada para disfrutar a diario, sin pesadez.
-            </p>
-          </div>
+      {/* ── MARQUEE ── */}
+      <div className="marquee-wrap">
+        <div className="marquee-track">
+          <span>Pequeños lotes</span><span className="marquee-dot">&middot;</span>
+          <span>Tostado lento</span><span className="marquee-dot">&middot;</span>
+          <span>Frutos secos seleccionados</span><span className="marquee-dot">&middot;</span>
+          <span>Miel ecológica</span><span className="marquee-dot">&middot;</span>
+          <span>Sin gluten</span><span className="marquee-dot">&middot;</span>
+          <span>Obrador propio en Málaga</span><span className="marquee-dot">&middot;</span>
+          <span>Crafted for pleasure</span><span className="marquee-dot">&middot;</span>
+          <span>Pequeños lotes</span><span className="marquee-dot">&middot;</span>
+          <span>Tostado lento</span><span className="marquee-dot">&middot;</span>
+          <span>Frutos secos seleccionados</span><span className="marquee-dot">&middot;</span>
+          <span>Miel ecológica</span><span className="marquee-dot">&middot;</span>
+          <span>Sin gluten</span><span className="marquee-dot">&middot;</span>
+          <span>Obrador propio en Málaga</span><span className="marquee-dot">&middot;</span>
+          <span>Crafted for pleasure</span><span className="marquee-dot">&middot;</span>
+        </div>
+      </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
-            {products.slice(0, 3).map((product, index) => (
-              <div
-                key={product.id}
-                className="animate-fade-in-up"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
+      {/* ── INTRO ── */}
+      <section className="fi" style={{ padding: '112px 0', textAlign: 'center' }}>
+        <div className="container-custom">
+          <p
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontWeight: 400,
+              fontSize: 'clamp(30px, 4vw, 52px)',
+              lineHeight: 1.2,
+              letterSpacing: '-0.01em',
+              color: 'var(--dark)',
+              maxWidth: '720px',
+              margin: '0 auto 20px',
+            }}
+          >
+            La granola que hago para mí
+            <br />
+            <em>Ahora, para ti</em>
+          </p>
+          <p style={{ fontSize: '12px', color: 'var(--dark)', opacity: 0.5, fontWeight: 300 }}>
+            Ingredientes que reconoces &nbsp;&middot;&nbsp; Proceso que respeto
+          </p>
+        </div>
+      </section>
+
+      {/* ── SPLIT: El proceso ── */}
+      <div className="split fi">
+        <div className="split-img">
+          <div className="split-img-inner">
+            <Image
+              src="/images/nosotros-divider.png"
+              alt="Obrador, Málaga"
+              fill
+              className="object-cover"
+              sizes="50vw"
+            />
+          </div>
+          <span
+            style={{
+              position: 'absolute',
+              bottom: '20px',
+              right: '20px',
+              fontSize: '9px',
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+              color: 'var(--dark)',
+              opacity: 0.35,
+            }}
+          >
+            Obrador, Málaga
+          </span>
+        </div>
+        <div className="split-body">
+          <span className="section-label">el proceso</span>
+          <h2 className="split-title">
+            Remojados y <em>tostados despacio</em>
+          </h2>
+          <p className="split-text">
+            Los frutos secos se remojan antes del horneado, un paso que mejora la digestión y
+            concentra el sabor. Temperatura baja, tiempo largo. Así se consigue esa textura
+            especialmente crujiente que define a Poppy.
+          </p>
+          <Link href="/nosotros" className="btn-pill">
+            el proceso
+          </Link>
+        </div>
+      </div>
+
+      {/* ── PRODUCTS ── */}
+      <section className="fi" style={{ padding: '96px 0', background: 'var(--off)' }}>
+        <div className="container-custom">
+          <div className="flex justify-between items-baseline mb-12">
+            <h2
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontWeight: 400,
+                fontSize: 'clamp(28px, 3vw, 42px)',
+                letterSpacing: '-0.01em',
+              }}
+            >
+              Tres granolas
+            </h2>
+            <Link href="/tienda" className="btn-text">
+              ver todas
+            </Link>
+          </div>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+            {products.slice(0, 3).map((product) => (
+              <div key={product.id}>
                 <ProductCard product={product} />
               </div>
             ))}
           </div>
-
-          <div className="text-center mt-10">
-            <Link
-              href="/tienda"
-              className="text-earth-600 hover:text-earth-700 font-medium inline-flex items-center gap-2 group"
-            >
-              Ver todos los sabores
-              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </div>
         </div>
       </section>
 
-      {/* 3. DIFERENCIAL - Por qué Poppy es diferente */}
-      <section className="py-14 md:py-20 bg-white">
-        <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-stone-800 mb-8 text-center">
-              Por qué <span className="italic">Poppy</span> es <span className="text-earth-600-display-italic">diferente</span>
-            </h2>
-            <div className="space-y-6 text-stone-600 text-lg leading-relaxed">
-              <p>
-                <span className="italic">Poppy</span> está hecha con intención. Los frutos secos se remojan antes del horneado para mejorar su digestión. El tostado lento crea una textura especialmente crujiente.
-              </p>
-              <p className="text-stone-800 font-medium">
-                Ingredientes simples. Proceso cuidado. El resultado: una granola que sabe bien y sienta bien.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Ingredientes hero image */}
-      <div className="w-full relative aspect-[3/1]">
-        <Image
-          src="/images/ingredientes-divider.png"
-          alt="Ingredientes naturales de Poppy Granola"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-      </div>
-
-      {/* 4. INGREDIENTES - Ingredientes reales */}
-      <section className="py-14 md:py-20 bg-white">
-        <div className="container-custom text-center max-w-3xl mx-auto">
-          <h2 className="font-display text-stone-800 text-3xl sm:text-4xl mb-4">
-            Ingredientes <span className="text-earth-600-display-italic">reales</span>. Nada que sobre.
+      {/* ── SPLIT: Ingredientes ── */}
+      <div className="split fi">
+        <div className="split-body bg-off">
+          <span className="section-label">ingredientes</span>
+          <h2 className="split-title">
+            Solo lo que <em>reconoces</em>
           </h2>
-          <p className="text-stone-600 text-lg leading-relaxed">
-            La granola que hago para mí. Crujiente de verdad, especiada con carácter y con un proceso que cuida la digestión.
+          <p className="split-text">
+            Avena sin gluten, miel ecológica, frutos secos seleccionados, aceite de coco, especias.
+            Cada ingrediente tiene un nombre que puedes pronunciar y un origen que conozco. Sin
+            aditivos. Sin conservantes. Sin nada que no pondrías tú en un bol.
           </p>
-          <Link
-            href="/nosotros"
-            className="mt-6 inline-flex text-earth-600 hover:text-earth-700 font-medium items-center gap-2 group"
-          >
-            Conoce nuestra historia
-            <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+          <Link href="/nosotros" className="btn-pill">
+            nuestra filosofía
           </Link>
         </div>
+        <div className="split-img">
+          <div className="split-img-inner">
+            <Image
+              src="/images/ingredientes-hero (1).png"
+              alt="Ingredientes naturales de Poppy"
+              fill
+              className="object-cover"
+              sizes="50vw"
+            />
+          </div>
+          <span
+            style={{
+              position: 'absolute',
+              bottom: '20px',
+              right: '20px',
+              fontSize: '9px',
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+              color: 'var(--white)',
+              opacity: 0.5,
+            }}
+          >
+            Miel ecológica &middot; aceite de coco &middot; especias
+          </span>
+        </div>
+      </div>
+
+      {/* ── QUOTE ── */}
+      <section className="quote-section fi">
+        <span className="quote-marks">&laquo;&raquo;</span>
+        <p className="quote-text">
+          Si no es buena para mí, no es <mark>buena para ti</mark>
+        </p>
+        <p
+          style={{
+            fontSize: '11px',
+            letterSpacing: '0.2em',
+            textTransform: 'uppercase',
+            color: 'rgba(255,255,255,.6)',
+            fontWeight: 400,
+          }}
+        >
+          by Poppy
+        </p>
       </section>
 
-      {/* 6. CONVERSIÓN - Packs y precios */}
-      <section className="py-14 md:py-20 bg-cream-100">
-        <div className="container-custom">
-          <div className="text-center mb-10">
-            <h2 className="font-display text-stone-800 mb-4">
-              Cuanto más compras, más <span className="text-earth-600-display-italic">ahorras</span>
-            </h2>
-            <p className="text-stone-600 max-w-md mx-auto">
-              A partir de 4 bolsas, el envío es gratis.
-            </p>
+      {/* ── SPLIT: La historia ── */}
+      <div className="split fi">
+        <div className="split-img">
+          <div className="split-img-inner">
+            <Image
+              src="/images/freepik__haz-que-tenga-el-pelo-recogido-en-una-coleta-baja-__23407.png"
+              alt="Pilar preparando granola"
+              fill
+              className="object-cover"
+              sizes="50vw"
+            />
           </div>
+          <span
+            style={{
+              position: 'absolute',
+              bottom: '20px',
+              right: '20px',
+              fontSize: '9px',
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+              color: 'var(--dark)',
+              opacity: 0.35,
+            }}
+          >
+            Málaga, España
+          </span>
+        </div>
+        <div className="split-body">
+          <span className="section-label">la historia</span>
+          <h2 className="split-title">
+            De la cocina de casa <em>al mundo</em>
+          </h2>
+          <p className="split-text">
+            Un día el médico me dijo que tenía que eliminar el gluten para siempre. Entonces,
+            empecé a hacer mi propia granola: sin azúcares refinados, sin aditivos, con los frutos
+            secos remojados para cuidar la digestión. La compartí con familia y amigos. Pasó lo que
+            pasa cuando algo está realmente bueno: todos querían más.
+          </p>
+          <Link href="/nosotros" className="btn-text">
+            leer la historia completa
+          </Link>
+        </div>
+      </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-stone-200 max-w-5xl mx-auto">
-            {packOptions.map((pack) => (
-              <div
-                key={pack.size}
-                className={`relative bg-white p-8 transition-all ${
-                  pack.size === 4 ? 'bg-cream-50' : ''
-                }`}
-              >
-                {pack.size === 4 && (
-                  <span className="absolute top-4 right-4 text-xs tracking-widest uppercase text-earth-600">
-                    Popular
-                  </span>
-                )}
-                <h3 className="font-display text-lg text-stone-800 mb-2">
-                  {pack.size === 1 ? '1 bolsa' : `Pack ${pack.size} bolsas`}
-                </h3>
-                <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-3xl font-display text-earth-600">
-                    {formatPrice(pack.unitPriceCents)}
-                  </span>
-                  <span className="text-stone-500 text-sm">/ud.</span>
-                </div>
-                {pack.discountPercentage > 0 && (
-                  <p className="inline-block text-xs text-stone-800 bg-olive-100 px-2 py-1 rounded mb-4">
-                    -{pack.discountPercentage}% por unidad
-                  </p>
-                )}
-                <ul className="space-y-2 text-sm text-stone-600 mb-6">
-                  <li className="flex items-center gap-2">
-                    <Check className="w-3 h-3 text-stone-400" strokeWidth={2} />
-                    Total: {formatPrice(pack.totalPriceCents)}
-                  </li>
-                  <li className="flex items-center gap-2">
-                    <Truck className="w-3 h-3 text-stone-400" strokeWidth={2} />
-                    {pack.freeShipping ? (
-                      <span className="text-earth-600">Envío gratis</span>
-                    ) : (
-                      <span>Envío: 4,95€</span>
-                    )}
-                  </li>
-                </ul>
-                <Link
-                  href="/tienda"
-                  className={`block text-center py-3 text-sm font-medium transition-colors ${
-                    pack.size === 4
-                      ? 'bg-earth-600 text-[#ffffec] hover:bg-earth-700'
-                      : 'border border-stone-300 text-stone-800 hover:border-stone-400'
-                  }`}
-                >
-                  Elegir
-                </Link>
-              </div>
-            ))}
-          </div>
-
-          {/* Subscription CTA */}
-          <div className="mt-14 bg-earth-600 p-10 md:p-14 text-center">
-            <p className="text-xs tracking-widest uppercase text-[#ffffec]/60 mb-4">
-              Suscripción mensual
-            </p>
-            <h3 className="font-display text-3xl md:text-4xl text-[#ffffec] mb-4">
-              Suscríbete y ahorra un {subscriptionInfo.discountPercentage}%
-            </h3>
-            <p className="text-[#ffffec]/70 mb-8 max-w-lg mx-auto">
-              Recibe 6 bolsas cada mes a solo {formatPrice(subscriptionInfo.unitPriceCents)}/ud.
-              Cancela cuando quieras.
-            </p>
-            <Link
-              href="/suscripcion"
-              className="inline-flex items-center gap-2 bg-[#ffffec] text-earth-700 px-8 py-4 font-medium hover:bg-cream-100 transition-colors"
-            >
-              Empezar suscripción
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+      {/* ── SUBSCRIPTION SPLIT ── */}
+      <div className="split fi">
+        <div
+          className="split-img"
+          style={{
+            background: 'linear-gradient(150deg, #5a3e38 0%, #3e2820 100%)',
+            minHeight: '500px',
+          }}
+        >
+          <div className="split-img-inner">
+            <Image
+              src="/images/home horizntal.png"
+              alt="Granola Poppy suscripción"
+              fill
+              className="object-cover"
+              sizes="50vw"
+              style={{ opacity: 0.4 }}
+            />
           </div>
         </div>
-      </section>
+        <div className="split-body" style={{ background: 'var(--off)' }}>
+          <span className="section-label">suscripción</span>
+          <h2 className="split-title">
+            Para quienes no quieren <em>quedarse sin</em>
+          </h2>
+          <div className="sub-stats">
+            <div>
+              <div className="stat-val">&minus;15%</div>
+              <div className="stat-lbl">cada pedido</div>
+            </div>
+            <div>
+              <div className="stat-val">6</div>
+              <div className="stat-lbl">bolsas al mes</div>
+            </div>
+            <div>
+              <div className="stat-val">0</div>
+              <div className="stat-lbl">sin compromiso</div>
+            </div>
+          </div>
+          <p className="split-text">
+            Entrega en tu puerta, cancela cuando quieras. El 15% que ahorras es mi modo de decir
+            gracias.
+          </p>
+          <Link href="/suscripcion" className="btn-pill">
+            empezar la suscripción
+          </Link>
+        </div>
+      </div>
+
+      {/* Client-side IntersectionObserver */}
+      <HomeClient />
     </>
   );
 }

@@ -95,7 +95,7 @@ export default function TablaNutricionalPage() {
     <>
       <JsonLd data={breadcrumbSchema} />
 
-      <div className="section bg-cream-50">
+      <div style={{ paddingTop: '140px', paddingBottom: '96px', background: 'var(--off)' }}>
         <div className="container-custom">
           {/* Breadcrumbs */}
           <nav className="mb-8" aria-label="Breadcrumb">

@@ -176,14 +176,14 @@ export default function CheckoutPage() {
   // Redirect if cart is empty
   if (items.length === 0) {
     return (
-      <div className="section">
+      <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
         <div className="container-custom text-center">
-          <h1 className="text-2xl mb-4">Tu carrito está vacío</h1>
-          <p className="text-neutral-600 mb-6">
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '16px' }}>Tu carrito está vacío</h1>
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, marginBottom: '24px' }}>
             Añade algunos productos antes de continuar con el checkout.
           </p>
-          <Link href="/tienda" className="btn-primary">
-            Ir a la tienda
+          <Link href="/tienda" className="btn-pill">
+            ir a la tienda
           </Link>
         </div>
       </div>
@@ -338,7 +338,7 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="section-sm bg-neutral-50 min-h-screen">
+    <div className="min-h-screen" style={{ paddingTop: '140px', paddingBottom: '96px', background: 'var(--off)' }}>
       <div className="container-custom">
         {/* Header */}
         <div className="mb-8">

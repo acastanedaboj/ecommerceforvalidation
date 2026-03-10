@@ -4,7 +4,7 @@ import { CheckCircle, Package, Mail, ArrowRight } from 'lucide-react';
 
 function ConfirmacionContent() {
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom max-w-2xl">
         <div className="text-center">
           {/* Success icon */}
@@ -91,7 +91,7 @@ export default function ConfirmacionPage() {
   return (
     <Suspense
       fallback={
-        <div className="section">
+        <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
           <div className="container-custom text-center">
             <p>Cargando...</p>
           </div>

@@ -43,14 +43,14 @@ export default function FAQPage() {
         ])}
       />
 
-      <div className="section">
+      <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-display text-neutral-900 mb-4">
+          <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
             Preguntas frecuentes
           </h1>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, maxWidth: '520px', margin: '0 auto', lineHeight: 1.85 }}>
             Encuentra respuestas a las dudas más comunes sobre nuestros productos,
             envíos, pagos y suscripciones.
           </p>
@@ -62,9 +62,19 @@ export default function FAQPage() {
             <a
               key={category.id}
               href={`#${category.id}`}
-              className="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-neutral-200 hover:border-primary-300 hover:bg-primary-50 transition-colors"
+              className="inline-flex items-center gap-2 transition-colors"
+              style={{
+                padding: '8px 18px',
+                background: 'var(--white)',
+                border: '1px solid rgba(0,0,0,.1)',
+                borderRadius: '100px',
+                fontSize: '13px',
+                fontWeight: 300,
+                color: 'rgba(17,17,17,.6)',
+                textDecoration: 'none',
+              }}
             >
-              {categoryIcons[category.id]}
+              <span style={{ color: 'var(--brown)' }}>{categoryIcons[category.id]}</span>
               {category.name}
             </a>
           ))}
@@ -80,40 +90,43 @@ export default function FAQPage() {
             return (
               <section key={category.id} id={category.id}>
                 <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 bg-primary-100 rounded-lg flex items-center justify-center text-primary-600">
-                    {categoryIcons[category.id]}
+                  <div className="w-10 h-10 flex items-center justify-center flex-shrink-0" style={{ background: 'var(--off)' }}>
+                    <span style={{ color: 'var(--brown)' }}>{categoryIcons[category.id]}</span>
                   </div>
-                  <h2 className="text-2xl font-display text-neutral-900">
+                  <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '22px' }}>
                     {category.name}
                   </h2>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {categoryFaqs.map((faq) => (
                     <details
                       key={faq.id}
-                      className="bg-white rounded-xl border border-neutral-200 group"
+                      className="group"
+                      style={{ background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}
                     >
-                      <summary className="p-6 text-neutral-900 cursor-pointer list-none flex justify-between items-center hover:text-primary-600 transition-colors">
+                      <summary
+                        className="cursor-pointer list-none flex justify-between items-center transition-colors"
+                        style={{ padding: '20px 24px', fontSize: '15px', fontWeight: 400, color: 'var(--dark)' }}
+                      >
                         {faq.question}
-                        <span className="text-primary-600 group-open:rotate-180 transition-transform ml-4 flex-shrink-0">
+                        <span className="group-open:rotate-180 transition-transform ml-4 flex-shrink-0" style={{ color: 'var(--brown)' }}>
                           ↓
                         </span>
                       </summary>
-                      <div className="px-6 pb-6 -mt-2">
-                        <div className="prose-custom prose-sm">
-                          {faq.answer.split('\n\n').map((paragraph, index) => (
-                            <p
-                              key={index}
-                              className="text-neutral-600 mb-3 last:mb-0 whitespace-pre-line"
-                              dangerouslySetInnerHTML={{
-                                __html: paragraph
-                                  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                                  .replace(/\n- /g, '<br/>• '),
-                              }}
-                            />
-                          ))}
-                        </div>
+                      <div style={{ padding: '0 24px 20px' }}>
+                        {faq.answer.split('\n\n').map((paragraph, index) => (
+                          <p
+                            key={index}
+                            className="last:mb-0 whitespace-pre-line"
+                            style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '12px' }}
+                            dangerouslySetInnerHTML={{
+                              __html: paragraph
+                                .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                                .replace(/\n- /g, '<br/>• '),
+                            }}
+                          />
+                        ))}
                       </div>
                     </details>
                   ))}
@@ -124,15 +137,15 @@ export default function FAQPage() {
         </div>
 
         {/* Contact CTA */}
-        <div className="mt-16 bg-primary-50 rounded-2xl p-8 text-center max-w-2xl mx-auto">
-          <h3 className="text-xl text-neutral-900 mb-2">
+        <div className="mt-16 p-8 md:p-12 text-center max-w-2xl mx-auto" style={{ background: 'var(--off)' }}>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '22px', marginBottom: '8px' }}>
             ¿No encuentras lo que buscas?
           </h3>
-          <p className="text-neutral-600 mb-4">
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, marginBottom: '24px', lineHeight: 1.85 }}>
             Estamos aquí para ayudarte. Escríbenos y te responderemos lo antes posible.
           </p>
-          <Link href="/contacto" className="btn-primary">
-            Contactar
+          <Link href="/contacto" className="btn-pill">
+            contactar
           </Link>
         </div>
       </div>

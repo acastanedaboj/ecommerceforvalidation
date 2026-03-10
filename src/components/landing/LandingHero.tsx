@@ -27,8 +27,8 @@ export function LandingHero({
   image,
 }: LandingHeroProps) {
   return (
-    <section className="relative bg-white overflow-hidden">
-      <div className="container-custom pt-10 pb-16 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28">
+    <section className="relative overflow-hidden" style={{ background: 'var(--white)' }}>
+      <div className="container-custom" style={{ paddingTop: '160px', paddingBottom: '64px' }}>
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
           <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
@@ -37,7 +37,7 @@ export function LandingHero({
                 {badges.map((badge, index) => (
                   <span
                     key={index}
-                    className="inline-block text-xs tracking-widest uppercase text-earth-600 bg-earth-100 px-3 py-1 rounded-full"
+                    style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'var(--brown)', background: 'var(--off)', padding: '4px 12px', borderRadius: '100px' }}
                   >
                     {badge}
                   </span>
@@ -45,27 +45,27 @@ export function LandingHero({
               </div>
             )}
 
-            <h1 className="font-display text-stone-800 mb-6">
+            <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '24px' }}>
               {title}
               {highlight && (
                 <>
                   <br />
-                  <span className="text-earth-600">{highlight}</span>
+                  <span style={{ color: 'var(--brown)' }}>{highlight}</span>
                 </>
               )}
             </h1>
 
-            <p className="text-base md:text-lg text-stone-600 mb-10 leading-relaxed">
+            <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '40px' }}>
               {subtitle}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Link href={ctaHref} className="btn-primary btn-lg group">
+              <Link href={ctaHref} className="btn-pill group">
                 {ctaText}
                 <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
               </Link>
               {secondaryCta && (
-                <Link href={secondaryCta.href} className="btn-outline btn-lg">
+                <Link href={secondaryCta.href} className="btn-pill" style={{ borderColor: 'rgba(0,0,0,.15)' }}>
                   {secondaryCta.text}
                 </Link>
               )}

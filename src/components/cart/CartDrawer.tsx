@@ -25,9 +25,10 @@ export function CartDrawer() {
       {/* Backdrop */}
       <div
         className={cn(
-          'fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-50 transition-all duration-400',
+          'fixed inset-0 z-50 transition-all duration-400',
           isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
         )}
+        style={{ background: 'rgba(17,17,17,.5)', backdropFilter: 'blur(4px)' }}
         onClick={() => setIsOpen(false)}
         aria-hidden="true"
       />
@@ -35,20 +36,28 @@ export function CartDrawer() {
       {/* Drawer */}
       <aside
         className={cn(
-          'fixed top-0 right-0 h-full w-full max-w-md bg-cream-50 z-50 shadow-soft-xl transition-transform duration-400 ease-bounce-soft flex flex-col',
+          'fixed top-0 right-0 h-full w-full max-w-md z-50 transition-transform duration-400 flex flex-col',
           isOpen ? 'translate-x-0' : 'translate-x-full'
         )}
+        style={{
+          background: 'var(--white)',
+          boxShadow: isOpen ? '-20px 0 60px rgba(0,0,0,.1)' : 'none',
+          transitionTimingFunction: 'cubic-bezier(0.34, 1.56, 0.64, 1)',
+        }}
         role="dialog"
         aria-modal="true"
         aria-label="Carrito de compra"
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-6 py-5 border-b border-cream-200 bg-white">
-          <h2 className="font-display text-xl font-medium text-stone-800 flex items-center gap-3">
-            <ShoppingBag className="w-5 h-5 text-earth-500" />
+        <div
+          className="flex items-center justify-between px-6 py-5"
+          style={{ borderBottom: '1px solid rgba(0,0,0,.07)' }}
+        >
+          <h2 className="flex items-center gap-3" style={{ fontFamily: 'var(--font-display)', fontSize: '20px', color: 'var(--dark)' }}>
+            <ShoppingBag className="w-5 h-5" style={{ color: 'var(--brown)' }} />
             Tu carrito
             {items.length > 0 && (
-              <span className="text-sm font-sans font-normal text-stone-400">
+              <span style={{ fontSize: '13px', fontFamily: 'var(--font-sans)', fontWeight: 300, color: 'rgba(17,17,17,.4)' }}>
                 ({cartTotal.itemCount} {cartTotal.itemCount === 1 ? 'producto' : 'productos'})
               </span>
             )}
@@ -56,20 +65,21 @@ export function CartDrawer() {
           <button
             type="button"
             onClick={() => setIsOpen(false)}
-            className="p-2.5 hover:bg-cream-100 rounded-full transition-colors"
+            className="p-2.5 transition-colors hover:opacity-50"
+            style={{ background: 'none', border: 'none' }}
             aria-label="Cerrar carrito"
           >
-            <X className="w-5 h-5 text-stone-500" />
+            <X className="w-5 h-5" style={{ color: 'rgba(17,17,17,.4)' }} />
           </button>
         </div>
 
         {/* Free shipping progress */}
         {items.length > 0 && !cartTotal.isFreeShipping && (
-          <div className="px-6 py-4 bg-earth-50 border-b border-earth-100">
+          <div className="px-6 py-4" style={{ background: 'var(--off)', borderBottom: '1px solid rgba(0,0,0,.05)' }}>
             <div className="flex items-center gap-2 mb-3">
-              <Truck className="w-4 h-4 text-earth-500" />
-              <p className="text-sm text-earth-700">
-                Te faltan <strong>{formatPrice(amountForFreeShipping)}</strong> para envio gratis
+              <Truck className="w-4 h-4" style={{ color: 'var(--brown)' }} />
+              <p style={{ fontSize: '13px', color: 'var(--dark)', fontWeight: 300 }}>
+                Te faltan <strong style={{ fontWeight: 700 }}>{formatPrice(amountForFreeShipping)}</strong> para envio gratis
               </p>
             </div>
             <div className="progress-bar">
@@ -82,8 +92,8 @@ export function CartDrawer() {
         )}
 
         {items.length > 0 && cartTotal.isFreeShipping && (
-          <div className="px-6 py-4 bg-olive-50 border-b border-olive-100">
-            <p className="text-sm text-olive-700 font-medium flex items-center gap-2">
+          <div className="px-6 py-4" style={{ background: 'rgba(243,238,148,.15)', borderBottom: '1px solid rgba(243,238,148,.3)' }}>
+            <p className="flex items-center gap-2" style={{ fontSize: '13px', color: 'var(--dark)', fontWeight: 700 }}>
               <Check className="w-4 h-4" />
               Genial! Tu pedido tiene envio gratis
             </p>
@@ -94,28 +104,30 @@ export function CartDrawer() {
         <div className="flex-1 overflow-y-auto scrollbar-custom">
           {items.length === 0 ? (
             <div className="flex flex-col items-center justify-center h-full px-6 text-center">
-              <div className="w-20 h-20 bg-earth-100 rounded-full flex items-center justify-center mb-6">
-                <ShoppingBag className="w-10 h-10 text-earth-400" />
+              <div className="w-20 h-20 flex items-center justify-center mb-6" style={{ background: 'var(--off)' }}>
+                <ShoppingBag className="w-10 h-10" style={{ color: 'rgba(17,17,17,.15)' }} />
               </div>
-              <p className="font-display text-lg text-stone-700 mb-2">Tu carrito esta vacio</p>
-              <p className="text-sm text-stone-400 mb-8">
+              <p style={{ fontFamily: 'var(--font-display)', fontSize: '18px', color: 'var(--dark)', marginBottom: '8px' }}>
+                Tu carrito esta vacio
+              </p>
+              <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.4)', fontWeight: 300, marginBottom: '32px' }}>
                 Anade algunos productos deliciosos
               </p>
               <Link
                 href="/tienda"
                 onClick={() => setIsOpen(false)}
-                className="btn-primary"
+                className="btn-pill"
               >
-                Ver productos
+                ver productos
               </Link>
             </div>
           ) : (
-            <ul className="divide-y divide-cream-100">
+            <ul style={{ listStyle: 'none' }}>
               {items.map((item) => {
                 // Check if this is a bundle item
                 if (isCartBundleItem(item)) {
                   return (
-                    <li key={item.bundleId} className="px-6">
+                    <li key={item.bundleId} className="px-6" style={{ borderBottom: '1px solid rgba(0,0,0,.05)' }}>
                       <BundleCartItem item={item} />
                     </li>
                   );
@@ -125,14 +137,16 @@ export function CartDrawer() {
                 return (
                   <li
                     key={`${item.productId}-${item.packSize}-${item.isSubscription}`}
-                    className="px-6 py-5 hover:bg-cream-50/50 transition-colors"
+                    className="px-6 py-5 transition-colors"
+                    style={{ borderBottom: '1px solid rgba(0,0,0,.05)' }}
                   >
                     <div className="flex gap-4">
                       {/* Product image */}
                       <Link
                         href={`/tienda/${item.productSlug}`}
                         onClick={() => setIsOpen(false)}
-                        className="relative w-20 h-20 bg-cream-100 overflow-hidden flex-shrink-0 group"
+                        className="relative w-20 h-20 overflow-hidden flex-shrink-0 group"
+                        style={{ background: 'var(--off)' }}
                       >
                         <Image
                           src={item.productImage || '/images/placeholder-product.jpg'}
@@ -148,7 +162,8 @@ export function CartDrawer() {
                         <Link
                           href={`/tienda/${item.productSlug}`}
                           onClick={() => setIsOpen(false)}
-                          className="font-medium text-stone-800 hover:text-earth-600 transition-colors line-clamp-1"
+                          className="line-clamp-1 transition-colors"
+                          style={{ fontWeight: 700, fontSize: '14px', color: 'var(--dark)', textDecoration: 'none' }}
                         >
                           {item.productName}
                         </Link>
@@ -156,16 +171,19 @@ export function CartDrawer() {
                         {/* Pack/Subscription info */}
                         <div className="mt-1.5 flex flex-wrap gap-2">
                           {item.packSize > 1 && (
-                            <span className="badge-secondary text-xs">Pack {item.packSize}</span>
+                            <span className="badge-secondary">Pack {item.packSize}</span>
                           )}
                           {item.isSubscription && (
-                            <span className="badge bg-olive-100 text-olive-700 text-xs">Suscripcion</span>
+                            <span className="badge" style={{ background: 'rgba(243,238,148,.3)', color: 'var(--dark)' }}>Suscripcion</span>
                           )}
                         </div>
 
                         {/* Price and quantity */}
                         <div className="mt-3 flex items-center justify-between">
-                          <div className="flex items-center bg-white border border-cream-200 rounded-full">
+                          <div
+                            className="flex items-center"
+                            style={{ border: '1px solid rgba(0,0,0,.1)', borderRadius: '100px' }}
+                          >
                             <button
                               type="button"
                               onClick={() =>
@@ -176,12 +194,13 @@ export function CartDrawer() {
                                   item.quantity - 1
                                 )
                               }
-                              className="p-2 hover:bg-cream-50 rounded-l-full transition-colors"
+                              className="p-2 transition-colors hover:bg-off"
+                              style={{ borderRadius: '100px 0 0 100px', background: 'none', border: 'none' }}
                               aria-label="Reducir cantidad"
                             >
-                              <Minus className="w-3.5 h-3.5 text-stone-500" />
+                              <Minus className="w-3.5 h-3.5" style={{ color: 'rgba(17,17,17,.4)' }} />
                             </button>
-                            <span className="w-8 text-center text-sm font-medium text-stone-800">
+                            <span style={{ width: '32px', textAlign: 'center', fontSize: '13px', fontWeight: 700, color: 'var(--dark)' }}>
                               {item.quantity}
                             </span>
                             <button
@@ -194,14 +213,15 @@ export function CartDrawer() {
                                   item.quantity + 1
                                 )
                               }
-                              className="p-2 hover:bg-cream-50 rounded-r-full transition-colors"
+                              className="p-2 transition-colors hover:bg-off"
+                              style={{ borderRadius: '0 100px 100px 0', background: 'none', border: 'none' }}
                               aria-label="Aumentar cantidad"
                             >
-                              <Plus className="w-3.5 h-3.5 text-stone-500" />
+                              <Plus className="w-3.5 h-3.5" style={{ color: 'rgba(17,17,17,.4)' }} />
                             </button>
                           </div>
 
-                          <p className="font-semibold text-stone-800">
+                          <p style={{ fontWeight: 700, fontSize: '14px', color: 'var(--dark)' }}>
                             {formatPrice(
                               cartTotal.items.find(
                                 (i) =>
@@ -220,7 +240,8 @@ export function CartDrawer() {
                         onClick={() =>
                           removeItem(item.productId, item.packSize, item.isSubscription)
                         }
-                        className="p-2 text-stone-300 hover:text-red-500 hover:bg-red-50 rounded-full transition-all self-start"
+                        className="p-2 transition-all self-start hover:opacity-50"
+                        style={{ color: 'rgba(17,17,17,.2)', background: 'none', border: 'none' }}
                         aria-label={`Eliminar ${item.productName} del carrito`}
                       >
                         <Trash2 className="w-4 h-4" />
@@ -235,49 +256,49 @@ export function CartDrawer() {
 
         {/* Footer with totals */}
         {items.length > 0 && (
-          <div className="border-t border-cream-200 px-6 py-5 bg-white">
+          <div className="px-6 py-5" style={{ borderTop: '1px solid rgba(0,0,0,.07)', background: 'var(--white)' }}>
             {/* Subtotals */}
-            <div className="space-y-2.5 text-sm">
+            <div className="space-y-2.5" style={{ fontSize: '13px' }}>
               <div className="flex justify-between">
-                <span className="text-stone-500">Subtotal</span>
-                <span className="text-stone-700">{formatPrice(cartTotal.subtotalCents)}</span>
+                <span style={{ color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>Subtotal</span>
+                <span style={{ color: 'var(--dark)', fontWeight: 300 }}>{formatPrice(cartTotal.subtotalCents)}</span>
               </div>
 
               {cartTotal.discountCents > 0 && (
-                <div className="flex justify-between text-olive-600">
+                <div className="flex justify-between" style={{ color: 'var(--blue)' }}>
                   <span>Descuento</span>
                   <span>-{formatPrice(cartTotal.discountCents)}</span>
                 </div>
               )}
 
               <div className="flex justify-between">
-                <span className="text-stone-500">Envio</span>
+                <span style={{ color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>Envio</span>
                 <span>
                   {cartTotal.isFreeShipping ? (
-                    <span className="text-olive-600 font-medium">Gratis</span>
+                    <span style={{ color: 'var(--brown)', fontWeight: 700 }}>Gratis</span>
                   ) : (
-                    <span className="text-stone-700">{formatPrice(cartTotal.shippingCents)}</span>
+                    <span style={{ color: 'var(--dark)', fontWeight: 300 }}>{formatPrice(cartTotal.shippingCents)}</span>
                   )}
                 </span>
               </div>
 
-              <div className="flex justify-between text-xs text-stone-400">
+              <div className="flex justify-between" style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)' }}>
                 <span>IVA incluido (10%)</span>
                 <span>{formatPrice(cartTotal.taxCents)}</span>
               </div>
             </div>
 
             {/* Total */}
-            <div className="flex justify-between items-center mt-5 pt-5 border-t border-cream-200">
-              <span className="font-medium text-stone-600">Total</span>
-              <span className="text-2xl font-display text-stone-800">
+            <div className="flex justify-between items-center mt-5 pt-5" style={{ borderTop: '1px solid rgba(0,0,0,.07)' }}>
+              <span style={{ fontWeight: 300, color: 'rgba(17,17,17,.5)', fontSize: '14px' }}>Total</span>
+              <span style={{ fontFamily: 'var(--font-display)', fontSize: '24px', color: 'var(--dark)' }}>
                 {formatPrice(cartTotal.totalCents)}
               </span>
             </div>
 
             {/* Savings callout */}
             {cartTotal.discountCents > 0 && (
-              <p className="text-sm text-olive-600 mt-2 text-right">
+              <p className="mt-2 text-right" style={{ fontSize: '12px', color: 'var(--blue)', fontWeight: 300 }}>
                 Has ahorrado {formatPrice(cartTotal.discountCents)}
               </p>
             )}
@@ -288,7 +309,7 @@ export function CartDrawer() {
               onClick={() => setIsOpen(false)}
               className="btn-primary w-full mt-5 justify-center py-4"
             >
-              Finalizar compra
+              finalizar compra
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
 
@@ -296,9 +317,10 @@ export function CartDrawer() {
             <button
               type="button"
               onClick={() => setIsOpen(false)}
-              className="btn-ghost w-full mt-2 justify-center text-sm"
+              className="btn-ghost w-full mt-2 justify-center"
+              style={{ fontSize: '13px' }}
             >
-              Seguir comprando
+              seguir comprando
             </button>
           </div>
         )}

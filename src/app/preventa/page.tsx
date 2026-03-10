@@ -139,7 +139,7 @@ export default function PreventaPage() {
   // Success state
   if (isSubmitted) {
     return (
-      <div className="section">
+      <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
         <div className="container-custom max-w-2xl text-center">
           <div className="inline-flex items-center justify-center w-20 h-20 bg-accent-100 rounded-full mb-6">
             <CheckCircle className="w-10 h-10 text-accent-600" />
@@ -160,7 +160,7 @@ export default function PreventaPage() {
   }
 
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">

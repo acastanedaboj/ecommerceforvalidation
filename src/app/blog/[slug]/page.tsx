@@ -99,7 +99,7 @@ export default function BlogPostPage({ params }: Props) {
     // Helper function to parse inline markdown (bold + links)
     const parseInline = (text: string) => {
       return text
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-earth-600 underline hover:text-earth-700 transition-colors">$1</a>')
+        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" style="color:var(--brown);text-decoration:underline">$1</a>')
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     };
 
@@ -110,7 +110,7 @@ export default function BlogPostPage({ params }: Props) {
     while (i < lines.length) {
       const line = lines[i];
 
-      // Skip empty lines (don't render <br/>)
+      // Skip empty lines
       if (line.trim() === '') {
         i++;
         continue;
@@ -121,7 +121,7 @@ export default function BlogPostPage({ params }: Props) {
         elements.push(
           <h1
             key={i}
-            className="text-3xl font-display text-neutral-900 mt-8 mb-4"
+            style={{ fontFamily: 'var(--font-display)', fontSize: '28px', marginTop: '32px', marginBottom: '16px' }}
             dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
           />
         );
@@ -132,7 +132,7 @@ export default function BlogPostPage({ params }: Props) {
         elements.push(
           <h2
             key={i}
-            className="text-2xl font-display text-neutral-900 mt-8 mb-4"
+            style={{ fontFamily: 'var(--font-display)', fontSize: '22px', marginTop: '32px', marginBottom: '16px' }}
             dangerouslySetInnerHTML={{ __html: parseInline(line.slice(3)) }}
           />
         );
@@ -143,7 +143,7 @@ export default function BlogPostPage({ params }: Props) {
         elements.push(
           <h3
             key={i}
-            className="text-xl font-semibold text-neutral-900 mt-6 mb-3"
+            style={{ fontFamily: 'var(--font-display)', fontSize: '18px', marginTop: '24px', marginBottom: '12px' }}
             dangerouslySetInnerHTML={{ __html: parseInline(line.slice(4)) }}
           />
         );
@@ -159,7 +159,7 @@ export default function BlogPostPage({ params }: Props) {
           listItems.push(
             <li
               key={i}
-              className="text-neutral-600"
+              style={{ color: 'rgba(17,17,17,.5)' }}
               dangerouslySetInnerHTML={{ __html: parseInline(lines[i].slice(2)) }}
             />
           );
@@ -181,7 +181,7 @@ export default function BlogPostPage({ params }: Props) {
           listItems.push(
             <li
               key={i}
-              className="text-neutral-600"
+              style={{ color: 'rgba(17,17,17,.5)' }}
               dangerouslySetInnerHTML={{ __html: parseInline(lines[i].replace(/^\d+\.\s/, '')) }}
             />
           );
@@ -197,7 +197,7 @@ export default function BlogPostPage({ params }: Props) {
 
       // Horizontal rule
       if (line.trim() === '---') {
-        elements.push(<hr key={i} className="my-8 border-neutral-200" />);
+        elements.push(<hr key={i} style={{ margin: '32px 0', border: 'none', borderTop: '1px solid rgba(0,0,0,.07)' }} />);
         i++;
         continue;
       }
@@ -212,7 +212,7 @@ export default function BlogPostPage({ params }: Props) {
             href={href}
             target="_blank"
             rel="sponsored noopener noreferrer"
-            className="block my-8 overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            className="block my-8 overflow-hidden transition-shadow"
             aria-label={alt}
           >
             <Image
@@ -234,7 +234,7 @@ export default function BlogPostPage({ params }: Props) {
         elements.push(
           <blockquote
             key={i}
-            className="border-l-4 border-primary-300 pl-4 py-2 my-4 italic text-neutral-600 bg-neutral-50 rounded-r"
+            style={{ borderLeft: '3px solid var(--brown)', paddingLeft: '16px', margin: '16px 0', fontStyle: 'italic', color: 'rgba(17,17,17,.5)' }}
             dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
           />
         );
@@ -246,7 +246,7 @@ export default function BlogPostPage({ params }: Props) {
       elements.push(
         <p
           key={i}
-          className="text-neutral-600 mb-4 leading-relaxed"
+          style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '16px' }}
           dangerouslySetInnerHTML={{ __html: parseInline(line) }}
         />
       );
@@ -275,13 +275,14 @@ export default function BlogPostPage({ params }: Props) {
         <JsonLd data={buildFaqSchema(post.faqs)} />
       )}
 
-      <article className="section">
+      <article style={{ paddingTop: '140px', paddingBottom: '96px' }}>
         <div className="container-custom">
           {/* Breadcrumb */}
           <nav className="mb-8">
             <Link
             href="/blog"
-            className="inline-flex items-center text-neutral-600 hover:text-primary-600"
+            className="inline-flex items-center transition-colors"
+            style={{ color: 'rgba(17,17,17,.4)', textDecoration: 'none', fontSize: '13px' }}
           >
             <ChevronLeft className="w-4 h-4 mr-1" />
             Volver al blog
@@ -291,20 +292,20 @@ export default function BlogPostPage({ params }: Props) {
         {/* Header */}
         <header className="max-w-3xl mx-auto text-center mb-12">
           <span className="badge-accent mb-4">{category?.name}</span>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-display text-neutral-900 mb-6">
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 4vw, 44px)', marginBottom: '24px' }}>
             {post.title}
           </h1>
-          <p className="text-lg text-neutral-600 mb-6">{post.excerpt}</p>
-          <div className="flex items-center justify-center gap-4 text-sm text-neutral-500">
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '24px' }}>{post.excerpt}</p>
+          <div className="flex items-center justify-center gap-4" style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
             <span>{post.author}</span>
-            <span>•</span>
+            <span>·</span>
             <span className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
+              <Calendar className="w-3.5 h-3.5" />
               {formatDate(post.publishedAt)}
             </span>
-            <span>•</span>
+            <span>·</span>
             <span className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
+              <Clock className="w-3.5 h-3.5" />
               {post.readingTime} min lectura
             </span>
           </div>
@@ -329,12 +330,12 @@ export default function BlogPostPage({ params }: Props) {
           <div className="prose-custom">{formatContent(post.content)}</div>
 
           {/* Tags */}
-          <div className="mt-8 pt-8 border-t border-neutral-200">
+          <div className="mt-8 pt-8" style={{ borderTop: '1px solid rgba(0,0,0,.07)' }}>
             <div className="flex flex-wrap gap-2">
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="badge bg-neutral-100 text-neutral-700"
+                  style={{ background: 'var(--off)', color: 'rgba(17,17,17,.5)', fontSize: '12px', padding: '4px 12px', borderRadius: '100px', fontWeight: 300 }}
                 >
                   #{tag}
                 </span>
@@ -344,21 +345,22 @@ export default function BlogPostPage({ params }: Props) {
 
           {/* Share */}
           <div className="mt-8 flex items-center gap-4">
-            <span className="text-neutral-600">Compartir:</span>
+            <span style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)' }}>Compartir:</span>
             <button
               type="button"
-              className="p-2 hover:bg-neutral-100 rounded-lg transition-colors"
+              className="p-2 transition-colors"
+              style={{ color: 'rgba(17,17,17,.4)' }}
               aria-label="Compartir"
             >
-              <Share2 className="w-5 h-5 text-neutral-600" />
+              <Share2 className="w-5 h-5" />
             </button>
           </div>
         </div>
 
         {/* Related posts */}
         {relatedPosts.length > 0 && (
-          <section className="mt-16 pt-16 border-t border-neutral-200">
-            <h2 className="text-2xl font-display text-neutral-900 mb-8 text-center">
+          <section className="mt-16 pt-16" style={{ borderTop: '1px solid rgba(0,0,0,.07)' }}>
+            <h2 className="text-center" style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '32px' }}>
               Artículos relacionados
             </h2>
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
@@ -378,10 +380,10 @@ export default function BlogPostPage({ params }: Props) {
                     />
                   </div>
                   <div className="p-6">
-                    <h3 className="text-neutral-900 group-hover:text-primary-600 transition-colors">
+                    <h3 className="group-hover:text-poppy-brown transition-colors" style={{ fontFamily: 'var(--font-display)', fontSize: '18px', marginBottom: '8px' }}>
                       {relatedPost.title}
                     </h3>
-                    <p className="text-sm text-neutral-600 mt-2 line-clamp-2">
+                    <p className="line-clamp-2" style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.7 }}>
                       {relatedPost.excerpt}
                     </p>
                   </div>
@@ -392,15 +394,15 @@ export default function BlogPostPage({ params }: Props) {
         )}
 
         {/* CTA */}
-        <section className="mt-16 bg-primary-50 rounded-2xl p-8 text-center max-w-2xl mx-auto">
-          <h3 className="text-xl text-neutral-900 mb-2">
+        <section className="mt-16 p-8 md:p-12 text-center max-w-2xl mx-auto" style={{ background: 'var(--off)' }}>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '22px', marginBottom: '8px' }}>
             ¿Te ha gustado este artículo?
           </h3>
-          <p className="text-neutral-600 mb-4">
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, marginBottom: '24px' }}>
             Prueba nuestra granola Poppy y ponla en práctica
           </p>
-          <Link href="/tienda" className="btn-primary">
-            Ver productos
+          <Link href="/tienda" className="btn-pill">
+            ver productos
           </Link>
         </section>
         </div>

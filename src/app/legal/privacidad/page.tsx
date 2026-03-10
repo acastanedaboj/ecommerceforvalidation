@@ -12,14 +12,14 @@ export const metadata: Metadata = {
 
 export default function PrivacidadPage() {
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom max-w-3xl">
-        <h1 className="text-4xl font-display text-neutral-900 mb-8">
+        <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '32px' }}>
           Política de Privacidad
         </h1>
 
         <div className="prose-custom">
-          <p className="text-neutral-600 mb-6">
+          <p style={{ color: 'rgba(17,17,17,.4)', fontSize: '13px', marginBottom: '24px' }}>
             Última actualización: Febrero 2026
           </p>
 

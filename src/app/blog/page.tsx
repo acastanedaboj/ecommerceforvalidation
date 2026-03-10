@@ -21,7 +21,6 @@ export default function BlogPage() {
 
   return (
     <>
-      {/* JSON-LD: Breadcrumb Schema */}
       <JsonLd
         data={buildBreadcrumbSchema([
           { name: 'Inicio', url: '/' },
@@ -29,14 +28,14 @@ export default function BlogPage() {
         ])}
       />
 
-      <div className="section">
+      <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom">
         {/* Header */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl md:text-5xl font-display text-neutral-900 mb-4">
+          <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
             Blog & recetas
           </h1>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, maxWidth: '520px', margin: '0 auto', lineHeight: 1.85 }}>
             Ideas para disfrutar de tu granola, consejos de nutrición y todo lo que
             necesitas saber sobre alimentación consciente.
           </p>
@@ -49,8 +48,9 @@ export default function BlogPage() {
             className={`badge transition-colors ${
               selectedCategory === null
                 ? 'badge-primary'
-                : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
+                : ''
             }`}
+            style={selectedCategory !== null ? { background: 'var(--off)', color: 'rgba(17,17,17,.5)' } : {}}
           >
             Todos
           </button>
@@ -61,8 +61,9 @@ export default function BlogPage() {
               className={`badge transition-colors ${
                 selectedCategory === category.id
                   ? 'badge-primary'
-                  : 'bg-neutral-100 text-neutral-700 hover:bg-neutral-200'
+                  : ''
               }`}
+              style={selectedCategory !== category.id ? { background: 'var(--off)', color: 'rgba(17,17,17,.5)' } : {}}
             >
               {category.name}
             </button>
@@ -73,8 +74,8 @@ export default function BlogPage() {
         {featuredPost && (
           <article className="mb-16">
             <Link href={`/blog/${featuredPost.slug}`} className="group">
-              <div className="grid md:grid-cols-2 gap-8 items-center bg-white overflow-hidden shadow-sm border border-neutral-200">
-                <div className="relative aspect-video md:aspect-square">
+              <div className="grid md:grid-cols-2 gap-0 items-stretch overflow-hidden" style={{ border: '1px solid rgba(0,0,0,.06)' }}>
+                <div className="relative aspect-video md:aspect-auto md:min-h-[400px]">
                   <Image
                     src={featuredPost.coverImage || '/images/blog/placeholder.jpg'}
                     alt={featuredPost.title}
@@ -84,29 +85,28 @@ export default function BlogPage() {
                     priority
                   />
                 </div>
-                <div className="p-6 md:p-8">
+                <div className="p-8 md:p-10 flex flex-col justify-center" style={{ background: 'var(--white)' }}>
                   <span className="badge-accent mb-3">
                     {blogCategories.find((c) => c.id === featuredPost.category)?.name}
                   </span>
-                  <h2 className="text-2xl md:text-3xl font-display text-neutral-900 mb-3 group-hover:text-primary-600 transition-colors">
+                  <h2 className="group-hover:text-poppy-brown transition-colors" style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(22px, 2.5vw, 32px)', marginBottom: '12px' }}>
                     {featuredPost.title}
                   </h2>
-                  <p className="text-neutral-600 mb-4 line-clamp-3">
+                  <p className="line-clamp-3" style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '16px' }}>
                     {featuredPost.excerpt}
                   </p>
-                  <div className="flex items-center gap-4 text-sm text-neutral-500 mb-4">
+                  <div className="flex items-center gap-4 mb-4" style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                     <span className="flex items-center gap-1">
-                      <Calendar className="w-4 h-4" />
+                      <Calendar className="w-3.5 h-3.5" />
                       {formatDate(featuredPost.publishedAt)}
                     </span>
                     <span className="flex items-center gap-1">
-                      <Clock className="w-4 h-4" />
+                      <Clock className="w-3.5 h-3.5" />
                       {featuredPost.readingTime} min lectura
                     </span>
                   </div>
-                  <span className="inline-flex items-center text-primary-600 font-medium group-hover:gap-2 transition-all">
-                    Leer artículo
-                    <ArrowRight className="w-4 h-4 ml-1" />
+                  <span className="btn-text" style={{ width: 'fit-content' }}>
+                    leer artículo
                   </span>
                 </div>
               </div>
@@ -130,16 +130,16 @@ export default function BlogPage() {
                     />
                   </div>
                   <div className="p-6">
-                    <span className="badge-secondary text-xs mb-2">
+                    <span className="badge-secondary mb-2">
                       {blogCategories.find((c) => c.id === post.category)?.name}
                     </span>
-                    <h3 className="text-neutral-900 mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
+                    <h3 className="line-clamp-2 group-hover:text-poppy-brown transition-colors" style={{ fontFamily: 'var(--font-display)', fontSize: '18px', marginBottom: '8px' }}>
                       {post.title}
                     </h3>
-                    <p className="text-sm text-neutral-600 mb-3 line-clamp-2">
+                    <p className="line-clamp-2" style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.7, marginBottom: '12px' }}>
                       {post.excerpt}
                     </p>
-                    <div className="flex items-center gap-3 text-xs text-neutral-500">
+                    <div className="flex items-center gap-3" style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
                       <span className="flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
                         {formatDate(post.publishedAt)}
@@ -157,11 +157,11 @@ export default function BlogPage() {
         )}
 
         {/* Newsletter CTA */}
-        <div className="mt-16 bg-primary-50 rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="text-2xl text-neutral-900 mb-2">
+        <div className="mt-16 p-8 md:p-12 text-center" style={{ background: 'var(--off)' }}>
+          <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '8px' }}>
             ¿Quieres más recetas y consejos?
           </h3>
-          <p className="text-neutral-600 mb-6 max-w-xl mx-auto">
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, maxWidth: '480px', margin: '0 auto 24px', lineHeight: 1.85 }}>
             Suscríbete a nuestra newsletter y recibe ideas, recetas exclusivas y
             ofertas especiales directamente en tu correo.
           </p>
@@ -172,11 +172,11 @@ export default function BlogPage() {
               className="input flex-1"
               required
             />
-            <button type="submit" className="btn-primary whitespace-nowrap">
-              Suscribirme
+            <button type="submit" className="btn-pill">
+              suscribirme
             </button>
           </form>
-          <p className="text-xs text-neutral-500 mt-3">
+          <p className="mt-3" style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', fontWeight: 300 }}>
             Sin spam. Puedes darte de baja cuando quieras.
           </p>
         </div>

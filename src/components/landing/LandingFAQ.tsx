@@ -23,35 +23,37 @@ export function LandingFAQ({
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-20 md:py-28 bg-cream-50">
+    <section style={{ padding: '80px 0', background: 'var(--off)' }}>
       <div className="container-custom">
         <div className="text-center mb-16">
           {subtitle && (
-            <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
+            <p style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(17,17,17,.35)', marginBottom: '16px' }}>
               {subtitle}
             </p>
           )}
-          <h2 className="font-display text-stone-800">{title}</h2>
+          <h2 style={{ fontFamily: 'var(--font-display)' }}>{title}</h2>
         </div>
 
         <div className="max-w-3xl mx-auto">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="border-b border-stone-200 last:border-b-0"
+              style={{ borderBottom: '1px solid rgba(0,0,0,.07)' }}
+              className="last:border-b-0"
             >
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
                 className="w-full py-6 flex items-center justify-between text-left group"
               >
-                <span className="font-display text-lg text-stone-800 pr-4">
+                <span style={{ fontFamily: 'var(--font-display)', fontSize: '18px', paddingRight: '16px' }}>
                   {faq.question}
                 </span>
                 <ChevronDown
                   className={cn(
-                    'w-5 h-5 text-stone-400 transition-transform flex-shrink-0',
+                    'w-5 h-5 transition-transform flex-shrink-0',
                     openIndex === index && 'rotate-180'
                   )}
+                  style={{ color: 'var(--brown)' }}
                 />
               </button>
               <div
@@ -60,7 +62,7 @@ export function LandingFAQ({
                   openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
                 )}
               >
-                <p className="text-stone-600 leading-relaxed">{faq.answer}</p>
+                <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85 }}>{faq.answer}</p>
               </div>
             </div>
           ))}

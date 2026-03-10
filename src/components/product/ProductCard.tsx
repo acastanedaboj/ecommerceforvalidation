@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ShoppingBag, Check, Truck } from 'lucide-react';
+import { Truck } from 'lucide-react';
 import { useCartStore } from '@/store/cart-store';
 import { formatPrice, cn } from '@/lib/utils';
 import { calculatePackUnitPrice, getPackDiscount } from '@/lib/pricing';
@@ -41,9 +41,9 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
 
     toast.success(`${product.name} anadido al carrito`, {
       style: {
-        background: '#1C1C1C',
-        color: '#FDFCFB',
-        borderRadius: '12px',
+        background: '#111111',
+        color: '#ffffff',
+        borderRadius: '0px',
       },
     });
 
@@ -53,11 +53,12 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
   };
 
   return (
-    <article className="group card-premium">
-      {/* Image container */}
+    <article className="group" style={{ cursor: 'pointer' }}>
+      {/* Image container - 3:4 aspect with accent bar */}
       <Link
         href={`/tienda/${product.slug}`}
-        className="block relative aspect-product overflow-hidden bg-cream-100"
+        className="block relative overflow-hidden mb-4"
+        style={{ aspectRatio: '3/4', background: 'var(--off)' }}
       >
         <Image
           src={product.images[0] || '/images/placeholder-product.jpg'}
@@ -79,10 +80,27 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
           />
         )}
 
-        {/* Badges - Minimal style */}
-        <div className="absolute top-4 left-4 flex flex-col gap-2">
+        {/* Bottom accent line */}
+        <div
+          className="absolute bottom-0 left-0 right-0 z-10"
+          style={{ height: '3px', background: 'var(--yellow)' }}
+        />
+
+        {/* Tags */}
+        <div className="absolute bottom-3 left-3 flex flex-col gap-1 z-10">
           {product.tags.includes('sin-gluten') && (
-            <span className="badge bg-white/95 text-stone-700 backdrop-blur-sm shadow-sm">
+            <span
+              style={{
+                fontSize: '9px',
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                color: 'var(--dark)',
+                background: 'rgba(255,255,255,.85)',
+                padding: '3px 8px',
+                backdropFilter: 'blur(4px)',
+                display: 'inline-block',
+              }}
+            >
               Sin gluten
             </span>
           )}
@@ -90,8 +108,18 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
 
         {/* Low stock warning */}
         {product.stock > 0 && product.stock <= 10 && (
-          <div className="absolute top-4 right-4">
-            <span className="badge bg-earth-500/95 text-[#ffffec] backdrop-blur-sm">
+          <div className="absolute top-3 right-3">
+            <span
+              style={{
+                fontSize: '9px',
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                color: 'var(--white)',
+                background: 'rgba(17,17,17,.75)',
+                padding: '3px 8px',
+                backdropFilter: 'blur(4px)',
+              }}
+            >
               Ultimas unidades
             </span>
           </div>
@@ -99,113 +127,136 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
 
         {/* Out of stock overlay */}
         {product.stock === 0 && (
-          <div className="absolute inset-0 bg-stone-900/40 backdrop-blur-[2px] flex items-center justify-center">
-            <span className="bg-white text-stone-800 px-5 py-2.5 font-medium text-sm shadow-soft">
-              Agotado
+          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex items-center justify-center">
+            <span
+              style={{
+                background: 'var(--white)',
+                color: 'var(--dark)',
+                padding: '10px 20px',
+                fontSize: '14px',
+                fontWeight: 700,
+                textTransform: 'lowercase',
+              }}
+            >
+              agotado
             </span>
           </div>
         )}
       </Link>
 
       {/* Content */}
-      <div className="p-6">
-        {/* Weight tag */}
-        <p className="text-xs text-stone-400 uppercase tracking-wider mb-2">
-          {product.weight}g
-        </p>
-
+      <div>
         {/* Title */}
-        <h3 className="font-display text-xl font-medium text-stone-800 mb-2 group-hover:text-earth-600 transition-colors">
-          <Link href={`/tienda/${product.slug}`}>
+        <h3
+          className="transition-colors duration-200"
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: '19px',
+            color: 'var(--dark)',
+            marginBottom: '5px',
+          }}
+        >
+          <Link
+            href={`/tienda/${product.slug}`}
+            style={{ textDecoration: 'none', color: 'inherit' }}
+            className="group-hover:text-poppy-brown"
+          >
             {product.name}
           </Link>
         </h3>
 
         {/* Short description */}
-        <p className="text-sm text-stone-500 line-clamp-2 mb-5 leading-relaxed">
+        <p
+          className="line-clamp-2"
+          style={{
+            fontSize: '12px',
+            color: 'var(--dark)',
+            fontWeight: 300,
+            lineHeight: 1.6,
+            marginBottom: '14px',
+          }}
+        >
           {product.shortDescription}
         </p>
 
-        {/* Price */}
-        <div className="flex items-baseline gap-2.5 mb-5">
-          <span className="text-2xl font-display text-earth-600">
+        {/* Price and add button */}
+        <div className="flex justify-between items-center mb-3">
+          <span
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '18px',
+              color: 'var(--dark)',
+            }}
+          >
             {formatPrice(packPrice)}
-          </span>
-          <span className="text-sm text-stone-400">/ud</span>
-          {hasDiscount && (
-            <>
-              <span className="text-sm text-stone-300 line-through">
+            {hasDiscount && (
+              <span style={{ fontSize: '12px', color: 'rgba(17,17,17,.35)', marginLeft: '8px', textDecoration: 'line-through', fontFamily: 'var(--font-sans)' }}>
                 {formatPrice(basePrice)}
               </span>
-              <span className="badge bg-olive-100 text-olive-700 text-[10px]">
-                -{Math.round(discount * 100)}%
-              </span>
-            </>
+            )}
+          </span>
+
+          {showQuickAdd && product.stock > 0 && (
+            <button
+              type="button"
+              onClick={handleQuickAdd}
+              disabled={isAdding}
+              className={cn('btn-card', isAdding && 'opacity-60')}
+            >
+              {isAdding ? 'anadido' : 'anadir'}
+            </button>
           )}
         </div>
 
         {/* Free shipping indicator */}
         {hasFreeShipping && (
-          <div className="flex items-center gap-2 text-sm text-earth-600 mb-4">
-            <Truck className="w-4 h-4" />
-            <span className="font-medium">Envio gratis</span>
+          <div className="flex items-center gap-2 mb-3" style={{ fontSize: '11px', color: 'var(--brown)', fontWeight: 300 }}>
+            <Truck className="w-3.5 h-3.5" />
+            <span>Envio gratis</span>
           </div>
         )}
 
-        {/* Pack selector - Pills style */}
+        {/* Pack selector */}
         {showQuickAdd && product.stock > 0 && (
-          <div className="space-y-4">
-            <div className="flex gap-2">
-              {[1, 3, 4, 6].map((pack) => {
-                const isSelected = selectedPack === pack;
-                const packDiscount = getPackDiscount(pack);
-                return (
-                  <button
-                    key={pack}
-                    type="button"
-                    onClick={() => setSelectedPack(pack)}
-                    className={cn(
-                      'relative flex-1 py-2.5 text-xs font-medium border transition-all duration-300',
-                      isSelected
-                        ? 'border-earth-600 bg-earth-50 text-earth-700'
-                        : 'border-stone-300 hover:border-stone-400 text-stone-600 bg-white'
-                    )}
-                  >
-                    {pack === 1 ? '1 ud' : `Pack ${pack}`}
-                    {packDiscount > 0 && (
-                      <span className="absolute -top-1.5 -right-1 px-1.5 py-0.5 bg-olive-500 text-stone-900 text-[8px] font-bold">
-                        -{Math.round(packDiscount * 100)}%
-                      </span>
-                    )}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Add to cart button */}
-            <button
-              type="button"
-              onClick={handleQuickAdd}
-              disabled={isAdding}
-              className={cn(
-                'btn w-full justify-center py-3.5',
-                isAdding
-                  ? 'bg-olive-500 text-[#ffffec] hover:bg-olive-500'
-                  : 'btn-primary'
-              )}
-            >
-              {isAdding ? (
-                <>
-                  <Check className="w-4 h-4 mr-2" strokeWidth={2.5} />
-                  Anadido
-                </>
-              ) : (
-                <>
-                  <ShoppingBag className="w-4 h-4 mr-2" strokeWidth={1.5} />
-                  Anadir al carrito
-                </>
-              )}
-            </button>
+          <div className="flex gap-2">
+            {[1, 3, 4, 6].map((pack) => {
+              const isSelected = selectedPack === pack;
+              const packDiscount = getPackDiscount(pack);
+              return (
+                <button
+                  key={pack}
+                  type="button"
+                  onClick={() => setSelectedPack(pack)}
+                  className="relative flex-1 py-2 transition-all duration-200"
+                  style={{
+                    fontSize: '11px',
+                    fontWeight: 700,
+                    textTransform: 'lowercase',
+                    border: isSelected ? '1.5px solid var(--dark)' : '1px solid rgba(0,0,0,.12)',
+                    borderRadius: '100px',
+                    background: isSelected ? 'var(--off)' : 'transparent',
+                    color: 'var(--dark)',
+                    letterSpacing: '-0.01em',
+                  }}
+                >
+                  {pack === 1 ? '1 ud' : `pack ${pack}`}
+                  {packDiscount > 0 && (
+                    <span
+                      className="absolute -top-1.5 -right-1"
+                      style={{
+                        padding: '1px 4px',
+                        background: 'var(--yellow)',
+                        color: 'var(--dark)',
+                        fontSize: '8px',
+                        fontWeight: 700,
+                      }}
+                    >
+                      -{Math.round(packDiscount * 100)}%
+                    </span>
+                  )}
+                </button>
+              );
+            })}
           </div>
         )}
 
@@ -213,9 +264,9 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
         {product.stock === 0 && (
           <Link
             href={`/tienda/${product.slug}`}
-            className="btn-outline w-full justify-center"
+            className="btn-pill w-full text-center mt-3 block"
           >
-            Ver producto
+            ver producto
           </Link>
         )}
       </div>

@@ -9,14 +9,19 @@
 :root {
   --font-sans: "DM Sans", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --brown:  #694F48;
+  --blue:   #7EA5C9;
+  --yellow: #F3EE94;
+  --off:    #f6f5f2;
+  --dark:   #111111;
+  --white:  #ffffff;
 }
 
 /* ==========================================
-   Base Styles - Minimalist & Elegant
+   Base Styles - New Design System
    ========================================== */
 
 @layer base {
-  /* Smooth scrolling & selection */
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
@@ -24,110 +29,238 @@
   }
 
   ::selection {
-    @apply bg-olive-300 text-earth-900;
+    background: var(--yellow);
+    color: var(--dark);
   }
 
-  /* Body defaults */
   body {
-    @apply bg-white text-black font-sans;
+    @apply bg-white text-dark font-sans;
+    font-weight: 300;
+    font-synthesis: none;
+    overflow-x: hidden;
   }
 
-  /* Better focus styles for accessibility */
   *:focus-visible {
-    @apply outline-none ring-2 ring-sky-500 ring-offset-2 ring-offset-white;
+    @apply outline-none ring-2 ring-poppy-blue ring-offset-2 ring-offset-white;
   }
 
-  /* Remove default button styles */
   button {
     @apply cursor-pointer;
   }
 
-  /* Better image defaults */
   img {
     @apply max-w-full h-auto;
   }
 
-  /* Typography defaults - Elegant & Clean */
+  /* Typography defaults */
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display text-black tracking-tight;
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--dark);
+    letter-spacing: -0.01em;
   }
 
   h1 {
-    @apply text-4xl md:text-5xl lg:text-display-lg leading-tight;
+    font-size: clamp(30px, 5vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
   }
 
   h2 {
-    @apply text-3xl md:text-display-sm;
+    font-size: clamp(26px, 3vw, 42px);
+    line-height: 1.15;
   }
 
   h3 {
-    @apply text-2xl md:text-3xl;
+    font-size: clamp(20px, 2.2vw, 28px);
+    line-height: 1.2;
   }
 
   h4 {
-    @apply text-xl md:text-2xl;
+    font-size: clamp(18px, 1.8vw, 22px);
+    line-height: 1.25;
   }
 
   p {
-    @apply text-black leading-relaxed;
+    color: var(--dark);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.85;
   }
 
-  /* Link defaults */
   a {
     @apply transition-colors duration-300;
   }
 
-  /* Smooth transitions on interactive elements */
   button, a, input, select, textarea {
     @apply transition-all duration-300;
   }
 }
 
 /* ==========================================
-   Component Styles - Refined & Minimal
+   Component Styles - New Design System
    ========================================== */
 
 @layer components {
   /* Container */
   .container-custom {
-    @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-12;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 56px;
   }
 
   .container-narrow {
-    @apply max-w-4xl mx-auto px-5 sm:px-8 lg:px-12;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 56px;
   }
 
-  /* Buttons - Editorial Style (no rounded corners) */
+  /* ── BUTTONS — 4 variants ── */
+  .btn-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: lowercase;
+    color: var(--dark);
+    background: transparent;
+    border: 1.5px solid var(--dark);
+    border-radius: 100px;
+    padding: 11px 26px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+  .btn-pill:hover {
+    background: var(--dark);
+    color: var(--white);
+  }
+
+  .btn-pill-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: lowercase;
+    color: var(--white);
+    background: transparent;
+    border: 1.5px solid rgba(255,255,255,.65);
+    border-radius: 100px;
+    padding: 11px 26px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s, border-color 0.2s;
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+  .btn-pill-white:hover {
+    background: rgba(255,255,255,.12);
+    border-color: var(--white);
+  }
+
+  .btn-text {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: lowercase;
+    color: var(--dark);
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    letter-spacing: -0.01em;
+    transition: gap 0.2s;
+  }
+  .btn-text::after {
+    content: '\2192';
+    font-weight: 400;
+  }
+  .btn-text:hover {
+    gap: 14px;
+  }
+
+  .btn-card {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: lowercase;
+    color: var(--dark);
+    background: transparent;
+    border: 1.5px solid var(--dark);
+    border-radius: 100px;
+    padding: 7px 16px;
+    cursor: pointer;
+    transition: color 0.2s, border-color 0.2s;
+    letter-spacing: -0.01em;
+    line-height: 1;
+  }
+  .btn-card:hover {
+    color: var(--blue);
+    border-color: var(--blue);
+  }
+
+  /* Legacy button support (used in cart, product detail, etc.) */
   .btn {
-    @apply inline-flex items-center justify-center px-7 py-3.5 font-medium
-           transition-all duration-300 ease-out
+    @apply inline-flex items-center justify-center px-7 py-3.5 font-bold
+           transition-all duration-200 ease-out
            focus:outline-none focus:ring-2 focus:ring-offset-2
            disabled:opacity-50 disabled:cursor-not-allowed
-           text-sm tracking-wide;
+           text-sm lowercase;
+    border-radius: 100px;
+    letter-spacing: -0.01em;
   }
 
   .btn-primary {
-    @apply btn bg-earth-600 text-[#ffffec]
-           hover:bg-earth-700
-           focus:ring-earth-400;
+    @apply btn;
+    background: var(--dark);
+    color: var(--white);
+    border: 1.5px solid var(--dark);
+  }
+  .btn-primary:hover {
+    background: #333;
   }
 
   .btn-secondary {
-    @apply btn bg-sky-500 text-white
-           hover:bg-sky-600
-           focus:ring-sky-400;
+    @apply btn;
+    background: var(--blue);
+    color: var(--white);
+    border: 1.5px solid var(--blue);
+  }
+  .btn-secondary:hover {
+    opacity: 0.9;
   }
 
   .btn-outline {
-    @apply btn border border-stone-300 text-stone-800 bg-transparent
-           hover:border-stone-400
-           focus:ring-stone-300;
+    @apply btn;
+    border: 1.5px solid var(--dark);
+    color: var(--dark);
+    background: transparent;
+  }
+  .btn-outline:hover {
+    background: var(--dark);
+    color: var(--white);
   }
 
   .btn-ghost {
-    @apply btn text-stone-800 bg-transparent
-           hover:bg-sky-100
-           focus:ring-sky-400;
+    @apply btn;
+    color: var(--dark);
+    background: transparent;
+    border: 1.5px solid transparent;
+  }
+  .btn-ghost:hover {
+    background: var(--off);
   }
 
   .btn-sm {
@@ -138,61 +271,118 @@
     @apply px-9 py-4 text-base;
   }
 
-  /* Badges - Editorial Style */
+  /* Labels / Tags */
+  .section-label {
+    font-size: 11px;
+    color: var(--dark);
+    opacity: 0.45;
+    display: block;
+    margin-bottom: 16px;
+    font-weight: 300;
+  }
+
+  /* Badges */
   .badge {
-    @apply inline-flex items-center px-3 py-1 text-xs font-medium tracking-widest uppercase;
+    display: inline-flex;
+    align-items: center;
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    font-weight: 300;
   }
 
   .badge-primary {
-    @apply badge bg-earth-100 text-earth-700;
+    @apply badge;
+    background: var(--off);
+    color: var(--dark);
   }
 
   .badge-accent {
-    @apply badge bg-sky-200 text-sky-800;
+    @apply badge;
+    background: rgba(126, 165, 201, 0.15);
+    color: var(--dark);
   }
 
   .badge-secondary {
-    @apply badge bg-olive-200 text-olive-800;
+    @apply badge;
+    background: rgba(243, 238, 148, 0.3);
+    color: var(--dark);
   }
 
   .badge-dark {
-    @apply badge bg-stone-800 text-[#ffffec];
+    @apply badge;
+    background: var(--dark);
+    color: var(--white);
   }
 
-  /* Cards - Editorial Style (sharp corners) */
+  /* Cards */
   .card {
-    @apply bg-white shadow-soft border border-stone-200
-           overflow-hidden transition-all duration-400
-           hover:shadow-soft-lg;
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,.06);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .card:hover {
+    box-shadow: 0 10px 40px -10px rgba(0,0,0,0.08);
   }
 
   .card-flat {
-    @apply bg-cream-100 border border-stone-200
-           overflow-hidden transition-all duration-300;
+    background: var(--off);
+    border: 1px solid rgba(0,0,0,.06);
+    overflow: hidden;
+    transition: all 0.3s ease;
   }
 
-  /* Form inputs - Editorial Style */
+  .card-premium {
+    background: var(--white);
+    border: 1px solid rgba(0,0,0,.06);
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+  .card-premium:hover {
+    box-shadow: 0 20px 50px -12px rgba(0,0,0,0.1);
+  }
+
+  /* Form inputs */
   .input {
     @apply w-full px-5 py-3.5
-           bg-white border border-stone-300
-           text-stone-800 placeholder-stone-400
-           focus:outline-none focus:ring-1 focus:ring-stone-400 focus:border-stone-400
-           transition-all duration-300;
+           bg-white
+           text-dark placeholder-stone-400
+           focus:outline-none transition-all duration-300;
+    border: 1px solid rgba(0,0,0,.12);
+    font-family: var(--font-sans);
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .input:focus {
+    border-color: var(--dark);
   }
 
   .input-error {
-    @apply border-red-400 focus:ring-red-300 focus:border-red-300;
+    border-color: #e53e3e;
+  }
+  .input-error:focus {
+    border-color: #e53e3e;
   }
 
   .label {
-    @apply block text-sm font-medium text-stone-700 mb-2;
+    display: block;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--dark);
+    opacity: 0.55;
+    margin-bottom: 8px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 
   .error-message {
-    @apply text-sm text-red-600 mt-1.5;
+    @apply text-sm mt-1.5;
+    color: #e53e3e;
   }
 
-  /* Section spacing - Generous & Breathing */
+  /* Section spacing */
   .section {
     @apply py-14 md:py-20 lg:py-24;
     content-visibility: auto;
@@ -205,20 +395,24 @@
 
   /* Price display */
   .price {
-    @apply font-display font-medium text-black;
+    font-family: var(--font-display);
+    font-weight: 400;
+    color: var(--dark);
   }
 
   .price-original {
-    @apply text-stone-400 line-through font-normal;
+    @apply line-through font-normal;
+    color: rgba(17,17,17,.35);
   }
 
   .price-discount {
-    @apply text-olive-600;
+    color: var(--blue);
   }
 
   /* Dividers */
   .divider {
-    @apply h-px bg-gradient-to-r from-transparent via-cream-300 to-transparent;
+    height: 1px;
+    background: rgba(0,0,0,.07);
   }
 
   /* Prose for blog content */
@@ -230,87 +424,238 @@
   .prose-custom h2,
   .prose-custom h3,
   .prose-custom h4 {
-    @apply font-display text-black mb-4;
+    font-family: var(--font-display);
+    color: var(--dark);
+    margin-bottom: 16px;
   }
 
   .prose-custom p {
-    @apply text-black leading-relaxed mb-4;
+    color: var(--dark);
+    font-weight: 300;
+    line-height: 1.85;
+    margin-bottom: 16px;
   }
 
   .prose-custom a {
-    @apply text-earth-600 no-underline hover:text-earth-700 hover:underline decoration-sky-500;
+    color: var(--brown);
+    text-decoration: none;
+  }
+  .prose-custom a:hover {
+    text-decoration: underline;
   }
 
   .prose-custom strong {
-    @apply text-black font-medium;
+    color: var(--dark);
+    font-weight: 700;
   }
 
   .prose-custom img {
-    @apply rounded-none;
+    border-radius: 0;
   }
 
   /* Glass effect */
   .glass {
-    @apply bg-white/80 backdrop-blur-md border border-white/20;
+    background: rgba(255,255,255,.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0,0,0,.06);
   }
 
-  /* Link with underline animation */
+  /* Link with underline animation (yellow) */
   .link-underline {
-    @apply relative;
+    position: relative;
+    padding-bottom: 2px;
+    background-image: linear-gradient(var(--yellow), var(--yellow));
+    background-size: 0% 2px;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    transition: background-size 0.25s ease;
+  }
+  .link-underline:hover {
+    background-size: 100% 2px;
   }
 
-  .link-underline::after {
-    content: '';
-    @apply absolute bottom-0 left-0 w-0 h-0.5 bg-earth-600 transition-all duration-300;
+  /* ── MARQUEE ── */
+  .marquee-wrap {
+    border-top: 1px solid rgba(0,0,0,.07);
+    border-bottom: 1px solid rgba(0,0,0,.07);
+    padding: 15px 0;
+    overflow: hidden;
+    background: var(--white);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 48px;
+    animation: mq 28s linear infinite;
+    width: max-content;
+  }
+  .marquee-track span {
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--dark);
+    opacity: 0.4;
+    white-space: nowrap;
+    font-weight: 300;
+  }
+  .marquee-dot {
+    opacity: 0.2 !important;
   }
 
-  .link-underline:hover::after {
-    @apply w-full;
+  /* ── SPLIT SECTIONS ── */
+  .split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .split-img {
+    position: relative;
+    overflow: hidden;
+    min-height: 560px;
+  }
+  .split-img-inner {
+    position: absolute;
+    inset: 0;
+    transition: transform 0.8s ease;
+  }
+  .split:hover .split-img-inner {
+    transform: scale(1.03);
+  }
+  .split-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px 64px;
+    background: var(--white);
+  }
+  .split-body.bg-off {
+    background: var(--off);
+  }
+  .split-title {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: clamp(26px, 2.6vw, 40px);
+    line-height: 1.15;
+    color: var(--dark);
+    margin-bottom: 24px;
+    letter-spacing: -0.01em;
+  }
+  .split-title em {
+    font-style: italic;
+  }
+  .split-text {
+    font-size: 14px;
+    line-height: 1.85;
+    color: var(--dark);
+    font-weight: 300;
+    margin-bottom: 40px;
+    max-width: 380px;
   }
 
-  /* ==========================================
-     Premium UI Components
-     ========================================== */
+  /* ── QUOTE ── */
+  .quote-section {
+    padding: 120px 56px;
+    background: var(--dark);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .quote-marks {
+    font-family: var(--font-display);
+    font-size: clamp(80px, 12vw, 160px);
+    color: rgba(255,255,255,.06);
+    line-height: 1;
+    display: block;
+    margin-bottom: -32px;
+    letter-spacing: -0.04em;
+  }
+  .quote-text {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: clamp(26px, 3.8vw, 50px);
+    line-height: 1.25;
+    color: var(--white);
+    max-width: 780px;
+    margin: 0 auto 28px;
+    position: relative;
+    z-index: 1;
+  }
+  .quote-text mark {
+    background: none;
+    color: var(--yellow);
+  }
 
-  /* Pills - Pack selectors (editorial style) */
+  /* ── SUBSCRIPTION SPLIT ── */
+  .sub-stats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 28px;
+  }
+  .stat-val {
+    font-family: var(--font-display);
+    font-size: 40px;
+    color: var(--dark);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .stat-lbl {
+    font-size: 11px;
+    color: var(--dark);
+    opacity: 0.55;
+    font-weight: 300;
+  }
+
+  /* Pills - Pack selectors */
   .pill {
     @apply relative inline-flex items-center justify-center px-4 py-2.5
-           border border-stone-300
-           text-sm font-medium text-stone-600 bg-white
-           transition-all duration-300
-           hover:border-stone-400 hover:bg-sky-50
-           focus-visible:ring-1 focus-visible:ring-sky-400;
+           text-sm font-bold bg-white
+           transition-all duration-300;
+    border: 1.5px solid rgba(0,0,0,.15);
+    border-radius: 100px;
+    color: var(--dark);
+    font-size: 12px;
+    text-transform: lowercase;
+  }
+  .pill:hover {
+    border-color: var(--dark);
   }
 
   .pill-active {
-    @apply border-earth-600 bg-earth-50 text-earth-700;
+    border-color: var(--dark) !important;
+    background: var(--off);
   }
 
   .pill-savings {
     @apply absolute -top-2 -right-2 px-2 py-0.5
-           bg-olive-500 text-stone-700 text-[10px] font-bold
-           shadow-sm z-10;
+           text-[10px] font-bold shadow-sm z-10;
+    background: var(--yellow);
+    color: var(--dark);
   }
 
   .pill-shipping {
     @apply absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5
-           bg-earth-600 text-[#ffffec] text-[10px] font-bold
-           shadow-sm whitespace-nowrap z-10;
+           text-[10px] font-bold shadow-sm whitespace-nowrap z-10;
+    background: var(--dark);
+    color: var(--white);
   }
 
   /* Collapsible sections */
   .collapsible {
-    @apply border-b border-cream-200;
+    border-bottom: 1px solid rgba(0,0,0,.07);
   }
 
   .collapsible-trigger {
-    @apply flex items-center justify-between w-full py-5
-           text-left font-display text-lg text-black
-           hover:text-earth-700 transition-colors;
+    @apply flex items-center justify-between w-full py-5 text-left;
+    font-family: var(--font-display);
+    font-size: 18px;
+    color: var(--dark);
+    transition: color 0.2s;
+  }
+  .collapsible-trigger:hover {
+    color: var(--brown);
   }
 
   .collapsible-icon {
-    @apply w-5 h-5 text-stone-400 transition-transform duration-300;
+    @apply w-5 h-5 transition-transform duration-300;
+    color: rgba(0,0,0,.3);
   }
 
   .collapsible-icon-open {
@@ -318,16 +663,18 @@
   }
 
   .collapsible-content {
-    @apply overflow-hidden transition-all duration-300 ease-premium;
+    @apply overflow-hidden transition-all duration-300;
   }
 
   /* Sticky mobile CTA */
   .sticky-cta-mobile {
     @apply fixed bottom-0 left-0 right-0 p-4
-           bg-white/95 backdrop-blur-md
-           border-t border-stone-200 shadow-soft-lg
+           border-t shadow-lg
            transform transition-transform duration-300
            lg:hidden z-30;
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(12px);
+    border-color: rgba(0,0,0,.08);
   }
 
   .sticky-cta-hidden {
@@ -347,50 +694,57 @@
     @apply scale-110;
   }
 
-  /* Trust badges (editorial style) */
+  /* Trust badges */
   .trust-badge {
-    @apply flex items-center gap-3 p-4
-           bg-cream-100/50
-           border border-stone-200;
+    @apply flex items-center gap-3 p-4;
+    background: var(--off);
+    border: 1px solid rgba(0,0,0,.06);
   }
 
   .trust-badge-compact {
-    @apply flex items-center gap-2 text-sm text-stone-500;
+    @apply flex items-center gap-2 text-sm;
+    color: rgba(17,17,17,.5);
   }
 
   /* Progress bar */
   .progress-bar {
-    @apply h-1 bg-stone-200 overflow-hidden;
+    height: 2px;
+    background: rgba(0,0,0,.08);
+    overflow: hidden;
   }
 
   .progress-fill {
-    @apply h-full bg-earth-600 transition-all duration-500;
+    height: 100%;
+    background: var(--brown);
+    transition: all 0.5s;
   }
 
-  /* Testimonial card */
+  /* Testimonial quote */
   .testimonial-quote {
-    @apply font-display text-6xl text-sky-300 leading-none;
+    font-family: var(--font-display);
+    font-size: 4rem;
+    color: var(--blue);
+    opacity: 0.3;
+    line-height: 1;
   }
 
   /* Rating stars */
   .rating-star {
-    @apply w-4 h-4 fill-olive-500 text-olive-500;
+    @apply w-4 h-4;
+    fill: var(--yellow);
+    color: var(--yellow);
   }
 
   .rating-star-empty {
-    @apply w-4 h-4 fill-stone-200 text-stone-200;
-  }
-
-  /* Card hover effect (editorial style) */
-  .card-premium {
-    @apply bg-white shadow-soft border border-stone-100
-           overflow-hidden transition-all duration-400
-           hover:shadow-card-hover;
+    @apply w-4 h-4;
+    fill: rgba(0,0,0,.1);
+    color: rgba(0,0,0,.1);
   }
 
   /* Skeleton loading */
   .skeleton {
-    @apply animate-pulse bg-cream-200 rounded;
+    @apply animate-pulse rounded;
+    background: var(--off);
   }
 
   .skeleton-text {
@@ -411,22 +765,16 @@
    ========================================== */
 
 @layer utilities {
-  /* Text earth-600 with display font italic */
   .text-earth-600-display-italic {
-    @apply text-earth-600 font-display italic;
+    color: var(--brown);
+    font-family: var(--font-display);
+    font-style: italic;
   }
 
-  /* Text gradient */
   .text-gradient-earth {
-    @apply bg-gradient-to-r from-earth-600 to-taupe-500 bg-clip-text text-transparent;
-  }
-
-  .text-gradient-olive {
-    @apply bg-gradient-to-r from-olive-500 to-olive-400 bg-clip-text text-transparent;
-  }
-
-  .text-gradient-sky {
-    @apply bg-gradient-to-r from-sky-600 to-sky-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r bg-clip-text text-transparent;
+    --tw-gradient-from: var(--brown);
+    --tw-gradient-to: #A0857E;
   }
 
   /* Hide scrollbar but keep functionality */
@@ -438,20 +786,19 @@
     display: none;
   }
 
-  /* Custom scrollbar */
   .scrollbar-custom {
     scrollbar-width: thin;
-    scrollbar-color: theme('colors.cream.400') transparent;
+    scrollbar-color: rgba(0,0,0,.1) transparent;
   }
   .scrollbar-custom::-webkit-scrollbar {
-    width: 6px;
+    width: 4px;
   }
   .scrollbar-custom::-webkit-scrollbar-track {
     background: transparent;
   }
   .scrollbar-custom::-webkit-scrollbar-thumb {
-    background: theme('colors.cream.400');
-    border-radius: 3px;
+    background: rgba(0,0,0,.1);
+    border-radius: 2px;
   }
 
   /* Animation delays */
@@ -463,27 +810,11 @@
 
   /* Aspect ratios */
   .aspect-product {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 3 / 4;
   }
 
   .aspect-hero {
     aspect-ratio: 16 / 10;
-  }
-
-  .aspect-square-rounded {
-    aspect-ratio: 1 / 1;
-    @apply rounded-none;
-  }
-
-  /* Subtle background patterns */
-  .bg-dots {
-    background-image: radial-gradient(circle, theme('colors.cream.300') 1px, transparent 1px);
-    background-size: 24px 24px;
-  }
-
-  .bg-grain {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-    opacity: 0.03;
   }
 
   /* Hover lift effect */
@@ -502,25 +833,47 @@
 }
 
 /* ==========================================
+   Fade-in animation (IntersectionObserver)
+   ========================================== */
+.fi {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fi.in {
+  opacity: 1;
+  transform: none;
+}
+
+/* ==========================================
+   Marquee animation
+   ========================================== */
+@keyframes mq {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* ==========================================
    Third-party overrides
    ========================================== */
 
 /* Stripe Elements */
 .StripeElement {
-  @apply w-full px-5 py-3.5 bg-white border border-stone-300 rounded-xl;
+  @apply w-full px-5 py-3.5 bg-white;
+  border: 1px solid rgba(0,0,0,.12);
 }
 
 .StripeElement--focus {
-  @apply ring-2 ring-sky-500 border-sky-500;
+  border-color: var(--dark);
 }
 
 .StripeElement--invalid {
-  @apply border-red-400;
+  border-color: #e53e3e;
 }
 
 /* React Hot Toast customization */
 .react-hot-toast {
-  @apply font-sans;
+  font-family: var(--font-sans);
 }
 
 /* ==========================================
@@ -543,4 +896,45 @@
 
 .animate-pulse-soft {
   animation: pulse-soft 3s ease-in-out infinite;
+}
+
+@keyframes scroll-pulse {
+  0%, 100% { opacity: 0.25; }
+  50% { opacity: 0.7; }
+}
+
+/* ==========================================
+   Responsive overrides
+   ========================================== */
+@media (max-width: 880px) {
+  .container-custom {
+    padding: 0 24px;
+  }
+  .container-narrow {
+    padding: 0 24px;
+  }
+  .split {
+    grid-template-columns: 1fr;
+  }
+  .split-img {
+    min-height: 280px;
+  }
+  .split-body {
+    padding: 52px 28px;
+  }
+  .quote-section {
+    padding: 80px 24px;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .hero-caption {
+    padding: 0 24px 36px !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+  }
+  .hero-right {
+    align-items: flex-start !important;
+  }
 }
