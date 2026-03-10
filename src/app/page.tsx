@@ -35,7 +35,7 @@ export default function HomePage() {
         {/* Hero background image */}
         <div className="absolute inset-0">
           <Image
-            src="/images/home 4-5.png"
+            src="/images/hero-tower.png"
             alt="Granola Poppy crujiente y especiada"
             fill
             className="object-cover"
@@ -257,7 +257,7 @@ export default function HomePage() {
         <div className="split-img">
           <div className="split-img-inner">
             <Image
-              src="/images/ingredientes-hero (1).png"
+              src="/images/ingredientes-fork.png"
               alt="Ingredientes naturales de Poppy"
               fill
               className="object-cover"
