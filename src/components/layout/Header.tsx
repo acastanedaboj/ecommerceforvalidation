@@ -137,24 +137,6 @@ export function Header() {
             )}
           </button>
 
-          {/* CTA comprar - text only */}
-          <Link
-            href="/tienda"
-            className="hidden md:inline-block transition-opacity hover:opacity-55"
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontSize: '15px',
-              fontWeight: 700,
-              textTransform: 'lowercase',
-              color: isScrolled ? '#111111' : 'rgba(255,255,255,.85)',
-              background: 'none',
-              border: 'none',
-              textDecoration: 'none',
-            }}
-          >
-            comprar
-          </Link>
-
           {/* Mobile menu button */}
           <button
             type="button"

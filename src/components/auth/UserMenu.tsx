@@ -61,10 +61,10 @@ export function UserMenu() {
             alt={session.user.name || 'Usuario'}
             width={32}
             height={32}
-            className=""
+            className="rounded-full"
           />
         ) : (
-          <div className="w-8 h-8 bg-earth-100 flex items-center justify-center">
+          <div className="w-8 h-8 rounded-full bg-earth-100 flex items-center justify-center">
             <span className="text-sm font-medium text-earth-700">
               {session.user.name?.charAt(0) || session.user.email?.charAt(0) || 'U'}
             </span>
