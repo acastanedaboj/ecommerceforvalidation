@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { useCartStore, useCartItemCount } from '@/store/cart-store';
 import { NAVIGATION } from '@/lib/constants';
@@ -67,22 +68,18 @@ export function Header() {
         }
         aria-label="Navegacion principal"
       >
-        {/* Logo - serif uppercase */}
-        <Link
-          href="/"
-          className="group"
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontSize: '18px',
-            fontWeight: 400,
-            letterSpacing: '0.18em',
-            textTransform: 'uppercase',
-            textDecoration: 'none',
-            transition: 'color 0.3s',
-            color: isScrolled ? '#111111' : '#ffffff',
-          }}
-        >
-          Poppy
+        {/* Logo */}
+        <Link href="/" className="group">
+          <Image
+            src="/images/logo.svg"
+            alt="Poppy"
+            width={100}
+            height={35}
+            className={cn(
+              'h-7 w-auto transition-all duration-300',
+              isScrolled ? '' : 'brightness-0 invert'
+            )}
+          />
         </Link>
 
         {/* Desktop Navigation */}
