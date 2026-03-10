@@ -92,7 +92,7 @@ export function Header() {
                 style={{
                   fontFamily: 'var(--font-display)',
                   fontSize: '15px',
-                  fontWeight: 400,
+                  fontWeight: 700,
                   textTransform: 'lowercase',
                   color: isScrolled ? '#111111' : 'rgba(255,255,255,.85)',
                   textDecoration: 'none',
@@ -144,7 +144,7 @@ export function Header() {
             style={{
               fontFamily: 'var(--font-display)',
               fontSize: '15px',
-              fontWeight: 400,
+              fontWeight: 700,
               textTransform: 'lowercase',
               color: isScrolled ? '#111111' : 'rgba(255,255,255,.85)',
               background: 'none',
@@ -202,7 +202,7 @@ export function Header() {
                 style={{
                   fontFamily: 'var(--font-display)',
                   color: '#111111',
-                  fontWeight: 400,
+                  fontWeight: 700,
                   fontSize: '15px',
                   textTransform: 'lowercase',
                   textDecoration: 'none',
