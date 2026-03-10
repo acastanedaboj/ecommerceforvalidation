@@ -283,9 +283,8 @@ export default function HomePage() {
 
       {/* ── QUOTE ── */}
       <section className="quote-section fi">
-        <span className="quote-marks">&laquo;&raquo;</span>
         <p className="quote-text">
-          Si no es buena para mí, no es <mark>buena para ti</mark>
+          &laquo;Si no es buena para mí, no es <mark>buena para ti</mark>&raquo;
         </p>
         <p
           style={{
