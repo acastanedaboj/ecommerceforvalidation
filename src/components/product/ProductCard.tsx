@@ -264,7 +264,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
         {product.stock === 0 && (
           <Link
             href={`/tienda/${product.slug}`}
-            className="btn-pill w-full text-center mt-3 block"
+            className="btn-pill text-center mt-3"
           >
             ver producto
           </Link>

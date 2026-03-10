@@ -306,7 +306,7 @@ export default function ProductDetailPage() {
                   onClick={handleAddToCart}
                   disabled={product.stock === 0 || isAdding}
                   className={cn(
-                    'w-full flex items-center justify-center gap-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
+                    'flex items-center justify-center gap-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
                   )}
                   style={{
                     background: 'var(--brown)',

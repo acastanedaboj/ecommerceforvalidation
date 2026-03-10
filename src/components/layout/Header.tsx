@@ -90,8 +90,9 @@ export function Header() {
                 href={item.href}
                 className="link-underline"
                 style={{
+                  fontFamily: 'var(--font-display)',
                   fontSize: '15px',
-                  fontWeight: 700,
+                  fontWeight: 400,
                   textTransform: 'lowercase',
                   color: isScrolled ? '#111111' : 'rgba(255,255,255,.85)',
                   textDecoration: 'none',
@@ -141,8 +142,9 @@ export function Header() {
             href="/tienda"
             className="hidden md:inline-block transition-opacity hover:opacity-55"
             style={{
+              fontFamily: 'var(--font-display)',
               fontSize: '15px',
-              fontWeight: 700,
+              fontWeight: 400,
               textTransform: 'lowercase',
               color: isScrolled ? '#111111' : 'rgba(255,255,255,.85)',
               background: 'none',
@@ -198,8 +200,9 @@ export function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="px-4 py-3 animate-fade-in-up"
                 style={{
+                  fontFamily: 'var(--font-display)',
                   color: '#111111',
-                  fontWeight: 700,
+                  fontWeight: 400,
                   fontSize: '15px',
                   textTransform: 'lowercase',
                   textDecoration: 'none',

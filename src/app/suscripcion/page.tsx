@@ -248,7 +248,7 @@ export default function SuscripcionPage() {
               </div>
               <Link
                 href="/tienda/granola-clasica-150g"
-                className="btn-primary w-full justify-center"
+                className="btn-primary justify-center"
               >
                 empezar ahora
               </Link>

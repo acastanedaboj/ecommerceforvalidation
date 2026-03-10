@@ -346,7 +346,7 @@ export function BundleBuilder({
           onClick={handleAddToCart}
           disabled={!isComplete || isAdding}
           className={cn(
-            'btn w-full justify-center py-4 text-base',
+            'btn justify-center py-4 text-base',
             isAdding
               ? 'bg-olive-500 text-[#ffffec] hover:bg-olive-500'
               : isComplete

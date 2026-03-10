@@ -316,7 +316,7 @@ export default function MejorGranolaSinGlutenPage() {
                   <div className="px-6 pb-6">
                     <Link
                       href="/tienda"
-                      className="btn-primary w-full justify-center"
+                      className="btn-primary justify-center"
                     >
                       Probar Poppy Granola
                       <ArrowRight className="w-4 h-4 ml-2" />
