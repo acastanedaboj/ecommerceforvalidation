@@ -368,13 +368,13 @@ export default function TablaNutricionalPage() {
             <div className="bg-stone-800 rounded-2xl p-8 md:p-10">
               <div className="flex items-start gap-4 mb-6">
                 <div className="w-10 h-10 bg-white/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                  <ShieldCheck className="w-5 h-5 text-[#ffffec]" strokeWidth={1.5} />
+                  <ShieldCheck className="w-5 h-5 text-[#fcf8d5]" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h2 className="font-display text-xl text-[#ffffec] mb-2">
+                  <h2 className="font-display text-xl text-[#fcf8d5] mb-2">
                     Lo que NO encontrarás en ninguna granola Poppy
                   </h2>
-                  <p className="text-[#ffffec]/70">
+                  <p className="text-[#fcf8d5]/70">
                     Creemos que lo que no lleva un producto es tan importante como lo que lleva.
                   </p>
                 </div>
@@ -389,7 +389,7 @@ export default function TablaNutricionalPage() {
                   'Aromas artificiales',
                   'Gluten (< 20 ppm certificado)',
                 ].map((item) => (
-                  <div key={item} className="flex items-center gap-3 text-[#ffffec]/90">
+                  <div key={item} className="flex items-center gap-3 text-[#fcf8d5]/90">
                     <XCircle className="w-5 h-5 text-red-400 flex-shrink-0" strokeWidth={1.5} />
                     <span className="text-sm">{item}</span>
                   </div>
