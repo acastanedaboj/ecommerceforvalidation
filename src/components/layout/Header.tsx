@@ -32,9 +32,9 @@ export function Header() {
           'text-center py-2 px-4 transition-all duration-300',
           isScrolled ? 'max-h-0 overflow-hidden py-0 opacity-0' : 'max-h-12 opacity-100'
         )}
-        style={{ backgroundColor: '#73a7cd' }}
+        style={{ backgroundColor: '#f6ee87' }}
       >
-        <p className="text-[11px] tracking-[0.12em] uppercase" style={{ color: 'rgba(255,255,255,.65)', fontWeight: 300 }}>
+        <p className="text-[11px] tracking-[0.12em] uppercase" style={{ color: 'rgba(17,17,17,.65)', fontWeight: 300 }}>
           <span className="font-bold">Envio gratis</span>
           <span className="mx-2 opacity-30">|</span>
           a partir de 4 bolsas o 35 EUR
@@ -42,7 +42,7 @@ export function Header() {
           <Link
             href="/suscripcion"
             className="underline underline-offset-2 hover:opacity-80 transition-opacity font-bold"
-            style={{ color: 'rgba(255,255,255,.65)' }}
+            style={{ color: 'rgba(17,17,17,.65)' }}
           >
             Suscribete y ahorra 15%
           </Link>
