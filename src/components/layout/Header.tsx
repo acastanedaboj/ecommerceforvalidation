@@ -60,7 +60,7 @@ export function Header() {
       <nav
         className={cn(
           'flex items-center justify-between transition-all duration-350',
-          isScrolled ? 'py-3 px-4 md:px-8 lg:px-12' : 'py-5 px-4 md:px-8 lg:px-12'
+          isScrolled ? 'py-3 px-6 md:px-8 lg:px-14' : 'py-5 px-6 md:px-8 lg:px-14'
         )}
         style={
           useDarkText

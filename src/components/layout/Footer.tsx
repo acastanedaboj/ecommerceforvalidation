@@ -9,7 +9,7 @@ export function Footer() {
   return (
     <footer className="bg-[#6d4d45] text-[#fcf8d5]" role="contentinfo">
       {/* Main footer content */}
-      <div className="container-custom pt-16 pb-12 md:py-16 lg:py-20">
+      <div className="container-custom pt-20 pb-12 md:py-16 lg:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-8">
           {/* Brand column */}
           <div className="lg:col-span-4">
