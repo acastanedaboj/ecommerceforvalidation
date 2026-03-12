@@ -39,7 +39,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
       priceInCents: basePrice,
     });
 
-    toast.success(`${product.name} anadido al carrito`, {
+    toast.success(`${product.name} añadido al carrito`, {
       style: {
         background: '#111111',
         color: '#ffffff',
@@ -203,7 +203,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
               disabled={isAdding}
               className={cn('btn-card', isAdding && 'opacity-60')}
             >
-              {isAdding ? 'anadido' : 'anadir'}
+              {isAdding ? 'añadido' : 'añadir'}
             </button>
           )}
         </div>

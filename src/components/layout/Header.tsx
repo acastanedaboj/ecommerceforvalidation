@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { useCartStore, useCartItemCount } from '@/store/cart-store';
 import { NAVIGATION } from '@/lib/constants';
@@ -14,6 +15,12 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const toggleCart = useCartStore((state) => state.toggleCart);
   const itemCount = useCartItemCount();
+  const pathname = usePathname();
+
+  // Pages with dark hero backgrounds where white text is appropriate
+  const hasDarkHero = pathname === '/' || pathname === '/suscripcion';
+  // Use dark text when scrolled OR when page has light background
+  const useDarkText = isScrolled || !hasDarkHero;
 
   // Handle scroll effect - threshold at 80px
   useEffect(() => {
@@ -53,10 +60,10 @@ export function Header() {
       <nav
         className={cn(
           'flex items-center justify-between transition-all duration-350',
-          isScrolled ? 'py-4 px-12' : 'py-7 px-12'
+          isScrolled ? 'py-3 px-4 md:px-8 lg:px-12' : 'py-5 px-4 md:px-8 lg:px-12'
         )}
         style={
-          isScrolled
+          useDarkText
             ? {
                 background: 'rgba(255,255,255,.95)',
                 backdropFilter: 'blur(12px)',
@@ -77,7 +84,7 @@ export function Header() {
             height={35}
             className={cn(
               'h-7 w-auto transition-all duration-300',
-              isScrolled ? '' : 'brightness-0 invert'
+              useDarkText ? '' : 'brightness-0 invert'
             )}
           />
         </Link>
@@ -94,7 +101,7 @@ export function Header() {
                   fontSize: '15px',
                   fontWeight: 700,
                   textTransform: 'lowercase',
-                  color: isScrolled ? '#111111' : 'rgba(255,255,255,.85)',
+                  color: useDarkText ? '#111111' : 'rgba(255,255,255,.85)',
                   textDecoration: 'none',
                   transition: 'color 0.25s',
                 }}
@@ -109,7 +116,7 @@ export function Header() {
         <div className="flex items-center gap-1 md:gap-3">
           {/* User menu (login/account) */}
           <div
-            style={{ color: isScrolled ? '#111111' : 'rgba(255,255,255,.85)' }}
+            style={{ color: useDarkText ? '#111111' : 'rgba(255,255,255,.85)' }}
           >
             <UserMenu />
           </div>
@@ -120,7 +127,7 @@ export function Header() {
             onClick={toggleCart}
             className="relative p-3 transition-opacity hover:opacity-55"
             style={{
-              color: isScrolled ? '#111111' : 'rgba(255,255,255,.85)',
+              color: useDarkText ? '#111111' : 'rgba(255,255,255,.85)',
               background: 'none',
               border: 'none',
             }}
@@ -143,7 +150,7 @@ export function Header() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-3 transition-opacity hover:opacity-55"
             style={{
-              color: isScrolled ? '#111111' : 'rgba(255,255,255,.85)',
+              color: useDarkText ? '#111111' : 'rgba(255,255,255,.85)',
               background: 'none',
               border: 'none',
             }}

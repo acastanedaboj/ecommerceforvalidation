@@ -80,7 +80,7 @@ export default function ProductDetailPage() {
 
     toast.success(
       <span>
-        <strong>{product.name}</strong> anadido al carrito
+        <strong>{product.name}</strong> añadido al carrito
         {isSubscription && ' (Suscripcion)'}
       </span>
     );
@@ -98,10 +98,10 @@ export default function ProductDetailPage() {
 
   return (
     <>
-      <div style={{ paddingTop: '140px', paddingBottom: '96px', background: 'var(--off)' }}>
+      <div className="pt-24 pb-16 md:pt-[140px] md:pb-24" style={{ background: 'var(--off)' }}>
         <div className="container-custom">
           {/* Breadcrumb */}
-          <nav className="mb-10" aria-label="Breadcrumb">
+          <nav className="mb-6 md:mb-10" aria-label="Breadcrumb">
             <ol className="flex items-center gap-1" style={{ fontSize: '12px', listStyle: 'none' }}>
               <li>
                 <Link href="/" style={{ color: 'rgba(17,17,17,.35)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
@@ -124,7 +124,7 @@ export default function ProductDetailPage() {
           </nav>
 
           {/* Product main section */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-16 md:mb-20">
             {/* Images */}
             <div>
               <ImageGallery
@@ -142,14 +142,44 @@ export default function ProductDetailPage() {
 
             {/* Product info */}
             <div>
-              <div className="mb-8">
+              <div className="mb-6">
                 <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px' }}>
-                  {product.weight}g · SKU: {product.sku}
+                  {product.weight}g
                 </p>
                 <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 3vw, 36px)', marginBottom: '12px' }}>
                   {product.name}
                 </h1>
                 <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85 }}>{product.shortDescription}</p>
+              </div>
+
+              {/* Ingredients highlight */}
+              <div className="mb-6">
+                <p style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(17,17,17,.35)', marginBottom: '10px' }}>
+                  Ingredientes
+                </p>
+                <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.55)', fontWeight: 300, lineHeight: 1.85 }}>
+                  {product.ingredients}
+                </p>
+                {/* Dietary badges */}
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {product.tags.includes('sin-gluten') && (
+                    <span className="inline-flex items-center gap-1.5" style={{ padding: '5px 10px', background: 'rgba(16,185,129,.08)', color: '#047857', fontSize: '11px', fontWeight: 400, borderRadius: '100px', border: '1px solid rgba(16,185,129,.2)' }}>
+                      <WheatOff className="w-3.5 h-3.5" />
+                      Sin gluten
+                    </span>
+                  )}
+                  {product.isVegan && (
+                    <span className="inline-flex items-center gap-1.5" style={{ padding: '5px 10px', background: 'rgba(34,197,94,.08)', color: '#15803d', fontSize: '11px', fontWeight: 400, borderRadius: '100px', border: '1px solid rgba(34,197,94,.2)' }}>
+                      <Leaf className="w-3.5 h-3.5" />
+                      Vegano
+                    </span>
+                  )}
+                  {product.hasHoney && (
+                    <span className="inline-flex items-center gap-1.5" style={{ padding: '5px 10px', background: 'rgba(245,158,11,.08)', color: '#b45309', fontSize: '11px', fontWeight: 400, borderRadius: '100px', border: '1px solid rgba(245,158,11,.2)' }}>
+                      Con miel
+                    </span>
+                  )}
+                </div>
               </div>
 
               {/* Price display */}
@@ -288,15 +318,15 @@ export default function ProductDetailPage() {
               </div>
 
               {/* Total and add to cart */}
-              <div id="main-cta" className="p-6" style={{ background: 'var(--dark)', color: 'var(--white)' }}>
-                <div className="flex items-center justify-between mb-4">
-                  <span style={{ fontSize: '13px', color: 'rgba(255,255,255,.5)' }}>Total:</span>
+              <div id="main-cta" className="pt-6 mt-2" style={{ borderTop: '1px solid rgba(0,0,0,.08)' }}>
+                <div className="flex items-center justify-between mb-5">
+                  <span style={{ fontSize: '13px', color: 'rgba(17,17,17,.4)' }}>Total:</span>
                   <div className="text-right">
-                    <span style={{ fontFamily: 'var(--font-display)', fontSize: '28px', color: 'var(--white)' }}>{formatPrice(totalPrice)}</span>
+                    <span style={{ fontFamily: 'var(--font-display)', fontSize: '28px', color: 'var(--dark)' }}>{formatPrice(totalPrice)}</span>
                     {isFreeShipping && (
-                      <p className="flex items-center gap-2 justify-end mt-1" style={{ color: 'var(--yellow)', fontSize: '12px' }}>
+                      <p className="flex items-center gap-2 justify-end mt-1" style={{ color: 'var(--brown)', fontSize: '12px' }}>
                         <Truck className="w-4 h-4" />
-                        Envio gratis incluido
+                        Envío gratis incluido
                       </p>
                     )}
                   </div>
@@ -306,12 +336,12 @@ export default function ProductDetailPage() {
                   onClick={handleAddToCart}
                   disabled={product.stock === 0 || isAdding}
                   className={cn(
-                    'flex items-center justify-center gap-2 transition-colors disabled:opacity-50 disabled:cursor-not-allowed'
+                    'w-full flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed hover:opacity-90'
                   )}
                   style={{
                     background: 'var(--brown)',
                     color: 'var(--white)',
-                    padding: '14px 32px',
+                    padding: '16px 32px',
                     borderRadius: '100px',
                     fontSize: '13px',
                     fontWeight: 700,
@@ -326,14 +356,14 @@ export default function ProductDetailPage() {
                   ) : (
                     <ShoppingBag className="w-5 h-5" />
                   )}
-                  {isSubscription ? 'suscribirme ahora' : 'anadir al carrito'}
+                  {isSubscription ? 'suscribirme ahora' : 'añadir al carrito'}
                 </button>
               </div>
             </div>
           </div>
 
           {/* Product details - Collapsible sections */}
-          <div className="max-w-3xl mb-20">
+          <div className="max-w-3xl mb-12 md:mb-20">
             <Collapsible
               title="Descripcion"
               icon={<FileText className="w-5 h-5" />}

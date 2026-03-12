@@ -63,7 +63,7 @@ export default function HomePage() {
               fontWeight: 400,
               fontSize: 'clamp(60px, 8.5vw, 120px)',
               lineHeight: 0.9,
-              color: 'var(--white)',
+              color: 'var(--cream)',
               letterSpacing: '-0.02em',
             }}
           >

@@ -9,8 +9,8 @@ export function Footer() {
   return (
     <footer className="bg-[#6d4d45] text-[#fcf8d5]" role="contentinfo">
       {/* Main footer content */}
-      <div className="container-custom py-16 md:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
+      <div className="container-custom py-12 md:py-16 lg:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 md:gap-12 lg:gap-8">
           {/* Brand column */}
           <div className="lg:col-span-4">
             <Link
@@ -25,7 +25,7 @@ export function Footer() {
                 className="h-8 w-auto brightness-0 invert sepia saturate-[10] hue-rotate-[15deg] transition-transform duration-300 group-hover:scale-105"
               />
             </Link>
-            <p className="mt-5 text-[#fcf8d5] max-w-sm leading-relaxed">
+            <p className="mt-4 text-[#fcf8d5] max-w-sm leading-relaxed text-sm md:text-base">
               Granola artesanal sin gluten elaborada con ingredientes naturales.
               Tostada lentamente en nuestro obrador dedicado en Málaga.
             </p>
