@@ -108,10 +108,14 @@ Nuestras granolas se envían en un packaging de papel sostenible y 100% reciclab
 - Tu pedido supera los 35€
 - Tienes una suscripción activa
 
+**Entrega gratuita en el centro de Málaga:**
+Si estás en Málaga capital, puedes seleccionar la opción de entrega local gratuita al hacer tu pedido. Nos pondremos en contacto contigo para concertar día y hora de entrega.
+
 **Plazos de entrega:**
 - Península: 2-4 días laborables
 - Baleares: 4-6 días laborables
 - Canarias: 5-8 días laborables (pueden aplicar tasas de importación)
+- Málaga centro (entrega local): nos ponemos de acuerdo contigo
 
 Actualmente solo realizamos envíos a España. Si estás interesado en envíos internacionales, contáctanos.`,
     category: 'envio',
@@ -129,6 +133,21 @@ Actualmente solo realizamos envíos a España. Si estás interesado en envíos i
 Si no has recibido la información de seguimiento en 48 horas laborables después de hacer tu pedido, escríbenos a hola@poppy.es`,
     category: 'envio',
     order: 2,
+  },
+  {
+    id: 'faq_local_delivery',
+    question: '¿Ofrecéis entrega en mano en Málaga?',
+    answer: `Sí. Si estás en el **centro de Málaga**, ofrecemos **entrega gratuita en mano**.
+
+**¿Cómo funciona?**
+1. Añade los productos que quieras a tu carrito
+2. Marca la opción "Entrega gratuita en el centro de Málaga"
+3. Introduce tu email de contacto
+4. Completa el pedido
+
+Nos pondremos en contacto contigo por email para concertar el día y la hora de entrega que mejor te venga. No tiene coste adicional, independientemente del importe del pedido.`,
+    category: 'envio',
+    order: 3,
   },
   {
     id: 'faq_returns',

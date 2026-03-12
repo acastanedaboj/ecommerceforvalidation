@@ -119,6 +119,9 @@ export function Footer() {
                 <MapPin className="w-4 h-4 text-[#fcf8d5]" strokeWidth={1.5} />
                 Málaga, España
               </li>
+              <li className="text-[#fcf8d5] text-xs mt-2" style={{ opacity: 0.6, paddingLeft: '28px' }}>
+                Entrega gratuita en el centro de Málaga
+              </li>
             </ul>
           </div>
         </div>

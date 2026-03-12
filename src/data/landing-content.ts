@@ -390,7 +390,7 @@ export const artesanalContent = {
     {
       question: '¿Hacéis envíos a toda España?',
       answer:
-        'Sí, enviamos a toda la península. Envío gratis a partir de 4 bolsas o 35€. Los pedidos se preparan y envían en 24-48h laborables.',
+        'Sí, enviamos a toda la península. Envío gratis a partir de 4 bolsas o 35€. Los pedidos se preparan y envían en 24-48h laborables. Si estás en Málaga centro, también ofrecemos entrega gratuita en mano.',
     },
     {
       question: '¿Puedo visitar vuestro obrador?',
@@ -655,7 +655,7 @@ export const mercadonaContent = {
     {
       question: '¿Cuánto tarda el envío de Poppy?',
       answer:
-        'Preparamos tu pedido en 24-48h laborables y lo enviamos a toda España. Envío gratis a partir de 4 bolsas. Lo recibes en 2-4 días laborables.',
+        'Preparamos tu pedido en 24-48h laborables y lo enviamos a toda España. Envío gratis a partir de 4 bolsas. Lo recibes en 2-4 días laborables. En Málaga centro ofrecemos entrega gratuita en mano.',
     },
     {
       question: '¿La granola de Mercadona es apta para celíacos?',

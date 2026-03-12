@@ -200,7 +200,7 @@ export default function SuscripcionPage() {
               <ul style={{ listStyle: 'none' }} className="space-y-5">
                 {[
                   { icon: Gift, title: '15% de descuento permanente', desc: 'El mejor precio por unidad, garantizado' },
-                  { icon: Truck, title: 'Envío gratis siempre', desc: 'Sin mínimos, sin condiciones' },
+                  { icon: Truck, title: 'Envío gratis siempre', desc: 'Sin mínimos, sin condiciones. Entrega gratuita en Málaga centro' },
                   { icon: RefreshCw, title: 'Flexibilidad total', desc: 'Pausa, modifica o cancela cuando quieras' },
                   { icon: CreditCard, title: 'Sin sorpresas', desc: 'Siempre el mismo precio, sin subidas' },
                 ].map((item, i) => {

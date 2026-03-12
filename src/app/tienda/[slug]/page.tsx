@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ShoppingBag, Truck, RefreshCw, Shield, Plus, Minus, FileText, List, BarChart2, AlertTriangle, Package, Leaf, Clock, WheatOff, ChevronRight } from 'lucide-react';
+import { ShoppingBag, Truck, RefreshCw, Shield, Plus, Minus, FileText, List, BarChart2, AlertTriangle, Package, Leaf, Clock, WheatOff, ChevronRight, MapPin } from 'lucide-react';
 import { getProductBySlug, getRetailProducts } from '@/data/products';
 import { useCartStore } from '@/store/cart-store';
 import { formatPrice, cn } from '@/lib/utils';
@@ -306,9 +306,10 @@ export default function ProductDetailPage() {
               {/* Trust badges */}
               <div className="flex flex-wrap gap-4 mb-6">
                 {[
-                  { icon: Truck, text: 'Envio 2-4 dias' },
+                  { icon: Truck, text: 'Envío 2-4 días' },
+                  { icon: MapPin, text: 'Entrega gratis en Málaga' },
                   { icon: Shield, text: 'Pago seguro' },
-                  { icon: RefreshCw, text: '14 dias devolucion' },
+                  { icon: RefreshCw, text: '14 días devolución' },
                 ].map(({ icon: Icon, text }) => (
                   <div key={text} className="flex items-center gap-2" style={{ fontSize: '12px', color: 'rgba(17,17,17,.4)', fontWeight: 300 }}>
                     <Icon className="w-4 h-4" style={{ color: 'var(--brown)' }} />
@@ -453,8 +454,11 @@ export default function ProductDetailPage() {
               title="Frescura y envío"
               icon={<Clock className="w-5 h-5" />}
             >
-              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85 }}>
+              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '12px' }}>
                 Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenamos. Eso significa que recibirás tu granola solo unas horas o días tras su elaboración.
+              </p>
+              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85 }}>
+                <strong style={{ color: 'var(--dark)', fontWeight: 600 }}>Entrega gratuita en Málaga centro:</strong> si estás en Málaga capital, puedes seleccionar la entrega local al hacer tu pedido. Nos pondremos en contacto para concertar día y hora.
               </p>
             </Collapsible>
 
