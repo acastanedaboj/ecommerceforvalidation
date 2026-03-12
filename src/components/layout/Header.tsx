@@ -84,7 +84,7 @@ export function Header() {
             height={35}
             className={cn(
               'h-7 w-auto transition-all duration-300',
-              useDarkText ? '' : 'brightness-0 invert'
+              useDarkText ? '' : 'brightness-0 invert sepia saturate-[10] hue-rotate-[15deg]'
             )}
           />
         </Link>
@@ -101,7 +101,7 @@ export function Header() {
                   fontSize: '15px',
                   fontWeight: 700,
                   textTransform: 'lowercase',
-                  color: useDarkText ? '#111111' : 'rgba(255,255,255,.85)',
+                  color: useDarkText ? '#111111' : '#fcf8d5',
                   textDecoration: 'none',
                   transition: 'color 0.25s',
                 }}
@@ -116,7 +116,7 @@ export function Header() {
         <div className="flex items-center gap-1 md:gap-3">
           {/* User menu (login/account) */}
           <div
-            style={{ color: useDarkText ? '#111111' : 'rgba(255,255,255,.85)' }}
+            style={{ color: useDarkText ? '#111111' : '#fcf8d5' }}
           >
             <UserMenu />
           </div>
@@ -127,7 +127,7 @@ export function Header() {
             onClick={toggleCart}
             className="relative p-3 transition-opacity hover:opacity-55"
             style={{
-              color: useDarkText ? '#111111' : 'rgba(255,255,255,.85)',
+              color: useDarkText ? '#111111' : '#fcf8d5',
               background: 'none',
               border: 'none',
             }}
@@ -150,7 +150,7 @@ export function Header() {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="lg:hidden p-3 transition-opacity hover:opacity-55"
             style={{
-              color: useDarkText ? '#111111' : 'rgba(255,255,255,.85)',
+              color: useDarkText ? '#111111' : '#fcf8d5',
               background: 'none',
               border: 'none',
             }}
