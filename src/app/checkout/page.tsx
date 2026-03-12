@@ -72,7 +72,7 @@ const spanishProvinces = [
 export default function CheckoutPage() {
   const router = useRouter();
   const { data: session } = useSession();
-  const { items, clearCart } = useCartStore();
+  const { items, clearCart, localDelivery, localDeliveryEmail } = useCartStore();
 
   const [isLoading, setIsLoading] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState<'card' | 'cash_on_delivery'>('card');
@@ -101,11 +101,16 @@ export default function CheckoutPage() {
       )
     : 0;
 
-  const cartTotal = calculateCartTotal(
+  const cartTotalRaw = calculateCartTotal(
     cartItemsForCalculation,
     couponDiscountCents,
     appliedCoupon?.code
   );
+
+  // Override shipping for local delivery
+  const cartTotal = localDelivery
+    ? { ...cartTotalRaw, shippingCents: 0, isFreeShipping: true, totalCents: cartTotalRaw.totalCents - cartTotalRaw.shippingCents }
+    : cartTotalRaw;
 
   const [formData, setFormData] = useState({
     email: '',
@@ -209,12 +214,16 @@ export default function CheckoutPage() {
 
     if (!formData.name) newErrors.name = 'El nombre es obligatorio';
     if (!formData.phone) newErrors.phone = 'El teléfono es obligatorio';
-    if (!formData.address) newErrors.address = 'La dirección es obligatoria';
-    if (!formData.city) newErrors.city = 'La ciudad es obligatoria';
-    if (!formData.province) newErrors.province = 'La provincia es obligatoria';
-    if (!formData.postalCode) newErrors.postalCode = 'El código postal es obligatorio';
-    else if (!/^\d{5}$/.test(formData.postalCode)) {
-      newErrors.postalCode = 'Código postal no válido';
+
+    // Address fields only required for standard shipping
+    if (!localDelivery) {
+      if (!formData.address) newErrors.address = 'La dirección es obligatoria';
+      if (!formData.city) newErrors.city = 'La ciudad es obligatoria';
+      if (!formData.province) newErrors.province = 'La provincia es obligatoria';
+      if (!formData.postalCode) newErrors.postalCode = 'El código postal es obligatorio';
+      else if (!/^\d{5}$/.test(formData.postalCode)) {
+        newErrors.postalCode = 'Código postal no válido';
+      }
     }
 
     if (!acceptedTerms) {
@@ -268,10 +277,14 @@ export default function CheckoutPage() {
                 priceInCents: item.priceInCents,
               };
             }),
-            customer: formData,
+            customer: localDelivery
+              ? { email: formData.email, name: formData.name, phone: formData.phone, address: 'Entrega local - Centro de Málaga', city: 'Málaga', province: 'Málaga', postalCode: '29001' }
+              : formData,
             paymentMethod,
             couponCode: appliedCoupon?.code,
             couponDiscountCents,
+            localDelivery: localDelivery || undefined,
+            localDeliveryEmail: localDelivery ? localDeliveryEmail : undefined,
           }),
         });
 
@@ -416,55 +429,67 @@ export default function CheckoutPage() {
               <section className="bg-white rounded-xl p-6 shadow-sm">
                 <h2 className="text-xl text-neutral-900 mb-4 flex items-center gap-2">
                   <Truck className="w-5 h-5 text-primary-600" />
-                  Dirección de envío
+                  {localDelivery ? 'Entrega en el centro de Málaga' : 'Dirección de envío'}
                 </h2>
-                <div className="space-y-4">
-                  <Input
-                    label="Dirección"
-                    name="address"
-                    value={formData.address}
-                    onChange={handleInputChange}
-                    error={errors.address}
-                    placeholder="Calle, número, piso..."
-                    required
-                  />
-                  <Input
-                    label="Información adicional (opcional)"
-                    name="addressLine2"
-                    value={formData.addressLine2}
-                    onChange={handleInputChange}
-                    placeholder="Apartamento, portal, etc."
-                  />
-                  <div className="grid sm:grid-cols-3 gap-4">
-                    <Input
-                      label="Ciudad"
-                      name="city"
-                      value={formData.city}
-                      onChange={handleInputChange}
-                      error={errors.city}
-                      required
-                    />
-                    <Select
-                      label="Provincia"
-                      name="province"
-                      value={formData.province}
-                      onChange={handleInputChange}
-                      error={errors.province}
-                      options={spanishProvinces}
-                      placeholder="Selecciona..."
-                      required
-                    />
-                    <Input
-                      label="Código postal"
-                      name="postalCode"
-                      value={formData.postalCode}
-                      onChange={handleInputChange}
-                      error={errors.postalCode}
-                      placeholder="28001"
-                      required
-                    />
+
+                {localDelivery ? (
+                  <div className="rounded-lg p-4" style={{ background: 'rgba(243,238,148,.15)', border: '1px solid rgba(243,238,148,.3)' }}>
+                    <p style={{ fontSize: '14px', color: 'var(--dark)', fontWeight: 500, marginBottom: '4px' }}>
+                      Entrega gratuita en el centro de Málaga
+                    </p>
+                    <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
+                      Nos pondremos en contacto a <strong>{localDeliveryEmail}</strong> para concertar día y hora de entrega.
+                    </p>
                   </div>
-                </div>
+                ) : (
+                  <div className="space-y-4">
+                    <Input
+                      label="Dirección"
+                      name="address"
+                      value={formData.address}
+                      onChange={handleInputChange}
+                      error={errors.address}
+                      placeholder="Calle, número, piso..."
+                      required
+                    />
+                    <Input
+                      label="Información adicional (opcional)"
+                      name="addressLine2"
+                      value={formData.addressLine2}
+                      onChange={handleInputChange}
+                      placeholder="Apartamento, portal, etc."
+                    />
+                    <div className="grid sm:grid-cols-3 gap-4">
+                      <Input
+                        label="Ciudad"
+                        name="city"
+                        value={formData.city}
+                        onChange={handleInputChange}
+                        error={errors.city}
+                        required
+                      />
+                      <Select
+                        label="Provincia"
+                        name="province"
+                        value={formData.province}
+                        onChange={handleInputChange}
+                        error={errors.province}
+                        options={spanishProvinces}
+                        placeholder="Selecciona..."
+                        required
+                      />
+                      <Input
+                        label="Código postal"
+                        name="postalCode"
+                        value={formData.postalCode}
+                        onChange={handleInputChange}
+                        error={errors.postalCode}
+                        placeholder="28001"
+                        required
+                      />
+                    </div>
+                  </div>
+                )}
               </section>
 
               {/* Payment method */}
@@ -745,9 +770,13 @@ export default function CheckoutPage() {
                     </div>
                   )}
                   <div className="flex justify-between">
-                    <span className="text-neutral-600">Envío</span>
+                    <span className="text-neutral-600">
+                      {localDelivery ? 'Entrega en Málaga' : 'Envío'}
+                    </span>
                     <span>
-                      {cartTotal.isFreeShipping ? (
+                      {localDelivery ? (
+                        <span className="text-accent-600">Gratis</span>
+                      ) : cartTotal.isFreeShipping ? (
                         <span className="text-accent-600">Gratis</span>
                       ) : (
                         formatPrice(cartTotal.shippingCents)

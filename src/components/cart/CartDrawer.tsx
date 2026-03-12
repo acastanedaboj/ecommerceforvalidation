@@ -1,8 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { X, Plus, Minus, ShoppingBag, Trash2, ArrowRight, Check, Truck } from 'lucide-react';
+import { X, Plus, Minus, ShoppingBag, Trash2, ArrowRight, Check, Truck, MapPin } from 'lucide-react';
 import { useCartStore, isCartBundleItem } from '@/store/cart-store';
 import { formatPrice } from '@/lib/utils';
 import { cn } from '@/lib/utils';
@@ -10,7 +11,8 @@ import { SHIPPING } from '@/lib/constants';
 import { BundleCartItem } from '@/components/bundle';
 
 export function CartDrawer() {
-  const { items, isOpen, setIsOpen, removeItem, updateQuantity, getCartTotal } = useCartStore();
+  const { items, isOpen, setIsOpen, removeItem, updateQuantity, getCartTotal, localDelivery, localDeliveryEmail, setLocalDelivery, setLocalDeliveryEmail } = useCartStore();
+  const [localEmailError, setLocalEmailError] = useState('');
   const cartTotal = getCartTotal();
 
   // Calculate how much more for free shipping
@@ -257,6 +259,57 @@ export function CartDrawer() {
         {/* Footer with totals */}
         {items.length > 0 && (
           <div className="px-6 py-5" style={{ borderTop: '1px solid rgba(0,0,0,.07)', background: 'var(--white)' }}>
+            {/* Local delivery option */}
+            <div className="mb-4 pb-4" style={{ borderBottom: '1px solid rgba(0,0,0,.07)' }}>
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={localDelivery}
+                  onChange={(e) => {
+                    setLocalDelivery(e.target.checked);
+                    setLocalEmailError('');
+                  }}
+                  className="mt-0.5 accent-stone-700"
+                  style={{ width: '16px', height: '16px' }}
+                />
+                <div className="flex-1">
+                  <span className="flex items-center gap-1.5" style={{ fontSize: '13px', fontWeight: 700, color: 'var(--dark)' }}>
+                    <MapPin className="w-3.5 h-3.5" style={{ color: 'var(--brown)' }} />
+                    Entrega gratuita en el centro de Málaga
+                  </span>
+                  <span style={{ fontSize: '11px', color: 'rgba(17,17,17,.45)', fontWeight: 300, display: 'block', marginTop: '2px' }}>
+                    Nos pondremos en contacto para concertar la entrega
+                  </span>
+                </div>
+              </label>
+
+              {localDelivery && (
+                <div className="mt-3 ml-7">
+                  <input
+                    type="email"
+                    value={localDeliveryEmail}
+                    onChange={(e) => {
+                      setLocalDeliveryEmail(e.target.value);
+                      if (localEmailError) setLocalEmailError('');
+                    }}
+                    placeholder="Tu email de contacto"
+                    className="w-full px-3 py-2 text-sm rounded-lg transition-colors"
+                    style={{
+                      border: localEmailError ? '1px solid #e53e3e' : '1px solid rgba(0,0,0,.12)',
+                      fontSize: '13px',
+                      outline: 'none',
+                      background: 'var(--off)',
+                    }}
+                    onFocus={(e) => { e.target.style.borderColor = 'var(--brown)'; }}
+                    onBlur={(e) => { e.target.style.borderColor = localEmailError ? '#e53e3e' : 'rgba(0,0,0,.12)'; }}
+                  />
+                  {localEmailError && (
+                    <p style={{ fontSize: '11px', color: '#e53e3e', marginTop: '4px' }}>{localEmailError}</p>
+                  )}
+                </div>
+              )}
+            </div>
+
             {/* Subtotals */}
             <div className="space-y-2.5" style={{ fontSize: '13px' }}>
               <div className="flex justify-between">
@@ -272,9 +325,13 @@ export function CartDrawer() {
               )}
 
               <div className="flex justify-between">
-                <span style={{ color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>Envio</span>
+                <span style={{ color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
+                  {localDelivery ? 'Entrega en Málaga' : 'Envío'}
+                </span>
                 <span>
-                  {cartTotal.isFreeShipping ? (
+                  {localDelivery ? (
+                    <span style={{ color: 'var(--brown)', fontWeight: 700 }}>Gratis</span>
+                  ) : cartTotal.isFreeShipping ? (
                     <span style={{ color: 'var(--brown)', fontWeight: 700 }}>Gratis</span>
                   ) : (
                     <span style={{ color: 'var(--dark)', fontWeight: 300 }}>{formatPrice(cartTotal.shippingCents)}</span>
@@ -306,7 +363,22 @@ export function CartDrawer() {
             {/* Checkout button */}
             <Link
               href="/checkout"
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                if (localDelivery) {
+                  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                  if (!localDeliveryEmail.trim()) {
+                    e.preventDefault();
+                    setLocalEmailError('Introduce tu email para concertar la entrega');
+                    return;
+                  }
+                  if (!emailRegex.test(localDeliveryEmail.trim())) {
+                    e.preventDefault();
+                    setLocalEmailError('Email no válido');
+                    return;
+                  }
+                }
+                setIsOpen(false);
+              }}
               className="btn-primary w-full mt-5 justify-center py-4"
             >
               Finalizar compra
