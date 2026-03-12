@@ -25,7 +25,7 @@ export default function NotFound() {
             className="btn-pill inline-flex items-center justify-center"
           >
             <Home className="w-4 h-4 mr-2" />
-            volver al inicio
+            Volver al inicio
           </Link>
 
           <Link
@@ -34,7 +34,7 @@ export default function NotFound() {
             style={{ borderColor: 'rgba(0,0,0,.15)' }}
           >
             <ShoppingBag className="w-4 h-4 mr-2" />
-            ver productos
+            Ver productos
           </Link>
         </div>
 

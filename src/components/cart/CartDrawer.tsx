@@ -118,7 +118,7 @@ export function CartDrawer() {
                 onClick={() => setIsOpen(false)}
                 className="btn-pill"
               >
-                ver productos
+                Ver productos
               </Link>
             </div>
           ) : (
@@ -309,7 +309,7 @@ export function CartDrawer() {
               onClick={() => setIsOpen(false)}
               className="btn-primary w-full mt-5 justify-center py-4"
             >
-              finalizar compra
+              Finalizar compra
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
 

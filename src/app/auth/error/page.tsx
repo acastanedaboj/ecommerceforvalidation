@@ -73,14 +73,14 @@ function ErrorContent() {
             href="/auth/login"
             className="btn-pill"
           >
-            volver a intentar
+            Volver a intentar
           </Link>
           <Link
             href="/"
             className="btn-pill"
             style={{ borderColor: 'rgba(0,0,0,.15)' }}
           >
-            ir al inicio
+            Ir al inicio
           </Link>
         </div>
       </div>

@@ -58,7 +58,7 @@ export default function SuscripcionPage() {
                 className="btn-pill-white"
                 style={{ padding: '14px 32px' }}
               >
-                empezar suscripción
+                Empezar suscripción
                 <ArrowRight className="w-4 h-4 ml-2" />
               </Link>
             </div>
@@ -292,7 +292,7 @@ export default function SuscripcionPage() {
 
           <div className="mt-8 text-center">
             <Link href="/faq" className="btn-text">
-              ver todas las preguntas frecuentes
+              Ver todas las preguntas frecuentes
             </Link>
           </div>
         </div>
@@ -309,7 +309,7 @@ export default function SuscripcionPage() {
             sin preocupaciones.
           </p>
           <Link href="/tienda" className="btn-pill" style={{ padding: '14px 32px' }}>
-            ver productos y suscribirse
+            Ver productos y suscribirse
             <ArrowRight className="w-4 h-4 ml-2" />
           </Link>
         </div>

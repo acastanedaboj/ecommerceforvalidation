@@ -106,7 +106,7 @@ export default function BlogPage() {
                     </span>
                   </div>
                   <span className="btn-text" style={{ width: 'fit-content' }}>
-                    leer artículo
+                    Leer artículo
                   </span>
                 </div>
               </div>
@@ -173,7 +173,7 @@ export default function BlogPage() {
               required
             />
             <button type="submit" className="btn-pill">
-              suscribirme
+              Suscribirme
             </button>
           </form>
           <p className="mt-3" style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', fontWeight: 300 }}>

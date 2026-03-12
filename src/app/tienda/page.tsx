@@ -73,7 +73,7 @@ export default function TiendaPage() {
               onClick={() => setIsBundleModalOpen(true)}
               className="btn-pill"
             >
-              crear pack
+              Crear pack
             </button>
           </div>
         </div>
@@ -131,7 +131,7 @@ export default function TiendaPage() {
                 y condiciones especiales para profesionales.
               </p>
               <a href="/mayorista" className="btn-pill-white">
-                ver condiciones mayorista
+                Ver condiciones mayorista
               </a>
             </div>
           </section>

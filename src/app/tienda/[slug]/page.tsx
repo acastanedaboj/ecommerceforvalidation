@@ -37,7 +37,7 @@ export default function ProductDetailPage() {
         <div className="container-custom text-center">
           <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '24px' }}>Producto no encontrado</h1>
           <Link href="/tienda" className="btn-pill">
-            volver a la tienda
+            Volver a la tienda
           </Link>
         </div>
       </div>

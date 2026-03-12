@@ -85,7 +85,7 @@ export default function HomePage() {
               Granola artesanal. Pequeños lotes. Málaga.
             </p>
             <Link href="/tienda" className="btn-pill-white">
-              descubrir
+              Descubrir
             </Link>
           </div>
         </div>
@@ -176,7 +176,7 @@ export default function HomePage() {
               alt="Obrador, Málaga"
               fill
               className="object-cover"
-              sizes="50vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
           <span
@@ -205,7 +205,7 @@ export default function HomePage() {
             especialmente crujiente que define a Poppy.
           </p>
           <Link href="/nosotros" className="btn-pill">
-            el proceso
+            El proceso
           </Link>
         </div>
       </div>
@@ -225,7 +225,7 @@ export default function HomePage() {
               Tres granolas
             </h2>
             <Link href="/tienda" className="btn-text">
-              ver todas
+              Ver todas
             </Link>
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -251,7 +251,7 @@ export default function HomePage() {
             aditivos. Sin conservantes. Sin nada que no pondrías tú en un bol.
           </p>
           <Link href="/nosotros" className="btn-pill">
-            nuestra filosofía
+            Nuestra filosofía
           </Link>
         </div>
         <div className="split-img">
@@ -261,7 +261,7 @@ export default function HomePage() {
               alt="Ingredientes naturales de Poppy"
               fill
               className="object-cover"
-              sizes="50vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
           <span
@@ -308,7 +308,7 @@ export default function HomePage() {
               alt="Pilar preparando granola"
               fill
               className="object-cover"
-              sizes="50vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
           <span
@@ -338,7 +338,7 @@ export default function HomePage() {
             pasa cuando algo está realmente bueno: todos querían más.
           </p>
           <Link href="/nosotros" className="btn-text">
-            leer la historia completa
+            Leer la historia completa
           </Link>
         </div>
       </div>
@@ -358,7 +358,7 @@ export default function HomePage() {
               alt="Granola Poppy suscripción"
               fill
               className="object-cover"
-              sizes="50vw"
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         </div>
@@ -386,7 +386,7 @@ export default function HomePage() {
             gracias.
           </p>
           <Link href="/suscripcion" className="btn-pill">
-            empezar la suscripción
+            Empezar la suscripción
           </Link>
         </div>
       </div>

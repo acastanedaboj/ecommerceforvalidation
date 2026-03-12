@@ -183,7 +183,7 @@ export default function CheckoutPage() {
             Añade algunos productos antes de continuar con el checkout.
           </p>
           <Link href="/tienda" className="btn-pill">
-            ir a la tienda
+            Ir a la tienda
           </Link>
         </div>
       </div>

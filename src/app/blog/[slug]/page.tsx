@@ -402,7 +402,7 @@ export default function BlogPostPage({ params }: Props) {
             Prueba nuestra granola Poppy y ponla en práctica
           </p>
           <Link href="/tienda" className="btn-pill">
-            ver productos
+            Ver productos
           </Link>
         </section>
         </div>

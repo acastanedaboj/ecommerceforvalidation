@@ -203,7 +203,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
               disabled={isAdding}
               className={cn('btn-card', isAdding && 'opacity-60')}
             >
-              {isAdding ? 'añadido' : 'añadir'}
+              {isAdding ? 'Añadido' : 'Añadir'}
             </button>
           )}
         </div>
@@ -266,7 +266,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
             href={`/tienda/${product.slug}`}
             className="btn-pill text-center mt-3"
           >
-            ver producto
+            Ver producto
           </Link>
         )}
       </div>

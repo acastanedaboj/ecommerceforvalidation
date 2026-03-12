@@ -212,11 +212,11 @@ export default function NosotrosPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/tienda" className="btn-pill" style={{ padding: '14px 32px' }}>
-              ver productos
+              Ver productos
               <ArrowRight className="w-4 h-4 ml-2" />
             </Link>
             <Link href="/contacto" className="btn-pill" style={{ padding: '14px 32px', borderColor: 'rgba(0,0,0,.15)' }}>
-              contáctanos
+              Contáctanos
             </Link>
           </div>
         </div>

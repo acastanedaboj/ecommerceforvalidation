@@ -145,7 +145,7 @@ export default function FAQPage() {
             Estamos aquí para ayudarte. Escríbenos y te responderemos lo antes posible.
           </p>
           <Link href="/contacto" className="btn-pill">
-            contactar
+            Contactar
           </Link>
         </div>
       </div>
