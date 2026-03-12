@@ -354,12 +354,11 @@ export default function HomePage() {
         >
           <div className="split-img-inner">
             <Image
-              src="/images/home horizntal.png"
+              src="/images/bottomimage.png"
               alt="Granola Poppy suscripción"
               fill
               className="object-cover"
               sizes="50vw"
-              style={{ opacity: 0.4 }}
             />
           </div>
         </div>
