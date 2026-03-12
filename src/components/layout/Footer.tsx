@@ -53,7 +53,7 @@ export function Footer() {
 
           {/* Tienda links */}
           <div className="lg:col-span-2">
-            <h3 className="text-[#fcf8d5] font-bold text-[15px] lowercase mb-5" style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Tienda</h3>
+            <h3 className="text-[#fcf8d5] font-bold text-[15px] mb-5" style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Tienda</h3>
             <ul className="space-y-3.5">
               {NAVIGATION.footer.tienda.map((item) => (
                 <li key={item.href}>
@@ -70,7 +70,7 @@ export function Footer() {
 
           {/* Empresa links */}
           <div className="lg:col-span-2">
-            <h3 className="text-[#fcf8d5] font-bold text-[15px] lowercase mb-5" style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Empresa</h3>
+            <h3 className="text-[#fcf8d5] font-bold text-[15px] mb-5" style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Empresa</h3>
             <ul className="space-y-3.5">
               {NAVIGATION.footer.empresa.map((item) => (
                 <li key={item.href}>
@@ -87,7 +87,7 @@ export function Footer() {
 
           {/* Recursos links */}
           <div className="lg:col-span-2">
-            <h3 className="text-[#fcf8d5] font-bold text-[15px] lowercase mb-5" style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Recursos</h3>
+            <h3 className="text-[#fcf8d5] font-bold text-[15px] mb-5" style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Recursos</h3>
             <ul className="space-y-3.5">
               {NAVIGATION.footer.recursos.map((item) => (
                 <li key={item.href}>
@@ -104,7 +104,7 @@ export function Footer() {
 
           {/* Contacto */}
           <div className="lg:col-span-2">
-            <h3 className="text-[#fcf8d5] font-bold text-[15px] lowercase mb-5" style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Contacto</h3>
+            <h3 className="text-[#fcf8d5] font-bold text-[15px] mb-5" style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Contacto</h3>
             <ul className="space-y-4">
               <li>
                 <a

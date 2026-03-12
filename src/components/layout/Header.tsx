@@ -100,13 +100,12 @@ export function Header() {
                   fontFamily: 'var(--font-display)',
                   fontSize: '15px',
                   fontWeight: 700,
-                  textTransform: 'lowercase',
                   color: useDarkText ? '#111111' : '#fcf8d5',
                   textDecoration: 'none',
                   transition: 'color 0.25s',
                 }}
               >
-                {item.name.toLowerCase()}
+                {item.name}
               </Link>
             </li>
           ))}
@@ -193,12 +192,11 @@ export function Header() {
                   color: '#111111',
                   fontWeight: 700,
                   fontSize: '15px',
-                  textTransform: 'lowercase',
                   textDecoration: 'none',
                   animationDelay: `${index * 50}ms`,
                 }}
               >
-                {item.name.toLowerCase()}
+                {item.name}
               </Link>
             ))}
           </div>
@@ -210,7 +208,7 @@ export function Header() {
               onClick={() => setIsMobileMenuOpen(false)}
               className="btn-pill w-full text-center"
             >
-              comprar ahora
+              Comprar ahora
             </Link>
           </div>
         </div>
