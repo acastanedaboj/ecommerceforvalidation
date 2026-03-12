@@ -174,9 +174,9 @@ export default function NosotrosPage() {
           </div>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
-              { step: '01', title: 'Selección', description: 'Elegimos ingredientes naturales y de calidad: copos de avena sin gluten, frutos secos, semillas y miel ecológica' },
+              { step: '01', title: 'Selección', description: 'Elegimos ingredientes naturales y de calidad: copos de avena integral sin gluten, frutos secos, semillas y miel' },
               { step: '02', title: 'Remojo', description: 'Los frutos secos y semillas se remojan durante horas para reducir fitatos y facilitar la digestión y absorción de nutrientes' },
-              { step: '03', title: 'Mezcla', description: 'Combinamos los ingredientes a mano siguiendo nuestra receta, con aceite de coco virgen extra y especias naturales' },
+              { step: '03', title: 'Mezcla', description: 'Combinamos los ingredientes a mano siguiendo nuestra receta, con aceite de coco y especias naturales' },
               { step: '04', title: 'Tostado lento', description: 'Horneamos a baja temperatura para conseguir el crujiente perfecto preservando todos los nutrientes' },
             ].map((item, index) => (
               <div key={index} className="relative">

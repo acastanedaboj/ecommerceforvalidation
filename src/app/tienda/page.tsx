@@ -148,7 +148,7 @@ export default function TiendaPage() {
                 ¿No sabes cuál elegir?
               </h3>
               <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '16px' }}>
-                Todos nuestros sabores comparten la misma base de calidad: avena sin gluten
+                Todos nuestros sabores comparten la misma base de calidad: avena integral sin gluten
                 y frutos secos premium. La mayoría están endulzados con miel,
                 y tenemos una opción vegana endulzada con sirope de agave ecológico.
               </p>

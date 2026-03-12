@@ -287,7 +287,7 @@ Consulta nuestra Política de Privacidad completa para más detalles. Cumplimos 
     answer: `**Certificaciones y garantías:**
 
 - **Avena sin gluten certificada:** Nuestra avena proviene de proveedores con certificación de cultivo y procesado sin gluten
-- **Ingredientes de calidad:** La miel de apicultores locales, aceite de coco virgen extra y frutos secos premium
+- **Ingredientes de calidad:** La miel de apicultores locales, aceite de coco y frutos secos premium
 - **Registro sanitario:** Cumplimos con toda la normativa sanitaria española y europea para producción alimentaria
 
 **Control de calidad:**

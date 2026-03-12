@@ -55,7 +55,7 @@ export function buildOrganizationSchema(): SchemaOrganization {
     url: SITE_URL,
     logo: `${SITE_URL}/logo.svg`,
     description:
-      'Poppy elabora granola artesanal sin gluten con avena certificada, miel y frutos secos premium. Envíos a toda España.',
+      'Poppy elabora granola artesanal sin gluten con avena integral, miel y frutos secos premium. Envíos a toda España.',
     email: BUSINESS.email,
     address: {
       '@type': 'PostalAddress',
@@ -358,7 +358,7 @@ export function buildLocalBusinessSchema() {
     name: `${BRAND_NAME} - Granola Artesanal Sin Gluten`,
     alternateName: BRAND_NAME,
     description:
-      'Compra granola artesanal sin gluten online. Obrador en Málaga. Elaboramos con avena certificada, miel ecológica de apicultores locales y frutos secos premium. Envío gratis +4 uds a toda España.',
+      'Compra granola artesanal sin gluten online. Obrador en Málaga. Elaboramos con avena integral sin gluten, miel de apicultores locales y frutos secos premium. Envío gratis +4 uds a toda España.',
     image: [
       `${SITE_URL}/images/hero-granola.jpeg`,
       `${SITE_URL}/logo.svg`,

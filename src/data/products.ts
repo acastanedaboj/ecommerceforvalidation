@@ -47,9 +47,9 @@ export const products: Product[] = [
     sku: 'GRAN-150-CLA',
     name: 'Granola original',
     slug: 'granola-clasica-150g',
-    description: `Nuestra granola original es la receta que dio vida a Poppy. Un equilibrio perfecto entre la avena sin gluten, la miel ecológica de apicultores locales y una mezcla premium de semillas y frutos secos que define nuestro sabor característico.
+    description: `Nuestra granola original es la receta que dio vida a Poppy. Un equilibrio perfecto entre la avena integral sin gluten, la miel ecológica de apicultores locales y una mezcla premium de semillas y frutos secos que define nuestro sabor característico.
 
-Los frutos secos y las semillas de girasol y calabaza se remojan cuidadosamente antes de hornear para mejorar su digestión. La miel ecológica carameliza suavemente durante el tostado lento y, junto con el aceite de coco virgen extra, da ese toque crujiente y un aroma suave y delicioso, creando clusters perfectos.
+Los frutos secos y las semillas de girasol y calabaza se remojan cuidadosamente antes de hornear para mejorar su digestión. La miel ecológica carameliza suavemente durante el tostado lento y, junto con el aceite de coco, da ese toque crujiente y un aroma suave y delicioso, creando clusters perfectos.
 
 El lino molido aporta omega-3 y el toque sutil de canela y jengibre completa la experiencia. Cada bolsa de 150g está elaborada con la proporción exacta para el crunch perfecto.
 
@@ -61,7 +61,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     priceInCents: 700,
     weight: 150,
     ingredients:
-      'Copos de avena sin gluten* (50%), pipas de girasol (17%), pipas de calabaza (8%), miel ecológica* (7%), almendras (6%), anacardos (5%), aceite de coco virgen extra* (4%), avellanas (2%), lino molido (1%), especias (canela, jengibre) (<1%). *De agricultura ecológica.',
+      'Copos de avena integral sin gluten, semillas de girasol, almendras, anacardos, miel, semillas de calabaza, aceite de coco, avellanas, lino molido, canela, jengibre.',
     allergens:
       'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Puede contener trazas de soja y sésamo.',
     nutritionalInfo: {
@@ -91,21 +91,21 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     sku: 'GRAN-150-NAR',
     name: 'Granola con naranja',
     slug: 'granola-naranja-150g',
-    description: `Nuestra granola con naranja es una explosión de frescura mediterránea en cada bocado. Elaborada con piel de naranja deshidratada y trocitos de naranja confitada, ofrece un perfil aromático único que despierta los sentidos.
+    description: `Nuestra granola con naranja es una explosión de frescura mediterránea en cada bocado. Elaborada con piel de naranja deshidratada sobre nuestra base clásica, ofrece un perfil aromático único que despierta los sentidos.
 
-La base de avena certificada sin gluten se combina con miel de azahar, que complementa perfectamente los cítricos. El aceite de coco virgen extra, junto con la miel, da ese toque crujiente y un aroma suave y delicioso. Las almendras marcona y las nueces aportan el equilibrio perfecto de textura y sabor.
+La base de avena integral sin gluten se combina con miel, que complementa perfectamente los cítricos. El aceite de coco, junto con la miel, da ese toque crujiente y un aroma suave y delicioso. Las almendras y anacardos aportan el equilibrio perfecto de textura y sabor.
 
-El toque de canela de Ceilán y jengibre fresco realzan los aromas naturales de la naranja, creando una experiencia sensorial completa.
+El toque de canela y jengibre realzan los aromas naturales de la naranja, creando una experiencia sensorial completa.
 
 Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenamos. Eso significa que recibirás tu granola solo unas horas o días tras su elaboración.
 
 **Frescura mediterránea en tu desayuno.**`,
     shortDescription:
-      'Granola con naranja natural y miel de azahar. Un toque cítrico y refrescante para empezar el día.',
+      'Granola con piel de naranja deshidratada y miel. Un toque cítrico y refrescante para empezar el día.',
     priceInCents: 700,
     weight: 150,
     ingredients:
-      'Copos de avena sin gluten* (48%), pipas de girasol (16%), pipas de calabaza (8%), miel ecológica* (7%), almendras (5%), anacardos (5%), aceite de coco virgen extra* (4%), naranja confitada (3%), ralladura de naranja natural (2%), avellanas (2%), lino molido (1%), especias (canela, jengibre) (<1%). *De agricultura ecológica.',
+      'Copos de avena integral sin gluten, semillas de girasol, almendras, anacardos, miel, semillas de calabaza, piel de naranja deshidratada, aceite de coco, avellanas, lino molido, canela, jengibre.',
     allergens:
       'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Puede contener trazas de soja y sésamo.',
     nutritionalInfo: {
@@ -126,7 +126,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     tags: ['sin-gluten', 'ecologico', 'artesanal', 'citricos', 'naranja', 'con-miel'],
     metaTitle: 'Comprar granola de naranja sin gluten | Ecológica | Poppy',
     metaDescription:
-      'Compra granola de naranja sin gluten con ralladura natural y miel de azahar ecológica. Sabor mediterráneo. Envío gratis +4 uds. Entrega en toda España.',
+      'Compra granola de naranja sin gluten con piel de naranja deshidratada y miel. Sabor mediterráneo. Envío gratis +4 uds. Entrega en toda España.',
     hasHoney: true,
     isVegan: false,
   },
@@ -137,7 +137,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     slug: 'granola-vegana-150g',
     description: `Nuestra granola vegana tiene la misma receta deliciosa que la clásica, pero endulzada con sirope de agave en lugar de miel. Perfecta para quienes siguen una alimentación 100% vegetal.
 
-Las pipas de girasol y calabaza son las protagonistas, junto con almendras, anacardos y avellanas seleccionadas. El sirope de agave ecológico carameliza suavemente durante el tostado lento, creando clusters perfectos.
+Las semillas de girasol y calabaza son las protagonistas, junto con almendras, anacardos y avellanas seleccionadas. El sirope de agave ecológico carameliza suavemente durante el tostado lento, creando clusters perfectos.
 
 El lino molido aporta omega-3 y el toque sutil de canela y jengibre completa la experiencia. Mismos ingredientes premium, misma calidad artesanal, 100% vegana.
 
@@ -149,7 +149,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     priceInCents: 700,
     weight: 150,
     ingredients:
-      'Copos de avena sin gluten* (50%), pipas de girasol (17%), pipas de calabaza (8%), sirope de agave* (7%), almendras (6%), anacardos (5%), aceite de coco virgen extra* (4%), avellanas (2%), lino molido (1%), especias (canela, jengibre) (<1%). *De agricultura ecológica.',
+      'Copos de avena integral sin gluten, semillas de girasol, almendras, anacardos, sirope de agave, semillas de calabaza, aceite de coco, avellanas, lino molido, canela, jengibre.',
     allergens:
       'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Puede contener trazas de soja y sésamo.',
     nutritionalInfo: {
@@ -181,7 +181,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     slug: 'granola-clasica-1kg-horeca',
     description: `El mismo producto artesanal que adoran nuestros clientes, ahora en formato de 1kg pensado para profesionales de la hostelería, cafeterías y tiendas especializadas.
 
-Nuestra granola original en formato horeca mantiene todas las cualidades que nos diferencian: avena certificada sin gluten, miel de apicultores locales, aceite de coco virgen extra que junto con la miel da ese toque crujiente y un aroma suave y delicioso, y la mezcla premium de frutos secos que define nuestro sabor.
+Nuestra granola original en formato horeca mantiene todas las cualidades que nos diferencian: avena integral sin gluten, miel de apicultores locales, aceite de coco que junto con la miel da ese toque crujiente y un aroma suave y delicioso, y la mezcla premium de frutos secos que define nuestro sabor.
 
 Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenamos. Eso significa que recibirás tu granola solo unas horas o días tras su elaboración.
 
@@ -193,7 +193,7 @@ Solicita información sobre precios mayoristas y condiciones de distribución a 
     priceInCents: 2800,
     weight: 1000,
     ingredients:
-      'Copos de avena sin gluten* (50%), pipas de girasol (17%), pipas de calabaza (8%), miel ecológica* (7%), almendras (6%), anacardos (5%), aceite de coco virgen extra* (4%), avellanas (2%), lino molido (1%), especias (canela, jengibre) (<1%). *De agricultura ecológica.',
+      'Copos de avena integral sin gluten, semillas de girasol, almendras, anacardos, miel, semillas de calabaza, aceite de coco, avellanas, lino molido, canela, jengibre.',
     allergens:
       'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Puede contener trazas de soja y sésamo.',
     nutritionalInfo: {

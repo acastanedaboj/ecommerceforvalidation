@@ -58,9 +58,9 @@ const shortNames: Record<string, string> = {
 
 // Key ingredient percentages extracted from ingredient strings
 const ingredientBreakdown: Record<string, { avena: number; semillas: number; frutosSecos: number; endulzante: string; endulzantePct: number; diferenciador: string }> = {
-  prod_granola_clasica: { avena: 50, semillas: 25, frutosSecos: 13, endulzante: 'Miel ecológica', endulzantePct: 7, diferenciador: 'Especias (canela, jengibre)' },
-  prod_granola_naranja: { avena: 48, semillas: 24, frutosSecos: 12, endulzante: 'Miel ecológica', endulzantePct: 7, diferenciador: 'Naranja confitada + ralladura natural' },
-  prod_granola_datiles: { avena: 50, semillas: 25, frutosSecos: 13, endulzante: 'Sirope de agave', endulzantePct: 7, diferenciador: '100% vegana' },
+  prod_granola_clasica: { avena: 34, semillas: 25, frutosSecos: 26, endulzante: 'Miel', endulzantePct: 8, diferenciador: 'Canela y jengibre' },
+  prod_granola_naranja: { avena: 34, semillas: 25, frutosSecos: 26, endulzante: 'Miel', endulzantePct: 8, diferenciador: 'Piel de naranja deshidratada' },
+  prod_granola_datiles: { avena: 34, semillas: 25, frutosSecos: 26, endulzante: 'Sirope de agave', endulzantePct: 8, diferenciador: '100% vegana' },
 };
 
 type NutrientKey = 'calories' | 'fat' | 'saturatedFat' | 'carbohydrates' | 'sugars' | 'fiber' | 'protein' | 'salt';
@@ -310,7 +310,7 @@ export default function TablaNutricionalPage() {
               Desglose de ingredientes
             </h2>
             <p className="text-stone-500 text-center mb-8 max-w-xl mx-auto">
-              Todas comparten una base de avena sin gluten, semillas y frutos secos premium.
+              Todas comparten una base de avena integral sin gluten, semillas y frutos secos premium.
               Lo que las diferencia es el toque final.
             </p>
 
@@ -325,7 +325,7 @@ export default function TablaNutricionalPage() {
                     </h3>
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-stone-500">Avena sin gluten</span>
+                        <span className="text-stone-500">Avena integral sin gluten</span>
                         <span className="text-stone-700 font-medium">{breakdown.avena}%</span>
                       </div>
                       <div className="w-full bg-cream-100 rounded-full h-2">

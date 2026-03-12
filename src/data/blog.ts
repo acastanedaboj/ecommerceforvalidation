@@ -101,9 +101,9 @@ Antes de incorporarlos a nuestra granola, remojamos:
 
 - **Almendras**
 - **Anacardos**
-- **Pipas de calabaza**
-- **Pipas de girasol**
-- **Semillas de lino**
+- **Semillas de calabaza**
+- **Semillas de girasol**
+- **Lino molido**
 
 Cada uno de estos ingredientes pasa por un proceso de remojo en agua durante varias horas antes del tostado.
 
@@ -148,7 +148,7 @@ Queremos ser transparentes sobre este proceso:
 2. **Remojo:** Varias horas en agua filtrada
 3. **Escurrido y secado:** Eliminamos el exceso de agua
 4. **Tostado artesanal:** A baja temperatura para un tostado uniforme
-5. **Mezclado:** Con avena sin gluten, miel y aceite de coco
+5. **Mezclado:** Con avena integral sin gluten, miel y aceite de coco
 
 ## ¿Por qué nos tomamos esta molestia?
 
@@ -661,7 +661,7 @@ Si tienes alergia a algún fruto seco, consulta siempre el etiquetado específic
 
 ## ¿Cuántos frutos secos y semillas tiene nuestra granola?
 
-Aproximadamente el **40%** de nuestra granola son frutos secos y semillas (pipas de girasol, pipas de calabaza, almendras, anacardos, avellanas y lino). Es un porcentaje muy alto comparado con muchas granolas comerciales que apenas llegan al 10%.
+Aproximadamente el **51%** de nuestra granola son frutos secos y semillas (semillas de girasol, semillas de calabaza, almendras, anacardos, avellanas y lino). Es un porcentaje muy alto comparado con muchas granolas comerciales que apenas llegan al 10%.
 
 Esta proporción garantiza que en cada cucharada encuentres sabor, textura y nutrientes de los frutos secos, no solo avena con azúcar.
     `,
@@ -673,7 +673,7 @@ Esta proporción garantiza que en cada cucharada encuentres sabor, textura y nut
     tags: ['frutos-secos', 'nutricion', 'ingredientes', 'salud', 'proteina'],
     metaTitle: 'Frutos secos en la granola: beneficios y tipos | Poppy',
     metaDescription:
-      'Guía completa sobre los frutos secos y semillas en la granola: pipas de girasol, almendras, anacardos y avellanas. Beneficios nutricionales.',
+      'Guía completa sobre los frutos secos y semillas en la granola: semillas de girasol, almendras, anacardos y avellanas. Beneficios nutricionales.',
   },
   {
     id: 'post_bowl_proteico',
@@ -1029,12 +1029,12 @@ Lee la etiqueta de una granola de supermercado y probablemente encuentres:
 ### Granola artesanal Poppy
 Nuestra etiqueta:
 
-- Copos de avena sin gluten (50%)
-- Pipas de girasol y calabaza (25%)
-- Frutos secos: almendras, anacardos, avellanas (13%)
-- Miel ecológica (7%)
-- Aceite de coco virgen extra (4%)
-- Lino molido y especias naturales
+- Copos de avena integral sin gluten (34%)
+- Semillas de girasol y calabaza (23%)
+- Frutos secos: almendras, anacardos, avellanas (26%)
+- Miel (8%)
+- Aceite de coco (6%)
+- Lino molido, canela y jengibre
 - Nada más
 
 ## Comparativa detallada
@@ -1042,7 +1042,7 @@ Nuestra etiqueta:
 **Industrial vs Artesanal:**
 
 - **Azúcares:** 20-25g/100g vs 12-14g/100g
-- **Frutos secos y semillas:** 5-10% vs 40%
+- **Frutos secos y semillas:** 5-10% vs 51%
 - **Tipo de grasa:** Girasol/palma vs Coco virgen
 - **Endulzante:** Azúcar/jarabe vs Miel
 - **Procesado:** Extrusión masiva vs Horneado en lotes
@@ -1084,7 +1084,7 @@ Una granola artesanal como Poppy cuesta 7€/150g.
 - Control artesanal vs automatizado
 
 **Cantidades:**
-- 40% de frutos secos y semillas vs 5-10%
+- 51% de frutos secos y semillas vs 5-10%
 - Menos azúcar, más ingredientes de calidad
 
 ## El test del sabor
@@ -1776,7 +1776,7 @@ En Poppy desarrollamos una granola específicamente pensada para quienes siguen 
 - **Endulzante:** Sirope de agave ecológico (sin miel)
 - **Azúcar total:** 14g/100g
 - **Fibra:** 7g/100g
-- **Frutos secos y semillas:** 40% (pipas de girasol, pipas de calabaza, almendras, anacardos, avellanas, lino)
+- **Frutos secos y semillas:** 51% (semillas de girasol, semillas de calabaza, almendras, anacardos, avellanas, lino)
 - **100% vegana:** Sin ningún ingrediente de origen animal
 
 ### Por qué sirope de agave

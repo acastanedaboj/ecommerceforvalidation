@@ -270,14 +270,14 @@ export default function PreventaPage() {
                   <span className="text-primary-600 mt-0.5">•</span>
                   <div>
                     <strong>Granola original:</strong> Nuestra receta original con miel,
-                    avena sin gluten y frutos secos premium.
+                    avena integral sin gluten y frutos secos premium.
                   </div>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-primary-600 mt-0.5">•</span>
                   <div>
                     <strong>Granola con naranja:</strong> Con piel de naranja deshidratada
-                    y miel de azahar. Frescura mediterránea en cada bocado.
+                    y miel. Frescura mediterránea en cada bocado.
                   </div>
                 </li>
               </ul>

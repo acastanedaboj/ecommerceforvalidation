@@ -246,7 +246,7 @@ export default function HomePage() {
             Solo lo que <em>reconoces</em>
           </h2>
           <p className="split-text">
-            Avena sin gluten, miel ecológica, frutos secos seleccionados, aceite de coco, especias.
+            Avena integral sin gluten, miel, frutos secos seleccionados, aceite de coco, especias.
             Cada ingrediente tiene un nombre que puedes pronunciar y un origen que conozco. Sin
             aditivos. Sin conservantes. Sin nada que no pondrías tú en un bol.
           </p>
