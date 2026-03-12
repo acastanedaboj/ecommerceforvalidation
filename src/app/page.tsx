@@ -195,7 +195,7 @@ export default function HomePage() {
           </span>
         </div>
         <div className="split-body">
-          <span className="section-label">el proceso</span>
+          <span className="section-label">El proceso</span>
           <h2 className="split-title">
             Remojados y <em>tostados despacio</em>
           </h2>
@@ -241,7 +241,7 @@ export default function HomePage() {
       {/* ── SPLIT: Ingredientes ── */}
       <div className="split fi">
         <div className="split-body bg-off">
-          <span className="section-label">ingredientes</span>
+          <span className="section-label">Ingredientes</span>
           <h2 className="split-title">
             Solo lo que <em>reconoces</em>
           </h2>
@@ -327,7 +327,7 @@ export default function HomePage() {
           </span>
         </div>
         <div className="split-body">
-          <span className="section-label">la historia</span>
+          <span className="section-label">La historia</span>
           <h2 className="split-title">
             De la cocina de casa <em>al mundo</em>
           </h2>
@@ -363,7 +363,7 @@ export default function HomePage() {
           </div>
         </div>
         <div className="split-body" style={{ background: 'var(--off)' }}>
-          <span className="section-label">suscripción</span>
+          <span className="section-label">Suscripción</span>
           <h2 className="split-title">
             Para quienes no quieren <em>quedarse sin</em>
           </h2>
