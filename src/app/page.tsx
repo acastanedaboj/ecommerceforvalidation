@@ -9,7 +9,7 @@ import { HomeClient } from '@/components/home/HomeClient';
 export const metadata: Metadata = {
   title: `${BRAND_NAME} | Granola sin gluten artesanal con miel`,
   description:
-    'Granola crujiente y especiada, elaborada con intención. Ingredientes reales, sin gluten, sin ruido. Envío gratis desde 4 unidades. Entrega gratuita en Málaga.',
+    'Granola crujiente y especiada, elaborada con intención. Ingredientes reales, sin gluten, sin lactosa. Envío gratis desde 4 unidades. Entrega gratuita en Málaga.',
   alternates: {
     canonical: getCanonicalUrl('/'),
   },
@@ -130,6 +130,7 @@ export default function HomePage() {
           <span>Frutos secos seleccionados</span><span className="marquee-dot">&middot;</span>
           <span>Miel ecológica</span><span className="marquee-dot">&middot;</span>
           <span>Sin gluten</span><span className="marquee-dot">&middot;</span>
+          <span>Sin lactosa</span><span className="marquee-dot">&middot;</span>
           <span>Obrador propio en Málaga</span><span className="marquee-dot">&middot;</span>
           <span>Crafted for pleasure</span><span className="marquee-dot">&middot;</span>
           <span>Pequeños lotes</span><span className="marquee-dot">&middot;</span>
@@ -137,6 +138,7 @@ export default function HomePage() {
           <span>Frutos secos seleccionados</span><span className="marquee-dot">&middot;</span>
           <span>Miel ecológica</span><span className="marquee-dot">&middot;</span>
           <span>Sin gluten</span><span className="marquee-dot">&middot;</span>
+          <span>Sin lactosa</span><span className="marquee-dot">&middot;</span>
           <span>Obrador propio en Málaga</span><span className="marquee-dot">&middot;</span>
           <span>Crafted for pleasure</span><span className="marquee-dot">&middot;</span>
         </div>

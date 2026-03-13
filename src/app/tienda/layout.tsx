@@ -4,7 +4,7 @@ import { SITE_URL, BRAND_NAME, getCanonicalUrl } from '@/lib/seo';
 export const metadata: Metadata = {
   title: 'Comprar granola artesanal sin gluten online | Poppy',
   description:
-    'Compra granola artesanal sin gluten ecológica online. 3 sabores: Clásica, Naranja y Vegana. Ahorra hasta 10% en packs. Envío gratis +4 uds. Entrega en toda España.',
+    'Compra granola artesanal sin gluten y sin lactosa ecológica online. 3 sabores: Clásica, Naranja y Vegana. Ahorra hasta 10% en packs. Envío gratis +4 uds. Entrega en toda España.',
   keywords: [
     'comprar granola artesanal online',
     'granola sin gluten comprar',

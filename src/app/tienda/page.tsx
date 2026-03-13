@@ -2,10 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ProductCard } from '@/components/product/ProductCard';
 import { BundleBuilderModal } from '@/components/bundle';
 import { getActiveProducts, getRetailProducts } from '@/data/products';
-import { Lightbulb, SlidersHorizontal, Package, ChevronRight } from 'lucide-react';
+import { ChevronRight } from 'lucide-react';
 import { JsonLd, buildProductListSchema, buildBreadcrumbSchema } from '@/lib/seo';
 
 export default function TiendaPage() {
@@ -27,145 +28,262 @@ export default function TiendaPage() {
         ])}
       />
 
-    <div style={{ paddingTop: '140px', paddingBottom: '96px', background: 'var(--off)' }}>
-      <div className="container-custom">
-        {/* Breadcrumbs */}
-        <nav className="mb-8" aria-label="Breadcrumb">
-          <ol className="flex items-center gap-1" style={{ fontSize: '12px', listStyle: 'none' }}>
-            <li>
-              <Link href="/" style={{ color: 'rgba(17,17,17,.35)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
-                Inicio
-              </Link>
-            </li>
-            <li>
-              <ChevronRight className="w-3.5 h-3.5" style={{ color: 'rgba(17,17,17,.2)' }} />
-            </li>
-            <li style={{ color: 'var(--dark)', fontWeight: 700 }}>Tienda</li>
-          </ol>
-        </nav>
+      {/* ── HERO EDITORIAL ── */}
+      <section
+        className="relative overflow-hidden"
+        style={{ height: '70vh', minHeight: '480px', maxHeight: '720px', background: '#1c1410' }}
+      >
+        <Image
+          src="/images/hero-tower.png"
+          alt="Granola Poppy — Tienda"
+          fill
+          className="object-cover"
+          priority
+          sizes="100vw"
+          style={{ opacity: 0.4 }}
+        />
+        <div
+          className="absolute inset-0"
+          style={{
+            background: 'linear-gradient(to bottom, rgba(0,0,0,.05) 0%, transparent 40%, rgba(0,0,0,.6) 100%)',
+          }}
+        />
+        <div
+          className="absolute bottom-0 left-0 right-0 z-10"
+          style={{ padding: '0 56px 56px' }}
+        >
+          {/* Breadcrumb */}
+          <nav className="mb-6" aria-label="Breadcrumb">
+            <ol className="flex items-center gap-1" style={{ fontSize: '11px', listStyle: 'none' }}>
+              <li>
+                <Link href="/" style={{ color: 'rgba(255,255,255,.4)', textDecoration: 'none' }} className="hover:text-white transition-colors">
+                  Inicio
+                </Link>
+              </li>
+              <li>
+                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(255,255,255,.2)' }} />
+              </li>
+              <li style={{ color: 'rgba(255,255,255,.7)', fontWeight: 400 }}>Tienda</li>
+            </ol>
+          </nav>
 
-        {/* Page header */}
-        <div className="text-center mb-14">
-          <h1 style={{ fontFamily: 'var(--font-display)', fontWeight: 400, marginBottom: '16px' }}>
-            Nuestra tienda
+          <h1
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontWeight: 400,
+              fontSize: 'clamp(40px, 6vw, 72px)',
+              lineHeight: 0.95,
+              color: 'var(--cream)',
+              letterSpacing: '-0.02em',
+              marginBottom: '16px',
+            }}
+          >
+            Nuestra <em>granola</em>
           </h1>
-          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, maxWidth: '520px', margin: '0 auto', lineHeight: 1.85 }}>
-            Granola Poppy elaborada con ingredientes de calidad.
-            Elige tu sabor favorito y el pack que mejor se adapte a ti.
+          <p
+            style={{
+              fontSize: '13px',
+              color: 'rgba(255,255,255,.45)',
+              fontWeight: 300,
+              maxWidth: '380px',
+              lineHeight: 1.8,
+            }}
+          >
+            Tres sabores. Ingredientes reales. Sin gluten, sin lactosa, sin ruido.
+            Elaborada cada semana en nuestro obrador de Málaga.
           </p>
         </div>
+      </section>
 
-        {/* Bundle Builder CTA */}
-        <div className="mb-10 p-6 md:p-8" style={{ background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}>
-          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6">
-            <div className="w-14 h-14 flex items-center justify-center flex-shrink-0" style={{ background: 'var(--off)' }}>
-              <Package className="w-7 h-7" style={{ color: 'var(--brown)' }} strokeWidth={1.5} />
-            </div>
-            <div className="flex-1">
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', marginBottom: '4px' }}>
-                Crea tu pack mixto
-              </h3>
-              <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
-                Mezcla tus sabores favoritos y ahorra hasta un 10%
-              </p>
+      {/* ── EDITORIAL LINE ── */}
+      <div style={{ padding: '56px 0', textAlign: 'center', background: 'var(--white)' }}>
+        <p
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontStyle: 'italic',
+            fontSize: 'clamp(20px, 2.5vw, 30px)',
+            color: 'var(--dark)',
+            opacity: 0.7,
+            letterSpacing: '-0.01em',
+          }}
+        >
+          Crafted for pleasure
+        </p>
+      </div>
+
+      {/* ── PRODUCTS — 2 column grid ── */}
+      <section style={{ padding: '0 0 96px', background: 'var(--off)' }}>
+        <div className="container-custom" style={{ paddingTop: '80px' }}>
+          {/* Section label */}
+          <div className="flex justify-between items-baseline mb-14">
+            <div>
+              <span className="section-label">Granola artesanal · 150g</span>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 400,
+                  fontSize: 'clamp(26px, 3vw, 38px)',
+                  letterSpacing: '-0.01em',
+                }}
+              >
+                Elige tu sabor
+              </h2>
             </div>
             <button
               onClick={() => setIsBundleModalOpen(true)}
-              className="btn-pill"
+              className="btn-text hidden sm:inline-flex"
+              style={{ fontSize: '13px' }}
             >
-              Crear pack
+              Crear pack mixto
             </button>
           </div>
-        </div>
 
-        {/* Filters */}
-        <div className="flex flex-wrap items-center justify-between gap-6 mb-10 pb-8" style={{ borderBottom: '1px solid rgba(0,0,0,.07)' }}>
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="flex items-center gap-2" style={{ fontSize: '12px', color: 'rgba(17,17,17,.4)', fontWeight: 300 }}>
-              <SlidersHorizontal className="w-4 h-4" />
-              Filtros:
-            </span>
-            <button className="pill pill-active">
-              Sin gluten
-            </button>
-          </div>
-          <div className="flex items-center gap-3">
-            <span style={{ fontSize: '12px', color: 'rgba(17,17,17,.4)', fontWeight: 300 }}>Ordenar:</span>
-            <select className="input py-2.5 px-4 w-auto" style={{ fontSize: '12px', borderRadius: '100px', borderColor: 'rgba(0,0,0,.1)' }}>
-              <option value="popular">Más populares</option>
-              <option value="price-asc">Precio: menor a mayor</option>
-              <option value="price-desc">Precio: mayor a menor</option>
-              <option value="name">Nombre A-Z</option>
-            </select>
-          </div>
-        </div>
-
-        {/* Results count */}
-        <p className="mb-8" style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', fontWeight: 300, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-          Mostrando {retailProducts.length} productos
-        </p>
-
-        {/* Retail products */}
-        <section className="mb-20">
-          <h2 className="mb-8" style={{ fontFamily: 'var(--font-display)', fontSize: '24px' }}>
-            Granola 150g
-          </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+          {/* 2-col grid */}
+          <div className="grid sm:grid-cols-2 gap-8 lg:gap-14">
             {retailProducts.map((product) => (
               <div key={product.id}>
                 <ProductCard product={product} />
               </div>
             ))}
           </div>
-        </section>
 
-        {/* Horeca CTA */}
-        {horecaProducts.length > 0 && (
-          <section className="mb-16">
-            <div className="p-8 md:p-10" style={{ background: 'var(--dark)', color: 'var(--white)' }}>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', color: 'var(--white)', marginBottom: '12px' }}>
-                Formato profesional (Horeca)
+          {/* Mobile bundle link */}
+          <div className="mt-10 text-center sm:hidden">
+            <button
+              onClick={() => setIsBundleModalOpen(true)}
+              className="btn-pill"
+            >
+              Crear pack mixto
+            </button>
+          </div>
+        </div>
+      </section>
+
+      {/* ── EDITORIAL INTERLUDE ── */}
+      <div className="split">
+        <div className="split-img">
+          <div className="split-img-inner">
+            <Image
+              src="/images/nosotros-divider.png"
+              alt="Obrador Poppy, Málaga"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+          <span
+            style={{
+              position: 'absolute',
+              bottom: '20px',
+              right: '20px',
+              fontSize: '9px',
+              letterSpacing: '0.16em',
+              textTransform: 'uppercase',
+              color: 'var(--dark)',
+              opacity: 0.35,
+            }}
+          >
+            Obrador, Málaga
+          </span>
+        </div>
+        <div className="split-body">
+          <span className="section-label">Nuestro proceso</span>
+          <h2 className="split-title">
+            Pequeños lotes, <em>cada semana</em>
+          </h2>
+          <p className="split-text">
+            Tostamos bajo demanda. Nunca almacenamos. Cada bolsa que recibes tiene horas
+            o días desde que salió del horno. Sin gluten, sin lactosa, sin conservantes,
+            sin prisas.
+          </p>
+          <Link href="/nosotros" className="btn-pill">
+            Conocer más
+          </Link>
+        </div>
+      </div>
+
+      {/* ── SUBSCRIPTION — editorial, not a CTA box ── */}
+      <section style={{ padding: '96px 0', background: 'var(--white)', textAlign: 'center' }}>
+        <div className="container-custom" style={{ maxWidth: '640px' }}>
+          <span className="section-label">Suscripción mensual</span>
+          <h2
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontWeight: 400,
+              fontSize: 'clamp(26px, 3vw, 38px)',
+              marginBottom: '20px',
+            }}
+          >
+            Recíbela cada mes <em>con un 15% menos</em>
+          </h2>
+          <p style={{ fontSize: '14px', color: 'var(--dark)', opacity: 0.5, fontWeight: 300, lineHeight: 1.85, marginBottom: '36px' }}>
+            6 bolsas al mes. Envío gratis siempre. Sin permanencia, cancela cuando quieras.
+            El 15% que ahorras es nuestra forma de decir gracias.
+          </p>
+          <Link href="/suscripcion" className="btn-pill">
+            Empezar la suscripción
+          </Link>
+        </div>
+      </section>
+
+      {/* ── HORECA ── */}
+      {horecaProducts.length > 0 && (
+        <section style={{ background: 'var(--dark)' }}>
+          <div className="container-custom" style={{ padding: '80px 56px' }}>
+            <div style={{ maxWidth: '480px' }}>
+              <span style={{ fontSize: '11px', color: 'rgba(255,255,255,.3)', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '16px', fontWeight: 300 }}>
+                Formato profesional
+              </span>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: 'clamp(24px, 2.5vw, 34px)',
+                  color: 'var(--cream)',
+                  marginBottom: '16px',
+                }}
+              >
+                Horeca &amp; Mayorista
               </h2>
-              <p style={{ color: 'rgba(255,255,255,.65)', fontWeight: 300, fontSize: '14px', marginBottom: '24px', lineHeight: 1.85 }}>
-                ¿Tienes una cafetería, hotel o tienda? Ofrecemos formatos de 1kg
+              <p style={{ color: 'rgba(255,255,255,.5)', fontWeight: 300, fontSize: '14px', marginBottom: '32px', lineHeight: 1.85 }}>
+                ¿Tienes una cafetería, hotel o tienda? Formatos de 1kg
                 y condiciones especiales para profesionales.
               </p>
               <a href="/mayorista" className="btn-pill-white">
-                Ver condiciones mayorista
+                Ver condiciones
               </a>
             </div>
-          </section>
-        )}
-
-        {/* Info banner */}
-        <div className="p-8 md:p-10" style={{ background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}>
-          <div className="flex items-start gap-4">
-            <div className="w-12 h-12 flex items-center justify-center flex-shrink-0" style={{ background: 'var(--off)' }}>
-              <Lightbulb className="w-6 h-6" style={{ color: 'var(--brown)' }} strokeWidth={1.5} />
-            </div>
-            <div>
-              <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '20px', marginBottom: '12px' }}>
-                ¿No sabes cuál elegir?
-              </h3>
-              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '16px' }}>
-                Todos nuestros sabores comparten la misma base de calidad: avena integral sin gluten
-                y frutos secos premium. La mayoría están endulzados con miel,
-                y tenemos una opción vegana endulzada con sirope de agave ecológico.
-              </p>
-              <p style={{ fontSize: '12px', color: 'var(--brown)', fontWeight: 700 }}>
-                Consejo: Empieza con el sabor clásico y luego explora los demás.
-              </p>
-            </div>
           </div>
+        </section>
+      )}
+
+      {/* ── HELP — editorial ── */}
+      <section style={{ padding: '80px 0', background: 'var(--off)', textAlign: 'center' }}>
+        <div className="container-custom" style={{ maxWidth: '520px' }}>
+          <h3
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '22px',
+              marginBottom: '12px',
+            }}
+          >
+            ¿No sabes cuál elegir?
+          </h3>
+          <p style={{ fontSize: '14px', color: 'var(--dark)', opacity: 0.5, fontWeight: 300, lineHeight: 1.85, marginBottom: '8px' }}>
+            Todos nuestros sabores comparten la misma base: avena integral sin gluten,
+            frutos secos premium. Sin lactosa, sin conservantes. La mayoría con miel
+            ecológica; también tenemos una opción vegana con sirope de agave.
+          </p>
+          <p style={{ fontSize: '12px', color: 'var(--brown)', fontWeight: 400 }}>
+            Empieza con la original y explora desde ahí.
+          </p>
         </div>
-      </div>
+      </section>
 
       {/* Bundle Builder Modal */}
       <BundleBuilderModal
         isOpen={isBundleModalOpen}
         onClose={() => setIsBundleModalOpen(false)}
       />
-    </div>
     </>
   );
 }

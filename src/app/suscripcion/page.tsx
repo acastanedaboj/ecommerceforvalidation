@@ -9,7 +9,7 @@ import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/
 export const metadata: Metadata = {
   title: 'Suscripción mensual de granola sin gluten | 15% descuento',
   description:
-    'Suscríbete y ahorra un 15% en granola Poppy sin gluten. Recibe 6 bolsas cada mes con envío gratis. Sin permanencia, cancela cuando quieras.',
+    'Suscríbete y ahorra un 15% en granola Poppy sin gluten y sin lactosa. Recibe 6 bolsas cada mes con envío gratis. Sin permanencia, cancela cuando quieras.',
   alternates: {
     canonical: getCanonicalUrl('/suscripcion'),
   },
@@ -50,7 +50,7 @@ export default function SuscripcionPage() {
               <strong style={{ color: 'var(--white)', fontWeight: 700 }}>
                 {formatPrice(subscriptionInfo.unitPriceCents)}/ud
               </strong>
-              . Envío gratis, cancela cuando quieras.
+              . Sin gluten, sin lactosa. Envío gratis, cancela cuando quieras.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

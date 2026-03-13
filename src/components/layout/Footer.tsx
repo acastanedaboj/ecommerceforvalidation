@@ -26,7 +26,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 text-[#fcf8d5] max-w-sm leading-relaxed text-sm md:text-base">
-              Granola artesanal sin gluten elaborada con ingredientes naturales.
+              Granola artesanal sin gluten y sin lactosa elaborada con ingredientes naturales.
               Tostada lentamente en nuestro obrador dedicado en Málaga.
             </p>
 

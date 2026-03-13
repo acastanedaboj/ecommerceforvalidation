@@ -3,7 +3,8 @@
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ShoppingBag, Truck, RefreshCw, Shield, Plus, Minus, FileText, List, BarChart2, AlertTriangle, Package, Leaf, Clock, WheatOff, ChevronRight, MapPin } from 'lucide-react';
+import Image from 'next/image';
+import { ShoppingBag, Truck, RefreshCw, Plus, Minus, Package, Leaf, WheatOff, ChevronRight, MapPin } from 'lucide-react';
 import { getProductBySlug, getRetailProducts } from '@/data/products';
 import { useCartStore } from '@/store/cart-store';
 import { formatPrice, cn } from '@/lib/utils';
@@ -11,8 +12,6 @@ import { calculatePackUnitPrice, calculateSubscriptionUnitPrice, getPackDiscount
 import { PRICING, SHIPPING } from '@/lib/constants';
 import { ProductCard } from '@/components/product/ProductCard';
 import { ImageGallery } from '@/components/ui/ImageGallery';
-import { PackPillSelector } from '@/components/ui/PackPillSelector';
-import { Collapsible } from '@/components/ui/Collapsible';
 import { StickyAddToCart } from '@/components/ui/StickyAddToCart';
 import { BundleBuilderModal } from '@/components/bundle';
 import toast from 'react-hot-toast';
@@ -81,7 +80,7 @@ export default function ProductDetailPage() {
     toast.success(
       <span>
         <strong>{product.name}</strong> añadido al carrito
-        {isSubscription && ' (Suscripcion)'}
+        {isSubscription && ' (Suscripción)'}
       </span>
     );
 
@@ -94,22 +93,22 @@ export default function ProductDetailPage() {
   // Related products
   const relatedProducts = getRetailProducts()
     .filter((p) => p.id !== product.id)
-    .slice(0, 3);
+    .slice(0, 2);
 
   return (
     <>
-      <div className="pt-24 pb-16 md:pt-[140px] md:pb-24" style={{ background: 'var(--off)' }}>
+      <div className="pt-24 pb-0 md:pt-[140px]" style={{ background: 'var(--off)' }}>
         <div className="container-custom">
           {/* Breadcrumb */}
-          <nav className="mb-6 md:mb-10" aria-label="Breadcrumb">
-            <ol className="flex items-center gap-1" style={{ fontSize: '12px', listStyle: 'none' }}>
+          <nav className="mb-8 md:mb-12" aria-label="Breadcrumb">
+            <ol className="flex items-center gap-1" style={{ fontSize: '11px', listStyle: 'none' }}>
               <li>
                 <Link href="/" style={{ color: 'rgba(17,17,17,.35)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
                   Inicio
                 </Link>
               </li>
               <li>
-                <ChevronRight className="w-3.5 h-3.5" style={{ color: 'rgba(17,17,17,.2)' }} />
+                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(17,17,17,.2)' }} />
               </li>
               <li>
                 <Link href="/tienda" style={{ color: 'rgba(17,17,17,.35)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
@@ -117,121 +116,123 @@ export default function ProductDetailPage() {
                 </Link>
               </li>
               <li>
-                <ChevronRight className="w-3.5 h-3.5" style={{ color: 'rgba(17,17,17,.2)' }} />
+                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(17,17,17,.2)' }} />
               </li>
-              <li style={{ color: 'var(--dark)', fontWeight: 700 }}>{product.name}</li>
+              <li style={{ color: 'var(--dark)', fontWeight: 400 }}>{product.name}</li>
             </ol>
           </nav>
 
-          {/* Product main section */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-16 md:mb-20">
-            {/* Images */}
-            <div>
+          {/* ── ABOVE THE FOLD — 2 columns, gallery + essentials ── */}
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-0">
+            {/* Sticky gallery */}
+            <div className="lg:sticky lg:top-[140px] lg:self-start">
               <ImageGallery
                 images={product.images.length > 0 ? product.images : ['/images/placeholder-product.jpg']}
                 productName={product.name}
                 enableZoom={true}
               />
-              {/* Badges overlay */}
-              <div className="flex gap-2 mt-4">
-                {product.tags.includes('sin-gluten') && (
-                  <span className="badge-primary">Sin gluten</span>
-                )}
-              </div>
             </div>
 
-            {/* Product info */}
-            <div>
-              <div className="mb-6">
-                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', textTransform: 'uppercase', letterSpacing: '0.05em', marginBottom: '8px' }}>
-                  {product.weight}g
-                </p>
-                <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(28px, 3vw, 36px)', marginBottom: '12px' }}>
-                  {product.name}
-                </h1>
-                <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85 }}>{product.shortDescription}</p>
-              </div>
+            {/* Product info — essentials only */}
+            <div style={{ paddingBottom: '64px' }}>
+              {/* Weight label */}
+              <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.3)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '12px', fontWeight: 300 }}>
+                {product.weight}g · Sin gluten · Sin lactosa
+              </p>
 
-              {/* Ingredients highlight */}
-              <div className="mb-6">
-                <p style={{ fontSize: '11px', textTransform: 'uppercase', letterSpacing: '0.08em', color: 'rgba(17,17,17,.35)', marginBottom: '10px' }}>
-                  Ingredientes
-                </p>
-                <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.55)', fontWeight: 300, lineHeight: 1.85 }}>
-                  {product.ingredients}
-                </p>
-                {/* Dietary badges */}
-                <div className="flex flex-wrap gap-2 mt-4">
-                  {product.tags.includes('sin-gluten') && (
-                    <span className="inline-flex items-center gap-1.5" style={{ padding: '5px 10px', background: 'rgba(16,185,129,.08)', color: '#047857', fontSize: '11px', fontWeight: 400, borderRadius: '100px', border: '1px solid rgba(16,185,129,.2)' }}>
-                      <WheatOff className="w-3.5 h-3.5" />
-                      Sin gluten
-                    </span>
-                  )}
-                  {product.isVegan && (
-                    <span className="inline-flex items-center gap-1.5" style={{ padding: '5px 10px', background: 'rgba(34,197,94,.08)', color: '#15803d', fontSize: '11px', fontWeight: 400, borderRadius: '100px', border: '1px solid rgba(34,197,94,.2)' }}>
-                      <Leaf className="w-3.5 h-3.5" />
-                      Vegano
-                    </span>
-                  )}
-                  {product.hasHoney && (
-                    <span className="inline-flex items-center gap-1.5" style={{ padding: '5px 10px', background: 'rgba(245,158,11,.08)', color: '#b45309', fontSize: '11px', fontWeight: 400, borderRadius: '100px', border: '1px solid rgba(245,158,11,.2)' }}>
-                      Con miel
-                    </span>
-                  )}
-                </div>
-              </div>
+              {/* Name */}
+              <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(30px, 3.5vw, 42px)', marginBottom: '14px', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+                {product.name}
+              </h1>
 
-              {/* Price display */}
-              <div className="p-6 mb-8" style={{ background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}>
-                <div className="flex items-baseline gap-3 mb-2">
-                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '32px', color: 'var(--brown)' }}>
+              {/* One-line description */}
+              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '32px', maxWidth: '420px' }}>
+                {product.shortDescription}
+              </p>
+
+              {/* Price */}
+              <div className="mb-8">
+                <div className="flex items-baseline gap-3">
+                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '32px', color: 'var(--dark)' }}>
                     {formatPrice(packUnitPrice)}
                   </span>
-                  <span style={{ fontSize: '13px', color: 'rgba(17,17,17,.35)' }}>/unidad</span>
+                  <span style={{ fontSize: '13px', color: 'rgba(17,17,17,.3)', fontWeight: 300 }}>/unidad</span>
                   {discount > 0 && (
                     <>
-                      <span style={{ fontSize: '16px', color: 'rgba(17,17,17,.25)', textDecoration: 'line-through' }}>
+                      <span style={{ fontSize: '15px', color: 'rgba(17,17,17,.2)', textDecoration: 'line-through' }}>
                         {formatPrice(basePrice)}
                       </span>
-                      <span style={{ background: 'var(--yellow)', color: 'var(--dark)', fontSize: '11px', fontWeight: 700, padding: '2px 8px', borderRadius: '100px' }}>-{Math.round(discount * 100)}%</span>
+                      <span style={{ fontSize: '11px', color: 'var(--brown)', fontWeight: 700 }}>
+                        -{Math.round(discount * 100)}%
+                      </span>
                     </>
                   )}
                 </div>
                 {savings > 0 && (
-                  <p style={{ fontSize: '13px', color: 'var(--brown)', fontWeight: 400 }}>
+                  <p style={{ fontSize: '12px', color: 'var(--brown)', fontWeight: 300, marginTop: '4px' }}>
                     Ahorras {formatPrice(savings)} en este pedido
                   </p>
                 )}
               </div>
 
-              {/* Pack selection with pills */}
+              {/* Pack selection — minimal pills */}
               <div className="mb-8">
-                <label className="label mb-4">Elige tu pack:</label>
-                <PackPillSelector
-                  selectedPack={selectedPack}
-                  onSelect={(pack) => {
-                    setSelectedPack(pack);
-                    setIsSubscription(false);
-                  }}
-                  showSavings={true}
-                  showShipping={true}
-                  variant="horizontal"
-                  size="lg"
-                />
+                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '12px', fontWeight: 300 }}>
+                  Formato
+                </p>
+                <div className="flex gap-2">
+                  {[1, 3, 4, 6].map((pack) => {
+                    const isSelected = selectedPack === pack && !isSubscription;
+                    const packDiscount = getPackDiscount(pack);
+                    const hasFreeShip = pack >= 4;
+                    return (
+                      <button
+                        key={pack}
+                        type="button"
+                        onClick={() => {
+                          setSelectedPack(pack);
+                          setIsSubscription(false);
+                        }}
+                        className="relative transition-all duration-200"
+                        style={{
+                          padding: '10px 18px',
+                          fontSize: '12px',
+                          fontWeight: isSelected ? 700 : 400,
+                          border: isSelected ? '1.5px solid var(--dark)' : '1px solid rgba(0,0,0,.1)',
+                          background: isSelected ? 'var(--white)' : 'transparent',
+                          color: 'var(--dark)',
+                          cursor: 'pointer',
+                        }}
+                      >
+                        <span>{pack === 1 ? '1 bolsa' : `Pack ${pack}`}</span>
+                        {packDiscount > 0 && (
+                          <span style={{ display: 'block', fontSize: '10px', color: 'var(--brown)', fontWeight: 300, marginTop: '2px' }}>
+                            -{Math.round(packDiscount * 100)}%{hasFreeShip ? ' · envío gratis' : ''}
+                          </span>
+                        )}
+                        {pack === 1 && (
+                          <span style={{ display: 'block', fontSize: '10px', color: 'rgba(17,17,17,.3)', fontWeight: 300, marginTop: '2px' }}>
+                            &nbsp;
+                          </span>
+                        )}
+                      </button>
+                    );
+                  })}
+                </div>
+
                 {/* Bundle builder link */}
                 <button
                   type="button"
                   onClick={() => setIsBundleModalOpen(true)}
-                  className="mt-4 flex items-center gap-2 text-sm transition-colors"
-                  style={{ color: 'var(--brown)', fontWeight: 400 }}
+                  className="mt-4 flex items-center gap-2 transition-colors"
+                  style={{ color: 'var(--brown)', fontWeight: 300, fontSize: '12px' }}
                 >
-                  <Package className="w-4 h-4" />
-                  O crea un pack mixto con este sabor
+                  <Package className="w-3.5 h-3.5" />
+                  O crea un pack mixto con varios sabores
                 </button>
               </div>
 
-              {/* Subscription option */}
+              {/* Subscription — conversational, not a toggle */}
               <div className="mb-8">
                 <button
                   type="button"
@@ -239,111 +240,85 @@ export default function ProductDetailPage() {
                     setIsSubscription(!isSubscription);
                     if (!isSubscription) setSelectedPack(6);
                   }}
-                  className={cn(
-                    'w-full p-5 transition-all text-left group',
-                    isSubscription
-                      ? 'border-2'
-                      : 'border'
-                  )}
-                  style={isSubscription
-                    ? { borderColor: 'var(--brown)', background: 'var(--off)' }
-                    : { borderColor: 'rgba(0,0,0,.08)', background: 'var(--white)' }
-                  }
+                  className="w-full text-left transition-all duration-200"
+                  style={{
+                    padding: '20px 24px',
+                    border: isSubscription ? '1.5px solid var(--brown)' : '1px solid rgba(0,0,0,.08)',
+                    background: isSubscription ? 'var(--white)' : 'transparent',
+                  }}
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4">
-                      <div className="w-12 h-12 flex items-center justify-center" style={{ background: isSubscription ? 'var(--white)' : 'var(--off)' }}>
-                        <RefreshCw
-                          className="w-6 h-6"
-                          style={{ color: isSubscription ? 'var(--brown)' : 'rgba(17,17,17,.3)' }}
-                        />
-                      </div>
-                      <div>
-                        <span style={{ fontWeight: 400, color: 'var(--dark)', display: 'block', marginBottom: '4px' }}>
-                          Suscripcion mensual (Pack 6)
-                        </span>
-                        <span style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
-                          {formatPrice(calculateSubscriptionUnitPrice())}/ud · Envio gratis · Cancela cuando quieras
-                        </span>
-                      </div>
+                    <div>
+                      <p style={{ fontSize: '14px', fontWeight: isSubscription ? 700 : 400, color: 'var(--dark)', marginBottom: '4px' }}>
+                        Recíbela cada mes con un 15% menos
+                      </p>
+                      <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.45)', fontWeight: 300 }}>
+                        6 bolsas · {formatPrice(calculateSubscriptionUnitPrice())}/ud · Envío gratis · Sin permanencia
+                      </p>
                     </div>
-                    <span style={{ background: 'var(--yellow)', color: 'var(--dark)', fontSize: '11px', fontWeight: 700, padding: '2px 8px', borderRadius: '100px' }}>-15%</span>
+                    <span style={{
+                      fontSize: '11px',
+                      fontWeight: 700,
+                      color: isSubscription ? 'var(--white)' : 'var(--brown)',
+                      background: isSubscription ? 'var(--brown)' : 'transparent',
+                      border: isSubscription ? 'none' : '1px solid var(--brown)',
+                      padding: '4px 10px',
+                    }}>
+                      -15%
+                    </span>
                   </div>
                 </button>
               </div>
 
-              {/* Quantity selector */}
+              {/* Quantity */}
               <div className="mb-8">
-                <label className="label mb-4">Cantidad:</label>
+                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '12px', fontWeight: 300 }}>
+                  Cantidad
+                </p>
                 <div className="flex items-center gap-6">
-                  <div className="flex items-center" style={{ background: 'var(--white)', border: '1px solid rgba(0,0,0,.1)', borderRadius: '100px' }}>
+                  <div className="flex items-center" style={{ border: '1px solid rgba(0,0,0,.1)' }}>
                     <button
                       type="button"
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className="p-4 transition-colors"
-                      style={{ borderRadius: '100px 0 0 100px' }}
+                      className="p-3 transition-colors hover:bg-gray-50"
                       aria-label="Reducir cantidad"
                     >
-                      <Minus className="w-4 h-4" style={{ color: 'rgba(17,17,17,.4)' }} />
+                      <Minus className="w-4 h-4" style={{ color: 'rgba(17,17,17,.35)' }} />
                     </button>
-                    <span className="w-14 text-center" style={{ color: 'var(--dark)' }}>{quantity}</span>
+                    <span className="w-12 text-center" style={{ fontSize: '14px', color: 'var(--dark)' }}>{quantity}</span>
                     <button
                       type="button"
                       onClick={() => setQuantity(quantity + 1)}
-                      className="p-4 transition-colors"
-                      style={{ borderRadius: '0 100px 100px 0' }}
+                      className="p-3 transition-colors hover:bg-gray-50"
                       aria-label="Aumentar cantidad"
                     >
-                      <Plus className="w-4 h-4" style={{ color: 'rgba(17,17,17,.4)' }} />
+                      <Plus className="w-4 h-4" style={{ color: 'rgba(17,17,17,.35)' }} />
                     </button>
                   </div>
-                  <span style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
+                  <span style={{ fontSize: '12px', color: 'rgba(17,17,17,.4)', fontWeight: 300 }}>
                     = {totalUnits} {totalUnits === 1 ? 'bolsa' : 'bolsas'}
                   </span>
                 </div>
               </div>
 
-              {/* Trust badges */}
-              <div className="flex flex-wrap gap-4 mb-6">
-                {[
-                  { icon: Truck, text: 'Envío 2-4 días' },
-                  { icon: MapPin, text: 'Entrega gratis en Málaga' },
-                  { icon: Shield, text: 'Pago seguro' },
-                  { icon: RefreshCw, text: '14 días devolución' },
-                ].map(({ icon: Icon, text }) => (
-                  <div key={text} className="flex items-center gap-2" style={{ fontSize: '12px', color: 'rgba(17,17,17,.4)', fontWeight: 300 }}>
-                    <Icon className="w-4 h-4" style={{ color: 'var(--brown)' }} />
-                    <span>{text}</span>
-                  </div>
-                ))}
-              </div>
-
-              {/* Total and add to cart */}
-              <div id="main-cta" className="pt-6 mt-2" style={{ borderTop: '1px solid rgba(0,0,0,.08)' }}>
+              {/* Total + CTA */}
+              <div id="main-cta" className="pt-6" style={{ borderTop: '1px solid rgba(0,0,0,.06)' }}>
                 <div className="flex items-center justify-between mb-5">
-                  <span style={{ fontSize: '13px', color: 'rgba(17,17,17,.4)' }}>Total:</span>
-                  <div className="text-right">
-                    <span style={{ fontFamily: 'var(--font-display)', fontSize: '28px', color: 'var(--dark)' }}>{formatPrice(totalPrice)}</span>
-                    {isFreeShipping && (
-                      <p className="flex items-center gap-2 justify-end mt-1" style={{ color: 'var(--brown)', fontSize: '12px' }}>
-                        <Truck className="w-4 h-4" />
-                        Envío gratis incluido
-                      </p>
-                    )}
-                  </div>
+                  <span style={{ fontSize: '12px', color: 'rgba(17,17,17,.35)', fontWeight: 300 }}>Total</span>
+                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '28px', color: 'var(--dark)' }}>
+                    {formatPrice(totalPrice)}
+                  </span>
                 </div>
+
                 <button
                   type="button"
                   onClick={handleAddToCart}
                   disabled={product.stock === 0 || isAdding}
-                  className={cn(
-                    'w-full flex items-center justify-center gap-2 transition-all disabled:opacity-50 disabled:cursor-not-allowed hover:opacity-90'
-                  )}
+                  className="w-full flex items-center justify-center gap-2 transition-all hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
                   style={{
-                    background: 'var(--brown)',
-                    color: 'var(--white)',
+                    background: 'var(--dark)',
+                    color: 'var(--cream)',
                     padding: '16px 32px',
-                    borderRadius: '100px',
                     fontSize: '13px',
                     fontWeight: 700,
                     letterSpacing: '0.04em',
@@ -359,136 +334,180 @@ export default function ProductDetailPage() {
                   )}
                   {isSubscription ? 'suscribirme ahora' : 'añadir al carrito'}
                 </button>
+
+                {/* Shipping line — subtle text, not badge icons */}
+                <p className="mt-4 text-center" style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', fontWeight: 300 }}>
+                  {isFreeShipping ? (
+                    <>Envío gratis incluido &nbsp;·&nbsp; Entrega gratis en Málaga centro</>
+                  ) : (
+                    <>Envío 2-4 días &nbsp;·&nbsp; Gratis desde 4 uds &nbsp;·&nbsp; Entrega gratis en Málaga</>
+                  )}
+                </p>
               </div>
             </div>
           </div>
-
-          {/* Product details - Collapsible sections */}
-          <div className="max-w-3xl mb-12 md:mb-20">
-            <Collapsible
-              title="Descripcion"
-              icon={<FileText className="w-5 h-5" />}
-              defaultOpen={true}
-            >
-              <div>
-                {product.description.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="whitespace-pre-line" style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '16px' }}>
-                    {paragraph}
-                  </p>
-                ))}
-              </div>
-            </Collapsible>
-
-            <Collapsible
-              title="Ingredientes"
-              icon={<List className="w-5 h-5" />}
-            >
-              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85 }}>{product.ingredients}</p>
-            </Collapsible>
-
-            <Collapsible
-              title="Informacion nutricional"
-              icon={<BarChart2 className="w-5 h-5" />}
-            >
-              <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.35)', marginBottom: '16px' }}>Por {product.nutritionalInfo.servingSize}</p>
-              <div className="p-4" style={{ background: 'var(--off)' }}>
-                <table className="w-full" style={{ fontSize: '13px' }}>
-                  <tbody>
-                    {[
-                      { label: 'Calorias', value: `${product.nutritionalInfo.calories} kcal` },
-                      { label: 'Grasas', value: `${product.nutritionalInfo.fat}g` },
-                      { label: '- Saturadas', value: `${product.nutritionalInfo.saturatedFat}g`, indent: true },
-                      { label: 'Carbohidratos', value: `${product.nutritionalInfo.carbohydrates}g` },
-                      { label: '- Azucares', value: `${product.nutritionalInfo.sugars}g`, indent: true },
-                      { label: 'Fibra', value: `${product.nutritionalInfo.fiber}g` },
-                      { label: 'Proteinas', value: `${product.nutritionalInfo.protein}g` },
-                      { label: 'Sal', value: `${product.nutritionalInfo.salt}g`, last: true },
-                    ].map((row) => (
-                      <tr key={row.label} style={!row.last ? { borderBottom: '1px solid rgba(0,0,0,.06)' } : {}}>
-                        <td style={{ padding: '10px 0', color: row.indent ? 'rgba(17,17,17,.4)' : 'rgba(17,17,17,.5)', fontWeight: 300, paddingLeft: row.indent ? '16px' : '0' }}>
-                          {row.label}
-                        </td>
-                        <td style={{ padding: '10px 0', textAlign: 'right', fontWeight: 400, color: 'var(--dark)' }}>
-                          {row.value}
-                        </td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </Collapsible>
-
-            <Collapsible
-              title="Alergenos e informacion dietetica"
-              icon={<AlertTriangle className="w-5 h-5" />}
-            >
-              {/* Dietary badges */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {product.tags.includes('sin-gluten') && (
-                  <span className="inline-flex items-center gap-1.5" style={{ padding: '6px 12px', background: 'rgba(16,185,129,.08)', color: '#047857', fontSize: '12px', fontWeight: 400, borderRadius: '100px', border: '1px solid rgba(16,185,129,.2)' }}>
-                    <WheatOff className="w-4 h-4" />
-                    Sin gluten
-                  </span>
-                )}
-                {product.isVegan && (
-                  <span className="inline-flex items-center gap-1.5" style={{ padding: '6px 12px', background: 'rgba(34,197,94,.08)', color: '#15803d', fontSize: '12px', fontWeight: 400, borderRadius: '100px', border: '1px solid rgba(34,197,94,.2)' }}>
-                    <Leaf className="w-4 h-4" />
-                    Vegano
-                  </span>
-                )}
-                {product.hasHoney && (
-                  <span className="inline-flex items-center gap-1.5" style={{ padding: '6px 12px', background: 'rgba(245,158,11,.08)', color: '#b45309', fontSize: '12px', fontWeight: 400, borderRadius: '100px', border: '1px solid rgba(245,158,11,.2)' }}>
-                    Con miel
-                  </span>
-                )}
-              </div>
-
-              {/* Allergen warning */}
-              <div className="p-4" style={{ background: 'rgba(245,158,11,.06)', border: '1px solid rgba(245,158,11,.15)' }}>
-                <p style={{ color: '#92400e', fontWeight: 400, marginBottom: '4px', fontSize: '14px' }}>Informacion sobre alergenos</p>
-                <p style={{ color: '#a16207', fontSize: '13px', fontWeight: 300 }}>{product.allergens}</p>
-              </div>
-            </Collapsible>
-
-            <Collapsible
-              title="Frescura y envío"
-              icon={<Clock className="w-5 h-5" />}
-            >
-              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '12px' }}>
-                Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenamos. Eso significa que recibirás tu granola solo unas horas o días tras su elaboración.
-              </p>
-              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85 }}>
-                <strong style={{ color: 'var(--dark)', fontWeight: 600 }}>Entrega gratuita en Málaga centro:</strong> si estás en Málaga capital, puedes seleccionar la entrega local al hacer tu pedido. Nos pondremos en contacto para concertar día y hora.
-              </p>
-            </Collapsible>
-
-            <Collapsible
-              title="Packaging sostenible"
-              icon={<Leaf className="w-5 h-5" />}
-            >
-              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85 }}>
-                Nuestras granolas se envían en un packaging de papel sostenible y 100% reciclable. Te recomendamos que cuando lleguen a casa las vuelques en un tarro de cristal para conservarla mejor.
-              </p>
-            </Collapsible>
-          </div>
-
-          {/* Related products */}
-          {relatedProducts.length > 0 && (
-            <section>
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '32px' }}>
-                Tambien te puede gustar
-              </h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {relatedProducts.map((p) => (
-                  <div key={p.id}>
-                    <ProductCard product={p} />
-                  </div>
-                ))}
-              </div>
-            </section>
-          )}
         </div>
       </div>
+
+      {/* ══════════════════════════════════════════
+          BELOW THE FOLD — Editorial sections
+          ══════════════════════════════════════════ */}
+
+      {/* ── DESCRIPTION — full width editorial ── */}
+      <section style={{ padding: '96px 0', background: 'var(--white)' }}>
+        <div className="container-narrow">
+          <span className="section-label">La historia</span>
+          {product.description.split('\n\n').map((paragraph, index) => (
+            <p key={index} className="whitespace-pre-line" style={{ fontSize: '15px', color: 'rgba(17,17,17,.55)', fontWeight: 300, lineHeight: 1.9, marginBottom: '20px' }}>
+              {paragraph}
+            </p>
+          ))}
+        </div>
+      </section>
+
+      {/* ── INGREDIENTS — editorial split ── */}
+      <div className="split">
+        <div className="split-img" style={{ minHeight: '480px' }}>
+          <div className="split-img-inner">
+            <Image
+              src="/images/ingredientes-fork.png"
+              alt={`Ingredientes de ${product.name}`}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+        <div className="split-body bg-off">
+          <span className="section-label">Ingredientes</span>
+          <h2 className="split-title">
+            Solo lo que <em>reconoces</em>
+          </h2>
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '24px', maxWidth: '380px' }}>
+            {product.ingredients}
+          </p>
+
+          {/* Dietary info — elegant inline tags */}
+          <div className="flex flex-wrap gap-3">
+            {product.tags.includes('sin-gluten') && (
+              <span className="inline-flex items-center gap-1.5" style={{ fontSize: '11px', color: '#047857', fontWeight: 300 }}>
+                <WheatOff className="w-3.5 h-3.5" />
+                Sin gluten
+              </span>
+            )}
+            <span className="inline-flex items-center gap-1.5" style={{ fontSize: '11px', color: '#047857', fontWeight: 300 }}>
+              Sin lactosa
+            </span>
+            {product.isVegan && (
+              <span className="inline-flex items-center gap-1.5" style={{ fontSize: '11px', color: '#15803d', fontWeight: 300 }}>
+                <Leaf className="w-3.5 h-3.5" />
+                Vegano
+              </span>
+            )}
+            {product.hasHoney && (
+              <span className="inline-flex items-center gap-1.5" style={{ fontSize: '11px', color: '#b45309', fontWeight: 300 }}>
+                Con miel ecológica
+              </span>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* ── NUTRITIONAL INFO — clean table ── */}
+      <section style={{ padding: '80px 0', background: 'var(--white)' }}>
+        <div className="container-narrow">
+          <span className="section-label">Información nutricional</span>
+          <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.3)', marginBottom: '24px', fontWeight: 300 }}>
+            Por {product.nutritionalInfo.servingSize}
+          </p>
+          <div style={{ maxWidth: '480px' }}>
+            <table className="w-full" style={{ fontSize: '13px' }}>
+              <tbody>
+                {[
+                  { label: 'Calorías', value: `${product.nutritionalInfo.calories} kcal` },
+                  { label: 'Grasas', value: `${product.nutritionalInfo.fat}g` },
+                  { label: '  de las cuales saturadas', value: `${product.nutritionalInfo.saturatedFat}g`, indent: true },
+                  { label: 'Carbohidratos', value: `${product.nutritionalInfo.carbohydrates}g` },
+                  { label: '  de los cuales azúcares', value: `${product.nutritionalInfo.sugars}g`, indent: true },
+                  { label: 'Fibra', value: `${product.nutritionalInfo.fiber}g` },
+                  { label: 'Proteínas', value: `${product.nutritionalInfo.protein}g` },
+                  { label: 'Sal', value: `${product.nutritionalInfo.salt}g`, last: true },
+                ].map((row) => (
+                  <tr key={row.label} style={!row.last ? { borderBottom: '1px solid rgba(0,0,0,.05)' } : {}}>
+                    <td style={{ padding: '12px 0', color: row.indent ? 'rgba(17,17,17,.3)' : 'rgba(17,17,17,.45)', fontWeight: 300, paddingLeft: row.indent ? '20px' : '0' }}>
+                      {row.label}
+                    </td>
+                    <td style={{ padding: '12px 0', textAlign: 'right', fontWeight: 400, color: 'var(--dark)' }}>
+                      {row.value}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      {/* ── ALLERGENS — subtle warning ── */}
+      <section style={{ padding: '56px 0', background: 'var(--off)' }}>
+        <div className="container-narrow">
+          <span className="section-label">Alérgenos</span>
+          <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.45)', fontWeight: 300, lineHeight: 1.85 }}>
+            {product.allergens}
+          </p>
+        </div>
+      </section>
+
+      {/* ── FRESHNESS & SHIPPING — editorial ── */}
+      <section style={{ padding: '96px 0', background: 'var(--white)', textAlign: 'center' }}>
+        <div className="container-custom" style={{ maxWidth: '600px' }}>
+          <span className="section-label">Frescura y envío</span>
+          <h2
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontWeight: 400,
+              fontSize: 'clamp(24px, 2.5vw, 34px)',
+              marginBottom: '20px',
+            }}
+          >
+            Del horno <em>a tu mesa</em>
+          </h2>
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '12px' }}>
+            Tostamos cada semana bajo demanda en lotes pequeños. Nunca almacenamos.
+            Recibirás tu granola solo horas o días tras su elaboración.
+          </p>
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '12px' }}>
+            Envío a toda España en 2-4 días laborables. Entrega gratuita en el centro de Málaga.
+          </p>
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85 }}>
+            Packaging de papel 100% reciclable. Te recomendamos volcar la granola en un tarro
+            de cristal para conservarla mejor.
+          </p>
+        </div>
+      </section>
+
+      {/* ── RELATED PRODUCTS ── */}
+      {relatedProducts.length > 0 && (
+        <section style={{ padding: '80px 0 96px', background: 'var(--off)' }}>
+          <div className="container-custom">
+            <div className="flex justify-between items-baseline mb-12">
+              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 2.5vw, 34px)' }}>
+                También te puede gustar
+              </h2>
+              <Link href="/tienda" className="btn-text" style={{ fontSize: '13px' }}>
+                Ver todas
+              </Link>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-8 lg:gap-14">
+              {relatedProducts.map((p) => (
+                <div key={p.id}>
+                  <ProductCard product={p} />
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Sticky Add to Cart for mobile */}
       <StickyAddToCart

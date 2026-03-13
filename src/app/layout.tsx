@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     template: `%s | ${BRAND_NAME}`,
   },
   description:
-    'Granola artesanal sin gluten elaborada con avena integral (≤20ppm), miel y frutos secos premium. Opción vegana disponible. Envío gratis desde 4 unidades. Compra online en España.',
+    'Granola artesanal sin gluten y sin lactosa elaborada con avena integral (≤20ppm), miel y frutos secos premium. Opción vegana disponible. Envío gratis desde 4 unidades. Compra online en España.',
   keywords: [
     'comprar granola artesanal online',
     'granola sin gluten comprar',

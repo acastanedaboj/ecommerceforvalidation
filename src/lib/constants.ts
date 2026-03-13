@@ -4,7 +4,7 @@
 
 export const BUSINESS = {
   name: 'Poppy',
-  tagline: 'Sin gluten real, orgánica, artesanal',
+  tagline: 'Sin gluten, sin lactosa, artesanal',
   email: 'hola@poppy.es',
   address: {
     street: 'Avda. Sor Teresa Prat, 15',

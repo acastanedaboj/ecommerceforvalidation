@@ -19,7 +19,9 @@ export const faqs: FAQ[] = [
 
 Nuestro producto cumple con el estándar europeo de ≤20 ppm (partes por millón) de gluten, que es el umbral establecido para que un producto pueda etiquetarse como "sin gluten".
 
-Además, elaboramos en un **obrador dedicado** en Málaga donde no entra ni se manipula trigo, cebada, centeno ni ningún cereal con gluten. Esto elimina el riesgo de contaminación cruzada durante la producción.`,
+Además, elaboramos en un **obrador dedicado** en Málaga donde no entra ni se manipula trigo, cebada, centeno ni ningún cereal con gluten. Esto elimina el riesgo de contaminación cruzada durante la producción.
+
+Todas nuestras granolas son también **sin lactosa**: no utilizamos ningún derivado lácteo en la elaboración.`,
     category: 'producto',
     order: 1,
   },
@@ -53,6 +55,19 @@ La mayoría de nuestras granolas contienen miel como endulzante natural. Elegimo
 **Para veganos:** Nuestra Granola Vegana utiliza sirope de agave ecológico como endulzante natural, ofreciendo una dulzura suave sin necesidad de miel. Está claramente etiquetada como "Sin miel (vegana)" en nuestra tienda.`,
     category: 'producto',
     order: 3,
+  },
+  {
+    id: 'faq_lactose_free',
+    question: '¿Vuestra granola es sin lactosa?',
+    answer: `**Sí, todas nuestras granolas son 100% sin lactosa.** Ninguno de nuestros sabores contiene leche, derivados lácteos ni trazas de lactosa.
+
+Nuestros ingredientes son exclusivamente de origen vegetal (avena, frutos secos, semillas, aceite de coco) y miel o sirope de agave como endulzante. No utilizamos mantequilla, leche en polvo ni ningún otro producto lácteo en nuestra elaboración.
+
+Además, nuestro obrador dedicado en Málaga no procesa ningún producto con lactosa, lo que elimina cualquier riesgo de contaminación cruzada.
+
+**Resumen:** sin gluten, sin lactosa, sin conservantes.`,
+    category: 'producto',
+    order: 4,
   },
   {
     id: 'faq_allergens',
