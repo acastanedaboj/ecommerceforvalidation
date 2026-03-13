@@ -183,7 +183,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
           style={{
             fontSize: '13px',
             color: 'var(--dark)',
-            opacity: 0.45,
+            opacity: 0.55,
             fontWeight: 300,
             lineHeight: 1.6,
             marginBottom: '12px',
@@ -202,7 +202,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
           >
             {formatPrice(basePrice)}
           </span>
-          <span style={{ fontSize: '11px', color: 'var(--dark)', opacity: 0.35, fontWeight: 300 }}>
+          <span style={{ fontSize: '11px', color: 'var(--dark)', opacity: 0.5, fontWeight: 300 }}>
             · desde {formatPrice(basePrice)}
           </span>
         </div>

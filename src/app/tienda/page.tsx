@@ -35,12 +35,12 @@ export default function TiendaPage() {
           <nav className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center gap-1" style={{ fontSize: '11px', listStyle: 'none' }}>
               <li>
-                <Link href="/" style={{ color: 'rgba(17,17,17,.35)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
+                <Link href="/" style={{ color: 'rgba(17,17,17,.55)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
                   Inicio
                 </Link>
               </li>
               <li>
-                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(17,17,17,.15)' }} />
+                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(17,17,17,.3)' }} />
               </li>
               <li style={{ color: 'var(--dark)', fontWeight: 400 }}>Tienda</li>
             </ol>
@@ -64,7 +64,7 @@ export default function TiendaPage() {
               style={{
                 fontSize: '14px',
                 color: 'var(--dark)',
-                opacity: 0.4,
+                opacity: 0.55,
                 fontWeight: 300,
                 maxWidth: '400px',
                 margin: '0 auto',
@@ -134,8 +134,10 @@ export default function TiendaPage() {
               fontSize: '9px',
               letterSpacing: '0.16em',
               textTransform: 'uppercase',
-              color: 'var(--dark)',
-              opacity: 0.35,
+              color: 'var(--white)',
+              background: 'rgba(0,0,0,.4)',
+              padding: '3px 8px',
+              backdropFilter: 'blur(4px)',
             }}
           >
             Obrador, Málaga
@@ -171,7 +173,7 @@ export default function TiendaPage() {
           >
             Recíbela cada mes <em>con un 15% menos</em>
           </h2>
-          <p style={{ fontSize: '14px', color: 'var(--dark)', opacity: 0.5, fontWeight: 300, lineHeight: 1.85, marginBottom: '36px' }}>
+          <p style={{ fontSize: '14px', color: 'var(--dark)', opacity: 0.6, fontWeight: 300, lineHeight: 1.85, marginBottom: '36px' }}>
             6 bolsas al mes. Envío gratis siempre. Sin permanencia, cancela cuando quieras.
             El 15% que ahorras es nuestra forma de decir gracias.
           </p>
@@ -186,7 +188,7 @@ export default function TiendaPage() {
         <section style={{ background: 'var(--dark)' }}>
           <div className="container-custom" style={{ padding: '80px 56px' }}>
             <div style={{ maxWidth: '480px' }}>
-              <span style={{ fontSize: '11px', color: 'rgba(255,255,255,.3)', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '16px', fontWeight: 300 }}>
+              <span style={{ fontSize: '11px', color: 'rgba(255,255,255,.5)', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '16px', fontWeight: 300 }}>
                 Formato profesional
               </span>
               <h2
@@ -199,7 +201,7 @@ export default function TiendaPage() {
               >
                 Horeca &amp; Mayorista
               </h2>
-              <p style={{ color: 'rgba(255,255,255,.5)', fontWeight: 300, fontSize: '14px', marginBottom: '32px', lineHeight: 1.85 }}>
+              <p style={{ color: 'rgba(255,255,255,.65)', fontWeight: 300, fontSize: '14px', marginBottom: '32px', lineHeight: 1.85 }}>
                 ¿Tienes una cafetería, hotel o tienda? Formatos de 1kg
                 y condiciones especiales para profesionales.
               </p>
@@ -223,7 +225,7 @@ export default function TiendaPage() {
           >
             ¿No sabes cuál elegir?
           </h3>
-          <p style={{ fontSize: '14px', color: 'var(--dark)', opacity: 0.5, fontWeight: 300, lineHeight: 1.85, marginBottom: '8px' }}>
+          <p style={{ fontSize: '14px', color: 'var(--dark)', opacity: 0.6, fontWeight: 300, lineHeight: 1.85, marginBottom: '8px' }}>
             Todos nuestros sabores comparten la misma base: avena integral sin gluten,
             frutos secos premium. Sin lactosa, sin conservantes. La mayoría con miel
             ecológica; también tenemos una opción vegana con sirope de agave.

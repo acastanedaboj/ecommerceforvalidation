@@ -103,20 +103,20 @@ export default function ProductDetailPage() {
           <nav className="mb-8 md:mb-12" aria-label="Breadcrumb">
             <ol className="flex items-center gap-1" style={{ fontSize: '11px', listStyle: 'none' }}>
               <li>
-                <Link href="/" style={{ color: 'rgba(17,17,17,.35)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
+                <Link href="/" style={{ color: 'rgba(17,17,17,.55)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
                   Inicio
                 </Link>
               </li>
               <li>
-                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(17,17,17,.2)' }} />
+                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(17,17,17,.5)' }} />
               </li>
               <li>
-                <Link href="/tienda" style={{ color: 'rgba(17,17,17,.35)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
+                <Link href="/tienda" style={{ color: 'rgba(17,17,17,.55)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
                   Tienda
                 </Link>
               </li>
               <li>
-                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(17,17,17,.2)' }} />
+                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(17,17,17,.5)' }} />
               </li>
               <li style={{ color: 'var(--dark)', fontWeight: 400 }}>{product.name}</li>
             </ol>
@@ -136,7 +136,7 @@ export default function ProductDetailPage() {
             {/* Product info — essentials only */}
             <div style={{ paddingBottom: '64px' }}>
               {/* Weight label */}
-              <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.3)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '12px', fontWeight: 300 }}>
+              <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.5)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '12px', fontWeight: 300 }}>
                 {product.weight}g · Sin gluten · Sin lactosa
               </p>
 
@@ -146,16 +146,16 @@ export default function ProductDetailPage() {
               </h1>
 
               {/* One-line description */}
-              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '20px', maxWidth: '420px' }}>
+              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.85, marginBottom: '20px', maxWidth: '420px' }}>
                 {product.shortDescription}
               </p>
 
               {/* Ingredients — prominent, above the fold */}
               <div className="mb-8" style={{ padding: '20px 24px', background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}>
-                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.3)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '10px', fontWeight: 300 }}>
+                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.5)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '10px', fontWeight: 300 }}>
                   Ingredientes
                 </p>
-                <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.55)', fontWeight: 300, lineHeight: 1.75 }}>
+                <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.65)', fontWeight: 300, lineHeight: 1.75 }}>
                   {product.ingredients}
                 </p>
                 <div className="flex flex-wrap gap-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,.04)', paddingTop: '12px' }}>
@@ -188,10 +188,10 @@ export default function ProductDetailPage() {
                   <span style={{ fontFamily: 'var(--font-display)', fontSize: '32px', color: 'var(--dark)' }}>
                     {formatPrice(packUnitPrice)}
                   </span>
-                  <span style={{ fontSize: '13px', color: 'rgba(17,17,17,.3)', fontWeight: 300 }}>/unidad</span>
+                  <span style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>/unidad</span>
                   {discount > 0 && (
                     <>
-                      <span style={{ fontSize: '15px', color: 'rgba(17,17,17,.2)', textDecoration: 'line-through' }}>
+                      <span style={{ fontSize: '15px', color: 'rgba(17,17,17,.4)', textDecoration: 'line-through' }}>
                         {formatPrice(basePrice)}
                       </span>
                       <span style={{ fontSize: '11px', color: 'var(--brown)', fontWeight: 700 }}>
@@ -209,7 +209,7 @@ export default function ProductDetailPage() {
 
               {/* Pack selection — minimal pills */}
               <div className="mb-8">
-                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '12px', fontWeight: 300 }}>
+                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.5)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '12px', fontWeight: 300 }}>
                   Formato
                 </p>
                 <div className="flex gap-2">
@@ -284,7 +284,7 @@ export default function ProductDetailPage() {
                       <p style={{ fontSize: '14px', fontWeight: isSubscription ? 700 : 400, color: 'var(--dark)', marginBottom: '4px' }}>
                         Recíbela cada mes con un 15% menos
                       </p>
-                      <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.45)', fontWeight: 300 }}>
+                      <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.55)', fontWeight: 300 }}>
                         6 bolsas · {formatPrice(calculateSubscriptionUnitPrice())}/ud · Envío gratis · Sin permanencia
                       </p>
                     </div>
@@ -304,7 +304,7 @@ export default function ProductDetailPage() {
 
               {/* Quantity */}
               <div className="mb-8">
-                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '12px', fontWeight: 300 }}>
+                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.5)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '12px', fontWeight: 300 }}>
                   Cantidad
                 </p>
                 <div className="flex items-center gap-6">
@@ -315,7 +315,7 @@ export default function ProductDetailPage() {
                       className="p-3 transition-colors hover:bg-gray-50"
                       aria-label="Reducir cantidad"
                     >
-                      <Minus className="w-4 h-4" style={{ color: 'rgba(17,17,17,.35)' }} />
+                      <Minus className="w-4 h-4" style={{ color: 'rgba(17,17,17,.5)' }} />
                     </button>
                     <span className="w-12 text-center" style={{ fontSize: '14px', color: 'var(--dark)' }}>{quantity}</span>
                     <button
@@ -324,10 +324,10 @@ export default function ProductDetailPage() {
                       className="p-3 transition-colors hover:bg-gray-50"
                       aria-label="Aumentar cantidad"
                     >
-                      <Plus className="w-4 h-4" style={{ color: 'rgba(17,17,17,.35)' }} />
+                      <Plus className="w-4 h-4" style={{ color: 'rgba(17,17,17,.5)' }} />
                     </button>
                   </div>
-                  <span style={{ fontSize: '12px', color: 'rgba(17,17,17,.4)', fontWeight: 300 }}>
+                  <span style={{ fontSize: '12px', color: 'rgba(17,17,17,.55)', fontWeight: 300 }}>
                     = {totalUnits} {totalUnits === 1 ? 'bolsa' : 'bolsas'}
                   </span>
                 </div>
@@ -368,7 +368,7 @@ export default function ProductDetailPage() {
                 </button>
 
                 {/* Shipping line — subtle text, not badge icons */}
-                <p className="mt-4 text-center" style={{ fontSize: '11px', color: 'rgba(17,17,17,.35)', fontWeight: 300 }}>
+                <p className="mt-4 text-center" style={{ fontSize: '11px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
                   {isFreeShipping ? (
                     <>Envío gratis incluido &nbsp;·&nbsp; Entrega gratis en Málaga centro</>
                   ) : (
@@ -390,7 +390,7 @@ export default function ProductDetailPage() {
         <div className="container-narrow">
           <span className="section-label">La historia</span>
           {product.description.split('\n\n').map((paragraph, index) => (
-            <p key={index} className="whitespace-pre-line" style={{ fontSize: '15px', color: 'rgba(17,17,17,.55)', fontWeight: 300, lineHeight: 1.9, marginBottom: '20px' }}>
+            <p key={index} className="whitespace-pre-line" style={{ fontSize: '15px', color: 'rgba(17,17,17,.65)', fontWeight: 300, lineHeight: 1.9, marginBottom: '20px' }}>
               {paragraph}
             </p>
           ))}
@@ -401,7 +401,7 @@ export default function ProductDetailPage() {
       <section style={{ padding: '80px 0', background: 'var(--white)' }}>
         <div className="container-narrow">
           <span className="section-label">Información nutricional</span>
-          <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.3)', marginBottom: '24px', fontWeight: 300 }}>
+          <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.5)', marginBottom: '24px', fontWeight: 300 }}>
             Por {product.nutritionalInfo.servingSize}
           </p>
           <div style={{ maxWidth: '480px' }}>
@@ -418,7 +418,7 @@ export default function ProductDetailPage() {
                   { label: 'Sal', value: `${product.nutritionalInfo.salt}g`, last: true },
                 ].map((row) => (
                   <tr key={row.label} style={!row.last ? { borderBottom: '1px solid rgba(0,0,0,.05)' } : {}}>
-                    <td style={{ padding: '12px 0', color: row.indent ? 'rgba(17,17,17,.3)' : 'rgba(17,17,17,.45)', fontWeight: 300, paddingLeft: row.indent ? '20px' : '0' }}>
+                    <td style={{ padding: '12px 0', color: row.indent ? 'rgba(17,17,17,.45)' : 'rgba(17,17,17,.6)', fontWeight: 300, paddingLeft: row.indent ? '20px' : '0' }}>
                       {row.label}
                     </td>
                     <td style={{ padding: '12px 0', textAlign: 'right', fontWeight: 400, color: 'var(--dark)' }}>
@@ -436,7 +436,7 @@ export default function ProductDetailPage() {
       <section style={{ padding: '56px 0', background: 'var(--off)' }}>
         <div className="container-narrow">
           <span className="section-label">Alérgenos</span>
-          <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.45)', fontWeight: 300, lineHeight: 1.85 }}>
+          <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.85 }}>
             {product.allergens}
           </p>
         </div>
@@ -456,14 +456,14 @@ export default function ProductDetailPage() {
           >
             Del horno <em>a tu mesa</em>
           </h2>
-          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '12px' }}>
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.85, marginBottom: '12px' }}>
             Tostamos cada semana bajo demanda en lotes pequeños. Nunca almacenamos.
             Recibirás tu granola solo horas o días tras su elaboración.
           </p>
-          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '12px' }}>
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.85, marginBottom: '12px' }}>
             Envío a toda España en 4-6 días laborables. Entrega gratuita en el centro de Málaga.
           </p>
-          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85 }}>
+          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.85 }}>
             Packaging de papel 100% reciclable. Te recomendamos volcar la granola en un tarro
             de cristal para conservarla mejor.
           </p>
