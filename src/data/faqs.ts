@@ -127,9 +127,9 @@ Nuestras granolas se envían en un packaging de papel sostenible y 100% reciclab
 Si estás en Málaga capital, puedes seleccionar la opción de entrega local gratuita al hacer tu pedido. Nos pondremos en contacto contigo para concertar día y hora de entrega.
 
 **Plazos de entrega:**
-- Península: 2-4 días laborables
-- Baleares: 4-6 días laborables
-- Canarias: 5-8 días laborables (pueden aplicar tasas de importación)
+- Península: 4-6 días laborables
+- Baleares: 6-8 días laborables
+- Canarias: 8-12 días laborables (pueden aplicar tasas de importación)
 - Málaga centro (entrega local): nos ponemos de acuerdo contigo
 
 Actualmente solo realizamos envíos a España. Si estás interesado en envíos internacionales, contáctanos.`,

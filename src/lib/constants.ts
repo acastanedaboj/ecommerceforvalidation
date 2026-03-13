@@ -55,7 +55,7 @@ export const SHIPPING = {
 
   // Delivery estimates
   ESTIMATED_DAYS: {
-    peninsula: '2-4 días laborables',
+    peninsula: '4-6 días laborables',
     islands: '5-7 días laborables',
   },
 } as const;

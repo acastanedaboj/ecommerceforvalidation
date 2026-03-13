@@ -63,7 +63,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
             'object-cover transition-all duration-700 ease-out',
             product.images[1] ? 'group-hover:opacity-0 group-hover:scale-[1.02]' : 'group-hover:scale-[1.02]'
           )}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
         {product.images[1] && (
           <Image
@@ -71,7 +71,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
             alt={`${product.name} - detalle`}
             fill
             className="object-cover transition-all duration-700 ease-out opacity-0 group-hover:opacity-100 group-hover:scale-[1.02]"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 50vw"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         )}
 

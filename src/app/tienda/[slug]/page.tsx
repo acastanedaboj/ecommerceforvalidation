@@ -146,9 +146,41 @@ export default function ProductDetailPage() {
               </h1>
 
               {/* One-line description */}
-              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '32px', maxWidth: '420px' }}>
+              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '20px', maxWidth: '420px' }}>
                 {product.shortDescription}
               </p>
+
+              {/* Ingredients — prominent, above the fold */}
+              <div className="mb-8" style={{ padding: '20px 24px', background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}>
+                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.3)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '10px', fontWeight: 300 }}>
+                  Ingredientes
+                </p>
+                <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.55)', fontWeight: 300, lineHeight: 1.75 }}>
+                  {product.ingredients}
+                </p>
+                <div className="flex flex-wrap gap-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,.04)', paddingTop: '12px' }}>
+                  {product.tags.includes('sin-gluten') && (
+                    <span className="inline-flex items-center gap-1.5" style={{ fontSize: '10px', letterSpacing: '0.06em', color: '#047857', fontWeight: 400, textTransform: 'uppercase' }}>
+                      <WheatOff className="w-3 h-3" />
+                      Sin gluten
+                    </span>
+                  )}
+                  <span className="inline-flex items-center gap-1.5" style={{ fontSize: '10px', letterSpacing: '0.06em', color: '#047857', fontWeight: 400, textTransform: 'uppercase' }}>
+                    Sin lactosa
+                  </span>
+                  {product.isVegan && (
+                    <span className="inline-flex items-center gap-1.5" style={{ fontSize: '10px', letterSpacing: '0.06em', color: '#15803d', fontWeight: 400, textTransform: 'uppercase' }}>
+                      <Leaf className="w-3 h-3" />
+                      Vegano
+                    </span>
+                  )}
+                  {product.hasHoney && (
+                    <span className="inline-flex items-center gap-1.5" style={{ fontSize: '10px', letterSpacing: '0.06em', color: '#b45309', fontWeight: 400, textTransform: 'uppercase' }}>
+                      Con miel ecológica
+                    </span>
+                  )}
+                </div>
+              </div>
 
               {/* Price */}
               <div className="mb-8">
@@ -340,7 +372,7 @@ export default function ProductDetailPage() {
                   {isFreeShipping ? (
                     <>Envío gratis incluido &nbsp;·&nbsp; Entrega gratis en Málaga centro</>
                   ) : (
-                    <>Envío 2-4 días &nbsp;·&nbsp; Gratis desde 4 uds &nbsp;·&nbsp; Entrega gratis en Málaga</>
+                    <>Envío 4-6 días &nbsp;·&nbsp; Gratis desde 4 uds &nbsp;·&nbsp; Entrega gratis en Málaga</>
                   )}
                 </p>
               </div>
@@ -364,54 +396,6 @@ export default function ProductDetailPage() {
           ))}
         </div>
       </section>
-
-      {/* ── INGREDIENTS — editorial split ── */}
-      <div className="split">
-        <div className="split-img" style={{ minHeight: '480px' }}>
-          <div className="split-img-inner">
-            <Image
-              src="/images/ingredientes-fork.png"
-              alt={`Ingredientes de ${product.name}`}
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-        </div>
-        <div className="split-body bg-off">
-          <span className="section-label">Ingredientes</span>
-          <h2 className="split-title">
-            Solo lo que <em>reconoces</em>
-          </h2>
-          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '24px', maxWidth: '380px' }}>
-            {product.ingredients}
-          </p>
-
-          {/* Dietary info — elegant inline tags */}
-          <div className="flex flex-wrap gap-3">
-            {product.tags.includes('sin-gluten') && (
-              <span className="inline-flex items-center gap-1.5" style={{ fontSize: '11px', color: '#047857', fontWeight: 300 }}>
-                <WheatOff className="w-3.5 h-3.5" />
-                Sin gluten
-              </span>
-            )}
-            <span className="inline-flex items-center gap-1.5" style={{ fontSize: '11px', color: '#047857', fontWeight: 300 }}>
-              Sin lactosa
-            </span>
-            {product.isVegan && (
-              <span className="inline-flex items-center gap-1.5" style={{ fontSize: '11px', color: '#15803d', fontWeight: 300 }}>
-                <Leaf className="w-3.5 h-3.5" />
-                Vegano
-              </span>
-            )}
-            {product.hasHoney && (
-              <span className="inline-flex items-center gap-1.5" style={{ fontSize: '11px', color: '#b45309', fontWeight: 300 }}>
-                Con miel ecológica
-              </span>
-            )}
-          </div>
-        </div>
-      </div>
 
       {/* ── NUTRITIONAL INFO — clean table ── */}
       <section style={{ padding: '80px 0', background: 'var(--white)' }}>
@@ -477,7 +461,7 @@ export default function ProductDetailPage() {
             Recibirás tu granola solo horas o días tras su elaboración.
           </p>
           <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '12px' }}>
-            Envío a toda España en 2-4 días laborables. Entrega gratuita en el centro de Málaga.
+            Envío a toda España en 4-6 días laborables. Entrega gratuita en el centro de Málaga.
           </p>
           <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85 }}>
             Packaging de papel 100% reciclable. Te recomendamos volcar la granola en un tarro

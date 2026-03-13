@@ -179,7 +179,7 @@ export const sinGlutenContent = {
     {
       question: '¿Dónde puedo comprar granola sin gluten Poppy?',
       answer:
-        'Vendemos exclusivamente online en poppy.es. Esto nos permite controlar la calidad y frescura de cada envío. Hacemos envíos a toda España, y es gratis a partir de 4 bolsas. Tu pedido llega en 2-4 días laborables.',
+        'Vendemos exclusivamente online en poppy.es. Esto nos permite controlar la calidad y frescura de cada envío. Hacemos envíos a toda España, y es gratis a partir de 4 bolsas. Tu pedido llega en 4-6 días laborables.',
     },
     {
       question: '¿Cuánto dura la granola sin gluten una vez abierta?',
@@ -655,7 +655,7 @@ export const mercadonaContent = {
     {
       question: '¿Cuánto tarda el envío de Poppy?',
       answer:
-        'Preparamos tu pedido en 24-48h laborables y lo enviamos a toda España. Envío gratis a partir de 4 bolsas. Lo recibes en 2-4 días laborables. En Málaga centro ofrecemos entrega gratuita en mano.',
+        'Preparamos tu pedido en 24-48h laborables y lo enviamos a toda España. Envío gratis a partir de 4 bolsas. Lo recibes en 4-6 días laborables. En Málaga centro ofrecemos entrega gratuita en mano.',
     },
     {
       question: '¿La granola de Mercadona es apta para celíacos?',

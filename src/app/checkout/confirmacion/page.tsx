@@ -55,7 +55,7 @@ function ConfirmacionContent() {
           {/* Delivery estimate */}
           <div className="bg-primary-50 rounded-xl p-6 mb-8">
             <p className="text-primary-800">
-              <span>Entrega estimada:</span> 2-4 días laborables
+              <span>Entrega estimada:</span> 4-6 días laborables
               para Península
             </p>
           </div>

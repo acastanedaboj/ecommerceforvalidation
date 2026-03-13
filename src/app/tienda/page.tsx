@@ -28,107 +28,62 @@ export default function TiendaPage() {
         ])}
       />
 
-      {/* ── HERO EDITORIAL ── */}
-      <section
-        className="relative overflow-hidden"
-        style={{ height: '70vh', minHeight: '480px', maxHeight: '720px', background: '#1c1410' }}
-      >
-        <Image
-          src="/images/hero-tower.png"
-          alt="Granola Poppy — Tienda"
-          fill
-          className="object-cover"
-          priority
-          sizes="100vw"
-          style={{ opacity: 0.4 }}
-        />
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'linear-gradient(to bottom, rgba(0,0,0,.05) 0%, transparent 40%, rgba(0,0,0,.6) 100%)',
-          }}
-        />
-        <div
-          className="absolute bottom-0 left-0 right-0 z-10"
-          style={{ padding: '0 56px 56px' }}
-        >
+      {/* ── HEADER — clean, minimal, centered ── */}
+      <section style={{ paddingTop: '140px', paddingBottom: '0', background: 'var(--off)' }}>
+        <div className="container-custom">
           {/* Breadcrumb */}
-          <nav className="mb-6" aria-label="Breadcrumb">
+          <nav className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center gap-1" style={{ fontSize: '11px', listStyle: 'none' }}>
               <li>
-                <Link href="/" style={{ color: 'rgba(255,255,255,.4)', textDecoration: 'none' }} className="hover:text-white transition-colors">
+                <Link href="/" style={{ color: 'rgba(17,17,17,.35)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
                   Inicio
                 </Link>
               </li>
               <li>
-                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(255,255,255,.2)' }} />
+                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(17,17,17,.15)' }} />
               </li>
-              <li style={{ color: 'rgba(255,255,255,.7)', fontWeight: 400 }}>Tienda</li>
+              <li style={{ color: 'var(--dark)', fontWeight: 400 }}>Tienda</li>
             </ol>
           </nav>
 
-          <h1
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontWeight: 400,
-              fontSize: 'clamp(40px, 6vw, 72px)',
-              lineHeight: 0.95,
-              color: 'var(--cream)',
-              letterSpacing: '-0.02em',
-              marginBottom: '16px',
-            }}
-          >
-            Nuestra <em>granola</em>
-          </h1>
-          <p
-            style={{
-              fontSize: '13px',
-              color: 'rgba(255,255,255,.45)',
-              fontWeight: 300,
-              maxWidth: '380px',
-              lineHeight: 1.8,
-            }}
-          >
-            Tres sabores. Ingredientes reales. Sin gluten, sin lactosa, sin ruido.
-            Elaborada cada semana en nuestro obrador de Málaga.
-          </p>
+          <div className="text-center" style={{ paddingBottom: '64px' }}>
+            <h1
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontWeight: 400,
+                fontSize: 'clamp(36px, 5vw, 56px)',
+                lineHeight: 1.1,
+                color: 'var(--dark)',
+                letterSpacing: '-0.02em',
+                marginBottom: '14px',
+              }}
+            >
+              Nuestra <em>granola</em>
+            </h1>
+            <p
+              style={{
+                fontSize: '14px',
+                color: 'var(--dark)',
+                opacity: 0.4,
+                fontWeight: 300,
+                maxWidth: '400px',
+                margin: '0 auto',
+                lineHeight: 1.8,
+              }}
+            >
+              Tres sabores. Ingredientes reales. Sin gluten, sin lactosa.
+              Elaborada cada semana en nuestro obrador de Málaga.
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* ── EDITORIAL LINE ── */}
-      <div style={{ padding: '56px 0', textAlign: 'center', background: 'var(--white)' }}>
-        <p
-          style={{
-            fontFamily: 'var(--font-display)',
-            fontStyle: 'italic',
-            fontSize: 'clamp(20px, 2.5vw, 30px)',
-            color: 'var(--dark)',
-            opacity: 0.7,
-            letterSpacing: '-0.01em',
-          }}
-        >
-          Crafted for pleasure
-        </p>
-      </div>
-
-      {/* ── PRODUCTS — 2 column grid ── */}
+      {/* ── PRODUCTS — 3 columns on desktop ── */}
       <section style={{ padding: '0 0 96px', background: 'var(--off)' }}>
-        <div className="container-custom" style={{ paddingTop: '80px' }}>
-          {/* Section label */}
-          <div className="flex justify-between items-baseline mb-14">
-            <div>
-              <span className="section-label">Granola artesanal · 150g</span>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 400,
-                  fontSize: 'clamp(26px, 3vw, 38px)',
-                  letterSpacing: '-0.01em',
-                }}
-              >
-                Elige tu sabor
-              </h2>
-            </div>
+        <div className="container-custom">
+          {/* Section label row */}
+          <div className="flex justify-between items-baseline mb-12">
+            <span className="section-label">Granola artesanal · 150g</span>
             <button
               onClick={() => setIsBundleModalOpen(true)}
               className="btn-text hidden sm:inline-flex"
@@ -138,8 +93,8 @@ export default function TiendaPage() {
             </button>
           </div>
 
-          {/* 2-col grid */}
-          <div className="grid sm:grid-cols-2 gap-8 lg:gap-14">
+          {/* 3-col grid */}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {retailProducts.map((product) => (
               <div key={product.id}>
                 <ProductCard product={product} />
@@ -202,7 +157,7 @@ export default function TiendaPage() {
         </div>
       </div>
 
-      {/* ── SUBSCRIPTION — editorial, not a CTA box ── */}
+      {/* ── SUBSCRIPTION — editorial ── */}
       <section style={{ padding: '96px 0', background: 'var(--white)', textAlign: 'center' }}>
         <div className="container-custom" style={{ maxWidth: '640px' }}>
           <span className="section-label">Suscripción mensual</span>
