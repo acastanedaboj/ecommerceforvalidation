@@ -91,7 +91,6 @@ export function subscriptionActiveEmail(data: SubscriptionActiveData): { subject
 
     <p>
       <strong>Flexibilidad absoluta:</strong> Pausa, modifica o cancela cuando quieras desde tu cuenta.<br><br>
-      <strong>Sin sorpresas:</strong> Te avisamos 3 días antes de cada cobro por si necesitas hacer cambios.<br><br>
       <strong>Cambio de dirección:</strong> Actualiza tu dirección de envío antes de cada renovación si lo necesitas.
     </p>
 
@@ -135,7 +134,6 @@ export function subscriptionRenewedEmail(data: SubscriptionRenewedData): { subje
     quantity,
     amountPaidCents,
     invoiceId,
-    nextDeliveryDate,
     nextPaymentDate,
   } = data;
 
