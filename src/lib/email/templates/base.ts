@@ -276,7 +276,9 @@ export function emailLayout(content: string, previewText?: string): string {
 <body>
   <div class="container">
     <div class="header">
-      <a href="${EMAIL_CONFIG.baseUrl}" class="logo">Poppy</a>
+      <a href="${EMAIL_CONFIG.baseUrl}">
+        <img src="${EMAIL_CONFIG.baseUrl}/images/logo-white.svg" alt="Poppy" width="120" style="display:block;margin:0 auto;height:30px;width:auto;" />
+      </a>
     </div>
     <div class="content">
       ${content}
@@ -285,9 +287,6 @@ export function emailLayout(content: string, previewText?: string): string {
       <p style="margin-bottom: 16px;">
         <strong style="font-family: 'DM Serif Display', Georgia, serif; font-size: 16px; color: ${colors.stone[800]};">Poppy</strong><br>
         Granola artesanal sin gluten · Hecha en Málaga
-      </p>
-      <p style="margin-bottom: 16px;">
-        Avda. Sor Teresa Prat, 15, 29003 Málaga
       </p>
       <p style="margin-bottom: 20px;">
         <a href="${EMAIL_CONFIG.baseUrl}">Tienda</a> &nbsp;&nbsp;·&nbsp;&nbsp;
