@@ -277,7 +277,7 @@ export function emailLayout(content: string, previewText?: string): string {
   <div class="container">
     <div class="header">
       <a href="${EMAIL_CONFIG.baseUrl}">
-        <img src="${EMAIL_CONFIG.baseUrl}/images/logo-white.svg" alt="Poppy" width="120" style="display:block;margin:0 auto;height:30px;width:auto;" />
+        <img src="${EMAIL_CONFIG.baseUrl}/images/logo-email.png" alt="Poppy" width="200" style="display:block;margin:0 auto;width:200px;height:auto;" />
       </a>
     </div>
     <div class="content">
