@@ -50,8 +50,10 @@ export async function POST(request: NextRequest) {
         // Send order confirmation email and save to database for one-time purchases
         if (session.mode === 'payment' && session.customer_email) {
           try {
-            // Get line items from session
-            const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
+            // Get line items from session (expand product to access metadata with DB productId)
+            const lineItems = await stripe.checkout.sessions.listLineItems(session.id, {
+              expand: ['data.price.product'],
+            });
 
             const items = lineItems.data.map((item) => ({
               name: item.description || 'Granola Poppy',
@@ -72,7 +74,7 @@ export async function POST(request: NextRequest) {
             }
 
             // Save order to database
-            const order = await prisma.order.create({
+            await prisma.order.create({
               data: {
                 orderNumber,
                 userId,
@@ -98,14 +100,22 @@ export async function POST(request: NextRequest) {
                 discountCode: session.metadata?.couponCode || null,
                 paidAt: new Date(),
                 items: {
-                  create: lineItems.data.map((item) => ({
-                    productId: item.price?.product as string || 'unknown',
-                    productName: item.description || 'Granola Poppy',
-                    productSku: item.price?.id || 'unknown',
-                    quantity: item.quantity || 1,
-                    unitPriceInCents: item.price?.unit_amount || 0,
-                    totalPriceInCents: item.amount_total || 0,
-                  })),
+                  create: lineItems.data
+                    .filter((item) => {
+                      const product = item.price?.product as Stripe.Product | null;
+                      return product?.metadata?.productId;
+                    })
+                    .map((item) => {
+                      const product = item.price?.product as Stripe.Product;
+                      return {
+                        productId: product.metadata.productId,
+                        productName: item.description || 'Granola Poppy',
+                        productSku: item.price?.id || 'unknown',
+                        quantity: item.quantity || 1,
+                        unitPriceInCents: item.price?.unit_amount || 0,
+                        totalPriceInCents: item.amount_total || 0,
+                      };
+                    }),
                 },
               },
               include: {
