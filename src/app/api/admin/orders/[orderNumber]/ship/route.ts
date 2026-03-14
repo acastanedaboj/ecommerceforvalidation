@@ -4,7 +4,7 @@ import { authOptions } from '@/lib/auth';
 import prisma from '@/lib/db';
 import { sendOrderShippedEmail } from '@/lib/email';
 
-const ADMIN_EMAILS = ['alvaro.castanneda@gmail.com', 'hola@poppy.es'];
+const ADMIN_EMAILS = ['alvaro.castanneda@gmail.com', 'hola@poppy.es', 'pilar.orico@gmail.com'];
 
 const TRACKING_URLS: Record<string, (n: string) => string> = {
   Correos: (n) => `https://www.correos.es/es/es/herramientas/localizador/envios/detalle?tracking-number=${n}`,

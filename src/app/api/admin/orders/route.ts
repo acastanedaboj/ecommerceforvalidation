@@ -3,7 +3,7 @@ import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
 import prisma from '@/lib/db';
 
-const ADMIN_EMAILS = ['alvaro.castanneda@gmail.com', 'hola@poppy.es'];
+const ADMIN_EMAILS = ['alvaro.castanneda@gmail.com', 'hola@poppy.es', 'pilar.orico@gmail.com'];
 
 export async function GET() {
   const session = await getServerSession(authOptions);
