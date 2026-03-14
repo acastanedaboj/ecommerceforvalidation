@@ -291,7 +291,7 @@ export function emailLayout(content: string, previewText?: string): string {
       </p>
       <p style="margin-bottom: 20px;">
         <a href="${EMAIL_CONFIG.baseUrl}">Tienda</a> &nbsp;&nbsp;·&nbsp;&nbsp;
-        <a href="https://instagram.com/poppy.granola">Instagram</a> &nbsp;&nbsp;·&nbsp;&nbsp;
+        <a href="https://instagram.com/poppy_granola">Instagram</a> &nbsp;&nbsp;·&nbsp;&nbsp;
         <a href="${EMAIL_CONFIG.baseUrl}/legal/privacidad">Privacidad</a>
       </p>
       <p style="font-size: 12px; color: ${colors.stone[400]};">

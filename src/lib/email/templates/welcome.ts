@@ -79,7 +79,7 @@ export function welcomeEmail(data: WelcomeEmailData): { subject: string; html: s
     </p>
 
     <p class="text-small" style="color: #A3A3A3;">
-      P.D. Síguenos en Instagram <a href="https://instagram.com/poppy.granola">@poppy.granola</a>
+      P.D. Síguenos en Instagram <a href="https://instagram.com/poppy_granola">@poppy_granola</a>
       para recetas, inspiración y algún que otro descuento sorpresa.
     </p>
   `;
