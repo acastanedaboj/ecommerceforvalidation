@@ -40,10 +40,13 @@ export interface SendEmailOptions {
 export async function sendEmail(options: SendEmailOptions) {
   const { to, subject, html, text, tags } = options;
 
+  // Allow overriding recipient for testing (set EMAIL_TEST_OVERRIDE in env)
+  const recipient = process.env.EMAIL_TEST_OVERRIDE || to;
+
   try {
     const { data, error } = await resend.emails.send({
       from: EMAIL_CONFIG.from,
-      to,
+      to: recipient,
       subject,
       html,
       text,
