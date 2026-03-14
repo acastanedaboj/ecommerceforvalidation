@@ -85,25 +85,8 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Recursos links */}
-          <div className="lg:col-span-2">
-            <h3 className="text-[#fcf8d5] font-bold text-[15px] mb-5" style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Recursos</h3>
-            <ul className="space-y-3.5">
-              {NAVIGATION.footer.recursos.map((item) => (
-                <li key={item.href}>
-                  <Link
-                    href={item.href}
-                    className="text-[#fcf8d5] hover:text-[#fcf8d5] transition-colors text-sm"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* Contacto */}
-          <div className="lg:col-span-2">
+          <div className="lg:col-span-4">
             <h3 className="text-[#fcf8d5] font-bold text-[15px] mb-5" style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}>Contacto</h3>
             <ul className="space-y-4">
               <li>
@@ -124,6 +107,25 @@ export function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* SEO links — tag cloud */}
+        <div className="mt-12 pt-10 border-t border-[#fcf8d5]/10">
+          <p className="text-[10px] uppercase tracking-widest text-[#fcf8d5]/40 mb-4">Explora</p>
+          <nav aria-label="Temas relacionados">
+            <ul className="flex flex-wrap gap-2">
+              {NAVIGATION.footer.recursos.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="inline-block px-3 py-1.5 rounded-full text-xs text-[#fcf8d5]/70 bg-[#5a3f38] hover:bg-[#4a322c] hover:text-[#fcf8d5] transition-all duration-200"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </div>
 
