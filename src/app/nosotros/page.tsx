@@ -2,7 +2,7 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Leaf, Heart, Sun, ArrowRight } from 'lucide-react';
-import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, JsonLd } from '@/lib/seo';
+import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, buildLocalBusinessSchema, JsonLd } from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Nuestra historia | Granola artesanal sin gluten',
@@ -50,6 +50,7 @@ export default function NosotrosPage() {
           { name: 'Nosotros', url: '/nosotros' },
         ])}
       />
+      <JsonLd data={buildLocalBusinessSchema()} />
 
       {/* Hero Section with Image */}
       <section className="relative flex items-center justify-center overflow-hidden" style={{ height: '70vh', minHeight: '400px' }}>

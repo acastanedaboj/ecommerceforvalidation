@@ -7,16 +7,16 @@ import { SITE_URL, BRAND_NAME, getCanonicalUrl } from '@/lib/seo';
 import { HomeClient } from '@/components/home/HomeClient';
 
 export const metadata: Metadata = {
-  title: `${BRAND_NAME} | Granola sin gluten artesanal con miel`,
+  title: `Granola sin gluten artesanal | ${BRAND_NAME} — Hecha en Málaga`,
   description:
-    'Granola crujiente y especiada, elaborada con intención. Ingredientes reales, sin gluten, sin lactosa. Envío gratis desde 4 unidades. Entrega gratuita en Málaga.',
+    'Granola artesanal hecha en Málaga con avena sin gluten, miel ecológica y frutos secos. Tostada despacio en lotes pequeños. Envío gratis a partir de 4 bolsas.',
   alternates: {
     canonical: getCanonicalUrl('/'),
   },
   openGraph: {
-    title: `${BRAND_NAME} - Crafted for pleasure`,
+    title: `Granola sin gluten artesanal | ${BRAND_NAME} — Hecha en Málaga`,
     description:
-      'Granola crujiente y especiada, elaborada con intención. Ingredientes reales. Sin gluten. Sin ruido.',
+      'Granola artesanal hecha en Málaga con avena sin gluten, miel ecológica y frutos secos. Tostada despacio en lotes pequeños.',
     url: SITE_URL,
     type: 'website',
   },
@@ -57,20 +57,34 @@ export default function HomePage() {
           className="absolute bottom-0 left-0 right-0 z-10 hero-caption"
           style={{ padding: '0 56px 52px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}
         >
-          <h1
-            style={{
-              fontFamily: 'var(--font-display)',
-              fontWeight: 400,
-              fontSize: 'clamp(60px, 8.5vw, 120px)',
-              lineHeight: 0.9,
-              color: 'var(--cream)',
-              letterSpacing: '-0.02em',
-            }}
-          >
-            <em>Crafted</em>
-            <br />
-            for pleasure
-          </h1>
+          <div>
+            <h1
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontWeight: 400,
+                fontSize: 'clamp(44px, 6.5vw, 96px)',
+                lineHeight: 0.92,
+                color: 'var(--cream)',
+                letterSpacing: '-0.02em',
+              }}
+            >
+              Granola artesanal
+              <br />
+              <em>sin gluten</em>
+            </h1>
+            <p
+              style={{
+                marginTop: '14px',
+                fontSize: '11px',
+                color: 'rgba(255,255,255,.4)',
+                fontStyle: 'italic',
+                fontFamily: 'var(--font-display)',
+                letterSpacing: '0.01em',
+              }}
+            >
+              Crafted for pleasure
+            </p>
+          </div>
           <div className="hero-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '20px', paddingBottom: '6px' }}>
             <p
               style={{
@@ -82,7 +96,7 @@ export default function HomePage() {
                 fontWeight: 300,
               }}
             >
-              Granola artesanal. Pequeños lotes. Málaga.
+              Hecha con miel ecológica en Málaga.
             </p>
             <Link href="/tienda" className="btn-pill-white">
               Descubrir
