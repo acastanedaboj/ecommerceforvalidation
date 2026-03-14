@@ -75,7 +75,7 @@ export default function CheckoutPage() {
   const { items, clearCart, localDelivery, localDeliveryEmail } = useCartStore();
 
   const [isLoading, setIsLoading] = useState(false);
-  const [paymentMethod, setPaymentMethod] = useState<'card' | 'bizum' | 'cash_on_delivery'>('card');
+  const [paymentMethod, setPaymentMethod] = useState<'card' | 'bizum'>('card');
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [acceptedPrivacy, setAcceptedPrivacy] = useState(false);
 
@@ -250,103 +250,51 @@ export default function CheckoutPage() {
     setIsLoading(true);
 
     try {
-      // For card or Bizum payment, create Stripe checkout session
-      if (paymentMethod === 'card' || paymentMethod === 'bizum') {
-        const response = await fetch('/api/checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            items: items.map((item) => {
-              if (isCartBundleItem(item)) {
-                return {
-                  productId: item.bundleId,
-                  productName: item.bundleName,
-                  productDescription: generateBundleSummary(item.flavors),
-                  quantity: item.quantity,
-                  packSize: item.packSize,
-                  isSubscription: item.isSubscription,
-                  priceInCents: item.priceInCents,
-                  isBundle: true,
-                  flavors: item.flavors,
-                };
-              }
+      // Create Stripe checkout session (card or Bizum)
+      const response = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          items: items.map((item) => {
+            if (isCartBundleItem(item)) {
               return {
-                productId: item.productId,
-                productName: item.productName,
+                productId: item.bundleId,
+                productName: item.bundleName,
+                productDescription: generateBundleSummary(item.flavors),
                 quantity: item.quantity,
                 packSize: item.packSize,
                 isSubscription: item.isSubscription,
                 priceInCents: item.priceInCents,
+                isBundle: true,
+                flavors: item.flavors,
               };
-            }),
-            customer: localDelivery
-              ? { email: formData.email, name: formData.name, phone: formData.phone, address: 'Entrega local - Centro de Málaga', city: 'Málaga', province: 'Málaga', postalCode: '29001' }
-              : formData,
-            paymentMethod,
-            couponCode: appliedCoupon?.code,
-            couponDiscountCents,
-            localDelivery: localDelivery || undefined,
-            localDeliveryEmail: localDelivery ? localDeliveryEmail : undefined,
+            }
+            return {
+              productId: item.productId,
+              productName: item.productName,
+              quantity: item.quantity,
+              packSize: item.packSize,
+              isSubscription: item.isSubscription,
+              priceInCents: item.priceInCents,
+            };
           }),
-        });
+          customer: localDelivery
+            ? { email: formData.email, name: formData.name, phone: formData.phone, address: 'Entrega local - Centro de Málaga', city: 'Málaga', province: 'Málaga', postalCode: '29001' }
+            : formData,
+          paymentMethod,
+          couponCode: appliedCoupon?.code,
+          couponDiscountCents,
+          localDelivery: localDelivery || undefined,
+          localDeliveryEmail: localDelivery ? localDeliveryEmail : undefined,
+        }),
+      });
 
-        const data = await response.json();
+      const data = await response.json();
 
-        if (data.url) {
-          // Redirect to Stripe Checkout
-          window.location.href = data.url;
-        } else {
-          throw new Error(data.error || 'Error al procesar el pago');
-        }
+      if (data.url) {
+        window.location.href = data.url;
       } else {
-        // Cash on delivery - create order directly
-        const response = await fetch('/api/orders', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            items: items.map((item) => {
-              if (isCartBundleItem(item)) {
-                return {
-                  productId: item.bundleId,
-                  productName: item.bundleName,
-                  productDescription: generateBundleSummary(item.flavors),
-                  quantity: item.quantity,
-                  packSize: item.packSize,
-                  isSubscription: item.isSubscription,
-                  priceInCents: item.priceInCents,
-                  isBundle: true,
-                  flavors: item.flavors,
-                };
-              }
-              return {
-                productId: item.productId,
-                productName: item.productName,
-                quantity: item.quantity,
-                packSize: item.packSize,
-                isSubscription: item.isSubscription,
-                priceInCents: item.priceInCents,
-              };
-            }),
-            customer: localDelivery
-              ? { email: formData.email, name: formData.name, phone: formData.phone, address: 'Entrega local - Centro de Málaga', city: 'Málaga', province: 'Málaga', postalCode: '29001' }
-              : formData,
-            paymentMethod,
-            totals: cartTotal,
-            couponCode: appliedCoupon?.code,
-            couponDiscountCents,
-            localDelivery: localDelivery || undefined,
-            localDeliveryEmail: localDelivery ? localDeliveryEmail : undefined,
-          }),
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-          clearCart();
-          router.push(`/checkout/confirmacion?order=${data.orderNumber}`);
-        } else {
-          throw new Error(data.error || 'Error al crear el pedido');
-        }
+        throw new Error(data.error || 'Error al procesar el pago');
       }
     } catch (error) {
       console.error('Checkout error:', error);
@@ -591,44 +539,6 @@ export default function CheckoutPage() {
                       <span className="px-2 py-1 bg-neutral-100 rounded text-xs">Bizum</span>
                     </div>
                   </label>
-
-                  <label
-                    className={cn(
-                      'flex items-center gap-4 p-4 rounded-lg border-2 cursor-pointer transition-colors',
-                      paymentMethod === 'cash_on_delivery'
-                        ? 'border-primary-500 bg-primary-50'
-                        : 'border-neutral-200 hover:border-neutral-300'
-                    )}
-                  >
-                    <input
-                      type="radio"
-                      name="paymentMethod"
-                      value="cash_on_delivery"
-                      checked={paymentMethod === 'cash_on_delivery'}
-                      onChange={() => setPaymentMethod('cash_on_delivery')}
-                      className="sr-only"
-                    />
-                    <div
-                      className={cn(
-                        'w-5 h-5 rounded-full border-2 flex items-center justify-center',
-                        paymentMethod === 'cash_on_delivery'
-                          ? 'border-primary-500'
-                          : 'border-neutral-300'
-                      )}
-                    >
-                      {paymentMethod === 'cash_on_delivery' && (
-                        <div className="w-3 h-3 rounded-full bg-primary-500" />
-                      )}
-                    </div>
-                    <div className="flex-1">
-                      <span className="font-medium text-neutral-900">
-                        Pago contra reembolso
-                      </span>
-                      <p className="text-sm text-neutral-500">
-                        Paga al recibir tu pedido (+2,00€)
-                      </p>
-                    </div>
-                  </label>
                 </div>
               </section>
 
@@ -834,12 +744,6 @@ export default function CheckoutPage() {
                       )}
                     </span>
                   </div>
-                  {paymentMethod === 'cash_on_delivery' && (
-                    <div className="flex justify-between">
-                      <span className="text-neutral-600">Contrareembolso</span>
-                      <span>{formatPrice(200)}</span>
-                    </div>
-                  )}
                   <div className="flex justify-between text-xs text-neutral-500">
                     <span>IVA incluido (10%)</span>
                     <span>{formatPrice(cartTotal.taxCents)}</span>
@@ -851,10 +755,7 @@ export default function CheckoutPage() {
                   <div className="flex justify-between items-center">
                     <span>Total</span>
                     <span className="text-2xl font-bold">
-                      {formatPrice(
-                        cartTotal.totalCents +
-                          (paymentMethod === 'cash_on_delivery' ? 200 : 0)
-                      )}
+                      {formatPrice(cartTotal.totalCents)}
                     </span>
                   </div>
                 </div>

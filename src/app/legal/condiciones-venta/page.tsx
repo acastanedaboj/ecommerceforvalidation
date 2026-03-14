@@ -106,7 +106,6 @@ export default function CondicionesVentaPage() {
           <ul>
             <li><strong>Tarjeta de crédito/débito:</strong> Visa, Mastercard, American Express</li>
             <li><strong>Bizum:</strong> Pago instantáneo desde tu móvil</li>
-            <li><strong>Pago contra reembolso:</strong> Con un coste adicional de 2,00€</li>
           </ul>
           <p>
             Los pagos con tarjeta y Bizum se procesan de forma segura a través de Stripe,

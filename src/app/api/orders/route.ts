@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     const { items, customer, paymentMethod, totals, couponCode, couponDiscountCents } = body as {
       items: OrderItem[];
       customer: CustomerInfo;
-      paymentMethod: 'card' | 'bizum' | 'cash_on_delivery';
+      paymentMethod: 'card' | 'bizum';
       totals?: CartPriceCalculation;
       couponCode?: string;
       couponDiscountCents?: number;
@@ -86,9 +86,7 @@ export async function POST(request: NextRequest) {
     // Generate order number
     const orderNumber = generateOrderNumber();
 
-    // Add cash on delivery fee if applicable
-    const cashOnDeliveryFee = paymentMethod === 'cash_on_delivery' ? 200 : 0;
-    const finalTotal = cartTotal.totalCents + cashOnDeliveryFee;
+    const finalTotal = cartTotal.totalCents;
 
     // Create order in database
     const order = await prisma.order.create({
