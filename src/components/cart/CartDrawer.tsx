@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { X, Plus, Minus, ShoppingBag, Trash2, ArrowRight, Check, Truck, MapPin } from 'lucide-react';
@@ -9,10 +9,19 @@ import { formatPrice } from '@/lib/utils';
 import { cn } from '@/lib/utils';
 import { SHIPPING } from '@/lib/constants';
 import { BundleCartItem } from '@/components/bundle';
+import { useSession } from 'next-auth/react';
 
 export function CartDrawer() {
   const { items, isOpen, setIsOpen, removeItem, updateQuantity, getCartTotal, localDelivery, localDeliveryEmail, setLocalDelivery, setLocalDeliveryEmail } = useCartStore();
+  const { data: session } = useSession();
   const [localEmailError, setLocalEmailError] = useState('');
+
+  // Auto-fill email from session when local delivery is enabled
+  useEffect(() => {
+    if (localDelivery && session?.user?.email && !localDeliveryEmail) {
+      setLocalDeliveryEmail(session.user.email);
+    }
+  }, [localDelivery, session, localDeliveryEmail, setLocalDeliveryEmail]);
   const cartTotal = getCartTotal();
 
   // Calculate how much more for free shipping
@@ -283,7 +292,7 @@ export function CartDrawer() {
                 </div>
               </label>
 
-              {localDelivery && (
+              {localDelivery && !session?.user?.email && (
                 <div className="mt-3 ml-7">
                   <input
                     type="email"

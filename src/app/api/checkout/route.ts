@@ -31,12 +31,13 @@ interface CustomerInfo {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { items, customer, paymentMethod, couponCode, couponDiscountCents } = body as {
+    const { items, customer, paymentMethod, couponCode, couponDiscountCents, localDelivery } = body as {
       items: CheckoutItem[];
       customer: CustomerInfo;
       paymentMethod: 'card';
       couponCode?: string;
       couponDiscountCents?: number;
+      localDelivery?: boolean;
     };
 
     // Validate items
@@ -115,8 +116,8 @@ export async function POST(request: NextRequest) {
       };
     });
 
-    // Add shipping if not free
-    if (!cartTotal.isFreeShipping) {
+    // Add shipping if not free and not local delivery
+    if (!cartTotal.isFreeShipping && !localDelivery) {
       lineItems.push({
         price_data: {
           currency: 'eur',
