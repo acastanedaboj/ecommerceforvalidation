@@ -276,7 +276,9 @@ export function emailLayout(content: string, previewText?: string): string {
 <body>
   <div class="container">
     <div class="header">
-      <a href="${EMAIL_CONFIG.baseUrl}" style="font-family: 'DM Serif Display', Georgia, serif; font-size: 36px; font-weight: normal; color: #FFFFEC; text-decoration: none; letter-spacing: 0.02em;">Poppy</a>
+      <a href="${EMAIL_CONFIG.baseUrl}">
+        <img src="https://www.poppy.es/images/logo-email.png" alt="Poppy" width="180" height="45" style="display:block;margin:0 auto;border:0;" />
+      </a>
     </div>
     <div class="content">
       ${content}
