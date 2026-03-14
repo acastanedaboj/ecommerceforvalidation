@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { Minus, Plus, X, Package } from 'lucide-react';
-import { cn, formatPrice } from '@/lib/utils';
+import { Minus, Plus, X } from 'lucide-react';
+import { formatPrice } from '@/lib/utils';
 import { generateBundleSummary, calculateBundlePrice } from '@/lib/bundle';
 import { useCartStore } from '@/store/cart-store';
 import type { BundleCartItem as BundleCartItemType } from '@/types/bundle';
@@ -43,7 +43,7 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
       <div className="flex items-center gap-3 py-3">
         {/* Image */}
         <div className="relative w-12 h-12 overflow-hidden flex-shrink-0 bg-cream-100">
-          <Package className="w-6 h-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-earth-400" />
+          <Image src={displayImage} alt={item.bundleName} fill className="object-cover" sizes="48px" />
         </div>
 
         {/* Info */}
@@ -66,106 +66,79 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
   }
 
   return (
-    <div className="group relative flex gap-4 py-5 border-b border-cream-200 last:border-b-0">
-      {/* Product images collage */}
-      <div className="relative w-20 h-20 overflow-hidden flex-shrink-0 bg-gradient-earth">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Package className="w-8 h-8 text-earth-400" />
-        </div>
-        {/* Show small flavor images */}
-        <div className="absolute bottom-0 left-0 right-0 flex -space-x-1 p-1">
-          {item.flavors
-            .filter((f) => f.quantity > 0)
-            .slice(0, 3)
-            .map((flavor, index) => (
-              <div
-                key={flavor.productId}
-                className="w-6 h-6 border-2 border-white overflow-hidden"
-                style={{ zIndex: 10 - index }}
-              >
-                <Image
-                  src={flavor.productImage}
-                  alt={flavor.productName}
-                  fill
-                  className="object-cover"
-                  sizes="24px"
-                />
-              </div>
-            ))}
-        </div>
+    <div className="flex gap-4 py-5">
+      {/* Product image — first flavor */}
+      <div
+        className="relative w-20 h-20 overflow-hidden flex-shrink-0"
+        style={{ background: 'var(--off)' }}
+      >
+        <Image
+          src={displayImage}
+          alt={item.bundleName}
+          fill
+          className="object-cover"
+          sizes="80px"
+        />
       </div>
 
       {/* Content */}
       <div className="flex-1 min-w-0">
-        {/* Title row */}
+        {/* Name + remove */}
         <div className="flex items-start justify-between gap-2">
           <div>
-            <h4 className="font-medium text-stone-800 leading-tight">
+            <p style={{ fontWeight: 700, fontSize: '14px', color: 'var(--dark)' }}>
               {item.bundleName}
-            </h4>
-            <p className="text-sm text-stone-500 mt-0.5 line-clamp-2">
+            </p>
+            <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.45)', marginTop: '2px' }}>
               {summary}
             </p>
           </div>
-
-          {/* Remove button */}
           <button
             type="button"
             onClick={handleRemove}
-            className={cn(
-              'w-8 h-8 rounded-full flex items-center justify-center',
-              'text-stone-400 hover:text-stone-600 hover:bg-cream-100',
-              'transition-all duration-200',
-              'opacity-0 group-hover:opacity-100 focus:opacity-100'
-            )}
+            className="transition-all hover:opacity-50"
+            style={{ color: 'rgba(17,17,17,.2)', background: 'none', border: 'none', padding: '4px' }}
             aria-label="Eliminar pack"
           >
             <X className="w-4 h-4" />
           </button>
         </div>
 
-        {/* Price & Quantity row */}
-        <div className="flex items-center justify-between mt-3">
-          {/* Quantity controls */}
-          <div className="flex items-center gap-1">
+        {/* Quantity + price */}
+        <div className="mt-3 flex items-center justify-between">
+          <div
+            className="flex items-center"
+            style={{ border: '1px solid rgba(0,0,0,.1)', borderRadius: '100px' }}
+          >
             <button
               type="button"
               onClick={handleDecrement}
-              className={cn(
-                'w-8 h-8 rounded-full flex items-center justify-center',
-                'bg-cream-100 text-stone-600 hover:bg-cream-200',
-                'transition-colors duration-200'
-              )}
+              className="p-2 transition-colors hover:bg-off"
+              style={{ borderRadius: '100px 0 0 100px', background: 'none', border: 'none' }}
               aria-label="Reducir cantidad"
             >
-              <Minus className="w-3.5 h-3.5" />
+              <Minus className="w-3.5 h-3.5" style={{ color: 'rgba(17,17,17,.4)' }} />
             </button>
-
-            <span className="w-8 text-center font-medium text-stone-800">
+            <span style={{ width: '32px', textAlign: 'center', fontSize: '13px', fontWeight: 700, color: 'var(--dark)' }}>
               {item.quantity}
             </span>
-
             <button
               type="button"
               onClick={handleIncrement}
-              className={cn(
-                'w-8 h-8 rounded-full flex items-center justify-center',
-                'bg-earth-500 text-[#fcf8d5] hover:bg-earth-600',
-                'transition-colors duration-200'
-              )}
+              className="p-2 transition-colors hover:bg-off"
+              style={{ borderRadius: '0 100px 100px 0', background: 'none', border: 'none' }}
               aria-label="Aumentar cantidad"
             >
-              <Plus className="w-3.5 h-3.5" />
+              <Plus className="w-3.5 h-3.5" style={{ color: 'rgba(17,17,17,.4)' }} />
             </button>
           </div>
 
-          {/* Price */}
           <div className="text-right">
-            <p className="font-display text-lg text-earth-600">
+            <p style={{ fontWeight: 700, fontSize: '14px', color: 'var(--dark)' }}>
               {formatPrice(pricing.subtotalCents)}
             </p>
             {pricing.discountPercentage > 0 && (
-              <p className="text-xs text-olive-600 font-medium">
+              <p style={{ fontSize: '11px', color: 'var(--blue)', fontWeight: 300 }}>
                 -{Math.round(pricing.discountPercentage)}% ahorro
               </p>
             )}
