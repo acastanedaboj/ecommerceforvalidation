@@ -8,6 +8,7 @@ import { sendEmail, EMAIL_CONFIG } from './resend';
 import { welcomeEmail, WelcomeEmailData } from './templates/welcome';
 import { orderConfirmationEmail, OrderConfirmationData } from './templates/order-confirmation';
 import { orderShippedEmail, OrderShippedData } from './templates/order-shipped';
+import { internalOrderNotificationEmail, InternalOrderNotificationData } from './templates/internal-order-notification';
 import {
   subscriptionActiveEmail,
   subscriptionRenewedEmail,
@@ -124,6 +125,24 @@ export async function sendSubscriptionCancelledEmail(data: SubscriptionCancelled
     html,
     tags: [{ name: 'type', value: 'subscription_cancelled' }],
   });
+}
+
+const INTERNAL_NOTIFICATION_RECIPIENTS = [
+  'alvaro.castanneda@gmail.com',
+  'hola@poppy.es',
+  'pilar.orico@gmail.com',
+];
+
+/**
+ * Send internal order notification to the Poppy team
+ */
+export async function sendInternalOrderNotification(data: InternalOrderNotificationData) {
+  const { subject, html } = internalOrderNotificationEmail(data);
+  return Promise.all(
+    INTERNAL_NOTIFICATION_RECIPIENTS.map((to) =>
+      sendEmail({ to, subject, html, tags: [{ name: 'type', value: 'internal_order' }] })
+    )
+  );
 }
 
 // ==========================================

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import {
   sendOrderConfirmationEmail,
+  sendInternalOrderNotification,
   sendSubscriptionActiveEmail,
   sendSubscriptionRenewedEmail,
   sendSubscriptionFailedEmail,
@@ -124,6 +125,32 @@ export async function POST(request: NextRequest) {
             });
 
             console.log('Order saved to database:', orderNumber, 'for user:', userId || 'guest');
+
+            // Send internal notification to Poppy team
+            await sendInternalOrderNotification({
+              orderId: orderNumber,
+              orderNumber,
+              orderDate: new Date(),
+              customerName: session.customer_details?.name || 'Cliente',
+              customerEmail: session.customer_email,
+              customerPhone: session.customer_details?.phone || undefined,
+              items,
+              subtotalCents: session.amount_subtotal || 0,
+              shippingCents: session.shipping_cost?.amount_total || 0,
+              discountCents: session.total_details?.amount_discount || 0,
+              totalCents: session.amount_total || 0,
+              shippingAddress: {
+                name: session.shipping_details?.name || session.customer_details?.name || '',
+                line1: session.shipping_details?.address?.line1 || 'Entrega local',
+                line2: session.shipping_details?.address?.line2 || undefined,
+                city: session.shipping_details?.address?.city || 'Málaga',
+                postalCode: session.shipping_details?.address?.postal_code || '',
+                country: session.shipping_details?.address?.country || 'ES',
+              },
+              isLocalDelivery: !session.shipping_details?.address?.line1,
+              discountCode: session.metadata?.couponCode || undefined,
+            });
+            console.log('Internal order notification sent');
 
             // Send order confirmation email
             await sendOrderConfirmationEmail({
