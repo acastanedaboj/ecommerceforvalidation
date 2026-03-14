@@ -27,7 +27,7 @@ export type EmailType =
   | 'subscription_cancelled';
 
 export interface SendEmailOptions {
-  to: string;
+  to: string | string[];
   subject: string;
   html: string;
   text?: string;

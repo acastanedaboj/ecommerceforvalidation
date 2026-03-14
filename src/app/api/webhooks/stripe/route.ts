@@ -126,8 +126,8 @@ export async function POST(request: NextRequest) {
 
             console.log('Order saved to database:', orderNumber, 'for user:', userId || 'guest');
 
-            // Send internal notification to Poppy team
-            await sendInternalOrderNotification({
+            // Send internal notification to Poppy team (isolated — never blocks customer email)
+            sendInternalOrderNotification({
               orderId: orderNumber,
               orderNumber,
               orderDate: new Date(),
@@ -149,8 +149,8 @@ export async function POST(request: NextRequest) {
               },
               isLocalDelivery: !session.shipping_details?.address?.line1,
               discountCode: session.metadata?.couponCode || undefined,
-            });
-            console.log('Internal order notification sent');
+            }).then(() => console.log('Internal order notification sent'))
+              .catch((err) => console.error('Internal notification failed (non-blocking):', err));
 
             // Send order confirmation email
             await sendOrderConfirmationEmail({

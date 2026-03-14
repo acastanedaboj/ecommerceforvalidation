@@ -138,11 +138,13 @@ const INTERNAL_NOTIFICATION_RECIPIENTS = [
  */
 export async function sendInternalOrderNotification(data: InternalOrderNotificationData) {
   const { subject, html } = internalOrderNotificationEmail(data);
-  return Promise.all(
-    INTERNAL_NOTIFICATION_RECIPIENTS.map((to) =>
-      sendEmail({ to, subject, html, tags: [{ name: 'type', value: 'internal_order' }] })
-    )
-  );
+  // Send to all recipients in a single API call to avoid rate limits
+  return sendEmail({
+    to: INTERNAL_NOTIFICATION_RECIPIENTS,
+    subject,
+    html,
+    tags: [{ name: 'type', value: 'internal_order' }],
+  });
 }
 
 // ==========================================
