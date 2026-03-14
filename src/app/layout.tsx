@@ -111,7 +111,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'GbX2brF7bgtG_rR_nC4LDj4PMRQIXA3H1E3mvD43D8I',
+    google: 'tm9yawmt3fW_Kr1nxpjZOK7oUIOUnkq1mK098opHsCU',
   },
   category: 'food',
 };
