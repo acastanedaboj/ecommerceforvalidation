@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     const { items, customer, paymentMethod, totals, couponCode, couponDiscountCents } = body as {
       items: OrderItem[];
       customer: CustomerInfo;
-      paymentMethod: 'card' | 'cash_on_delivery';
+      paymentMethod: 'card' | 'bizum' | 'cash_on_delivery';
       totals?: CartPriceCalculation;
       couponCode?: string;
       couponDiscountCents?: number;

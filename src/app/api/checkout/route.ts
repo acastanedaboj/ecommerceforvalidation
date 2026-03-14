@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     const { items, customer, paymentMethod, couponCode, couponDiscountCents } = body as {
       items: CheckoutItem[];
       customer: CustomerInfo;
-      paymentMethod: 'card' | 'cash_on_delivery';
+      paymentMethod: 'card' | 'bizum' | 'cash_on_delivery';
       couponCode?: string;
       couponDiscountCents?: number;
     };
@@ -130,20 +130,27 @@ export async function POST(request: NextRequest) {
       });
     }
 
+    // Bizum does not support subscriptions — fall back to card
+    const useBizum = paymentMethod === 'bizum' && !hasSubscription;
+
     // Create Stripe checkout session
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
-      // Enable card payments (includes Apple Pay, Google Pay automatically)
-      payment_method_types: ['card'],
+      // Enable appropriate payment methods
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      payment_method_types: useBizum ? (['bizum'] as any) : ['card'],
       mode: hasSubscription ? 'subscription' : 'payment',
       line_items: lineItems,
       customer_email: customer.email,
-      // Enable automatic payment methods (Apple Pay, Google Pay, Link)
-      payment_method_options: {
-        card: {
-          // Request 3D Secure when required
-          request_three_d_secure: 'automatic',
-        },
-      },
+      // Payment method specific options
+      ...(useBizum
+        ? {}
+        : {
+            payment_method_options: {
+              card: {
+                request_three_d_secure: 'automatic',
+              },
+            },
+          }),
       billing_address_collection: 'auto',
       shipping_address_collection: {
         allowed_countries: ['ES'],

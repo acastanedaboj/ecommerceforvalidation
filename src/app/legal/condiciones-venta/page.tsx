@@ -105,10 +105,11 @@ export default function CondicionesVentaPage() {
           <p>Aceptamos los siguientes métodos de pago:</p>
           <ul>
             <li><strong>Tarjeta de crédito/débito:</strong> Visa, Mastercard, American Express</li>
+            <li><strong>Bizum:</strong> Pago instantáneo desde tu móvil</li>
             <li><strong>Pago contra reembolso:</strong> Con un coste adicional de 2,00€</li>
           </ul>
           <p>
-            Los pagos con tarjeta se procesan de forma segura a través de Stripe,
+            Los pagos con tarjeta y Bizum se procesan de forma segura a través de Stripe,
             cumpliendo con los estándares PCI-DSS.
           </p>
 
