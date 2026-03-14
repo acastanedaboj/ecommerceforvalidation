@@ -361,23 +361,6 @@ export default function HomePage() {
 
       {/* ── SUBSCRIPTION SPLIT ── */}
       <div className="split fi">
-        <div
-          className="split-img"
-          style={{
-            background: 'linear-gradient(150deg, #5a3e38 0%, #3e2820 100%)',
-            minHeight: '500px',
-          }}
-        >
-          <div className="split-img-inner">
-            <Image
-              src="/images/bottomimage.png"
-              alt="Granola Poppy suscripción"
-              fill
-              className="object-cover"
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-        </div>
         <div className="split-body" style={{ background: 'var(--off)' }}>
           <span className="section-label">Suscripción</span>
           <h2 className="split-title">
@@ -404,6 +387,23 @@ export default function HomePage() {
           <Link href="/suscripcion" className="btn-pill">
             Empezar la suscripción
           </Link>
+        </div>
+        <div
+          className="split-img"
+          style={{
+            background: 'linear-gradient(150deg, #5a3e38 0%, #3e2820 100%)',
+            minHeight: '500px',
+          }}
+        >
+          <div className="split-img-inner">
+            <Image
+              src="/images/bottomimage.png"
+              alt="Granola Poppy suscripción"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 50vw"
+            />
+          </div>
         </div>
       </div>
 
