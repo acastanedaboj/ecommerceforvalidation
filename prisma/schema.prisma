@@ -262,6 +262,12 @@ model Order {
   // Payment method
   paymentMethod   String    @default("card") // 'card', 'cash_on_delivery'
 
+  // Tracking (for shipped orders)
+  carrier           String?
+  trackingNumber    String?
+  trackingUrl       String?
+  estimatedDelivery String?
+
   // Notes
   notes           String?   @db.Text
 

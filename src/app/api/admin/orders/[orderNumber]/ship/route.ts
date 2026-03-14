@@ -36,15 +36,21 @@ export async function POST(
     return NextResponse.json({ error: 'Pedido no encontrado' }, { status: 404 });
   }
 
-  // Update order status
-  await prisma.order.update({
-    where: { orderNumber: params.orderNumber },
-    data: { status: 'SHIPPED', shippedAt: new Date() },
-  });
-
-  // Send shipped email to customer
   const trackingUrlFn = TRACKING_URLS[carrier];
   const trackingUrl = trackingUrlFn ? trackingUrlFn(trackingNumber) : undefined;
+
+  // Update order status + save tracking info
+  await prisma.order.update({
+    where: { orderNumber: params.orderNumber },
+    data: {
+      status: 'SHIPPED',
+      shippedAt: new Date(),
+      carrier,
+      trackingNumber,
+      trackingUrl: trackingUrl || null,
+      estimatedDelivery: estimatedDelivery || null,
+    },
+  });
 
   await sendOrderShippedEmail({
     email: order.customerEmail,
