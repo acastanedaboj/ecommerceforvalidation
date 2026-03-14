@@ -9,6 +9,7 @@ import { welcomeEmail, WelcomeEmailData } from './templates/welcome';
 import { orderConfirmationEmail, OrderConfirmationData } from './templates/order-confirmation';
 import { orderShippedEmail, OrderShippedData } from './templates/order-shipped';
 import { internalOrderNotificationEmail, InternalOrderNotificationData } from './templates/internal-order-notification';
+import { orderReadyPickupEmail, OrderReadyPickupData } from './templates/order-ready-pickup';
 import {
   subscriptionActiveEmail,
   subscriptionRenewedEmail,
@@ -134,6 +135,22 @@ const INTERNAL_NOTIFICATION_RECIPIENTS = [
 ];
 
 /**
+ * Send order ready for pickup email to local delivery customers
+ */
+export async function sendOrderReadyForPickupEmail(data: OrderReadyPickupData) {
+  const { subject, html } = orderReadyPickupEmail(data);
+  return sendEmail({
+    to: data.email,
+    subject,
+    html,
+    tags: [
+      { name: 'type', value: 'order_ready_pickup' },
+      { name: 'order_id', value: data.orderId },
+    ],
+  });
+}
+
+/**
  * Send internal order notification to the Poppy team
  */
 export async function sendInternalOrderNotification(data: InternalOrderNotificationData) {
@@ -156,6 +173,7 @@ export type {
   WelcomeEmailData,
   OrderConfirmationData,
   OrderShippedData,
+  OrderReadyPickupData,
   SubscriptionActiveData,
   SubscriptionRenewedData,
   SubscriptionFailedData,
