@@ -75,7 +75,7 @@ export default function CheckoutPage() {
   const { items, clearCart, localDelivery, localDeliveryEmail } = useCartStore();
 
   const [isLoading, setIsLoading] = useState(false);
-  const [paymentMethod, setPaymentMethod] = useState<'card' | 'bizum'>('card');
+  const [paymentMethod, setPaymentMethod] = useState<'card'>('card');
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [acceptedPrivacy, setAcceptedPrivacy] = useState(false);
 
@@ -93,8 +93,6 @@ export default function CheckoutPage() {
     isSubscription: item.isSubscription,
     priceInCents: item.priceInCents,
   }));
-
-  const hasSubscription = items.some((item) => item.isSubscription);
 
   const couponDiscountCents = appliedCoupon
     ? calculateCouponDiscount(
@@ -250,7 +248,7 @@ export default function CheckoutPage() {
     setIsLoading(true);
 
     try {
-      // Create Stripe checkout session (card or Bizum)
+      // Create Stripe checkout session
       const response = await fetch('/api/checkout', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -492,51 +490,6 @@ export default function CheckoutPage() {
                     <div className="flex gap-2">
                       <span className="px-2 py-1 bg-neutral-100 rounded text-xs">Visa</span>
                       <span className="px-2 py-1 bg-neutral-100 rounded text-xs">MC</span>
-                    </div>
-                  </label>
-
-                  <label
-                    className={cn(
-                      'flex items-center gap-4 p-4 rounded-lg border-2 transition-colors',
-                      hasSubscription
-                        ? 'opacity-50 cursor-not-allowed border-neutral-200'
-                        : 'cursor-pointer',
-                      paymentMethod === 'bizum'
-                        ? 'border-primary-500 bg-primary-50'
-                        : 'border-neutral-200 hover:border-neutral-300'
-                    )}
-                  >
-                    <input
-                      type="radio"
-                      name="paymentMethod"
-                      value="bizum"
-                      checked={paymentMethod === 'bizum'}
-                      onChange={() => !hasSubscription && setPaymentMethod('bizum')}
-                      disabled={hasSubscription}
-                      className="sr-only"
-                    />
-                    <div
-                      className={cn(
-                        'w-5 h-5 rounded-full border-2 flex items-center justify-center',
-                        paymentMethod === 'bizum'
-                          ? 'border-primary-500'
-                          : 'border-neutral-300'
-                      )}
-                    >
-                      {paymentMethod === 'bizum' && (
-                        <div className="w-3 h-3 rounded-full bg-primary-500" />
-                      )}
-                    </div>
-                    <div className="flex-1">
-                      <span className="font-medium text-neutral-900">
-                        Bizum
-                      </span>
-                      <p className="text-sm text-neutral-500">
-                        {hasSubscription ? 'No disponible para suscripciones' : 'Paga con tu móvil al instante'}
-                      </p>
-                    </div>
-                    <div className="flex gap-2">
-                      <span className="px-2 py-1 bg-neutral-100 rounded text-xs">Bizum</span>
                     </div>
                   </label>
                 </div>

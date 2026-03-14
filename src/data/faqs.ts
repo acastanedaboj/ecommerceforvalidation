@@ -196,10 +196,7 @@ Los gastos de envío de devolución corren por cuenta del cliente, excepto en ca
 - Mastercard
 - American Express
 
-**Bizum:**
-- Paga al instante desde tu móvil
-
-Todos los pagos con tarjeta y Bizum se procesan de forma segura a través de **Stripe**, cumpliendo con los estándares PCI-DSS de seguridad.
+Todos los pagos con tarjeta se procesan de forma segura a través de **Stripe**, cumpliendo con los estándares PCI-DSS de seguridad.
 
 Tus datos de pago nunca se almacenan en nuestros servidores.`,
     category: 'pago',
