@@ -1,5 +1,14 @@
 const SENDCLOUD_API_URL = 'https://panel.sendcloud.sc/api/v2';
 
+export interface SendcloudParcelItem {
+  description: string;
+  quantity: number;
+  weight: string; // kg, e.g. "0.250"
+  value: string;  // EUR, e.g. "9.00"
+  hs_code?: string;
+  origin_country?: string;
+}
+
 export interface SendcloudParcelInput {
   orderNumber: string;
   customerName: string;
@@ -10,6 +19,7 @@ export interface SendcloudParcelInput {
   postalCode: string;
   country: string;
   weightGrams: number;
+  items?: SendcloudParcelItem[];
 }
 
 export interface SendcloudParcel {
@@ -87,6 +97,7 @@ export async function createSendcloudParcel(
       order_number: input.orderNumber,
       request_label: true,
       apply_shipping_rules: true,
+      ...(input.items && input.items.length > 0 ? { parcel_items: input.items } : {}),
     },
   };
 
