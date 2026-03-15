@@ -130,12 +130,12 @@ export async function POST(request: NextRequest) {
             // Create Sendcloud parcel (non-blocking)
             if (session.shipping_details?.address?.line1) {
               const totalUnits = lineItems.data.reduce((sum, item) => sum + (item.quantity || 1), 0);
-              const weightGrams = totalUnits * 250; // 250g per granola bag
+              const weightGrams = totalUnits * 1000; // 1kg per granola bag
               const parcelItems = lineItems.data
                 .filter((item) => item.description && item.quantity)
                 .map((item) => {
                   const qty = item.quantity || 1;
-                  const unitWeightKg = (250 / 1000).toFixed(3); // 250g per bag
+                  const unitWeightKg = (1000 / 1000).toFixed(3); // 1kg per bag
                   const unitValueEur = ((item.amount_total || 0) / qty / 100).toFixed(2);
                   return {
                     description: item.description || 'Granola Poppy',
