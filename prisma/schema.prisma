@@ -262,6 +262,9 @@ model Order {
   // Payment method
   paymentMethod   String    @default("card") // 'card', 'cash_on_delivery'
 
+  // Sendcloud
+  sendcloudParcelId String?
+
   // Tracking (for shipped orders)
   carrier           String?
   trackingNumber    String?

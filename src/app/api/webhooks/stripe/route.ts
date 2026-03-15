@@ -10,6 +10,7 @@ import {
 } from '@/lib/email';
 import prisma from '@/lib/db';
 import { generateOrderNumber } from '@/lib/utils';
+import { createSendcloudParcel } from '@/lib/sendcloud';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_placeholder', {
   apiVersion: '2023-10-16',
@@ -125,6 +126,37 @@ export async function POST(request: NextRequest) {
             });
 
             console.log('Order saved to database:', orderNumber, 'for user:', userId || 'guest');
+
+            // Create Sendcloud parcel (non-blocking)
+            if (session.shipping_details?.address?.line1) {
+              const totalUnits = lineItems.data.reduce((sum, item) => sum + (item.quantity || 1), 0);
+              const weightGrams = totalUnits * 250; // 250g per granola bag
+              createSendcloudParcel({
+                orderNumber,
+                customerName: session.customer_details?.name || 'Cliente',
+                customerEmail: session.customer_email,
+                customerPhone: session.customer_details?.phone || null,
+                addressLine1: session.shipping_details.address.line1,
+                city: session.shipping_details.address.city || '',
+                postalCode: session.shipping_details.address.postal_code || '',
+                country: session.shipping_details.address.country || 'ES',
+                weightGrams,
+              })
+                .then(async (parcel) => {
+                  if (!parcel) return;
+                  await prisma.order.update({
+                    where: { orderNumber },
+                    data: {
+                      sendcloudParcelId: String(parcel.id),
+                      carrier: parcel.carrier?.code || null,
+                      trackingNumber: parcel.tracking_number || null,
+                      trackingUrl: parcel.tracking_url || null,
+                    },
+                  });
+                  console.log('Sendcloud parcel created:', parcel.id);
+                })
+                .catch((err) => console.error('Sendcloud parcel creation failed (non-blocking):', err));
+            }
 
             // Send internal notification to Poppy team (isolated — never blocks customer email)
             sendInternalOrderNotification({
