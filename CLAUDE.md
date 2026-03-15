@@ -69,11 +69,11 @@ ecommerceforvalidation/
 
 | Option | Discount | Unit Price | Shipping |
 |--------|----------|------------|----------|
-| 1 unit | 0% | 9,00€ | 4,95€ |
-| Pack 3 | 3% | 8,73€ | 4,95€ |
-| Pack 4 | 5% | 8,55€ | FREE |
-| Pack 6 | 10% | 8,10€ | FREE |
-| Subscription | 15% | 7,65€ | FREE |
+| 1 unit | 0% | 7,00€ | 4,95€ |
+| Pack 3 | 3% | 6,79€ | 4,95€ |
+| Pack 4 | 5% | 6,65€ | FREE |
+| Pack 6 | 10% | 6,30€ | FREE |
+| Subscription | 15% | 5,95€ | FREE |
 
 **Free Shipping Rules:**
 - Orders with 4+ items
