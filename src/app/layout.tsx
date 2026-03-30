@@ -22,6 +22,7 @@ const dmSerifDisplay = DM_Serif_Display({
 import { Footer } from '@/components/layout/Footer';
 import { CartDrawer } from '@/components/cart/CartDrawer';
 import { CookieBanner } from '@/components/layout/CookieBanner';
+import { VacationBanner } from '@/components/layout/VacationBanner';
 import { SessionProvider } from '@/components/providers/SessionProvider';
 import { Toaster } from 'react-hot-toast';
 import { SEO } from '@/lib/constants';
@@ -266,6 +267,9 @@ export default function RootLayout({
 
         {/* Cookie Banner */}
         <CookieBanner />
+
+        {/* Vacation Banner */}
+        <VacationBanner />
       </body>
     </html>
   );
