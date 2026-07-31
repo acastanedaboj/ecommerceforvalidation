@@ -2,6 +2,8 @@
 // Business Constants - Poppy
 // ==========================================
 
+export const STORE_CLOSED = true;
+
 export const BUSINESS = {
   name: 'Poppy',
   tagline: 'Sin gluten, sin lactosa, artesanal',

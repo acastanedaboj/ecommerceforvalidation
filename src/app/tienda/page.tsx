@@ -8,6 +8,7 @@ import { BundleBuilderModal } from '@/components/bundle';
 import { getActiveProducts, getRetailProducts } from '@/data/products';
 import { ChevronRight } from 'lucide-react';
 import { JsonLd, buildProductListSchema, buildBreadcrumbSchema } from '@/lib/seo';
+import { STORE_CLOSED } from '@/lib/constants';
 
 export default function TiendaPage() {
   const [isBundleModalOpen, setIsBundleModalOpen] = useState(false);
@@ -74,6 +75,27 @@ export default function TiendaPage() {
               Tres sabores. Ingredientes reales. Sin gluten, sin lactosa.
               Elaborada cada semana en nuestro obrador de Málaga.
             </p>
+            {STORE_CLOSED && (
+              <div
+                style={{
+                  marginTop: '32px',
+                  padding: '20px 28px',
+                  background: 'var(--white)',
+                  border: '1px solid rgba(17,17,17,.08)',
+                  borderRadius: '12px',
+                  maxWidth: '440px',
+                  marginLeft: 'auto',
+                  marginRight: 'auto',
+                }}
+              >
+                <p style={{ fontSize: '14px', color: 'var(--dark)', fontWeight: 400, marginBottom: '6px' }}>
+                  Tienda temporalmente cerrada
+                </p>
+                <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.7 }}>
+                  Estamos de vacaciones viviendo slowly. Los pedidos se enviarán a partir del 6 de abril. Gracias por tu paciencia.
+                </p>
+              </div>
+            )}
           </div>
         </div>
       </section>

@@ -15,6 +15,7 @@ import { formatPrice, cn } from '@/lib/utils';
 import { getCouponByCode, isCouponValid, calculateCouponDiscount, type Coupon } from '@/data/coupons';
 import { calculateCartTotal } from '@/lib/pricing';
 import toast from 'react-hot-toast';
+import { STORE_CLOSED } from '@/lib/constants';
 
 const spanishProvinces = [
   { value: 'A Coruña', label: 'A Coruña' },
@@ -71,6 +72,25 @@ const spanishProvinces = [
 
 export default function CheckoutPage() {
   const router = useRouter();
+
+  if (STORE_CLOSED) {
+    return (
+      <div className="min-h-screen flex items-center justify-center" style={{ background: 'var(--off)' }}>
+        <div className="text-center" style={{ maxWidth: '440px', padding: '0 24px' }}>
+          <p style={{ fontSize: '14px', color: 'var(--dark)', fontWeight: 400, marginBottom: '8px' }}>
+            Tienda temporalmente cerrada
+          </p>
+          <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.7, marginBottom: '24px' }}>
+            Estamos de vacaciones viviendo slowly. Los pedidos se enviarán a partir del 6 de abril. Gracias por tu paciencia.
+          </p>
+          <Link href="/tienda" style={{ fontSize: '13px', color: 'var(--dark)', textDecoration: 'underline' }}>
+            Volver a la tienda
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   const { data: session } = useSession();
   const { items, clearCart, localDelivery, localDeliveryEmail } = useCartStore();
 

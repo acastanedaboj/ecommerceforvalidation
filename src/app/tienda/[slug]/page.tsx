@@ -9,7 +9,7 @@ import { getProductBySlug, getRetailProducts } from '@/data/products';
 import { useCartStore } from '@/store/cart-store';
 import { formatPrice, cn } from '@/lib/utils';
 import { calculatePackUnitPrice, calculateSubscriptionUnitPrice, getPackDiscount } from '@/lib/pricing';
-import { PRICING, SHIPPING } from '@/lib/constants';
+import { PRICING, SHIPPING, STORE_CLOSED } from '@/lib/constants';
 import { ProductCard } from '@/components/product/ProductCard';
 import { ImageGallery } from '@/components/ui/ImageGallery';
 import { StickyAddToCart } from '@/components/ui/StickyAddToCart';
@@ -342,30 +342,45 @@ export default function ProductDetailPage() {
                   </span>
                 </div>
 
-                <button
-                  type="button"
-                  onClick={handleAddToCart}
-                  disabled={product.stock === 0 || isAdding}
-                  className="w-full flex items-center justify-center gap-2 transition-all hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
-                  style={{
-                    background: 'var(--dark)',
-                    color: 'var(--cream)',
-                    padding: '16px 32px',
-                    fontSize: '13px',
-                    fontWeight: 700,
-                    letterSpacing: '0.04em',
-                    textTransform: 'lowercase' as const,
-                    border: 'none',
-                    cursor: 'pointer',
-                  }}
-                >
-                  {isAdding ? (
-                    <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                  ) : (
-                    <ShoppingBag className="w-5 h-5" />
-                  )}
-                  {isSubscription ? 'suscribirme ahora' : 'añadir al carrito'}
-                </button>
+                {STORE_CLOSED ? (
+                  <div
+                    className="w-full text-center"
+                    style={{
+                      background: 'rgba(17,17,17,.05)',
+                      padding: '16px 32px',
+                      fontSize: '13px',
+                      fontWeight: 400,
+                      color: 'rgba(17,17,17,.5)',
+                    }}
+                  >
+                    Tienda temporalmente cerrada
+                  </div>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={handleAddToCart}
+                    disabled={product.stock === 0 || isAdding}
+                    className="w-full flex items-center justify-center gap-2 transition-all hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
+                    style={{
+                      background: 'var(--dark)',
+                      color: 'var(--cream)',
+                      padding: '16px 32px',
+                      fontSize: '13px',
+                      fontWeight: 700,
+                      letterSpacing: '0.04em',
+                      textTransform: 'lowercase' as const,
+                      border: 'none',
+                      cursor: 'pointer',
+                    }}
+                  >
+                    {isAdding ? (
+                      <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    ) : (
+                      <ShoppingBag className="w-5 h-5" />
+                    )}
+                    {isSubscription ? 'suscribirme ahora' : 'añadir al carrito'}
+                  </button>
+                )}
 
                 {/* Shipping line — subtle text, not badge icons */}
                 <p className="mt-4 text-center" style={{ fontSize: '11px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
