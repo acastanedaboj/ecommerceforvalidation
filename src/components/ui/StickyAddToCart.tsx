@@ -57,39 +57,31 @@ export function StickyAddToCart({
 
   return (
     <div
-      className={cn(
-        'sticky-cta-mobile',
-        !isVisible && 'sticky-cta-hidden',
-        className
-      )}
+      className={cn('sticky-cta-mobile', !isVisible && 'sticky-cta-hidden', className)}
       role="region"
       aria-label="Resumen de compra"
       aria-hidden={!isVisible}
     >
       <div className="flex items-center justify-between gap-4">
-        <div className="flex-1 min-w-0">
-          <p className="text-sm font-medium text-stone-800 truncate">
-            {productName}
-          </p>
-          <p className="text-lg font-display text-earth-600">
-            {formatPrice(totalPrice)}
-          </p>
+        <div className="min-w-0 flex-1">
+          <p className="truncate text-sm font-medium text-stone-800">{productName}</p>
+          <p className="font-display text-lg text-earth-600">{formatPrice(totalPrice)}</p>
         </div>
         <button
           type="button"
           onClick={onAddToCart}
           disabled={isDisabled || isLoading}
           className={cn(
-            'flex items-center gap-2 px-6 py-3 bg-earth-600 text-cream-50 font-medium rounded-full',
+            'flex items-center gap-2 rounded-full bg-earth-600 px-6 py-3 font-medium text-cream-50',
             'transition-all duration-300 hover:bg-earth-700 hover:shadow-soft',
-            'active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed',
+            'active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-50',
             'focus-visible:ring-2 focus-visible:ring-earth-400 focus-visible:ring-offset-2'
           )}
         >
           {isLoading ? (
-            <span className="w-5 h-5 border-2 border-cream-50/30 border-t-cream-50 rounded-full animate-spin" />
+            <span className="h-5 w-5 animate-spin rounded-full border-2 border-cream-50/30 border-t-cream-50" />
           ) : (
-            <ShoppingBag className="w-5 h-5" />
+            <ShoppingBag className="h-5 w-5" />
           )}
           <span className="whitespace-nowrap">Anadir</span>
         </button>

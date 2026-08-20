@@ -119,6 +119,9 @@ export function orderShippedEmail(data: OrderShippedData): { subject: string; ht
 
   return {
     subject: `${firstName}, tu pedido #${orderId} está en camino`,
-    html: emailLayout(content, `Tu pedido #${orderId} ha sido enviado. ${trackingNumber ? `Seguimiento: ${trackingNumber}` : 'Pronto llegará a tu casa.'}`).replace('{{email}}', email),
+    html: emailLayout(
+      content,
+      `Tu pedido #${orderId} ha sido enviado. ${trackingNumber ? `Seguimiento: ${trackingNumber}` : 'Pronto llegará a tu casa.'}`
+    ).replace('{{email}}', email),
   };
 }

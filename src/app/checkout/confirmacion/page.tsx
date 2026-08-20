@@ -9,26 +9,26 @@ function ConfirmacionContent() {
         <div className="text-center">
           {/* Success icon */}
           <div className="mb-6">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-accent-100 rounded-full">
-              <CheckCircle className="w-10 h-10 text-accent-600" />
+            <div className="inline-flex h-20 w-20 items-center justify-center rounded-full bg-accent-100">
+              <CheckCircle className="h-10 w-10 text-accent-600" />
             </div>
           </div>
 
           {/* Heading */}
-          <h1 className="text-3xl md:text-4xl font-display text-neutral-900 mb-4">
+          <h1 className="mb-4 font-display text-3xl text-neutral-900 md:text-4xl">
             ¡Gracias por tu pedido!
           </h1>
-          <p className="text-lg text-neutral-600 mb-8">
+          <p className="mb-8 text-lg text-neutral-600">
             Hemos recibido tu pedido correctamente y estamos preparándolo con mucho cariño.
           </p>
 
           {/* Order info card */}
-          <div className="bg-white rounded-xl p-6 shadow-sm border border-neutral-200 mb-8 text-left">
-            <h2 className="text-neutral-900 mb-4">¿Qué pasa ahora?</h2>
+          <div className="mb-8 rounded-xl border border-neutral-200 bg-white p-6 text-left shadow-sm">
+            <h2 className="mb-4 text-neutral-900">¿Qué pasa ahora?</h2>
             <div className="space-y-4">
               <div className="flex gap-4">
-                <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Mail className="w-5 h-5 text-primary-600" />
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary-100">
+                  <Mail className="h-5 w-5 text-primary-600" />
                 </div>
                 <div>
                   <p className="text-neutral-900">Email de confirmación</p>
@@ -38,8 +38,8 @@ function ConfirmacionContent() {
                 </div>
               </div>
               <div className="flex gap-4">
-                <div className="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center flex-shrink-0">
-                  <Package className="w-5 h-5 text-primary-600" />
+                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary-100">
+                  <Package className="h-5 w-5 text-primary-600" />
                 </div>
                 <div>
                   <p className="text-neutral-900">Preparación y envío</p>
@@ -53,18 +53,17 @@ function ConfirmacionContent() {
           </div>
 
           {/* Delivery estimate */}
-          <div className="bg-primary-50 rounded-xl p-6 mb-8">
+          <div className="mb-8 rounded-xl bg-primary-50 p-6">
             <p className="text-primary-800">
-              <span>Entrega estimada:</span> 2-4 días laborables
-              para Península
+              <span>Entrega estimada:</span> 2-4 días laborables para Península
             </p>
           </div>
 
           {/* Actions */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link href="/tienda" className="btn-primary">
               Seguir comprando
-              <ArrowRight className="w-4 h-4 ml-2" />
+              <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
             <Link href="/cuenta" className="btn-outline">
               Ver mis pedidos
@@ -74,10 +73,7 @@ function ConfirmacionContent() {
           {/* Contact info */}
           <p className="mt-8 text-sm text-neutral-500">
             ¿Tienes alguna pregunta? Escríbenos a{' '}
-            <a
-              href="mailto:hola@poppy.es"
-              className="text-primary-600 hover:underline"
-            >
+            <a href="mailto:hola@poppy.es" className="text-primary-600 hover:underline">
               hola@poppy.es
             </a>
           </p>

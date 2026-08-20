@@ -15,41 +15,30 @@ interface LandingFAQProps {
   faqs: FAQItem[];
 }
 
-export function LandingFAQ({
-  title = 'Preguntas frecuentes',
-  subtitle,
-  faqs,
-}: LandingFAQProps) {
+export function LandingFAQ({ title = 'Preguntas frecuentes', subtitle, faqs }: LandingFAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-20 md:py-28 bg-cream-50">
+    <section className="bg-cream-50 py-20 md:py-28">
       <div className="container-custom">
-        <div className="text-center mb-16">
+        <div className="mb-16 text-center">
           {subtitle && (
-            <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
-              {subtitle}
-            </p>
+            <p className="mb-4 text-xs uppercase tracking-widest text-stone-500">{subtitle}</p>
           )}
           <h2 className="font-display text-stone-800">{title}</h2>
         </div>
 
-        <div className="max-w-3xl mx-auto">
+        <div className="mx-auto max-w-3xl">
           {faqs.map((faq, index) => (
-            <div
-              key={index}
-              className="border-b border-stone-200 last:border-b-0"
-            >
+            <div key={index} className="border-b border-stone-200 last:border-b-0">
               <button
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full py-6 flex items-center justify-between text-left group"
+                className="group flex w-full items-center justify-between py-6 text-left"
               >
-                <span className="font-display text-lg text-stone-800 pr-4">
-                  {faq.question}
-                </span>
+                <span className="pr-4 font-display text-lg text-stone-800">{faq.question}</span>
                 <ChevronDown
                   className={cn(
-                    'w-5 h-5 text-stone-400 transition-transform flex-shrink-0',
+                    'h-5 w-5 flex-shrink-0 text-stone-400 transition-transform',
                     openIndex === index && 'rotate-180'
                   )}
                 />
@@ -60,7 +49,7 @@ export function LandingFAQ({
                   openIndex === index ? 'max-h-96 pb-6' : 'max-h-0'
                 )}
               >
-                <p className="text-stone-600 leading-relaxed">{faq.answer}</p>
+                <p className="leading-relaxed text-stone-600">{faq.answer}</p>
               </div>
             </div>
           ))}

@@ -20,7 +20,8 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
   const summary = generateBundleSummary(item.flavors);
 
   // Get first flavor image for display
-  const displayImage = item.flavors.find((f) => f.quantity > 0)?.productImage || '/images/placeholder-product.jpg';
+  const displayImage =
+    item.flavors.find((f) => f.quantity > 0)?.productImage || '/images/placeholder-product.jpg';
 
   const handleIncrement = () => {
     updateBundleQuantity(item.bundleId, item.quantity + 1);
@@ -42,23 +43,19 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
     return (
       <div className="flex items-center gap-3 py-3">
         {/* Image */}
-        <div className="relative w-12 h-12 rounded-lg overflow-hidden flex-shrink-0 bg-cream-100">
-          <Package className="w-6 h-6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-earth-400" />
+        <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg bg-cream-100">
+          <Package className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 text-earth-400" />
         </div>
 
         {/* Info */}
-        <div className="flex-1 min-w-0">
-          <p className="font-medium text-stone-800 text-sm truncate">
-            {item.bundleName}
-          </p>
-          <p className="text-xs text-stone-500 truncate">{summary}</p>
+        <div className="min-w-0 flex-1">
+          <p className="truncate text-sm font-medium text-stone-800">{item.bundleName}</p>
+          <p className="truncate text-xs text-stone-500">{summary}</p>
         </div>
 
         {/* Quantity & Price */}
         <div className="text-right">
-          <p className="font-medium text-stone-800 text-sm">
-            {formatPrice(pricing.subtotalCents)}
-          </p>
+          <p className="text-sm font-medium text-stone-800">{formatPrice(pricing.subtotalCents)}</p>
           <p className="text-xs text-stone-500">x{item.quantity}</p>
         </div>
       </div>
@@ -66,11 +63,11 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
   }
 
   return (
-    <div className="group relative flex gap-4 py-5 border-b border-cream-200 last:border-b-0">
+    <div className="group relative flex gap-4 border-b border-cream-200 py-5 last:border-b-0">
       {/* Product images collage */}
-      <div className="relative w-20 h-20 rounded-xl overflow-hidden flex-shrink-0 bg-gradient-earth">
+      <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl bg-gradient-earth">
         <div className="absolute inset-0 flex items-center justify-center">
-          <Package className="w-8 h-8 text-earth-400" />
+          <Package className="h-8 w-8 text-earth-400" />
         </div>
         {/* Show small flavor images */}
         <div className="absolute bottom-0 left-0 right-0 flex -space-x-1 p-1">
@@ -80,7 +77,7 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
             .map((flavor, index) => (
               <div
                 key={flavor.productId}
-                className="w-6 h-6 rounded-full border-2 border-white overflow-hidden"
+                className="h-6 w-6 overflow-hidden rounded-full border-2 border-white"
                 style={{ zIndex: 10 - index }}
               >
                 <Image
@@ -96,16 +93,12 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
       </div>
 
       {/* Content */}
-      <div className="flex-1 min-w-0">
+      <div className="min-w-0 flex-1">
         {/* Title row */}
         <div className="flex items-start justify-between gap-2">
           <div>
-            <h4 className="font-medium text-stone-800 leading-tight">
-              {item.bundleName}
-            </h4>
-            <p className="text-sm text-stone-500 mt-0.5 line-clamp-2">
-              {summary}
-            </p>
+            <h4 className="font-medium leading-tight text-stone-800">{item.bundleName}</h4>
+            <p className="mt-0.5 line-clamp-2 text-sm text-stone-500">{summary}</p>
           </div>
 
           {/* Remove button */}
@@ -113,49 +106,47 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
             type="button"
             onClick={handleRemove}
             className={cn(
-              'w-8 h-8 rounded-full flex items-center justify-center',
-              'text-stone-400 hover:text-stone-600 hover:bg-cream-100',
+              'flex h-8 w-8 items-center justify-center rounded-full',
+              'text-stone-400 hover:bg-cream-100 hover:text-stone-600',
               'transition-all duration-200',
-              'opacity-0 group-hover:opacity-100 focus:opacity-100'
+              'opacity-0 focus:opacity-100 group-hover:opacity-100'
             )}
             aria-label="Eliminar pack"
           >
-            <X className="w-4 h-4" />
+            <X className="h-4 w-4" />
           </button>
         </div>
 
         {/* Price & Quantity row */}
-        <div className="flex items-center justify-between mt-3">
+        <div className="mt-3 flex items-center justify-between">
           {/* Quantity controls */}
           <div className="flex items-center gap-1">
             <button
               type="button"
               onClick={handleDecrement}
               className={cn(
-                'w-8 h-8 rounded-full flex items-center justify-center',
+                'flex h-8 w-8 items-center justify-center rounded-full',
                 'bg-cream-100 text-stone-600 hover:bg-cream-200',
                 'transition-colors duration-200'
               )}
               aria-label="Reducir cantidad"
             >
-              <Minus className="w-3.5 h-3.5" />
+              <Minus className="h-3.5 w-3.5" />
             </button>
 
-            <span className="w-8 text-center font-medium text-stone-800">
-              {item.quantity}
-            </span>
+            <span className="w-8 text-center font-medium text-stone-800">{item.quantity}</span>
 
             <button
               type="button"
               onClick={handleIncrement}
               className={cn(
-                'w-8 h-8 rounded-full flex items-center justify-center',
+                'flex h-8 w-8 items-center justify-center rounded-full',
                 'bg-earth-500 text-[#ffffec] hover:bg-earth-600',
                 'transition-colors duration-200'
               )}
               aria-label="Aumentar cantidad"
             >
-              <Plus className="w-3.5 h-3.5" />
+              <Plus className="h-3.5 w-3.5" />
             </button>
           </div>
 
@@ -165,7 +156,7 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
               {formatPrice(pricing.subtotalCents)}
             </p>
             {pricing.discountPercentage > 0 && (
-              <p className="text-xs text-olive-600 font-medium">
+              <p className="text-xs font-medium text-olive-600">
                 -{Math.round(pricing.discountPercentage)}% ahorro
               </p>
             )}

@@ -68,26 +68,11 @@ export function BundleBuilder({
 
   // Computed values
   const totalUnits = useMemo(() => getBundleTotalUnits(flavors), [flavors]);
-  const isComplete = useMemo(
-    () => isBundleComplete(flavors, packSize),
-    [flavors, packSize]
-  );
-  const remaining = useMemo(
-    () => getRemainingUnits(flavors, packSize),
-    [flavors, packSize]
-  );
-  const pricing = useMemo(
-    () => calculateBundlePrice(packSize, 1, false),
-    [packSize]
-  );
-  const savings = useMemo(
-    () => calculateBundleSavings(packSize, 1),
-    [packSize]
-  );
-  const hasFreeShipping = useMemo(
-    () => bundleHasFreeShipping(packSize),
-    [packSize]
-  );
+  const isComplete = useMemo(() => isBundleComplete(flavors, packSize), [flavors, packSize]);
+  const remaining = useMemo(() => getRemainingUnits(flavors, packSize), [flavors, packSize]);
+  const pricing = useMemo(() => calculateBundlePrice(packSize, 1, false), [packSize]);
+  const savings = useMemo(() => calculateBundleSavings(packSize, 1), [packSize]);
+  const hasFreeShipping = useMemo(() => bundleHasFreeShipping(packSize), [packSize]);
   const summary = useMemo(() => generateBundleSummary(flavors), [flavors]);
   const packOptions = useMemo(() => getBundlePackOptions(), []);
 
@@ -136,23 +121,17 @@ export function BundleBuilder({
   };
 
   return (
-    <div className={cn('bg-white rounded-2xl', className)}>
+    <div className={cn('rounded-2xl bg-white', className)}>
       {/* Header */}
-      <div className="p-6 border-b border-cream-200">
-        <h2 className="font-display text-2xl font-medium text-stone-800">
-          Crea tu pack mixto
-        </h2>
-        <p className="text-stone-500 mt-1">
-          Mezcla tus sabores favoritos y ahorra
-        </p>
+      <div className="border-b border-cream-200 p-6">
+        <h2 className="font-display text-2xl font-medium text-stone-800">Crea tu pack mixto</h2>
+        <p className="mt-1 text-stone-500">Mezcla tus sabores favoritos y ahorra</p>
       </div>
 
-      <div className="p-6 space-y-8">
+      <div className="space-y-8 p-6">
         {/* Pack Size Selector */}
         <div>
-          <label className="block text-sm font-medium text-stone-700 mb-3">
-            Tamaño del pack
-          </label>
+          <label className="mb-3 block text-sm font-medium text-stone-700">Tamaño del pack</label>
           <div className="flex gap-3" role="radiogroup" aria-label="Tamaño del pack">
             {packOptions.map((option) => {
               const isSelected = packSize === option.size;
@@ -164,10 +143,10 @@ export function BundleBuilder({
                   aria-checked={isSelected}
                   onClick={() => setPackSize(option.size)}
                   className={cn(
-                    'relative flex-1 py-4 px-3 rounded-xl border-2 transition-all duration-300',
+                    'relative flex-1 rounded-xl border-2 px-3 py-4 transition-all duration-300',
                     isSelected
                       ? 'border-earth-500 bg-earth-50 shadow-inner-glow'
-                      : 'border-cream-200 hover:border-cream-300 bg-white'
+                      : 'border-cream-200 bg-white hover:border-cream-300'
                   )}
                 >
                   <div className="text-center">
@@ -181,7 +160,7 @@ export function BundleBuilder({
                     </span>
                     <span
                       className={cn(
-                        'block text-sm mt-1',
+                        'mt-1 block text-sm',
                         isSelected ? 'text-earth-600' : 'text-stone-500'
                       )}
                     >
@@ -190,13 +169,13 @@ export function BundleBuilder({
                   </div>
                   {/* Discount badge */}
                   {option.discountPercentage > 0 && (
-                    <span className="absolute -top-2 -right-2 px-2 py-0.5 bg-olive-500 text-[#ffffec] text-xs font-bold rounded-full">
+                    <span className="absolute -right-2 -top-2 rounded-full bg-olive-500 px-2 py-0.5 text-xs font-bold text-[#ffffec]">
                       -{Math.round(option.discountPercentage)}%
                     </span>
                   )}
                   {/* Free shipping badge */}
                   {option.freeShipping && (
-                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 px-2 py-0.5 bg-earth-500 text-[#ffffec] text-[10px] font-medium rounded-full whitespace-nowrap">
+                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-earth-500 px-2 py-0.5 text-[10px] font-medium text-[#ffffec]">
                       Envío gratis
                     </span>
                   )}
@@ -208,16 +187,12 @@ export function BundleBuilder({
 
         {/* Flavor Picker */}
         <div>
-          <div className="flex items-center justify-between mb-3">
-            <label className="text-sm font-medium text-stone-700">
-              Elige tus sabores
-            </label>
+          <div className="mb-3 flex items-center justify-between">
+            <label className="text-sm font-medium text-stone-700">Elige tus sabores</label>
             <span
               className={cn(
-                'text-sm font-medium px-3 py-1 rounded-full transition-colors',
-                isComplete
-                  ? 'bg-olive-100 text-olive-700'
-                  : 'bg-cream-100 text-stone-600'
+                'rounded-full px-3 py-1 text-sm font-medium transition-colors',
+                isComplete ? 'bg-olive-100 text-olive-700' : 'bg-cream-100 text-stone-600'
               )}
             >
               {totalUnits} de {packSize}
@@ -229,14 +204,14 @@ export function BundleBuilder({
               <div
                 key={flavor.productId}
                 className={cn(
-                  'flex items-center gap-4 p-4 rounded-xl border-2 transition-all duration-300',
+                  'flex items-center gap-4 rounded-xl border-2 p-4 transition-all duration-300',
                   flavor.quantity > 0
                     ? 'border-earth-200 bg-earth-50/50'
                     : 'border-cream-200 bg-white'
                 )}
               >
                 {/* Product image */}
-                <div className="relative w-16 h-16 rounded-lg overflow-hidden flex-shrink-0">
+                <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-lg">
                   <Image
                     src={flavor.productImage}
                     alt={flavor.productName}
@@ -247,8 +222,8 @@ export function BundleBuilder({
                 </div>
 
                 {/* Product name */}
-                <div className="flex-1 min-w-0">
-                  <p className="font-medium text-stone-800 truncate">
+                <div className="min-w-0 flex-1">
+                  <p className="truncate font-medium text-stone-800">
                     {flavor.productName.replace(/^Granola de /i, '')}
                   </p>
                   <p className="text-sm text-stone-500">150g</p>
@@ -261,14 +236,14 @@ export function BundleBuilder({
                     onClick={() => handleDecrement(flavor.productId)}
                     disabled={flavor.quantity <= 0}
                     className={cn(
-                      'w-10 h-10 rounded-full flex items-center justify-center transition-all',
+                      'flex h-10 w-10 items-center justify-center rounded-full transition-all',
                       flavor.quantity > 0
                         ? 'bg-earth-100 text-earth-700 hover:bg-earth-200'
-                        : 'bg-cream-100 text-stone-300 cursor-not-allowed'
+                        : 'cursor-not-allowed bg-cream-100 text-stone-300'
                     )}
                     aria-label={`Reducir ${flavor.productName}`}
                   >
-                    <Minus className="w-4 h-4" />
+                    <Minus className="h-4 w-4" />
                   </button>
 
                   <span className="w-8 text-center font-semibold text-stone-800">
@@ -280,14 +255,14 @@ export function BundleBuilder({
                     onClick={() => handleIncrement(flavor.productId)}
                     disabled={totalUnits >= packSize}
                     className={cn(
-                      'w-10 h-10 rounded-full flex items-center justify-center transition-all',
+                      'flex h-10 w-10 items-center justify-center rounded-full transition-all',
                       totalUnits < packSize
                         ? 'bg-earth-500 text-[#ffffec] hover:bg-earth-600'
-                        : 'bg-cream-100 text-stone-300 cursor-not-allowed'
+                        : 'cursor-not-allowed bg-cream-100 text-stone-300'
                     )}
                     aria-label={`Aumentar ${flavor.productName}`}
                   >
-                    <Plus className="w-4 h-4" />
+                    <Plus className="h-4 w-4" />
                   </button>
                 </div>
               </div>
@@ -296,14 +271,14 @@ export function BundleBuilder({
 
           {/* Remaining indicator */}
           {!isComplete && remaining > 0 && (
-            <p className="mt-3 text-sm text-stone-500 text-center">
+            <p className="mt-3 text-center text-sm text-stone-500">
               Selecciona {remaining} {remaining === 1 ? 'bolsa' : 'bolsas'} más
             </p>
           )}
         </div>
 
         {/* Pricing Summary */}
-        <div className="bg-gradient-earth rounded-xl p-5 space-y-4">
+        <div className="space-y-4 rounded-xl bg-gradient-earth p-5">
           {/* Summary */}
           {summary && (
             <div className="text-sm text-stone-600">
@@ -314,19 +289,17 @@ export function BundleBuilder({
           {/* Price breakdown */}
           <div className="flex items-baseline justify-between">
             <div>
-              <span className="text-3xl font-display text-earth-600">
+              <span className="font-display text-3xl text-earth-600">
                 {formatPrice(pricing.subtotalCents)}
               </span>
-              <span className="text-stone-500 ml-2">
+              <span className="ml-2 text-stone-500">
                 ({formatPrice(pricing.unitPriceCents)}/ud)
               </span>
             </div>
             {savings > 0 && (
               <div className="flex items-center gap-1.5 text-olive-600">
-                <Sparkles className="w-4 h-4" />
-                <span className="font-medium">
-                  Ahorras {formatPrice(savings)}
-                </span>
+                <Sparkles className="h-4 w-4" />
+                <span className="font-medium">Ahorras {formatPrice(savings)}</span>
               </div>
             )}
           </div>
@@ -334,7 +307,7 @@ export function BundleBuilder({
           {/* Free shipping */}
           {hasFreeShipping && (
             <div className="flex items-center gap-2 text-earth-600">
-              <Truck className="w-5 h-5" />
+              <Truck className="h-5 w-5" />
               <span className="font-medium">Envío gratis incluido</span>
             </div>
           )}
@@ -350,21 +323,19 @@ export function BundleBuilder({
             isAdding
               ? 'bg-olive-500 text-[#ffffec] hover:bg-olive-500'
               : isComplete
-              ? 'btn-primary'
-              : 'bg-cream-200 text-stone-400 cursor-not-allowed'
+                ? 'btn-primary'
+                : 'cursor-not-allowed bg-cream-200 text-stone-400'
           )}
         >
           {isAdding ? (
             <>
-              <Check className="w-5 h-5 mr-2" strokeWidth={2.5} />
+              <Check className="mr-2 h-5 w-5" strokeWidth={2.5} />
               Añadido al carrito
             </>
           ) : (
             <>
-              <ShoppingBag className="w-5 h-5 mr-2" />
-              {isComplete
-                ? 'Añadir pack al carrito'
-                : `Selecciona ${remaining} más`}
+              <ShoppingBag className="mr-2 h-5 w-5" />
+              {isComplete ? 'Añadir pack al carrito' : `Selecciona ${remaining} más`}
             </>
           )}
         </button>

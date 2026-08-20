@@ -159,12 +159,13 @@ const config: Config = {
         '5xl': '2.5rem',
       },
       boxShadow: {
-        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
+        soft: '0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04)',
         'soft-lg': '0 10px 40px -10px rgba(0, 0, 0, 0.1), 0 2px 10px -2px rgba(0, 0, 0, 0.04)',
         'soft-xl': '0 20px 50px -12px rgba(0, 0, 0, 0.12), 0 4px 20px -4px rgba(0, 0, 0, 0.06)',
         'inner-soft': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.04)',
         'inner-glow': 'inset 0 1px 3px 0 rgba(0, 0, 0, 0.06)',
-        'card-hover': '0 25px 60px -15px rgba(0, 0, 0, 0.15), 0 10px 20px -10px rgba(0, 0, 0, 0.08)',
+        'card-hover':
+          '0 25px 60px -15px rgba(0, 0, 0, 0.15), 0 10px 20px -10px rgba(0, 0, 0, 0.08)',
       },
       backgroundImage: {
         'gradient-warm': 'linear-gradient(135deg, #FFFFFF 0%, #FFFEF8 50%, #FFFFEC 100%)',
@@ -182,7 +183,7 @@ const config: Config = {
         'slide-in-right': 'slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
         'slide-out-right': 'slideOutRight 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         'scale-up': 'scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
-        'shimmer': 'shimmer 2s infinite',
+        shimmer: 'shimmer 2s infinite',
         'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
       },
       keyframes: {
@@ -236,7 +237,7 @@ const config: Config = {
         '500': '500ms',
       },
       transitionTimingFunction: {
-        'premium': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        premium: 'cubic-bezier(0.4, 0, 0.2, 1)',
         'bounce-soft': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
       },
     },

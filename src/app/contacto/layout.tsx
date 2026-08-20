@@ -1,5 +1,11 @@
 import type { Metadata } from 'next';
-import { SITE_URL, getCanonicalUrl, buildBreadcrumbSchema, buildLocalBusinessSchema, JsonLd } from '@/lib/seo';
+import {
+  SITE_URL,
+  getCanonicalUrl,
+  buildBreadcrumbSchema,
+  buildLocalBusinessSchema,
+  JsonLd,
+} from '@/lib/seo';
 
 export const metadata: Metadata = {
   title: 'Contacto | Atención al Cliente Granola Poppy',
@@ -16,11 +22,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function ContactoLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function ContactoLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       {/* JSON-LD: Local Business Schema */}

@@ -40,12 +40,12 @@ function ErrorContent() {
   };
 
   return (
-    <div className="min-h-[60vh] flex items-center justify-center py-12 px-4">
-      <div className="max-w-md w-full text-center">
+    <div className="flex min-h-[60vh] items-center justify-center px-4 py-12">
+      <div className="w-full max-w-md text-center">
         {/* Error icon */}
-        <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-6">
+        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-red-100">
           <svg
-            className="w-8 h-8 text-red-600"
+            className="h-8 w-8 text-red-600"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -59,25 +59,17 @@ function ErrorContent() {
           </svg>
         </div>
 
-        <h1 className="font-display text-2xl font-medium text-stone-800 mb-4">
+        <h1 className="mb-4 font-display text-2xl font-medium text-stone-800">
           Error de autenticacion
         </h1>
 
-        <p className="text-stone-600 mb-8">
-          {getErrorMessage(error)}
-        </p>
+        <p className="mb-8 text-stone-600">{getErrorMessage(error)}</p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/auth/login"
-            className="btn-primary"
-          >
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <Link href="/auth/login" className="btn-primary">
             Volver a intentar
           </Link>
-          <Link
-            href="/"
-            className="btn-outline"
-          >
+          <Link href="/" className="btn-outline">
             Ir al inicio
           </Link>
         </div>
@@ -88,7 +80,7 @@ function ErrorContent() {
 
 function ErrorLoading() {
   return (
-    <div className="min-h-[60vh] flex items-center justify-center">
+    <div className="flex min-h-[60vh] items-center justify-center">
       <div className="animate-pulse text-stone-500">Cargando...</div>
     </div>
   );

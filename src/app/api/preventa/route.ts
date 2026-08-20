@@ -13,8 +13,8 @@ interface PreventaFormData {
 }
 
 const productNames: Record<string, string> = {
-  'prod_granola_clasica': 'Granola Clásica',
-  'prod_granola_naranja': 'Granola de Naranja',
+  prod_granola_clasica: 'Granola Clásica',
+  prod_granola_naranja: 'Granola de Naranja',
 };
 
 export async function POST(request: Request) {
@@ -26,35 +26,23 @@ export async function POST(request: Request) {
 
     // Validate required fields
     if (!data.email || !data.nombre || !data.apellidos || !data.producto || !data.cantidad) {
-      return NextResponse.json(
-        { error: 'Faltan campos requeridos' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Faltan campos requeridos' }, { status: 400 });
     }
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(data.email)) {
-      return NextResponse.json(
-        { error: 'Email inválido' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Email inválido' }, { status: 400 });
     }
 
     // Validate cantidad range
     if (data.cantidad < 1 || data.cantidad > 10) {
-      return NextResponse.json(
-        { error: 'La cantidad debe estar entre 1 y 10' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'La cantidad debe estar entre 1 y 10' }, { status: 400 });
     }
 
     // Validate product exists
     if (!productNames[data.producto]) {
-      return NextResponse.json(
-        { error: 'Producto no válido' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Producto no válido' }, { status: 400 });
     }
 
     // Calculate price
@@ -154,10 +142,7 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error('Error sending email:', error);
-      return NextResponse.json(
-        { error: 'Error al enviar el email' },
-        { status: 500 }
-      );
+      return NextResponse.json({ error: 'Error al enviar el email' }, { status: 500 });
     }
 
     return NextResponse.json({
@@ -166,9 +151,6 @@ export async function POST(request: Request) {
     });
   } catch (error) {
     console.error('Error processing request:', error);
-    return NextResponse.json(
-      { error: 'Error al procesar la solicitud' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Error al procesar la solicitud' }, { status: 500 });
   }
 }

@@ -23,26 +23,22 @@ export function LandingCTA({
 }: LandingCTAProps) {
   if (variant === 'primary') {
     return (
-      <section className="py-20 md:py-28 bg-earth-600">
-        <div className="container-custom text-center max-w-2xl mx-auto">
-          <h2 className="font-display text-3xl md:text-4xl text-[#ffffec] mb-6">
-            {title}
-          </h2>
-          {description && (
-            <p className="text-[#ffffec]/70 mb-10">{description}</p>
-          )}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+      <section className="bg-earth-600 py-20 md:py-28">
+        <div className="container-custom mx-auto max-w-2xl text-center">
+          <h2 className="mb-6 font-display text-3xl text-[#ffffec] md:text-4xl">{title}</h2>
+          {description && <p className="mb-10 text-[#ffffec]/70">{description}</p>}
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href={ctaHref}
-              className="inline-flex items-center justify-center gap-2 bg-[#ffffec] text-earth-700 px-8 py-4 font-medium hover:bg-cream-100 transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-[#ffffec] px-8 py-4 font-medium text-earth-700 transition-colors hover:bg-cream-100"
             >
               {ctaText}
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="h-4 w-4" />
             </Link>
             {secondaryCta && (
               <Link
                 href={secondaryCta.href}
-                className="inline-flex items-center justify-center gap-2 border border-[#ffffec]/30 text-[#ffffec] px-8 py-4 font-medium hover:bg-[#ffffec]/10 transition-colors"
+                className="inline-flex items-center justify-center gap-2 border border-[#ffffec]/30 px-8 py-4 font-medium text-[#ffffec] transition-colors hover:bg-[#ffffec]/10"
               >
                 {secondaryCta.text}
               </Link>
@@ -54,24 +50,22 @@ export function LandingCTA({
   }
 
   return (
-    <section className="py-20 md:py-28 bg-white">
-      <div className="container-custom text-center max-w-2xl mx-auto">
-        <h2 className="font-display text-stone-800 mb-6">{title}</h2>
-        {description && (
-          <p className="text-stone-600 mb-10">{description}</p>
-        )}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <section className="bg-white py-20 md:py-28">
+      <div className="container-custom mx-auto max-w-2xl text-center">
+        <h2 className="mb-6 font-display text-stone-800">{title}</h2>
+        {description && <p className="mb-10 text-stone-600">{description}</p>}
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
           <Link
             href={ctaHref}
-            className="inline-flex items-center justify-center gap-2 bg-earth-600 text-[#ffffec] px-8 py-4 font-medium hover:bg-earth-700 transition-colors"
+            className="inline-flex items-center justify-center gap-2 bg-earth-600 px-8 py-4 font-medium text-[#ffffec] transition-colors hover:bg-earth-700"
           >
             {ctaText}
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="h-4 w-4" />
           </Link>
           {secondaryCta && (
             <Link
               href={secondaryCta.href}
-              className="inline-flex items-center justify-center gap-2 border border-stone-300 text-stone-800 px-8 py-4 font-medium hover:border-stone-400 transition-colors"
+              className="inline-flex items-center justify-center gap-2 border border-stone-300 px-8 py-4 font-medium text-stone-800 transition-colors hover:border-stone-400"
             >
               {secondaryCta.text}
             </Link>

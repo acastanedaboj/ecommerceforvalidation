@@ -9,10 +9,7 @@ export async function GET() {
     const session = await getServerSession(authOptions);
 
     if (!session?.user?.email) {
-      return NextResponse.json(
-        { error: 'No autenticado' },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: 'No autenticado' }, { status: 401 });
     }
 
     const user = await prisma.user.findUnique({
@@ -25,19 +22,13 @@ export async function GET() {
     });
 
     if (!user) {
-      return NextResponse.json(
-        { error: 'Usuario no encontrado' },
-        { status: 404 }
-      );
+      return NextResponse.json({ error: 'Usuario no encontrado' }, { status: 404 });
     }
 
     return NextResponse.json(user);
   } catch (error) {
     console.error('Error fetching user preferences:', error);
-    return NextResponse.json(
-      { error: 'Error al obtener preferencias' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Error al obtener preferencias' }, { status: 500 });
   }
 }
 
@@ -47,10 +38,7 @@ export async function PATCH(request: NextRequest) {
     const session = await getServerSession(authOptions);
 
     if (!session?.user?.email) {
-      return NextResponse.json(
-        { error: 'No autenticado' },
-        { status: 401 }
-      );
+      return NextResponse.json({ error: 'No autenticado' }, { status: 401 });
     }
 
     const body = await request.json();
@@ -79,9 +67,6 @@ export async function PATCH(request: NextRequest) {
     return NextResponse.json(user);
   } catch (error) {
     console.error('Error updating user preferences:', error);
-    return NextResponse.json(
-      { error: 'Error al actualizar preferencias' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Error al actualizar preferencias' }, { status: 500 });
   }
 }

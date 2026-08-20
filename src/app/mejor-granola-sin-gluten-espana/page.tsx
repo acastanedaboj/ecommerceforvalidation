@@ -1,11 +1,7 @@
 import type { Metadata } from 'next';
 import { Star, Trophy, Check, X, ArrowRight } from 'lucide-react';
 import Link from 'next/link';
-import {
-  LandingHero,
-  LandingFAQ,
-  LandingCTA,
-} from '@/components/landing';
+import { LandingHero, LandingFAQ, LandingCTA } from '@/components/landing';
 import { mejorGranolaContent } from '@/data/landing-content';
 import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/seo';
 import { cn } from '@/lib/utils';
@@ -76,8 +72,7 @@ function buildArticleSchema() {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: 'Mejor Granola Sin Gluten España 2026 - Comparativa Completa',
-    description:
-      'Análisis detallado de las principales granolas sin gluten del mercado español.',
+    description: 'Análisis detallado de las principales granolas sin gluten del mercado español.',
     author: {
       '@type': 'Organization',
       name: 'Poppy',
@@ -147,7 +142,7 @@ export default function MejorGranolaSinGlutenPage() {
       {/* Intro Section */}
       <div className="section bg-neutral-50">
         <div className="container-custom max-w-3xl text-center">
-          <h2 className="text-3xl font-display text-neutral-900 mb-4">{intro.title}</h2>
+          <h2 className="mb-4 font-display text-3xl text-neutral-900">{intro.title}</h2>
           <p className="text-lg text-neutral-600">{intro.description}</p>
         </div>
       </div>
@@ -155,37 +150,30 @@ export default function MejorGranolaSinGlutenPage() {
       {/* Criterios Section */}
       <div id="criterios" className="section">
         <div className="container-custom max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
-              {criterios.title}
-            </h2>
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">{criterios.title}</h2>
             <p className="text-lg text-neutral-600">{criterios.subtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {criterios.items.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white border border-neutral-200 rounded-xl p-6"
-              >
-                <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-semibold text-neutral-900">
-                    {item.title}
-                  </h3>
+              <div key={index} className="rounded-xl border border-neutral-200 bg-white p-6">
+                <div className="mb-3 flex items-start justify-between">
+                  <h3 className="text-lg font-semibold text-neutral-900">{item.title}</h3>
                   <span
                     className={cn(
-                      'text-xs font-medium px-2 py-1 rounded',
+                      'rounded px-2 py-1 text-xs font-medium',
                       item.importance === 'crítica'
                         ? 'bg-red-100 text-red-700'
                         : item.importance === 'alta'
-                        ? 'bg-amber-100 text-amber-700'
-                        : 'bg-neutral-100 text-neutral-600'
+                          ? 'bg-amber-100 text-amber-700'
+                          : 'bg-neutral-100 text-neutral-600'
                     )}
                   >
                     {item.importance}
                   </span>
                 </div>
-                <p className="text-neutral-600 text-sm">{item.description}</p>
+                <p className="text-sm text-neutral-600">{item.description}</p>
               </div>
             ))}
           </div>
@@ -195,10 +183,8 @@ export default function MejorGranolaSinGlutenPage() {
       {/* Ranking Section */}
       <div id="ranking" className="section bg-neutral-50">
         <div className="container-custom max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
-              {ranking.title}
-            </h2>
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">{ranking.title}</h2>
             <p className="text-lg text-neutral-600">{ranking.subtitle}</p>
           </div>
 
@@ -207,36 +193,30 @@ export default function MejorGranolaSinGlutenPage() {
               <div
                 key={item.position}
                 className={cn(
-                  'bg-white rounded-xl border-2 overflow-hidden',
-                  item.isOurs
-                    ? 'border-primary-300 ring-2 ring-primary-100'
-                    : 'border-neutral-200'
+                  'overflow-hidden rounded-xl border-2 bg-white',
+                  item.isOurs ? 'border-primary-300 ring-2 ring-primary-100' : 'border-neutral-200'
                 )}
               >
                 {/* Header */}
                 <div
                   className={cn(
-                    'p-6 flex items-center gap-4',
+                    'flex items-center gap-4 p-6',
                     item.isOurs ? 'bg-primary-50' : 'bg-neutral-50'
                   )}
                 >
                   <div
                     className={cn(
-                      'w-12 h-12 rounded-full flex items-center justify-center text-xl font-bold',
+                      'flex h-12 w-12 items-center justify-center rounded-full text-xl font-bold',
                       item.position === 1
                         ? 'bg-amber-400 text-amber-900'
                         : item.position === 2
-                        ? 'bg-neutral-300 text-neutral-700'
-                        : item.position === 3
-                        ? 'bg-amber-600 text-amber-100'
-                        : 'bg-neutral-200 text-neutral-600'
+                          ? 'bg-neutral-300 text-neutral-700'
+                          : item.position === 3
+                            ? 'bg-amber-600 text-amber-100'
+                            : 'bg-neutral-200 text-neutral-600'
                     )}
                   >
-                    {item.position === 1 ? (
-                      <Trophy className="w-6 h-6" />
-                    ) : (
-                      item.position
-                    )}
+                    {item.position === 1 ? <Trophy className="h-6 w-6" /> : item.position}
                   </div>
                   <div className="flex-1">
                     <h3 className="text-xl font-semibold text-neutral-900">
@@ -256,12 +236,10 @@ export default function MejorGranolaSinGlutenPage() {
                 </div>
 
                 {/* Details */}
-                <div className="p-6 grid md:grid-cols-3 gap-6">
+                <div className="grid gap-6 p-6 md:grid-cols-3">
                   {/* Specs */}
                   <div>
-                    <h4 className="text-sm font-medium text-neutral-500 mb-3">
-                      Características
-                    </h4>
+                    <h4 className="mb-3 text-sm font-medium text-neutral-500">Características</h4>
                     <ul className="space-y-2 text-sm">
                       <li className="flex items-center gap-2">
                         <span className="text-neutral-400">Endulzante:</span>
@@ -276,11 +254,11 @@ export default function MejorGranolaSinGlutenPage() {
 
                   {/* Pros */}
                   <div>
-                    <h4 className="text-sm font-medium text-green-600 mb-3">Pros</h4>
+                    <h4 className="mb-3 text-sm font-medium text-green-600">Pros</h4>
                     <ul className="space-y-2">
                       {item.pros.map((pro, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
-                          <Check className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                          <Check className="mt-0.5 h-4 w-4 flex-shrink-0 text-green-500" />
                           <span className="text-neutral-600">{pro}</span>
                         </li>
                       ))}
@@ -289,11 +267,11 @@ export default function MejorGranolaSinGlutenPage() {
 
                   {/* Contras */}
                   <div>
-                    <h4 className="text-sm font-medium text-red-600 mb-3">Contras</h4>
+                    <h4 className="mb-3 text-sm font-medium text-red-600">Contras</h4>
                     <ul className="space-y-2">
                       {item.contras.map((contra, i) => (
                         <li key={i} className="flex items-start gap-2 text-sm">
-                          <X className="w-4 h-4 text-red-400 mt-0.5 flex-shrink-0" />
+                          <X className="mt-0.5 h-4 w-4 flex-shrink-0 text-red-400" />
                           <span className="text-neutral-600">{contra}</span>
                         </li>
                       ))}
@@ -303,8 +281,8 @@ export default function MejorGranolaSinGlutenPage() {
 
                 {/* Verdict */}
                 <div className="px-6 pb-6">
-                  <div className="bg-neutral-50 rounded-lg p-4 flex items-start gap-3">
-                    <Star className="w-5 h-5 text-amber-500 flex-shrink-0 mt-0.5" />
+                  <div className="flex items-start gap-3 rounded-lg bg-neutral-50 p-4">
+                    <Star className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500" />
                     <p className="text-neutral-700">
                       <strong>Veredicto:</strong> {item.verdict}
                     </p>
@@ -314,12 +292,9 @@ export default function MejorGranolaSinGlutenPage() {
                 {/* CTA for our product */}
                 {item.isOurs && (
                   <div className="px-6 pb-6">
-                    <Link
-                      href="/tienda"
-                      className="btn-primary w-full justify-center"
-                    >
+                    <Link href="/tienda" className="btn-primary w-full justify-center">
                       Probar Poppy Granola
-                      <ArrowRight className="w-4 h-4 ml-2" />
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </div>
                 )}
@@ -332,12 +307,10 @@ export default function MejorGranolaSinGlutenPage() {
       {/* Conclusion Section */}
       <div className="section">
         <div className="container-custom max-w-3xl">
-          <h2 className="text-3xl font-display text-neutral-900 mb-6 text-center">
+          <h2 className="mb-6 text-center font-display text-3xl text-neutral-900">
             {conclusion.title}
           </h2>
-          <div className="prose-custom text-neutral-600">
-            {renderContent(conclusion.content)}
-          </div>
+          <div className="prose-custom text-neutral-600">{renderContent(conclusion.content)}</div>
         </div>
       </div>
 

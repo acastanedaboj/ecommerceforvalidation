@@ -138,7 +138,8 @@ export const sinGlutenContent = {
   products: {
     title: 'Nuestras granolas sin gluten',
     subtitle: 'Todos los sabores',
-    description: 'Los 4 sabores de Poppy son aptos para celíacos. Elige tu favorito o pruébalos todos.',
+    description:
+      'Los 4 sabores de Poppy son aptos para celíacos. Elige tu favorito o pruébalos todos.',
   },
   faqs: [
     {
@@ -400,8 +401,7 @@ export const artesanalContent = {
   ],
   cta: {
     title: 'Prueba la diferencia de lo artesanal',
-    description:
-      'Una vez pruebes granola de verdad, no querrás volver a la del supermercado.',
+    description: 'Una vez pruebes granola de verdad, no querrás volver a la del supermercado.',
     ctaText: 'Comprar ahora',
     ctaHref: '/tienda',
     secondaryCta: {
@@ -665,8 +665,7 @@ export const mercadonaContent = {
   ],
   cta: {
     title: 'Prueba la diferencia artesanal',
-    description:
-      'Envío gratis desde 4 unidades. Si no te convence, te devolvemos el dinero.',
+    description: 'Envío gratis desde 4 unidades. Si no te convence, te devolvemos el dinero.',
     ctaText: 'Comprar granola Poppy',
     ctaHref: '/tienda',
     secondaryCta: {
@@ -826,8 +825,7 @@ export const carrefourContent = {
   ],
   cta: {
     title: 'Siente la diferencia artesanal',
-    description:
-      'Envío gratis desde 4 bolsas. Hecho en Málaga, directo a tu mesa.',
+    description: 'Envío gratis desde 4 bolsas. Hecho en Málaga, directo a tu mesa.',
     ctaText: 'Comprar granola Poppy',
     ctaHref: '/tienda',
     secondaryCta: {
@@ -872,9 +870,7 @@ export const recetaGranolaContent = {
     subtitle: 'Lo que necesitas para tu receta casera',
     base: {
       title: 'Base (avena)',
-      items: [
-        '250g de copos de avena certificada sin gluten',
-      ],
+      items: ['250g de copos de avena certificada sin gluten'],
     },
     frutoSecos: {
       title: 'Frutos secos y semillas',
@@ -1768,13 +1764,11 @@ export const ecologicaContent = {
       },
       {
         title: 'Aceite de coco virgen',
-        description:
-          'Prensado en frío, sin refinar. Conserva todos sus nutrientes y propiedades.',
+        description: 'Prensado en frío, sin refinar. Conserva todos sus nutrientes y propiedades.',
       },
       {
         title: 'Producción artesanal',
-        description:
-          'Elaborada en Málaga en pequeños lotes. Cada bolsa es trazable y controlada.',
+        description: 'Elaborada en Málaga en pequeños lotes. Cada bolsa es trazable y controlada.',
       },
     ],
   },
@@ -1903,11 +1897,7 @@ export const mejorGranolaContent = {
           'Producción artesanal en pequeños lotes',
           'Opción vegana disponible (dátiles)',
         ],
-        contras: [
-          'Precio más elevado',
-          'Solo venta online',
-          '4 sabores (vs 8+ de competidores)',
-        ],
+        contras: ['Precio más elevado', 'Solo venta online', '4 sabores (vs 8+ de competidores)'],
         verdict:
           'Mejor relación calidad-ingredientes. Ideal para quien prioriza nutrición sobre precio.',
         isOurs: true,
@@ -1926,10 +1916,7 @@ export const mejorGranolaContent = {
           '8 sabores variados',
           'Disponible en supermercados',
         ],
-        contras: [
-          'Menor contenido de frutos secos',
-          'Formato 275g (más difícil probar sabores)',
-        ],
+        contras: ['Menor contenido de frutos secos', 'Formato 275g (más difícil probar sabores)'],
         verdict:
           'Buena opción calidad-precio con certificación BIO. Para quien busca variedad y accesibilidad.',
         isOurs: false,
@@ -1942,18 +1929,13 @@ export const mejorGranolaContent = {
         frutosSecos: '~10%',
         endulzante: 'Azúcar de caña integral, sirope de arroz',
         certificacion: 'Sin gluten',
-        pros: [
-          'Precio accesible',
-          'Fácil de encontrar',
-          'Marca conocida',
-        ],
+        pros: ['Precio accesible', 'Fácil de encontrar', 'Marca conocida'],
         contras: [
           'Bajo contenido en frutos secos',
           'Endulzantes menos premium',
           'Producción industrial',
         ],
-        verdict:
-          'Opción económica y accesible. Para quien prioriza precio y conveniencia.',
+        verdict: 'Opción económica y accesible. Para quien prioriza precio y conveniencia.',
         isOurs: false,
       },
       {
@@ -1964,17 +1946,9 @@ export const mejorGranolaContent = {
         frutosSecos: '~20%',
         endulzante: 'Sirope de agave, dátiles',
         certificacion: 'Sin gluten (obrador dedicado)',
-        pros: [
-          'Obrador 100% sin gluten',
-          'Producción artesanal',
-          'Tiendas físicas',
-        ],
-        contras: [
-          'Distribución limitada (Valencia, Barcelona, Tenerife)',
-          'Precio elevado',
-        ],
-        verdict:
-          'Excelente opción artesanal si vives en sus zonas de distribución.',
+        pros: ['Obrador 100% sin gluten', 'Producción artesanal', 'Tiendas físicas'],
+        contras: ['Distribución limitada (Valencia, Barcelona, Tenerife)', 'Precio elevado'],
+        verdict: 'Excelente opción artesanal si vives en sus zonas de distribución.',
         isOurs: false,
       },
     ],

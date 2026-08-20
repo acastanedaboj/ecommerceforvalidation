@@ -157,12 +157,12 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="font-sans antialiased min-h-screen flex flex-col">
+      <body className="flex min-h-screen flex-col font-sans antialiased">
         <SessionProvider>
           {/* Skip to content link for accessibility */}
           <a
             href="#main-content"
-            className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-earth-600 text-cream-50 px-4 py-2 rounded-md z-50"
+            className="sr-only z-50 rounded-md bg-earth-600 px-4 py-2 text-cream-50 focus:not-sr-only focus:absolute focus:left-4 focus:top-4"
           >
             Saltar al contenido principal
           </a>
@@ -180,33 +180,33 @@ export default function RootLayout({
 
           {/* Toast notifications */}
           <Toaster
-          position="bottom-right"
-          toastOptions={{
-            duration: 4000,
-            style: {
-              background: '#1C1C1C',
-              color: '#FFFFFF',
-              borderRadius: '12px',
-            },
-            success: {
-              iconTheme: {
-                primary: '#7D9160',
-                secondary: '#FFFFFF',
+            position="bottom-right"
+            toastOptions={{
+              duration: 4000,
+              style: {
+                background: '#1C1C1C',
+                color: '#FFFFFF',
+                borderRadius: '12px',
               },
-            },
-            error: {
-              iconTheme: {
-                primary: '#E05A47',
-                secondary: '#FFFFFF',
+              success: {
+                iconTheme: {
+                  primary: '#7D9160',
+                  secondary: '#FFFFFF',
+                },
               },
-            },
-          }}
-        />
+              error: {
+                iconTheme: {
+                  primary: '#E05A47',
+                  secondary: '#FFFFFF',
+                },
+              },
+            }}
+          />
 
-        {/* Google Analytics - only loads if user has given consent */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+          {/* Google Analytics - only loads if user has given consent */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
               (function() {
                 try {
                   const consent = localStorage.getItem('poppy-cookie-consent');
@@ -233,13 +233,13 @@ export default function RootLayout({
                 }
               })();
             `,
-          }}
-        />
+            }}
+          />
 
-        {/* Ahrefs Analytics - only loads if user has given consent */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
+          {/* Ahrefs Analytics - only loads if user has given consent */}
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
               (function() {
                 try {
                   const consent = localStorage.getItem('poppy-cookie-consent');
@@ -259,8 +259,8 @@ export default function RootLayout({
                 }
               })();
             `,
-          }}
-        />
+            }}
+          />
         </SessionProvider>
 
         {/* Cookie Banner */}

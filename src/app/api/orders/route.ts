@@ -43,17 +43,11 @@ export async function POST(request: NextRequest) {
 
     // Validate required fields
     if (!items || items.length === 0) {
-      return NextResponse.json(
-        { error: 'El carrito está vacío' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'El carrito está vacío' }, { status: 400 });
     }
 
     if (!customer.email || !customer.name || !customer.address) {
-      return NextResponse.json(
-        { error: 'Faltan datos del cliente' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Faltan datos del cliente' }, { status: 400 });
     }
 
     // Get session to link order to user if logged in
@@ -141,7 +135,14 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    console.log('Order created:', orderNumber, 'for user:', userId || 'guest', 'email:', customer.email);
+    console.log(
+      'Order created:',
+      orderNumber,
+      'for user:',
+      userId || 'guest',
+      'email:',
+      customer.email
+    );
 
     return NextResponse.json({
       success: true,
@@ -157,10 +158,7 @@ export async function POST(request: NextRequest) {
     });
   } catch (error) {
     console.error('Order creation error:', error);
-    return NextResponse.json(
-      { error: 'Error al crear el pedido' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Error al crear el pedido' }, { status: 500 });
   }
 }
 
@@ -202,10 +200,7 @@ export async function GET(request: NextRequest) {
     // Get orders by userId or by email (for orders made before user was created)
     const orders = await prisma.order.findMany({
       where: {
-        OR: [
-          ...(user ? [{ userId: user.id }] : []),
-          { customerEmail: session.user.email },
-        ],
+        OR: [...(user ? [{ userId: user.id }] : []), { customerEmail: session.user.email }],
       },
       include: {
         items: true,
@@ -218,9 +213,6 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ orders });
   } catch (error) {
     console.error('Get orders error:', error);
-    return NextResponse.json(
-      { error: 'Error al obtener los pedidos' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Error al obtener los pedidos' }, { status: 500 });
   }
 }

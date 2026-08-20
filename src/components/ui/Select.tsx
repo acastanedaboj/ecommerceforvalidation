@@ -25,20 +25,18 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
         {label && (
           <label htmlFor={selectId} className="label">
             {label}
-            {props.required && <span className="text-red-500 ml-1">*</span>}
+            {props.required && <span className="ml-1 text-red-500">*</span>}
           </label>
         )}
         <div className="relative">
           <select
             id={selectId}
             ref={ref}
-            className={cn(
-              'input appearance-none pr-10',
-              error && 'input-error',
-              className
-            )}
+            className={cn('input appearance-none pr-10', error && 'input-error', className)}
             aria-invalid={error ? 'true' : 'false'}
-            aria-describedby={error ? `${selectId}-error` : helperText ? `${selectId}-helper` : undefined}
+            aria-describedby={
+              error ? `${selectId}-error` : helperText ? `${selectId}-helper` : undefined
+            }
             {...props}
           >
             {placeholder && (
@@ -52,7 +50,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
               </option>
             ))}
           </select>
-          <ChevronDown className="absolute right-3 top-1/2 -translate-y-1/2 w-5 h-5 text-neutral-400 pointer-events-none" />
+          <ChevronDown className="pointer-events-none absolute right-3 top-1/2 h-5 w-5 -translate-y-1/2 text-neutral-400" />
         </div>
         {error && (
           <p id={`${selectId}-error`} className="error-message" role="alert">
@@ -60,7 +58,7 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
           </p>
         )}
         {helperText && !error && (
-          <p id={`${selectId}-helper`} className="text-sm text-neutral-500 mt-1">
+          <p id={`${selectId}-helper`} className="mt-1 text-sm text-neutral-500">
             {helperText}
           </p>
         )}

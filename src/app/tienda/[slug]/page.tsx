@@ -3,11 +3,27 @@
 import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { ShoppingBag, Truck, RefreshCw, Shield, Plus, Minus, FileText, List, BarChart2, AlertTriangle, Package } from 'lucide-react';
+import {
+  ShoppingBag,
+  Truck,
+  RefreshCw,
+  Shield,
+  Plus,
+  Minus,
+  FileText,
+  List,
+  BarChart2,
+  AlertTriangle,
+  Package,
+} from 'lucide-react';
 import { getProductBySlug, getRetailProducts } from '@/data/products';
 import { useCartStore } from '@/store/cart-store';
 import { formatPrice, cn } from '@/lib/utils';
-import { calculatePackUnitPrice, calculateSubscriptionUnitPrice, getPackDiscount } from '@/lib/pricing';
+import {
+  calculatePackUnitPrice,
+  calculateSubscriptionUnitPrice,
+  getPackDiscount,
+} from '@/lib/pricing';
 import { PRICING, SHIPPING, STORE_CLOSED } from '@/lib/constants';
 import { ProductCard } from '@/components/product/ProductCard';
 import { ImageGallery } from '@/components/ui/ImageGallery';
@@ -35,7 +51,9 @@ export default function ProductDetailPage() {
     return (
       <div className="section">
         <div className="container-custom text-center">
-          <h1 className="font-display text-2xl font-medium text-stone-800 mb-6">Producto no encontrado</h1>
+          <h1 className="mb-6 font-display text-2xl font-medium text-stone-800">
+            Producto no encontrado
+          </h1>
           <Link href="/tienda" className="btn-primary">
             Volver a la tienda
           </Link>
@@ -49,9 +67,7 @@ export default function ProductDetailPage() {
   const packUnitPrice = isSubscription
     ? calculateSubscriptionUnitPrice()
     : calculatePackUnitPrice(selectedPack);
-  const discount = isSubscription
-    ? PRICING.SUBSCRIPTION_DISCOUNT
-    : getPackDiscount(selectedPack);
+  const discount = isSubscription ? PRICING.SUBSCRIPTION_DISCOUNT : getPackDiscount(selectedPack);
   const totalUnits = quantity * selectedPack;
   const totalPrice = packUnitPrice * totalUnits;
   const originalPrice = basePrice * totalUnits;
@@ -104,32 +120,37 @@ export default function ProductDetailPage() {
           <nav className="mb-10" aria-label="Breadcrumb">
             <ol className="flex items-center gap-2 text-sm">
               <li>
-                <Link href="/" className="text-stone-400 hover:text-earth-600 transition-colors">
+                <Link href="/" className="text-stone-400 transition-colors hover:text-earth-600">
                   Inicio
                 </Link>
               </li>
               <li className="text-stone-300">/</li>
               <li>
-                <Link href="/tienda" className="text-stone-400 hover:text-earth-600 transition-colors">
+                <Link
+                  href="/tienda"
+                  className="text-stone-400 transition-colors hover:text-earth-600"
+                >
                   Tienda
                 </Link>
               </li>
               <li className="text-stone-300">/</li>
-              <li className="text-stone-700 font-medium">{product.name}</li>
+              <li className="font-medium text-stone-700">{product.name}</li>
             </ol>
           </nav>
 
           {/* Product main section */}
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 mb-20">
+          <div className="mb-20 grid gap-12 lg:grid-cols-2 lg:gap-16">
             {/* Images */}
             <div>
               <ImageGallery
-                images={product.images.length > 0 ? product.images : ['/images/placeholder-product.jpg']}
+                images={
+                  product.images.length > 0 ? product.images : ['/images/placeholder-product.jpg']
+                }
                 productName={product.name}
                 enableZoom={true}
               />
               {/* Badges overlay */}
-              <div className="flex gap-2 mt-4">
+              <div className="mt-4 flex gap-2">
                 {product.tags.includes('sin-gluten') && (
                   <span className="badge-primary">Sin gluten</span>
                 )}
@@ -142,19 +163,19 @@ export default function ProductDetailPage() {
             {/* Product info */}
             <div>
               <div className="mb-8">
-                <p className="text-sm text-stone-400 uppercase tracking-wider mb-2">
+                <p className="mb-2 text-sm uppercase tracking-wider text-stone-400">
                   {product.weight}g · SKU: {product.sku}
                 </p>
-                <h1 className="font-display text-3xl md:text-4xl font-medium text-stone-800 mb-4">
+                <h1 className="mb-4 font-display text-3xl font-medium text-stone-800 md:text-4xl">
                   {product.name}
                 </h1>
-                <p className="text-stone-500 text-lg leading-relaxed">{product.shortDescription}</p>
+                <p className="text-lg leading-relaxed text-stone-500">{product.shortDescription}</p>
               </div>
 
               {/* Price display */}
-              <div className="bg-white rounded-2xl p-6 mb-8 shadow-soft border border-cream-100">
-                <div className="flex items-baseline gap-3 mb-2">
-                  <span className="text-4xl font-display text-earth-600">
+              <div className="mb-8 rounded-2xl border border-cream-100 bg-white p-6 shadow-soft">
+                <div className="mb-2 flex items-baseline gap-3">
+                  <span className="font-display text-4xl text-earth-600">
                     {formatPrice(packUnitPrice)}
                   </span>
                   <span className="text-stone-400">/unidad</span>
@@ -163,12 +184,14 @@ export default function ProductDetailPage() {
                       <span className="text-lg text-stone-300 line-through">
                         {formatPrice(basePrice)}
                       </span>
-                      <span className="badge bg-olive-100 text-olive-700">-{Math.round(discount * 100)}%</span>
+                      <span className="badge bg-olive-100 text-olive-700">
+                        -{Math.round(discount * 100)}%
+                      </span>
                     </>
                   )}
                 </div>
                 {savings > 0 && (
-                  <p className="text-sm text-olive-600 font-medium">
+                  <p className="text-sm font-medium text-olive-600">
                     Ahorras {formatPrice(savings)} en este pedido
                   </p>
                 )}
@@ -192,10 +215,9 @@ export default function ProductDetailPage() {
                 <button
                   type="button"
                   onClick={() => setIsBundleModalOpen(true)}
-                  className="mt-4 flex items-center gap-2 text-earth-600 hover:text-earth-700 font-medium text-sm transition-colors"
+                  className="mt-4 flex items-center gap-2 text-sm font-medium text-earth-600 transition-colors hover:text-earth-700"
                 >
-                  <Package className="w-4 h-4" />
-                  O crea un pack mixto con este sabor
+                  <Package className="h-4 w-4" />O crea un pack mixto con este sabor
                 </button>
               </div>
 
@@ -208,7 +230,7 @@ export default function ProductDetailPage() {
                     if (!isSubscription) setSelectedPack(6);
                   }}
                   className={cn(
-                    'w-full p-5 rounded-2xl border-2 transition-all text-left group',
+                    'group w-full rounded-2xl border-2 p-5 text-left transition-all',
                     isSubscription
                       ? 'border-earth-500 bg-earth-50 shadow-inner-glow'
                       : 'border-cream-200 bg-white hover:border-earth-200 hover:bg-cream-50'
@@ -216,23 +238,26 @@ export default function ProductDetailPage() {
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
-                      <div className={cn(
-                        'w-12 h-12 rounded-xl flex items-center justify-center transition-colors',
-                        isSubscription ? 'bg-earth-100' : 'bg-cream-100 group-hover:bg-cream-200'
-                      )}>
+                      <div
+                        className={cn(
+                          'flex h-12 w-12 items-center justify-center rounded-xl transition-colors',
+                          isSubscription ? 'bg-earth-100' : 'bg-cream-100 group-hover:bg-cream-200'
+                        )}
+                      >
                         <RefreshCw
                           className={cn(
-                            'w-6 h-6 transition-colors',
+                            'h-6 w-6 transition-colors',
                             isSubscription ? 'text-earth-600' : 'text-stone-400'
                           )}
                         />
                       </div>
                       <div>
-                        <span className="font-medium text-stone-800 block mb-1">
+                        <span className="mb-1 block font-medium text-stone-800">
                           Suscripcion mensual (Pack 6)
                         </span>
                         <span className="text-sm text-stone-500">
-                          {formatPrice(calculateSubscriptionUnitPrice())}/ud · Envio gratis · Cancela cuando quieras
+                          {formatPrice(calculateSubscriptionUnitPrice())}/ud · Envio gratis ·
+                          Cancela cuando quieras
                         </span>
                       </div>
                     </div>
@@ -245,23 +270,23 @@ export default function ProductDetailPage() {
               <div className="mb-8">
                 <label className="label mb-4">Cantidad:</label>
                 <div className="flex items-center gap-6">
-                  <div className="flex items-center bg-white border border-cream-200 rounded-full shadow-soft">
+                  <div className="flex items-center rounded-full border border-cream-200 bg-white shadow-soft">
                     <button
                       type="button"
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                      className="p-4 hover:bg-cream-50 rounded-l-full transition-colors"
+                      className="rounded-l-full p-4 transition-colors hover:bg-cream-50"
                       aria-label="Reducir cantidad"
                     >
-                      <Minus className="w-4 h-4 text-stone-500" />
+                      <Minus className="h-4 w-4 text-stone-500" />
                     </button>
                     <span className="w-14 text-center text-stone-800">{quantity}</span>
                     <button
                       type="button"
                       onClick={() => setQuantity(quantity + 1)}
-                      className="p-4 hover:bg-cream-50 rounded-r-full transition-colors"
+                      className="rounded-r-full p-4 transition-colors hover:bg-cream-50"
                       aria-label="Aumentar cantidad"
                     >
-                      <Plus className="w-4 h-4 text-stone-500" />
+                      <Plus className="h-4 w-4 text-stone-500" />
                     </button>
                   </div>
                   <span className="text-stone-500">
@@ -271,30 +296,33 @@ export default function ProductDetailPage() {
               </div>
 
               {/* Trust badges - above CTA */}
-              <div className="flex flex-wrap gap-4 mb-6">
+              <div className="mb-6 flex flex-wrap gap-4">
                 <div className="trust-badge-compact">
-                  <Truck className="w-4 h-4 text-earth-500" />
+                  <Truck className="h-4 w-4 text-earth-500" />
                   <span>Envio 2-4 dias</span>
                 </div>
                 <div className="trust-badge-compact">
-                  <Shield className="w-4 h-4 text-earth-500" />
+                  <Shield className="h-4 w-4 text-earth-500" />
                   <span>Pago seguro</span>
                 </div>
                 <div className="trust-badge-compact">
-                  <RefreshCw className="w-4 h-4 text-earth-500" />
+                  <RefreshCw className="h-4 w-4 text-earth-500" />
                   <span>14 dias devolucion</span>
                 </div>
               </div>
 
               {/* Total and add to cart */}
-              <div id="main-cta" className="bg-stone-900 text-[#ffffec] rounded-2xl p-6 shadow-soft-lg">
-                <div className="flex items-center justify-between mb-4">
+              <div
+                id="main-cta"
+                className="rounded-2xl bg-stone-900 p-6 text-[#ffffec] shadow-soft-lg"
+              >
+                <div className="mb-4 flex items-center justify-between">
                   <span className="text-stone-300">Total:</span>
                   <div className="text-right">
-                    <span className="text-3xl font-display">{formatPrice(totalPrice)}</span>
+                    <span className="font-display text-3xl">{formatPrice(totalPrice)}</span>
                     {isFreeShipping && (
-                      <p className="text-earth-400 text-sm flex items-center gap-2 justify-end mt-1">
-                        <Truck className="w-4 h-4" />
+                      <p className="mt-1 flex items-center justify-end gap-2 text-sm text-earth-400">
+                        <Truck className="h-4 w-4" />
                         Envio gratis incluido
                       </p>
                     )}
@@ -305,50 +333,50 @@ export default function ProductDetailPage() {
                   onClick={handleAddToCart}
                   disabled={product.stock === 0 || isAdding || STORE_CLOSED}
                   className={cn(
-                    'btn w-full justify-center bg-earth-500 hover:bg-earth-600 text-[#ffffec] text-base py-4',
-                    'disabled:opacity-50 disabled:cursor-not-allowed'
+                    'btn w-full justify-center bg-earth-500 py-4 text-base text-[#ffffec] hover:bg-earth-600',
+                    'disabled:cursor-not-allowed disabled:opacity-50'
                   )}
                 >
                   {isAdding ? (
-                    <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
+                    <span className="mr-2 h-5 w-5 animate-spin rounded-full border-2 border-white/30 border-t-white" />
                   ) : (
-                    <ShoppingBag className="w-5 h-5 mr-2" />
+                    <ShoppingBag className="mr-2 h-5 w-5" />
                   )}
-                  {STORE_CLOSED ? 'Tienda cerrada temporalmente' : isSubscription ? 'Suscribirme ahora' : 'Anadir al carrito'}
+                  {STORE_CLOSED
+                    ? 'Tienda cerrada temporalmente'
+                    : isSubscription
+                      ? 'Suscribirme ahora'
+                      : 'Anadir al carrito'}
                 </button>
               </div>
             </div>
           </div>
 
           {/* Product details - Collapsible sections */}
-          <div className="max-w-3xl mb-20">
+          <div className="mb-20 max-w-3xl">
             <Collapsible
               title="Descripcion"
-              icon={<FileText className="w-5 h-5" />}
+              icon={<FileText className="h-5 w-5" />}
               defaultOpen={true}
             >
               <div className="prose-custom">
                 {product.description.split('\n\n').map((paragraph, index) => (
-                  <p key={index} className="mb-4 text-stone-600 whitespace-pre-line">
+                  <p key={index} className="mb-4 whitespace-pre-line text-stone-600">
                     {paragraph}
                   </p>
                 ))}
               </div>
             </Collapsible>
 
-            <Collapsible
-              title="Ingredientes"
-              icon={<List className="w-5 h-5" />}
-            >
+            <Collapsible title="Ingredientes" icon={<List className="h-5 w-5" />}>
               <p className="text-stone-600">{product.ingredients}</p>
             </Collapsible>
 
-            <Collapsible
-              title="Informacion nutricional"
-              icon={<BarChart2 className="w-5 h-5" />}
-            >
-              <p className="text-sm text-stone-400 mb-4">Por {product.nutritionalInfo.servingSize}</p>
-              <div className="bg-cream-50 rounded-xl p-4">
+            <Collapsible title="Informacion nutricional" icon={<BarChart2 className="h-5 w-5" />}>
+              <p className="mb-4 text-sm text-stone-400">
+                Por {product.nutritionalInfo.servingSize}
+              </p>
+              <div className="rounded-xl bg-cream-50 p-4">
                 <table className="w-full text-sm">
                   <tbody>
                     <tr className="border-b border-cream-200">
@@ -364,7 +392,7 @@ export default function ProductDetailPage() {
                       </td>
                     </tr>
                     <tr className="border-b border-cream-200">
-                      <td className="py-2.5 text-stone-500 pl-4">- Saturadas</td>
+                      <td className="py-2.5 pl-4 text-stone-500">- Saturadas</td>
                       <td className="py-2.5 text-right font-medium text-stone-700">
                         {product.nutritionalInfo.saturatedFat}g
                       </td>
@@ -376,7 +404,7 @@ export default function ProductDetailPage() {
                       </td>
                     </tr>
                     <tr className="border-b border-cream-200">
-                      <td className="py-2.5 text-stone-500 pl-4">- Azucares</td>
+                      <td className="py-2.5 pl-4 text-stone-500">- Azucares</td>
                       <td className="py-2.5 text-right font-medium text-stone-700">
                         {product.nutritionalInfo.sugars}g
                       </td>
@@ -404,11 +432,8 @@ export default function ProductDetailPage() {
               </div>
             </Collapsible>
 
-            <Collapsible
-              title="Alergenos"
-              icon={<AlertTriangle className="w-5 h-5" />}
-            >
-              <div className="bg-amber-50 rounded-xl p-4 border border-amber-200">
+            <Collapsible title="Alergenos" icon={<AlertTriangle className="h-5 w-5" />}>
+              <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
                 <p className="text-amber-800">{product.allergens}</p>
               </div>
             </Collapsible>
@@ -417,10 +442,10 @@ export default function ProductDetailPage() {
           {/* Related products */}
           {relatedProducts.length > 0 && (
             <section>
-              <h2 className="font-display text-2xl font-medium text-stone-800 mb-8">
+              <h2 className="mb-8 font-display text-2xl font-medium text-stone-800">
                 Tambien te puede gustar
               </h2>
-              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
                 {relatedProducts.map((p, index) => (
                   <div
                     key={p.id}

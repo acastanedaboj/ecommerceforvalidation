@@ -81,25 +81,25 @@ export function ImageGallery({
             <button
               type="button"
               onClick={handlePrevious}
-              className="absolute left-3 top-1/2 -translate-y-1/2 p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-soft hover:bg-white hover:shadow-soft-lg transition-all duration-300 focus-visible:ring-2 focus-visible:ring-earth-400 focus-visible:ring-offset-2"
+              className="absolute left-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 shadow-soft backdrop-blur-sm transition-all duration-300 hover:bg-white hover:shadow-soft-lg focus-visible:ring-2 focus-visible:ring-earth-400 focus-visible:ring-offset-2"
               aria-label="Imagen anterior"
             >
-              <ChevronLeft className="w-5 h-5 text-stone-600" />
+              <ChevronLeft className="h-5 w-5 text-stone-600" />
             </button>
             <button
               type="button"
               onClick={handleNext}
-              className="absolute right-3 top-1/2 -translate-y-1/2 p-2 bg-white/90 backdrop-blur-sm rounded-full shadow-soft hover:bg-white hover:shadow-soft-lg transition-all duration-300 focus-visible:ring-2 focus-visible:ring-earth-400 focus-visible:ring-offset-2"
+              className="absolute right-3 top-1/2 -translate-y-1/2 rounded-full bg-white/90 p-2 shadow-soft backdrop-blur-sm transition-all duration-300 hover:bg-white hover:shadow-soft-lg focus-visible:ring-2 focus-visible:ring-earth-400 focus-visible:ring-offset-2"
               aria-label="Imagen siguiente"
             >
-              <ChevronRight className="w-5 h-5 text-stone-600" />
+              <ChevronRight className="h-5 w-5 text-stone-600" />
             </button>
           </>
         )}
 
         {/* Image counter */}
         {hasMultipleImages && (
-          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 px-3 py-1.5 bg-stone-900/70 backdrop-blur-sm text-[#ffffec] text-xs font-medium rounded-full">
+          <div className="absolute bottom-3 left-1/2 -translate-x-1/2 rounded-full bg-stone-900/70 px-3 py-1.5 text-xs font-medium text-[#ffffec] backdrop-blur-sm">
             {selectedIndex + 1} / {images.length}
           </div>
         )}
@@ -107,14 +107,14 @@ export function ImageGallery({
 
       {/* Thumbnails */}
       {hasMultipleImages && (
-        <div className="flex gap-3 overflow-x-auto scrollbar-hide pb-1">
+        <div className="scrollbar-hide flex gap-3 overflow-x-auto pb-1">
           {images.map((image, index) => (
             <button
               key={index}
               type="button"
               onClick={() => setSelectedIndex(index)}
               className={cn(
-                'relative flex-shrink-0 w-20 h-20 rounded-xl overflow-hidden transition-all duration-300',
+                'relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl transition-all duration-300',
                 'focus-visible:ring-2 focus-visible:ring-earth-400 focus-visible:ring-offset-2',
                 selectedIndex === index
                   ? 'ring-2 ring-earth-500 ring-offset-2'
@@ -144,10 +144,8 @@ export function ImageGallery({
               type="button"
               onClick={() => setSelectedIndex(index)}
               className={cn(
-                'w-2 h-2 rounded-full transition-all duration-300',
-                selectedIndex === index
-                  ? 'w-6 bg-earth-500'
-                  : 'bg-stone-300 hover:bg-stone-400'
+                'h-2 w-2 rounded-full transition-all duration-300',
+                selectedIndex === index ? 'w-6 bg-earth-500' : 'bg-stone-300 hover:bg-stone-400'
               )}
               aria-label={`Ir a imagen ${index + 1}`}
             />

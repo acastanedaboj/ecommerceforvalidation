@@ -63,71 +63,71 @@ export default function AjustesPage() {
   return (
     <div className="space-y-6">
       {/* Profile settings */}
-      <div className="bg-white rounded-2xl shadow-soft p-6 sm:p-8">
-        <div className="flex items-center gap-3 mb-6">
-          <Settings className="w-6 h-6 text-earth-600" strokeWidth={1.5} />
-          <h2 className="text-xl font-serif text-stone-800">Ajustes de cuenta</h2>
+      <div className="rounded-2xl bg-white p-6 shadow-soft sm:p-8">
+        <div className="mb-6 flex items-center gap-3">
+          <Settings className="h-6 w-6 text-earth-600" strokeWidth={1.5} />
+          <h2 className="font-serif text-xl text-stone-800">Ajustes de cuenta</h2>
         </div>
 
         <div className="space-y-6">
           {/* Email */}
-          <div className="flex items-start gap-4 pb-6 border-b border-cream-100">
-            <div className="w-10 h-10 bg-cream-100 rounded-xl flex items-center justify-center flex-shrink-0">
-              <Mail className="w-5 h-5 text-stone-600" strokeWidth={1.5} />
+          <div className="flex items-start gap-4 border-b border-cream-100 pb-6">
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-cream-100">
+              <Mail className="h-5 w-5 text-stone-600" strokeWidth={1.5} />
             </div>
             <div className="flex-1">
-              <h3 className="font-medium text-stone-800 mb-1">Correo electronico</h3>
+              <h3 className="mb-1 font-medium text-stone-800">Correo electronico</h3>
               <p className="text-stone-500">{session?.user?.email}</p>
-              <p className="text-sm text-stone-400 mt-2">
-                {session?.user?.image ? 'Vinculado con tu cuenta de Google' : 'Cuenta con email y contraseña'}
+              <p className="mt-2 text-sm text-stone-400">
+                {session?.user?.image
+                  ? 'Vinculado con tu cuenta de Google'
+                  : 'Cuenta con email y contraseña'}
               </p>
             </div>
           </div>
 
           {/* Notifications */}
-          <div className="flex items-start gap-4 pb-6 border-b border-cream-100">
-            <div className="w-10 h-10 bg-cream-100 rounded-xl flex items-center justify-center flex-shrink-0">
-              <Bell className="w-5 h-5 text-stone-600" strokeWidth={1.5} />
+          <div className="flex items-start gap-4 border-b border-cream-100 pb-6">
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-cream-100">
+              <Bell className="h-5 w-5 text-stone-600" strokeWidth={1.5} />
             </div>
             <div className="flex-1">
-              <h3 className="font-medium text-stone-800 mb-1">Notificaciones</h3>
-              <p className="text-stone-500 text-sm mb-4">
-                Gestiona las comunicaciones que recibes
-              </p>
+              <h3 className="mb-1 font-medium text-stone-800">Notificaciones</h3>
+              <p className="mb-4 text-sm text-stone-500">Gestiona las comunicaciones que recibes</p>
               <div className="space-y-3">
-                <label className="flex items-center gap-3 cursor-pointer">
+                <label className="flex cursor-pointer items-center gap-3">
                   <input
                     type="checkbox"
                     defaultChecked
                     disabled
-                    className="w-4 h-4 text-earth-600 border-cream-300 rounded focus:ring-earth-500"
+                    className="h-4 w-4 rounded border-cream-300 text-earth-600 focus:ring-earth-500"
                   />
                   <span className="text-stone-700">Actualizaciones de pedidos</span>
                   <span className="text-xs text-stone-400">(siempre activo)</span>
                 </label>
-                <label className="flex items-center gap-3 cursor-pointer">
+                <label className="flex cursor-pointer items-center gap-3">
                   <input
                     type="checkbox"
                     defaultChecked
                     disabled
-                    className="w-4 h-4 text-earth-600 border-cream-300 rounded focus:ring-earth-500"
+                    className="h-4 w-4 rounded border-cream-300 text-earth-600 focus:ring-earth-500"
                   />
                   <span className="text-stone-700">Recordatorios de suscripcion</span>
                   <span className="text-xs text-stone-400">(siempre activo)</span>
                 </label>
-                <label className="flex items-center gap-3 cursor-pointer">
+                <label className="flex cursor-pointer items-center gap-3">
                   <input
                     type="checkbox"
                     checked={acceptsNewsletter}
                     onChange={(e) => handleNewsletterChange(e.target.checked)}
                     disabled={isLoading || isSaving}
-                    className="w-4 h-4 text-earth-600 border-cream-300 rounded focus:ring-earth-500"
+                    className="h-4 w-4 rounded border-cream-300 text-earth-600 focus:ring-earth-500"
                   />
                   <span className="text-stone-700">Ofertas, recetas y novedades</span>
                   {isSaving && <span className="text-xs text-stone-400">Guardando...</span>}
                   {saveSuccess && (
-                    <span className="text-xs text-green-600 flex items-center gap-1">
-                      <Check className="w-3 h-3" /> Guardado
+                    <span className="flex items-center gap-1 text-xs text-green-600">
+                      <Check className="h-3 w-3" /> Guardado
                     </span>
                   )}
                 </label>
@@ -137,24 +137,22 @@ export default function AjustesPage() {
 
           {/* Privacy */}
           <div className="flex items-start gap-4">
-            <div className="w-10 h-10 bg-cream-100 rounded-xl flex items-center justify-center flex-shrink-0">
-              <Shield className="w-5 h-5 text-stone-600" strokeWidth={1.5} />
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-cream-100">
+              <Shield className="h-5 w-5 text-stone-600" strokeWidth={1.5} />
             </div>
             <div className="flex-1">
-              <h3 className="font-medium text-stone-800 mb-1">Privacidad</h3>
-              <p className="text-stone-500 text-sm mb-4">
-                Tus datos estan seguros con nosotros
-              </p>
+              <h3 className="mb-1 font-medium text-stone-800">Privacidad</h3>
+              <p className="mb-4 text-sm text-stone-500">Tus datos estan seguros con nosotros</p>
               <div className="flex flex-wrap gap-3">
                 <a
                   href="/legal/privacidad"
-                  className="text-sm text-earth-600 hover:text-earth-700 underline"
+                  className="text-sm text-earth-600 underline hover:text-earth-700"
                 >
                   Politica de privacidad
                 </a>
                 <a
                   href="/legal/cookies"
-                  className="text-sm text-earth-600 hover:text-earth-700 underline"
+                  className="text-sm text-earth-600 underline hover:text-earth-700"
                 >
                   Politica de cookies
                 </a>
@@ -165,16 +163,17 @@ export default function AjustesPage() {
       </div>
 
       {/* Danger zone */}
-      <div className="bg-white rounded-2xl shadow-soft p-6 sm:p-8 border border-red-100">
-        <h3 className="font-medium text-stone-800 mb-4">Cerrar sesion</h3>
-        <p className="text-stone-500 text-sm mb-4">
-          Cerraras la sesion en este dispositivo. Podras volver a iniciar sesion en cualquier momento.
+      <div className="rounded-2xl border border-red-100 bg-white p-6 shadow-soft sm:p-8">
+        <h3 className="mb-4 font-medium text-stone-800">Cerrar sesion</h3>
+        <p className="mb-4 text-sm text-stone-500">
+          Cerraras la sesion en este dispositivo. Podras volver a iniciar sesion en cualquier
+          momento.
         </p>
         <button
           onClick={() => signOut({ callbackUrl: '/' })}
-          className="inline-flex items-center gap-2 px-4 py-2 bg-red-50 text-red-600 rounded-xl hover:bg-red-100 transition-colors"
+          className="inline-flex items-center gap-2 rounded-xl bg-red-50 px-4 py-2 text-red-600 transition-colors hover:bg-red-100"
         >
-          <LogOut className="w-4 h-4" />
+          <LogOut className="h-4 w-4" />
           <span>Cerrar sesion</span>
         </button>
       </div>

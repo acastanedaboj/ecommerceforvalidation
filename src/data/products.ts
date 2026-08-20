@@ -217,7 +217,8 @@ export const categories = [
     id: 'cat_granola',
     name: 'Granola 150g',
     slug: 'granola-150g',
-    description: 'Nuestra línea de granola Poppy en formato 150g, perfecta para consumo individual.',
+    description:
+      'Nuestra línea de granola Poppy en formato 150g, perfecta para consumo individual.',
     image: '/images/categories/granola-150g.jpg',
   },
   {

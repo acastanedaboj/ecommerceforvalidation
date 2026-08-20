@@ -55,18 +55,18 @@ function LoginContent() {
 
   if (status === 'loading') {
     return (
-      <div className="min-h-[60vh] flex items-center justify-center">
+      <div className="flex min-h-[60vh] items-center justify-center">
         <div className="animate-pulse text-stone-500">Cargando...</div>
       </div>
     );
   }
 
   return (
-    <div className="min-h-[60vh] flex items-center justify-center py-12 px-4">
-      <div className="max-w-md w-full">
+    <div className="flex min-h-[60vh] items-center justify-center px-4 py-12">
+      <div className="w-full max-w-md">
         {/* Header */}
-        <div className="text-center mb-10">
-          <Link href="/" className="inline-block mb-8">
+        <div className="mb-10 text-center">
+          <Link href="/" className="mb-8 inline-block">
             <Image
               src="/images/logo.svg"
               alt="Poppy"
@@ -76,9 +76,7 @@ function LoginContent() {
               priority
             />
           </Link>
-          <h1 className="font-display text-3xl font-medium text-stone-800 mb-3">
-            Iniciar sesion
-          </h1>
+          <h1 className="mb-3 font-display text-3xl font-medium text-stone-800">Iniciar sesion</h1>
           <p className="text-stone-500">
             Accede a tu cuenta para gestionar tus pedidos y suscripciones
           </p>
@@ -86,7 +84,7 @@ function LoginContent() {
 
         {/* Error message */}
         {(error || formError) && (
-          <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-xl text-red-700 text-sm">
+          <div className="mb-6 rounded-xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
             {formError ||
               (error === 'OAuthSignin' && 'Error al iniciar sesion con el proveedor.') ||
               (error === 'OAuthCallback' && 'Error en la respuesta del proveedor.') ||
@@ -98,9 +96,9 @@ function LoginContent() {
         )}
 
         {/* Login card */}
-        <div className="bg-white rounded-2xl shadow-soft p-8">
+        <div className="rounded-2xl bg-white p-8 shadow-soft">
           {/* Email/Password form */}
-          <form onSubmit={handleCredentialsLogin} className="space-y-4 mb-6">
+          <form onSubmit={handleCredentialsLogin} className="mb-6 space-y-4">
             <Input
               label="Email"
               type="email"
@@ -123,7 +121,7 @@ function LoginContent() {
                 onClick={() => setShowPassword(!showPassword)}
                 className="absolute right-3 top-9 text-stone-400 hover:text-stone-600"
               >
-                {showPassword ? <EyeOff className="w-5 h-5" /> : <Eye className="w-5 h-5" />}
+                {showPassword ? <EyeOff className="h-5 w-5" /> : <Eye className="h-5 w-5" />}
               </button>
             </div>
             <Button type="submit" variant="primary" className="w-full" disabled={isLoading}>
@@ -132,9 +130,9 @@ function LoginContent() {
           </form>
 
           {/* Register link */}
-          <p className="text-center text-sm text-stone-500 mb-6">
+          <p className="mb-6 text-center text-sm text-stone-500">
             ¿No tienes cuenta?{' '}
-            <Link href="/auth/register" className="text-earth-600 hover:text-earth-700 font-medium">
+            <Link href="/auth/register" className="font-medium text-earth-600 hover:text-earth-700">
               Registrate
             </Link>
           </p>
@@ -145,16 +143,16 @@ function LoginContent() {
               <div className="w-full border-t border-cream-200"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-white text-stone-400">o continua con</span>
+              <span className="bg-white px-4 text-stone-400">o continua con</span>
             </div>
           </div>
 
           {/* Google Sign In */}
           <button
             onClick={() => signIn('google', { callbackUrl })}
-            className="w-full flex items-center justify-center gap-3 px-6 py-4 border-2 border-cream-200 rounded-xl hover:border-cream-300 hover:bg-cream-50 transition-all duration-300 group"
+            className="group flex w-full items-center justify-center gap-3 rounded-xl border-2 border-cream-200 px-6 py-4 transition-all duration-300 hover:border-cream-300 hover:bg-cream-50"
           >
-            <svg className="w-5 h-5" viewBox="0 0 24 24">
+            <svg className="h-5 w-5" viewBox="0 0 24 24">
               <path
                 fill="#4285F4"
                 d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"
@@ -183,16 +181,16 @@ function LoginContent() {
               <div className="w-full border-t border-cream-200"></div>
             </div>
             <div className="relative flex justify-center text-sm">
-              <span className="px-4 bg-white text-stone-400">o</span>
+              <span className="bg-white px-4 text-stone-400">o</span>
             </div>
           </div>
 
           {/* Guest checkout info */}
           <div className="text-center">
-            <p className="text-sm text-stone-500 mb-4">Tambien puedes comprar sin cuenta</p>
+            <p className="mb-4 text-sm text-stone-500">Tambien puedes comprar sin cuenta</p>
             <Link
               href="/tienda"
-              className="text-earth-600 hover:text-earth-700 font-medium text-sm"
+              className="text-sm font-medium text-earth-600 hover:text-earth-700"
             >
               Ir a la tienda →
             </Link>
@@ -217,7 +215,7 @@ function LoginContent() {
 
 function LoginLoading() {
   return (
-    <div className="min-h-[60vh] flex items-center justify-center">
+    <div className="flex min-h-[60vh] items-center justify-center">
       <div className="animate-pulse text-stone-500">Cargando...</div>
     </div>
   );

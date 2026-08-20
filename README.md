@@ -35,22 +35,26 @@ E-commerce platform for artisanal granola products. Built with Next.js 14, Tailw
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/your-username/granola-artesanal.git
 cd granola-artesanal
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Set up environment variables:
+
 ```bash
 cp .env.example .env.local
 ```
 
 Edit `.env.local` with your configuration:
+
 ```env
 DATABASE_URL="postgresql://user:password@localhost:5432/granola_db"
 STRIPE_SECRET_KEY=sk_test_xxx
@@ -59,6 +63,7 @@ STRIPE_WEBHOOK_SECRET=whsec_xxx
 ```
 
 4. Set up the database:
+
 ```bash
 npm run db:generate
 npm run db:push
@@ -66,6 +71,7 @@ npm run db:seed
 ```
 
 5. Start the development server:
+
 ```bash
 npm run dev
 ```
@@ -74,16 +80,16 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 ## Available Scripts
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint |
-| `npm run format` | Format code with Prettier |
-| `npm run test` | Run unit tests |
-| `npm run test:e2e` | Run E2E tests with Playwright |
-| `npm run db:studio` | Open Prisma Studio |
+| Command             | Description                   |
+| ------------------- | ----------------------------- |
+| `npm run dev`       | Start development server      |
+| `npm run build`     | Build for production          |
+| `npm run start`     | Start production server       |
+| `npm run lint`      | Run ESLint                    |
+| `npm run format`    | Format code with Prettier     |
+| `npm run test`      | Run unit tests                |
+| `npm run test:e2e`  | Run E2E tests with Playwright |
+| `npm run db:studio` | Open Prisma Studio            |
 
 ## Project Structure
 
@@ -115,13 +121,13 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 ## Pricing Rules
 
-| Option | Discount | Unit Price | Shipping |
-|--------|----------|------------|----------|
-| 1 unit | - | 9,00€ | 4,95€ |
-| Pack 3 | 3% | 8,73€ | 4,95€ |
-| Pack 4 | 5% | 8,55€ | Free |
-| Pack 6 | 10% | 8,10€ | Free |
-| Subscription | 15% | 7,65€ | Free |
+| Option       | Discount | Unit Price | Shipping |
+| ------------ | -------- | ---------- | -------- |
+| 1 unit       | -        | 9,00€      | 4,95€    |
+| Pack 3       | 3%       | 8,73€      | 4,95€    |
+| Pack 4       | 5%       | 8,55€      | Free     |
+| Pack 6       | 10%      | 8,10€      | Free     |
+| Subscription | 15%      | 7,65€      | Free     |
 
 **Free shipping**: Orders with 4+ items OR total >= 35€
 
@@ -129,10 +135,10 @@ Visit [http://localhost:3000](http://localhost:3000)
 
 Use these test cards in Stripe test mode:
 
-| Card Number | Result |
-|-------------|--------|
-| 4242 4242 4242 4242 | Success |
-| 4000 0000 0000 0002 | Declined |
+| Card Number         | Result                  |
+| ------------------- | ----------------------- |
+| 4242 4242 4242 4242 | Success                 |
+| 4000 0000 0000 0002 | Declined                |
 | 4000 0025 0000 3155 | Requires authentication |
 
 Use any future expiry date and any 3-digit CVC.
@@ -140,21 +146,25 @@ Use any future expiry date and any 3-digit CVC.
 ### Local Webhook Testing
 
 1. Install Stripe CLI:
+
 ```bash
 brew install stripe/stripe-cli/stripe
 ```
 
 2. Login to Stripe:
+
 ```bash
 stripe login
 ```
 
 3. Forward webhooks to local:
+
 ```bash
 stripe listen --forward-to localhost:3000/api/webhooks/stripe
 ```
 
 4. Copy the webhook secret to `.env.local`:
+
 ```env
 STRIPE_WEBHOOK_SECRET=whsec_xxx
 ```

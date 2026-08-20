@@ -26,21 +26,22 @@ Este documento resume la implementación SEO del sitio y sirve como checklist pa
 
 ## Metadata por Página
 
-| Página | generateMetadata | Canonical | Open Graph | JSON-LD |
-|--------|------------------|-----------|------------|---------|
-| Home (`/`) | ✅ | ✅ | ✅ | - |
-| Tienda (`/tienda`) | ✅ (layout) | ✅ | ✅ | ProductList, Breadcrumb |
-| PDP (`/tienda/[slug]`) | ✅ (layout) | ✅ | ✅ | Product, Breadcrumb |
-| Blog (`/blog`) | ✅ | ✅ | ✅ | Breadcrumb |
-| Blog Post (`/blog/[slug]`) | ✅ | ✅ | ✅ | Article, Breadcrumb |
-| FAQ (`/faq`) | ✅ | ✅ | ✅ | FAQPage, Breadcrumb |
-| Suscripción (`/suscripcion`) | ✅ | ✅ | ✅ | Breadcrumb |
-| Nosotros (`/nosotros`) | ✅ | ✅ | ✅ | Breadcrumb |
-| Contacto (`/contacto`) | ✅ (layout) | ✅ | ✅ | LocalBusiness, Breadcrumb |
+| Página                       | generateMetadata | Canonical | Open Graph | JSON-LD                   |
+| ---------------------------- | ---------------- | --------- | ---------- | ------------------------- |
+| Home (`/`)                   | ✅               | ✅        | ✅         | -                         |
+| Tienda (`/tienda`)           | ✅ (layout)      | ✅        | ✅         | ProductList, Breadcrumb   |
+| PDP (`/tienda/[slug]`)       | ✅ (layout)      | ✅        | ✅         | Product, Breadcrumb       |
+| Blog (`/blog`)               | ✅               | ✅        | ✅         | Breadcrumb                |
+| Blog Post (`/blog/[slug]`)   | ✅               | ✅        | ✅         | Article, Breadcrumb       |
+| FAQ (`/faq`)                 | ✅               | ✅        | ✅         | FAQPage, Breadcrumb       |
+| Suscripción (`/suscripcion`) | ✅               | ✅        | ✅         | Breadcrumb                |
+| Nosotros (`/nosotros`)       | ✅               | ✅        | ✅         | Breadcrumb                |
+| Contacto (`/contacto`)       | ✅ (layout)      | ✅        | ✅         | LocalBusiness, Breadcrumb |
 
 ## JSON-LD Schemas Implementados
 
 ### Organization Schema
+
 ```json
 {
   "@type": "Organization",
@@ -55,6 +56,7 @@ Este documento resume la implementación SEO del sitio y sirve como checklist pa
 ```
 
 ### WebSite Schema (con SearchAction)
+
 ```json
 {
   "@type": "WebSite",
@@ -66,6 +68,7 @@ Este documento resume la implementación SEO del sitio y sirve como checklist pa
 ```
 
 ### Product Schema (en PDP)
+
 - name, description, image, url, sku
 - brand, manufacturer
 - offers (price, availability, shipping)
@@ -73,28 +76,34 @@ Este documento resume la implementación SEO del sitio y sirve como checklist pa
 - aggregateRating (placeholder)
 
 ### FAQPage Schema (en /faq)
+
 - Todas las preguntas frecuentes
 - Question + Answer format
 
 ### Article Schema (en posts de blog)
+
 - headline, description, image
 - datePublished, dateModified
 - author, publisher
 - wordCount, timeRequired
 
 ### BreadcrumbList Schema
+
 - En todas las páginas internas
 - Navegación jerárquica
 
 ### ProductList Schema (en /tienda)
+
 - Lista de productos con posiciones
 
 ### LocalBusiness Schema (en /contacto)
+
 - Información de negocio local
 
 ## Sitemap y Robots
 
 ### Sitemap (`/sitemap.xml`)
+
 - [x] Generado dinámicamente
 - [x] Incluye todas las páginas estáticas
 - [x] Incluye todos los productos (solo retail)
@@ -103,13 +112,15 @@ Este documento resume la implementación SEO del sitio y sirve como checklist pa
 - [x] `changeFrequency` y `priority` por tipo de página
 
 ### Robots.txt (`/robots.txt`)
+
 - [x] Allow: / (permite todo por defecto)
-- [x] Disallow rutas privadas (/api/, /checkout/, /cuenta/, /auth/, /_next/, /admin/)
+- [x] Disallow rutas privadas (/api/, /checkout/, /cuenta/, /auth/, /\_next/, /admin/)
 - [x] Sitemap URL incluido
 
 ## Contenido SEO
 
 ### Blog Posts
+
 - [x] 12 artículos con contenido de calidad
 - [x] Keywords relevantes en títulos
 - [x] Meta descriptions optimizadas
@@ -117,6 +128,7 @@ Este documento resume la implementación SEO del sitio y sirve como checklist pa
 - [x] Tags para búsqueda interna
 
 ### Productos
+
 - [x] metaTitle con keywords
 - [x] metaDescription < 160 caracteres
 - [x] Descripciones largas con keywords naturales
@@ -124,6 +136,7 @@ Este documento resume la implementación SEO del sitio y sirve como checklist pa
 - [x] Alérgenos declarados
 
 ### FAQs
+
 - [x] Preguntas reales de clientes
 - [x] Respuestas completas con keywords
 - [x] Categorización por tema
@@ -131,11 +144,13 @@ Este documento resume la implementación SEO del sitio y sirve como checklist pa
 ## Elementos Visuales
 
 ### Breadcrumbs Visibles
+
 - [x] En `/tienda` (Inicio > Tienda)
 - [x] En PDP (Inicio > Tienda > Producto)
 - [x] En blog posts (link "Volver al blog")
 
 ### Accesibilidad
+
 - [x] `aria-label` en breadcrumbs
 - [x] Semántica HTML correcta
 - [x] Skip to content link
@@ -195,20 +210,23 @@ curl http://localhost:3000/robots.txt
 ## Mantenimiento Continuo
 
 ### Semanal
+
 - Revisar Search Console para errores
 - Monitorear posiciones de keywords principales
 
 ### Mensual
+
 - Publicar nuevos posts de blog
 - Actualizar FAQs con nuevas preguntas
 - Revisar y actualizar meta descriptions
 
 ### Trimestral
+
 - Auditoría SEO completa
 - Revisar y actualizar keywords
 - Análisis de competencia
 
 ---
 
-*Última actualización: Enero 2024*
-*Implementado por: Claude Code*
+_Última actualización: Enero 2024_
+_Implementado por: Claude Code_

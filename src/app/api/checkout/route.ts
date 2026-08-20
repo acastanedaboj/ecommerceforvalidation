@@ -41,10 +41,7 @@ export async function POST(request: NextRequest) {
 
     // Validate items
     if (!items || items.length === 0) {
-      return NextResponse.json(
-        { error: 'El carrito está vacío' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'El carrito está vacío' }, { status: 400 });
     }
 
     // Calculate totals with coupon if provided
@@ -74,9 +71,10 @@ export async function POST(request: NextRequest) {
       }))
     ).subtotalCents;
 
-    const couponDiscountRatio = couponDiscountCents && subtotalBeforeCoupon > 0
-      ? couponDiscountCents / subtotalBeforeCoupon
-      : 0;
+    const couponDiscountRatio =
+      couponDiscountCents && subtotalBeforeCoupon > 0
+        ? couponDiscountCents / subtotalBeforeCoupon
+        : 0;
 
     // Build line items for Stripe
     const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = items.map((item) => {
@@ -178,15 +176,9 @@ export async function POST(request: NextRequest) {
     console.error('Stripe checkout error:', error);
 
     if (error instanceof Stripe.errors.StripeError) {
-      return NextResponse.json(
-        { error: error.message },
-        { status: error.statusCode || 500 }
-      );
+      return NextResponse.json({ error: error.message }, { status: error.statusCode || 500 });
     }
 
-    return NextResponse.json(
-      { error: 'Error al procesar el checkout' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Error al procesar el checkout' }, { status: 500 });
   }
 }

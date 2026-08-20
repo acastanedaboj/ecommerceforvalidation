@@ -27,15 +27,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40">
       {/* Announcement bar - Modern & Clean */}
-      <div className="text-center py-2.5 px-4" style={{ backgroundColor: '#333333' }}>
-        <p className="text-sm tracking-wide font-medium" style={{ color: '#FFFFEC' }}>
+      <div className="px-4 py-2.5 text-center" style={{ backgroundColor: '#333333' }}>
+        <p className="text-sm font-medium tracking-wide" style={{ color: '#FFFFEC' }}>
           <span className="font-semibold">Envio gratis</span>
-          <span className="mx-2">|</span>
-          a partir de 4 bolsas o 35 EUR
+          <span className="mx-2">|</span>a partir de 4 bolsas o 35 EUR
           <span className="mx-2">|</span>
           <Link
             href="/suscripcion"
-            className="underline underline-offset-2 hover:opacity-80 transition-opacity font-semibold"
+            className="font-semibold underline underline-offset-2 transition-opacity hover:opacity-80"
             style={{ color: '#FFFFEC' }}
           >
             Suscribete y ahorra 15%
@@ -47,19 +46,14 @@ export function Header() {
       <nav
         className={cn(
           'transition-all duration-300',
-          isScrolled
-            ? 'bg-white/95 backdrop-blur-md shadow-soft'
-            : 'bg-white'
+          isScrolled ? 'bg-white/95 shadow-soft backdrop-blur-md' : 'bg-white'
         )}
         aria-label="Navegacion principal"
       >
         <div className="container-custom">
-          <div className="flex items-center justify-between h-18 md:h-22">
+          <div className="flex h-18 items-center justify-between md:h-22">
             {/* Logo */}
-            <Link
-              href="/"
-              className="group flex items-center"
-            >
+            <Link href="/" className="group flex items-center">
               <Image
                 src="/images/logo.svg"
                 alt={BUSINESS.name}
@@ -71,12 +65,12 @@ export function Header() {
             </Link>
 
             {/* Desktop Navigation - Clean & Minimal */}
-            <div className="hidden lg:flex items-center gap-10">
+            <div className="hidden items-center gap-10 lg:flex">
               {NAVIGATION.main.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="link-underline text-stone-800 hover:text-earth-600 font-medium text-sm tracking-wide transition-colors"
+                  className="link-underline text-sm font-medium tracking-wide text-stone-800 transition-colors hover:text-earth-600"
                 >
                   {item.name}
                 </Link>
@@ -92,12 +86,12 @@ export function Header() {
               <button
                 type="button"
                 onClick={toggleCart}
-                className="relative p-3 text-stone-800 hover:text-earth-600 hover:bg-cream-200/50 rounded-full transition-all"
+                className="relative rounded-full p-3 text-stone-800 transition-all hover:bg-cream-200/50 hover:text-earth-600"
                 aria-label={`Carrito de compra (${itemCount} productos)`}
               >
-                <ShoppingBag className="w-5 h-5" strokeWidth={1.5} />
+                <ShoppingBag className="h-5 w-5" strokeWidth={1.5} />
                 {itemCount > 0 && (
-                  <span className="absolute top-1 right-1 bg-earth-600 text-[#ffffec] text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
+                  <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-earth-600 text-[10px] font-bold text-[#ffffec]">
                     {itemCount > 9 ? '9+' : itemCount}
                   </span>
                 )}
@@ -107,15 +101,15 @@ export function Header() {
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-3 text-stone-800 hover:text-earth-600 hover:bg-cream-200/50 rounded-full transition-all ml-1"
+                className="ml-1 rounded-full p-3 text-stone-800 transition-all hover:bg-cream-200/50 hover:text-earth-600 lg:hidden"
                 aria-expanded={isMobileMenuOpen}
                 aria-controls="mobile-menu"
                 aria-label={isMobileMenuOpen ? 'Cerrar menu' : 'Abrir menu'}
               >
                 {isMobileMenuOpen ? (
-                  <X className="w-5 h-5" strokeWidth={1.5} />
+                  <X className="h-5 w-5" strokeWidth={1.5} />
                 ) : (
-                  <Menu className="w-5 h-5" strokeWidth={1.5} />
+                  <Menu className="h-5 w-5" strokeWidth={1.5} />
                 )}
               </button>
             </div>
@@ -126,8 +120,8 @@ export function Header() {
         <div
           id="mobile-menu"
           className={cn(
-            'lg:hidden overflow-hidden transition-all duration-400 ease-out border-t border-stone-200',
-            isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0 border-transparent'
+            'overflow-hidden border-t border-stone-200 transition-all duration-400 ease-out lg:hidden',
+            isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 border-transparent opacity-0'
           )}
         >
           <div className="container-custom py-6">
@@ -138,8 +132,8 @@ export function Header() {
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    'px-4 py-3.5 text-stone-800 hover:text-earth-600 hover:bg-cream-100 rounded-xl font-medium transition-all',
-                    'animate-fade-in-up',
+                    'rounded-xl px-4 py-3.5 font-medium text-stone-800 transition-all hover:bg-cream-100 hover:text-earth-600',
+                    'animate-fade-in-up'
                   )}
                   style={{ animationDelay: `${index * 50}ms` }}
                 >
@@ -149,7 +143,7 @@ export function Header() {
             </div>
 
             {/* Mobile CTA */}
-            <div className="mt-6 pt-6 border-t border-stone-200">
+            <div className="mt-6 border-t border-stone-200 pt-6">
               <Link
                 href="/tienda"
                 onClick={() => setIsMobileMenuOpen(false)}

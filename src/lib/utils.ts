@@ -14,10 +14,7 @@ export function cn(...inputs: ClassValue[]) {
  * @param cents - Price in cents (e.g., 900 for 9.00€)
  * @param options - Intl.NumberFormat options
  */
-export function formatPrice(
-  cents: number,
-  options: Intl.NumberFormatOptions = {}
-): string {
+export function formatPrice(cents: number, options: Intl.NumberFormatOptions = {}): string {
   const euros = cents / 100;
   const formatted = new Intl.NumberFormat(CURRENCY.locale, {
     style: 'currency',
@@ -56,10 +53,7 @@ export function centsToEuros(cents: number): number {
 /**
  * Calculates the percentage saved
  */
-export function calculateSavingsPercentage(
-  originalCents: number,
-  discountedCents: number
-): number {
+export function calculateSavingsPercentage(originalCents: number, discountedCents: number): number {
   if (originalCents === 0) return 0;
   return Math.round(((originalCents - discountedCents) / originalCents) * 100);
 }

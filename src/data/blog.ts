@@ -1360,7 +1360,17 @@ Ninguna diferencia nutricional ni de sabor. La única diferencia es el proceso d
     author: 'Equipo Poppy',
     publishedAt: '2026-02-17',
     readingTime: 12,
-    tags: ['avena', 'sin-gluten', 'celiacos', 'nutricion', 'certificacion', 'guia', 'contaminacion-cruzada', 'seguridad-alimentaria', 'etiquetado'],
+    tags: [
+      'avena',
+      'sin-gluten',
+      'celiacos',
+      'nutricion',
+      'certificacion',
+      'guia',
+      'contaminacion-cruzada',
+      'seguridad-alimentaria',
+      'etiquetado',
+    ],
     metaTitle: 'Contaminación Cruzada del Gluten en Avena: Guía Completa | Poppy',
     metaDescription:
       'Cadena de contaminación cruzada del gluten en avena paso a paso: campo, cosecha, molino y obrador. Cómo verificar etiquetas y elegir avena realmente segura para celíacos.',

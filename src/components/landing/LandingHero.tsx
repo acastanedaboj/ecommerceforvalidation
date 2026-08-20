@@ -27,17 +27,17 @@ export function LandingHero({
   image,
 }: LandingHeroProps) {
   return (
-    <section className="relative bg-white overflow-hidden">
-      <div className="container-custom pt-10 pb-16 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+    <section className="relative overflow-hidden bg-white">
+      <div className="container-custom pb-16 pt-10 md:pb-24 md:pt-14 lg:pb-28 lg:pt-16">
+        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Content */}
-          <div className="text-center lg:text-left max-w-xl mx-auto lg:mx-0">
+          <div className="mx-auto max-w-xl text-center lg:mx-0 lg:text-left">
             {badges && badges.length > 0 && (
-              <div className="flex flex-wrap gap-2 justify-center lg:justify-start mb-6">
+              <div className="mb-6 flex flex-wrap justify-center gap-2 lg:justify-start">
                 {badges.map((badge, index) => (
                   <span
                     key={index}
-                    className="inline-block text-xs tracking-widest uppercase text-earth-600 bg-earth-100 px-3 py-1 rounded-full"
+                    className="inline-block rounded-full bg-earth-100 px-3 py-1 text-xs uppercase tracking-widest text-earth-600"
                   >
                     {badge}
                   </span>
@@ -45,7 +45,7 @@ export function LandingHero({
               </div>
             )}
 
-            <h1 className="font-display text-stone-800 mb-6">
+            <h1 className="mb-6 font-display text-stone-800">
               {title}
               {highlight && (
                 <>
@@ -55,14 +55,12 @@ export function LandingHero({
               )}
             </h1>
 
-            <p className="text-base md:text-lg text-stone-600 mb-10 leading-relaxed">
-              {subtitle}
-            </p>
+            <p className="mb-10 text-base leading-relaxed text-stone-600 md:text-lg">{subtitle}</p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
               <Link href={ctaHref} className="btn-primary btn-lg group">
                 {ctaText}
-                <ArrowRight className="w-4 h-4 ml-2 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               {secondaryCta && (
                 <Link href={secondaryCta.href} className="btn-outline btn-lg">
@@ -75,8 +73,8 @@ export function LandingHero({
           {/* Image */}
           {image && (
             <div className="relative">
-              <div className="relative aspect-[4/5] max-w-lg mx-auto">
-                <div className="relative w-full h-full overflow-hidden rounded-lg">
+              <div className="relative mx-auto aspect-[4/5] max-w-lg">
+                <div className="relative h-full w-full overflow-hidden rounded-lg">
                   <Image
                     src={image}
                     alt={title}

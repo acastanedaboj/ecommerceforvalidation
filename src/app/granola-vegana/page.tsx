@@ -120,27 +120,25 @@ export default function GranolaVeganaPage() {
       />
 
       {/* Transparencia Section */}
-      <section className="py-16 bg-stone-50">
+      <section className="bg-stone-50 py-16">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-display text-2xl text-stone-800 mb-4">
-              {comparison.title}
-            </h2>
-            <p className="text-stone-600 mb-8">{comparison.description}</p>
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="mb-4 font-display text-2xl text-stone-800">{comparison.title}</h2>
+            <p className="mb-8 text-stone-600">{comparison.description}</p>
 
-            <div className="bg-white rounded-lg p-6 shadow-sm">
+            <div className="rounded-lg bg-white p-6 shadow-sm">
               <table className="w-full text-left">
                 <thead>
                   <tr className="border-b border-stone-200">
-                    <th className="py-3 text-stone-800 font-medium">Producto</th>
-                    <th className="py-3 text-stone-800 font-medium text-center">Vegano</th>
-                    <th className="py-3 text-stone-800 font-medium text-center">Endulzante</th>
+                    <th className="py-3 font-medium text-stone-800">Producto</th>
+                    <th className="py-3 text-center font-medium text-stone-800">Vegano</th>
+                    <th className="py-3 text-center font-medium text-stone-800">Endulzante</th>
                   </tr>
                 </thead>
                 <tbody className="text-stone-600">
                   <tr className="border-b border-stone-100 bg-olive-50">
                     <td className="py-3 font-medium text-stone-800">Granola de Dátiles</td>
-                    <td className="py-3 text-center text-olive-600 font-semibold">Sí ✓</td>
+                    <td className="py-3 text-center font-semibold text-olive-600">Sí ✓</td>
                     <td className="py-3 text-center">Dátiles + Sirope de agave</td>
                   </tr>
                   <tr className="border-b border-stone-100">
@@ -157,7 +155,7 @@ export default function GranolaVeganaPage() {
               </table>
             </div>
 
-            <p className="text-sm text-stone-500 mt-4">
+            <p className="mt-4 text-sm text-stone-500">
               Todas nuestras granolas son sin gluten y aptas para celíacos.{' '}
               <Link href="/granola-sin-gluten" className="text-earth-600 hover:underline">
                 Más información

@@ -37,11 +37,14 @@ async function main() {
       name: 'Granola Clásica',
       slug: 'granola-clasica-250g',
       description: `Nuestra granola clásica es el resultado de una receta artesanal perfeccionada durante años. Elaborada con avena certificada sin gluten, frutos secos y semillas remojados para facilitar la digestión, y tostada lentamente con miel ecológica de apicultores locales.`,
-      shortDescription: 'Granola artesanal premium con avena sin gluten, miel ecológica y frutos secos selectos.',
+      shortDescription:
+        'Granola artesanal premium con avena sin gluten, miel ecológica y frutos secos selectos.',
       priceInCents: 900,
       weight: 250,
-      ingredients: 'Copos de avena certificada sin gluten* (40%), miel ecológica* (12%), pipas de girasol (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecológica.',
-      allergens: 'Contiene: frutos de cáscara (almendras, avellanas, anacardos, pipas de girasol). Producido en instalaciones que procesan gluten, soja y sésamo.',
+      ingredients:
+        'Copos de avena certificada sin gluten* (40%), miel ecológica* (12%), pipas de girasol (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecológica.',
+      allergens:
+        'Contiene: frutos de cáscara (almendras, avellanas, anacardos, pipas de girasol). Producido en instalaciones que procesan gluten, soja y sésamo.',
       nutritionalInfo: {
         servingSize: 'por 100g',
         calories: 475,
@@ -58,18 +61,22 @@ async function main() {
       isActive: true,
       categoryId: granolaCategory.id,
       metaTitle: 'Granola Clásica 250g | Sin Gluten, Orgánica',
-      metaDescription: 'Granola artesanal clásica 250g sin gluten real. Avena certificada, miel ecológica y frutos secos premium.',
+      metaDescription:
+        'Granola artesanal clásica 250g sin gluten real. Avena certificada, miel ecológica y frutos secos premium.',
     },
     {
       sku: 'GRAN-250-CAC',
       name: 'Granola Cacao & Avellana',
       slug: 'granola-cacao-avellana-250g',
       description: `Para los amantes del chocolate, nuestra granola de cacao y avellana es un capricho saludable que no decepciona.`,
-      shortDescription: 'Granola con cacao puro y avellanas tostadas. La opción perfecta para los amantes del chocolate saludable.',
+      shortDescription:
+        'Granola con cacao puro y avellanas tostadas. La opción perfecta para los amantes del chocolate saludable.',
       priceInCents: 900,
       weight: 250,
-      ingredients: 'Copos de avena certificada sin gluten* (38%), miel ecológica* (10%), avellanas tostadas (15%), cacao en polvo puro* (8%), chips de cacao nibs* (5%), almendras (6%), anacardos (5%), aceite de coco virgen extra* (4%), pipas de girasol (4%), lino molido (3%), vainilla natural (1%), sal marina (0.5%). *De agricultura ecológica.',
-      allergens: 'Contiene: frutos de cáscara (avellanas, almendras, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo.',
+      ingredients:
+        'Copos de avena certificada sin gluten* (38%), miel ecológica* (10%), avellanas tostadas (15%), cacao en polvo puro* (8%), chips de cacao nibs* (5%), almendras (6%), anacardos (5%), aceite de coco virgen extra* (4%), pipas de girasol (4%), lino molido (3%), vainilla natural (1%), sal marina (0.5%). *De agricultura ecológica.',
+      allergens:
+        'Contiene: frutos de cáscara (avellanas, almendras, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo.',
       nutritionalInfo: {
         servingSize: 'por 100g',
         calories: 485,
@@ -86,18 +93,22 @@ async function main() {
       isActive: true,
       categoryId: granolaCategory.id,
       metaTitle: 'Granola Cacao & Avellana 250g | Sin Gluten',
-      metaDescription: 'Granola artesanal de cacao puro y avellanas 250g. Sin gluten, sin azúcares añadidos.',
+      metaDescription:
+        'Granola artesanal de cacao puro y avellanas 250g. Sin gluten, sin azúcares añadidos.',
     },
     {
       sku: 'GRAN-250-TRP',
       name: 'Granola Tropical',
       slug: 'granola-tropical-250g',
       description: `Un viaje al trópico en cada cucharada. Nuestra granola tropical combina la base artesanal que conoces con coco rallado tostado, mango deshidratado y un toque de lima.`,
-      shortDescription: 'Granola con coco, mango deshidratado y lima. Un toque tropical para tus mañanas.',
+      shortDescription:
+        'Granola con coco, mango deshidratado y lima. Un toque tropical para tus mañanas.',
       priceInCents: 900,
       weight: 250,
-      ingredients: 'Copos de avena certificada sin gluten* (36%), miel ecológica* (10%), coco rallado tostado (12%), mango deshidratado natural (10%), anacardos (8%), almendras (6%), pipas de calabaza (5%), aceite de coco virgen extra* (5%), semillas de chía* (3%), lino molido (3%), ralladura de lima natural (1%), jengibre en polvo (1%). *De agricultura ecológica.',
-      allergens: 'Contiene: frutos de cáscara (anacardos, almendras), coco. Producido en instalaciones que procesan gluten, soja y sésamo.',
+      ingredients:
+        'Copos de avena certificada sin gluten* (36%), miel ecológica* (10%), coco rallado tostado (12%), mango deshidratado natural (10%), anacardos (8%), almendras (6%), pipas de calabaza (5%), aceite de coco virgen extra* (5%), semillas de chía* (3%), lino molido (3%), ralladura de lima natural (1%), jengibre en polvo (1%). *De agricultura ecológica.',
+      allergens:
+        'Contiene: frutos de cáscara (anacardos, almendras), coco. Producido en instalaciones que procesan gluten, soja y sésamo.',
       nutritionalInfo: {
         servingSize: 'por 100g',
         calories: 470,
@@ -109,23 +120,30 @@ async function main() {
         protein: 16,
         salt: 0.01,
       },
-      images: ['/images/products/granola-tropical-1.jpg', '/images/products/granola-tropical-2.jpg'],
+      images: [
+        '/images/products/granola-tropical-1.jpg',
+        '/images/products/granola-tropical-2.jpg',
+      ],
       stock: 120,
       isActive: true,
       categoryId: granolaCategory.id,
       metaTitle: 'Granola Tropical 250g | Coco y Mango',
-      metaDescription: 'Granola artesanal tropical con coco, mango y lima 250g. Sin gluten, ingredientes naturales.',
+      metaDescription:
+        'Granola artesanal tropical con coco, mango y lima 250g. Sin gluten, ingredientes naturales.',
     },
     {
       sku: 'GRAN-1KG',
       name: 'Granola Clásica - Formato Horeca',
       slug: 'granola-clasica-1kg-horeca',
       description: `El mismo producto artesanal que adoran nuestros clientes, ahora en formato de 1kg pensado para profesionales.`,
-      shortDescription: 'Formato 1kg para hostelería y tiendas. Misma receta artesanal, tamaño profesional.',
+      shortDescription:
+        'Formato 1kg para hostelería y tiendas. Misma receta artesanal, tamaño profesional.',
       priceInCents: 2800,
       weight: 1000,
-      ingredients: 'Copos de avena certificada sin gluten* (40%), miel ecológica* (12%), pipas de girasol (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecológica.',
-      allergens: 'Contiene: frutos de cáscara (almendras, avellanas, anacardos, pipas de girasol). Producido en instalaciones que procesan gluten, soja y sésamo.',
+      ingredients:
+        'Copos de avena certificada sin gluten* (40%), miel ecológica* (12%), pipas de girasol (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecológica.',
+      allergens:
+        'Contiene: frutos de cáscara (almendras, avellanas, anacardos, pipas de girasol). Producido en instalaciones que procesan gluten, soja y sésamo.',
       nutritionalInfo: {
         servingSize: 'por 100g',
         calories: 475,
@@ -142,7 +160,8 @@ async function main() {
       isActive: true,
       categoryId: horecaCategory.id,
       metaTitle: 'Granola Clásica 1kg Horeca | Formato Profesional',
-      metaDescription: 'Granola artesanal formato 1kg para hostelería y tiendas. Sin gluten, ecológica.',
+      metaDescription:
+        'Granola artesanal formato 1kg para hostelería y tiendas. Sin gluten, ecológica.',
     },
   ];
 
@@ -160,37 +179,43 @@ async function main() {
   const faqs = [
     {
       question: '¿Vuestra granola es realmente sin gluten?',
-      answer: 'Sí, nuestra granola está elaborada con avena certificada sin gluten. Cumplimos con el estándar europeo de ≤20 ppm de gluten.',
+      answer:
+        'Sí, nuestra granola está elaborada con avena certificada sin gluten. Cumplimos con el estándar europeo de ≤20 ppm de gluten.',
       category: 'producto',
       order: 1,
     },
     {
       question: '¿Cuánto cuesta el envío?',
-      answer: 'Envío estándar a Península: 4,95€. Envío GRATIS cuando compras 4 o más bolsas o tu pedido supera los 35€.',
+      answer:
+        'Envío estándar a Península: 4,95€. Envío GRATIS cuando compras 4 o más bolsas o tu pedido supera los 35€.',
       category: 'envio',
       order: 1,
     },
     {
       question: '¿Qué métodos de pago aceptáis?',
-      answer: 'Aceptamos tarjeta de crédito/débito (Visa, Mastercard, American Express) y pago contra reembolso (+2€).',
+      answer:
+        'Aceptamos tarjeta de crédito/débito (Visa, Mastercard, American Express) y pago contra reembolso (+2€).',
       category: 'pago',
       order: 1,
     },
     {
       question: '¿Cómo funciona la suscripción?',
-      answer: 'Recibes 6 bolsas cada mes con un 15% de descuento y envío gratis. Puedes pausar o cancelar cuando quieras desde tu cuenta.',
+      answer:
+        'Recibes 6 bolsas cada mes con un 15% de descuento y envío gratis. Puedes pausar o cancelar cuando quieras desde tu cuenta.',
       category: 'suscripcion',
       order: 1,
     },
     {
       question: '¿Puedo cancelar mi suscripción?',
-      answer: 'Sí, puedes cancelar tu suscripción en cualquier momento desde tu cuenta. No hay permanencia ni penalizaciones.',
+      answer:
+        'Sí, puedes cancelar tu suscripción en cualquier momento desde tu cuenta. No hay permanencia ni penalizaciones.',
       category: 'suscripcion',
       order: 2,
     },
     {
       question: '¿Cómo tratáis mis datos personales?',
-      answer: 'Tratamos tus datos según el RGPD. Consulta nuestra Política de Privacidad para más información.',
+      answer:
+        'Tratamos tus datos según el RGPD. Consulta nuestra Política de Privacidad para más información.',
       category: 'legal',
       order: 1,
     },
@@ -210,7 +235,8 @@ async function main() {
       slug: 'smoothie-bowl-granola-frutos-rojos',
       title: 'Smoothie Bowl con Granola y Frutos Rojos',
       excerpt: 'El desayuno perfecto para empezar el día con energía.',
-      content: '# Smoothie Bowl con Granola y Frutos Rojos\n\nEl desayuno es la comida más importante del día...',
+      content:
+        '# Smoothie Bowl con Granola y Frutos Rojos\n\nEl desayuno es la comida más importante del día...',
       coverImage: '/images/blog/smoothie-bowl.jpg',
       isPublished: true,
       publishedAt: new Date('2024-01-15'),
@@ -221,12 +247,14 @@ async function main() {
       slug: 'beneficios-avena-sin-gluten',
       title: 'Beneficios de la Avena Sin Gluten',
       excerpt: 'Descubre por qué la avena sin gluten certificada marca la diferencia.',
-      content: '# Beneficios de la Avena Sin Gluten\n\nLa avena es uno de los cereales más completos...',
+      content:
+        '# Beneficios de la Avena Sin Gluten\n\nLa avena es uno de los cereales más completos...',
       coverImage: '/images/blog/avena-sin-gluten.jpg',
       isPublished: true,
       publishedAt: new Date('2024-01-08'),
       metaTitle: 'Beneficios de la Avena Sin Gluten Certificada',
-      metaDescription: 'Descubre los beneficios de la avena sin gluten certificada en nuestra granola.',
+      metaDescription:
+        'Descubre los beneficios de la avena sin gluten certificada en nuestra granola.',
     },
   ];
 

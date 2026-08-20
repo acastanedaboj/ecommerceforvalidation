@@ -1,12 +1,5 @@
 import type { Metadata } from 'next';
-import {
-  Wheat,
-  ShieldCheck,
-  Search,
-  FileCheck,
-  CheckCircle2,
-  AlertCircle,
-} from 'lucide-react';
+import { Wheat, ShieldCheck, Search, FileCheck, CheckCircle2, AlertCircle } from 'lucide-react';
 import {
   LandingHero,
   BenefitsGrid,
@@ -124,7 +117,7 @@ export default function GranolaSinGlutenPage() {
       {/* Intro Section */}
       <div id="que-es" className="section bg-neutral-50">
         <div className="container-custom max-w-3xl text-center">
-          <h2 className="text-3xl font-display text-neutral-900 mb-4">{intro.title}</h2>
+          <h2 className="mb-4 font-display text-3xl text-neutral-900">{intro.title}</h2>
           <p className="text-lg text-neutral-600">{intro.description}</p>
         </div>
       </div>
@@ -132,8 +125,8 @@ export default function GranolaSinGlutenPage() {
       {/* What is Gluten-Free Section */}
       <div className="section">
         <div className="container-custom max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">
               {whatIsGlutenFree.title}
             </h2>
             <p className="text-lg text-neutral-600">{whatIsGlutenFree.subtitle}</p>
@@ -141,30 +134,22 @@ export default function GranolaSinGlutenPage() {
 
           <div className="space-y-6">
             {whatIsGlutenFree.content.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white border border-neutral-200 rounded-xl p-6"
-              >
-                <h3 className="text-xl font-semibold text-neutral-900 mb-3">
-                  {item.title}
-                </h3>
+              <div key={index} className="rounded-xl border border-neutral-200 bg-white p-6">
+                <h3 className="mb-3 text-xl font-semibold text-neutral-900">{item.title}</h3>
                 <p className="text-neutral-700">{item.description}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-8 p-6 bg-primary-50 border border-primary-100 rounded-xl">
+          <div className="mt-8 rounded-xl border border-primary-100 bg-primary-50 p-6">
             <div className="flex items-start gap-3">
-              <AlertCircle className="w-6 h-6 text-primary-700 flex-shrink-0 mt-0.5" />
+              <AlertCircle className="mt-0.5 h-6 w-6 flex-shrink-0 text-primary-700" />
               <div>
-                <p className="text-neutral-900 font-medium mb-2">
-                  ⚠️ Importante para celíacos
-                </p>
+                <p className="mb-2 font-medium text-neutral-900">⚠️ Importante para celíacos</p>
                 <p className="text-neutral-700">
-                  Si eres celíaco, NUNCA compres avena normal o "sin gluten añadido". Debe
-                  decir explícitamente "certificada sin gluten" o llevar el símbolo de
-                  espiga barrada. La avena regular tiene contaminación cruzada y NO es
-                  segura.
+                  Si eres celíaco, NUNCA compres avena normal o "sin gluten añadido". Debe decir
+                  explícitamente "certificada sin gluten" o llevar el símbolo de espiga barrada. La
+                  avena regular tiene contaminación cruzada y NO es segura.
                 </p>
               </div>
             </div>
@@ -175,24 +160,20 @@ export default function GranolaSinGlutenPage() {
       {/* Who Should Eat Section */}
       <div className="section bg-neutral-50">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
-              {whoShouldEat.title}
-            </h2>
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">{whoShouldEat.title}</h2>
             <p className="text-lg text-neutral-600">{whoShouldEat.subtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
             {whoShouldEat.groups.map((group, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl border border-neutral-200 p-6 text-center"
+                className="rounded-xl border border-neutral-200 bg-white p-6 text-center"
               >
-                <div className="text-4xl mb-4">{group.icon}</div>
-                <h3 className="text-lg font-semibold text-neutral-900 mb-3">
-                  {group.title}
-                </h3>
-                <p className="text-neutral-600 text-sm">{group.description}</p>
+                <div className="mb-4 text-4xl">{group.icon}</div>
+                <h3 className="mb-3 text-lg font-semibold text-neutral-900">{group.title}</h3>
+                <p className="text-sm text-neutral-600">{group.description}</p>
               </div>
             ))}
           </div>
@@ -202,27 +183,20 @@ export default function GranolaSinGlutenPage() {
       {/* Certification Process Section */}
       <div className="section">
         <div className="container-custom max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
-              {certification.title}
-            </h2>
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">{certification.title}</h2>
             <p className="text-lg text-neutral-600">{certification.subtitle}</p>
           </div>
 
           <div className="space-y-6">
             {certification.steps.map((step) => (
-              <div
-                key={step.number}
-                className="bg-white rounded-xl border border-neutral-200 p-6"
-              >
+              <div key={step.number} className="rounded-xl border border-neutral-200 bg-white p-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary-100 text-primary-700 font-bold flex items-center justify-center">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary-100 font-bold text-primary-700">
                     {step.number}
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-neutral-900 mb-2">
-                      {step.title}
-                    </h3>
+                    <h3 className="mb-2 text-xl font-semibold text-neutral-900">{step.title}</h3>
                     <p className="text-neutral-700">{step.description}</p>
                   </div>
                 </div>
@@ -230,17 +204,15 @@ export default function GranolaSinGlutenPage() {
             ))}
           </div>
 
-          <div className="mt-8 p-6 bg-green-50 border border-green-200 rounded-xl">
+          <div className="mt-8 rounded-xl border border-green-200 bg-green-50 p-6">
             <div className="flex items-start gap-3">
-              <CheckCircle2 className="w-6 h-6 text-green-700 flex-shrink-0 mt-0.5" />
+              <CheckCircle2 className="mt-0.5 h-6 w-6 flex-shrink-0 text-green-700" />
               <div>
-                <p className="text-neutral-900 font-medium mb-2">
-                  ✅ Compromiso de transparencia
-                </p>
+                <p className="mb-2 font-medium text-neutral-900">✅ Compromiso de transparencia</p>
                 <p className="text-neutral-700">
-                  Si alguna vez tenemos dudas sobre un ingrediente o proveedor, NO lo
-                  usamos. Preferimos retrasar un lote antes que comprometer la seguridad de
-                  nuestros clientes celíacos. Tu salud es nuestra prioridad.
+                  Si alguna vez tenemos dudas sobre un ingrediente o proveedor, NO lo usamos.
+                  Preferimos retrasar un lote antes que comprometer la seguridad de nuestros
+                  clientes celíacos. Tu salud es nuestra prioridad.
                 </p>
               </div>
             </div>

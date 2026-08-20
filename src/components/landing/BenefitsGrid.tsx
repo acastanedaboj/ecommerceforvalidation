@@ -13,12 +13,7 @@ interface BenefitsGridProps {
   columns?: 2 | 3 | 4;
 }
 
-export function BenefitsGrid({
-  title,
-  subtitle,
-  benefits,
-  columns = 4,
-}: BenefitsGridProps) {
+export function BenefitsGrid({ title, subtitle, benefits, columns = 4 }: BenefitsGridProps) {
   const gridCols = {
     2: 'md:grid-cols-2',
     3: 'md:grid-cols-3',
@@ -26,18 +21,14 @@ export function BenefitsGrid({
   };
 
   return (
-    <section className="py-20 md:py-28 bg-cream-100">
+    <section className="bg-cream-100 py-20 md:py-28">
       <div className="container-custom">
         {(title || subtitle) && (
-          <div className="text-center mb-16">
+          <div className="mb-16 text-center">
             {subtitle && (
-              <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
-                {subtitle}
-              </p>
+              <p className="mb-4 text-xs uppercase tracking-widest text-stone-500">{subtitle}</p>
             )}
-            {title && (
-              <h2 className="font-display text-stone-800">{title}</h2>
-            )}
+            {title && <h2 className="font-display text-stone-800">{title}</h2>}
           </div>
         )}
 
@@ -47,18 +38,11 @@ export function BenefitsGrid({
             return (
               <div
                 key={index}
-                className="bg-cream-100 p-10 text-center group hover:bg-white transition-colors"
+                className="group bg-cream-100 p-10 text-center transition-colors hover:bg-white"
               >
-                <Icon
-                  className="w-8 h-8 text-earth-600 mx-auto mb-6"
-                  strokeWidth={1}
-                />
-                <h3 className="font-display text-lg text-stone-800 mb-3">
-                  {benefit.title}
-                </h3>
-                <p className="text-stone-600 text-sm leading-relaxed">
-                  {benefit.description}
-                </p>
+                <Icon className="mx-auto mb-6 h-8 w-8 text-earth-600" strokeWidth={1} />
+                <h3 className="mb-3 font-display text-lg text-stone-800">{benefit.title}</h3>
+                <p className="text-sm leading-relaxed text-stone-600">{benefit.description}</p>
               </div>
             );
           })}

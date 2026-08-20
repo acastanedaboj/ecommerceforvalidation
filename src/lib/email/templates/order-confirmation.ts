@@ -34,7 +34,10 @@ export interface OrderConfirmationData {
   estimatedDelivery?: string;
 }
 
-export function orderConfirmationEmail(data: OrderConfirmationData): { subject: string; html: string } {
+export function orderConfirmationEmail(data: OrderConfirmationData): {
+  subject: string;
+  html: string;
+} {
   const {
     email,
     customerName,
@@ -160,6 +163,9 @@ export function orderConfirmationEmail(data: OrderConfirmationData): { subject: 
 
   return {
     subject: `¡Pedido #${orderId} confirmado! Tu granola está en camino`,
-    html: emailLayout(content, `Tu pedido #${orderId} ha sido confirmado. Llegada estimada: ${estimatedDelivery}.`).replace('{{email}}', email),
+    html: emailLayout(
+      content,
+      `Tu pedido #${orderId} ha sido confirmado. Llegada estimada: ${estimatedDelivery}.`
+    ).replace('{{email}}', email),
   };
 }

@@ -88,7 +88,10 @@ export default function BlogPostPage({ params }: Props) {
     // Helper function to parse inline markdown (bold + links)
     const parseInline = (text: string) => {
       return text
-        .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-earth-600 underline hover:text-earth-700 transition-colors">$1</a>')
+        .replace(
+          /\[([^\]]+)\]\(([^)]+)\)/g,
+          '<a href="$2" class="text-earth-600 underline hover:text-earth-700 transition-colors">$1</a>'
+        )
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     };
 
@@ -110,7 +113,7 @@ export default function BlogPostPage({ params }: Props) {
         elements.push(
           <h1
             key={i}
-            className="text-3xl font-display text-neutral-900 mt-8 mb-4"
+            className="mb-4 mt-8 font-display text-3xl text-neutral-900"
             dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
           />
         );
@@ -121,7 +124,7 @@ export default function BlogPostPage({ params }: Props) {
         elements.push(
           <h2
             key={i}
-            className="text-2xl font-display text-neutral-900 mt-8 mb-4"
+            className="mb-4 mt-8 font-display text-2xl text-neutral-900"
             dangerouslySetInnerHTML={{ __html: parseInline(line.slice(3)) }}
           />
         );
@@ -132,7 +135,7 @@ export default function BlogPostPage({ params }: Props) {
         elements.push(
           <h3
             key={i}
-            className="text-xl font-semibold text-neutral-900 mt-6 mb-3"
+            className="mb-3 mt-6 text-xl font-semibold text-neutral-900"
             dangerouslySetInnerHTML={{ __html: parseInline(line.slice(4)) }}
           />
         );
@@ -155,7 +158,7 @@ export default function BlogPostPage({ params }: Props) {
           i++;
         }
         elements.push(
-          <ul key={`ul-${startIndex}`} className="list-disc list-inside space-y-1 mb-4 ml-2">
+          <ul key={`ul-${startIndex}`} className="mb-4 ml-2 list-inside list-disc space-y-1">
             {listItems}
           </ul>
         );
@@ -177,7 +180,7 @@ export default function BlogPostPage({ params }: Props) {
           i++;
         }
         elements.push(
-          <ol key={`ol-${startIndex}`} className="list-decimal list-inside space-y-1 mb-4 ml-2">
+          <ol key={`ol-${startIndex}`} className="mb-4 ml-2 list-inside list-decimal space-y-1">
             {listItems}
           </ol>
         );
@@ -201,7 +204,7 @@ export default function BlogPostPage({ params }: Props) {
             href={href}
             target="_blank"
             rel="sponsored noopener noreferrer"
-            className="block my-8 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+            className="my-8 block overflow-hidden rounded-xl shadow-sm transition-shadow hover:shadow-md"
             aria-label={alt}
           >
             <Image
@@ -209,7 +212,7 @@ export default function BlogPostPage({ params }: Props) {
               alt={alt}
               width={1200}
               height={600}
-              className="w-full h-auto"
+              className="h-auto w-full"
               sizes="(max-width: 768px) 100vw, 768px"
             />
           </a>
@@ -223,7 +226,7 @@ export default function BlogPostPage({ params }: Props) {
         elements.push(
           <blockquote
             key={i}
-            className="border-l-4 border-primary-300 pl-4 py-2 my-4 italic text-neutral-600 bg-neutral-50 rounded-r"
+            className="my-4 rounded-r border-l-4 border-primary-300 bg-neutral-50 py-2 pl-4 italic text-neutral-600"
             dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
           />
         );
@@ -235,7 +238,7 @@ export default function BlogPostPage({ params }: Props) {
       elements.push(
         <p
           key={i}
-          className="text-neutral-600 mb-4 leading-relaxed"
+          className="mb-4 leading-relaxed text-neutral-600"
           dangerouslySetInnerHTML={{ __html: parseInline(line) }}
         />
       );
@@ -264,129 +267,124 @@ export default function BlogPostPage({ params }: Props) {
           {/* Breadcrumb */}
           <nav className="mb-8">
             <Link
-            href="/blog"
-            className="inline-flex items-center text-neutral-600 hover:text-primary-600"
-          >
-            <ChevronLeft className="w-4 h-4 mr-1" />
-            Volver al blog
-          </Link>
-        </nav>
-
-        {/* Header */}
-        <header className="max-w-3xl mx-auto text-center mb-12">
-          <span className="badge-accent mb-4">{category?.name}</span>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-display text-neutral-900 mb-6">
-            {post.title}
-          </h1>
-          <p className="text-lg text-neutral-600 mb-6">{post.excerpt}</p>
-          <div className="flex items-center justify-center gap-4 text-sm text-neutral-500">
-            <span>{post.author}</span>
-            <span>•</span>
-            <span className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              {formatDate(post.publishedAt)}
-            </span>
-            <span>•</span>
-            <span className="flex items-center gap-1">
-              <Clock className="w-4 h-4" />
-              {post.readingTime} min lectura
-            </span>
-          </div>
-        </header>
-
-        {/* Featured image */}
-        {post.coverImage && (
-          <div className="relative aspect-video max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden">
-            <Image
-              src={post.coverImage}
-              alt={post.title}
-              fill
-              className="object-cover"
-              priority
-              sizes="(max-width: 1024px) 100vw, 1024px"
-            />
-          </div>
-        )}
-
-        {/* Content */}
-        <div className="max-w-3xl mx-auto">
-          <div className="prose-custom">{formatContent(post.content)}</div>
-
-          {/* Tags */}
-          <div className="mt-8 pt-8 border-t border-neutral-200">
-            <div className="flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="badge bg-neutral-100 text-neutral-700"
-                >
-                  #{tag}
-                </span>
-              ))}
-            </div>
-          </div>
-
-          {/* Share */}
-          <div className="mt-8 flex items-center gap-4">
-            <span className="text-neutral-600">Compartir:</span>
-            <button
-              type="button"
-              className="p-2 hover:bg-neutral-100 rounded-lg transition-colors"
-              aria-label="Compartir"
+              href="/blog"
+              className="inline-flex items-center text-neutral-600 hover:text-primary-600"
             >
-              <Share2 className="w-5 h-5 text-neutral-600" />
-            </button>
-          </div>
-        </div>
+              <ChevronLeft className="mr-1 h-4 w-4" />
+              Volver al blog
+            </Link>
+          </nav>
 
-        {/* Related posts */}
-        {relatedPosts.length > 0 && (
-          <section className="mt-16 pt-16 border-t border-neutral-200">
-            <h2 className="text-2xl font-display text-neutral-900 mb-8 text-center">
-              Artículos relacionados
-            </h2>
-            <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-              {relatedPosts.map((relatedPost) => (
-                <Link
-                  key={relatedPost.id}
-                  href={`/blog/${relatedPost.slug}`}
-                  className="card group"
-                >
-                  <div className="relative aspect-video">
-                    <Image
-                      src={relatedPost.coverImage || '/images/blog/placeholder.jpg'}
-                      alt={relatedPost.title}
-                      fill
-                      className="object-cover transition-transform duration-500 group-hover:scale-105"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-neutral-900 group-hover:text-primary-600 transition-colors">
-                      {relatedPost.title}
-                    </h3>
-                    <p className="text-sm text-neutral-600 mt-2 line-clamp-2">
-                      {relatedPost.excerpt}
-                    </p>
-                  </div>
-                </Link>
-              ))}
+          {/* Header */}
+          <header className="mx-auto mb-12 max-w-3xl text-center">
+            <span className="badge-accent mb-4">{category?.name}</span>
+            <h1 className="mb-6 font-display text-3xl text-neutral-900 md:text-4xl lg:text-5xl">
+              {post.title}
+            </h1>
+            <p className="mb-6 text-lg text-neutral-600">{post.excerpt}</p>
+            <div className="flex items-center justify-center gap-4 text-sm text-neutral-500">
+              <span>{post.author}</span>
+              <span>•</span>
+              <span className="flex items-center gap-1">
+                <Calendar className="h-4 w-4" />
+                {formatDate(post.publishedAt)}
+              </span>
+              <span>•</span>
+              <span className="flex items-center gap-1">
+                <Clock className="h-4 w-4" />
+                {post.readingTime} min lectura
+              </span>
             </div>
-          </section>
-        )}
+          </header>
 
-        {/* CTA */}
-        <section className="mt-16 bg-primary-50 rounded-2xl p-8 text-center max-w-2xl mx-auto">
-          <h3 className="text-xl text-neutral-900 mb-2">
-            ¿Te ha gustado este artículo?
-          </h3>
-          <p className="text-neutral-600 mb-4">
-            Prueba nuestra granola Poppy y ponla en práctica
-          </p>
-          <Link href="/tienda" className="btn-primary">
-            Ver productos
-          </Link>
-        </section>
+          {/* Featured image */}
+          {post.coverImage && (
+            <div className="relative mx-auto mb-12 aspect-video max-w-4xl overflow-hidden rounded-2xl">
+              <Image
+                src={post.coverImage}
+                alt={post.title}
+                fill
+                className="object-cover"
+                priority
+                sizes="(max-width: 1024px) 100vw, 1024px"
+              />
+            </div>
+          )}
+
+          {/* Content */}
+          <div className="mx-auto max-w-3xl">
+            <div className="prose-custom">{formatContent(post.content)}</div>
+
+            {/* Tags */}
+            <div className="mt-8 border-t border-neutral-200 pt-8">
+              <div className="flex flex-wrap gap-2">
+                {post.tags.map((tag) => (
+                  <span key={tag} className="badge bg-neutral-100 text-neutral-700">
+                    #{tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Share */}
+            <div className="mt-8 flex items-center gap-4">
+              <span className="text-neutral-600">Compartir:</span>
+              <button
+                type="button"
+                className="rounded-lg p-2 transition-colors hover:bg-neutral-100"
+                aria-label="Compartir"
+              >
+                <Share2 className="h-5 w-5 text-neutral-600" />
+              </button>
+            </div>
+          </div>
+
+          {/* Related posts */}
+          {relatedPosts.length > 0 && (
+            <section className="mt-16 border-t border-neutral-200 pt-16">
+              <h2 className="mb-8 text-center font-display text-2xl text-neutral-900">
+                Artículos relacionados
+              </h2>
+              <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
+                {relatedPosts.map((relatedPost) => (
+                  <Link
+                    key={relatedPost.id}
+                    href={`/blog/${relatedPost.slug}`}
+                    className="card group"
+                  >
+                    <div className="relative aspect-video">
+                      <Image
+                        src={relatedPost.coverImage || '/images/blog/placeholder.jpg'}
+                        alt={relatedPost.title}
+                        fill
+                        className="object-cover transition-transform duration-500 group-hover:scale-105"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="text-neutral-900 transition-colors group-hover:text-primary-600">
+                        {relatedPost.title}
+                      </h3>
+                      <p className="mt-2 line-clamp-2 text-sm text-neutral-600">
+                        {relatedPost.excerpt}
+                      </p>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* CTA */}
+          <section className="mx-auto mt-16 max-w-2xl rounded-2xl bg-primary-50 p-8 text-center">
+            <h3 className="mb-2 text-xl text-neutral-900">¿Te ha gustado este artículo?</h3>
+            <p className="mb-4 text-neutral-600">
+              Prueba nuestra granola Poppy y ponla en práctica
+            </p>
+            <Link href="/tienda" className="btn-primary">
+              Ver productos
+            </Link>
+          </section>
         </div>
       </article>
     </>

@@ -23,10 +23,7 @@ export async function POST(request: NextRequest) {
     const signature = request.headers.get('stripe-signature');
 
     if (!signature) {
-      return NextResponse.json(
-        { error: 'Missing stripe-signature header' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Missing stripe-signature header' }, { status: 400 });
     }
 
     let event: Stripe.Event;
@@ -35,10 +32,7 @@ export async function POST(request: NextRequest) {
       event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
     } catch (err) {
       console.error('Webhook signature verification failed:', err);
-      return NextResponse.json(
-        { error: 'Webhook signature verification failed' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Webhook signature verification failed' }, { status: 400 });
     }
 
     // Handle the event
@@ -84,7 +78,8 @@ export async function POST(request: NextRequest) {
                 customerEmail: session.customer_email,
                 customerName: session.customer_details?.name || null,
                 customerPhone: session.customer_details?.phone || null,
-                shippingName: session.shipping_details?.name || session.customer_details?.name || null,
+                shippingName:
+                  session.shipping_details?.name || session.customer_details?.name || null,
                 shippingLine1: session.shipping_details?.address?.line1 || null,
                 shippingLine2: session.shipping_details?.address?.line2 || null,
                 shippingCity: session.shipping_details?.address?.city || null,
@@ -99,7 +94,7 @@ export async function POST(request: NextRequest) {
                 paidAt: new Date(),
                 items: {
                   create: lineItems.data.map((item) => ({
-                    productId: item.price?.product as string || 'unknown',
+                    productId: (item.price?.product as string) || 'unknown',
                     productName: item.description || 'Granola Poppy',
                     productSku: item.price?.id || 'unknown',
                     quantity: item.quantity || 1,
@@ -165,9 +160,15 @@ export async function POST(request: NextRequest) {
         console.log('Invoice paid:', invoice.id);
 
         // Send subscription renewed email for recurring payments
-        if (invoice.subscription && invoice.customer_email && invoice.billing_reason === 'subscription_cycle') {
+        if (
+          invoice.subscription &&
+          invoice.customer_email &&
+          invoice.billing_reason === 'subscription_cycle'
+        ) {
           try {
-            const subscription = await stripe.subscriptions.retrieve(invoice.subscription as string);
+            const subscription = await stripe.subscriptions.retrieve(
+              invoice.subscription as string
+            );
             const product = subscription.items.data[0];
 
             await sendSubscriptionRenewedEmail({
@@ -281,9 +282,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ received: true });
   } catch (error) {
     console.error('Webhook error:', error);
-    return NextResponse.json(
-      { error: 'Webhook handler failed' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Webhook handler failed' }, { status: 500 });
   }
 }

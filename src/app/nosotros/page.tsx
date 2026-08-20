@@ -47,7 +47,6 @@ const stats = [
   { number: '0', label: 'Azúcares refinados' },
 ];
 
-
 export default function NosotrosPage() {
   return (
     <>
@@ -60,263 +59,255 @@ export default function NosotrosPage() {
       />
 
       <div className="min-h-screen bg-cream-50">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-b from-earth-100 to-cream-50 py-20 sm:py-28">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <span className="inline-block px-4 py-1.5 bg-olive-100 text-olive-700 rounded-full text-sm font-medium mb-6">
-            Nuestra historia
-          </span>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif text-stone-800 mb-6">
-            Granola hecha con{' '}
-            <span className="text-earth-600">pasion</span> y{' '}
-            <span className="text-olive-600">naturaleza</span>
-          </h1>
-          <p className="text-lg sm:text-xl text-stone-600 max-w-2xl mx-auto">
-            Nacimos de un sueño simple: crear la granola perfecta. Sin ingredientes
-            artificiales, sin prisas, sin compromisos. Solo lo mejor de la naturaleza
-            en cada bocado.
-          </p>
-        </div>
-      </section>
+        {/* Hero Section */}
+        <section className="relative bg-gradient-to-b from-earth-100 to-cream-50 py-20 sm:py-28">
+          <div className="mx-auto max-w-4xl px-4 text-center">
+            <span className="mb-6 inline-block rounded-full bg-olive-100 px-4 py-1.5 text-sm font-medium text-olive-700">
+              Nuestra historia
+            </span>
+            <h1 className="mb-6 font-serif text-4xl text-stone-800 sm:text-5xl lg:text-6xl">
+              Granola hecha con <span className="text-earth-600">pasion</span> y{' '}
+              <span className="text-olive-600">naturaleza</span>
+            </h1>
+            <p className="mx-auto max-w-2xl text-lg text-stone-600 sm:text-xl">
+              Nacimos de un sueño simple: crear la granola perfecta. Sin ingredientes artificiales,
+              sin prisas, sin compromisos. Solo lo mejor de la naturaleza en cada bocado.
+            </p>
+          </div>
+        </section>
 
-      {/* Story Section */}
-      <section className="py-16 sm:py-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="order-2 md:order-1">
-              <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-6">
-                Todo empezó en una pequeña <span className="text-earth-600-display-italic">cocina</span>
-              </h2>
-              <div className="space-y-4 text-stone-600">
-                <p>
-                  En 2019, cansados de las opciones procesadas del supermercado,
-                  decidimos crear nuestra propia granola. Lo que empezó como un
-                  experimento casero pronto se convirtió en una obsesión por la
-                  perfección.
-                </p>
-                <p>
-                  Probamos cientos de combinaciones hasta encontrar el equilibrio
-                  perfecto: crujiente pero no dura, dulce pero sin azúcares refinados,
-                  nutritiva pero irresistiblemente deliciosa.
-                </p>
-                <p>
-                  Hoy, seguimos elaborando cada lote con el mismo cuidado y atención
-                  que el primer día. Porque creemos que lo artesanal no es solo un
-                  método de producción, es una filosofía de vida.
-                </p>
+        {/* Story Section */}
+        <section className="py-16 sm:py-24">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="grid items-center gap-12 md:grid-cols-2">
+              <div className="order-2 md:order-1">
+                <h2 className="mb-6 font-serif text-3xl text-stone-800 sm:text-4xl">
+                  Todo empezó en una pequeña{' '}
+                  <span className="text-earth-600-display-italic">cocina</span>
+                </h2>
+                <div className="space-y-4 text-stone-600">
+                  <p>
+                    En 2019, cansados de las opciones procesadas del supermercado, decidimos crear
+                    nuestra propia granola. Lo que empezó como un experimento casero pronto se
+                    convirtió en una obsesión por la perfección.
+                  </p>
+                  <p>
+                    Probamos cientos de combinaciones hasta encontrar el equilibrio perfecto:
+                    crujiente pero no dura, dulce pero sin azúcares refinados, nutritiva pero
+                    irresistiblemente deliciosa.
+                  </p>
+                  <p>
+                    Hoy, seguimos elaborando cada lote con el mismo cuidado y atención que el primer
+                    día. Porque creemos que lo artesanal no es solo un método de producción, es una
+                    filosofía de vida.
+                  </p>
+                </div>
               </div>
-            </div>
-            <div className="order-1 md:order-2">
-              <div className="relative aspect-square rounded-3xl overflow-hidden bg-earth-100">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <div className="text-center p-8">
-                    <div className="w-24 h-24 bg-earth-200 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Leaf className="w-12 h-12 text-earth-600" strokeWidth={1} />
+              <div className="order-1 md:order-2">
+                <div className="relative aspect-square overflow-hidden rounded-3xl bg-earth-100">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="p-8 text-center">
+                      <div className="mx-auto mb-4 flex h-24 w-24 items-center justify-center rounded-full bg-earth-200">
+                        <Leaf className="h-12 w-12 text-earth-600" strokeWidth={1} />
+                      </div>
+                      <p className="font-serif text-xl text-earth-700">Desde 2019</p>
+                      <p className="mt-1 text-sm text-earth-600">Elaborando con amor</p>
                     </div>
-                    <p className="text-earth-700 font-serif text-xl">
-                      Desde 2019
-                    </p>
-                    <p className="text-earth-600 text-sm mt-1">
-                      Elaborando con amor
-                    </p>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Values Section */}
-      <section className="py-16 sm:py-24 bg-white">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
-              Nuestros <span className="text-earth-600-display-italic">valores</span>
-            </h2>
-            <p className="text-stone-600 max-w-2xl mx-auto">
-              Cada decisión que tomamos está guiada por tres principios fundamentales
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-3 gap-8">
-            {values.map((value, index) => {
-              const Icon = value.icon;
-              return (
-                <div
-                  key={index}
-                  className="bg-cream-50 rounded-2xl p-8 text-center hover:shadow-soft transition-shadow"
-                >
-                  <div className="w-16 h-16 bg-earth-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
-                    <Icon className="w-8 h-8 text-earth-600" strokeWidth={1.5} />
-                  </div>
-                  <h3 className="text-xl font-serif text-stone-800 mb-3">
-                    {value.title}
-                  </h3>
-                  <p className="text-stone-600">{value.description}</p>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-16 sm:py-24 bg-gradient-to-br from-earth-600 to-earth-700">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <p className="text-4xl sm:text-5xl font-serif text-[#ffffec] mb-2">
-                  {stat.number}
-                </p>
-                <p className="text-earth-200">{stat.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Process Section */}
-      <section className="py-16 sm:py-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
-              Nuestro proceso
-            </h2>
-            <p className="text-stone-600 max-w-2xl mx-auto">
-              De la selección de ingredientes a tu mesa, cada paso importa
-            </p>
-          </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {[
-              {
-                step: '01',
-                title: 'Selección',
-                description: 'Elegimos ingredientes ecológicos de productores locales de confianza',
-              },
-              {
-                step: '02',
-                title: 'Mezcla',
-                description: 'Combinamos los ingredientes siguiendo nuestra receta tradicional',
-              },
-              {
-                step: '03',
-                title: 'Tostado',
-                description: 'Horneamos a baja temperatura para conseguir el crujiente perfecto',
-              },
-              {
-                step: '04',
-                title: 'Envío',
-                description: 'Empaquetamos con cariño y enviamos directamente a tu puerta',
-              },
-            ].map((item, index) => (
-              <div key={index} className="relative">
-                <div className="bg-white rounded-2xl p-6 shadow-soft h-full">
-                  <span className="text-5xl font-serif text-earth-200">{item.step}</span>
-                  <h3 className="text-lg font-serif text-stone-800 mt-2 mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-stone-600 text-sm">{item.description}</p>
-                </div>
-                {index < 3 && (
-                  <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2 text-earth-300">
-                    <ArrowRight className="w-6 h-6" />
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-      {/* Commitments Section */}
-      <section className="py-16 sm:py-24">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="bg-white rounded-3xl shadow-soft-lg p-8 sm:p-12">
-            <div className="text-center mb-10">
-              <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
-                Nuestros <span className="text-earth-600-display-italic">compromisos</span>
+        {/* Values Section */}
+        <section className="bg-white py-16 sm:py-24">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 font-serif text-3xl text-stone-800 sm:text-4xl">
+                Nuestros <span className="text-earth-600-display-italic">valores</span>
               </h2>
+              <p className="mx-auto max-w-2xl text-stone-600">
+                Cada decisión que tomamos está guiada por tres principios fundamentales
+              </p>
             </div>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {[
-                {
-                  icon: Leaf,
-                  title: 'Sin gluten',
-                  description: 'Apta para celíacos, elaborada en instalaciones libres de gluten',
-                },
-                {
-                  icon: Heart,
-                  title: 'Sin azúcares refinados',
-                  description: 'Endulzada naturalmente con sirope de arce ecológico',
-                },
-                {
-                  icon: Award,
-                  title: 'Certificación ecológica',
-                  description: 'Todos nuestros ingredientes tienen certificación eco',
-                },
-                {
-                  icon: Truck,
-                  title: 'Envío sostenible',
-                  description: 'Packaging 100% reciclable y envíos con huella de carbono compensada',
-                },
-                {
-                  icon: Users,
-                  title: 'Comercio justo',
-                  description: 'Trabajamos directamente con productores locales',
-                },
-                {
-                  icon: Sun,
-                  title: 'Energía renovable',
-                  description: 'Nuestro obrador funciona con energía 100% solar',
-                },
-              ].map((item, index) => {
-                const Icon = item.icon;
+            <div className="grid gap-8 sm:grid-cols-3">
+              {values.map((value, index) => {
+                const Icon = value.icon;
                 return (
-                  <div key={index} className="flex gap-4">
-                    <div className="w-10 h-10 bg-olive-100 rounded-xl flex items-center justify-center flex-shrink-0">
-                      <Icon className="w-5 h-5 text-olive-600" strokeWidth={1.5} />
+                  <div
+                    key={index}
+                    className="rounded-2xl bg-cream-50 p-8 text-center transition-shadow hover:shadow-soft"
+                  >
+                    <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-earth-100">
+                      <Icon className="h-8 w-8 text-earth-600" strokeWidth={1.5} />
                     </div>
-                    <div>
-                      <h3 className="font-medium text-stone-800 mb-1">{item.title}</h3>
-                      <p className="text-stone-600 text-sm">{item.description}</p>
-                    </div>
+                    <h3 className="mb-3 font-serif text-xl text-stone-800">{value.title}</h3>
+                    <p className="text-stone-600">{value.description}</p>
                   </div>
                 );
               })}
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* CTA Section */}
-      <section className="py-16 sm:py-24 bg-earth-50">
-        <div className="max-w-3xl mx-auto px-4 text-center">
-          <h2 className="text-3xl sm:text-4xl font-serif text-stone-800 mb-4">
-            ¿Listo para probar la <span className="text-earth-600-display-italic">diferencia</span>?
-          </h2>
-          <p className="text-stone-600 mb-8">
-            Descubre por qué miles de personas han elegido Poppy
-            para empezar el día con energía y sabor.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/tienda"
-              className="inline-flex items-center justify-center gap-2 bg-earth-600 text-[#ffffec] px-8 py-4 rounded-full hover:bg-earth-700 transition-colors font-medium"
-            >
-              <span>Ver productos</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-            <Link
-              href="/contacto"
-              className="inline-flex items-center justify-center gap-2 bg-white text-earth-700 px-8 py-4 rounded-full hover:bg-cream-100 transition-colors font-medium border border-earth-200"
-            >
-              Contáctanos
-            </Link>
+        {/* Stats Section */}
+        <section className="bg-gradient-to-br from-earth-600 to-earth-700 py-16 sm:py-24">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
+              {stats.map((stat, index) => (
+                <div key={index} className="text-center">
+                  <p className="mb-2 font-serif text-4xl text-[#ffffec] sm:text-5xl">
+                    {stat.number}
+                  </p>
+                  <p className="text-earth-200">{stat.label}</p>
+                </div>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Process Section */}
+        <section className="py-16 sm:py-24">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="mb-12 text-center">
+              <h2 className="mb-4 font-serif text-3xl text-stone-800 sm:text-4xl">
+                Nuestro proceso
+              </h2>
+              <p className="mx-auto max-w-2xl text-stone-600">
+                De la selección de ingredientes a tu mesa, cada paso importa
+              </p>
+            </div>
+            <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                {
+                  step: '01',
+                  title: 'Selección',
+                  description:
+                    'Elegimos ingredientes ecológicos de productores locales de confianza',
+                },
+                {
+                  step: '02',
+                  title: 'Mezcla',
+                  description: 'Combinamos los ingredientes siguiendo nuestra receta tradicional',
+                },
+                {
+                  step: '03',
+                  title: 'Tostado',
+                  description: 'Horneamos a baja temperatura para conseguir el crujiente perfecto',
+                },
+                {
+                  step: '04',
+                  title: 'Envío',
+                  description: 'Empaquetamos con cariño y enviamos directamente a tu puerta',
+                },
+              ].map((item, index) => (
+                <div key={index} className="relative">
+                  <div className="h-full rounded-2xl bg-white p-6 shadow-soft">
+                    <span className="font-serif text-5xl text-earth-200">{item.step}</span>
+                    <h3 className="mb-2 mt-2 font-serif text-lg text-stone-800">{item.title}</h3>
+                    <p className="text-sm text-stone-600">{item.description}</p>
+                  </div>
+                  {index < 3 && (
+                    <div className="absolute -right-3 top-1/2 hidden -translate-y-1/2 transform text-earth-300 lg:block">
+                      <ArrowRight className="h-6 w-6" />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Commitments Section */}
+        <section className="py-16 sm:py-24">
+          <div className="mx-auto max-w-6xl px-4">
+            <div className="rounded-3xl bg-white p-8 shadow-soft-lg sm:p-12">
+              <div className="mb-10 text-center">
+                <h2 className="mb-4 font-serif text-3xl text-stone-800 sm:text-4xl">
+                  Nuestros <span className="text-earth-600-display-italic">compromisos</span>
+                </h2>
+              </div>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {[
+                  {
+                    icon: Leaf,
+                    title: 'Sin gluten',
+                    description: 'Apta para celíacos, elaborada en instalaciones libres de gluten',
+                  },
+                  {
+                    icon: Heart,
+                    title: 'Sin azúcares refinados',
+                    description: 'Endulzada naturalmente con sirope de arce ecológico',
+                  },
+                  {
+                    icon: Award,
+                    title: 'Certificación ecológica',
+                    description: 'Todos nuestros ingredientes tienen certificación eco',
+                  },
+                  {
+                    icon: Truck,
+                    title: 'Envío sostenible',
+                    description:
+                      'Packaging 100% reciclable y envíos con huella de carbono compensada',
+                  },
+                  {
+                    icon: Users,
+                    title: 'Comercio justo',
+                    description: 'Trabajamos directamente con productores locales',
+                  },
+                  {
+                    icon: Sun,
+                    title: 'Energía renovable',
+                    description: 'Nuestro obrador funciona con energía 100% solar',
+                  },
+                ].map((item, index) => {
+                  const Icon = item.icon;
+                  return (
+                    <div key={index} className="flex gap-4">
+                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-xl bg-olive-100">
+                        <Icon className="h-5 w-5 text-olive-600" strokeWidth={1.5} />
+                      </div>
+                      <div>
+                        <h3 className="mb-1 font-medium text-stone-800">{item.title}</h3>
+                        <p className="text-sm text-stone-600">{item.description}</p>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Section */}
+        <section className="bg-earth-50 py-16 sm:py-24">
+          <div className="mx-auto max-w-3xl px-4 text-center">
+            <h2 className="mb-4 font-serif text-3xl text-stone-800 sm:text-4xl">
+              ¿Listo para probar la{' '}
+              <span className="text-earth-600-display-italic">diferencia</span>?
+            </h2>
+            <p className="mb-8 text-stone-600">
+              Descubre por qué miles de personas han elegido Poppy para empezar el día con energía y
+              sabor.
+            </p>
+            <div className="flex flex-col justify-center gap-4 sm:flex-row">
+              <Link
+                href="/tienda"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-earth-600 px-8 py-4 font-medium text-[#ffffec] transition-colors hover:bg-earth-700"
+              >
+                <span>Ver productos</span>
+                <ArrowRight className="h-4 w-4" />
+              </Link>
+              <Link
+                href="/contacto"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-earth-200 bg-white px-8 py-4 font-medium text-earth-700 transition-colors hover:bg-cream-100"
+              >
+                Contáctanos
+              </Link>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );
