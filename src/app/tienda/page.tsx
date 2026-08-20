@@ -92,7 +92,7 @@ export default function TiendaPage() {
                   Tienda temporalmente cerrada
                 </p>
                 <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.7 }}>
-                  Estamos de vacaciones viviendo slowly. Los pedidos se enviarán a partir del 6 de abril. Gracias por tu paciencia.
+                  Cerrado por vacaciones. Gestionaremos vuestros pedidos a partir del 8 de septiembre.
                 </p>
               </div>
             )}
