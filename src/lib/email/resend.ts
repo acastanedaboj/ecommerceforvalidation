@@ -6,8 +6,13 @@
 
 import { Resend } from 'resend';
 
-// Initialize Resend client
-const resend = new Resend(process.env.RESEND_API_KEY);
+let _resend: Resend | null = null;
+function getResend() {
+  if (!_resend) {
+    _resend = new Resend(process.env.RESEND_API_KEY);
+  }
+  return _resend;
+}
 
 // Email configuration
 export const EMAIL_CONFIG = {
@@ -44,7 +49,7 @@ export async function sendEmail(options: SendEmailOptions) {
   const recipient = process.env.EMAIL_TEST_OVERRIDE || to;
 
   try {
-    const { data, error } = await resend.emails.send({
+    const { data, error } = await getResend().emails.send({
       from: EMAIL_CONFIG.from,
       to: recipient,
       subject,
@@ -67,4 +72,4 @@ export async function sendEmail(options: SendEmailOptions) {
   }
 }
 
-export { resend };
+export { getResend as resend };

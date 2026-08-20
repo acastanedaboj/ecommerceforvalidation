@@ -4,11 +4,26 @@ import { useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ShoppingBag, Truck, RefreshCw, Plus, Minus, Package, Leaf, WheatOff, ChevronRight, MapPin } from 'lucide-react';
+import {
+  ShoppingBag,
+  Truck,
+  RefreshCw,
+  Plus,
+  Minus,
+  Package,
+  Leaf,
+  WheatOff,
+  ChevronRight,
+  MapPin,
+} from 'lucide-react';
 import { getProductBySlug, getRetailProducts } from '@/data/products';
 import { useCartStore } from '@/store/cart-store';
 import { formatPrice, cn } from '@/lib/utils';
-import { calculatePackUnitPrice, calculateSubscriptionUnitPrice, getPackDiscount } from '@/lib/pricing';
+import {
+  calculatePackUnitPrice,
+  calculateSubscriptionUnitPrice,
+  getPackDiscount,
+} from '@/lib/pricing';
 import { PRICING, SHIPPING, STORE_CLOSED } from '@/lib/constants';
 import { ProductCard } from '@/components/product/ProductCard';
 import { ImageGallery } from '@/components/ui/ImageGallery';
@@ -34,7 +49,9 @@ export default function ProductDetailPage() {
     return (
       <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
         <div className="container-custom text-center">
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '24px' }}>Producto no encontrado</h1>
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '24px' }}>
+            Producto no encontrado
+          </h1>
           <Link href="/tienda" className="btn-pill">
             Volver a la tienda
           </Link>
@@ -48,9 +65,7 @@ export default function ProductDetailPage() {
   const packUnitPrice = isSubscription
     ? calculateSubscriptionUnitPrice()
     : calculatePackUnitPrice(selectedPack);
-  const discount = isSubscription
-    ? PRICING.SUBSCRIPTION_DISCOUNT
-    : getPackDiscount(selectedPack);
+  const discount = isSubscription ? PRICING.SUBSCRIPTION_DISCOUNT : getPackDiscount(selectedPack);
   const totalUnits = quantity * selectedPack;
   const totalPrice = packUnitPrice * totalUnits;
   const originalPrice = basePrice * totalUnits;
@@ -97,37 +112,47 @@ export default function ProductDetailPage() {
 
   return (
     <>
-      <div className="pt-24 pb-0 md:pt-[140px]" style={{ background: 'var(--off)' }}>
+      <div className="pb-0 pt-24 md:pt-[140px]" style={{ background: 'var(--off)' }}>
         <div className="container-custom">
           {/* Breadcrumb */}
           <nav className="mb-8 md:mb-12" aria-label="Breadcrumb">
             <ol className="flex items-center gap-1" style={{ fontSize: '11px', listStyle: 'none' }}>
               <li>
-                <Link href="/" style={{ color: 'rgba(17,17,17,.55)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
+                <Link
+                  href="/"
+                  style={{ color: 'rgba(17,17,17,.55)', textDecoration: 'none' }}
+                  className="transition-colors hover:text-dark"
+                >
                   Inicio
                 </Link>
               </li>
               <li>
-                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(17,17,17,.5)' }} />
+                <ChevronRight className="h-3 w-3" style={{ color: 'rgba(17,17,17,.5)' }} />
               </li>
               <li>
-                <Link href="/tienda" style={{ color: 'rgba(17,17,17,.55)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
+                <Link
+                  href="/tienda"
+                  style={{ color: 'rgba(17,17,17,.55)', textDecoration: 'none' }}
+                  className="transition-colors hover:text-dark"
+                >
                   Tienda
                 </Link>
               </li>
               <li>
-                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(17,17,17,.5)' }} />
+                <ChevronRight className="h-3 w-3" style={{ color: 'rgba(17,17,17,.5)' }} />
               </li>
               <li style={{ color: 'var(--dark)', fontWeight: 400 }}>{product.name}</li>
             </ol>
           </nav>
 
           {/* ── ABOVE THE FOLD — 2 columns, gallery + essentials ── */}
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 mb-0">
+          <div className="mb-0 grid gap-8 lg:grid-cols-2 lg:gap-16">
             {/* Sticky gallery */}
             <div className="lg:sticky lg:top-[140px] lg:self-start">
               <ImageGallery
-                images={product.images.length > 0 ? product.images : ['/images/placeholder-product.jpg']}
+                images={
+                  product.images.length > 0 ? product.images : ['/images/placeholder-product.jpg']
+                }
                 productName={product.name}
                 enableZoom={true}
               />
@@ -136,46 +161,134 @@ export default function ProductDetailPage() {
             {/* Product info — essentials only */}
             <div style={{ paddingBottom: '64px' }}>
               {/* Weight label */}
-              <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.5)', textTransform: 'uppercase', letterSpacing: '0.08em', marginBottom: '12px', fontWeight: 300 }}>
+              <p
+                style={{
+                  fontSize: '11px',
+                  color: 'rgba(17,17,17,.5)',
+                  textTransform: 'uppercase',
+                  letterSpacing: '0.08em',
+                  marginBottom: '12px',
+                  fontWeight: 300,
+                }}
+              >
                 {product.weight}g · Sin gluten · Sin lactosa
               </p>
 
               {/* Name */}
-              <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(30px, 3.5vw, 42px)', marginBottom: '14px', letterSpacing: '-0.02em', lineHeight: 1.1 }}>
+              <h1
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: 'clamp(30px, 3.5vw, 42px)',
+                  marginBottom: '14px',
+                  letterSpacing: '-0.02em',
+                  lineHeight: 1.1,
+                }}
+              >
                 {product.name}
               </h1>
 
               {/* One-line description */}
-              <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.85, marginBottom: '20px', maxWidth: '420px' }}>
+              <p
+                style={{
+                  fontSize: '14px',
+                  color: 'rgba(17,17,17,.6)',
+                  fontWeight: 300,
+                  lineHeight: 1.85,
+                  marginBottom: '20px',
+                  maxWidth: '420px',
+                }}
+              >
                 {product.shortDescription}
               </p>
 
               {/* Ingredients — prominent, above the fold */}
-              <div className="mb-8" style={{ padding: '20px 24px', background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}>
-                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.5)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '10px', fontWeight: 300 }}>
+              <div
+                className="mb-8"
+                style={{
+                  padding: '20px 24px',
+                  background: 'var(--white)',
+                  border: '1px solid rgba(0,0,0,.06)',
+                }}
+              >
+                <p
+                  style={{
+                    fontSize: '11px',
+                    color: 'rgba(17,17,17,.5)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.06em',
+                    marginBottom: '10px',
+                    fontWeight: 300,
+                  }}
+                >
                   Ingredientes
                 </p>
-                <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.65)', fontWeight: 300, lineHeight: 1.75 }}>
+                <p
+                  style={{
+                    fontSize: '13px',
+                    color: 'rgba(17,17,17,.65)',
+                    fontWeight: 300,
+                    lineHeight: 1.75,
+                  }}
+                >
                   {product.ingredients}
                 </p>
-                <div className="flex flex-wrap gap-3 mt-3" style={{ borderTop: '1px solid rgba(0,0,0,.04)', paddingTop: '12px' }}>
+                <div
+                  className="mt-3 flex flex-wrap gap-3"
+                  style={{ borderTop: '1px solid rgba(0,0,0,.04)', paddingTop: '12px' }}
+                >
                   {product.tags.includes('sin-gluten') && (
-                    <span className="inline-flex items-center gap-1.5" style={{ fontSize: '10px', letterSpacing: '0.06em', color: '#047857', fontWeight: 400, textTransform: 'uppercase' }}>
-                      <WheatOff className="w-3 h-3" />
+                    <span
+                      className="inline-flex items-center gap-1.5"
+                      style={{
+                        fontSize: '10px',
+                        letterSpacing: '0.06em',
+                        color: '#047857',
+                        fontWeight: 400,
+                        textTransform: 'uppercase',
+                      }}
+                    >
+                      <WheatOff className="h-3 w-3" />
                       Sin gluten
                     </span>
                   )}
-                  <span className="inline-flex items-center gap-1.5" style={{ fontSize: '10px', letterSpacing: '0.06em', color: '#047857', fontWeight: 400, textTransform: 'uppercase' }}>
+                  <span
+                    className="inline-flex items-center gap-1.5"
+                    style={{
+                      fontSize: '10px',
+                      letterSpacing: '0.06em',
+                      color: '#047857',
+                      fontWeight: 400,
+                      textTransform: 'uppercase',
+                    }}
+                  >
                     Sin lactosa
                   </span>
                   {product.isVegan && (
-                    <span className="inline-flex items-center gap-1.5" style={{ fontSize: '10px', letterSpacing: '0.06em', color: '#15803d', fontWeight: 400, textTransform: 'uppercase' }}>
-                      <Leaf className="w-3 h-3" />
+                    <span
+                      className="inline-flex items-center gap-1.5"
+                      style={{
+                        fontSize: '10px',
+                        letterSpacing: '0.06em',
+                        color: '#15803d',
+                        fontWeight: 400,
+                        textTransform: 'uppercase',
+                      }}
+                    >
+                      <Leaf className="h-3 w-3" />
                       Vegano
                     </span>
                   )}
                   {product.hasHoney && (
-                    <span className="inline-flex items-center gap-1.5" style={{ fontSize: '10px', letterSpacing: '0.06em', color: '#b45309', fontWeight: 400, textTransform: 'uppercase' }}>
+                    <span
+                      className="inline-flex items-center gap-1.5"
+                      style={{
+                        fontSize: '10px',
+                        letterSpacing: '0.06em',
+                        color: '#b45309',
+                        fontWeight: 400,
+                        textTransform: 'uppercase',
+                      }}
+                    >
                       Con miel ecológica
                     </span>
                   )}
@@ -185,13 +298,27 @@ export default function ProductDetailPage() {
               {/* Price */}
               <div className="mb-8">
                 <div className="flex items-baseline gap-3">
-                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '32px', color: 'var(--dark)' }}>
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-display)',
+                      fontSize: '32px',
+                      color: 'var(--dark)',
+                    }}
+                  >
                     {formatPrice(packUnitPrice)}
                   </span>
-                  <span style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>/unidad</span>
+                  <span style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
+                    /unidad
+                  </span>
                   {discount > 0 && (
                     <>
-                      <span style={{ fontSize: '15px', color: 'rgba(17,17,17,.4)', textDecoration: 'line-through' }}>
+                      <span
+                        style={{
+                          fontSize: '15px',
+                          color: 'rgba(17,17,17,.4)',
+                          textDecoration: 'line-through',
+                        }}
+                      >
                         {formatPrice(basePrice)}
                       </span>
                       <span style={{ fontSize: '11px', color: 'var(--brown)', fontWeight: 700 }}>
@@ -201,7 +328,14 @@ export default function ProductDetailPage() {
                   )}
                 </div>
                 {savings > 0 && (
-                  <p style={{ fontSize: '12px', color: 'var(--brown)', fontWeight: 300, marginTop: '4px' }}>
+                  <p
+                    style={{
+                      fontSize: '12px',
+                      color: 'var(--brown)',
+                      fontWeight: 300,
+                      marginTop: '4px',
+                    }}
+                  >
                     Ahorras {formatPrice(savings)} en este pedido
                   </p>
                 )}
@@ -209,7 +343,16 @@ export default function ProductDetailPage() {
 
               {/* Pack selection — minimal pills */}
               <div className="mb-8">
-                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.5)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '12px', fontWeight: 300 }}>
+                <p
+                  style={{
+                    fontSize: '11px',
+                    color: 'rgba(17,17,17,.5)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.06em',
+                    marginBottom: '12px',
+                    fontWeight: 300,
+                  }}
+                >
                   Formato
                 </p>
                 <div className="flex gap-2">
@@ -230,7 +373,9 @@ export default function ProductDetailPage() {
                           padding: '10px 18px',
                           fontSize: '12px',
                           fontWeight: isSelected ? 700 : 400,
-                          border: isSelected ? '1.5px solid var(--dark)' : '1px solid rgba(0,0,0,.1)',
+                          border: isSelected
+                            ? '1.5px solid var(--dark)'
+                            : '1px solid rgba(0,0,0,.1)',
                           background: isSelected ? 'var(--white)' : 'transparent',
                           color: 'var(--dark)',
                           cursor: 'pointer',
@@ -238,12 +383,28 @@ export default function ProductDetailPage() {
                       >
                         <span>{pack === 1 ? '1 bolsa' : `Pack ${pack}`}</span>
                         {packDiscount > 0 && (
-                          <span style={{ display: 'block', fontSize: '10px', color: 'var(--brown)', fontWeight: 300, marginTop: '2px' }}>
+                          <span
+                            style={{
+                              display: 'block',
+                              fontSize: '10px',
+                              color: 'var(--brown)',
+                              fontWeight: 300,
+                              marginTop: '2px',
+                            }}
+                          >
                             -{Math.round(packDiscount * 100)}%{hasFreeShip ? ' · envío gratis' : ''}
                           </span>
                         )}
                         {pack === 1 && (
-                          <span style={{ display: 'block', fontSize: '10px', color: 'rgba(17,17,17,.3)', fontWeight: 300, marginTop: '2px' }}>
+                          <span
+                            style={{
+                              display: 'block',
+                              fontSize: '10px',
+                              color: 'rgba(17,17,17,.3)',
+                              fontWeight: 300,
+                              marginTop: '2px',
+                            }}
+                          >
                             &nbsp;
                           </span>
                         )}
@@ -259,8 +420,7 @@ export default function ProductDetailPage() {
                   className="mt-4 flex items-center gap-2 transition-colors"
                   style={{ color: 'var(--brown)', fontWeight: 300, fontSize: '12px' }}
                 >
-                  <Package className="w-3.5 h-3.5" />
-                  O crea un pack mixto con varios sabores
+                  <Package className="h-3.5 w-3.5" />O crea un pack mixto con varios sabores
                 </button>
               </div>
 
@@ -275,27 +435,39 @@ export default function ProductDetailPage() {
                   className="w-full text-left transition-all duration-200"
                   style={{
                     padding: '20px 24px',
-                    border: isSubscription ? '1.5px solid var(--brown)' : '1px solid rgba(0,0,0,.08)',
+                    border: isSubscription
+                      ? '1.5px solid var(--brown)'
+                      : '1px solid rgba(0,0,0,.08)',
                     background: isSubscription ? 'var(--white)' : 'transparent',
                   }}
                 >
                   <div className="flex items-center justify-between">
                     <div>
-                      <p style={{ fontSize: '14px', fontWeight: isSubscription ? 700 : 400, color: 'var(--dark)', marginBottom: '4px' }}>
+                      <p
+                        style={{
+                          fontSize: '14px',
+                          fontWeight: isSubscription ? 700 : 400,
+                          color: 'var(--dark)',
+                          marginBottom: '4px',
+                        }}
+                      >
                         Recíbela cada mes con un 15% menos
                       </p>
                       <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.55)', fontWeight: 300 }}>
-                        6 bolsas · {formatPrice(calculateSubscriptionUnitPrice())}/ud · Envío gratis · Sin permanencia
+                        6 bolsas · {formatPrice(calculateSubscriptionUnitPrice())}/ud · Envío gratis
+                        · Sin permanencia
                       </p>
                     </div>
-                    <span style={{
-                      fontSize: '11px',
-                      fontWeight: 700,
-                      color: isSubscription ? 'var(--white)' : 'var(--brown)',
-                      background: isSubscription ? 'var(--brown)' : 'transparent',
-                      border: isSubscription ? 'none' : '1px solid var(--brown)',
-                      padding: '4px 10px',
-                    }}>
+                    <span
+                      style={{
+                        fontSize: '11px',
+                        fontWeight: 700,
+                        color: isSubscription ? 'var(--white)' : 'var(--brown)',
+                        background: isSubscription ? 'var(--brown)' : 'transparent',
+                        border: isSubscription ? 'none' : '1px solid var(--brown)',
+                        padding: '4px 10px',
+                      }}
+                    >
                       -15%
                     </span>
                   </div>
@@ -304,7 +476,16 @@ export default function ProductDetailPage() {
 
               {/* Quantity */}
               <div className="mb-8">
-                <p style={{ fontSize: '11px', color: 'rgba(17,17,17,.5)', textTransform: 'uppercase', letterSpacing: '0.06em', marginBottom: '12px', fontWeight: 300 }}>
+                <p
+                  style={{
+                    fontSize: '11px',
+                    color: 'rgba(17,17,17,.5)',
+                    textTransform: 'uppercase',
+                    letterSpacing: '0.06em',
+                    marginBottom: '12px',
+                    fontWeight: 300,
+                  }}
+                >
                   Cantidad
                 </p>
                 <div className="flex items-center gap-6">
@@ -315,16 +496,21 @@ export default function ProductDetailPage() {
                       className="p-3 transition-colors hover:bg-gray-50"
                       aria-label="Reducir cantidad"
                     >
-                      <Minus className="w-4 h-4" style={{ color: 'rgba(17,17,17,.5)' }} />
+                      <Minus className="h-4 w-4" style={{ color: 'rgba(17,17,17,.5)' }} />
                     </button>
-                    <span className="w-12 text-center" style={{ fontSize: '14px', color: 'var(--dark)' }}>{quantity}</span>
+                    <span
+                      className="w-12 text-center"
+                      style={{ fontSize: '14px', color: 'var(--dark)' }}
+                    >
+                      {quantity}
+                    </span>
                     <button
                       type="button"
                       onClick={() => setQuantity(quantity + 1)}
                       className="p-3 transition-colors hover:bg-gray-50"
                       aria-label="Aumentar cantidad"
                     >
-                      <Plus className="w-4 h-4" style={{ color: 'rgba(17,17,17,.5)' }} />
+                      <Plus className="h-4 w-4" style={{ color: 'rgba(17,17,17,.5)' }} />
                     </button>
                   </div>
                   <span style={{ fontSize: '12px', color: 'rgba(17,17,17,.55)', fontWeight: 300 }}>
@@ -334,10 +520,22 @@ export default function ProductDetailPage() {
               </div>
 
               {/* Total + CTA */}
-              <div id="main-cta" className="pt-6" style={{ borderTop: '1px solid rgba(0,0,0,.06)' }}>
-                <div className="flex items-center justify-between mb-5">
-                  <span style={{ fontSize: '12px', color: 'rgba(17,17,17,.35)', fontWeight: 300 }}>Total</span>
-                  <span style={{ fontFamily: 'var(--font-display)', fontSize: '28px', color: 'var(--dark)' }}>
+              <div
+                id="main-cta"
+                className="pt-6"
+                style={{ borderTop: '1px solid rgba(0,0,0,.06)' }}
+              >
+                <div className="mb-5 flex items-center justify-between">
+                  <span style={{ fontSize: '12px', color: 'rgba(17,17,17,.35)', fontWeight: 300 }}>
+                    Total
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: 'var(--font-display)',
+                      fontSize: '28px',
+                      color: 'var(--dark)',
+                    }}
+                  >
                     {formatPrice(totalPrice)}
                   </span>
                 </div>
@@ -355,23 +553,27 @@ export default function ProductDetailPage() {
                   >
                     Tienda temporalmente cerrada
                   </div>
-                </div>
-                <button
-                  type="button"
-                  onClick={handleAddToCart}
-                  disabled={product.stock === 0 || isAdding || STORE_CLOSED}
-                  className={cn(
-                    'btn w-full justify-center bg-earth-500 hover:bg-earth-600 text-[#ffffec] text-base py-4',
-                    'disabled:opacity-50 disabled:cursor-not-allowed'
-                  )}
-                >
-                  {isAdding ? (
-                    <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
-                  ) : (
-                    <>Envío 4-6 días &nbsp;·&nbsp; Gratis desde 4 uds &nbsp;·&nbsp; Entrega gratis en Málaga</>
-                  )}
-                  {STORE_CLOSED ? 'Tienda cerrada temporalmente' : isSubscription ? 'Suscribirme ahora' : 'Anadir al carrito'}
-                </button>
+                ) : (
+                  <button
+                    type="button"
+                    onClick={handleAddToCart}
+                    disabled={product.stock === 0 || isAdding}
+                    className={cn(
+                      'btn w-full justify-center bg-earth-500 py-4 text-base text-[#ffffec] hover:bg-earth-600',
+                      'disabled:cursor-not-allowed disabled:opacity-50'
+                    )}
+                  >
+                    {isAdding ? (
+                      <span className="mr-2 h-5 w-5 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+                    ) : (
+                      <>
+                        Envío 4-6 días &nbsp;·&nbsp; Gratis desde 4 uds &nbsp;·&nbsp; Entrega gratis
+                        en Málaga
+                      </>
+                    )}
+                    {isSubscription ? 'Suscribirme ahora' : 'Añadir al carrito'}
+                  </button>
+                )}
               </div>
             </div>
           </div>
@@ -387,7 +589,17 @@ export default function ProductDetailPage() {
         <div className="container-narrow">
           <span className="section-label">La historia</span>
           {product.description.split('\n\n').map((paragraph, index) => (
-            <p key={index} className="whitespace-pre-line" style={{ fontSize: '15px', color: 'rgba(17,17,17,.65)', fontWeight: 300, lineHeight: 1.9, marginBottom: '20px' }}>
+            <p
+              key={index}
+              className="whitespace-pre-line"
+              style={{
+                fontSize: '15px',
+                color: 'rgba(17,17,17,.65)',
+                fontWeight: 300,
+                lineHeight: 1.9,
+                marginBottom: '20px',
+              }}
+            >
               {paragraph}
             </p>
           ))}
@@ -398,7 +610,14 @@ export default function ProductDetailPage() {
       <section style={{ padding: '80px 0', background: 'var(--white)' }}>
         <div className="container-narrow">
           <span className="section-label">Información nutricional</span>
-          <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.5)', marginBottom: '24px', fontWeight: 300 }}>
+          <p
+            style={{
+              fontSize: '12px',
+              color: 'rgba(17,17,17,.5)',
+              marginBottom: '24px',
+              fontWeight: 300,
+            }}
+          >
             Por {product.nutritionalInfo.servingSize}
           </p>
           <div style={{ maxWidth: '480px' }}>
@@ -407,18 +626,43 @@ export default function ProductDetailPage() {
                 {[
                   { label: 'Calorías', value: `${product.nutritionalInfo.calories} kcal` },
                   { label: 'Grasas', value: `${product.nutritionalInfo.fat}g` },
-                  { label: '  de las cuales saturadas', value: `${product.nutritionalInfo.saturatedFat}g`, indent: true },
+                  {
+                    label: '  de las cuales saturadas',
+                    value: `${product.nutritionalInfo.saturatedFat}g`,
+                    indent: true,
+                  },
                   { label: 'Carbohidratos', value: `${product.nutritionalInfo.carbohydrates}g` },
-                  { label: '  de los cuales azúcares', value: `${product.nutritionalInfo.sugars}g`, indent: true },
+                  {
+                    label: '  de los cuales azúcares',
+                    value: `${product.nutritionalInfo.sugars}g`,
+                    indent: true,
+                  },
                   { label: 'Fibra', value: `${product.nutritionalInfo.fiber}g` },
                   { label: 'Proteínas', value: `${product.nutritionalInfo.protein}g` },
                   { label: 'Sal', value: `${product.nutritionalInfo.salt}g`, last: true },
                 ].map((row) => (
-                  <tr key={row.label} style={!row.last ? { borderBottom: '1px solid rgba(0,0,0,.05)' } : {}}>
-                    <td style={{ padding: '12px 0', color: row.indent ? 'rgba(17,17,17,.45)' : 'rgba(17,17,17,.6)', fontWeight: 300, paddingLeft: row.indent ? '20px' : '0' }}>
+                  <tr
+                    key={row.label}
+                    style={!row.last ? { borderBottom: '1px solid rgba(0,0,0,.05)' } : {}}
+                  >
+                    <td
+                      style={{
+                        padding: '12px 0',
+                        color: row.indent ? 'rgba(17,17,17,.45)' : 'rgba(17,17,17,.6)',
+                        fontWeight: 300,
+                        paddingLeft: row.indent ? '20px' : '0',
+                      }}
+                    >
                       {row.label}
                     </td>
-                    <td style={{ padding: '12px 0', textAlign: 'right', fontWeight: 400, color: 'var(--dark)' }}>
+                    <td
+                      style={{
+                        padding: '12px 0',
+                        textAlign: 'right',
+                        fontWeight: 400,
+                        color: 'var(--dark)',
+                      }}
+                    >
                       {row.value}
                     </td>
                   </tr>
@@ -433,7 +677,14 @@ export default function ProductDetailPage() {
       <section style={{ padding: '56px 0', background: 'var(--off)' }}>
         <div className="container-narrow">
           <span className="section-label">Alérgenos</span>
-          <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.85 }}>
+          <p
+            style={{
+              fontSize: '13px',
+              color: 'rgba(17,17,17,.6)',
+              fontWeight: 300,
+              lineHeight: 1.85,
+            }}
+          >
             {product.allergens}
           </p>
         </div>
@@ -453,16 +704,39 @@ export default function ProductDetailPage() {
           >
             Del horno <em>a tu mesa</em>
           </h2>
-          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.85, marginBottom: '12px' }}>
-            Tostamos cada semana bajo demanda en lotes pequeños. Nunca almacenamos.
-            Recibirás tu granola solo horas o días tras su elaboración.
+          <p
+            style={{
+              fontSize: '14px',
+              color: 'rgba(17,17,17,.6)',
+              fontWeight: 300,
+              lineHeight: 1.85,
+              marginBottom: '12px',
+            }}
+          >
+            Tostamos cada semana bajo demanda en lotes pequeños. Nunca almacenamos. Recibirás tu
+            granola solo horas o días tras su elaboración.
           </p>
-          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.85, marginBottom: '12px' }}>
+          <p
+            style={{
+              fontSize: '14px',
+              color: 'rgba(17,17,17,.6)',
+              fontWeight: 300,
+              lineHeight: 1.85,
+              marginBottom: '12px',
+            }}
+          >
             Envío a toda España en 4-6 días laborables. Entrega gratuita en el centro de Málaga.
           </p>
-          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.85 }}>
-            Packaging de papel 100% reciclable. Te recomendamos volcar la granola en un tarro
-            de cristal para conservarla mejor.
+          <p
+            style={{
+              fontSize: '14px',
+              color: 'rgba(17,17,17,.6)',
+              fontWeight: 300,
+              lineHeight: 1.85,
+            }}
+          >
+            Packaging de papel 100% reciclable. Te recomendamos volcar la granola en un tarro de
+            cristal para conservarla mejor.
           </p>
         </div>
       </section>
@@ -471,15 +745,17 @@ export default function ProductDetailPage() {
       {relatedProducts.length > 0 && (
         <section style={{ padding: '80px 0 96px', background: 'var(--off)' }}>
           <div className="container-custom">
-            <div className="flex justify-between items-baseline mb-12">
-              <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 2.5vw, 34px)' }}>
+            <div className="mb-12 flex items-baseline justify-between">
+              <h2
+                style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 2.5vw, 34px)' }}
+              >
                 También te puede gustar
               </h2>
               <Link href="/tienda" className="btn-text" style={{ fontSize: '13px' }}>
                 Ver todas
               </Link>
             </div>
-            <div className="grid sm:grid-cols-2 gap-8 lg:gap-14">
+            <div className="grid gap-8 sm:grid-cols-2 lg:gap-14">
               {relatedProducts.map((p) => (
                 <div key={p.id}>
                   <ProductCard product={p} />

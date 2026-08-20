@@ -82,7 +82,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     tags: ['sin-gluten', 'ecológico', 'artesanal', 'clásico', 'original', 'con-miel'],
     metaTitle: 'Comprar granola clásica sin gluten y sin lactosa | Miel ecológica | Poppy',
     metaDescription:
-      'Compra granola artesanal sin gluten y sin lactosa con miel ecológica y frutos secos premium. Desde 7€/ud. Envío gratis a partir de 4 uds. Entrega en 4-6 días en España.',
+      'Granola artesanal sin gluten y sin lactosa con miel ecológica y frutos secos premium. Desde 7€/ud. Envío gratis +4 uds. Entrega en 4-6 días.',
     hasHoney: true,
     isVegan: false,
   },
@@ -170,7 +170,7 @@ Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenam
     tags: ['sin-gluten', 'ecológico', 'artesanal', 'vegano', 'sin-miel', 'sirope-agave'],
     metaTitle: 'Comprar granola vegana sin gluten y sin lactosa | 100% vegetal | Poppy',
     metaDescription:
-      'Compra granola vegana sin gluten y sin lactosa endulzada con sirope de agave ecológico. 100% vegetal, misma calidad artesanal. Envío gratis +4 uds. Entrega en 4-6 días.',
+      'Granola vegana sin gluten y sin lactosa con sirope de agave ecológico. 100% vegetal, calidad artesanal. Envío gratis +4 uds. Entrega en 4-6 días.',
     hasHoney: false,
     isVegan: true,
   },
@@ -225,7 +225,8 @@ export const categories = [
     id: 'cat_granola',
     name: 'Granola 150g',
     slug: 'granola-150g',
-    description: 'Nuestra línea de granola Poppy en formato 150g, perfecta para consumo individual.',
+    description:
+      'Nuestra línea de granola Poppy en formato 150g, perfecta para consumo individual.',
     image: '/images/categories/granola-150g.jpg',
   },
   {

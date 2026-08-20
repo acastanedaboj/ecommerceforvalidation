@@ -12,7 +12,12 @@ import { Input } from '@/components/ui/Input';
 import { Select } from '@/components/ui/Select';
 import { Button } from '@/components/ui/Button';
 import { formatPrice, cn } from '@/lib/utils';
-import { getCouponByCode, isCouponValid, calculateCouponDiscount, type Coupon } from '@/data/coupons';
+import {
+  getCouponByCode,
+  isCouponValid,
+  calculateCouponDiscount,
+  type Coupon,
+} from '@/data/coupons';
 import { calculateCartTotal } from '@/lib/pricing';
 import toast from 'react-hot-toast';
 import { STORE_CLOSED } from '@/lib/constants';
@@ -72,25 +77,6 @@ const spanishProvinces = [
 
 export default function CheckoutPage() {
   const router = useRouter();
-
-  if (STORE_CLOSED) {
-    return (
-      <div className="min-h-screen flex items-center justify-center" style={{ background: 'var(--off)' }}>
-        <div className="text-center" style={{ maxWidth: '440px', padding: '0 24px' }}>
-          <p style={{ fontSize: '14px', color: 'var(--dark)', fontWeight: 400, marginBottom: '8px' }}>
-            Tienda temporalmente cerrada
-          </p>
-          <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.7, marginBottom: '24px' }}>
-            Cerrado por vacaciones. Gestionaremos vuestros pedidos a partir del 8 de septiembre.
-          </p>
-          <Link href="/tienda" style={{ fontSize: '13px', color: 'var(--dark)', textDecoration: 'underline' }}>
-            Volver a la tienda
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
   const { data: session } = useSession();
   const { items, clearCart, localDelivery, localDeliveryEmail } = useCartStore();
 
@@ -129,7 +115,12 @@ export default function CheckoutPage() {
 
   // Override shipping for local delivery
   const cartTotal = localDelivery
-    ? { ...cartTotalRaw, shippingCents: 0, isFreeShipping: true, totalCents: cartTotalRaw.totalCents - cartTotalRaw.shippingCents }
+    ? {
+        ...cartTotalRaw,
+        shippingCents: 0,
+        isFreeShipping: true,
+        totalCents: cartTotalRaw.totalCents - cartTotalRaw.shippingCents,
+      }
     : cartTotalRaw;
 
   const [formData, setFormData] = useState({
@@ -203,8 +194,8 @@ export default function CheckoutPage() {
     return (
       <div className="section">
         <div className="container-custom text-center">
-          <h1 className="text-2xl mb-4">Tienda cerrada temporalmente</h1>
-          <p className="text-neutral-600 mb-6">
+          <h1 className="mb-4 text-2xl">Tienda cerrada temporalmente</h1>
+          <p className="mb-6 text-neutral-600">
             Estamos de vacaciones. Gestionaremos pedidos a partir del 8 de septiembre.
           </p>
           <Link href="/tienda" className="btn-primary">
@@ -220,8 +211,17 @@ export default function CheckoutPage() {
     return (
       <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
         <div className="container-custom text-center">
-          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '16px' }}>Tu carrito está vacío</h1>
-          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, marginBottom: '24px' }}>
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '16px' }}>
+            Tu carrito está vacío
+          </h1>
+          <p
+            style={{
+              fontSize: '14px',
+              color: 'rgba(17,17,17,.5)',
+              fontWeight: 300,
+              marginBottom: '24px',
+            }}
+          >
             Añade algunos productos antes de continuar con el checkout.
           </p>
           <Link href="/tienda" className="btn-pill">
@@ -314,7 +314,15 @@ export default function CheckoutPage() {
             };
           }),
           customer: localDelivery
-            ? { email: formData.email, name: formData.name, phone: formData.phone, address: 'Entrega local - Centro de Málaga', city: 'Málaga', province: 'Málaga', postalCode: '29001' }
+            ? {
+                email: formData.email,
+                name: formData.name,
+                phone: formData.phone,
+                address: 'Entrega local - Centro de Málaga',
+                city: 'Málaga',
+                province: 'Málaga',
+                postalCode: '29001',
+              }
             : formData,
           paymentMethod,
           couponCode: appliedCoupon?.code,
@@ -340,39 +348,38 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="min-h-screen" style={{ paddingTop: '140px', paddingBottom: '96px', background: 'var(--off)' }}>
+    <div
+      className="min-h-screen"
+      style={{ paddingTop: '140px', paddingBottom: '96px', background: 'var(--off)' }}
+    >
       <div className="container-custom">
         {/* Header */}
         <div className="mb-8">
           <Link
             href="/tienda"
-            className="inline-flex items-center text-neutral-600 hover:text-primary-600 mb-4"
+            className="mb-4 inline-flex items-center text-neutral-600 hover:text-primary-600"
           >
-            <ChevronLeft className="w-4 h-4 mr-1" />
+            <ChevronLeft className="mr-1 h-4 w-4" />
             Volver a la tienda
           </Link>
-          <h1 className="text-3xl font-display text-neutral-900">
-            Finalizar compra
-          </h1>
+          <h1 className="font-display text-3xl text-neutral-900">Finalizar compra</h1>
         </div>
 
         <form onSubmit={handleSubmit}>
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="grid gap-8 lg:grid-cols-3">
             {/* Left column - Forms */}
-            <div className="lg:col-span-2 space-y-8">
+            <div className="space-y-8 lg:col-span-2">
               {/* Contact info */}
-              <section className="bg-white rounded-xl p-6 shadow-sm">
-                <h2 className="text-xl text-neutral-900 mb-4">
-                  Información de contacto
-                </h2>
+              <section className="rounded-xl bg-white p-6 shadow-sm">
+                <h2 className="mb-4 text-xl text-neutral-900">Información de contacto</h2>
                 <div className="space-y-4">
                   {session?.user?.email ? (
                     <div>
-                      <label className="block text-sm font-medium text-neutral-700 mb-2">
+                      <label className="mb-2 block text-sm font-medium text-neutral-700">
                         Email
                       </label>
-                      <div className="flex items-center gap-2 px-4 py-3 bg-neutral-50 border border-neutral-200 rounded-lg">
-                        <Check className="w-4 h-4 text-green-600" />
+                      <div className="flex items-center gap-2 rounded-lg border border-neutral-200 bg-neutral-50 px-4 py-3">
+                        <Check className="h-4 w-4 text-green-600" />
                         <span className="text-neutral-900">{session.user.email}</span>
                         <span className="ml-auto text-xs text-neutral-500">
                           Conectado como {session.user.name?.split(' ')[0] || 'usuario'}
@@ -391,7 +398,7 @@ export default function CheckoutPage() {
                       required
                     />
                   )}
-                  <div className="grid sm:grid-cols-2 gap-4">
+                  <div className="grid gap-4 sm:grid-cols-2">
                     <Input
                       label="Nombre completo"
                       name="name"
@@ -415,19 +422,33 @@ export default function CheckoutPage() {
               </section>
 
               {/* Shipping address */}
-              <section className="bg-white rounded-xl p-6 shadow-sm">
-                <h2 className="text-xl text-neutral-900 mb-4 flex items-center gap-2">
-                  <Truck className="w-5 h-5 text-primary-600" />
+              <section className="rounded-xl bg-white p-6 shadow-sm">
+                <h2 className="mb-4 flex items-center gap-2 text-xl text-neutral-900">
+                  <Truck className="h-5 w-5 text-primary-600" />
                   {localDelivery ? 'Entrega en el centro de Málaga' : 'Dirección de envío'}
                 </h2>
 
                 {localDelivery ? (
-                  <div className="rounded-lg p-4" style={{ background: 'rgba(243,238,148,.15)', border: '1px solid rgba(243,238,148,.3)' }}>
-                    <p style={{ fontSize: '14px', color: 'var(--dark)', fontWeight: 500, marginBottom: '4px' }}>
+                  <div
+                    className="rounded-lg p-4"
+                    style={{
+                      background: 'rgba(243,238,148,.15)',
+                      border: '1px solid rgba(243,238,148,.3)',
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontSize: '14px',
+                        color: 'var(--dark)',
+                        fontWeight: 500,
+                        marginBottom: '4px',
+                      }}
+                    >
                       Entrega gratuita en el centro de Málaga
                     </p>
                     <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
-                      Nos pondremos en contacto a <strong>{localDeliveryEmail}</strong> para concertar día y hora de entrega.
+                      Nos pondremos en contacto a <strong>{localDeliveryEmail}</strong> para
+                      concertar día y hora de entrega.
                     </p>
                   </div>
                 ) : (
@@ -448,7 +469,7 @@ export default function CheckoutPage() {
                       onChange={handleInputChange}
                       placeholder="Apartamento, portal, etc."
                     />
-                    <div className="grid sm:grid-cols-3 gap-4">
+                    <div className="grid gap-4 sm:grid-cols-3">
                       <Input
                         label="Ciudad"
                         name="city"
@@ -482,15 +503,15 @@ export default function CheckoutPage() {
               </section>
 
               {/* Payment method */}
-              <section className="bg-white rounded-xl p-6 shadow-sm">
-                <h2 className="text-xl text-neutral-900 mb-4 flex items-center gap-2">
-                  <CreditCard className="w-5 h-5 text-primary-600" />
+              <section className="rounded-xl bg-white p-6 shadow-sm">
+                <h2 className="mb-4 flex items-center gap-2 text-xl text-neutral-900">
+                  <CreditCard className="h-5 w-5 text-primary-600" />
                   Método de pago
                 </h2>
                 <div className="space-y-3">
                   <label
                     className={cn(
-                      'flex items-center gap-4 p-4 rounded-lg border-2 cursor-pointer transition-colors',
+                      'flex cursor-pointer items-center gap-4 rounded-lg border-2 p-4 transition-colors',
                       paymentMethod === 'card'
                         ? 'border-primary-500 bg-primary-50'
                         : 'border-neutral-200 hover:border-neutral-300'
@@ -506,63 +527,58 @@ export default function CheckoutPage() {
                     />
                     <div
                       className={cn(
-                        'w-5 h-5 rounded-full border-2 flex items-center justify-center',
-                        paymentMethod === 'card'
-                          ? 'border-primary-500'
-                          : 'border-neutral-300'
+                        'flex h-5 w-5 items-center justify-center rounded-full border-2',
+                        paymentMethod === 'card' ? 'border-primary-500' : 'border-neutral-300'
                       )}
                     >
                       {paymentMethod === 'card' && (
-                        <div className="w-3 h-3 rounded-full bg-primary-500" />
+                        <div className="h-3 w-3 rounded-full bg-primary-500" />
                       )}
                     </div>
                     <div className="flex-1">
                       <span className="font-medium text-neutral-900">
                         Tarjeta de crédito/débito
                       </span>
-                      <p className="text-sm text-neutral-500">
-                        Visa, Mastercard, American Express
-                      </p>
+                      <p className="text-sm text-neutral-500">Visa, Mastercard, American Express</p>
                     </div>
                     <div className="flex gap-2">
-                      <span className="px-2 py-1 bg-neutral-100 rounded text-xs">Visa</span>
-                      <span className="px-2 py-1 bg-neutral-100 rounded text-xs">MC</span>
+                      <span className="rounded bg-neutral-100 px-2 py-1 text-xs">Visa</span>
+                      <span className="rounded bg-neutral-100 px-2 py-1 text-xs">MC</span>
                     </div>
                   </label>
                 </div>
               </section>
 
               {/* Terms and conditions */}
-              <section className="bg-white rounded-xl p-6 shadow-sm">
-                <h2 className="text-xl text-neutral-900 mb-4">
-                  Condiciones legales
-                </h2>
+              <section className="rounded-xl bg-white p-6 shadow-sm">
+                <h2 className="mb-4 text-xl text-neutral-900">Condiciones legales</h2>
                 <div className="space-y-3">
-                  <label className="flex items-start gap-3 cursor-pointer">
+                  <label className="flex cursor-pointer items-start gap-3">
                     <input
                       type="checkbox"
                       checked={acceptedTerms}
                       onChange={(e) => setAcceptedTerms(e.target.checked)}
-                      className="mt-1 w-4 h-4 rounded border-neutral-300 text-primary-600 focus:ring-primary-500"
+                      className="mt-1 h-4 w-4 rounded border-neutral-300 text-primary-600 focus:ring-primary-500"
                     />
                     <span className="text-sm text-neutral-600">
                       He leído y acepto las{' '}
-                      <Link href="/legal/condiciones-venta" className="text-primary-600 hover:underline">
+                      <Link
+                        href="/legal/condiciones-venta"
+                        className="text-primary-600 hover:underline"
+                      >
                         Condiciones de venta
                       </Link>{' '}
                       *
                     </span>
                   </label>
-                  {errors.terms && (
-                    <p className="text-sm text-red-600 ml-7">{errors.terms}</p>
-                  )}
+                  {errors.terms && <p className="ml-7 text-sm text-red-600">{errors.terms}</p>}
 
-                  <label className="flex items-start gap-3 cursor-pointer">
+                  <label className="flex cursor-pointer items-start gap-3">
                     <input
                       type="checkbox"
                       checked={acceptedPrivacy}
                       onChange={(e) => setAcceptedPrivacy(e.target.checked)}
-                      className="mt-1 w-4 h-4 rounded border-neutral-300 text-primary-600 focus:ring-primary-500"
+                      className="mt-1 h-4 w-4 rounded border-neutral-300 text-primary-600 focus:ring-primary-500"
                     />
                     <span className="text-sm text-neutral-600">
                       He leído y acepto la{' '}
@@ -572,22 +588,18 @@ export default function CheckoutPage() {
                       *
                     </span>
                   </label>
-                  {errors.privacy && (
-                    <p className="text-sm text-red-600 ml-7">{errors.privacy}</p>
-                  )}
+                  {errors.privacy && <p className="ml-7 text-sm text-red-600">{errors.privacy}</p>}
                 </div>
               </section>
             </div>
 
             {/* Right column - Order summary */}
             <div className="lg:col-span-1">
-              <div className="bg-white rounded-xl p-6 shadow-sm sticky top-24">
-                <h2 className="text-xl text-neutral-900 mb-4">
-                  Resumen del pedido
-                </h2>
+              <div className="sticky top-24 rounded-xl bg-white p-6 shadow-sm">
+                <h2 className="mb-4 text-xl text-neutral-900">Resumen del pedido</h2>
 
                 {/* Items */}
-                <div className="space-y-4 mb-6">
+                <div className="mb-6 space-y-4">
                   {items.map((item) => {
                     const isBundle = isCartBundleItem(item);
                     const itemKey = isBundle
@@ -598,16 +610,17 @@ export default function CheckoutPage() {
                       ? item.flavors[0]?.productImage || '/images/placeholder-product.jpg'
                       : item.productImage || '/images/placeholder-product.jpg';
                     const itemId = isBundle ? item.bundleId : item.productId;
-                    const lineTotal = cartTotal.items.find(
-                      (i) =>
-                        i.productId === itemId &&
-                        i.packSize === item.packSize &&
-                        i.isSubscription === item.isSubscription
-                    )?.lineTotalCents || 0;
+                    const lineTotal =
+                      cartTotal.items.find(
+                        (i) =>
+                          i.productId === itemId &&
+                          i.packSize === item.packSize &&
+                          i.isSubscription === item.isSubscription
+                      )?.lineTotalCents || 0;
 
                     return (
                       <div key={itemKey} className="flex gap-3">
-                        <div className="relative w-16 h-16 bg-neutral-100 overflow-hidden flex-shrink-0">
+                        <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden bg-neutral-100">
                           <Image
                             src={itemImage}
                             alt={itemName}
@@ -616,8 +629,8 @@ export default function CheckoutPage() {
                             sizes="64px"
                           />
                         </div>
-                        <div className="flex-1 min-w-0">
-                          <p className="font-medium text-neutral-900 text-sm line-clamp-1">
+                        <div className="min-w-0 flex-1">
+                          <p className="line-clamp-1 text-sm font-medium text-neutral-900">
                             {itemName}
                           </p>
                           <p className="text-xs text-neutral-500">
@@ -634,32 +647,30 @@ export default function CheckoutPage() {
                 </div>
 
                 {/* Coupon section */}
-                <div className="border-t border-neutral-200 pt-4 pb-4">
+                <div className="border-t border-neutral-200 pb-4 pt-4">
                   {appliedCoupon ? (
-                    <div className="flex items-center justify-between p-3 bg-accent-50 rounded-lg">
+                    <div className="flex items-center justify-between rounded-lg bg-accent-50 p-3">
                       <div className="flex items-center gap-2">
-                        <Tag className="w-4 h-4 text-accent-600" />
+                        <Tag className="h-4 w-4 text-accent-600" />
                         <div>
                           <p className="text-sm font-medium text-neutral-900">
                             {appliedCoupon.code}
                           </p>
-                          <p className="text-xs text-neutral-600">
-                            {appliedCoupon.description}
-                          </p>
+                          <p className="text-xs text-neutral-600">{appliedCoupon.description}</p>
                         </div>
                       </div>
                       <button
                         type="button"
                         onClick={handleRemoveCoupon}
-                        className="text-neutral-500 hover:text-neutral-700 transition-colors"
+                        className="text-neutral-500 transition-colors hover:text-neutral-700"
                         aria-label="Eliminar cupón"
                       >
-                        <X className="w-4 h-4" />
+                        <X className="h-4 w-4" />
                       </button>
                     </div>
                   ) : (
                     <div>
-                      <label className="block text-sm font-medium text-neutral-700 mb-2">
+                      <label className="mb-2 block text-sm font-medium text-neutral-700">
                         Código de descuento
                       </label>
                       <div className="flex gap-2">
@@ -672,11 +683,9 @@ export default function CheckoutPage() {
                           }}
                           placeholder="Introduce tu código"
                           className={cn(
-                            'flex-1 px-3 py-2 border rounded-lg text-sm',
+                            'flex-1 rounded-lg border px-3 py-2 text-sm',
                             'focus:outline-none focus:ring-2 focus:ring-primary-500',
-                            couponError
-                              ? 'border-red-300 focus:ring-red-500'
-                              : 'border-neutral-300'
+                            couponError ? 'border-red-300 focus:ring-red-500' : 'border-neutral-300'
                           )}
                           disabled={isApplyingCoupon}
                         />
@@ -691,21 +700,17 @@ export default function CheckoutPage() {
                           Aplicar
                         </Button>
                       </div>
-                      {couponError && (
-                        <p className="text-xs text-red-600 mt-1">{couponError}</p>
-                      )}
+                      {couponError && <p className="mt-1 text-xs text-red-600">{couponError}</p>}
                     </div>
                   )}
                 </div>
 
                 {/* Totals */}
-                <div className="border-t border-neutral-200 pt-4 space-y-2 text-sm">
+                <div className="space-y-2 border-t border-neutral-200 pt-4 text-sm">
                   <div className="flex justify-between">
                     <span className="text-neutral-600">Subtotal</span>
                     <span>
-                      {formatPrice(
-                        calculateCartTotal(cartItemsForCalculation).subtotalCents
-                      )}
+                      {formatPrice(calculateCartTotal(cartItemsForCalculation).subtotalCents)}
                     </span>
                   </div>
                   {cartTotal.discountCents > 0 && !appliedCoupon && (
@@ -741,29 +746,27 @@ export default function CheckoutPage() {
                 </div>
 
                 {/* Total */}
-                <div className="border-t border-neutral-200 mt-4 pt-4">
-                  <div className="flex justify-between items-center">
+                <div className="mt-4 border-t border-neutral-200 pt-4">
+                  <div className="flex items-center justify-between">
                     <span>Total</span>
-                    <span className="text-2xl font-bold">
-                      {formatPrice(cartTotal.totalCents)}
-                    </span>
+                    <span className="text-2xl font-bold">{formatPrice(cartTotal.totalCents)}</span>
                   </div>
                 </div>
 
                 {/* Submit button */}
                 <Button
                   type="submit"
-                  className="w-full mt-6"
+                  className="mt-6 w-full"
                   size="lg"
                   isLoading={isLoading}
-                  leftIcon={<Lock className="w-4 h-4" />}
+                  leftIcon={<Lock className="h-4 w-4" />}
                 >
                   {paymentMethod === 'card' ? 'Pagar ahora' : 'Confirmar pedido'}
                 </Button>
 
                 {/* Trust badges */}
                 <div className="mt-4 flex items-center justify-center gap-2 text-xs text-neutral-500">
-                  <Shield className="w-4 h-4" />
+                  <Shield className="h-4 w-4" />
                   <span>Pago 100% seguro con Stripe</span>
                 </div>
               </div>
