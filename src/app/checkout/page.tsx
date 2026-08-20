@@ -15,6 +15,7 @@ import { formatPrice, cn } from '@/lib/utils';
 import { getCouponByCode, isCouponValid, calculateCouponDiscount, type Coupon } from '@/data/coupons';
 import { calculateCartTotal } from '@/lib/pricing';
 import toast from 'react-hot-toast';
+import { STORE_CLOSED } from '@/lib/constants';
 
 const spanishProvinces = [
   { value: 'A Coruña', label: 'A Coruña' },
@@ -172,6 +173,23 @@ export default function CheckoutPage() {
     setCouponError('');
     toast.success('Cupón eliminado');
   };
+
+  // Block checkout when store is closed
+  if (STORE_CLOSED) {
+    return (
+      <div className="section">
+        <div className="container-custom text-center">
+          <h1 className="text-2xl mb-4">Tienda cerrada temporalmente</h1>
+          <p className="text-neutral-600 mb-6">
+            Estamos de vacaciones. Gestionaremos pedidos a partir del 8 de septiembre.
+          </p>
+          <Link href="/tienda" className="btn-primary">
+            Volver a la tienda
+          </Link>
+        </div>
+      </div>
+    );
+  }
 
   // Redirect if cart is empty
   if (items.length === 0) {

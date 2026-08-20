@@ -8,7 +8,7 @@ import { getProductBySlug, getRetailProducts } from '@/data/products';
 import { useCartStore } from '@/store/cart-store';
 import { formatPrice, cn } from '@/lib/utils';
 import { calculatePackUnitPrice, calculateSubscriptionUnitPrice, getPackDiscount } from '@/lib/pricing';
-import { PRICING, SHIPPING } from '@/lib/constants';
+import { PRICING, SHIPPING, STORE_CLOSED } from '@/lib/constants';
 import { ProductCard } from '@/components/product/ProductCard';
 import { ImageGallery } from '@/components/ui/ImageGallery';
 import { PackPillSelector } from '@/components/ui/PackPillSelector';
@@ -303,7 +303,7 @@ export default function ProductDetailPage() {
                 <button
                   type="button"
                   onClick={handleAddToCart}
-                  disabled={product.stock === 0 || isAdding}
+                  disabled={product.stock === 0 || isAdding || STORE_CLOSED}
                   className={cn(
                     'btn w-full justify-center bg-earth-500 hover:bg-earth-600 text-[#ffffec] text-base py-4',
                     'disabled:opacity-50 disabled:cursor-not-allowed'
@@ -314,7 +314,7 @@ export default function ProductDetailPage() {
                   ) : (
                     <ShoppingBag className="w-5 h-5 mr-2" />
                   )}
-                  {isSubscription ? 'Suscribirme ahora' : 'Anadir al carrito'}
+                  {STORE_CLOSED ? 'Tienda cerrada temporalmente' : isSubscription ? 'Suscribirme ahora' : 'Anadir al carrito'}
                 </button>
               </div>
             </div>

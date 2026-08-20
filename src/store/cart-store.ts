@@ -12,6 +12,7 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 import { calculateCartTotal, type CartPriceCalculation } from '@/lib/pricing';
+import { STORE_CLOSED } from '@/lib/constants';
 import { calculateBundlePrice, generateBundleId, generateBundleName } from '@/lib/bundle';
 import { PRICING } from '@/lib/constants';
 import type {
@@ -97,6 +98,7 @@ export const useCartStore = create<CartState>()(
       isOpen: false,
 
       addItem: (newItem) => {
+        if (STORE_CLOSED) return;
         set((state) => {
           const existingIndex = state.items.findIndex(
             (item) =>
@@ -165,6 +167,7 @@ export const useCartStore = create<CartState>()(
 
       // Bundle actions
       addBundle: ({ flavors, packSize, isSubscription = false, priceInCents }) => {
+        if (STORE_CLOSED) return;
         const bundleItem: BundleCartItem = {
           type: 'bundle',
           bundleId: generateBundleId(),
