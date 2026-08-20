@@ -31,7 +31,10 @@ export interface InternalOrderNotificationData {
   discountCode?: string;
 }
 
-export function internalOrderNotificationEmail(data: InternalOrderNotificationData): { subject: string; html: string } {
+export function internalOrderNotificationEmail(data: InternalOrderNotificationData): {
+  subject: string;
+  html: string;
+} {
   const {
     orderNumber,
     orderDate,
@@ -97,10 +100,11 @@ export function internalOrderNotificationEmail(data: InternalOrderNotificationDa
       <!-- Entrega -->
       <h2 style="margin: 0 0 12px; font-size: 13px; text-transform: uppercase; letter-spacing: 1px; color: #9e8c84;">Entrega</h2>
       <div style="background: ${isLocalDelivery ? '#fdfcd0' : '#faf7f3'}; border-radius: 8px; padding: 16px 20px; margin-bottom: 24px; border: 1px solid ${isLocalDelivery ? '#e8dc3d' : 'transparent'};">
-        ${isLocalDelivery
-          ? `<p style="margin: 0; font-size: 14px; font-weight: 700; color: #2d2520;">📍 Entrega en mano — Centro de Málaga</p>
+        ${
+          isLocalDelivery
+            ? `<p style="margin: 0; font-size: 14px; font-weight: 700; color: #2d2520;">📍 Entrega en mano — Centro de Málaga</p>
              <p style="margin: 4px 0 0; font-size: 13px; color: #7a6a60;">Contactar al cliente para coordinar entrega</p>`
-          : `<p style="margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #2d2520;">${shippingAddress.name}</p>
+            : `<p style="margin: 0 0 4px; font-size: 15px; font-weight: 700; color: #2d2520;">${shippingAddress.name}</p>
              <p style="margin: 0 0 2px; font-size: 14px; color: #5a3f38;">${shippingAddress.line1}${shippingAddress.line2 ? `, ${shippingAddress.line2}` : ''}</p>
              <p style="margin: 0; font-size: 14px; color: #7a6a60;">${shippingAddress.postalCode} ${shippingAddress.city} · ${shippingAddress.country}</p>`
         }
@@ -127,11 +131,15 @@ export function internalOrderNotificationEmail(data: InternalOrderNotificationDa
           <span style="font-size: 14px; color: #7a6a60;">Subtotal</span>
           <span style="font-size: 14px; color: #2d2520;">${formatCurrency(subtotalCents)}</span>
         </div>
-        ${discountCents > 0 ? `
+        ${
+          discountCents > 0
+            ? `
         <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
           <span style="font-size: 14px; color: #72a6cc;">Descuento${discountCode ? ` (${discountCode})` : ''}</span>
           <span style="font-size: 14px; color: #72a6cc;">-${formatCurrency(discountCents)}</span>
-        </div>` : ''}
+        </div>`
+            : ''
+        }
         <div style="display: flex; justify-content: space-between; margin-bottom: 12px;">
           <span style="font-size: 14px; color: #7a6a60;">${isLocalDelivery ? 'Entrega local' : 'Envío'}</span>
           <span style="font-size: 14px; color: ${shippingCents === 0 ? '#5a9e7a' : '#2d2520'};">${shippingCents === 0 ? 'Gratis' : formatCurrency(shippingCents)}</span>

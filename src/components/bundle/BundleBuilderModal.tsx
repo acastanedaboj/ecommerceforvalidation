@@ -51,7 +51,7 @@ export function BundleBuilderModal({
       {/* Backdrop */}
       <div
         className={cn(
-          'fixed inset-0 bg-stone-900/60 backdrop-blur-sm z-40',
+          'fixed inset-0 z-40 bg-stone-900/60 backdrop-blur-sm',
           'transition-opacity duration-300',
           isOpen ? 'opacity-100' : 'opacity-0'
         )}
@@ -66,7 +66,7 @@ export function BundleBuilderModal({
         aria-label="Crear pack mixto"
         className={cn(
           'fixed inset-y-0 right-0 z-50 w-full max-w-lg',
-          'bg-cream-100 shadow-soft-xl overflow-hidden',
+          'overflow-hidden bg-cream-100 shadow-soft-xl',
           'transform transition-transform duration-300 ease-bounce-soft',
           isOpen ? 'translate-x-0' : 'translate-x-full'
         )}
@@ -76,8 +76,8 @@ export function BundleBuilderModal({
           type="button"
           onClick={onClose}
           className={cn(
-            'absolute top-4 right-4 z-10',
-            'w-10 h-10 rounded-full bg-white shadow-soft',
+            'absolute right-4 top-4 z-10',
+            'h-10 w-10 rounded-full bg-white shadow-soft',
             'flex items-center justify-center',
             'text-stone-500 hover:text-stone-700',
             'transition-all duration-200 hover:scale-105',
@@ -85,7 +85,7 @@ export function BundleBuilderModal({
           )}
           aria-label="Cerrar"
         >
-          <X className="w-5 h-5" />
+          <X className="h-5 w-5" />
         </button>
 
         {/* Content */}

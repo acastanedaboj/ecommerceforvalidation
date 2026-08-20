@@ -30,17 +30,17 @@ export const PRICING = {
 
   // Pack discounts (percentage off per unit)
   PACK_DISCOUNTS: {
-    1: 0,      // No discount for single
-    3: 0.03,   // 3% off = 6.79€/unit
-    4: 0.05,   // 5% off = 6.65€/unit
-    6: 0.10,   // 10% off = 6.30€/unit
+    1: 0, // No discount for single
+    3: 0.03, // 3% off = 6.79€/unit
+    4: 0.05, // 5% off = 6.65€/unit
+    6: 0.1, // 10% off = 6.30€/unit
   } as Record<number, number>,
 
   // Subscription additional discount (on top of pack 6)
   SUBSCRIPTION_DISCOUNT: 0.15, // 15% off = 5.95€/unit
 
   // VAT rate (Spain - reduced rate for food)
-  VAT_RATE: 0.10, // 10%
+  VAT_RATE: 0.1, // 10%
 } as const;
 
 // ==========================================

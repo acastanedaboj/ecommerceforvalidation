@@ -32,10 +32,7 @@ export async function POST(request: Request) {
 
     // Validate required fields
     if (!data.companyName || !data.contactName || !data.email || !data.businessType) {
-      return NextResponse.json(
-        { error: 'Faltan campos requeridos' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Faltan campos requeridos' }, { status: 400 });
     }
 
     // Build email content
@@ -65,42 +62,58 @@ export async function POST(request: Request) {
                 <a href="mailto:${data.email}" style="color: #A66842;">${data.email}</a>
               </td>
             </tr>
-            ${data.phone ? `
+            ${
+              data.phone
+                ? `
             <tr>
               <td style="padding: 10px 0; color: #78716c;">Teléfono:</td>
               <td style="padding: 10px 0; color: #1c1917;">
                 <a href="tel:${data.phone}" style="color: #A66842;">${data.phone}</a>
               </td>
             </tr>
-            ` : ''}
+            `
+                : ''
+            }
             <tr>
               <td style="padding: 10px 0; color: #78716c;">Tipo de negocio:</td>
               <td style="padding: 10px 0; color: #1c1917; font-weight: bold;">
                 ${businessTypeLabels[data.businessType] || data.businessType}
               </td>
             </tr>
-            ${data.location ? `
+            ${
+              data.location
+                ? `
             <tr>
               <td style="padding: 10px 0; color: #78716c;">Ubicación:</td>
               <td style="padding: 10px 0; color: #1c1917;">${data.location}</td>
             </tr>
-            ` : ''}
-            ${data.estimatedVolume ? `
+            `
+                : ''
+            }
+            ${
+              data.estimatedVolume
+                ? `
             <tr>
               <td style="padding: 10px 0; color: #78716c;">Volumen estimado:</td>
               <td style="padding: 10px 0; color: #1c1917; font-weight: bold;">${data.estimatedVolume} kg/mes</td>
             </tr>
-            ` : ''}
+            `
+                : ''
+            }
           </table>
 
-          ${data.message ? `
+          ${
+            data.message
+              ? `
           <h3 style="color: #44403c; margin-top: 30px; border-bottom: 2px solid #A66842; padding-bottom: 10px;">
             Mensaje
           </h3>
           <p style="color: #1c1917; background-color: white; padding: 15px; border-radius: 8px; border-left: 4px solid #A66842;">
             ${data.message.replace(/\n/g, '<br>')}
           </p>
-          ` : ''}
+          `
+              : ''
+          }
         </div>
 
         <div style="background-color: #44403c; padding: 20px; text-align: center;">
@@ -122,18 +135,12 @@ export async function POST(request: Request) {
 
     if (error) {
       console.error('Error sending email:', error);
-      return NextResponse.json(
-        { error: 'Error al enviar el email' },
-        { status: 500 }
-      );
+      return NextResponse.json({ error: 'Error al enviar el email' }, { status: 500 });
     }
 
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error('Error processing request:', error);
-    return NextResponse.json(
-      { error: 'Error al procesar la solicitud' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Error al procesar la solicitud' }, { status: 500 });
   }
 }

@@ -15,11 +15,7 @@ import { calculateCartTotal, type CartPriceCalculation } from '@/lib/pricing';
 import { STORE_CLOSED } from '@/lib/constants';
 import { calculateBundlePrice, generateBundleId, generateBundleName } from '@/lib/bundle';
 import { PRICING } from '@/lib/constants';
-import type {
-  BundleCartItem,
-  BundleFlavorSelection,
-  BundlePackSize,
-} from '@/types/bundle';
+import type { BundleCartItem, BundleFlavorSelection, BundlePackSize } from '@/types/bundle';
 
 // Single product cart item (original type)
 export interface CartItem {
@@ -89,11 +85,7 @@ interface CartState {
 }
 
 // Generate unique key for cart item (same product can be in cart with different pack sizes)
-const generateItemKey = (
-  productId: string,
-  packSize: number,
-  isSubscription: boolean
-): string => {
+const generateItemKey = (productId: string, packSize: number, isSubscription: boolean): string => {
   return `${productId}-${packSize}-${isSubscription}`;
 };
 
@@ -208,14 +200,13 @@ export const useCartStore = create<CartState>()(
 
         set((state) => ({
           items: state.items.map((item) =>
-            isCartBundleItem(item) && item.bundleId === bundleId
-              ? { ...item, quantity }
-              : item
+            isCartBundleItem(item) && item.bundleId === bundleId ? { ...item, quantity } : item
           ),
         }));
       },
 
-      setLocalDelivery: (enabled) => set({ localDelivery: enabled, ...(enabled ? {} : { localDeliveryEmail: '' }) }),
+      setLocalDelivery: (enabled) =>
+        set({ localDelivery: enabled, ...(enabled ? {} : { localDeliveryEmail: '' }) }),
 
       setLocalDeliveryEmail: (email) => set({ localDeliveryEmail: email }),
 
@@ -292,7 +283,11 @@ export const useCartStore = create<CartState>()(
     }),
     {
       name: 'poppy-cart',
-      partialize: (state) => ({ items: state.items, localDelivery: state.localDelivery, localDeliveryEmail: state.localDeliveryEmail }),
+      partialize: (state) => ({
+        items: state.items,
+        localDelivery: state.localDelivery,
+        localDeliveryEmail: state.localDeliveryEmail,
+      }),
     }
   )
 );

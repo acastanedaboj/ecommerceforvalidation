@@ -28,8 +28,7 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Granola artesanal premium de Málaga | Poppy',
-    description:
-      'Granola elaborada artesanalmente en pequeños lotes con ingredientes de Málaga.',
+    description: 'Granola elaborada artesanalmente en pequeños lotes con ingredientes de Málaga.',
     url: `${SITE_URL}/granola-artesanal`,
     type: 'website',
     images: [
@@ -109,19 +108,19 @@ export default function GranolaArtesanalPage() {
       />
 
       {/* Ingredientes Section */}
-      <section className="py-20 md:py-28 bg-white">
+      <section className="bg-white py-20 md:py-28">
         <div className="container-custom">
-          <div className="text-center mb-16">
-            <p className="text-xs tracking-widest uppercase text-stone-500 mb-4">
+          <div className="mb-16 text-center">
+            <p className="mb-4 text-xs uppercase tracking-widest text-stone-500">
               {ingredients.subtitle}
             </p>
             <h2 className="font-display text-stone-800">{ingredients.title}</h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="mx-auto grid max-w-5xl gap-8 md:grid-cols-2 lg:grid-cols-4">
             {ingredients.items.map((item, index) => (
               <div key={index} className="text-center">
-                <div className="w-16 h-16 bg-earth-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-earth-100">
                   <span className="text-2xl">
                     {index === 0 && '🍯'}
                     {index === 1 && '🥜'}
@@ -129,8 +128,8 @@ export default function GranolaArtesanalPage() {
                     {index === 3 && '🫒'}
                   </span>
                 </div>
-                <h3 className="font-display text-lg text-stone-800 mb-2">{item.title}</h3>
-                <p className="text-stone-600 text-sm">{item.description}</p>
+                <h3 className="mb-2 font-display text-lg text-stone-800">{item.title}</h3>
+                <p className="text-sm text-stone-600">{item.description}</p>
               </div>
             ))}
           </div>
@@ -145,47 +144,49 @@ export default function GranolaArtesanalPage() {
       />
 
       {/* Comparativa Section */}
-      <section className="py-16 bg-stone-50">
+      <section className="bg-stone-50 py-16">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="font-display text-2xl text-stone-800 mb-8 text-center">
+          <div className="mx-auto max-w-4xl">
+            <h2 className="mb-8 text-center font-display text-2xl text-stone-800">
               Artesanal vs Industrial
             </h2>
 
-            <div className="bg-white rounded-lg shadow-sm overflow-hidden">
+            <div className="overflow-hidden rounded-lg bg-white shadow-sm">
               <table className="w-full">
                 <thead>
                   <tr className="bg-stone-100">
-                    <th className="py-4 px-6 text-left text-stone-800 font-medium">Aspecto</th>
-                    <th className="py-4 px-6 text-center text-earth-600 font-medium">Poppy (Artesanal)</th>
-                    <th className="py-4 px-6 text-center text-stone-500 font-medium">Industrial</th>
+                    <th className="px-6 py-4 text-left font-medium text-stone-800">Aspecto</th>
+                    <th className="px-6 py-4 text-center font-medium text-earth-600">
+                      Poppy (Artesanal)
+                    </th>
+                    <th className="px-6 py-4 text-center font-medium text-stone-500">Industrial</th>
                   </tr>
                 </thead>
                 <tbody className="text-stone-600">
                   <tr className="border-b border-stone-100">
-                    <td className="py-4 px-6 font-medium">Tamaño del lote</td>
-                    <td className="py-4 px-6 text-center text-earth-600">&lt;50kg</td>
-                    <td className="py-4 px-6 text-center text-stone-400">Toneladas</td>
+                    <td className="px-6 py-4 font-medium">Tamaño del lote</td>
+                    <td className="px-6 py-4 text-center text-earth-600">&lt;50kg</td>
+                    <td className="px-6 py-4 text-center text-stone-400">Toneladas</td>
                   </tr>
                   <tr className="border-b border-stone-100">
-                    <td className="py-4 px-6 font-medium">Ingredientes</td>
-                    <td className="py-4 px-6 text-center text-earth-600">Locales y premium</td>
-                    <td className="py-4 px-6 text-center text-stone-400">Estandarizados</td>
+                    <td className="px-6 py-4 font-medium">Ingredientes</td>
+                    <td className="px-6 py-4 text-center text-earth-600">Locales y premium</td>
+                    <td className="px-6 py-4 text-center text-stone-400">Estandarizados</td>
                   </tr>
                   <tr className="border-b border-stone-100">
-                    <td className="py-4 px-6 font-medium">Proceso</td>
-                    <td className="py-4 px-6 text-center text-earth-600">Manual, controlado</td>
-                    <td className="py-4 px-6 text-center text-stone-400">Automatizado</td>
+                    <td className="px-6 py-4 font-medium">Proceso</td>
+                    <td className="px-6 py-4 text-center text-earth-600">Manual, controlado</td>
+                    <td className="px-6 py-4 text-center text-stone-400">Automatizado</td>
                   </tr>
                   <tr className="border-b border-stone-100">
-                    <td className="py-4 px-6 font-medium">Aditivos</td>
-                    <td className="py-4 px-6 text-center text-earth-600">Ninguno</td>
-                    <td className="py-4 px-6 text-center text-stone-400">Conservantes, etc.</td>
+                    <td className="px-6 py-4 font-medium">Aditivos</td>
+                    <td className="px-6 py-4 text-center text-earth-600">Ninguno</td>
+                    <td className="px-6 py-4 text-center text-stone-400">Conservantes, etc.</td>
                   </tr>
                   <tr>
-                    <td className="py-4 px-6 font-medium">Frescura</td>
-                    <td className="py-4 px-6 text-center text-earth-600">Recién hecha</td>
-                    <td className="py-4 px-6 text-center text-stone-400">Meses en almacén</td>
+                    <td className="px-6 py-4 font-medium">Frescura</td>
+                    <td className="px-6 py-4 text-center text-earth-600">Recién hecha</td>
+                    <td className="px-6 py-4 text-center text-stone-400">Meses en almacén</td>
                   </tr>
                 </tbody>
               </table>

@@ -13,7 +13,10 @@ export interface OrderReadyPickupData {
   pickupNote?: string;
 }
 
-export function orderReadyPickupEmail(data: OrderReadyPickupData): { subject: string; html: string } {
+export function orderReadyPickupEmail(data: OrderReadyPickupData): {
+  subject: string;
+  html: string;
+} {
   const { email, customerName, orderId, pickupNote } = data;
 
   const firstName = customerName?.split(' ')[0] || 'Cliente';
@@ -35,12 +38,16 @@ export function orderReadyPickupEmail(data: OrderReadyPickupData): { subject: st
       </p>
     </div>
 
-    ${pickupNote ? `
+    ${
+      pickupNote
+        ? `
     <div class="card">
       <p style="margin: 0 0 6px;"><strong>Nota del equipo Poppy:</strong></p>
       <p style="margin: 0; font-size: 14px;">${pickupNote}</p>
     </div>
-    ` : ''}
+    `
+        : ''
+    }
 
     <hr class="divider">
 
@@ -65,6 +72,9 @@ export function orderReadyPickupEmail(data: OrderReadyPickupData): { subject: st
 
   return {
     subject: `${firstName}, tu pedido #${orderId} está listo para recoger`,
-    html: emailLayout(content, `Tu pedido #${orderId} está listo para recoger en Málaga.`).replace('{{email}}', email),
+    html: emailLayout(content, `Tu pedido #${orderId} está listo para recoger en Málaga.`).replace(
+      '{{email}}',
+      email
+    ),
   };
 }

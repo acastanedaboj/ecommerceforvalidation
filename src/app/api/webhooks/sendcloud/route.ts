@@ -35,15 +35,14 @@ export async function POST(request: NextRequest) {
     // Find the order by sendcloudParcelId or order_number
     const order = await prisma.order.findFirst({
       where: {
-        OR: [
-          { sendcloudParcelId: String(parcel.id) },
-          { orderNumber: parcel.order_number },
-        ],
+        OR: [{ sendcloudParcelId: String(parcel.id) }, { orderNumber: parcel.order_number }],
       },
     });
 
     if (!order) {
-      console.warn(`Sendcloud webhook: no order found for parcel ${parcel.id} / ${parcel.order_number}`);
+      console.warn(
+        `Sendcloud webhook: no order found for parcel ${parcel.id} / ${parcel.order_number}`
+      );
       return NextResponse.json({ received: true });
     }
 

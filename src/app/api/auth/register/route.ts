@@ -10,19 +10,13 @@ export async function POST(request: NextRequest) {
 
     // Validate required fields
     if (!email || !password) {
-      return NextResponse.json(
-        { error: 'Email y contraseña son requeridos' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Email y contraseña son requeridos' }, { status: 400 });
     }
 
     // Validate email format
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email)) {
-      return NextResponse.json(
-        { error: 'El formato del email no es válido' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'El formato del email no es válido' }, { status: 400 });
     }
 
     // Validate password length
@@ -39,10 +33,7 @@ export async function POST(request: NextRequest) {
     });
 
     if (existingUser) {
-      return NextResponse.json(
-        { error: 'Ya existe una cuenta con este email' },
-        { status: 409 }
-      );
+      return NextResponse.json({ error: 'Ya existe una cuenta con este email' }, { status: 409 });
     }
 
     // Hash password

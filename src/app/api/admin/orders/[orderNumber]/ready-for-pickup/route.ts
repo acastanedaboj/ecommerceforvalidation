@@ -6,10 +6,7 @@ import { sendOrderReadyForPickupEmail } from '@/lib/email';
 
 const ADMIN_EMAILS = ['alvaro.castanneda@gmail.com', 'hola@poppy.es', 'pilar.orico@gmail.com'];
 
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { orderNumber: string } }
-) {
+export async function POST(request: NextRequest, { params }: { params: { orderNumber: string } }) {
   const session = await getServerSession(authOptions);
   if (!session || !ADMIN_EMAILS.includes(session.user?.email || '')) {
     return NextResponse.json({ error: 'No autorizado' }, { status: 401 });

@@ -16,20 +16,18 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         {label && (
           <label htmlFor={inputId} className="label">
             {label}
-            {props.required && <span className="text-red-500 ml-1">*</span>}
+            {props.required && <span className="ml-1 text-red-500">*</span>}
           </label>
         )}
         <input
           type={type}
           id={inputId}
           ref={ref}
-          className={cn(
-            'input',
-            error && 'input-error',
-            className
-          )}
+          className={cn('input', error && 'input-error', className)}
           aria-invalid={error ? 'true' : 'false'}
-          aria-describedby={error ? `${inputId}-error` : helperText ? `${inputId}-helper` : undefined}
+          aria-describedby={
+            error ? `${inputId}-error` : helperText ? `${inputId}-helper` : undefined
+          }
           {...props}
         />
         {error && (
@@ -38,7 +36,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           </p>
         )}
         {helperText && !error && (
-          <p id={`${inputId}-helper`} className="text-sm text-neutral-500 mt-1">
+          <p id={`${inputId}-helper`} className="mt-1 text-sm text-neutral-500">
             {helperText}
           </p>
         )}

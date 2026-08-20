@@ -37,7 +37,10 @@ export function getCouponByCode(code: string): Coupon | undefined {
   return coupons.find((c) => c.code.toLowerCase() === code.toLowerCase() && c.isActive);
 }
 
-export function isCouponValid(coupon: Coupon, subtotalCents: number): { valid: boolean; reason?: string } {
+export function isCouponValid(
+  coupon: Coupon,
+  subtotalCents: number
+): { valid: boolean; reason?: string } {
   const now = new Date();
 
   if (!coupon.isActive) {
@@ -57,16 +60,16 @@ export function isCouponValid(coupon: Coupon, subtotalCents: number): { valid: b
   }
 
   if (coupon.minPurchaseAmountCents && subtotalCents < coupon.minPurchaseAmountCents) {
-    return { valid: false, reason: `Compra mínima requerida: ${(coupon.minPurchaseAmountCents / 100).toFixed(2)}€` };
+    return {
+      valid: false,
+      reason: `Compra mínima requerida: ${(coupon.minPurchaseAmountCents / 100).toFixed(2)}€`,
+    };
   }
 
   return { valid: true };
 }
 
-export function calculateCouponDiscount(
-  coupon: Coupon,
-  subtotalCents: number
-): number {
+export function calculateCouponDiscount(coupon: Coupon, subtotalCents: number): number {
   if (coupon.discountType === 'percentage') {
     let discount = Math.round((subtotalCents * coupon.discountValue) / 100);
 

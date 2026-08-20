@@ -48,7 +48,8 @@ const orderShipped = orderShippedEmail({
   customerName: 'María García',
   orderId: 'POP12345',
   trackingNumber: 'CE123456789ES',
-  trackingUrl: 'https://www.correos.es/ss/Satellite/site/aplicacion-localizador/detalle_envio-sidioma=es_ES?numero=CE123456789ES',
+  trackingUrl:
+    'https://www.correos.es/ss/Satellite/site/aplicacion-localizador/detalle_envio-sidioma=es_ES?numero=CE123456789ES',
   carrier: 'Correos Express',
   estimatedDelivery: 'Miércoles 12 de febrero',
 });

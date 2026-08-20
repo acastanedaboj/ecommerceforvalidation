@@ -20,8 +20,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   if (status === 'loading') {
     return (
-      <div className="min-h-screen flex items-center justify-center" style={{ background: 'var(--off)' }}>
-        <Loader2 className="w-8 h-8 animate-spin" style={{ color: 'var(--brown)' }} />
+      <div
+        className="flex min-h-screen items-center justify-center"
+        style={{ background: 'var(--off)' }}
+      >
+        <Loader2 className="h-8 w-8 animate-spin" style={{ color: 'var(--brown)' }} />
       </div>
     );
   }
@@ -30,10 +33,18 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
 
   return (
     <div className="min-h-screen" style={{ background: 'var(--off)', paddingTop: '120px' }}>
-      <div className="max-w-6xl mx-auto px-4 py-8">
-        <div className="flex items-center justify-between mb-8">
+      <div className="mx-auto max-w-6xl px-4 py-8">
+        <div className="mb-8 flex items-center justify-between">
           <div>
-            <p style={{ fontSize: '12px', textTransform: 'uppercase', letterSpacing: '1px', color: 'rgba(17,17,17,.4)', fontWeight: 500 }}>
+            <p
+              style={{
+                fontSize: '12px',
+                textTransform: 'uppercase',
+                letterSpacing: '1px',
+                color: 'rgba(17,17,17,.4)',
+                fontWeight: 500,
+              }}
+            >
               Panel interno
             </p>
             <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '28px' }}>Pedidos</h1>

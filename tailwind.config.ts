@@ -166,7 +166,7 @@ const config: Config = {
         '5xl': '2.5rem',
       },
       boxShadow: {
-        'soft': '0 2px 15px -3px rgba(0, 0, 0, 0.05), 0 10px 20px -2px rgba(0, 0, 0, 0.03)',
+        soft: '0 2px 15px -3px rgba(0, 0, 0, 0.05), 0 10px 20px -2px rgba(0, 0, 0, 0.03)',
         'soft-lg': '0 10px 40px -10px rgba(0, 0, 0, 0.08)',
         'soft-xl': '0 20px 50px -12px rgba(0, 0, 0, 0.1)',
         'inner-soft': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.04)',
@@ -189,7 +189,7 @@ const config: Config = {
         'slide-in-right': 'slideInRight 0.4s cubic-bezier(0.4, 0, 0.2, 1)',
         'slide-out-right': 'slideOutRight 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
         'scale-up': 'scaleUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
-        'shimmer': 'shimmer 2s infinite',
+        shimmer: 'shimmer 2s infinite',
         'pulse-soft': 'pulseSoft 3s ease-in-out infinite',
       },
       keyframes: {
@@ -243,7 +243,7 @@ const config: Config = {
         '500': '500ms',
       },
       transitionTimingFunction: {
-        'premium': 'cubic-bezier(0.4, 0, 0.2, 1)',
+        premium: 'cubic-bezier(0.4, 0, 0.2, 1)',
         'bounce-soft': 'cubic-bezier(0.34, 1.56, 0.64, 1)',
       },
     },

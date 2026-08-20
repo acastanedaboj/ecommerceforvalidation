@@ -185,9 +185,7 @@ export function calculateCartTotal(
 
   // Average discount percentage
   const discountPercentage =
-    originalTotalCents > 0
-      ? Math.round((totalDiscountCents / originalTotalCents) * 100)
-      : 0;
+    originalTotalCents > 0 ? Math.round((totalDiscountCents / originalTotalCents) * 100) : 0;
 
   // Check free shipping eligibility
   const hasSubscription = items.some((item) => item.isSubscription);
@@ -229,8 +227,7 @@ export function calculateCartTotal(
   const unitPriceCents = totalUnits > 0 ? Math.round(finalSubtotalCents / totalUnits) : 0;
 
   // Average savings per unit
-  const savingsPerUnit =
-    totalUnits > 0 ? Math.round(totalDiscountCents / totalUnits) : 0;
+  const savingsPerUnit = totalUnits > 0 ? Math.round(totalDiscountCents / totalUnits) : 0;
 
   return {
     unitPriceCents,
@@ -270,10 +267,7 @@ export function getPackOptions(): Array<{
       discountPercentage: getPackDiscount(size) * 100,
       savingsPerUnit: PRICING.BASE_PRICE_CENTS - unitPriceCents,
       freeShipping: size >= SHIPPING.FREE_SHIPPING_MIN_ITEMS,
-      label:
-        size === 1
-          ? '1 bolsa'
-          : `Pack ${size} ${size >= 4 ? '(envío gratis)' : ''}`,
+      label: size === 1 ? '1 bolsa' : `Pack ${size} ${size >= 4 ? '(envío gratis)' : ''}`,
     };
   });
 }
@@ -298,7 +292,6 @@ export function getSubscriptionInfo(): {
     totalPriceCents: unitPriceCents * packSize,
     discountPercentage: PRICING.SUBSCRIPTION_DISCOUNT * 100,
     savingsPerUnit: PRICING.BASE_PRICE_CENTS - unitPriceCents,
-    monthlySavings:
-      (PRICING.BASE_PRICE_CENTS - unitPriceCents) * packSize,
+    monthlySavings: (PRICING.BASE_PRICE_CENTS - unitPriceCents) * packSize,
   };
 }

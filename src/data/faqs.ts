@@ -333,9 +333,7 @@ Puedes solicitar información adicional sobre nuestras certificaciones escribié
 ];
 
 export function getFAQsByCategory(category: FAQ['category']): FAQ[] {
-  return faqs
-    .filter((faq) => faq.category === category)
-    .sort((a, b) => a.order - b.order);
+  return faqs.filter((faq) => faq.category === category).sort((a, b) => a.order - b.order);
 }
 
 export function getAllFAQs(): FAQ[] {

@@ -8,11 +8,7 @@
 import { PRICING, SHIPPING } from './constants';
 import { calculateLinePrice, getPackDiscount } from './pricing';
 import type { PriceCalculation } from './pricing';
-import type {
-  BundleConfig,
-  BundleFlavorSelection,
-  BundlePackSize,
-} from '@/types/bundle';
+import type { BundleConfig, BundleFlavorSelection, BundlePackSize } from '@/types/bundle';
 
 /**
  * Calculates pricing for a bundle (mixed pack)
@@ -30,10 +26,7 @@ export function calculateBundlePrice(
  * Validates that bundle flavors total equals pack size
  */
 export function validateBundleConfig(config: BundleConfig): boolean {
-  const totalUnits = config.flavors.reduce(
-    (sum, flavor) => sum + flavor.quantity,
-    0
-  );
+  const totalUnits = config.flavors.reduce((sum, flavor) => sum + flavor.quantity, 0);
   return totalUnits === config.packSize;
 }
 
@@ -53,9 +46,7 @@ export function generateBundleSummary(flavors: BundleFlavorSelection[]): string 
     .filter((f) => f.quantity > 0)
     .map((f) => {
       // Remove "Granola de " prefix for shorter display
-      const shortName = f.productName
-        .replace(/^Granola de /i, '')
-        .replace(/^Granola /i, '');
+      const shortName = f.productName.replace(/^Granola de /i, '').replace(/^Granola /i, '');
       return `${f.quantity}x ${shortName}`;
     })
     .join(', ');
@@ -64,10 +55,7 @@ export function generateBundleSummary(flavors: BundleFlavorSelection[]): string 
 /**
  * Calculates savings compared to buying single units
  */
-export function calculateBundleSavings(
-  packSize: BundlePackSize,
-  quantity: number = 1
-): number {
+export function calculateBundleSavings(packSize: BundlePackSize, quantity: number = 1): number {
   const baseTotal = PRICING.BASE_PRICE_CENTS * packSize * quantity;
   const bundlePrice = calculateBundlePrice(packSize, quantity, false);
   return baseTotal - bundlePrice.subtotalCents;
@@ -80,10 +68,7 @@ export function bundleHasFreeShipping(
   packSize: BundlePackSize,
   isSubscription: boolean = false
 ): boolean {
-  return (
-    packSize >= SHIPPING.FREE_SHIPPING_MIN_ITEMS ||
-    isSubscription
-  );
+  return packSize >= SHIPPING.FREE_SHIPPING_MIN_ITEMS || isSubscription;
 }
 
 /**
@@ -134,9 +119,7 @@ export function getBundlePackOptions(): Array<{
 /**
  * Creates an empty bundle configuration
  */
-export function createEmptyBundleConfig(
-  packSize: BundlePackSize = 4
-): BundleConfig {
+export function createEmptyBundleConfig(packSize: BundlePackSize = 4): BundleConfig {
   return {
     packSize,
     flavors: [],
@@ -174,9 +157,7 @@ export function updateFlavorQuantity(
   newQuantity: number
 ): BundleFlavorSelection[] {
   return flavors.map((flavor) =>
-    flavor.productId === productId
-      ? { ...flavor, quantity: Math.max(0, newQuantity) }
-      : flavor
+    flavor.productId === productId ? { ...flavor, quantity: Math.max(0, newQuantity) } : flavor
   );
 }
 

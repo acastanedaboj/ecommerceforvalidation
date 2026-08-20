@@ -25,10 +25,7 @@ export async function POST(request: NextRequest) {
     const signature = request.headers.get('stripe-signature');
 
     if (!signature) {
-      return NextResponse.json(
-        { error: 'Missing stripe-signature header' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Missing stripe-signature header' }, { status: 400 });
     }
 
     let event: Stripe.Event;
@@ -37,10 +34,7 @@ export async function POST(request: NextRequest) {
       event = stripe.webhooks.constructEvent(body, signature, webhookSecret);
     } catch (err) {
       console.error('Webhook signature verification failed:', err);
-      return NextResponse.json(
-        { error: 'Webhook signature verification failed' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Webhook signature verification failed' }, { status: 400 });
     }
 
     // Handle the event
@@ -88,7 +82,8 @@ export async function POST(request: NextRequest) {
                 customerEmail: session.customer_email,
                 customerName: session.customer_details?.name || null,
                 customerPhone: session.customer_details?.phone || null,
-                shippingName: session.shipping_details?.name || session.customer_details?.name || null,
+                shippingName:
+                  session.shipping_details?.name || session.customer_details?.name || null,
                 shippingLine1: session.shipping_details?.address?.line1 || null,
                 shippingLine2: session.shipping_details?.address?.line2 || null,
                 shippingCity: session.shipping_details?.address?.city || null,
@@ -129,7 +124,10 @@ export async function POST(request: NextRequest) {
 
             // Create Sendcloud parcel (non-blocking)
             if (session.shipping_details?.address?.line1) {
-              const totalUnits = lineItems.data.reduce((sum, item) => sum + (item.quantity || 1), 0);
+              const totalUnits = lineItems.data.reduce(
+                (sum, item) => sum + (item.quantity || 1),
+                0
+              );
               const weightGrams = Math.min(totalUnits * 150, 1000); // 150g per bag, max 1kg box
               const parcelItems = lineItems.data
                 .filter((item) => item.description && item.quantity)
@@ -170,7 +168,9 @@ export async function POST(request: NextRequest) {
                   });
                   console.log('Sendcloud parcel created:', parcel.id);
                 })
-                .catch((err) => console.error('Sendcloud parcel creation failed (non-blocking):', err));
+                .catch((err) =>
+                  console.error('Sendcloud parcel creation failed (non-blocking):', err)
+                );
             }
 
             // Send internal notification to Poppy team (isolated — never blocks customer email)
@@ -196,7 +196,8 @@ export async function POST(request: NextRequest) {
               },
               isLocalDelivery: !session.shipping_details?.address?.line1,
               discountCode: session.metadata?.couponCode || undefined,
-            }).then(() => console.log('Internal order notification sent'))
+            })
+              .then(() => console.log('Internal order notification sent'))
               .catch((err) => console.error('Internal notification failed (non-blocking):', err));
 
             // Send order confirmation email
@@ -249,9 +250,15 @@ export async function POST(request: NextRequest) {
         console.log('Invoice paid:', invoice.id);
 
         // Send subscription renewed email for recurring payments
-        if (invoice.subscription && invoice.customer_email && invoice.billing_reason === 'subscription_cycle') {
+        if (
+          invoice.subscription &&
+          invoice.customer_email &&
+          invoice.billing_reason === 'subscription_cycle'
+        ) {
           try {
-            const subscription = await stripe.subscriptions.retrieve(invoice.subscription as string);
+            const subscription = await stripe.subscriptions.retrieve(
+              invoice.subscription as string
+            );
             const product = subscription.items.data[0];
 
             await sendSubscriptionRenewedEmail({
@@ -365,9 +372,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ received: true });
   } catch (error) {
     console.error('Webhook error:', error);
-    return NextResponse.json(
-      { error: 'Webhook handler failed' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Webhook handler failed' }, { status: 500 });
   }
 }

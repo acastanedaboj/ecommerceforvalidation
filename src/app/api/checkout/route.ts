@@ -33,21 +33,19 @@ interface CustomerInfo {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { items, customer, paymentMethod, couponCode, couponDiscountCents, localDelivery } = body as {
-      items: CheckoutItem[];
-      customer: CustomerInfo;
-      paymentMethod: 'card';
-      couponCode?: string;
-      couponDiscountCents?: number;
-      localDelivery?: boolean;
-    };
+    const { items, customer, paymentMethod, couponCode, couponDiscountCents, localDelivery } =
+      body as {
+        items: CheckoutItem[];
+        customer: CustomerInfo;
+        paymentMethod: 'card';
+        couponCode?: string;
+        couponDiscountCents?: number;
+        localDelivery?: boolean;
+      };
 
     // Validate items
     if (!items || items.length === 0) {
-      return NextResponse.json(
-        { error: 'El carrito está vacío' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'El carrito está vacío' }, { status: 400 });
     }
 
     // Calculate totals with coupon if provided
@@ -77,9 +75,10 @@ export async function POST(request: NextRequest) {
       }))
     ).subtotalCents;
 
-    const couponDiscountRatio = couponDiscountCents && subtotalBeforeCoupon > 0
-      ? couponDiscountCents / subtotalBeforeCoupon
-      : 0;
+    const couponDiscountRatio =
+      couponDiscountCents && subtotalBeforeCoupon > 0
+        ? couponDiscountCents / subtotalBeforeCoupon
+        : 0;
 
     // Build line items for Stripe
     const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = items.map((item) => {
@@ -95,12 +94,16 @@ export async function POST(request: NextRequest) {
       const finalUnitPrice = Math.round(baseUnitPrice * (1 - couponDiscountRatio));
 
       // Build flavor summary for bundle items
-      const flavorSummary = item.isBundle && item.flavors && item.flavors.length > 0
-        ? item.flavors
-            .filter((f) => f.quantity > 0)
-            .map((f) => `${f.quantity}x ${f.productName.replace(/^Granola de /i, '').replace(/^Granola /i, '')}`)
-            .join(', ')
-        : null;
+      const flavorSummary =
+        item.isBundle && item.flavors && item.flavors.length > 0
+          ? item.flavors
+              .filter((f) => f.quantity > 0)
+              .map(
+                (f) =>
+                  `${f.quantity}x ${f.productName.replace(/^Granola de /i, '').replace(/^Granola /i, '')}`
+              )
+              .join(', ')
+          : null;
 
       const displayName = flavorSummary
         ? `${item.productName} — ${flavorSummary}`
@@ -190,15 +193,9 @@ export async function POST(request: NextRequest) {
     console.error('Stripe checkout error:', error);
 
     if (error instanceof Stripe.errors.StripeError) {
-      return NextResponse.json(
-        { error: error.message },
-        { status: error.statusCode || 500 }
-      );
+      return NextResponse.json({ error: error.message }, { status: error.statusCode || 500 });
     }
 
-    return NextResponse.json(
-      { error: 'Error al procesar el checkout' },
-      { status: 500 }
-    );
+    return NextResponse.json({ error: 'Error al procesar el checkout' }, { status: 500 });
   }
 }

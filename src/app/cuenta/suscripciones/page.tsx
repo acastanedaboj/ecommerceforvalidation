@@ -27,69 +27,66 @@ export default function SuscripcionesPage() {
   return (
     <div className="space-y-6">
       {/* Main card */}
-      <div className="bg-white rounded-2xl shadow-soft p-6 sm:p-8">
-        <div className="flex items-center gap-3 mb-6">
-          <Heart className="w-6 h-6 text-earth-600" strokeWidth={1.5} />
-          <h2 className="text-xl font-serif text-stone-800">Mis Suscripciones</h2>
+      <div className="rounded-2xl bg-white p-6 shadow-soft sm:p-8">
+        <div className="mb-6 flex items-center gap-3">
+          <Heart className="h-6 w-6 text-earth-600" strokeWidth={1.5} />
+          <h2 className="font-serif text-xl text-stone-800">Mis Suscripciones</h2>
         </div>
 
         {subscriptions.length === 0 ? (
           // Empty state
-          <div className="text-center py-12">
-            <div className="w-20 h-20 bg-cream-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <Sparkles className="w-10 h-10 text-earth-400" strokeWidth={1.5} />
+          <div className="py-12 text-center">
+            <div className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-cream-100">
+              <Sparkles className="h-10 w-10 text-earth-400" strokeWidth={1.5} />
             </div>
-            <h3 className="text-lg font-medium text-stone-800 mb-2">
+            <h3 className="mb-2 text-lg font-medium text-stone-800">
               No tienes suscripciones activas
             </h3>
-            <p className="text-stone-500 mb-6 max-w-sm mx-auto">
+            <p className="mx-auto mb-6 max-w-sm text-stone-500">
               Suscribete y recibe tu granola favorita cada mes con un 15% de descuento
             </p>
             <Link
               href="/suscripcion"
-              className="inline-flex items-center gap-2 bg-earth-600 text-[#fcf8d5] px-6 py-3 rounded-full hover:bg-earth-700 transition-colors"
+              className="inline-flex items-center gap-2 rounded-full bg-earth-600 px-6 py-3 text-[#fcf8d5] transition-colors hover:bg-earth-700"
             >
               <span>Ver opciones de suscripcion</span>
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         ) : (
           // Subscriptions list
           <div className="space-y-4">
             {subscriptions.map((sub) => (
-              <div
-                key={sub.id}
-                className="border border-cream-200 rounded-xl p-4"
-              >
-                <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
+              <div key={sub.id} className="rounded-xl border border-cream-200 p-4">
+                <div className="mb-4 flex flex-wrap items-start justify-between gap-4">
                   <div>
                     <p className="font-medium text-stone-800">{sub.product}</p>
                     <p className="text-sm text-stone-500">{sub.frequency}</p>
                   </div>
                   <span
-                    className={`px-3 py-1 rounded-full text-sm font-medium ${
+                    className={`rounded-full px-3 py-1 text-sm font-medium ${
                       statusLabels[sub.status].color
                     }`}
                   >
                     {statusLabels[sub.status].label}
                   </span>
                 </div>
-                <div className="flex flex-wrap gap-4 text-sm text-stone-600 border-t border-cream-100 pt-4">
+                <div className="flex flex-wrap gap-4 border-t border-cream-100 pt-4 text-sm text-stone-600">
                   <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
+                    <Calendar className="h-4 w-4" />
                     <span>Proxima entrega: {sub.nextDelivery}</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Package className="w-4 h-4" />
+                    <Package className="h-4 w-4" />
                     <span>{sub.price.toFixed(2).replace('.', ',')} EUR/mes</span>
                   </div>
                 </div>
                 {sub.status === 'active' && (
-                  <div className="flex gap-3 mt-4">
-                    <button className="text-sm text-stone-600 hover:text-stone-800 underline">
+                  <div className="mt-4 flex gap-3">
+                    <button className="text-sm text-stone-600 underline hover:text-stone-800">
                       Pausar
                     </button>
-                    <button className="text-sm text-red-600 hover:text-red-800 underline">
+                    <button className="text-sm text-red-600 underline hover:text-red-800">
                       Cancelar
                     </button>
                   </div>
@@ -101,28 +98,33 @@ export default function SuscripcionesPage() {
       </div>
 
       {/* Benefits card */}
-      <div className="bg-gradient-to-br from-earth-50 to-cream-100 rounded-2xl p-6 sm:p-8">
-        <h3 className="font-serif text-lg text-stone-800 mb-4">
-          Ventajas de suscribirte
-        </h3>
+      <div className="rounded-2xl bg-gradient-to-br from-earth-50 to-cream-100 p-6 sm:p-8">
+        <h3 className="mb-4 font-serif text-lg text-stone-800">Ventajas de suscribirte</h3>
         <ul className="space-y-3 text-stone-600">
           <li className="flex items-start gap-3">
-            <span className="w-6 h-6 bg-earth-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-              <span className="text-earth-700 text-sm">1</span>
+            <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-earth-200">
+              <span className="text-sm text-earth-700">1</span>
             </span>
-            <span><strong className="text-stone-800">15% de descuento</strong> en cada envio</span>
+            <span>
+              <strong className="text-stone-800">15% de descuento</strong> en cada envio
+            </span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="w-6 h-6 bg-earth-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-              <span className="text-earth-700 text-sm">2</span>
+            <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-earth-200">
+              <span className="text-sm text-earth-700">2</span>
             </span>
-            <span><strong className="text-stone-800">Envio gratuito</strong> siempre incluido</span>
+            <span>
+              <strong className="text-stone-800">Envio gratuito</strong> siempre incluido
+            </span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="w-6 h-6 bg-earth-200 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
-              <span className="text-earth-700 text-sm">3</span>
+            <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-earth-200">
+              <span className="text-sm text-earth-700">3</span>
             </span>
-            <span><strong className="text-stone-800">Flexibilidad total</strong> - pausa o cancela cuando quieras</span>
+            <span>
+              <strong className="text-stone-800">Flexibilidad total</strong> - pausa o cancela
+              cuando quieras
+            </span>
           </li>
         </ul>
       </div>

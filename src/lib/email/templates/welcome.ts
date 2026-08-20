@@ -86,6 +86,9 @@ export function welcomeEmail(data: WelcomeEmailData): { subject: string; html: s
 
   return {
     subject: `${firstName}, bienvenid@ a Poppy`,
-    html: emailLayout(content, 'Gracias por unirte a Poppy. Descubre nuestra granola artesanal sin gluten, hecha con amor en Málaga.').replace('{{email}}', email),
+    html: emailLayout(
+      content,
+      'Gracias por unirte a Poppy. Descubre nuestra granola artesanal sin gluten, hecha con amor en Málaga.'
+    ).replace('{{email}}', email),
   };
 }

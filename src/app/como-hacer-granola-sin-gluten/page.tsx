@@ -66,9 +66,7 @@ function buildRecipeSchema() {
     name: 'Granola sin gluten casera',
     description:
       'Receta fácil de granola sin gluten casera, apta para celíacos. Crujiente, deliciosa y personalizable.',
-    image: [
-      `${SITE_URL}/images/hero-sin-gluten.jpeg`,
-    ],
+    image: [`${SITE_URL}/images/hero-sin-gluten.jpeg`],
     author: {
       '@type': 'Organization',
       name: 'Poppy',
@@ -130,17 +128,8 @@ function buildFAQSchema() {
 
 export default function ComoHacerGranolaSinGlutenPage() {
   const products = getRetailProducts();
-  const {
-    hero,
-    intro,
-    ingredients,
-    instructions,
-    tips,
-    benefits,
-    comparison,
-    faqs,
-    cta,
-  } = recetaGranolaContent;
+  const { hero, intro, ingredients, instructions, tips, benefits, comparison, faqs, cta } =
+    recetaGranolaContent;
 
   const benefitsWithIcons = benefits.items.map((item, index) => ({
     icon: [ChefHat, CheckCircle2, AlertCircle, Clock][index % 4],
@@ -176,18 +165,16 @@ export default function ComoHacerGranolaSinGlutenPage() {
       {/* Intro Section */}
       <div className="section bg-neutral-50">
         <div className="container-custom max-w-3xl">
-          <h2 className="text-3xl font-display text-neutral-900 mb-4 text-center">
-            {intro.title}
-          </h2>
-          <p className="text-lg text-neutral-600 mb-6 text-center">{intro.description}</p>
+          <h2 className="mb-4 text-center font-display text-3xl text-neutral-900">{intro.title}</h2>
+          <p className="mb-6 text-center text-lg text-neutral-600">{intro.description}</p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+          <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {intro.features.map((feature, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 p-4 bg-white rounded-lg border border-neutral-200"
+                className="flex items-center gap-3 rounded-lg border border-neutral-200 bg-white p-4"
               >
-                <CheckCircle2 className="w-5 h-5 text-primary-600 flex-shrink-0" />
+                <CheckCircle2 className="h-5 w-5 flex-shrink-0 text-primary-600" />
                 <span className="text-neutral-900">{feature.replace('✓ ', '')}</span>
               </div>
             ))}
@@ -198,23 +185,21 @@ export default function ComoHacerGranolaSinGlutenPage() {
       {/* Ingredients Section */}
       <div id="ingredientes" className="section">
         <div className="container-custom max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
-              {ingredients.title}
-            </h2>
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">{ingredients.title}</h2>
             <p className="text-lg text-neutral-600">{ingredients.subtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {/* Base */}
-            <div className="bg-white rounded-xl border border-neutral-200 p-6">
-              <h3 className="text-xl font-semibold text-neutral-900 mb-4">
+            <div className="rounded-xl border border-neutral-200 bg-white p-6">
+              <h3 className="mb-4 text-xl font-semibold text-neutral-900">
                 {ingredients.base.title}
               </h3>
               <ul className="space-y-2">
                 {ingredients.base.items.map((item, index) => (
                   <li key={index} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary-600" />
                     <span className="text-neutral-700">{item}</span>
                   </li>
                 ))}
@@ -222,14 +207,14 @@ export default function ComoHacerGranolaSinGlutenPage() {
             </div>
 
             {/* Frutos Secos */}
-            <div className="bg-white rounded-xl border border-neutral-200 p-6">
-              <h3 className="text-xl font-semibold text-neutral-900 mb-4">
+            <div className="rounded-xl border border-neutral-200 bg-white p-6">
+              <h3 className="mb-4 text-xl font-semibold text-neutral-900">
                 {ingredients.frutoSecos.title}
               </h3>
               <ul className="space-y-2">
                 {ingredients.frutoSecos.items.map((item, index) => (
                   <li key={index} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary-600" />
                     <span className="text-neutral-700">{item}</span>
                   </li>
                 ))}
@@ -237,14 +222,14 @@ export default function ComoHacerGranolaSinGlutenPage() {
             </div>
 
             {/* Endulzante */}
-            <div className="bg-white rounded-xl border border-neutral-200 p-6">
-              <h3 className="text-xl font-semibold text-neutral-900 mb-4">
+            <div className="rounded-xl border border-neutral-200 bg-white p-6">
+              <h3 className="mb-4 text-xl font-semibold text-neutral-900">
                 {ingredients.endulzante.title}
               </h3>
               <ul className="space-y-2">
                 {ingredients.endulzante.items.map((item, index) => (
                   <li key={index} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary-600" />
                     <span className="text-neutral-700">{item}</span>
                   </li>
                 ))}
@@ -252,14 +237,14 @@ export default function ComoHacerGranolaSinGlutenPage() {
             </div>
 
             {/* Extras */}
-            <div className="bg-white rounded-xl border border-neutral-200 p-6">
-              <h3 className="text-xl font-semibold text-neutral-900 mb-4">
+            <div className="rounded-xl border border-neutral-200 bg-white p-6">
+              <h3 className="mb-4 text-xl font-semibold text-neutral-900">
                 {ingredients.extras.title}
               </h3>
               <ul className="space-y-2">
                 {ingredients.extras.items.map((item, index) => (
                   <li key={index} className="flex items-start gap-2">
-                    <CheckCircle2 className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-primary-600" />
                     <span className="text-neutral-700">{item}</span>
                   </li>
                 ))}
@@ -268,16 +253,16 @@ export default function ComoHacerGranolaSinGlutenPage() {
           </div>
 
           {/* Recipe Info */}
-          <div className="mt-8 p-6 bg-primary-50 border border-primary-100 rounded-xl">
+          <div className="mt-8 rounded-xl border border-primary-100 bg-primary-50 p-6">
             <div className="flex flex-wrap items-center justify-center gap-6 text-center">
               <div className="flex items-center gap-2">
-                <Clock className="w-5 h-5 text-primary-700" />
+                <Clock className="h-5 w-5 text-primary-700" />
                 <span className="text-neutral-900">
                   <strong>Tiempo:</strong> {instructions.totalTime}
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-primary-700" />
+                <Users className="h-5 w-5 text-primary-700" />
                 <span className="text-neutral-900">
                   <strong>Rinde:</strong> {instructions.yield}
                 </span>
@@ -290,30 +275,23 @@ export default function ComoHacerGranolaSinGlutenPage() {
       {/* Instructions Section */}
       <div className="section bg-neutral-50">
         <div className="container-custom max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
-              {instructions.title}
-            </h2>
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">{instructions.title}</h2>
             <p className="text-lg text-neutral-600">{instructions.subtitle}</p>
           </div>
 
           <div className="space-y-6">
             {instructions.steps.map((step) => (
-              <div
-                key={step.number}
-                className="bg-white rounded-xl border border-neutral-200 p-6"
-              >
+              <div key={step.number} className="rounded-xl border border-neutral-200 bg-white p-6">
                 <div className="flex items-start gap-4">
-                  <div className="flex-shrink-0 w-10 h-10 rounded-full bg-primary-100 text-primary-700 font-bold flex items-center justify-center">
+                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary-100 font-bold text-primary-700">
                     {step.number}
                   </div>
                   <div className="flex-1">
-                    <div className="flex items-center justify-between gap-4 mb-2">
-                      <h3 className="text-xl font-semibold text-neutral-900">
-                        {step.title}
-                      </h3>
-                      <span className="text-sm text-primary-600 font-medium flex items-center gap-1">
-                        <Clock className="w-4 h-4" />
+                    <div className="mb-2 flex items-center justify-between gap-4">
+                      <h3 className="text-xl font-semibold text-neutral-900">{step.title}</h3>
+                      <span className="flex items-center gap-1 text-sm font-medium text-primary-600">
+                        <Clock className="h-4 w-4" />
                         {step.time}
                       </span>
                     </div>
@@ -329,20 +307,15 @@ export default function ComoHacerGranolaSinGlutenPage() {
       {/* Tips Section */}
       <div className="section">
         <div className="container-custom max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
-              {tips.title}
-            </h2>
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">{tips.title}</h2>
             <p className="text-lg text-neutral-600">{tips.subtitle}</p>
           </div>
 
           <div className="space-y-4">
             {tips.items.map((tip, index) => (
-              <div
-                key={index}
-                className="bg-white border border-neutral-200 rounded-xl p-6"
-              >
-                <h3 className="text-lg font-semibold text-neutral-900 mb-2 flex items-start gap-2">
+              <div key={index} className="rounded-xl border border-neutral-200 bg-white p-6">
+                <h3 className="mb-2 flex items-start gap-2 text-lg font-semibold text-neutral-900">
                   <span className="text-primary-600">💡</span>
                   {tip.title}
                 </h3>
@@ -365,19 +338,17 @@ export default function ComoHacerGranolaSinGlutenPage() {
       {/* Comparison Table */}
       <div className="section">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
-              {comparison.title}
-            </h2>
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">{comparison.title}</h2>
             <p className="text-lg text-neutral-600">{comparison.subtitle}</p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div className="grid grid-cols-3 gap-4 p-4 bg-primary-50 border-b border-primary-100">
+          <div className="mx-auto max-w-4xl">
+            <div className="overflow-hidden rounded-2xl bg-white shadow-lg">
+              <div className="grid grid-cols-3 gap-4 border-b border-primary-100 bg-primary-50 p-4">
                 <div className="font-semibold text-neutral-900">Característica</div>
-                <div className="font-semibold text-neutral-600 text-center">Casera</div>
-                <div className="font-semibold text-primary-700 text-center">✨ Poppy</div>
+                <div className="text-center font-semibold text-neutral-600">Casera</div>
+                <div className="text-center font-semibold text-primary-700">✨ Poppy</div>
               </div>
 
               {comparison.items.map((item, index) => (
@@ -388,15 +359,15 @@ export default function ComoHacerGranolaSinGlutenPage() {
                   } border-b border-neutral-100`}
                 >
                   <div className="font-medium text-neutral-900">{item.feature}</div>
-                  <div className="text-sm text-center text-neutral-600">{item.casera}</div>
-                  <div className="text-sm text-center text-primary-700 font-medium">
+                  <div className="text-center text-sm text-neutral-600">{item.casera}</div>
+                  <div className="text-center text-sm font-medium text-primary-700">
                     {item.comprada}
                   </div>
                 </div>
               ))}
             </div>
 
-            <div className="text-center mt-8">
+            <div className="mt-8 text-center">
               <Link href="/tienda">
                 <Button variant="primary" size="lg">
                   Ver granola artesanal Poppy

@@ -52,7 +52,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
       {/* Image — 4:5 aspect, no decorative bars */}
       <Link
         href={`/tienda/${product.slug}`}
-        className="block relative overflow-hidden mb-5"
+        className="relative mb-5 block overflow-hidden"
         style={{ aspectRatio: '4/5', background: 'var(--off)' }}
       >
         <Image
@@ -61,7 +61,9 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
           fill
           className={cn(
             'object-cover transition-all duration-700 ease-out',
-            product.images[1] ? 'group-hover:opacity-0 group-hover:scale-[1.02]' : 'group-hover:scale-[1.02]'
+            product.images[1]
+              ? 'group-hover:scale-[1.02] group-hover:opacity-0'
+              : 'group-hover:scale-[1.02]'
           )}
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
         />
@@ -70,7 +72,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
             src={product.images[1]}
             alt={`${product.name} - detalle`}
             fill
-            className="object-cover transition-all duration-700 ease-out opacity-0 group-hover:opacity-100 group-hover:scale-[1.02]"
+            className="object-cover opacity-0 transition-all duration-700 ease-out group-hover:scale-[1.02] group-hover:opacity-100"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           />
         )}
@@ -96,7 +98,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
 
         {/* Low stock */}
         {product.stock > 0 && product.stock <= 10 && (
-          <div className="absolute top-4 right-4">
+          <div className="absolute right-4 top-4">
             <span
               style={{
                 fontSize: '9px',
@@ -115,7 +117,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
 
         {/* Out of stock overlay */}
         {product.stock === 0 && (
-          <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px] flex items-center justify-center">
+          <div className="absolute inset-0 flex items-center justify-center bg-black/40 backdrop-blur-[2px]">
             <span
               style={{
                 background: 'var(--white)',
@@ -138,7 +140,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
             onClick={handleQuickAdd}
             disabled={isAdding}
             className={cn(
-              'absolute bottom-4 right-4 opacity-0 group-hover:opacity-100 transition-all duration-300 translate-y-2 group-hover:translate-y-0',
+              'absolute bottom-4 right-4 translate-y-2 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100',
               isAdding && 'opacity-60'
             )}
             style={{
@@ -172,7 +174,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
           <Link
             href={`/tienda/${product.slug}`}
             style={{ textDecoration: 'none', color: 'inherit' }}
-            className="group-hover:text-poppy-brown transition-colors duration-300"
+            className="transition-colors duration-300 group-hover:text-poppy-brown"
           >
             {product.name}
           </Link>
@@ -209,10 +211,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
 
         {/* View product link when out of stock */}
         {product.stock === 0 && (
-          <Link
-            href={`/tienda/${product.slug}`}
-            className="btn-pill text-center mt-4 w-full"
-          >
+          <Link href={`/tienda/${product.slug}`} className="btn-pill mt-4 w-full text-center">
             Ver producto
           </Link>
         )}

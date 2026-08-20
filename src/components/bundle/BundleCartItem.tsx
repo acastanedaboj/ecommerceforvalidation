@@ -20,7 +20,8 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
   const summary = generateBundleSummary(item.flavors);
 
   // Get first flavor image for display
-  const displayImage = item.flavors.find((f) => f.quantity > 0)?.productImage || '/images/placeholder-product.jpg';
+  const displayImage =
+    item.flavors.find((f) => f.quantity > 0)?.productImage || '/images/placeholder-product.jpg';
 
   const handleIncrement = () => {
     updateBundleQuantity(item.bundleId, item.quantity + 1);
@@ -42,23 +43,25 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
     return (
       <div className="flex items-center gap-3 py-3">
         {/* Image */}
-        <div className="relative w-12 h-12 overflow-hidden flex-shrink-0 bg-cream-100">
-          <Image src={displayImage} alt={item.bundleName} fill className="object-cover" sizes="48px" />
+        <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden bg-cream-100">
+          <Image
+            src={displayImage}
+            alt={item.bundleName}
+            fill
+            className="object-cover"
+            sizes="48px"
+          />
         </div>
 
         {/* Info */}
-        <div className="flex-1 min-w-0">
-          <p className="font-medium text-stone-800 text-sm truncate">
-            {item.bundleName}
-          </p>
-          <p className="text-xs text-stone-500 truncate">{summary}</p>
+        <div className="min-w-0 flex-1">
+          <p className="truncate text-sm font-medium text-stone-800">{item.bundleName}</p>
+          <p className="truncate text-xs text-stone-500">{summary}</p>
         </div>
 
         {/* Quantity & Price */}
         <div className="text-right">
-          <p className="font-medium text-stone-800 text-sm">
-            {formatPrice(pricing.subtotalCents)}
-          </p>
+          <p className="text-sm font-medium text-stone-800">{formatPrice(pricing.subtotalCents)}</p>
           <p className="text-xs text-stone-500">x{item.quantity}</p>
         </div>
       </div>
@@ -69,7 +72,7 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
     <div className="flex gap-4 py-5">
       {/* Product image — first flavor */}
       <div
-        className="relative w-20 h-20 overflow-hidden flex-shrink-0"
+        className="relative h-20 w-20 flex-shrink-0 overflow-hidden"
         style={{ background: 'var(--off)' }}
       >
         <Image
@@ -82,7 +85,7 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
       </div>
 
       {/* Content */}
-      <div className="flex-1 min-w-0">
+      <div className="min-w-0 flex-1">
         {/* Name + remove */}
         <div className="flex items-start justify-between gap-2">
           <div>
@@ -97,10 +100,15 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
             type="button"
             onClick={handleRemove}
             className="transition-all hover:opacity-50"
-            style={{ color: 'rgba(17,17,17,.2)', background: 'none', border: 'none', padding: '4px' }}
+            style={{
+              color: 'rgba(17,17,17,.2)',
+              background: 'none',
+              border: 'none',
+              padding: '4px',
+            }}
             aria-label="Eliminar pack"
           >
-            <X className="w-4 h-4" />
+            <X className="h-4 w-4" />
           </button>
         </div>
 
@@ -117,9 +125,17 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
               style={{ borderRadius: '100px 0 0 100px', background: 'none', border: 'none' }}
               aria-label="Reducir cantidad"
             >
-              <Minus className="w-3.5 h-3.5" style={{ color: 'rgba(17,17,17,.4)' }} />
+              <Minus className="h-3.5 w-3.5" style={{ color: 'rgba(17,17,17,.4)' }} />
             </button>
-            <span style={{ width: '32px', textAlign: 'center', fontSize: '13px', fontWeight: 700, color: 'var(--dark)' }}>
+            <span
+              style={{
+                width: '32px',
+                textAlign: 'center',
+                fontSize: '13px',
+                fontWeight: 700,
+                color: 'var(--dark)',
+              }}
+            >
               {item.quantity}
             </span>
             <button
@@ -129,7 +145,7 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
               style={{ borderRadius: '0 100px 100px 0', background: 'none', border: 'none' }}
               aria-label="Aumentar cantidad"
             >
-              <Plus className="w-3.5 h-3.5" style={{ color: 'rgba(17,17,17,.4)' }} />
+              <Plus className="h-3.5 w-3.5" style={{ color: 'rgba(17,17,17,.4)' }} />
             </button>
           </div>
 

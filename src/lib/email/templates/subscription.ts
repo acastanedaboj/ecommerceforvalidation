@@ -23,7 +23,10 @@ export interface SubscriptionActiveData {
   subscriptionId: string;
 }
 
-export function subscriptionActiveEmail(data: SubscriptionActiveData): { subject: string; html: string } {
+export function subscriptionActiveEmail(data: SubscriptionActiveData): {
+  subject: string;
+  html: string;
+} {
   const {
     email,
     customerName,
@@ -107,7 +110,10 @@ export function subscriptionActiveEmail(data: SubscriptionActiveData): { subject
 
   return {
     subject: `${firstName}, tu suscripción Poppy está activa`,
-    html: emailLayout(content, `Tu suscripción a ${productName} está activa. Próximo envío: ${formatDate(nextDeliveryDate)}.`).replace('{{email}}', email),
+    html: emailLayout(
+      content,
+      `Tu suscripción a ${productName} está activa. Próximo envío: ${formatDate(nextDeliveryDate)}.`
+    ).replace('{{email}}', email),
   };
 }
 
@@ -126,7 +132,10 @@ export interface SubscriptionRenewedData {
   nextPaymentDate: Date | string;
 }
 
-export function subscriptionRenewedEmail(data: SubscriptionRenewedData): { subject: string; html: string } {
+export function subscriptionRenewedEmail(data: SubscriptionRenewedData): {
+  subject: string;
+  html: string;
+} {
   const {
     email,
     customerName,
@@ -193,7 +202,10 @@ export function subscriptionRenewedEmail(data: SubscriptionRenewedData): { subje
 
   return {
     subject: `${firstName}, tu suscripción Poppy se ha renovado`,
-    html: emailLayout(content, `Tu suscripción se ha renovado. Importe: ${formatCurrency(amountPaidCents)}.`).replace('{{email}}', email),
+    html: emailLayout(
+      content,
+      `Tu suscripción se ha renovado. Importe: ${formatCurrency(amountPaidCents)}.`
+    ).replace('{{email}}', email),
   };
 }
 
@@ -211,7 +223,10 @@ export interface SubscriptionFailedData {
   updatePaymentUrl: string;
 }
 
-export function subscriptionFailedEmail(data: SubscriptionFailedData): { subject: string; html: string } {
+export function subscriptionFailedEmail(data: SubscriptionFailedData): {
+  subject: string;
+  html: string;
+} {
   const {
     email,
     customerName,
@@ -287,7 +302,10 @@ export function subscriptionFailedEmail(data: SubscriptionFailedData): { subject
 
   return {
     subject: `${firstName}, hay un problema con tu suscripción Poppy`,
-    html: emailLayout(content, `No pudimos procesar el pago de tu suscripción. Por favor, actualiza tu método de pago.`).replace('{{email}}', email),
+    html: emailLayout(
+      content,
+      `No pudimos procesar el pago de tu suscripción. Por favor, actualiza tu método de pago.`
+    ).replace('{{email}}', email),
   };
 }
 
@@ -303,14 +321,11 @@ export interface SubscriptionCancelledData {
   reason?: string;
 }
 
-export function subscriptionCancelledEmail(data: SubscriptionCancelledData): { subject: string; html: string } {
-  const {
-    email,
-    customerName,
-    productName,
-    endDate,
-    reason,
-  } = data;
+export function subscriptionCancelledEmail(data: SubscriptionCancelledData): {
+  subject: string;
+  html: string;
+} {
+  const { email, customerName, productName, endDate, reason } = data;
 
   const firstName = customerName?.split(' ')[0] || 'Cliente';
 
@@ -386,6 +401,9 @@ export function subscriptionCancelledEmail(data: SubscriptionCancelledData): { s
 
   return {
     subject: `${firstName}, tu suscripción Poppy ha sido cancelada`,
-    html: emailLayout(content, `Tu suscripción a ${productName} ha sido cancelada. Activa hasta: ${formatDate(endDate)}.`).replace('{{email}}', email),
+    html: emailLayout(
+      content,
+      `Tu suscripción a ${productName} ha sido cancelada. Activa hasta: ${formatDate(endDate)}.`
+    ).replace('{{email}}', email),
   };
 }

@@ -32,23 +32,25 @@ export function Header() {
   }, []);
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40" style={{ position: 'fixed' }}>
+    <header className="fixed left-0 right-0 top-0 z-40" style={{ position: 'fixed' }}>
       {/* Announcement bar */}
       <div
         className={cn(
-          'text-center py-2 px-4 transition-all duration-300',
+          'px-4 py-2 text-center transition-all duration-300',
           isScrolled ? 'max-h-0 overflow-hidden py-0 opacity-0' : 'max-h-12 opacity-100'
         )}
         style={{ backgroundColor: '#f6ee87' }}
       >
-        <p className="text-[11px] tracking-[0.12em] uppercase" style={{ color: 'rgba(17,17,17,.65)', fontWeight: 300 }}>
+        <p
+          className="text-[11px] uppercase tracking-[0.12em]"
+          style={{ color: 'rgba(17,17,17,.65)', fontWeight: 300 }}
+        >
           <span className="font-bold">Envio gratis</span>
-          <span className="mx-2 opacity-30">|</span>
-          a partir de 4 bolsas o 35 EUR
+          <span className="mx-2 opacity-30">|</span>a partir de 4 bolsas o 35 EUR
           <span className="mx-2 opacity-30">|</span>
           <Link
             href="/suscripcion"
-            className="underline underline-offset-2 hover:opacity-80 transition-opacity font-bold"
+            className="font-bold underline underline-offset-2 transition-opacity hover:opacity-80"
             style={{ color: 'rgba(17,17,17,.65)' }}
           >
             Suscribete y ahorra 15%
@@ -59,8 +61,8 @@ export function Header() {
       {/* Main navigation */}
       <nav
         className={cn(
-          'flex items-center justify-between transition-all duration-350',
-          isScrolled ? 'py-3 px-6 md:px-8 lg:px-14' : 'py-5 px-6 md:px-8 lg:px-14'
+          'duration-350 flex items-center justify-between transition-all',
+          isScrolled ? 'px-6 py-3 md:px-8 lg:px-14' : 'px-6 py-5 md:px-8 lg:px-14'
         )}
         style={
           useDarkText
@@ -84,13 +86,13 @@ export function Header() {
             height={35}
             className={cn(
               'h-7 w-auto transition-all duration-300',
-              useDarkText ? '' : 'brightness-0 invert sepia saturate-[10] hue-rotate-[15deg]'
+              useDarkText ? '' : 'brightness-0 hue-rotate-[15deg] invert saturate-[10] sepia'
             )}
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <ul className="hidden lg:flex items-center gap-8" style={{ listStyle: 'none' }}>
+        <ul className="hidden items-center gap-8 lg:flex" style={{ listStyle: 'none' }}>
           {NAVIGATION.main.map((item) => (
             <li key={item.href}>
               <Link
@@ -114,9 +116,7 @@ export function Header() {
         {/* Right side actions */}
         <div className="flex items-center gap-1 md:gap-3">
           {/* User menu (login/account) */}
-          <div
-            style={{ color: useDarkText ? '#111111' : '#fcf8d5' }}
-          >
+          <div style={{ color: useDarkText ? '#111111' : '#fcf8d5' }}>
             <UserMenu />
           </div>
 
@@ -132,10 +132,10 @@ export function Header() {
             }}
             aria-label={`Carrito de compra (${itemCount} productos)`}
           >
-            <ShoppingBag className="w-5 h-5" strokeWidth={1.5} />
+            <ShoppingBag className="h-5 w-5" strokeWidth={1.5} />
             {itemCount > 0 && (
               <span
-                className="absolute top-1 right-1 text-[9px] font-bold rounded-full w-4 h-4 flex items-center justify-center"
+                className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full text-[9px] font-bold"
                 style={{ background: 'var(--yellow)', color: 'var(--dark)' }}
               >
                 {itemCount > 9 ? '9+' : itemCount}
@@ -147,7 +147,7 @@ export function Header() {
           <button
             type="button"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-3 transition-opacity hover:opacity-55"
+            className="p-3 transition-opacity hover:opacity-55 lg:hidden"
             style={{
               color: useDarkText ? '#111111' : '#fcf8d5',
               background: 'none',
@@ -158,9 +158,9 @@ export function Header() {
             aria-label={isMobileMenuOpen ? 'Cerrar menu' : 'Abrir menu'}
           >
             {isMobileMenuOpen ? (
-              <X className="w-5 h-5" strokeWidth={1.5} />
+              <X className="h-5 w-5" strokeWidth={1.5} />
             ) : (
-              <Menu className="w-5 h-5" strokeWidth={1.5} />
+              <Menu className="h-5 w-5" strokeWidth={1.5} />
             )}
           </button>
         </div>
@@ -170,7 +170,7 @@ export function Header() {
       <div
         id="mobile-menu"
         className={cn(
-          'lg:hidden overflow-hidden transition-all duration-400 ease-out',
+          'overflow-hidden transition-all duration-400 ease-out lg:hidden',
           isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
         )}
         style={{
@@ -186,7 +186,7 @@ export function Header() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="px-4 py-3 animate-fade-in-up"
+                className="animate-fade-in-up px-4 py-3"
                 style={{
                   fontFamily: 'var(--font-display)',
                   color: '#111111',

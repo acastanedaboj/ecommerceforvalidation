@@ -7,17 +7,17 @@ import { sendOrderShippedEmail } from '@/lib/email';
 const ADMIN_EMAILS = ['alvaro.castanneda@gmail.com', 'hola@poppy.es', 'pilar.orico@gmail.com'];
 
 const TRACKING_URLS: Record<string, (n: string) => string> = {
-  Correos: (n) => `https://www.correos.es/es/es/herramientas/localizador/envios/detalle?tracking-number=${n}`,
-  MRW: (n) => `https://www.mrw.es/seguimiento_envios/buscar_informacion_envio.aspx?nif=&referencia=${n}`,
-  SEUR: (n) => `https://www.seur.com/seur/es/particular/herramientas/seguimiento-de-envios.do?refExpedicion=${n}`,
+  Correos: (n) =>
+    `https://www.correos.es/es/es/herramientas/localizador/envios/detalle?tracking-number=${n}`,
+  MRW: (n) =>
+    `https://www.mrw.es/seguimiento_envios/buscar_informacion_envio.aspx?nif=&referencia=${n}`,
+  SEUR: (n) =>
+    `https://www.seur.com/seur/es/particular/herramientas/seguimiento-de-envios.do?refExpedicion=${n}`,
   GLS: (n) => `https://gls-group.eu/ES/es/seguimiento-envio?match=${n}`,
   Nacex: (n) => `https://www.nacex.es/seguimiento.do?agencia_origen=&num_albaran=${n}`,
 };
 
-export async function POST(
-  request: NextRequest,
-  { params }: { params: { orderNumber: string } }
-) {
+export async function POST(request: NextRequest, { params }: { params: { orderNumber: string } }) {
   const session = await getServerSession(authOptions);
   if (!session || !ADMIN_EMAILS.includes(session.user?.email || '')) {
     return NextResponse.json({ error: 'No autorizado' }, { status: 401 });

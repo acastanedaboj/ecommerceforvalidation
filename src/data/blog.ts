@@ -1360,38 +1360,55 @@ Ninguna diferencia nutricional ni de sabor. La única diferencia es el proceso d
     author: 'Equipo Poppy',
     publishedAt: '2026-02-17',
     readingTime: 12,
-    tags: ['avena', 'sin-gluten', 'celiacos', 'nutricion', 'certificacion', 'guia', 'contaminacion-cruzada', 'seguridad-alimentaria', 'etiquetado'],
+    tags: [
+      'avena',
+      'sin-gluten',
+      'celiacos',
+      'nutricion',
+      'certificacion',
+      'guia',
+      'contaminacion-cruzada',
+      'seguridad-alimentaria',
+      'etiquetado',
+    ],
     metaTitle: 'Contaminación cruzada del gluten en avena: guía completa | Poppy',
     metaDescription:
       'Cadena de contaminación cruzada del gluten en avena paso a paso: campo, cosecha, molino y obrador. Cómo verificar etiquetas y elegir avena realmente segura para celíacos.',
     faqs: [
       {
         question: '¿La avena de Mercadona es sin gluten?',
-        answer: 'Mercadona comercializa avena certificada sin gluten bajo su marca Hacendado. Busca específicamente los copos de avena con el símbolo de espiga barrada, no la avena convencional.',
+        answer:
+          'Mercadona comercializa avena certificada sin gluten bajo su marca Hacendado. Busca específicamente los copos de avena con el símbolo de espiga barrada, no la avena convencional.',
       },
       {
         question: '¿Por qué la avena sin gluten es más cara?',
-        answer: 'La avena certificada sin gluten cuesta más porque requiere campos dedicados exclusivamente a avena, el procesado en líneas separadas es más costoso, los análisis de cada lote añaden costes y la producción a menor escala reduce eficiencias.',
+        answer:
+          'La avena certificada sin gluten cuesta más porque requiere campos dedicados exclusivamente a avena, el procesado en líneas separadas es más costoso, los análisis de cada lote añaden costes y la producción a menor escala reduce eficiencias.',
       },
       {
         question: '¿La avena sin gluten sabe diferente?',
-        answer: 'No, el sabor es idéntico. La diferencia está únicamente en el proceso de producción que evita la contaminación cruzada.',
+        answer:
+          'No, el sabor es idéntico. La diferencia está únicamente en el proceso de producción que evita la contaminación cruzada.',
       },
       {
         question: '¿Cuánta avena sin gluten puedo comer al día?',
-        answer: 'La recomendación general para celíacos es no superar 50-70g de avena sin gluten al día. Una ración típica de granola (40-50g) está dentro de estos límites.',
+        answer:
+          'La recomendación general para celíacos es no superar 50-70g de avena sin gluten al día. Una ración típica de granola (40-50g) está dentro de estos límites.',
       },
       {
         question: '¿Los niños celíacos pueden comer avena sin gluten?',
-        answer: 'Sí, pero siguiendo las recomendaciones pediátricas: no antes del año de edad, tras al menos 6 meses de dieta sin gluten estricta, y siempre bajo supervisión médica.',
+        answer:
+          'Sí, pero siguiendo las recomendaciones pediátricas: no antes del año de edad, tras al menos 6 meses de dieta sin gluten estricta, y siempre bajo supervisión médica.',
       },
       {
         question: '¿La avena sin gluten es apta para sensibilidad al gluten no celíaca?',
-        answer: 'Generalmente sí. Las personas con SGNC suelen tolerar bien la avena certificada sin gluten, aunque cada caso es individual.',
+        answer:
+          'Generalmente sí. Las personas con SGNC suelen tolerar bien la avena certificada sin gluten, aunque cada caso es individual.',
       },
       {
         question: '¿Qué diferencia hay entre avena sin gluten y avena normal?',
-        answer: 'Ninguna diferencia nutricional ni de sabor. La única diferencia es el proceso de producción que garantiza ausencia de contaminación cruzada con gluten.',
+        answer:
+          'Ninguna diferencia nutricional ni de sabor. La única diferencia es el proceso de producción que garantiza ausencia de contaminación cruzada con gluten.',
       },
     ],
   },

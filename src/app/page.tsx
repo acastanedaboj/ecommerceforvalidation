@@ -54,8 +54,13 @@ export default function HomePage() {
 
         {/* Hero caption - bottom */}
         <div
-          className="absolute bottom-0 left-0 right-0 z-10 hero-caption"
-          style={{ padding: '0 56px 52px', display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between' }}
+          className="hero-caption absolute bottom-0 left-0 right-0 z-10"
+          style={{
+            padding: '0 56px 52px',
+            display: 'flex',
+            alignItems: 'flex-end',
+            justifyContent: 'space-between',
+          }}
         >
           <div>
             <h1
@@ -85,7 +90,16 @@ export default function HomePage() {
               Crafted for pleasure
             </p>
           </div>
-          <div className="hero-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: '20px', paddingBottom: '6px' }}>
+          <div
+            className="hero-right"
+            style={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'flex-end',
+              gap: '20px',
+              paddingBottom: '6px',
+            }}
+          >
             <p
               style={{
                 fontSize: '11px',
@@ -139,22 +153,38 @@ export default function HomePage() {
       {/* ── MARQUEE ── */}
       <div className="marquee-wrap">
         <div className="marquee-track">
-          <span>Pequeños lotes</span><span className="marquee-dot">&middot;</span>
-          <span>Tostado lento</span><span className="marquee-dot">&middot;</span>
-          <span>Frutos secos seleccionados</span><span className="marquee-dot">&middot;</span>
-          <span>Miel ecológica</span><span className="marquee-dot">&middot;</span>
-          <span>Sin gluten</span><span className="marquee-dot">&middot;</span>
-          <span>Sin lactosa</span><span className="marquee-dot">&middot;</span>
-          <span>Obrador propio en Málaga</span><span className="marquee-dot">&middot;</span>
-          <span>Crafted for pleasure</span><span className="marquee-dot">&middot;</span>
-          <span>Pequeños lotes</span><span className="marquee-dot">&middot;</span>
-          <span>Tostado lento</span><span className="marquee-dot">&middot;</span>
-          <span>Frutos secos seleccionados</span><span className="marquee-dot">&middot;</span>
-          <span>Miel ecológica</span><span className="marquee-dot">&middot;</span>
-          <span>Sin gluten</span><span className="marquee-dot">&middot;</span>
-          <span>Sin lactosa</span><span className="marquee-dot">&middot;</span>
-          <span>Obrador propio en Málaga</span><span className="marquee-dot">&middot;</span>
-          <span>Crafted for pleasure</span><span className="marquee-dot">&middot;</span>
+          <span>Pequeños lotes</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Tostado lento</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Frutos secos seleccionados</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Miel ecológica</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Sin gluten</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Sin lactosa</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Obrador propio en Málaga</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Crafted for pleasure</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Pequeños lotes</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Tostado lento</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Frutos secos seleccionados</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Miel ecológica</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Sin gluten</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Sin lactosa</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Obrador propio en Málaga</span>
+          <span className="marquee-dot">&middot;</span>
+          <span>Crafted for pleasure</span>
+          <span className="marquee-dot">&middot;</span>
         </div>
       </div>
 
@@ -229,7 +259,7 @@ export default function HomePage() {
       {/* ── PRODUCTS ── */}
       <section className="fi" style={{ padding: '96px 0', background: 'var(--off)' }}>
         <div className="container-custom">
-          <div className="flex justify-between items-baseline mb-12">
+          <div className="mb-12 flex items-baseline justify-between">
             <h2
               style={{
                 fontFamily: 'var(--font-display)',
@@ -244,7 +274,7 @@ export default function HomePage() {
               Ver todas
             </Link>
           </div>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {products.slice(0, 3).map((product) => (
               <div key={product.id}>
                 <ProductCard product={product} />
@@ -348,10 +378,10 @@ export default function HomePage() {
             De la cocina de casa <em>al mundo</em>
           </h2>
           <p className="split-text">
-            Un día el médico me dijo que tenía que eliminar el gluten para siempre. Entonces,
-            empecé a hacer mi propia granola: sin azúcares refinados, sin aditivos, con los frutos
-            secos remojados para cuidar la digestión. La compartí con familia y amigos. Pasó lo que
-            pasa cuando algo está realmente bueno: todos querían más.
+            Un día el médico me dijo que tenía que eliminar el gluten para siempre. Entonces, empecé
+            a hacer mi propia granola: sin azúcares refinados, sin aditivos, con los frutos secos
+            remojados para cuidar la digestión. La compartí con familia y amigos. Pasó lo que pasa
+            cuando algo está realmente bueno: todos querían más.
           </p>
           <Link href="/nosotros" className="btn-text">
             Leer la historia completa

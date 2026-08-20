@@ -8,7 +8,10 @@ import { sendEmail, EMAIL_CONFIG } from './resend';
 import { welcomeEmail, WelcomeEmailData } from './templates/welcome';
 import { orderConfirmationEmail, OrderConfirmationData } from './templates/order-confirmation';
 import { orderShippedEmail, OrderShippedData } from './templates/order-shipped';
-import { internalOrderNotificationEmail, InternalOrderNotificationData } from './templates/internal-order-notification';
+import {
+  internalOrderNotificationEmail,
+  InternalOrderNotificationData,
+} from './templates/internal-order-notification';
 import { orderReadyPickupEmail, OrderReadyPickupData } from './templates/order-ready-pickup';
 import {
   subscriptionActiveEmail,

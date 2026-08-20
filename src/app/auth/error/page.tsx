@@ -40,12 +40,18 @@ function ErrorContent() {
   };
 
   return (
-    <div className="min-h-[60vh] flex items-center justify-center px-4" style={{ paddingTop: '140px', paddingBottom: '48px' }}>
-      <div className="max-w-md w-full text-center">
+    <div
+      className="flex min-h-[60vh] items-center justify-center px-4"
+      style={{ paddingTop: '140px', paddingBottom: '48px' }}
+    >
+      <div className="w-full max-w-md text-center">
         {/* Error icon */}
-        <div className="w-16 h-16 flex items-center justify-center mx-auto mb-6" style={{ background: 'rgba(239,68,68,.1)', borderRadius: '100px' }}>
+        <div
+          className="mx-auto mb-6 flex h-16 w-16 items-center justify-center"
+          style={{ background: 'rgba(239,68,68,.1)', borderRadius: '100px' }}
+        >
           <svg
-            className="w-8 h-8"
+            className="h-8 w-8"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -64,22 +70,22 @@ function ErrorContent() {
           Error de autenticacion
         </h1>
 
-        <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, marginBottom: '32px' }}>
+        <p
+          style={{
+            fontSize: '14px',
+            color: 'rgba(17,17,17,.5)',
+            fontWeight: 300,
+            marginBottom: '32px',
+          }}
+        >
           {getErrorMessage(error)}
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/auth/login"
-            className="btn-pill"
-          >
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <Link href="/auth/login" className="btn-pill">
             Volver a intentar
           </Link>
-          <Link
-            href="/"
-            className="btn-pill"
-            style={{ borderColor: 'rgba(0,0,0,.15)' }}
-          >
+          <Link href="/" className="btn-pill" style={{ borderColor: 'rgba(0,0,0,.15)' }}>
             Ir al inicio
           </Link>
         </div>
@@ -90,7 +96,7 @@ function ErrorContent() {
 
 function ErrorLoading() {
   return (
-    <div className="min-h-[60vh] flex items-center justify-center">
+    <div className="flex min-h-[60vh] items-center justify-center">
       <div className="animate-pulse text-stone-500">Cargando...</div>
     </div>
   );

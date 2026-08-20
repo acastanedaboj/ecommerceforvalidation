@@ -24,7 +24,7 @@ describe('Pricing Logic', () => {
     });
 
     it('should return 10% for pack of 6', () => {
-      expect(getPackDiscount(6)).toBe(0.10);
+      expect(getPackDiscount(6)).toBe(0.1);
     });
 
     it('should return 0 for unknown pack size', () => {
@@ -138,7 +138,7 @@ describe('Pricing Logic', () => {
     it('should return all pack options', () => {
       const options = getPackOptions();
       expect(options).toHaveLength(4);
-      expect(options.map(o => o.size)).toEqual([1, 3, 4, 6]);
+      expect(options.map((o) => o.size)).toEqual([1, 3, 4, 6]);
     });
 
     it('should include correct discount percentages', () => {

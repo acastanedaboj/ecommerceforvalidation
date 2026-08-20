@@ -24,20 +24,37 @@ export function LandingCTA({
   if (variant === 'primary') {
     return (
       <section style={{ padding: '80px 0', background: 'var(--brown)' }}>
-        <div className="container-custom text-center max-w-2xl mx-auto">
-          <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 3vw, 36px)', color: 'var(--white)', marginBottom: '24px' }}>
+        <div className="container-custom mx-auto max-w-2xl text-center">
+          <h2
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: 'clamp(24px, 3vw, 36px)',
+              color: 'var(--white)',
+              marginBottom: '24px',
+            }}
+          >
             {title}
           </h2>
           {description && (
-            <p style={{ color: 'rgba(255,255,255,.65)', fontWeight: 300, fontSize: '14px', lineHeight: 1.85, marginBottom: '40px' }}>{description}</p>
+            <p
+              style={{
+                color: 'rgba(255,255,255,.65)',
+                fontWeight: 300,
+                fontSize: '14px',
+                lineHeight: 1.85,
+                marginBottom: '40px',
+              }}
+            >
+              {description}
+            </p>
           )}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex flex-col justify-center gap-4 sm:flex-row">
             <Link
               href={ctaHref}
               className="btn-pill-white inline-flex items-center justify-center gap-2"
             >
               {ctaText}
-              <ArrowRight className="w-4 h-4" />
+              <ArrowRight className="h-4 w-4" />
             </Link>
             {secondaryCta && (
               <Link
@@ -56,18 +73,33 @@ export function LandingCTA({
 
   return (
     <section style={{ padding: '80px 0', background: 'var(--white)' }}>
-      <div className="container-custom text-center max-w-2xl mx-auto">
-        <h2 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 3vw, 36px)', marginBottom: '24px' }}>{title}</h2>
+      <div className="container-custom mx-auto max-w-2xl text-center">
+        <h2
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 'clamp(24px, 3vw, 36px)',
+            marginBottom: '24px',
+          }}
+        >
+          {title}
+        </h2>
         {description && (
-          <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.85, marginBottom: '40px' }}>{description}</p>
-        )}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href={ctaHref}
-            className="btn-pill inline-flex items-center justify-center gap-2"
+          <p
+            style={{
+              fontSize: '14px',
+              color: 'rgba(17,17,17,.5)',
+              fontWeight: 300,
+              lineHeight: 1.85,
+              marginBottom: '40px',
+            }}
           >
+            {description}
+          </p>
+        )}
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <Link href={ctaHref} className="btn-pill inline-flex items-center justify-center gap-2">
             {ctaText}
-            <ArrowRight className="w-4 h-4" />
+            <ArrowRight className="h-4 w-4" />
           </Link>
           {secondaryCta && (
             <Link

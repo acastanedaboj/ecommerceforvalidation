@@ -73,7 +73,15 @@ function buildFAQSchema() {
 
 export default function GranolaParaCeliacosPage() {
   const products = getRetailProducts();
-  const { hero, intro, commitment, products: productsContent, faqs, resources, cta } = celiacosContent;
+  const {
+    hero,
+    intro,
+    commitment,
+    products: productsContent,
+    faqs,
+    resources,
+    cta,
+  } = celiacosContent;
 
   const commitmentWithIcons = [
     { icon: Wheat, ...commitment.items[0] },
@@ -103,15 +111,11 @@ export default function GranolaParaCeliacosPage() {
       />
 
       {/* Intro Section */}
-      <section className="py-16 bg-white">
+      <section className="bg-white py-16">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-display text-2xl md:text-3xl text-stone-800 mb-4">
-              {intro.title}
-            </h2>
-            <p className="text-stone-600 text-lg leading-relaxed">
-              {intro.description}
-            </p>
+          <div className="mx-auto max-w-3xl text-center">
+            <h2 className="mb-4 font-display text-2xl text-stone-800 md:text-3xl">{intro.title}</h2>
+            <p className="text-lg leading-relaxed text-stone-600">{intro.description}</p>
           </div>
         </div>
       </section>
@@ -132,31 +136,31 @@ export default function GranolaParaCeliacosPage() {
       />
 
       {/* Resources Section */}
-      <section className="py-16 bg-stone-50">
+      <section className="bg-stone-50 py-16">
         <div className="container-custom">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="font-display text-2xl text-stone-800 mb-8 text-center">
+          <div className="mx-auto max-w-3xl">
+            <h2 className="mb-8 text-center font-display text-2xl text-stone-800">
               {resources.title}
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid gap-6 md:grid-cols-2">
               {resources.items.map((resource, index) => (
                 <Link
                   key={index}
                   href={resource.url}
                   target={resource.url.startsWith('http') ? '_blank' : undefined}
                   rel={resource.url.startsWith('http') ? 'noopener noreferrer' : undefined}
-                  className="bg-white rounded-lg p-6 shadow-sm hover:shadow-md transition-shadow group"
+                  className="group rounded-lg bg-white p-6 shadow-sm transition-shadow hover:shadow-md"
                 >
                   <div className="flex items-start justify-between">
                     <div>
-                      <h3 className="font-display text-lg text-stone-800 mb-2 group-hover:text-earth-600 transition-colors">
+                      <h3 className="mb-2 font-display text-lg text-stone-800 transition-colors group-hover:text-earth-600">
                         {resource.title}
                       </h3>
-                      <p className="text-stone-600 text-sm">{resource.description}</p>
+                      <p className="text-sm text-stone-600">{resource.description}</p>
                     </div>
                     {resource.url.startsWith('http') && (
-                      <ExternalLink className="w-5 h-5 text-stone-400 flex-shrink-0 ml-4" />
+                      <ExternalLink className="ml-4 h-5 w-5 flex-shrink-0 text-stone-400" />
                     )}
                   </div>
                 </Link>

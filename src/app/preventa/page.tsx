@@ -120,9 +120,7 @@ export default function PreventaPage() {
     }
   };
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
     // Clear error for this field when user starts typing
@@ -141,15 +139,15 @@ export default function PreventaPage() {
     return (
       <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
         <div className="container-custom max-w-2xl text-center">
-          <div className="inline-flex items-center justify-center w-20 h-20 bg-accent-100 rounded-full mb-6">
-            <CheckCircle className="w-10 h-10 text-accent-600" />
+          <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-accent-100">
+            <CheckCircle className="h-10 w-10 text-accent-600" />
           </div>
-          <h1 className="text-3xl font-display text-neutral-900 mb-4">
+          <h1 className="mb-4 font-display text-3xl text-neutral-900">
             ¡Pedido registrado con éxito!
           </h1>
-          <p className="text-neutral-600 mb-8">
-            Hemos recibido tu preventa correctamente. Te contactaremos muy pronto para
-            coordinar la entrega en mano de tu granola.
+          <p className="mb-8 text-neutral-600">
+            Hemos recibido tu preventa correctamente. Te contactaremos muy pronto para coordinar la
+            entrega en mano de tu granola.
           </p>
           <a href="/" className="btn-primary">
             Volver al inicio
@@ -163,97 +161,87 @@ export default function PreventaPage() {
     <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="mb-12 text-center">
           <span className="badge-primary mb-4">Preventa Especial</span>
-          <h1 className="text-4xl md:text-5xl font-display text-neutral-900 mb-4">
+          <h1 className="mb-4 font-display text-4xl text-neutral-900 md:text-5xl">
             Sé de los primeros en probar nuestra granola artesanal
           </h1>
-          <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-            Forma parte de nuestra campaña de validación. Reserva tu granola ahora y
-            recíbela directamente de nuestras manos. Solo 7€ por bolsa de 150g.
+          <p className="mx-auto max-w-2xl text-lg text-neutral-600">
+            Forma parte de nuestra campaña de validación. Reserva tu granola ahora y recíbela
+            directamente de nuestras manos. Solo 7€ por bolsa de 150g.
           </p>
         </div>
 
         {/* Benefits */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
-          <div className="bg-white rounded-2xl p-6 shadow-sm border border-neutral-200">
-            <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-              <Truck className="w-6 h-6 text-primary-600" />
+        <div className="mb-16 grid gap-6 md:grid-cols-3">
+          <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100">
+              <Truck className="h-6 w-6 text-primary-600" />
             </div>
-            <h3 className="text-neutral-900 mb-2">Entrega en mano</h3>
-            <p className="text-neutral-600 text-sm">
+            <h3 className="mb-2 text-neutral-900">Entrega en mano</h3>
+            <p className="text-sm text-neutral-600">
               Sin gastos de envío. Te la entregaremos personalmente en tu zona.
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-sm border border-neutral-200">
-            <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-              <Heart className="w-6 h-6 text-primary-600" />
+          <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100">
+              <Heart className="h-6 w-6 text-primary-600" />
             </div>
-            <h3 className="text-neutral-900 mb-2">Apoya el proyecto</h3>
-            <p className="text-neutral-600 text-sm">
+            <h3 className="mb-2 text-neutral-900">Apoya el proyecto</h3>
+            <p className="text-sm text-neutral-600">
               Tu pedido nos ayuda a validar la demanda y crecer como proyecto artesanal.
             </p>
           </div>
 
-          <div className="bg-white rounded-2xl p-6 shadow-sm border border-neutral-200">
-            <div className="w-12 h-12 bg-primary-100 rounded-xl flex items-center justify-center mb-4">
-              <Package className="w-6 h-6 text-primary-600" />
+          <div className="rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100">
+              <Package className="h-6 w-6 text-primary-600" />
             </div>
-            <h3 className="text-neutral-900 mb-2">Producto fresco</h3>
-            <p className="text-neutral-600 text-sm">
+            <h3 className="mb-2 text-neutral-900">Producto fresco</h3>
+            <p className="text-sm text-neutral-600">
               Elaborada después de recibir tu pedido para garantizar máxima frescura.
             </p>
           </div>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+        <div className="mb-16 grid gap-12 lg:grid-cols-2">
           {/* How it works */}
           <div>
-            <h2 className="text-2xl font-display text-neutral-900 mb-6">
-              ¿Cómo funciona?
-            </h2>
+            <h2 className="mb-6 font-display text-2xl text-neutral-900">¿Cómo funciona?</h2>
 
             <div className="space-y-4">
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-[#fcf8d5] rounded-full flex items-center justify-center text-sm">
+                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-600 text-sm text-[#fcf8d5]">
                   1
                 </div>
                 <div>
-                  <h3 className="text-neutral-900 mb-1">
-                    Rellena el formulario
-                  </h3>
-                  <p className="text-neutral-600 text-sm">
-                    Indica tu nombre, email, el sabor que prefieres y la cantidad que
-                    deseas.
+                  <h3 className="mb-1 text-neutral-900">Rellena el formulario</h3>
+                  <p className="text-sm text-neutral-600">
+                    Indica tu nombre, email, el sabor que prefieres y la cantidad que deseas.
                   </p>
                 </div>
               </div>
 
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-[#fcf8d5] rounded-full flex items-center justify-center text-sm">
+                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-600 text-sm text-[#fcf8d5]">
                   2
                 </div>
                 <div>
-                  <h3 className="text-neutral-900 mb-1">
-                    Preparamos tu pedido
-                  </h3>
-                  <p className="text-neutral-600 text-sm">
-                    Elaboramos tu granola de forma artesanal con ingredientes frescos
-                    y de calidad.
+                  <h3 className="mb-1 text-neutral-900">Preparamos tu pedido</h3>
+                  <p className="text-sm text-neutral-600">
+                    Elaboramos tu granola de forma artesanal con ingredientes frescos y de calidad.
                   </p>
                 </div>
               </div>
 
               <div className="flex gap-4">
-                <div className="flex-shrink-0 w-8 h-8 bg-primary-600 text-[#fcf8d5] rounded-full flex items-center justify-center text-sm">
+                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-600 text-sm text-[#fcf8d5]">
                   3
                 </div>
                 <div>
-                  <h3 className="text-neutral-900 mb-1">
-                    Te contactamos para la entrega
-                  </h3>
-                  <p className="text-neutral-600 text-sm">
+                  <h3 className="mb-1 text-neutral-900">Te contactamos para la entrega</h3>
+                  <p className="text-sm text-neutral-600">
                     Coordinamos contigo para entregarte tu granola en mano.
                   </p>
                 </div>
@@ -261,23 +249,21 @@ export default function PreventaPage() {
             </div>
 
             {/* Product info */}
-            <div className="mt-8 bg-cream-50 rounded-xl p-6">
-              <h3 className="text-neutral-900 mb-3">
-                Sabores disponibles:
-              </h3>
+            <div className="mt-8 rounded-xl bg-cream-50 p-6">
+              <h3 className="mb-3 text-neutral-900">Sabores disponibles:</h3>
               <ul className="space-y-2 text-sm text-neutral-700">
                 <li className="flex items-start gap-2">
-                  <span className="text-primary-600 mt-0.5">•</span>
+                  <span className="mt-0.5 text-primary-600">•</span>
                   <div>
-                    <strong>Granola original:</strong> Nuestra receta original con miel,
-                    avena integral sin gluten y frutos secos premium.
+                    <strong>Granola original:</strong> Nuestra receta original con miel, avena
+                    integral sin gluten y frutos secos premium.
                   </div>
                 </li>
                 <li className="flex items-start gap-2">
-                  <span className="text-primary-600 mt-0.5">•</span>
+                  <span className="mt-0.5 text-primary-600">•</span>
                   <div>
-                    <strong>Granola con naranja:</strong> Con piel de naranja deshidratada
-                    y miel. Frescura mediterránea en cada bocado.
+                    <strong>Granola con naranja:</strong> Con piel de naranja deshidratada y miel.
+                    Frescura mediterránea en cada bocado.
                   </div>
                 </li>
               </ul>
@@ -286,10 +272,8 @@ export default function PreventaPage() {
 
           {/* Form */}
           <div>
-            <div className="bg-white rounded-2xl p-8 shadow-lg border border-neutral-200 sticky top-24">
-              <h2 className="text-2xl font-display text-neutral-900 mb-6">
-                Reserva tu granola
-              </h2>
+            <div className="sticky top-24 rounded-2xl border border-neutral-200 bg-white p-8 shadow-lg">
+              <h2 className="mb-6 font-display text-2xl text-neutral-900">Reserva tu granola</h2>
 
               <form onSubmit={handleSubmit} className="space-y-5">
                 <Input
@@ -350,18 +334,16 @@ export default function PreventaPage() {
                 />
 
                 {/* Price summary */}
-                <div className="bg-cream-50 rounded-xl p-4">
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-neutral-700 text-sm">Precio por unidad:</span>
+                <div className="rounded-xl bg-cream-50 p-4">
+                  <div className="mb-2 flex items-center justify-between">
+                    <span className="text-sm text-neutral-700">Precio por unidad:</span>
                     <span className="text-neutral-900">7,00€</span>
                   </div>
-                  <div className="flex justify-between items-center pt-2 border-t border-neutral-200">
+                  <div className="flex items-center justify-between border-t border-neutral-200 pt-2">
                     <span className="text-neutral-900">Total:</span>
-                    <span className="text-2xl font-bold text-primary-600">
-                      {totalPrice}
-                    </span>
+                    <span className="text-2xl font-bold text-primary-600">{totalPrice}</span>
                   </div>
-                  <p className="text-xs text-neutral-500 mt-2">
+                  <p className="mt-2 text-xs text-neutral-500">
                     {formData.cantidad} {formData.cantidad === 1 ? 'unidad' : 'unidades'}
                   </p>
                 </div>
@@ -369,15 +351,14 @@ export default function PreventaPage() {
                 <Button
                   type="submit"
                   isLoading={isLoading}
-                  leftIcon={<ShoppingBag className="w-5 h-5" />}
+                  leftIcon={<ShoppingBag className="h-5 w-5" />}
                   className="w-full"
                 >
                   {isLoading ? 'Procesando...' : 'Reservar mi granola'}
                 </Button>
 
-                <p className="text-xs text-neutral-500 text-center">
-                  Al enviar este formulario, aceptas que te contactemos para coordinar la
-                  entrega.
+                <p className="text-center text-xs text-neutral-500">
+                  Al enviar este formulario, aceptas que te contactemos para coordinar la entrega.
                 </p>
               </form>
             </div>

@@ -58,40 +58,44 @@ export function PackPillSelector({
           >
             {/* Selection indicator */}
             {isSelected && (
-              <span className="absolute top-2 right-2 w-5 h-5 bg-earth-500 rounded-full flex items-center justify-center">
-                <Check className="w-3 h-3 text-[#fcf8d5]" strokeWidth={3} />
+              <span className="absolute right-2 top-2 flex h-5 w-5 items-center justify-center rounded-full bg-earth-500">
+                <Check className="h-3 w-3 text-[#fcf8d5]" strokeWidth={3} />
               </span>
             )}
 
             {/* Pack name */}
-            <span className={cn(
-              'font-display text-lg',
-              isSelected ? 'text-earth-700' : 'text-stone-700'
-            )}>
+            <span
+              className={cn(
+                'font-display text-lg',
+                isSelected ? 'text-earth-700' : 'text-stone-700'
+              )}
+            >
               {option.size === 1 ? '1 bolsa' : `Pack ${option.size} bolsas`}
             </span>
 
             {/* Price */}
-            <span className={cn(
-              'text-sm font-medium mt-1',
-              isSelected ? 'text-earth-600' : 'text-stone-500'
-            )}>
+            <span
+              className={cn(
+                'mt-1 text-sm font-medium',
+                isSelected ? 'text-earth-600' : 'text-stone-500'
+              )}
+            >
               {formatPrice(option.unitPriceCents)}/ud
             </span>
 
             {/* Badges row */}
-            <div className="flex items-center gap-1.5 mt-2 min-h-[20px]">
+            <div className="mt-2 flex min-h-[20px] items-center gap-1.5">
               {/* Savings badge */}
               {showSavings && hasSavings && (
-                <span className="px-2 py-0.5 bg-olive-100 text-olive-700 text-xs font-semibold rounded-full">
+                <span className="rounded-full bg-olive-100 px-2 py-0.5 text-xs font-semibold text-olive-700">
                   -{option.discountPercentage}%
                 </span>
               )}
 
               {/* Free shipping indicator */}
               {showShipping && hasFreeShipping && (
-                <span className="flex items-center gap-1 px-2 py-0.5 bg-earth-100 text-earth-700 text-xs font-medium rounded-full">
-                  <Truck className="w-3 h-3" />
+                <span className="flex items-center gap-1 rounded-full bg-earth-100 px-2 py-0.5 text-xs font-medium text-earth-700">
+                  <Truck className="h-3 w-3" />
                   Gratis
                 </span>
               )}

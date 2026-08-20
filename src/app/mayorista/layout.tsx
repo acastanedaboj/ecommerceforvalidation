@@ -11,10 +11,6 @@ export const metadata: Metadata = {
   robots: 'noindex, nofollow', // Hidden until ready for public
 };
 
-export default function MayoristaLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function MayoristaLayout({ children }: { children: React.ReactNode }) {
   return children;
 }

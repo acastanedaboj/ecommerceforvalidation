@@ -36,12 +36,16 @@ export default function TiendaPage() {
           <nav className="mb-8" aria-label="Breadcrumb">
             <ol className="flex items-center gap-1" style={{ fontSize: '11px', listStyle: 'none' }}>
               <li>
-                <Link href="/" style={{ color: 'rgba(17,17,17,.55)', textDecoration: 'none' }} className="hover:text-dark transition-colors">
+                <Link
+                  href="/"
+                  style={{ color: 'rgba(17,17,17,.55)', textDecoration: 'none' }}
+                  className="transition-colors hover:text-dark"
+                >
                   Inicio
                 </Link>
               </li>
               <li>
-                <ChevronRight className="w-3 h-3" style={{ color: 'rgba(17,17,17,.3)' }} />
+                <ChevronRight className="h-3 w-3" style={{ color: 'rgba(17,17,17,.3)' }} />
               </li>
               <li style={{ color: 'var(--dark)', fontWeight: 400 }}>Tienda</li>
             </ol>
@@ -72,8 +76,8 @@ export default function TiendaPage() {
                 lineHeight: 1.8,
               }}
             >
-              Tres sabores. Ingredientes reales. Sin gluten, sin lactosa.
-              Elaborada cada semana en nuestro obrador de Málaga.
+              Tres sabores. Ingredientes reales. Sin gluten, sin lactosa. Elaborada cada semana en
+              nuestro obrador de Málaga.
             </p>
             {STORE_CLOSED && (
               <div
@@ -88,11 +92,26 @@ export default function TiendaPage() {
                   marginRight: 'auto',
                 }}
               >
-                <p style={{ fontSize: '14px', color: 'var(--dark)', fontWeight: 400, marginBottom: '6px' }}>
+                <p
+                  style={{
+                    fontSize: '14px',
+                    color: 'var(--dark)',
+                    fontWeight: 400,
+                    marginBottom: '6px',
+                  }}
+                >
                   Tienda temporalmente cerrada
                 </p>
-                <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.6)', fontWeight: 300, lineHeight: 1.7 }}>
-                  Cerrado por vacaciones. Gestionaremos vuestros pedidos a partir del 8 de septiembre.
+                <p
+                  style={{
+                    fontSize: '13px',
+                    color: 'rgba(17,17,17,.6)',
+                    fontWeight: 300,
+                    lineHeight: 1.7,
+                  }}
+                >
+                  Cerrado por vacaciones. Gestionaremos vuestros pedidos a partir del 8 de
+                  septiembre.
                 </p>
               </div>
             )}
@@ -104,7 +123,7 @@ export default function TiendaPage() {
       <section style={{ padding: '0 0 96px', background: 'var(--off)' }}>
         <div className="container-custom">
           {/* Section label row */}
-          <div className="flex justify-between items-baseline mb-12">
+          <div className="mb-12 flex items-baseline justify-between">
             <span className="section-label">Granola artesanal · 150g</span>
             <button
               onClick={() => setIsBundleModalOpen(true)}
@@ -116,7 +135,7 @@ export default function TiendaPage() {
           </div>
 
           {/* 3-col grid */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
             {retailProducts.map((product) => (
               <div key={product.id}>
                 <ProductCard product={product} />
@@ -126,10 +145,7 @@ export default function TiendaPage() {
 
           {/* Mobile bundle link */}
           <div className="mt-10 text-center sm:hidden">
-            <button
-              onClick={() => setIsBundleModalOpen(true)}
-              className="btn-pill"
-            >
+            <button onClick={() => setIsBundleModalOpen(true)} className="btn-pill">
               Crear pack mixto
             </button>
           </div>
@@ -171,9 +187,8 @@ export default function TiendaPage() {
             Pequeños lotes, <em>cada semana</em>
           </h2>
           <p className="split-text">
-            Tostamos bajo demanda. Nunca almacenamos. Cada bolsa que recibes tiene horas
-            o días desde que salió del horno. Sin gluten, sin lactosa, sin conservantes,
-            sin prisas.
+            Tostamos bajo demanda. Nunca almacenamos. Cada bolsa que recibes tiene horas o días
+            desde que salió del horno. Sin gluten, sin lactosa, sin conservantes, sin prisas.
           </p>
           <Link href="/nosotros" className="btn-pill">
             Conocer más
@@ -195,9 +210,18 @@ export default function TiendaPage() {
           >
             Recíbela cada mes <em>con un 15% menos</em>
           </h2>
-          <p style={{ fontSize: '14px', color: 'var(--dark)', opacity: 0.6, fontWeight: 300, lineHeight: 1.85, marginBottom: '36px' }}>
-            6 bolsas al mes. Envío gratis siempre. Sin permanencia, cancela cuando quieras.
-            El 15% que ahorras es nuestra forma de decir gracias.
+          <p
+            style={{
+              fontSize: '14px',
+              color: 'var(--dark)',
+              opacity: 0.6,
+              fontWeight: 300,
+              lineHeight: 1.85,
+              marginBottom: '36px',
+            }}
+          >
+            6 bolsas al mes. Envío gratis siempre. Sin permanencia, cancela cuando quieras. El 15%
+            que ahorras es nuestra forma de decir gracias.
           </p>
           <Link href="/suscripcion" className="btn-pill">
             Empezar la suscripción
@@ -210,7 +234,17 @@ export default function TiendaPage() {
         <section style={{ background: 'var(--dark)' }}>
           <div className="container-custom" style={{ padding: '80px 56px' }}>
             <div style={{ maxWidth: '480px' }}>
-              <span style={{ fontSize: '11px', color: 'rgba(255,255,255,.5)', letterSpacing: '0.08em', textTransform: 'uppercase', display: 'block', marginBottom: '16px', fontWeight: 300 }}>
+              <span
+                style={{
+                  fontSize: '11px',
+                  color: 'rgba(255,255,255,.5)',
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  display: 'block',
+                  marginBottom: '16px',
+                  fontWeight: 300,
+                }}
+              >
                 Formato profesional
               </span>
               <h2
@@ -223,9 +257,17 @@ export default function TiendaPage() {
               >
                 Horeca &amp; Mayorista
               </h2>
-              <p style={{ color: 'rgba(255,255,255,.65)', fontWeight: 300, fontSize: '14px', marginBottom: '32px', lineHeight: 1.85 }}>
-                ¿Tienes una cafetería, hotel o tienda? Formatos de 1kg
-                y condiciones especiales para profesionales.
+              <p
+                style={{
+                  color: 'rgba(255,255,255,.65)',
+                  fontWeight: 300,
+                  fontSize: '14px',
+                  marginBottom: '32px',
+                  lineHeight: 1.85,
+                }}
+              >
+                ¿Tienes una cafetería, hotel o tienda? Formatos de 1kg y condiciones especiales para
+                profesionales.
               </p>
               <a href="/mayorista" className="btn-pill-white">
                 Ver condiciones
@@ -247,10 +289,19 @@ export default function TiendaPage() {
           >
             ¿No sabes cuál elegir?
           </h3>
-          <p style={{ fontSize: '14px', color: 'var(--dark)', opacity: 0.6, fontWeight: 300, lineHeight: 1.85, marginBottom: '8px' }}>
-            Todos nuestros sabores comparten la misma base: avena integral sin gluten,
-            frutos secos premium. Sin lactosa, sin conservantes. La mayoría con miel
-            ecológica; también tenemos una opción vegana con sirope de agave.
+          <p
+            style={{
+              fontSize: '14px',
+              color: 'var(--dark)',
+              opacity: 0.6,
+              fontWeight: 300,
+              lineHeight: 1.85,
+              marginBottom: '8px',
+            }}
+          >
+            Todos nuestros sabores comparten la misma base: avena integral sin gluten, frutos secos
+            premium. Sin lactosa, sin conservantes. La mayoría con miel ecológica; también tenemos
+            una opción vegana con sirope de agave.
           </p>
           <p style={{ fontSize: '12px', color: 'var(--brown)', fontWeight: 400 }}>
             Empieza con la original y explora desde ahí.
@@ -259,10 +310,7 @@ export default function TiendaPage() {
       </section>
 
       {/* Bundle Builder Modal */}
-      <BundleBuilderModal
-        isOpen={isBundleModalOpen}
-        onClose={() => setIsBundleModalOpen(false)}
-      />
+      <BundleBuilderModal isOpen={isBundleModalOpen} onClose={() => setIsBundleModalOpen(false)} />
     </>
   );
 }

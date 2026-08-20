@@ -53,8 +53,8 @@ describe('Utils', () => {
 
   describe('eurosToCents / centsToEuros', () => {
     it('should convert euros to cents', () => {
-      expect(eurosToCents(7.00)).toBe(700);
-      expect(eurosToCents(0.50)).toBe(50);
+      expect(eurosToCents(7.0)).toBe(700);
+      expect(eurosToCents(0.5)).toBe(50);
     });
 
     it('should convert cents to euros', () => {

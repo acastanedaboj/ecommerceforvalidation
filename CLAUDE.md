@@ -67,15 +67,16 @@ ecommerceforvalidation/
 
 ### Pricing Structure
 
-| Option | Discount | Unit Price | Shipping |
-|--------|----------|------------|----------|
-| 1 unit | 0% | 7,00€ | 4,95€ |
-| Pack 3 | 3% | 6,79€ | 4,95€ |
-| Pack 4 | 5% | 6,65€ | FREE |
-| Pack 6 | 10% | 6,30€ | FREE |
-| Subscription | 15% | 5,95€ | FREE |
+| Option       | Discount | Unit Price | Shipping |
+| ------------ | -------- | ---------- | -------- |
+| 1 unit       | 0%       | 7,00€      | 4,95€    |
+| Pack 3       | 3%       | 6,79€      | 4,95€    |
+| Pack 4       | 5%       | 6,65€      | FREE     |
+| Pack 6       | 10%      | 6,30€      | FREE     |
+| Subscription | 15%      | 5,95€      | FREE     |
 
 **Free Shipping Rules:**
+
 - Orders with 4+ items
 - Orders >= 35€
 - Any subscription
@@ -114,16 +115,16 @@ npm run dev
 
 ### Common Commands
 
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start development server |
-| `npm run build` | Build for production |
-| `npm run start` | Start production server |
-| `npm run lint` | Run ESLint |
-| `npm run format` | Format code with Prettier |
-| `npm run test` | Run unit tests |
-| `npm run test:e2e` | Run E2E tests |
-| `npm run db:studio` | Open Prisma Studio |
+| Command             | Description               |
+| ------------------- | ------------------------- |
+| `npm run dev`       | Start development server  |
+| `npm run build`     | Build for production      |
+| `npm run start`     | Start production server   |
+| `npm run lint`      | Run ESLint                |
+| `npm run format`    | Format code with Prettier |
+| `npm run test`      | Run unit tests            |
+| `npm run test:e2e`  | Run E2E tests             |
+| `npm run db:studio` | Open Prisma Studio        |
 
 ### Environment Variables
 
@@ -169,13 +170,17 @@ NEXT_PUBLIC_APP_URL=http://localhost:3000
 ## API Routes
 
 ### `/api/checkout` (POST)
+
 Creates Stripe checkout session for cart items.
 
 ### `/api/orders` (POST/GET)
+
 Creates and retrieves orders.
 
 ### `/api/webhooks/stripe` (POST)
+
 Handles Stripe webhook events:
+
 - `checkout.session.completed`
 - `invoice.paid`
 - `customer.subscription.created/updated/deleted`
@@ -185,22 +190,26 @@ Handles Stripe webhook events:
 ### Unit Tests
 
 Located in `src/__tests__/`. Run with:
+
 ```bash
 npm run test
 ```
 
 Key test files:
+
 - `lib/pricing.test.ts` - Discount calculations
 - `lib/utils.test.ts` - Utility functions
 
 ### E2E Tests
 
 Located in `e2e/`. Run with:
+
 ```bash
 npm run test:e2e
 ```
 
 Key test files:
+
 - `checkout.spec.ts` - Purchase flow
 - `accessibility.spec.ts` - WCAG compliance
 
@@ -238,11 +247,13 @@ Key test files:
 ## Stripe Testing
 
 Use test cards:
+
 - **Success:** 4242 4242 4242 4242
 - **Declined:** 4000 0000 0000 0002
 - **Auth required:** 4000 0025 0000 3155
 
 For webhooks locally:
+
 ```bash
 stripe listen --forward-to localhost:3000/api/webhooks/stripe
 ```
@@ -290,5 +301,5 @@ stripe logs tail
 
 ---
 
-*Last updated: January 2026*
-*Project: Granola Artesanal E-Commerce*
+_Last updated: January 2026_
+_Project: Granola Artesanal E-Commerce_

@@ -117,7 +117,7 @@ export default function GranolaEcologicaPage() {
       {/* Intro Section */}
       <div className="section bg-neutral-50">
         <div className="container-custom max-w-3xl text-center">
-          <h2 className="text-3xl font-display text-neutral-900 mb-4">{intro.title}</h2>
+          <h2 className="mb-4 font-display text-3xl text-neutral-900">{intro.title}</h2>
           <p className="text-lg text-neutral-600">{intro.description}</p>
         </div>
       </div>
@@ -125,31 +125,24 @@ export default function GranolaEcologicaPage() {
       {/* Ingredientes Section */}
       <div id="ingredientes" className="section">
         <div className="container-custom max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
-              {ingredientes.title}
-            </h2>
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">{ingredientes.title}</h2>
             <p className="text-lg text-neutral-600">{ingredientes.subtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {ingredientes.items.map((item, index) => (
-              <div
-                key={index}
-                className="bg-white border border-neutral-200 rounded-xl p-6"
-              >
+              <div key={index} className="rounded-xl border border-neutral-200 bg-white p-6">
                 <div className="flex items-start gap-4">
                   <div className="text-4xl">{item.icon}</div>
                   <div className="flex-1">
-                    <div className="flex items-center justify-between mb-2">
-                      <h3 className="text-lg font-semibold text-neutral-900">
-                        {item.title}
-                      </h3>
-                      <span className="text-sm font-medium text-primary-600 bg-primary-50 px-2 py-1 rounded">
+                    <div className="mb-2 flex items-center justify-between">
+                      <h3 className="text-lg font-semibold text-neutral-900">{item.title}</h3>
+                      <span className="rounded bg-primary-50 px-2 py-1 text-sm font-medium text-primary-600">
                         {item.percentage}
                       </span>
                     </div>
-                    <p className="text-neutral-600 text-sm">{item.description}</p>
+                    <p className="text-sm text-neutral-600">{item.description}</p>
                   </div>
                 </div>
               </div>
@@ -161,22 +154,15 @@ export default function GranolaEcologicaPage() {
       {/* Why Eco Section */}
       <div className="section bg-neutral-50">
         <div className="container-custom max-w-5xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
-              {whyEco.title}
-            </h2>
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">{whyEco.title}</h2>
             <p className="text-lg text-neutral-600">{whyEco.subtitle}</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
             {whyEco.reasons.map((reason, index) => (
-              <div
-                key={index}
-                className="bg-white rounded-xl border border-neutral-200 p-6"
-              >
-                <h3 className="text-lg font-semibold text-neutral-900 mb-3">
-                  {reason.title}
-                </h3>
+              <div key={index} className="rounded-xl border border-neutral-200 bg-white p-6">
+                <h3 className="mb-3 text-lg font-semibold text-neutral-900">{reason.title}</h3>
                 <p className="text-neutral-600">{reason.description}</p>
               </div>
             ))}
@@ -187,18 +173,16 @@ export default function GranolaEcologicaPage() {
       {/* Comparison Section */}
       <div className="section">
         <div className="container-custom max-w-4xl">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
-              {comparison.title}
-            </h2>
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">{comparison.title}</h2>
             <p className="text-lg text-neutral-600">{comparison.subtitle}</p>
           </div>
 
-          <div className="bg-white rounded-xl border border-neutral-200 overflow-hidden">
-            <div className="grid grid-cols-3 bg-neutral-50 border-b border-neutral-200">
+          <div className="overflow-hidden rounded-xl border border-neutral-200 bg-white">
+            <div className="grid grid-cols-3 border-b border-neutral-200 bg-neutral-50">
               <div className="p-4 font-semibold text-neutral-900">Aspecto</div>
-              <div className="p-4 font-semibold text-green-700 text-center">Poppy Eco</div>
-              <div className="p-4 font-semibold text-neutral-500 text-center">Industrial</div>
+              <div className="p-4 text-center font-semibold text-green-700">Poppy Eco</div>
+              <div className="p-4 text-center font-semibold text-neutral-500">Industrial</div>
             </div>
             {comparison.items.map((item, index) => (
               <div
@@ -206,8 +190,8 @@ export default function GranolaEcologicaPage() {
                 className={`grid grid-cols-3 ${index !== comparison.items.length - 1 ? 'border-b border-neutral-100' : ''}`}
               >
                 <div className="p-4 font-medium text-neutral-900">{item.aspect}</div>
-                <div className="p-4 text-green-700 text-center text-sm">{item.eco}</div>
-                <div className="p-4 text-neutral-500 text-center text-sm">{item.industrial}</div>
+                <div className="p-4 text-center text-sm text-green-700">{item.eco}</div>
+                <div className="p-4 text-center text-sm text-neutral-500">{item.industrial}</div>
               </div>
             ))}
           </div>

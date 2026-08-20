@@ -74,8 +74,7 @@ function buildFAQSchema() {
 
 export default function GranolaSinGlutenMercadonaPage() {
   const products = getRetailProducts();
-  const { hero, intro, comparison, benefits, mercadonaSection, faqs, cta } =
-    mercadonaContent;
+  const { hero, intro, comparison, benefits, mercadonaSection, faqs, cta } = mercadonaContent;
 
   const benefitsWithIcons = [
     { icon: Sparkles, ...benefits.items[0] },
@@ -112,9 +111,7 @@ export default function GranolaSinGlutenMercadonaPage() {
       {/* Intro Section */}
       <div className="section bg-neutral-50">
         <div className="container-custom max-w-3xl text-center">
-          <h2 className="text-3xl font-display text-neutral-900 mb-4">
-            {intro.title}
-          </h2>
+          <h2 className="mb-4 font-display text-3xl text-neutral-900">{intro.title}</h2>
           <p className="text-lg text-neutral-600">{intro.description}</p>
         </div>
       </div>
@@ -122,26 +119,18 @@ export default function GranolaSinGlutenMercadonaPage() {
       {/* Comparison Table */}
       <div id="comparativa" className="section">
         <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-display text-neutral-900 mb-3">
-              {comparison.title}
-            </h2>
+          <div className="mb-12 text-center">
+            <h2 className="mb-3 font-display text-3xl text-neutral-900">{comparison.title}</h2>
             <p className="text-lg text-neutral-600">{comparison.subtitle}</p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+          <div className="mx-auto max-w-4xl">
+            <div className="overflow-hidden rounded-2xl bg-white shadow-lg">
               {/* Table Header */}
-              <div className="grid grid-cols-3 gap-4 p-4 bg-primary-50 border-b border-primary-100">
-                <div className="font-semibold text-neutral-900">
-                  Característica
-                </div>
-                <div className="font-semibold text-primary-700 text-center">
-                  ✨ Poppy
-                </div>
-                <div className="font-semibold text-neutral-600 text-center">
-                  Mercadona
-                </div>
+              <div className="grid grid-cols-3 gap-4 border-b border-primary-100 bg-primary-50 p-4">
+                <div className="font-semibold text-neutral-900">Característica</div>
+                <div className="text-center font-semibold text-primary-700">✨ Poppy</div>
+                <div className="text-center font-semibold text-neutral-600">Mercadona</div>
               </div>
 
               {/* Table Rows */}
@@ -152,20 +141,16 @@ export default function GranolaSinGlutenMercadonaPage() {
                     index % 2 === 0 ? 'bg-neutral-50' : 'bg-white'
                   } border-b border-neutral-100`}
                 >
-                  <div className="font-medium text-neutral-900">
-                    {item.feature}
-                  </div>
-                  <div className="text-sm text-center text-primary-700 font-medium">
+                  <div className="font-medium text-neutral-900">{item.feature}</div>
+                  <div className="text-center text-sm font-medium text-primary-700">
                     {item.poppy}
                   </div>
-                  <div className="text-sm text-center text-neutral-600">
-                    {item.mercadona}
-                  </div>
+                  <div className="text-center text-sm text-neutral-600">{item.mercadona}</div>
                 </div>
               ))}
             </div>
 
-            <div className="text-center mt-8">
+            <div className="mt-8 text-center">
               <Link href="/tienda">
                 <Button variant="primary" size="lg">
                   Comprar Poppy ahora
@@ -188,35 +173,30 @@ export default function GranolaSinGlutenMercadonaPage() {
       {/* Mercadona Options Section */}
       <div className="section">
         <div className="container-custom max-w-3xl">
-          <h2 className="text-3xl font-display text-neutral-900 mb-4 text-center">
+          <h2 className="mb-4 text-center font-display text-3xl text-neutral-900">
             {mercadonaSection.title}
           </h2>
-          <p className="text-lg text-neutral-600 mb-8 text-center">
+          <p className="mb-8 text-center text-lg text-neutral-600">
             {mercadonaSection.description}
           </p>
 
           <div className="space-y-4">
             {mercadonaSection.options.map((option, index) => (
-              <div
-                key={index}
-                className="bg-white border border-neutral-200 rounded-lg p-6"
-              >
+              <div key={index} className="rounded-lg border border-neutral-200 bg-white p-6">
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <h3 className="font-semibold text-neutral-900 mb-2">
-                      {option.name}
-                    </h3>
+                    <h3 className="mb-2 font-semibold text-neutral-900">{option.name}</h3>
                     <p className="text-sm text-neutral-600">{option.note}</p>
                   </div>
                   <div className="flex-shrink-0">
                     {option.glutenFree === 'Sí' ? (
-                      <span className="inline-flex items-center gap-1 px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm">
-                        <Check className="w-4 h-4" />
+                      <span className="inline-flex items-center gap-1 rounded-full bg-green-100 px-3 py-1 text-sm text-green-700">
+                        <Check className="h-4 w-4" />
                         Sin gluten
                       </span>
                     ) : (
-                      <span className="inline-flex items-center gap-1 px-3 py-1 bg-yellow-100 text-yellow-700 rounded-full text-sm">
-                        <X className="w-4 h-4" />
+                      <span className="inline-flex items-center gap-1 rounded-full bg-yellow-100 px-3 py-1 text-sm text-yellow-700">
+                        <X className="h-4 w-4" />
                         Verificar
                       </span>
                     )}
@@ -226,12 +206,11 @@ export default function GranolaSinGlutenMercadonaPage() {
             ))}
           </div>
 
-          <div className="mt-8 p-6 bg-primary-50 border border-primary-100 rounded-lg">
+          <div className="mt-8 rounded-lg border border-primary-100 bg-primary-50 p-6">
             <p className="text-neutral-900">
-              <strong>💡 Consejo:</strong> Si compras en Mercadona, verifica
-              siempre la etiqueta. La disponibilidad de productos sin gluten
-              varía según la tienda. Con Poppy, sabes que todos los sabores son
-              siempre aptos para celíacos.
+              <strong>💡 Consejo:</strong> Si compras en Mercadona, verifica siempre la etiqueta. La
+              disponibilidad de productos sin gluten varía según la tienda. Con Poppy, sabes que
+              todos los sabores son siempre aptos para celíacos.
             </p>
           </div>
         </div>

@@ -20,9 +20,7 @@ export function Collapsible({
   className,
 }: CollapsibleProps) {
   const [isOpen, setIsOpen] = useState(defaultOpen);
-  const [height, setHeight] = useState<number | undefined>(
-    defaultOpen ? undefined : 0
-  );
+  const [height, setHeight] = useState<number | undefined>(defaultOpen ? undefined : 0);
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -57,17 +55,10 @@ export function Collapsible({
         id={`${uniqueId}-trigger`}
       >
         <span className="flex items-center gap-3">
-          {icon && (
-            <span className="text-stone-400">{icon}</span>
-          )}
+          {icon && <span className="text-stone-400">{icon}</span>}
           <span>{title}</span>
         </span>
-        <ChevronDown
-          className={cn(
-            'collapsible-icon',
-            isOpen && 'collapsible-icon-open'
-          )}
-        />
+        <ChevronDown className={cn('collapsible-icon', isOpen && 'collapsible-icon-open')} />
       </button>
       <div
         id={`${uniqueId}-content`}

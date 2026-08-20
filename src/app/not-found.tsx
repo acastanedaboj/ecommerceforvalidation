@@ -3,28 +3,52 @@ import { Home, ShoppingBag } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <div className="min-h-[60vh] flex items-center justify-center px-4" style={{ paddingTop: '140px' }}>
+    <div
+      className="flex min-h-[60vh] items-center justify-center px-4"
+      style={{ paddingTop: '140px' }}
+    >
       <div className="text-center">
         {/* 404 illustration */}
         <div className="mb-8">
-          <span style={{ fontFamily: 'var(--font-display)', fontSize: '120px', color: 'rgba(105,79,72,.15)' }}>404</span>
+          <span
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '120px',
+              color: 'rgba(105,79,72,.15)',
+            }}
+          >
+            404
+          </span>
         </div>
 
-        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: 'clamp(24px, 3vw, 36px)', marginBottom: '16px' }}>
+        <h1
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 'clamp(24px, 3vw, 36px)',
+            marginBottom: '16px',
+          }}
+        >
           ¡Ups! Página no encontrada
         </h1>
 
-        <p style={{ fontSize: '14px', color: 'rgba(17,17,17,.5)', fontWeight: 300, marginBottom: '32px', maxWidth: '400px', margin: '0 auto 32px', lineHeight: 1.85 }}>
-          Parece que esta página se ha perdido entre los copos de avena.
-          No te preocupes, te ayudamos a encontrar lo que buscas.
+        <p
+          style={{
+            fontSize: '14px',
+            color: 'rgba(17,17,17,.5)',
+            fontWeight: 300,
+            marginBottom: '32px',
+            maxWidth: '400px',
+            margin: '0 auto 32px',
+            lineHeight: 1.85,
+          }}
+        >
+          Parece que esta página se ha perdido entre los copos de avena. No te preocupes, te
+          ayudamos a encontrar lo que buscas.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Link
-            href="/"
-            className="btn-pill inline-flex items-center justify-center"
-          >
-            <Home className="w-4 h-4 mr-2" />
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
+          <Link href="/" className="btn-pill inline-flex items-center justify-center">
+            <Home className="mr-2 h-4 w-4" />
             Volver al inicio
           </Link>
 
@@ -33,7 +57,7 @@ export default function NotFound() {
             className="btn-pill inline-flex items-center justify-center"
             style={{ borderColor: 'rgba(0,0,0,.15)' }}
           >
-            <ShoppingBag className="w-4 h-4 mr-2" />
+            <ShoppingBag className="mr-2 h-4 w-4" />
             Ver productos
           </Link>
         </div>

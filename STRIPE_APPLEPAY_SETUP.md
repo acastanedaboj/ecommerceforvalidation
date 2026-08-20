@@ -30,6 +30,7 @@ Si usas Vercel (recomendado), sigue estos pasos:
 #### Opción A: Usando la carpeta `public/`
 
 1. Crea la estructura de carpetas:
+
    ```bash
    mkdir -p public/.well-known
    ```
@@ -89,11 +90,13 @@ Tu Stripe Checkout ahora soporta automáticamente:
 ## Comprobaciones
 
 ### ✅ Código actualizado
+
 - [x] API de Checkout configurada con `payment_method_types: ['card']`
 - [x] `payment_method_options` con 3D Secure automático
 - [x] Metadata de cupones integrada
 
 ### ⚠️ Pendiente en Stripe Dashboard
+
 - [ ] Verificar dominio `poppy.es` en Stripe
 - [ ] Subir archivo de verificación de Apple Pay
 - [ ] Habilitar Apple Pay en configuración de métodos de pago

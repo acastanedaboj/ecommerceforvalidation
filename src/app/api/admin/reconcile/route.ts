@@ -48,7 +48,10 @@ export async function POST(request: NextRequest) {
   }
 
   if (!stripeSession.customer_email) {
-    return NextResponse.json({ error: 'El pedido de Stripe no tiene email de cliente' }, { status: 400 });
+    return NextResponse.json(
+      { error: 'El pedido de Stripe no tiene email de cliente' },
+      { status: 400 }
+    );
   }
 
   // Get line items
@@ -76,7 +79,8 @@ export async function POST(request: NextRequest) {
       customerEmail: stripeSession.customer_email,
       customerName: stripeSession.customer_details?.name || null,
       customerPhone: stripeSession.customer_details?.phone || null,
-      shippingName: stripeSession.shipping_details?.name || stripeSession.customer_details?.name || null,
+      shippingName:
+        stripeSession.shipping_details?.name || stripeSession.customer_details?.name || null,
       shippingLine1: stripeSession.shipping_details?.address?.line1 || null,
       shippingLine2: stripeSession.shipping_details?.address?.line2 || null,
       shippingCity: stripeSession.shipping_details?.address?.city || null,

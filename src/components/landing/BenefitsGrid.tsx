@@ -13,12 +13,7 @@ interface BenefitsGridProps {
   columns?: 2 | 3 | 4;
 }
 
-export function BenefitsGrid({
-  title,
-  subtitle,
-  benefits,
-  columns = 4,
-}: BenefitsGridProps) {
+export function BenefitsGrid({ title, subtitle, benefits, columns = 4 }: BenefitsGridProps) {
   const gridCols = {
     2: 'md:grid-cols-2',
     3: 'md:grid-cols-3',
@@ -29,36 +24,58 @@ export function BenefitsGrid({
     <section style={{ padding: '80px 0', background: 'var(--off)' }}>
       <div className="container-custom">
         {(title || subtitle) && (
-          <div className="text-center mb-16">
+          <div className="mb-16 text-center">
             {subtitle && (
-              <p style={{ fontSize: '11px', letterSpacing: '0.08em', textTransform: 'uppercase', color: 'rgba(17,17,17,.35)', marginBottom: '16px' }}>
+              <p
+                style={{
+                  fontSize: '11px',
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(17,17,17,.35)',
+                  marginBottom: '16px',
+                }}
+              >
                 {subtitle}
               </p>
             )}
-            {title && (
-              <h2 style={{ fontFamily: 'var(--font-display)' }}>{title}</h2>
-            )}
+            {title && <h2 style={{ fontFamily: 'var(--font-display)' }}>{title}</h2>}
           </div>
         )}
 
-        <div className={`grid ${gridCols[columns]} gap-px`} style={{ background: 'rgba(0,0,0,.06)' }}>
+        <div
+          className={`grid ${gridCols[columns]} gap-px`}
+          style={{ background: 'rgba(0,0,0,.06)' }}
+        >
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
               <div
                 key={index}
-                className="p-10 text-center group transition-colors"
+                className="group p-10 text-center transition-colors"
                 style={{ background: 'var(--off)' }}
               >
                 <Icon
-                  className="w-8 h-8 mx-auto mb-6"
+                  className="mx-auto mb-6 h-8 w-8"
                   style={{ color: 'var(--brown)' }}
                   strokeWidth={1}
                 />
-                <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '18px', marginBottom: '12px' }}>
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '18px',
+                    marginBottom: '12px',
+                  }}
+                >
                   {benefit.title}
                 </h3>
-                <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300, lineHeight: 1.7 }}>
+                <p
+                  style={{
+                    fontSize: '13px',
+                    color: 'rgba(17,17,17,.5)',
+                    fontWeight: 300,
+                    lineHeight: 1.7,
+                  }}
+                >
                   {benefit.description}
                 </p>
               </div>

@@ -4,7 +4,7 @@ export interface SendcloudParcelItem {
   description: string;
   quantity: number;
   weight: string; // kg, e.g. "0.250"
-  value: string;  // EUR, e.g. "9.00"
+  value: string; // EUR, e.g. "9.00"
   hs_code?: string;
   origin_country?: string;
 }
@@ -45,12 +45,12 @@ export interface SendcloudWebhookPayload {
 
 // Sendcloud parcel status IDs relevant for order tracking
 export const SENDCLOUD_STATUS = {
-  ANNOUNCED: 11,      // Label created, waiting for pickup
-  IN_TRANSIT: 12,     // En route to sorting center
-  AT_SORTING: 13,     // At sorting center
-  DELIVERED: 14,      // Delivered
-  RETURNED: 15,       // Returned to sender
-  CANCELLED: 92,      // Cancelled
+  ANNOUNCED: 11, // Label created, waiting for pickup
+  IN_TRANSIT: 12, // En route to sorting center
+  AT_SORTING: 13, // At sorting center
+  DELIVERED: 14, // Delivered
+  RETURNED: 15, // Returned to sender
+  CANCELLED: 92, // Cancelled
 } as const;
 
 function getAuthHeader(): string {

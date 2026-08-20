@@ -30,12 +30,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'Googlebot',
         allow: '/',
-        disallow: [
-          '/api/',
-          '/checkout/',
-          '/cuenta/',
-          '/auth/',
-        ],
+        disallow: ['/api/', '/checkout/', '/cuenta/', '/auth/'],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

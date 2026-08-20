@@ -64,10 +64,7 @@ export function buildOrganizationSchema(): SchemaOrganization {
       postalCode: BUSINESS.address.postalCode,
       addressCountry: 'ES',
     },
-    sameAs: [
-      BUSINESS.socialMedia.instagram,
-      BUSINESS.socialMedia.facebook,
-    ],
+    sameAs: [BUSINESS.socialMedia.instagram, BUSINESS.socialMedia.facebook],
   };
 }
 
@@ -189,13 +186,11 @@ export function buildProductSchema(product: Product, url: string) {
       url: fullUrl,
       priceCurrency: 'EUR',
       price: (product.priceInCents / 100).toFixed(2),
-      priceValidUntil: new Date(
-        new Date().setFullYear(new Date().getFullYear() + 1)
-      ).toISOString().split('T')[0],
+      priceValidUntil: new Date(new Date().setFullYear(new Date().getFullYear() + 1))
+        .toISOString()
+        .split('T')[0],
       availability:
-        product.stock > 0
-          ? 'https://schema.org/InStock'
-          : 'https://schema.org/OutOfStock',
+        product.stock > 0 ? 'https://schema.org/InStock' : 'https://schema.org/OutOfStock',
       itemCondition: 'https://schema.org/NewCondition',
       seller: {
         '@type': 'Organization',
@@ -359,10 +354,7 @@ export function buildLocalBusinessSchema() {
     alternateName: BRAND_NAME,
     description:
       'Compra granola artesanal sin gluten online. Obrador en Málaga. Elaboramos con avena integral sin gluten, miel de apicultores locales y frutos secos premium. Envío gratis +4 uds a toda España.',
-    image: [
-      `${SITE_URL}/images/hero-granola.jpeg`,
-      `${SITE_URL}/logo.svg`,
-    ],
+    image: [`${SITE_URL}/images/hero-granola.jpeg`, `${SITE_URL}/logo.svg`],
     url: SITE_URL,
     email: BUSINESS.email,
     address: {
