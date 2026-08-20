@@ -355,41 +355,23 @@ export default function ProductDetailPage() {
                   >
                     Tienda temporalmente cerrada
                   </div>
-                ) : (
-                  <button
-                    type="button"
-                    onClick={handleAddToCart}
-                    disabled={product.stock === 0 || isAdding}
-                    className="w-full flex items-center justify-center gap-2 transition-all hover:opacity-90 disabled:opacity-50 disabled:cursor-not-allowed"
-                    style={{
-                      background: 'var(--dark)',
-                      color: 'var(--cream)',
-                      padding: '16px 32px',
-                      fontSize: '13px',
-                      fontWeight: 700,
-                      letterSpacing: '0.04em',
-                      textTransform: 'lowercase' as const,
-                      border: 'none',
-                      cursor: 'pointer',
-                    }}
-                  >
-                    {isAdding ? (
-                      <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                    ) : (
-                      <ShoppingBag className="w-5 h-5" />
-                    )}
-                    {isSubscription ? 'suscribirme ahora' : 'añadir al carrito'}
-                  </button>
-                )}
-
-                {/* Shipping line — subtle text, not badge icons */}
-                <p className="mt-4 text-center" style={{ fontSize: '11px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
-                  {isFreeShipping ? (
-                    <>Envío gratis incluido &nbsp;·&nbsp; Entrega gratis en Málaga centro</>
+                </div>
+                <button
+                  type="button"
+                  onClick={handleAddToCart}
+                  disabled={product.stock === 0 || isAdding || STORE_CLOSED}
+                  className={cn(
+                    'btn w-full justify-center bg-earth-500 hover:bg-earth-600 text-[#ffffec] text-base py-4',
+                    'disabled:opacity-50 disabled:cursor-not-allowed'
+                  )}
+                >
+                  {isAdding ? (
+                    <span className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin mr-2" />
                   ) : (
                     <>Envío 4-6 días &nbsp;·&nbsp; Gratis desde 4 uds &nbsp;·&nbsp; Entrega gratis en Málaga</>
                   )}
-                </p>
+                  {STORE_CLOSED ? 'Tienda cerrada temporalmente' : isSubscription ? 'Suscribirme ahora' : 'Anadir al carrito'}
+                </button>
               </div>
             </div>
           </div>

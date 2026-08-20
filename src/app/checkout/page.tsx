@@ -198,6 +198,23 @@ export default function CheckoutPage() {
     toast.success('Cupón eliminado');
   };
 
+  // Block checkout when store is closed
+  if (STORE_CLOSED) {
+    return (
+      <div className="section">
+        <div className="container-custom text-center">
+          <h1 className="text-2xl mb-4">Tienda cerrada temporalmente</h1>
+          <p className="text-neutral-600 mb-6">
+            Estamos de vacaciones. Gestionaremos pedidos a partir del 8 de septiembre.
+          </p>
+          <Link href="/tienda" className="btn-primary">
+            Volver a la tienda
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
   // Redirect if cart is empty
   if (items.length === 0) {
     return (
