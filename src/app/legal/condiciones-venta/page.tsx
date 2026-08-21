@@ -3,7 +3,7 @@ import { BUSINESS, SHIPPING, PRICING } from '@/lib/constants';
 import { getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Condiciones de Venta',
+  title: 'Condiciones de venta',
   description: 'Condiciones generales de venta de Poppy.',
   alternates: {
     canonical: getCanonicalUrl('/legal/condiciones-venta'),
@@ -12,14 +12,16 @@ export const metadata: Metadata = {
 
 export default function CondicionesVentaPage() {
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom max-w-3xl">
-        <h1 className="mb-8 font-display text-4xl text-neutral-900">
+        <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '32px' }}>
           Condiciones Generales de Venta
         </h1>
 
         <div className="prose-custom">
-          <p className="mb-6 text-neutral-600">Última actualización: Febrero 2026</p>
+          <p style={{ color: 'rgba(17,17,17,.4)', fontSize: '13px', marginBottom: '24px' }}>
+            Última actualización: Febrero 2026
+          </p>
 
           <p>
             Las presentes Condiciones Generales de Venta regulan la relación contractual entre el
@@ -38,7 +40,7 @@ export default function CondicionesVentaPage() {
             <br />
             <strong>Forma jurídica:</strong> Empresario Individual / Autónomo
             <br />
-            <strong>NIF:</strong> [Pendiente de inscripción]
+            <strong>NIF:</strong> Disponible previa solicitud a {BUSINESS.email}
             <br />
             <strong>Domicilio social:</strong> {BUSINESS.address.street},{' '}
             {BUSINESS.address.postalCode} {BUSINESS.address.city}, {BUSINESS.address.country}
@@ -106,9 +108,6 @@ export default function CondicionesVentaPage() {
           <ul>
             <li>
               <strong>Tarjeta de crédito/débito:</strong> Visa, Mastercard, American Express
-            </li>
-            <li>
-              <strong>Pago contra reembolso:</strong> Con un coste adicional de 2,00€
             </li>
           </ul>
           <p>
@@ -204,7 +203,7 @@ export default function CondicionesVentaPage() {
           </p>
 
           <h3>8.4 Modelo de formulario de desistimiento</h3>
-          <div className="rounded-lg bg-neutral-50 p-4 text-sm">
+          <div className="p-4 text-sm" style={{ background: 'var(--off)' }}>
             <p className="mb-2 font-medium">A la atención de {BUSINESS.name}:</p>
             <p className="mb-2">
               Por la presente le comunico que desisto de mi contrato de venta del siguiente bien:

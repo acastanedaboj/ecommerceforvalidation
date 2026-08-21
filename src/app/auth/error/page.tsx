@@ -40,15 +40,22 @@ function ErrorContent() {
   };
 
   return (
-    <div className="flex min-h-[60vh] items-center justify-center px-4 py-12">
+    <div
+      className="flex min-h-[60vh] items-center justify-center px-4"
+      style={{ paddingTop: '140px', paddingBottom: '48px' }}
+    >
       <div className="w-full max-w-md text-center">
         {/* Error icon */}
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-red-100">
+        <div
+          className="mx-auto mb-6 flex h-16 w-16 items-center justify-center"
+          style={{ background: 'rgba(239,68,68,.1)', borderRadius: '100px' }}
+        >
           <svg
-            className="h-8 w-8 text-red-600"
+            className="h-8 w-8"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
+            style={{ color: '#dc2626' }}
           >
             <path
               strokeLinecap="round"
@@ -59,17 +66,26 @@ function ErrorContent() {
           </svg>
         </div>
 
-        <h1 className="mb-4 font-display text-2xl font-medium text-stone-800">
+        <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '16px' }}>
           Error de autenticacion
         </h1>
 
-        <p className="mb-8 text-stone-600">{getErrorMessage(error)}</p>
+        <p
+          style={{
+            fontSize: '14px',
+            color: 'rgba(17,17,17,.5)',
+            fontWeight: 300,
+            marginBottom: '32px',
+          }}
+        >
+          {getErrorMessage(error)}
+        </p>
 
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
-          <Link href="/auth/login" className="btn-primary">
+          <Link href="/auth/login" className="btn-pill">
             Volver a intentar
           </Link>
-          <Link href="/" className="btn-outline">
+          <Link href="/" className="btn-pill" style={{ borderColor: 'rgba(0,0,0,.15)' }}>
             Ir al inicio
           </Link>
         </div>

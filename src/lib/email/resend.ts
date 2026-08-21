@@ -6,7 +6,6 @@
 
 import { Resend } from 'resend';
 
-// Lazy-initialize Resend client (avoids build-time errors when env var is missing)
 let _resend: Resend | null = null;
 function getResend() {
   if (!_resend) {
@@ -33,7 +32,7 @@ export type EmailType =
   | 'subscription_cancelled';
 
 export interface SendEmailOptions {
-  to: string;
+  to: string | string[];
   subject: string;
   html: string;
   text?: string;
@@ -46,10 +45,13 @@ export interface SendEmailOptions {
 export async function sendEmail(options: SendEmailOptions) {
   const { to, subject, html, text, tags } = options;
 
+  // Allow overriding recipient for testing (set EMAIL_TEST_OVERRIDE in env)
+  const recipient = process.env.EMAIL_TEST_OVERRIDE || to;
+
   try {
     const { data, error } = await getResend().emails.send({
       from: EMAIL_CONFIG.from,
-      to,
+      to: recipient,
       subject,
       html,
       text,

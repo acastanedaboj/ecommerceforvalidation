@@ -13,29 +13,28 @@ import { veganaContent } from '@/data/landing-content';
 import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Granola Vegana 100% Sin Miel | Poppy',
+  title: 'Granola vegana 100% sin miel | Poppy',
   description:
-    'Granola vegana endulzada con dátiles Medjool y sirope de agave. Sin miel ni productos animales. Artesanal, ecológica y sin gluten. Envío gratis +4 uds.',
+    'Granola vegana endulzada con sirope de agave ecológico. Sin miel ni productos animales. Artesanal y sin gluten. Envío gratis +4 uds.',
   keywords: [
     'granola vegana',
     'granola sin miel',
     'granola plant-based',
     'granola 100% vegetal',
-    'granola datiles',
     'granola sirope agave',
   ],
   alternates: {
     canonical: getCanonicalUrl('/granola-vegana'),
   },
   openGraph: {
-    title: 'Granola Vegana 100% Sin Miel | Poppy',
+    title: 'Granola vegana 100% sin miel | Poppy',
     description:
-      'Granola vegana endulzada con dátiles Medjool y sirope de agave. Sin miel ni productos animales.',
+      'Granola vegana endulzada con sirope de agave ecológico. Sin miel ni productos animales.',
     url: `${SITE_URL}/granola-vegana`,
     type: 'website',
     images: [
       {
-        url: `${SITE_URL}/products/granola-datiles.jpg`,
+        url: `${SITE_URL}/images/vegana.png`,
         width: 1200,
         height: 630,
         alt: 'Granola Vegana Poppy',
@@ -124,7 +123,13 @@ export default function GranolaVeganaPage() {
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="mb-4 font-display text-2xl text-stone-800">{comparison.title}</h2>
-            <p className="mb-8 text-stone-600">{comparison.description}</p>
+            <p className="mb-8 text-stone-600">
+              {comparison.description} Todos los sabores son{' '}
+              <Link href="/granola-sin-gluten" className="text-earth-600 hover:underline">
+                100% sin gluten
+              </Link>
+              .
+            </p>
 
             <div className="rounded-lg bg-white p-6 shadow-sm">
               <table className="w-full text-left">
@@ -137,9 +142,9 @@ export default function GranolaVeganaPage() {
                 </thead>
                 <tbody className="text-stone-600">
                   <tr className="border-b border-stone-100 bg-olive-50">
-                    <td className="py-3 font-medium text-stone-800">Granola de Dátiles</td>
+                    <td className="py-3 font-medium text-stone-800">Granola Vegana</td>
                     <td className="py-3 text-center font-semibold text-olive-600">Sí ✓</td>
-                    <td className="py-3 text-center">Dátiles + Sirope de agave</td>
+                    <td className="py-3 text-center">Sirope de agave ecológico</td>
                   </tr>
                   <tr className="border-b border-stone-100">
                     <td className="py-3">Granola Clásica</td>

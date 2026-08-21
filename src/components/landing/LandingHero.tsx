@@ -27,8 +27,8 @@ export function LandingHero({
   image,
 }: LandingHeroProps) {
   return (
-    <section className="relative overflow-hidden bg-white">
-      <div className="container-custom pb-16 pt-10 md:pb-24 md:pt-14 lg:pb-28 lg:pt-16">
+    <section className="relative overflow-hidden" style={{ background: 'var(--white)' }}>
+      <div className="container-custom" style={{ paddingTop: '160px', paddingBottom: '64px' }}>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
           {/* Content */}
           <div className="mx-auto max-w-xl text-center lg:mx-0 lg:text-left">
@@ -37,7 +37,15 @@ export function LandingHero({
                 {badges.map((badge, index) => (
                   <span
                     key={index}
-                    className="inline-block rounded-full bg-earth-100 px-3 py-1 text-xs uppercase tracking-widest text-earth-600"
+                    style={{
+                      fontSize: '11px',
+                      letterSpacing: '0.08em',
+                      textTransform: 'uppercase',
+                      color: 'var(--brown)',
+                      background: 'var(--off)',
+                      padding: '4px 12px',
+                      borderRadius: '100px',
+                    }}
                   >
                     {badge}
                   </span>
@@ -45,25 +53,39 @@ export function LandingHero({
               </div>
             )}
 
-            <h1 className="mb-6 font-display text-stone-800">
+            <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '24px' }}>
               {title}
               {highlight && (
                 <>
                   <br />
-                  <span className="text-earth-600">{highlight}</span>
+                  <span style={{ color: 'var(--brown)' }}>{highlight}</span>
                 </>
               )}
             </h1>
 
-            <p className="mb-10 text-base leading-relaxed text-stone-600 md:text-lg">{subtitle}</p>
+            <p
+              style={{
+                fontSize: '14px',
+                color: 'rgba(17,17,17,.5)',
+                fontWeight: 300,
+                lineHeight: 1.85,
+                marginBottom: '40px',
+              }}
+            >
+              {subtitle}
+            </p>
 
             <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start">
-              <Link href={ctaHref} className="btn-primary btn-lg group">
+              <Link href={ctaHref} className="btn-pill group">
                 {ctaText}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
               {secondaryCta && (
-                <Link href={secondaryCta.href} className="btn-outline btn-lg">
+                <Link
+                  href={secondaryCta.href}
+                  className="btn-pill"
+                  style={{ borderColor: 'rgba(0,0,0,.15)' }}
+                >
                   {secondaryCta.text}
                 </Link>
               )}
@@ -74,7 +96,7 @@ export function LandingHero({
           {image && (
             <div className="relative">
               <div className="relative mx-auto aspect-[4/5] max-w-lg">
-                <div className="relative h-full w-full overflow-hidden rounded-lg">
+                <div className="relative h-full w-full overflow-hidden">
                   <Image
                     src={image}
                     alt={title}

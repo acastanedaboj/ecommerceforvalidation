@@ -14,7 +14,7 @@ import { Button } from '@/components/ui/Button';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Cómo Hacer Granola Sin Gluten Casera: Receta Paso a Paso 2026',
+  title: 'Cómo hacer granola sin gluten casera: receta paso a paso 2026',
   description:
     'Receta completa de granola sin gluten casera apta para celíacos. Paso a paso con ingredientes, tiempos y consejos de experto. Fácil, económica y deliciosa.',
   keywords: [
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/como-hacer-granola-sin-gluten'),
   },
   openGraph: {
-    title: 'Receta: Cómo Hacer Granola Sin Gluten en Casa',
+    title: 'Receta: cómo hacer granola sin gluten en casa',
     description:
       'Aprende a hacer granola sin gluten casera con esta receta detallada. Perfecta para celíacos, económica y fácil de personalizar.',
     url: `${SITE_URL}/como-hacer-granola-sin-gluten`,
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/images/hero-sin-gluten.jpeg`,
         width: 1200,
         height: 630,
-        alt: 'Receta Granola Sin Gluten Casera',
+        alt: 'Receta granola sin gluten casera',
       },
     ],
   },
@@ -63,7 +63,7 @@ function buildRecipeSchema() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Recipe',
-    name: 'Granola Sin Gluten Casera',
+    name: 'Granola sin gluten casera',
     description:
       'Receta fácil de granola sin gluten casera, apta para celíacos. Crujiente, deliciosa y personalizable.',
     image: [`${SITE_URL}/images/hero-sin-gluten.jpeg`],
@@ -81,16 +81,17 @@ function buildRecipeSchema() {
     recipeCategory: 'Desayuno',
     recipeCuisine: 'Internacional',
     recipeIngredient: [
-      '250g de copos de avena certificada sin gluten',
-      '85g de pipas de girasol',
-      '40g de pipas de calabaza',
-      '40ml de miel ecológica (o sirope de agave para versión vegana)',
-      '30g de almendras',
-      '25g de anacardos',
-      '20ml de aceite de coco virgen extra',
-      '10g de avellanas',
-      '6g de lino molido',
-      '1g de especias (canela y jengibre)',
+      '170g de copos de avena integral sin gluten',
+      '75g de semillas de girasol',
+      '50g de almendras',
+      '50g de anacardos',
+      '40g de semillas de calabaza',
+      '40g de miel (o sirope de agave para versión vegana)',
+      '30ml de aceite de coco',
+      '30g de avellanas',
+      '10g de lino molido',
+      '9g de canela molida',
+      '1,5g de jengibre en polvo',
     ],
     recipeInstructions: instructions.steps.map((step, index) => ({
       '@type': 'HowToStep',
@@ -100,13 +101,6 @@ function buildRecipeSchema() {
       url: `${SITE_URL}/como-hacer-granola-sin-gluten#paso-${step.number}`,
       image: `${SITE_URL}/images/hero-sin-gluten.jpeg`,
     })),
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      ratingCount: '127',
-      bestRating: '5',
-      worstRating: '1',
-    },
     nutrition: {
       '@type': 'NutritionInformation',
       servingSize: '50g',
@@ -144,7 +138,7 @@ export default function ComoHacerGranolaSinGlutenPage() {
 
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Inicio', url: SITE_URL },
-    { name: 'Granola Sin Gluten', url: `${SITE_URL}/granola-sin-gluten` },
+    { name: 'Granola sin gluten', url: `${SITE_URL}/granola-sin-gluten` },
     {
       name: 'Receta Casera',
       url: `${SITE_URL}/como-hacer-granola-sin-gluten`,
@@ -388,7 +382,7 @@ export default function ComoHacerGranolaSinGlutenPage() {
       <div className="bg-neutral-50">
         <ProductsShowcase
           title="O prueba nuestras granolas artesanales"
-          subtitle="4 sabores únicos, todos sin gluten"
+          subtitle="3 sabores únicos, todos sin gluten"
           description="Si prefieres la conveniencia, nuestras granolas están listas para disfrutar. Ingredientes premium, proceso artesanal perfeccionado."
           products={products}
         />

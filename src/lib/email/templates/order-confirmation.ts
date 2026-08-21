@@ -49,7 +49,7 @@ export function orderConfirmationEmail(data: OrderConfirmationData): {
     discountCents = 0,
     totalCents,
     shippingAddress,
-    estimatedDelivery = '3-5 días laborables',
+    estimatedDelivery = '4-6 días laborables',
   } = data;
 
   const firstName = customerName?.split(' ')[0] || 'Cliente';
@@ -89,8 +89,12 @@ export function orderConfirmationEmail(data: OrderConfirmationData): {
           <td style="text-align: right;">${formatDate(orderDate)}</td>
         </tr>
         <tr>
-          <td><strong>Llegada estimada:</strong></td>
-          <td style="text-align: right;"><strong style="color: #6D4D45;">${estimatedDelivery}</strong></td>
+          <td style="padding-top: 12px; color: #6B7280;">Preparación en obrador</td>
+          <td style="padding-top: 12px; text-align: right;"><strong style="color: #6D4D45;">4–6 días laborables</strong></td>
+        </tr>
+        <tr>
+          <td style="padding-top: 4px; color: #6B7280;">Entrega a domicilio</td>
+          <td style="padding-top: 4px; text-align: right;"><strong style="color: #6D4D45;">2–3 días adicionales</strong></td>
         </tr>
       </table>
     </div>
@@ -142,11 +146,12 @@ export function orderConfirmationEmail(data: OrderConfirmationData): {
 
     <hr class="divider">
 
-    <div class="card" style="background-color: #E1EDF5;">
-      <p style="margin: 0; color: #3B6280;">
-        <strong>Mientras esperas...</strong> ¿Sabías que nuestra granola se conserva perfectamente
-        durante 3 meses? Guárdala en un lugar fresco y seco, y cada mañana será como abrir
-        un paquete nuevo.
+    <div class="card" style="background-color: #F3F7F0; border-left: 3px solid #7D9160;">
+      <p style="margin: 0 0 8px; color: #4A6741;"><strong>Packaging sostenible 🌿</strong></p>
+      <p style="margin: 0; color: #4A6741; font-size: 14px;">
+        Tu pedido llega en un embalaje sostenible y ecológico. Para conservar la granola en
+        perfectas condiciones, te recomendamos pasarla a un recipiente de cristal cerrado
+        y guardarla en la despensa. Así se mantiene crujiente y fresca durante meses.
       </p>
     </div>
 

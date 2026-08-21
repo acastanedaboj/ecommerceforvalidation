@@ -38,7 +38,7 @@ export function UserMenu() {
     return (
       <Link
         href="/auth/login"
-        className="rounded-full p-3 text-stone-500 transition-all hover:bg-cream-200/50 hover:text-stone-800"
+        className="p-3 transition-opacity hover:opacity-55"
         aria-label="Iniciar sesion"
       >
         <User className="h-5 w-5" strokeWidth={1.5} />

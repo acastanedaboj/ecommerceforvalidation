@@ -6,7 +6,7 @@ import { Header } from '@/components/layout/Header';
 // Font optimization - self-hosted, no render-blocking
 const dmSans = DM_Sans({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  weight: ['300', '400', '700'],
   style: ['normal', 'italic'],
   variable: '--font-sans',
   display: 'swap',
@@ -37,11 +37,11 @@ import {
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${BRAND_NAME} - Granola Sin Gluten Premium, Ecológica y Artesanal`,
+    default: `${BRAND_NAME} - Granola sin gluten premium y Artesanal`,
     template: `%s | ${BRAND_NAME}`,
   },
   description:
-    'Granola artesanal sin gluten elaborada con avena certificada (≤20ppm), miel ecológica y frutos secos premium. Opción vegana disponible. Envío gratis desde 4 unidades. Compra online en España.',
+    'Granola artesanal sin gluten y sin lactosa elaborada con avena integral (≤20ppm), miel y frutos secos premium. Opción vegana disponible. Envío gratis desde 4 unidades. Compra online en España.',
   keywords: [
     'comprar granola artesanal online',
     'granola sin gluten comprar',
@@ -58,6 +58,8 @@ export const metadata: Metadata = {
     'granola artesanal',
     'granola artesanal Málaga',
     'granola sin azúcar añadido',
+    'granola miel',
+    'granola dátiles',
     'poppy granola',
     'suscripción granola mensual',
   ],
@@ -77,23 +79,23 @@ export const metadata: Metadata = {
     locale: 'es_ES',
     url: SITE_URL,
     siteName: BRAND_NAME,
-    title: `${BRAND_NAME} - Granola Sin Gluten Premium`,
+    title: `${BRAND_NAME} - Granola sin gluten premium`,
     description:
-      'Granola artesanal sin gluten con avena certificada, miel ecológica y frutos secos premium. Opción vegana disponible. Envío gratis +4 unidades.',
+      'Granola artesanal sin gluten con avena integral, miel y frutos secos premium. Opción vegana disponible. Envío gratis +4 unidades.',
     images: [
       {
         url: `${SITE_URL}/images/og-image.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Poppy - Granola sin gluten premium, ecológica y artesanal',
+        alt: 'Poppy - Granola sin gluten premium y artesanal',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: `${BRAND_NAME} - Granola Sin Gluten Premium`,
+    title: `${BRAND_NAME} - Granola sin gluten premium`,
     description:
-      'Granola artesanal sin gluten con avena certificada y miel ecológica. Opción vegana. Envío gratis +4 unidades.',
+      'Granola artesanal sin gluten con avena integral y miel. Opción vegana. Envío gratis +4 unidades.',
     images: [`${SITE_URL}/images/og-image.jpg`],
     creator: SEO.twitterHandle,
     site: SEO.twitterHandle,
@@ -110,7 +112,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: 'GbX2brF7bgtG_rR_nC4LDj4PMRQIXA3H1E3mvD43D8I',
+    google: 'tm9yawmt3fW_Kr1nxpjZOK7oUIOUnkq1mK098opHsCU',
   },
   category: 'food',
 };
@@ -157,7 +159,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="flex min-h-screen flex-col font-sans antialiased">
+      <body
+        className="flex min-h-screen flex-col font-sans antialiased"
+        style={{ fontWeight: 300 }}
+      >
         <SessionProvider>
           {/* Skip to content link for accessibility */}
           <a
@@ -169,7 +174,7 @@ export default function RootLayout({
 
           <Header />
 
-          <main id="main-content" className="flex-grow">
+          <main id="main-content" className="flex-grow" style={{ paddingTop: 0 }}>
             {children}
           </main>
 

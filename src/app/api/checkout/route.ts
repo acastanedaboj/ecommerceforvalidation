@@ -15,6 +15,8 @@ interface CheckoutItem {
   packSize: number;
   isSubscription: boolean;
   priceInCents: number;
+  isBundle?: boolean;
+  flavors?: { productName: string; quantity: number }[];
 }
 
 interface CustomerInfo {
@@ -31,13 +33,15 @@ interface CustomerInfo {
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { items, customer, paymentMethod, couponCode, couponDiscountCents } = body as {
-      items: CheckoutItem[];
-      customer: CustomerInfo;
-      paymentMethod: 'card' | 'cash_on_delivery';
-      couponCode?: string;
-      couponDiscountCents?: number;
-    };
+    const { items, customer, paymentMethod, couponCode, couponDiscountCents, localDelivery } =
+      body as {
+        items: CheckoutItem[];
+        customer: CustomerInfo;
+        paymentMethod: 'card';
+        couponCode?: string;
+        couponDiscountCents?: number;
+        localDelivery?: boolean;
+      };
 
     // Validate items
     if (!items || items.length === 0) {
@@ -89,11 +93,27 @@ export async function POST(request: NextRequest) {
       // Apply coupon discount proportionally to each item
       const finalUnitPrice = Math.round(baseUnitPrice * (1 - couponDiscountRatio));
 
+      // Build flavor summary for bundle items
+      const flavorSummary =
+        item.isBundle && item.flavors && item.flavors.length > 0
+          ? item.flavors
+              .filter((f) => f.quantity > 0)
+              .map(
+                (f) =>
+                  `${f.quantity}x ${f.productName.replace(/^Granola de /i, '').replace(/^Granola /i, '')}`
+              )
+              .join(', ')
+          : null;
+
+      const displayName = flavorSummary
+        ? `${item.productName} — ${flavorSummary}`
+        : item.productName;
+
       return {
         price_data: {
           currency: 'eur',
           product_data: {
-            name: item.productName,
+            name: displayName,
             description: `${item.packSize > 1 ? `Pack ${item.packSize}` : '1 unidad'}${item.isSubscription ? ' - Suscripción mensual' : ''}${couponCode ? ` (Cupón: ${couponCode})` : ''}`,
             metadata: {
               productId: item.productId,
@@ -113,8 +133,8 @@ export async function POST(request: NextRequest) {
       };
     });
 
-    // Add shipping if not free
-    if (!cartTotal.isFreeShipping) {
+    // Add shipping if not free and not local delivery
+    if (!cartTotal.isFreeShipping && !localDelivery) {
       lineItems.push({
         price_data: {
           currency: 'eur',
@@ -130,15 +150,12 @@ export async function POST(request: NextRequest) {
 
     // Create Stripe checkout session
     const sessionParams: Stripe.Checkout.SessionCreateParams = {
-      // Enable card payments (includes Apple Pay, Google Pay automatically)
       payment_method_types: ['card'],
       mode: hasSubscription ? 'subscription' : 'payment',
       line_items: lineItems,
       customer_email: customer.email,
-      // Enable automatic payment methods (Apple Pay, Google Pay, Link)
       payment_method_options: {
         card: {
-          // Request 3D Secure when required
           request_three_d_secure: 'automatic',
         },
       },

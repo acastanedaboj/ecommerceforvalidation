@@ -26,16 +26,15 @@ export function welcomeEmail(data: WelcomeEmailData): { subject: string; html: s
     </p>
 
     <p>
-      Elaboramos cada lote de granola de forma artesanal, <strong>en Málaga</strong>, con ingredientes ecológicos
-      que seleccionamos personalmente: avena sin gluten certificada, miel de apicultores locales
+      Elaboramos cada lote de granola <strong>a mano en Málaga</strong>, con ingredientes ecológicos
+      que seleccionamos personalmente: avena integral sin gluten, miel de apicultores locales
       y frutos secos de primera calidad. Sin prisas, sin aditivos, solo lo bueno.
     </p>
 
     <div class="card" style="background-color: #FFFEF8;">
       <h2 style="margin-top: 0; color: #6D4D45;">Nuestras granolas, hechas para ti:</h2>
       <ul style="padding-left: 20px; margin: 0; line-height: 1.8;">
-        <li><strong>Clásica</strong> – La receta original con miel ecológica y un toque crujiente perfecto</li>
-        <li><strong>Chocolate</strong> – Cacao puro y pepitas de chocolate negro para los amantes del cacao</li>
+        <li><strong>Original</strong> – La receta original con miel ecológica y un toque crujiente perfecto</li>
         <li><strong>Naranja</strong> – Cítricos mediterráneos y jengibre que despiertan tus sentidos</li>
         <li><strong>Vegana</strong> – 100% vegana, endulzada con sirope de agave ecológico</li>
       </ul>
@@ -80,7 +79,7 @@ export function welcomeEmail(data: WelcomeEmailData): { subject: string; html: s
     </p>
 
     <p class="text-small" style="color: #A3A3A3;">
-      P.D. Síguenos en Instagram <a href="https://instagram.com/poppy.granola">@poppy.granola</a>
+      P.D. Síguenos en Instagram <a href="https://instagram.com/poppy_granola">@poppy_granola</a>
       para recetas, inspiración y algún que otro descuento sorpresa.
     </p>
   `;

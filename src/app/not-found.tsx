@@ -1,52 +1,83 @@
 import Link from 'next/link';
-import { Home, ShoppingBag, Search } from 'lucide-react';
+import { Home, ShoppingBag } from 'lucide-react';
 
 export default function NotFound() {
   return (
-    <div className="flex min-h-[60vh] items-center justify-center px-4">
+    <div
+      className="flex min-h-[60vh] items-center justify-center px-4"
+      style={{ paddingTop: '140px' }}
+    >
       <div className="text-center">
         {/* 404 illustration */}
         <div className="mb-8">
-          <span className="font-display text-9xl text-primary-200">404</span>
+          <span
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '120px',
+              color: 'rgba(105,79,72,.15)',
+            }}
+          >
+            404
+          </span>
         </div>
 
-        <h1 className="mb-4 font-display text-3xl text-neutral-900 md:text-4xl">
+        <h1
+          style={{
+            fontFamily: 'var(--font-display)',
+            fontSize: 'clamp(24px, 3vw, 36px)',
+            marginBottom: '16px',
+          }}
+        >
           ¡Ups! Página no encontrada
         </h1>
 
-        <p className="mx-auto mb-8 max-w-md text-neutral-600">
+        <p
+          style={{
+            fontSize: '14px',
+            color: 'rgba(17,17,17,.5)',
+            fontWeight: 300,
+            marginBottom: '32px',
+            maxWidth: '400px',
+            margin: '0 auto 32px',
+            lineHeight: 1.85,
+          }}
+        >
           Parece que esta página se ha perdido entre los copos de avena. No te preocupes, te
           ayudamos a encontrar lo que buscas.
         </p>
 
         <div className="flex flex-col justify-center gap-4 sm:flex-row">
-          <Link href="/" className="btn-primary inline-flex items-center justify-center">
+          <Link href="/" className="btn-pill inline-flex items-center justify-center">
             <Home className="mr-2 h-4 w-4" />
             Volver al inicio
           </Link>
 
-          <Link href="/tienda" className="btn-outline inline-flex items-center justify-center">
+          <Link
+            href="/tienda"
+            className="btn-pill inline-flex items-center justify-center"
+            style={{ borderColor: 'rgba(0,0,0,.15)' }}
+          >
             <ShoppingBag className="mr-2 h-4 w-4" />
             Ver productos
           </Link>
         </div>
 
         {/* Helpful links */}
-        <div className="mt-12 border-t border-neutral-200 pt-8">
-          <p className="mb-4 text-sm text-neutral-500">
+        <div className="mt-12 pt-8" style={{ borderTop: '1px solid rgba(0,0,0,.07)' }}>
+          <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.35)', marginBottom: '16px' }}>
             ¿Buscas algo específico? Prueba estos enlaces:
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-sm">
-            <Link href="/faq" className="text-primary-600 hover:underline">
+          <div className="flex flex-wrap justify-center gap-4" style={{ fontSize: '13px' }}>
+            <Link href="/faq" style={{ color: 'var(--brown)', textDecoration: 'none' }}>
               Preguntas frecuentes
             </Link>
-            <Link href="/contacto" className="text-primary-600 hover:underline">
+            <Link href="/contacto" style={{ color: 'var(--brown)', textDecoration: 'none' }}>
               Contacto
             </Link>
-            <Link href="/blog" className="text-primary-600 hover:underline">
-              Blog & Recetas
+            <Link href="/blog" style={{ color: 'var(--brown)', textDecoration: 'none' }}>
+              Blog & recetas
             </Link>
-            <Link href="/suscripcion" className="text-primary-600 hover:underline">
+            <Link href="/suscripcion" style={{ color: 'var(--brown)', textDecoration: 'none' }}>
               Suscripción
             </Link>
           </div>

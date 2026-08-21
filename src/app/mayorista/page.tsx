@@ -66,7 +66,7 @@ export default function MayoristaPage() {
 
   if (isSubmitted) {
     return (
-      <div className="section">
+      <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
         <div className="container-custom max-w-2xl text-center">
           <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-accent-100">
             <CheckCircle className="h-10 w-10 text-accent-600" />
@@ -85,7 +85,7 @@ export default function MayoristaPage() {
   }
 
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom">
         {/* Header */}
         <div className="mb-12 text-center">
@@ -161,7 +161,7 @@ export default function MayoristaPage() {
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-accent-600" />
-                    Miel ecológica y frutos secos premium
+                    Miel y frutos secos premium
                   </li>
                   <li className="flex items-center gap-2">
                     <CheckCircle className="h-4 w-4 text-accent-600" />

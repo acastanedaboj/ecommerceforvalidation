@@ -3,7 +3,7 @@ import { BUSINESS } from '@/lib/constants';
 import { getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Política de Cookies',
+  title: 'Política de cookies',
   description: 'Política de cookies de Poppy.',
   alternates: {
     canonical: getCanonicalUrl('/legal/cookies'),
@@ -12,12 +12,16 @@ export const metadata: Metadata = {
 
 export default function CookiesPage() {
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom max-w-3xl">
-        <h1 className="mb-8 font-display text-4xl text-neutral-900">Política de Cookies</h1>
+        <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '32px' }}>
+          Política de Cookies
+        </h1>
 
         <div className="prose-custom">
-          <p className="mb-6 text-neutral-600">Última actualización: Febrero 2026</p>
+          <p style={{ color: 'rgba(17,17,17,.4)', fontSize: '13px', marginBottom: '24px' }}>
+            Última actualización: Febrero 2026
+          </p>
 
           <p>
             En cumplimiento del artículo 22.2 de la Ley 34/2002, de 11 de julio, de Servicios de la

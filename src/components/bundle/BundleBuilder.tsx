@@ -169,13 +169,13 @@ export function BundleBuilder({
                   </div>
                   {/* Discount badge */}
                   {option.discountPercentage > 0 && (
-                    <span className="absolute -right-2 -top-2 rounded-full bg-olive-500 px-2 py-0.5 text-xs font-bold text-[#ffffec]">
+                    <span className="absolute -right-2 -top-2 rounded-full bg-olive-500 px-2 py-0.5 text-xs font-bold text-[#fcf8d5]">
                       -{Math.round(option.discountPercentage)}%
                     </span>
                   )}
                   {/* Free shipping badge */}
                   {option.freeShipping && (
-                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-earth-500 px-2 py-0.5 text-[10px] font-medium text-[#ffffec]">
+                    <span className="absolute -bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-earth-500 px-2 py-0.5 text-[10px] font-medium text-[#fcf8d5]">
                       Envío gratis
                     </span>
                   )}
@@ -211,7 +211,7 @@ export function BundleBuilder({
                 )}
               >
                 {/* Product image */}
-                <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-lg">
+                <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden">
                   <Image
                     src={flavor.productImage}
                     alt={flavor.productName}
@@ -257,7 +257,7 @@ export function BundleBuilder({
                     className={cn(
                       'flex h-10 w-10 items-center justify-center rounded-full transition-all',
                       totalUnits < packSize
-                        ? 'bg-earth-500 text-[#ffffec] hover:bg-earth-600'
+                        ? 'bg-earth-500 text-[#fcf8d5] hover:bg-earth-600'
                         : 'cursor-not-allowed bg-cream-100 text-stone-300'
                     )}
                     aria-label={`Aumentar ${flavor.productName}`}
@@ -319,9 +319,9 @@ export function BundleBuilder({
           onClick={handleAddToCart}
           disabled={!isComplete || isAdding}
           className={cn(
-            'btn w-full justify-center py-4 text-base',
+            'btn justify-center py-4 text-base',
             isAdding
-              ? 'bg-olive-500 text-[#ffffec] hover:bg-olive-500'
+              ? 'bg-olive-500 text-[#fcf8d5] hover:bg-olive-500'
               : isComplete
                 ? 'btn-primary'
                 : 'cursor-not-allowed bg-cream-200 text-stone-400'

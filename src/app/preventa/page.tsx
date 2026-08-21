@@ -130,14 +130,14 @@ export default function PreventaPage() {
   };
 
   // Calculate price
-  const UNIT_PRICE_CENTS = 900; // 9.00€
+  const UNIT_PRICE_CENTS = 700; // 7.00€
   const totalCents = formData.cantidad * UNIT_PRICE_CENTS;
   const totalPrice = formatPrice(totalCents);
 
   // Success state
   if (isSubmitted) {
     return (
-      <div className="section">
+      <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
         <div className="container-custom max-w-2xl text-center">
           <div className="mb-6 inline-flex h-20 w-20 items-center justify-center rounded-full bg-accent-100">
             <CheckCircle className="h-10 w-10 text-accent-600" />
@@ -158,7 +158,7 @@ export default function PreventaPage() {
   }
 
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom">
         {/* Header */}
         <div className="mb-12 text-center">
@@ -212,7 +212,7 @@ export default function PreventaPage() {
 
             <div className="space-y-4">
               <div className="flex gap-4">
-                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-600 text-sm text-[#ffffec]">
+                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-600 text-sm text-[#fcf8d5]">
                   1
                 </div>
                 <div>
@@ -224,7 +224,7 @@ export default function PreventaPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-600 text-sm text-[#ffffec]">
+                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-600 text-sm text-[#fcf8d5]">
                   2
                 </div>
                 <div>
@@ -236,7 +236,7 @@ export default function PreventaPage() {
               </div>
 
               <div className="flex gap-4">
-                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-600 text-sm text-[#ffffec]">
+                <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary-600 text-sm text-[#fcf8d5]">
                   3
                 </div>
                 <div>
@@ -255,15 +255,15 @@ export default function PreventaPage() {
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 text-primary-600">•</span>
                   <div>
-                    <strong>Granola Clásica:</strong> Nuestra receta original con miel ecológica,
-                    avena sin gluten y frutos secos premium.
+                    <strong>Granola original:</strong> Nuestra receta original con miel, avena
+                    integral sin gluten y frutos secos premium.
                   </div>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="mt-0.5 text-primary-600">•</span>
                   <div>
-                    <strong>Granola de Naranja:</strong> Con ralladura de naranja natural y miel de
-                    azahar. Frescura mediterránea en cada bocado.
+                    <strong>Granola con naranja:</strong> Con piel de naranja deshidratada y miel.
+                    Frescura mediterránea en cada bocado.
                   </div>
                 </li>
               </ul>
@@ -337,7 +337,7 @@ export default function PreventaPage() {
                 <div className="rounded-xl bg-cream-50 p-4">
                   <div className="mb-2 flex items-center justify-between">
                     <span className="text-sm text-neutral-700">Precio por unidad:</span>
-                    <span className="text-neutral-900">9,00€</span>
+                    <span className="text-neutral-900">7,00€</span>
                   </div>
                   <div className="flex items-center justify-between border-t border-neutral-200 pt-2">
                     <span className="text-neutral-900">Total:</span>

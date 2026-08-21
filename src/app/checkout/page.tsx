@@ -78,10 +78,10 @@ const spanishProvinces = [
 export default function CheckoutPage() {
   const router = useRouter();
   const { data: session } = useSession();
-  const { items, clearCart } = useCartStore();
+  const { items, clearCart, localDelivery, localDeliveryEmail } = useCartStore();
 
   const [isLoading, setIsLoading] = useState(false);
-  const [paymentMethod, setPaymentMethod] = useState<'card' | 'cash_on_delivery'>('card');
+  const [paymentMethod, setPaymentMethod] = useState<'card'>('card');
   const [acceptedTerms, setAcceptedTerms] = useState(false);
   const [acceptedPrivacy, setAcceptedPrivacy] = useState(false);
 
@@ -107,11 +107,21 @@ export default function CheckoutPage() {
       )
     : 0;
 
-  const cartTotal = calculateCartTotal(
+  const cartTotalRaw = calculateCartTotal(
     cartItemsForCalculation,
     couponDiscountCents,
     appliedCoupon?.code
   );
+
+  // Override shipping for local delivery
+  const cartTotal = localDelivery
+    ? {
+        ...cartTotalRaw,
+        shippingCents: 0,
+        isFreeShipping: true,
+        totalCents: cartTotalRaw.totalCents - cartTotalRaw.shippingCents,
+      }
+    : cartTotalRaw;
 
   const [formData, setFormData] = useState({
     email: '',
@@ -199,13 +209,22 @@ export default function CheckoutPage() {
   // Redirect if cart is empty
   if (items.length === 0) {
     return (
-      <div className="section">
+      <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
         <div className="container-custom text-center">
-          <h1 className="mb-4 text-2xl">Tu carrito está vacío</h1>
-          <p className="mb-6 text-neutral-600">
+          <h1 style={{ fontFamily: 'var(--font-display)', fontSize: '24px', marginBottom: '16px' }}>
+            Tu carrito está vacío
+          </h1>
+          <p
+            style={{
+              fontSize: '14px',
+              color: 'rgba(17,17,17,.5)',
+              fontWeight: 300,
+              marginBottom: '24px',
+            }}
+          >
             Añade algunos productos antes de continuar con el checkout.
           </p>
-          <Link href="/tienda" className="btn-primary">
+          <Link href="/tienda" className="btn-pill">
             Ir a la tienda
           </Link>
         </div>
@@ -232,12 +251,16 @@ export default function CheckoutPage() {
 
     if (!formData.name) newErrors.name = 'El nombre es obligatorio';
     if (!formData.phone) newErrors.phone = 'El teléfono es obligatorio';
-    if (!formData.address) newErrors.address = 'La dirección es obligatoria';
-    if (!formData.city) newErrors.city = 'La ciudad es obligatoria';
-    if (!formData.province) newErrors.province = 'La provincia es obligatoria';
-    if (!formData.postalCode) newErrors.postalCode = 'El código postal es obligatorio';
-    else if (!/^\d{5}$/.test(formData.postalCode)) {
-      newErrors.postalCode = 'Código postal no válido';
+
+    // Address fields only required for standard shipping
+    if (!localDelivery) {
+      if (!formData.address) newErrors.address = 'La dirección es obligatoria';
+      if (!formData.city) newErrors.city = 'La ciudad es obligatoria';
+      if (!formData.province) newErrors.province = 'La provincia es obligatoria';
+      if (!formData.postalCode) newErrors.postalCode = 'El código postal es obligatorio';
+      else if (!/^\d{5}$/.test(formData.postalCode)) {
+        newErrors.postalCode = 'Código postal no válido';
+      }
     }
 
     if (!acceptedTerms) {
@@ -262,95 +285,59 @@ export default function CheckoutPage() {
     setIsLoading(true);
 
     try {
-      // For card payment, create Stripe checkout session
-      if (paymentMethod === 'card') {
-        const response = await fetch('/api/checkout', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            items: items.map((item) => {
-              if (isCartBundleItem(item)) {
-                return {
-                  productId: item.bundleId,
-                  productName: item.bundleName,
-                  productDescription: generateBundleSummary(item.flavors),
-                  quantity: item.quantity,
-                  packSize: item.packSize,
-                  isSubscription: item.isSubscription,
-                  priceInCents: item.priceInCents,
-                  isBundle: true,
-                  flavors: item.flavors,
-                };
-              }
+      // Create Stripe checkout session
+      const response = await fetch('/api/checkout', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          items: items.map((item) => {
+            if (isCartBundleItem(item)) {
               return {
-                productId: item.productId,
-                productName: item.productName,
+                productId: item.bundleId,
+                productName: item.bundleName,
+                productDescription: generateBundleSummary(item.flavors),
                 quantity: item.quantity,
                 packSize: item.packSize,
                 isSubscription: item.isSubscription,
                 priceInCents: item.priceInCents,
+                isBundle: true,
+                flavors: item.flavors,
               };
-            }),
-            customer: formData,
-            paymentMethod,
-            couponCode: appliedCoupon?.code,
-            couponDiscountCents,
+            }
+            return {
+              productId: item.productId,
+              productName: item.productName,
+              quantity: item.quantity,
+              packSize: item.packSize,
+              isSubscription: item.isSubscription,
+              priceInCents: item.priceInCents,
+            };
           }),
-        });
+          customer: localDelivery
+            ? {
+                email: formData.email,
+                name: formData.name,
+                phone: formData.phone,
+                address: 'Entrega local - Centro de Málaga',
+                city: 'Málaga',
+                province: 'Málaga',
+                postalCode: '29001',
+              }
+            : formData,
+          paymentMethod,
+          couponCode: appliedCoupon?.code,
+          couponDiscountCents,
+          localDelivery: localDelivery || undefined,
+          localDeliveryEmail: localDelivery ? localDeliveryEmail : undefined,
+        }),
+      });
 
-        const data = await response.json();
+      const data = await response.json();
 
-        if (data.url) {
-          // Redirect to Stripe Checkout
-          window.location.href = data.url;
-        } else {
-          throw new Error(data.error || 'Error al procesar el pago');
-        }
+      if (data.url) {
+        window.location.href = data.url;
       } else {
-        // Cash on delivery - create order directly
-        const response = await fetch('/api/orders', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            items: items.map((item) => {
-              if (isCartBundleItem(item)) {
-                return {
-                  productId: item.bundleId,
-                  productName: item.bundleName,
-                  productDescription: generateBundleSummary(item.flavors),
-                  quantity: item.quantity,
-                  packSize: item.packSize,
-                  isSubscription: item.isSubscription,
-                  priceInCents: item.priceInCents,
-                  isBundle: true,
-                  flavors: item.flavors,
-                };
-              }
-              return {
-                productId: item.productId,
-                productName: item.productName,
-                quantity: item.quantity,
-                packSize: item.packSize,
-                isSubscription: item.isSubscription,
-                priceInCents: item.priceInCents,
-              };
-            }),
-            customer: formData,
-            paymentMethod,
-            totals: cartTotal,
-            couponCode: appliedCoupon?.code,
-            couponDiscountCents,
-          }),
-        });
-
-        const data = await response.json();
-
-        if (data.success) {
-          clearCart();
-          router.push(`/checkout/confirmacion?order=${data.orderNumber}`);
-        } else {
-          throw new Error(data.error || 'Error al crear el pedido');
-        }
+        throw new Error(data.error || 'Error al procesar el pago');
       }
     } catch (error) {
       console.error('Checkout error:', error);
@@ -361,7 +348,10 @@ export default function CheckoutPage() {
   };
 
   return (
-    <div className="section-sm min-h-screen bg-neutral-50">
+    <div
+      className="min-h-screen"
+      style={{ paddingTop: '140px', paddingBottom: '96px', background: 'var(--off)' }}
+    >
       <div className="container-custom">
         {/* Header */}
         <div className="mb-8">
@@ -435,55 +425,81 @@ export default function CheckoutPage() {
               <section className="rounded-xl bg-white p-6 shadow-sm">
                 <h2 className="mb-4 flex items-center gap-2 text-xl text-neutral-900">
                   <Truck className="h-5 w-5 text-primary-600" />
-                  Dirección de envío
+                  {localDelivery ? 'Entrega en el centro de Málaga' : 'Dirección de envío'}
                 </h2>
-                <div className="space-y-4">
-                  <Input
-                    label="Dirección"
-                    name="address"
-                    value={formData.address}
-                    onChange={handleInputChange}
-                    error={errors.address}
-                    placeholder="Calle, número, piso..."
-                    required
-                  />
-                  <Input
-                    label="Información adicional (opcional)"
-                    name="addressLine2"
-                    value={formData.addressLine2}
-                    onChange={handleInputChange}
-                    placeholder="Apartamento, portal, etc."
-                  />
-                  <div className="grid gap-4 sm:grid-cols-3">
-                    <Input
-                      label="Ciudad"
-                      name="city"
-                      value={formData.city}
-                      onChange={handleInputChange}
-                      error={errors.city}
-                      required
-                    />
-                    <Select
-                      label="Provincia"
-                      name="province"
-                      value={formData.province}
-                      onChange={handleInputChange}
-                      error={errors.province}
-                      options={spanishProvinces}
-                      placeholder="Selecciona..."
-                      required
-                    />
-                    <Input
-                      label="Código postal"
-                      name="postalCode"
-                      value={formData.postalCode}
-                      onChange={handleInputChange}
-                      error={errors.postalCode}
-                      placeholder="28001"
-                      required
-                    />
+
+                {localDelivery ? (
+                  <div
+                    className="rounded-lg p-4"
+                    style={{
+                      background: 'rgba(243,238,148,.15)',
+                      border: '1px solid rgba(243,238,148,.3)',
+                    }}
+                  >
+                    <p
+                      style={{
+                        fontSize: '14px',
+                        color: 'var(--dark)',
+                        fontWeight: 500,
+                        marginBottom: '4px',
+                      }}
+                    >
+                      Entrega gratuita en el centro de Málaga
+                    </p>
+                    <p style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}>
+                      Nos pondremos en contacto a <strong>{localDeliveryEmail}</strong> para
+                      concertar día y hora de entrega.
+                    </p>
                   </div>
-                </div>
+                ) : (
+                  <div className="space-y-4">
+                    <Input
+                      label="Dirección"
+                      name="address"
+                      value={formData.address}
+                      onChange={handleInputChange}
+                      error={errors.address}
+                      placeholder="Calle, número, piso..."
+                      required
+                    />
+                    <Input
+                      label="Información adicional (opcional)"
+                      name="addressLine2"
+                      value={formData.addressLine2}
+                      onChange={handleInputChange}
+                      placeholder="Apartamento, portal, etc."
+                    />
+                    <div className="grid gap-4 sm:grid-cols-3">
+                      <Input
+                        label="Ciudad"
+                        name="city"
+                        value={formData.city}
+                        onChange={handleInputChange}
+                        error={errors.city}
+                        required
+                      />
+                      <Select
+                        label="Provincia"
+                        name="province"
+                        value={formData.province}
+                        onChange={handleInputChange}
+                        error={errors.province}
+                        options={spanishProvinces}
+                        placeholder="Selecciona..."
+                        required
+                      />
+                      <Input
+                        label="Código postal"
+                        name="postalCode"
+                        value={formData.postalCode}
+                        onChange={handleInputChange}
+                        error={errors.postalCode}
+                        placeholder="28001"
+                        required
+                      />
+                    </div>
+                  </div>
+                )}
               </section>
 
               {/* Payment method */}
@@ -528,40 +544,6 @@ export default function CheckoutPage() {
                     <div className="flex gap-2">
                       <span className="rounded bg-neutral-100 px-2 py-1 text-xs">Visa</span>
                       <span className="rounded bg-neutral-100 px-2 py-1 text-xs">MC</span>
-                    </div>
-                  </label>
-
-                  <label
-                    className={cn(
-                      'flex cursor-pointer items-center gap-4 rounded-lg border-2 p-4 transition-colors',
-                      paymentMethod === 'cash_on_delivery'
-                        ? 'border-primary-500 bg-primary-50'
-                        : 'border-neutral-200 hover:border-neutral-300'
-                    )}
-                  >
-                    <input
-                      type="radio"
-                      name="paymentMethod"
-                      value="cash_on_delivery"
-                      checked={paymentMethod === 'cash_on_delivery'}
-                      onChange={() => setPaymentMethod('cash_on_delivery')}
-                      className="sr-only"
-                    />
-                    <div
-                      className={cn(
-                        'flex h-5 w-5 items-center justify-center rounded-full border-2',
-                        paymentMethod === 'cash_on_delivery'
-                          ? 'border-primary-500'
-                          : 'border-neutral-300'
-                      )}
-                    >
-                      {paymentMethod === 'cash_on_delivery' && (
-                        <div className="h-3 w-3 rounded-full bg-primary-500" />
-                      )}
-                    </div>
-                    <div className="flex-1">
-                      <span className="font-medium text-neutral-900">Pago contra reembolso</span>
-                      <p className="text-sm text-neutral-500">Paga al recibir tu pedido (+2,00€)</p>
                     </div>
                   </label>
                 </div>
@@ -638,7 +620,7 @@ export default function CheckoutPage() {
 
                     return (
                       <div key={itemKey} className="flex gap-3">
-                        <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden rounded-lg bg-neutral-100">
+                        <div className="relative h-16 w-16 flex-shrink-0 overflow-hidden bg-neutral-100">
                           <Image
                             src={itemImage}
                             alt={itemName}
@@ -744,21 +726,19 @@ export default function CheckoutPage() {
                     </div>
                   )}
                   <div className="flex justify-between">
-                    <span className="text-neutral-600">Envío</span>
+                    <span className="text-neutral-600">
+                      {localDelivery ? 'Entrega en Málaga' : 'Envío'}
+                    </span>
                     <span>
-                      {cartTotal.isFreeShipping ? (
+                      {localDelivery ? (
+                        <span className="text-accent-600">Gratis</span>
+                      ) : cartTotal.isFreeShipping ? (
                         <span className="text-accent-600">Gratis</span>
                       ) : (
                         formatPrice(cartTotal.shippingCents)
                       )}
                     </span>
                   </div>
-                  {paymentMethod === 'cash_on_delivery' && (
-                    <div className="flex justify-between">
-                      <span className="text-neutral-600">Contrareembolso</span>
-                      <span>{formatPrice(200)}</span>
-                    </div>
-                  )}
                   <div className="flex justify-between text-xs text-neutral-500">
                     <span>IVA incluido (10%)</span>
                     <span>{formatPrice(cartTotal.taxCents)}</span>
@@ -769,11 +749,7 @@ export default function CheckoutPage() {
                 <div className="mt-4 border-t border-neutral-200 pt-4">
                   <div className="flex items-center justify-between">
                     <span>Total</span>
-                    <span className="text-2xl font-bold">
-                      {formatPrice(
-                        cartTotal.totalCents + (paymentMethod === 'cash_on_delivery' ? 200 : 0)
-                      )}
-                    </span>
+                    <span className="text-2xl font-bold">{formatPrice(cartTotal.totalCents)}</span>
                   </div>
                 </div>
 

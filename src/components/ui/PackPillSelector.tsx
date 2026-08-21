@@ -59,7 +59,7 @@ export function PackPillSelector({
             {/* Selection indicator */}
             {isSelected && (
               <span className="absolute right-2 top-2 flex h-5 w-5 items-center justify-center rounded-full bg-earth-500">
-                <Check className="h-3 w-3 text-[#ffffec]" strokeWidth={3} />
+                <Check className="h-3 w-3 text-[#fcf8d5]" strokeWidth={3} />
               </span>
             )}
 

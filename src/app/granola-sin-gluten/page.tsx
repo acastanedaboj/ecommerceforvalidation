@@ -12,9 +12,9 @@ import { sinGlutenContent } from '@/data/landing-content';
 import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Granola Sin Gluten Apta para Celíacos | Poppy Málaga',
+  title: 'Granola sin gluten apta para celíacos | Poppy Málaga',
   description:
-    'Granola artesanal sin gluten, 100% apta para celíacos. Elaborada con avena certificada sin gluten (<20ppm) y proceso controlado. 4 sabores. Envío gratis desde 4 uds. Hecha en Málaga.',
+    'Granola artesanal sin gluten, 100% apta para celíacos. Elaborada con avena certificada sin gluten (<20ppm) y proceso controlado. 3 sabores. Envío gratis desde 4 uds. Hecha en Málaga.',
   keywords: [
     'granola sin gluten',
     'granola celiaca',
@@ -29,9 +29,9 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/granola-sin-gluten'),
   },
   openGraph: {
-    title: 'Granola Sin Gluten Apta para Celíacos | Poppy',
+    title: 'Granola sin gluten apta para celíacos | Poppy',
     description:
-      'Granola artesanal elaborada con avena certificada sin gluten. Apta para celíacos. 4 sabores deliciosos. Proceso controlado en Málaga.',
+      'Granola artesanal elaborada con avena certificada sin gluten. Apta para celíacos. 3 sabores deliciosos. Proceso controlado en Málaga.',
     url: `${SITE_URL}/granola-sin-gluten`,
     type: 'website',
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/images/hero-sin-gluten.jpeg`,
         width: 1200,
         height: 630,
-        alt: 'Granola Sin Gluten Poppy',
+        alt: 'Granola sin gluten Poppy',
       },
     ],
   },
@@ -95,7 +95,7 @@ export default function GranolaSinGlutenPage() {
 
   const breadcrumbSchema = buildBreadcrumbSchema([
     { name: 'Inicio', url: SITE_URL },
-    { name: 'Granola Sin Gluten', url: `${SITE_URL}/granola-sin-gluten` },
+    { name: 'Granola sin gluten', url: `${SITE_URL}/granola-sin-gluten` },
   ]);
 
   return (

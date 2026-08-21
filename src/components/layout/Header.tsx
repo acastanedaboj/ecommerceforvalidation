@@ -3,9 +3,10 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { useCartStore, useCartItemCount } from '@/store/cart-store';
-import { NAVIGATION, BUSINESS } from '@/lib/constants';
+import { NAVIGATION } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { UserMenu } from '@/components/auth/UserMenu';
 
@@ -14,28 +15,43 @@ export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const toggleCart = useCartStore((state) => state.toggleCart);
   const itemCount = useCartItemCount();
+  const pathname = usePathname();
 
-  // Handle scroll effect
+  // Pages with dark hero backgrounds where white text is appropriate
+  const hasDarkHero = pathname === '/' || pathname === '/suscripcion';
+  // Use dark text when scrolled OR when page has light background
+  const useDarkText = isScrolled || !hasDarkHero;
+
+  // Handle scroll effect - threshold at 80px
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      setIsScrolled(window.scrollY > 80);
     };
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className="sticky top-0 z-40">
-      {/* Announcement bar - Modern & Clean */}
-      <div className="px-4 py-2.5 text-center" style={{ backgroundColor: '#333333' }}>
-        <p className="text-sm font-medium tracking-wide" style={{ color: '#FFFFEC' }}>
-          <span className="font-semibold">Envio gratis</span>
-          <span className="mx-2">|</span>a partir de 4 bolsas o 35 EUR
-          <span className="mx-2">|</span>
+    <header className="fixed left-0 right-0 top-0 z-40" style={{ position: 'fixed' }}>
+      {/* Announcement bar */}
+      <div
+        className={cn(
+          'px-4 py-2 text-center transition-all duration-300',
+          isScrolled ? 'max-h-0 overflow-hidden py-0 opacity-0' : 'max-h-12 opacity-100'
+        )}
+        style={{ backgroundColor: '#f6ee87' }}
+      >
+        <p
+          className="text-[11px] uppercase tracking-[0.12em]"
+          style={{ color: 'rgba(17,17,17,.65)', fontWeight: 300 }}
+        >
+          <span className="font-bold">Envio gratis</span>
+          <span className="mx-2 opacity-30">|</span>a partir de 4 bolsas o 35 EUR
+          <span className="mx-2 opacity-30">|</span>
           <Link
             href="/suscripcion"
-            className="font-semibold underline underline-offset-2 transition-opacity hover:opacity-80"
-            style={{ color: '#FFFFEC' }}
+            className="font-bold underline underline-offset-2 transition-opacity hover:opacity-80"
+            style={{ color: 'rgba(17,17,17,.65)' }}
           >
             Suscribete y ahorra 15%
           </Link>
@@ -45,116 +61,158 @@ export function Header() {
       {/* Main navigation */}
       <nav
         className={cn(
-          'transition-all duration-300',
-          isScrolled ? 'bg-white/95 shadow-soft backdrop-blur-md' : 'bg-white'
+          'duration-350 flex items-center justify-between transition-all',
+          isScrolled ? 'px-6 py-3 md:px-8 lg:px-14' : 'px-6 py-5 md:px-8 lg:px-14'
         )}
+        style={
+          useDarkText
+            ? {
+                background: 'rgba(255,255,255,.95)',
+                backdropFilter: 'blur(12px)',
+                borderBottom: '1px solid rgba(0,0,0,.08)',
+              }
+            : {
+                background: 'transparent',
+              }
+        }
         aria-label="Navegacion principal"
       >
-        <div className="container-custom">
-          <div className="flex h-18 items-center justify-between md:h-22">
-            {/* Logo */}
-            <Link href="/" className="group flex items-center">
-              <Image
-                src="/images/logo.svg"
-                alt={BUSINESS.name}
-                width={100}
-                height={35}
-                className="h-auto max-w-[100px] transition-transform duration-300 group-hover:scale-105"
-                priority
-              />
-            </Link>
+        {/* Logo */}
+        <Link href="/" className="group">
+          <Image
+            src="/images/logo.svg"
+            alt="Poppy"
+            width={100}
+            height={35}
+            className={cn(
+              'h-7 w-auto transition-all duration-300',
+              useDarkText ? '' : 'brightness-0 hue-rotate-[15deg] invert saturate-[10] sepia'
+            )}
+          />
+        </Link>
 
-            {/* Desktop Navigation - Clean & Minimal */}
-            <div className="hidden items-center gap-10 lg:flex">
-              {NAVIGATION.main.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  className="link-underline text-sm font-medium tracking-wide text-stone-800 transition-colors hover:text-earth-600"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-
-            {/* Right side actions */}
-            <div className="flex items-center gap-1 md:gap-2">
-              {/* User menu (login/account) */}
-              <UserMenu />
-
-              {/* Cart button */}
-              <button
-                type="button"
-                onClick={toggleCart}
-                className="relative rounded-full p-3 text-stone-800 transition-all hover:bg-cream-200/50 hover:text-earth-600"
-                aria-label={`Carrito de compra (${itemCount} productos)`}
-              >
-                <ShoppingBag className="h-5 w-5" strokeWidth={1.5} />
-                {itemCount > 0 && (
-                  <span className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full bg-earth-600 text-[10px] font-bold text-[#ffffec]">
-                    {itemCount > 9 ? '9+' : itemCount}
-                  </span>
-                )}
-              </button>
-
-              {/* Mobile menu button */}
-              <button
-                type="button"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="ml-1 rounded-full p-3 text-stone-800 transition-all hover:bg-cream-200/50 hover:text-earth-600 lg:hidden"
-                aria-expanded={isMobileMenuOpen}
-                aria-controls="mobile-menu"
-                aria-label={isMobileMenuOpen ? 'Cerrar menu' : 'Abrir menu'}
-              >
-                {isMobileMenuOpen ? (
-                  <X className="h-5 w-5" strokeWidth={1.5} />
-                ) : (
-                  <Menu className="h-5 w-5" strokeWidth={1.5} />
-                )}
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Mobile Navigation - Clean slide down */}
-        <div
-          id="mobile-menu"
-          className={cn(
-            'overflow-hidden border-t border-stone-200 transition-all duration-400 ease-out lg:hidden',
-            isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 border-transparent opacity-0'
-          )}
-        >
-          <div className="container-custom py-6">
-            <div className="flex flex-col gap-1">
-              {NAVIGATION.main.map((item, index) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={cn(
-                    'rounded-xl px-4 py-3.5 font-medium text-stone-800 transition-all hover:bg-cream-100 hover:text-earth-600',
-                    'animate-fade-in-up'
-                  )}
-                  style={{ animationDelay: `${index * 50}ms` }}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-
-            {/* Mobile CTA */}
-            <div className="mt-6 border-t border-stone-200 pt-6">
+        {/* Desktop Navigation */}
+        <ul className="hidden items-center gap-8 lg:flex" style={{ listStyle: 'none' }}>
+          {NAVIGATION.main.map((item) => (
+            <li key={item.href}>
               <Link
-                href="/tienda"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="btn-primary w-full justify-center"
+                href={item.href}
+                className="link-underline"
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '15px',
+                  fontWeight: 700,
+                  color: useDarkText ? '#111111' : '#fcf8d5',
+                  textDecoration: 'none',
+                  transition: 'color 0.25s',
+                }}
               >
-                Comprar ahora
+                {item.name}
               </Link>
-            </div>
+            </li>
+          ))}
+        </ul>
+
+        {/* Right side actions */}
+        <div className="flex items-center gap-1 md:gap-3">
+          {/* User menu (login/account) */}
+          <div style={{ color: useDarkText ? '#111111' : '#fcf8d5' }}>
+            <UserMenu />
           </div>
+
+          {/* Cart button */}
+          <button
+            type="button"
+            onClick={toggleCart}
+            className="relative p-3 transition-opacity hover:opacity-55"
+            style={{
+              color: useDarkText ? '#111111' : '#fcf8d5',
+              background: 'none',
+              border: 'none',
+            }}
+            aria-label={`Carrito de compra (${itemCount} productos)`}
+          >
+            <ShoppingBag className="h-5 w-5" strokeWidth={1.5} />
+            {itemCount > 0 && (
+              <span
+                className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full text-[9px] font-bold"
+                style={{ background: 'var(--yellow)', color: 'var(--dark)' }}
+              >
+                {itemCount > 9 ? '9+' : itemCount}
+              </span>
+            )}
+          </button>
+
+          {/* Mobile menu button */}
+          <button
+            type="button"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            className="p-3 transition-opacity hover:opacity-55 lg:hidden"
+            style={{
+              color: useDarkText ? '#111111' : '#fcf8d5',
+              background: 'none',
+              border: 'none',
+            }}
+            aria-expanded={isMobileMenuOpen}
+            aria-controls="mobile-menu"
+            aria-label={isMobileMenuOpen ? 'Cerrar menu' : 'Abrir menu'}
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-5 w-5" strokeWidth={1.5} />
+            ) : (
+              <Menu className="h-5 w-5" strokeWidth={1.5} />
+            )}
+          </button>
         </div>
       </nav>
+
+      {/* Mobile Navigation */}
+      <div
+        id="mobile-menu"
+        className={cn(
+          'overflow-hidden transition-all duration-400 ease-out lg:hidden',
+          isMobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'
+        )}
+        style={{
+          background: 'rgba(255,255,255,.98)',
+          backdropFilter: 'blur(12px)',
+          borderBottom: isMobileMenuOpen ? '1px solid rgba(0,0,0,.08)' : 'none',
+        }}
+      >
+        <div className="px-6 py-6">
+          <div className="flex flex-col gap-1">
+            {NAVIGATION.main.map((item, index) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="animate-fade-in-up px-4 py-3"
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  color: '#111111',
+                  fontWeight: 700,
+                  fontSize: '15px',
+                  textDecoration: 'none',
+                  animationDelay: `${index * 50}ms`,
+                }}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+
+          {/* Mobile CTA */}
+          <div className="mt-6 pt-6" style={{ borderTop: '1px solid rgba(0,0,0,.08)' }}>
+            <Link
+              href="/tienda"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="btn-pill w-full text-center"
+            >
+              Comprar ahora
+            </Link>
+          </div>
+        </div>
+      </div>
     </header>
   );
 }

@@ -10,8 +10,8 @@
 
 export const sinGlutenContent = {
   hero: {
-    title: 'Granola Sin Gluten',
-    highlight: 'Apta para Celíacos',
+    title: 'Granola sin gluten',
+    highlight: 'Apta para celíacos',
     subtitle:
       'Elaborada con avena certificada sin gluten y un proceso de producción controlado. Disfruta de un desayuno seguro y delicioso.',
     ctaText: 'Ver productos',
@@ -29,7 +29,7 @@ export const sinGlutenContent = {
       'No basta con decir "sin gluten". En Poppy, cada paso del proceso está diseñado para garantizar que nuestras granolas sean 100% seguras para personas con celiaquía o sensibilidad al gluten. Desde la selección de la avena hasta el empaquetado final, controlamos todo.',
   },
   whatIsGlutenFree: {
-    title: 'Granola Sin Gluten: Más que una etiqueta',
+    title: 'Granola sin gluten: más que una etiqueta',
     subtitle: 'Entendiendo qué significa realmente',
     content: [
       {
@@ -93,19 +93,19 @@ export const sinGlutenContent = {
         number: 2,
         title: 'Verificación de ingredientes',
         description:
-          'Todos los demás ingredientes (frutos secos, miel, aceite de oliva, especias) provienen de proveedores que garantizan productos sin gluten. Pedimos documentación de cada lote.',
+          'Todos los demás ingredientes (frutos secos, miel, aceite de coco, especias) provienen de proveedores que garantizan productos sin gluten. Pedimos documentación de cada lote.',
       },
       {
         number: 3,
         title: 'Producción controlada',
         description:
-          'Elaboramos la granola en un espacio donde NO se manipulan productos con gluten. Limpiamos y desinfectamos todo el equipo antes de cada lote.',
+          'Elaboramos la granola en un obrador dedicado donde no entra gluten. No procesamos trigo, cebada ni centeno. Limpiamos y desinfectamos todo el equipo antes de cada lote.',
       },
       {
         number: 4,
         title: 'Etiquetado transparente',
         description:
-          'Cada bolsa incluye información clara de alérgenos. Si en el futuro añadimos un producto con gluten, lo indicaremos claramente y lo procesaremos en horarios separados.',
+          'Cada bolsa incluye información clara de alérgenos. Nuestro obrador es y será siempre un espacio libre de gluten.',
       },
     ],
   },
@@ -139,7 +139,7 @@ export const sinGlutenContent = {
     title: 'Nuestras granolas sin gluten',
     subtitle: 'Todos los sabores',
     description:
-      'Los 4 sabores de Poppy son aptos para celíacos. Elige tu favorito o pruébalos todos.',
+      'Los 3 sabores de Poppy son aptos para celíacos. Elige tu favorito o pruébalos todos.',
   },
   faqs: [
     {
@@ -180,7 +180,7 @@ export const sinGlutenContent = {
     {
       question: '¿Dónde puedo comprar granola sin gluten Poppy?',
       answer:
-        'Vendemos exclusivamente online en poppy.es. Esto nos permite controlar la calidad y frescura de cada envío. Hacemos envíos a toda España, y es gratis a partir de 4 bolsas. Tu pedido llega en 3-5 días laborables.',
+        'Vendemos exclusivamente online en poppy.es. Esto nos permite controlar la calidad y frescura de cada envío. Hacemos envíos a toda España, y es gratis a partir de 4 bolsas. Tu pedido llega en 4-6 días laborables.',
     },
     {
       question: '¿Cuánto dura la granola sin gluten una vez abierta?',
@@ -212,28 +212,28 @@ export const sinGlutenContent = {
 
 export const veganaContent = {
   hero: {
-    title: 'Granola 100% Vegana',
-    highlight: 'Sin Miel ni Productos Animales',
+    title: 'Granola 100% vegana',
+    highlight: 'Sin miel ni productos animales',
     subtitle:
-      'Endulzada naturalmente con dátiles Medjool y sirope de agave ecológico. Todo el sabor, 0% productos de origen animal.',
+      'Endulzada naturalmente con sirope de agave ecológico. Todo el sabor, 0% productos de origen animal.',
     ctaText: 'Comprar ahora',
-    ctaHref: '/tienda/granola-datiles-150g',
-    badges: ['100% Vegana', 'Sin gluten', 'Ecológica'],
-    image: '/products/granola-datiles.jpg',
+    ctaHref: '/tienda/granola-vegana-150g',
+    badges: ['100% vegana', 'Sin gluten', 'Artesanal'],
+    image: '/images/vegana.png',
   },
   benefits: {
     title: 'Alternativas naturales a la miel',
     subtitle: 'Dulzura vegetal',
     items: [
       {
-        title: 'Dátiles Medjool',
+        title: 'Sirope de agave ecológico',
         description:
-          'Dulzura natural con alto contenido en fibra, potasio y antioxidantes. El "caramelo de la naturaleza".',
+          'Bajo índice glucémico y sabor suave. Una alternativa natural y sostenible a la miel.',
       },
       {
-        title: 'Sirope de agave',
+        title: 'Frutos secos premium',
         description:
-          'Bajo índice glucémico y sabor suave. Una alternativa ecológica y sostenible a la miel.',
+          'Almendras, anacardos y avellanas seleccionadas junto con semillas de girasol y calabaza como protagonistas.',
       },
       {
         title: 'Sin compromisos',
@@ -249,31 +249,31 @@ export const veganaContent = {
   },
   products: {
     title: 'Nuestra granola vegana',
-    subtitle: 'Granola de Dátiles',
+    subtitle: 'Granola vegana',
     description:
-      'La Granola de Dátiles es nuestra única variedad 100% vegana. Endulzada con dátiles Medjool y sirope de agave, sin miel ni ningún producto de origen animal.',
+      'Nuestra granola vegana es la única variedad 100% vegana. Endulzada con sirope de agave ecológico, sin miel ni ningún producto de origen animal.',
     highlightProductId: 'prod_granola_datiles',
   },
   comparison: {
     title: 'Transparencia total',
     description:
-      'Queremos que sepas exactamente qué contiene cada producto. Nuestras otras granolas (Clásica, Chocolate y Naranja) contienen <a href="/granola-ecologica" class="text-earth-600 hover:underline">miel ecológica</a> de apicultores locales. Todos los sabores son <a href="/granola-sin-gluten" class="text-earth-600 hover:underline">100% sin gluten</a>.',
+      'Queremos que sepas exactamente qué contiene cada producto. Nuestras otras granolas (Clásica y Naranja) contienen miel ecológica de apicultores locales.',
   },
   faqs: [
     {
       question: '¿Las otras granolas de Poppy son veganas?',
       answer:
-        'No. Nuestras granolas Clásica, Chocolate y Naranja contienen miel ecológica de apicultores locales. Solo la Granola de Dátiles es 100% vegana.',
+        'No. Nuestras granolas Clásica y Naranja contienen miel de apicultores locales. Solo la Granola Vegana es 100% vegana.',
     },
     {
       question: '¿Por qué usáis miel en las otras variedades?',
       answer:
-        'La miel ecológica de apicultores locales de Málaga aporta un sabor único y beneficios nutricionales. Sin embargo, entendemos que muchas personas prefieren opciones veganas, por eso creamos la Granola de Dátiles.',
+        'La miel de apicultores locales de Málaga aporta un sabor único y beneficios nutricionales. Sin embargo, entendemos que muchas personas prefieren opciones veganas, por eso creamos la Granola Vegana.',
     },
     {
-      question: '¿Qué beneficios tienen los dátiles y el sirope de agave?',
+      question: '¿Qué beneficios tiene el sirope de agave?',
       answer:
-        'Los dátiles Medjool son ricos en fibra, potasio y antioxidantes. El sirope de agave tiene un índice glucémico más bajo que el azúcar. Juntos, proporcionan dulzura natural sin productos animales.',
+        'El sirope de agave ecológico tiene un índice glucémico más bajo que el azúcar y aporta dulzura natural sin productos animales.',
     },
     {
       question: '¿La granola vegana también es sin gluten?',
@@ -283,15 +283,15 @@ export const veganaContent = {
     {
       question: '¿Es apta para dietas plant-based estrictas?',
       answer:
-        'Sí. La Granola de Dátiles no contiene ningún ingrediente de origen animal. Es apta para veganos, vegetarianos y cualquier persona que siga una dieta plant-based.',
+        'Sí. La Granola Vegana no contiene ningún ingrediente de origen animal. Es apta para veganos, vegetarianos y cualquier persona que siga una dieta plant-based.',
     },
   ],
   cta: {
     title: '¿Buscas una granola 100% vegana?',
     description:
-      'Prueba nuestra Granola de Dátiles: todo el sabor artesanal de Poppy, sin ningún producto de origen animal.',
-    ctaText: 'Comprar Granola de Dátiles',
-    ctaHref: '/tienda/granola-datiles-150g',
+      'Prueba nuestra Granola Vegana: todo el sabor artesanal de Poppy, sin ningún producto de origen animal.',
+    ctaText: 'Comprar granola vegana',
+    ctaHref: '/tienda/granola-vegana-150g',
     secondaryCta: {
       text: 'Ver todas las granolas',
       href: '/tienda',
@@ -305,7 +305,7 @@ export const veganaContent = {
 
 export const artesanalContent = {
   hero: {
-    title: 'Granola Artesanal',
+    title: 'Granola artesanal',
     highlight: 'Premium de Málaga',
     subtitle:
       'Elaborada a mano en pequeños lotes con ingredientes locales de Málaga. Tostada lentamente para conseguir el crujiente perfecto.',
@@ -330,7 +330,7 @@ export const artesanalContent = {
       {
         title: 'Ingredientes premium',
         description:
-          'Miel ecológica de apicultores de Málaga, frutos secos de primera calidad y avena certificada sin gluten.',
+          'Miel de apicultores de Málaga, frutos secos de primera calidad y avena certificada sin gluten.',
       },
       {
         title: 'Sin aditivos',
@@ -349,12 +349,12 @@ export const artesanalContent = {
     subtitle: 'Origen local',
     items: [
       {
-        title: 'Miel ecológica',
+        title: 'Miel',
         description: 'De apicultores locales de la provincia de Málaga. Cruda y sin procesar.',
       },
       {
         title: 'Frutos secos premium',
-        description: 'Almendras, avellanas, anacardos y anacardos seleccionados a mano.',
+        description: 'Almendras, anacardos y avellanas seleccionados a mano.',
       },
       {
         title: 'Avena sin gluten',
@@ -367,7 +367,7 @@ export const artesanalContent = {
     ],
   },
   products: {
-    title: '4 sabores únicos',
+    title: '3 sabores únicos',
     subtitle: 'Nuestras granolas',
     description:
       'Cada sabor tiene su propia personalidad, pero todos comparten lo mismo: ingredientes premium y elaboración artesanal.',
@@ -381,7 +381,7 @@ export const artesanalContent = {
     {
       question: '¿Por qué es más cara que la granola del supermercado?',
       answer:
-        'Utilizamos ingredientes de primera calidad (miel ecológica, frutos secos premium, avena certificada) y un proceso de elaboración manual que requiere más tiempo y atención. El resultado es un producto con un sabor y textura incomparables.',
+        'Utilizamos ingredientes de primera calidad (miel, frutos secos premium, avena certificada) y un proceso de elaboración manual que requiere más tiempo y atención. El resultado es un producto con un sabor y textura incomparables.',
     },
     {
       question: '¿Cuánto dura fresca la granola?',
@@ -391,7 +391,7 @@ export const artesanalContent = {
     {
       question: '¿Hacéis envíos a toda España?',
       answer:
-        'Sí, enviamos a toda la península. Envío gratis a partir de 4 bolsas o 35€. Los pedidos se preparan y envían en 24-48h laborables.',
+        'Sí, enviamos a toda la península. Envío gratis a partir de 4 bolsas o 35€. Los pedidos se preparan y envían en 24-48h laborables. Si estás en Málaga centro, también ofrecemos entrega gratuita en mano.',
     },
     {
       question: '¿Puedo visitar vuestro obrador?',
@@ -417,13 +417,13 @@ export const artesanalContent = {
 
 export const celiacosContent = {
   hero: {
-    title: 'Granola Apta',
-    highlight: 'para Celíacos',
+    title: 'Granola apta',
+    highlight: 'para celíacos',
     subtitle:
       'Sabemos lo difícil que es encontrar productos seguros. Nuestra granola está elaborada pensando en ti: avena certificada sin gluten y proceso controlado.',
     ctaText: 'Ver opciones seguras',
     ctaHref: '/tienda',
-    badges: ['Apta celíacos', 'Avena sin gluten', '4 sabores'],
+    badges: ['Apta celíacos', 'Avena sin gluten', '3 sabores'],
     image: '/images/hero-celiacos.jpeg',
   },
   intro: {
@@ -443,7 +443,7 @@ export const celiacosContent = {
       {
         title: 'Proceso controlado',
         description:
-          'Elaboramos en instalaciones donde controlamos todos los ingredientes. No utilizamos trigo, cebada ni centeno.',
+          'Elaboramos en un obrador dedicado sin gluten. No entra trigo, cebada ni centeno en nuestras instalaciones.',
       },
       {
         title: 'Ingredientes seguros',
@@ -459,15 +459,15 @@ export const celiacosContent = {
   },
   products: {
     title: 'Todos nuestros sabores son aptos para celíacos',
-    subtitle: '4 opciones para ti',
+    subtitle: '3 opciones para ti',
     description:
-      'No tienes que elegir "la única opción sin gluten". Los 4 sabores de Poppy son seguros para personas con celiaquía.',
+      'No tienes que elegir "la única opción sin gluten". Los 3 sabores de Poppy son seguros para personas con celiaquía.',
   },
   faqs: [
     {
       question: '¿Por qué es apta para celíacos?',
       answer:
-        'Utilizamos avena certificada sin gluten y elaboramos en un entorno controlado. No utilizamos trigo, cebada ni centeno en ninguno de nuestros productos.',
+        'Utilizamos avena certificada sin gluten y elaboramos en un obrador dedicado donde no entra gluten. No utilizamos trigo, cebada ni centeno en ninguno de nuestros productos.',
     },
     {
       question: '¿Qué tipo de avena utilizan exactamente?',
@@ -477,12 +477,12 @@ export const celiacosContent = {
     {
       question: '¿Cómo controlan la contaminación cruzada?',
       answer:
-        'Elaboramos nuestra granola en instalaciones donde controlamos todos los ingredientes. Verificamos cada materia prima antes de usarla y seguimos protocolos estrictos de limpieza.',
+        'Elaboramos en un obrador dedicado sin gluten en Málaga. No entra trigo, cebada ni centeno. Verificamos cada materia prima antes de usarla y seguimos protocolos estrictos de limpieza.',
     },
     {
       question: '¿Puedo consumirla si soy muy sensible al gluten?',
       answer:
-        'Nuestra granola está elaborada con avena certificada sin gluten y un proceso controlado. Sin embargo, si eres extremadamente sensible, te recomendamos consultar con tu médico antes de probar cualquier producto nuevo.',
+        'Nuestra granola está elaborada con avena certificada sin gluten en un obrador dedicado donde no entra gluten. Sin embargo, si eres extremadamente sensible, te recomendamos consultar con tu médico antes de probar cualquier producto nuevo.',
     },
     {
       question: '¿Qué otros alérgenos contiene?',
@@ -529,7 +529,7 @@ export const celiacosContent = {
 
 export const mercadonaContent = {
   hero: {
-    title: 'Granola Sin Gluten',
+    title: 'Granola sin gluten',
     highlight: 'Poppy vs Mercadona',
     subtitle:
       'Comparamos nuestra granola artesanal con las opciones de Mercadona. Descubre las diferencias y elige la mejor opción para tu desayuno.',
@@ -548,7 +548,7 @@ export const mercadonaContent = {
       'Muchas personas buscan "granola sin gluten Mercadona" porque es conveniente y conocido. Pero ¿cuál es realmente la diferencia entre la granola de supermercado y una artesanal? Te lo explicamos todo. También puedes ver nuestra <a href="/granola-sin-gluten-carrefour" class="text-earth-600 hover:underline">comparativa con Carrefour</a> y un <a href="/mejor-granola-sin-gluten-espana" class="text-earth-600 hover:underline">ranking completo de granolas sin gluten</a>.',
   },
   comparison: {
-    title: 'Comparativa: Poppy vs Opciones de Supermercado',
+    title: 'Comparativa: Poppy vs opciones de supermercado',
     subtitle: 'Las diferencias que importan',
     items: [
       {
@@ -563,7 +563,7 @@ export const mercadonaContent = {
       },
       {
         feature: 'Endulzante',
-        poppy: 'Miel ecológica local o dátiles',
+        poppy: 'Miel local o sirope de agave',
         mercadona: 'Azúcar, jarabes industriales',
       },
       {
@@ -600,7 +600,7 @@ export const mercadonaContent = {
       {
         title: 'Ingredientes que puedes pronunciar',
         description:
-          'Solo avena, miel, frutos secos, aceite de oliva y especias. Sin maltodextrina, jarabe de glucosa ni saborizantes.',
+          'Solo avena, miel, frutos secos, aceite de coco y especias. Sin maltodextrina, jarabe de glucosa ni saborizantes.',
       },
       {
         title: 'Tostado lento artesanal',
@@ -645,7 +645,7 @@ export const mercadonaContent = {
     {
       question: '¿Por qué es más cara la granola Poppy?',
       answer:
-        'Usamos miel ecológica de apicultores de Málaga (no azúcar industrial), frutos secos premium remojados para mejor absorción de nutrientes, avena certificada sin gluten, y elaboración artesanal en pequeños lotes. Cada bolsa lleva horas de trabajo manual y control de calidad.',
+        'Usamos miel de apicultores de Málaga (no azúcar industrial), frutos secos premium remojados para mejor absorción de nutrientes, avena certificada sin gluten, y elaboración artesanal en pequeños lotes. Cada bolsa lleva horas de trabajo manual y control de calidad.',
     },
     {
       question: '¿Puedo comprar Poppy en Mercadona?',
@@ -655,7 +655,7 @@ export const mercadonaContent = {
     {
       question: '¿Cuánto tarda el envío de Poppy?',
       answer:
-        'Preparamos tu pedido en 24-48h laborables y lo enviamos a toda España. Envío gratis a partir de 4 bolsas. Lo recibes en 3-5 días laborables.',
+        'Preparamos tu pedido en 24-48h laborables y lo enviamos a toda España. Envío gratis a partir de 4 bolsas. Lo recibes en 4-6 días laborables. En Málaga centro ofrecemos entrega gratuita en mano.',
     },
     {
       question: '¿La granola de Mercadona es apta para celíacos?',
@@ -681,7 +681,7 @@ export const mercadonaContent = {
 
 export const carrefourContent = {
   hero: {
-    title: 'Granola Sin Gluten',
+    title: 'Granola sin gluten',
     highlight: 'Poppy vs Carrefour',
     subtitle:
       'Comparativa completa entre granola artesanal Poppy y las opciones sin gluten de Carrefour. Descubre qué te conviene más.',
@@ -701,7 +701,7 @@ export const carrefourContent = {
   },
   comparison: {
     title: 'Tabla comparativa completa',
-    subtitle: 'Poppy Artesanal vs Carrefour',
+    subtitle: 'Poppy artesanal vs Carrefour',
     items: [
       {
         feature: 'Producción',
@@ -715,7 +715,7 @@ export const carrefourContent = {
       },
       {
         feature: 'Endulzante',
-        poppy: 'Miel ecológica Málaga / Dátiles',
+        poppy: 'Miel Málaga / Sirope de agave',
         carrefour: 'Azúcar, jarabes (según marca)',
       },
       {
@@ -752,7 +752,7 @@ export const carrefourContent = {
       {
         title: 'Ingredientes reales',
         description:
-          'Sin "saborizantes naturales" ni nombres raros. Solo lo que usarías en tu cocina: avena, miel, frutos secos, aceite de oliva.',
+          'Sin "saborizantes naturales" ni nombres raros. Solo lo que usarías en tu cocina: avena, miel, frutos secos, aceite de coco.',
       },
       {
         title: 'Trazabilidad total',
@@ -779,7 +779,7 @@ export const carrefourContent = {
       {
         name: 'Carrefour Bio Granola Sin Gluten',
         glutenFree: 'Sí',
-        note: 'Certificada. Opción ecológica. Ingredientes estándar.',
+        note: 'Certificada. Ingredientes estándar.',
         price: '~6-7€ / 375g',
       },
       {
@@ -841,8 +841,8 @@ export const carrefourContent = {
 
 export const recetaGranolaContent = {
   hero: {
-    title: 'Cómo Hacer Granola Sin Gluten',
-    highlight: 'Receta Casera Paso a Paso',
+    title: 'Cómo hacer granola sin gluten',
+    highlight: 'Receta casera paso a paso',
     subtitle:
       'Aprende a preparar granola sin gluten en casa con esta receta detallada. Perfecta para celíacos, fácil de personalizar y más económica que comprarla.',
     ctaText: 'Comprar granola Poppy',
@@ -866,30 +866,30 @@ export const recetaGranolaContent = {
     ],
   },
   ingredients: {
-    title: 'Ingredientes para Granola Sin Gluten (500g)',
+    title: 'Ingredientes para granola sin gluten (500g)',
     subtitle: 'Lo que necesitas para tu receta casera',
     base: {
       title: 'Base (avena)',
-      items: ['250g de copos de avena certificada sin gluten'],
+      items: ['170g de copos de avena integral sin gluten'],
     },
     frutoSecos: {
       title: 'Frutos secos y semillas',
       items: [
-        '85g de pipas de girasol',
-        '40g de pipas de calabaza',
-        '30g de almendras troceadas',
-        '25g de anacardos troceados',
-        '10g de avellanas troceadas',
-        '6g de lino molido',
+        '75g de semillas de girasol',
+        '40g de semillas de calabaza',
+        '50g de almendras troceadas',
+        '50g de anacardos troceados',
+        '30g de avellanas troceadas',
+        '10g de lino molido',
       ],
     },
     endulzante: {
       title: 'Endulzante y grasa',
       items: [
-        '40ml de miel ecológica (o sirope de agave para versión vegana)',
-        '20ml de aceite de coco virgen extra',
-        '1/2 cucharadita de canela molida',
-        '1/4 cucharadita de jengibre en polvo',
+        '40g de miel (o sirope de agave para versión vegana)',
+        '30ml de aceite de coco',
+        '9g de canela molida',
+        '1,5g de jengibre en polvo',
       ],
     },
     extras: {
@@ -902,7 +902,7 @@ export const recetaGranolaContent = {
     },
   },
   instructions: {
-    title: 'Paso a Paso: Cómo Hacer Granola Sin Gluten',
+    title: 'Paso a paso: cómo hacer granola sin gluten',
     subtitle: 'Sigue estos pasos para una granola perfecta',
     steps: [
       {
@@ -916,7 +916,7 @@ export const recetaGranolaContent = {
         number: 2,
         title: 'Mezcla los ingredientes secos',
         description:
-          'En un bol grande, mezcla la avena, todas las pipas y frutos secos, el lino molido, la canela y el jengibre. Remueve bien para distribuir todos los ingredientes uniformemente.',
+          'En un bol grande, mezcla la avena, todas las semillas y frutos secos, el lino molido, la canela y el jengibre. Remueve bien para distribuir todos los ingredientes uniformemente.',
         time: '5 min',
       },
       {
@@ -966,7 +966,7 @@ export const recetaGranolaContent = {
     yield: '500g (aprox. 10 raciones de 50g)',
   },
   tips: {
-    title: 'Consejos para una Granola Sin Gluten Perfecta',
+    title: 'Consejos para una granola sin gluten perfecta',
     subtitle: 'Trucos de experto',
     items: [
       {
@@ -1028,7 +1028,7 @@ export const recetaGranolaContent = {
     ],
   },
   comparison: {
-    title: 'Granola Casera vs Comprada',
+    title: 'Granola casera vs comprada',
     subtitle: 'La comparativa honesta',
     items: [
       {
@@ -1115,7 +1115,7 @@ export const recetaGranolaContent = {
 
 export const guiaCeliaquiaContent = {
   hero: {
-    title: 'Guía Completa de Celiaquía',
+    title: 'Guía completa de celiaquía',
     highlight: 'y Dieta Sin Gluten',
     subtitle:
       'Todo lo que necesitas saber sobre la enfermedad celíaca: síntomas, diagnóstico, tratamiento y cómo llevar una vida sin gluten de forma segura y saludable.',
@@ -1634,40 +1634,40 @@ export const guiaCeliaquiaContent = {
 
 export const ecologicaContent = {
   hero: {
-    title: 'Granola Ecológica',
-    highlight: 'Ingredientes BIO Certificados',
+    title: 'Granola artesanal',
+    highlight: 'Ingredientes naturales de calidad',
     subtitle:
-      'Elaborada con miel ecológica de apicultores locales, avena de agricultura ecológica y aceite de coco virgen extra. Calidad premium, sabor auténtico.',
+      'Elaborada con miel de apicultores locales, avena de agricultura artesanal y aceite de coco. Calidad premium, sabor auténtico.',
     ctaText: 'Comprar granola eco',
     ctaHref: '/tienda',
     secondaryCta: {
       text: 'Ver ingredientes',
       href: '#ingredientes',
     },
-    badges: ['Ingredientes Eco', 'Sin gluten', 'Artesanal'],
+    badges: ['Ingredientes naturales', 'Sin gluten', 'Artesanal'],
     image: '/images/hero-granola-ecologica.jpg',
   },
   intro: {
-    title: '¿Qué hace ecológica a nuestra granola?',
+    title: '¿Qué hace artesanal a nuestra granola?',
     description:
-      'En Poppy seleccionamos ingredientes de agricultura ecológica certificada porque creemos que la calidad empieza en el origen. Miel de apicultores que cuidan las abejas, <a href="/granola-sin-gluten" class="text-earth-600 hover:underline">avena sin gluten</a> cultivada sin pesticidas, aceites prensados en frío. Además, ofrecemos <a href="/granola-vegana" class="text-earth-600 hover:underline">opciones 100% veganas</a> con sirope de agave. No es solo una etiqueta, es un compromiso.',
+      'En Poppy seleccionamos ingredientes ecológicos de proveedores certificados porque creemos que la calidad empieza en el origen. Miel de apicultores locales, <a href="/granola-sin-gluten" class="text-earth-600 hover:underline">avena sin gluten</a> certificada, aceite de coco prensado en frío. Además, ofrecemos <a href="/granola-vegana" class="text-earth-600 hover:underline">opciones 100% veganas</a> con sirope de agave ecológico.',
   },
   ingredientes: {
-    title: 'Nuestros ingredientes ecológicos',
+    title: 'Nuestros ingredientes artesanals',
     subtitle: 'Transparencia total sobre lo que comes',
     items: [
       {
         title: 'Miel ecológica local',
-        percentage: '10-12%',
+        percentage: '7%',
         description:
-          'De apicultores de Málaga y alrededores. La miel ecológica proviene de colmenas situadas en zonas libres de cultivos intensivos y sin tratamientos químicos. Aporta dulzura natural, enzimas vivas y antioxidantes.',
+          'De apicultores de Málaga y alrededores. Colmenas en zonas libres de cultivos intensivos. Aporta dulzura natural, enzimas vivas y antioxidantes. La versión vegana usa sirope de agave ecológico.',
         icon: '🍯',
       },
       {
-        title: 'Avena ecológica sin gluten',
-        percentage: '38-40%',
+        title: 'Avena certificada sin gluten',
+        percentage: '48-50%',
         description:
-          'Cultivada en campos dedicados sin rotación con cereales con gluten, sin pesticidas ni herbicidas sintéticos. Certificada sin gluten (<20 ppm) y certificada ecológica.',
+          'Cultivada en campos dedicados sin rotación con cereales con gluten. Certificada sin gluten (<20 ppm). Elaboramos en obrador dedicado donde no entra gluten.',
         icon: '🌾',
       },
       {
@@ -1679,26 +1679,26 @@ export const ecologicaContent = {
       },
       {
         title: 'Frutos secos y semillas premium',
-        percentage: '40%',
+        percentage: '51%',
         description:
-          'Pipas de girasol y calabaza, almendras, anacardos y avellanas de proveedores seleccionados. Alta proporción frente a granolas industriales (5-10%).',
+          'Semillas de girasol y calabaza, almendras, anacardos y avellanas de proveedores seleccionados. Alta proporción frente a granolas industriales (5-10%).',
         icon: '🥜',
       },
     ],
   },
   whyEco: {
-    title: '¿Por qué elegir granola ecológica?',
+    title: '¿Por qué elegir granola artesanal?',
     subtitle: 'Beneficios para ti y para el planeta',
     reasons: [
       {
         title: 'Sin pesticidas ni químicos',
         description:
-          'Los cultivos ecológicos evitan pesticidas sintéticos, herbicidas y fertilizantes químicos. Menos residuos en tu comida, mejor para tu salud a largo plazo.',
+          'Los cultivos artesanals evitan pesticidas sintéticos, herbicidas y fertilizantes químicos. Menos residuos en tu comida, mejor para tu salud a largo plazo.',
       },
       {
         title: 'Mejor perfil nutricional',
         description:
-          'Estudios sugieren que los alimentos ecológicos pueden tener mayor concentración de antioxidantes y polifenoles. La miel ecológica conserva mejor sus enzimas.',
+          'Estudios sugieren que los alimentos artesanals pueden tener mayor concentración de antioxidantes y polifenoles. La miel conserva mejor sus enzimas.',
       },
       {
         title: 'Apoyo a productores locales',
@@ -1708,17 +1708,17 @@ export const ecologicaContent = {
       {
         title: 'Sostenibilidad ambiental',
         description:
-          'La agricultura ecológica protege la biodiversidad, mejora la salud del suelo y reduce la contaminación del agua. Tu desayuno también cuida el planeta.',
+          'La agricultura artesanal protege la biodiversidad, mejora la salud del suelo y reduce la contaminación del agua. Tu desayuno también cuida el planeta.',
       },
     ],
   },
   comparison: {
-    title: 'Granola ecológica vs industrial',
+    title: 'Granola artesanal vs industrial',
     subtitle: 'La diferencia está en los detalles',
     items: [
       {
         aspect: 'Endulzante',
-        eco: 'Miel ecológica de apicultores locales',
+        eco: 'Miel de apicultores locales',
         industrial: 'Azúcar refinado, jarabes de glucosa',
       },
       {
@@ -1728,12 +1728,12 @@ export const ecologicaContent = {
       },
       {
         aspect: 'Avena',
-        eco: 'Ecológica, sin pesticidas, certificada sin gluten',
+        eco: 'Artesanal, sin pesticidas, certificada sin gluten',
         industrial: 'Convencional, posible contaminación',
       },
       {
         aspect: 'Frutos secos y semillas',
-        eco: '40% del producto',
+        eco: '51% del producto',
         industrial: '5-10% del producto',
       },
       {
@@ -1749,18 +1749,18 @@ export const ecologicaContent = {
     ],
   },
   benefits: {
-    title: 'Compromiso con la calidad ecológica',
+    title: 'Compromiso con la calidad artesanal',
     subtitle: 'Por qué nuestros ingredientes son especiales',
     items: [
       {
-        title: 'Miel ecológica',
+        title: 'Miel',
         description:
           'De apicultores locales de Málaga. Las abejas polinizan en zonas libres de cultivos intensivos.',
       },
       {
         title: 'Avena certificada',
         description:
-          'De agricultura ecológica y certificada sin gluten. Doble garantía de calidad.',
+          'De agricultura artesanal y certificada sin gluten. Doble garantía de calidad.',
       },
       {
         title: 'Aceite de coco virgen',
@@ -1773,47 +1773,47 @@ export const ecologicaContent = {
     ],
   },
   products: {
-    title: 'Nuestras granolas con ingredientes ecológicos',
-    subtitle: 'Cuatro sabores, misma calidad',
+    title: 'Nuestras granolas con ingredientes artesanals',
+    subtitle: 'Tres sabores, misma calidad',
     description:
-      'Todas las granolas Poppy están elaboradas con ingredientes de origen ecológico. Elige tu favorita o prueba el pack mixto.',
+      'Todas las granolas Poppy están elaboradas con ingredientes de origen artesanal. Elige tu favorita o prueba el pack mixto.',
   },
   faqs: [
     {
       question: '¿Poppy tiene certificación ecológica oficial?',
       answer:
-        'Utilizamos ingredientes de agricultura ecológica certificada (miel eco, avena eco, aceite de coco virgen). Nuestro proceso artesanal en Málaga garantiza la trazabilidad. La certificación oficial del producto final está en proceso.',
+        'Seleccionamos ingredientes ecológicos de proveedores certificados: miel ecológica de apicultores locales, avena certificada sin gluten y aceite de coco. Nuestro obrador en Málaga garantiza trazabilidad completa. La certificación ecológica oficial del producto final está en proceso de obtención.',
     },
     {
-      question: '¿De dónde viene la miel ecológica?',
+      question: '¿De dónde viene la miel?',
       answer:
-        'De apicultores de Málaga y alrededores que practican apicultura ecológica. Las colmenas están situadas en zonas libres de cultivos intensivos, alejadas de fuentes de contaminación, y las abejas no reciben tratamientos químicos.',
+        'De apicultores de Málaga y alrededores que practican apicultura artesanal. Las colmenas están situadas en zonas libres de cultivos intensivos, alejadas de fuentes de contaminación, y las abejas no reciben tratamientos químicos.',
     },
     {
-      question: '¿La avena ecológica también es sin gluten?',
+      question: '¿La avena artesanal también es sin gluten?',
       answer:
-        'Sí. Nuestra avena tiene doble certificación: ecológica (cultivo sin pesticidas) y sin gluten (cultivada en campos dedicados, sin contaminación cruzada con trigo/cebada). Cumple el estándar <20 ppm.',
+        'Sí. Nuestra avena tiene doble certificación: artesanal (cultivo sin pesticidas) y sin gluten (cultivada en campos dedicados, sin contaminación cruzada con trigo/cebada). Cumple el estándar <20 ppm.',
     },
     {
-      question: '¿Por qué la granola ecológica es más cara?',
+      question: '¿Por qué la granola artesanal es más cara?',
       answer:
-        'Los ingredientes ecológicos tienen mayor coste de producción: cultivos sin químicos requieren más mano de obra, los rendimientos son menores, y los controles de calidad más estrictos. Además, usamos 40% de frutos secos y semillas vs 5-10% de las industriales.',
+        'Los ingredientes ecológicos tienen mayor coste de producción: cultivos sin químicos requieren más mano de obra, los rendimientos son menores, y los controles de calidad más estrictos. Además, usamos 51% de frutos secos y semillas vs 5-10% de las industriales.',
     },
     {
       question: '¿El aceite de coco es sostenible?',
       answer:
-        'Utilizamos aceite de coco virgen extra de proveedores que garantizan prácticas sostenibles y comercio justo. El aceite de coco virgen se obtiene de cocos frescos prensados en frío, sin procesos de refinado químico.',
+        'Utilizamos aceite de coco de proveedores que garantizan prácticas sostenibles y comercio justo. El aceite de coco virgen se obtiene de cocos frescos prensados en frío, sin procesos de refinado químico.',
     },
     {
       question: '¿Qué diferencia hay con granolas BIO del supermercado?',
       answer:
-        'Principalmente la proporción de ingredientes y el proceso. Las granolas BIO industriales suelen tener 5-10% de frutos secos; nosotros usamos 40%. Además, el horneado lento en pequeños lotes conserva mejor los nutrientes que la extrusión industrial.',
+        'Principalmente la proporción de ingredientes y el proceso. Las granolas BIO industriales suelen tener 5-10% de frutos secos; nosotros usamos 51%. Además, el horneado lento en pequeños lotes conserva mejor los nutrientes que la extrusión industrial.',
     },
   ],
   cta: {
-    title: '¿Lista para probar granola ecológica de verdad?',
+    title: '¿Lista para probar granola artesanal de verdad?',
     description:
-      'Ingredientes eco, producción artesanal en Málaga, sin gluten y con 40% de frutos secos y semillas. Envío gratis a partir de 4 unidades.',
+      'Ingredientes eco, producción artesanal en Málaga, sin gluten y con 51% de frutos secos y semillas. Envío gratis a partir de 4 unidades.',
     ctaText: 'Comprar ahora',
     ctaHref: '/tienda',
     secondaryCta: {
@@ -1829,7 +1829,7 @@ export const ecologicaContent = {
 
 export const mejorGranolaContent = {
   hero: {
-    title: 'Mejor Granola Sin Gluten España',
+    title: 'Mejor granola sin gluten España',
     highlight: 'Comparativa 2026',
     subtitle:
       'Analizamos las principales granolas sin gluten del mercado español: ingredientes, precios, certificaciones y calidad. Una guía para celíacos que buscan la mejor opción.',
@@ -1850,13 +1850,13 @@ export const mejorGranolaContent = {
       {
         title: 'Porcentaje de frutos secos',
         description:
-          'Los frutos secos son el ingrediente más caro y nutritivo. Las granolas premium tienen 40%, las industriales solo 5-10%.',
+          'Los frutos secos son el ingrediente más caro y nutritivo. Las granolas premium tienen 51%, las industriales solo 5-10%.',
         importance: 'alta',
       },
       {
         title: 'Tipo de endulzante',
         description:
-          'Miel ecológica o dátiles > sirope de agave > azúcar moreno > jarabe de glucosa. Los endulzantes naturales aportan más nutrientes.',
+          'Miel o dátiles > sirope de agave > azúcar moreno > jarabe de glucosa. Los endulzantes naturales aportan más nutrientes.',
         importance: 'alta',
       },
       {
@@ -1880,7 +1880,7 @@ export const mejorGranolaContent = {
     ],
   },
   ranking: {
-    title: 'Top Granolas Sin Gluten España 2026',
+    title: 'Top granolas sin gluten España 2026',
     subtitle: 'Nuestra valoración honesta',
     items: [
       {
@@ -1888,16 +1888,16 @@ export const mejorGranolaContent = {
         name: 'Poppy Granola',
         description: 'Artesanal, Málaga',
         price: '€4.67/100g',
-        frutosSecos: '40%',
-        endulzante: 'Miel ecológica / Dátiles',
+        frutosSecos: '51%',
+        endulzante: 'Miel ecológica / Sirope de agave',
         certificacion: 'Sin gluten (<20 ppm)',
         pros: [
           'Mayor contenido de frutos secos del mercado',
-          'Ingredientes ecológicos',
+          'Ingredientes artesanals',
           'Producción artesanal en pequeños lotes',
-          'Opción vegana disponible (dátiles)',
+          'Opción vegana disponible (sirope de agave)',
         ],
-        contras: ['Precio más elevado', 'Solo venta online', '4 sabores (vs 8+ de competidores)'],
+        contras: ['Precio más elevado', 'Solo venta online', '3 sabores (vs 8+ de competidores)'],
         verdict:
           'Mejor relación calidad-ingredientes. Ideal para quien prioriza nutrición sobre precio.',
         isOurs: true,
@@ -1905,13 +1905,13 @@ export const mejorGranolaContent = {
       {
         position: 2,
         name: 'CIVIA Foods',
-        description: 'Ecológica, online y retail',
+        description: 'Artesanal, online y retail',
         price: '€1.80-2.00/100g',
         frutosSecos: '~15%',
         endulzante: 'Pasta de dátil, sirope de agave',
         certificacion: 'BIO + Sin gluten',
         pros: [
-          'Certificación ecológica oficial',
+          'Certificación artesanal oficial',
           'Buen precio',
           '8 sabores variados',
           'Disponible en supermercados',
@@ -1956,11 +1956,11 @@ export const mejorGranolaContent = {
   conclusion: {
     title: 'Conclusión: ¿Cuál elegir?',
     content: `
-**Si priorizas calidad de ingredientes:** Poppy ofrece el mayor contenido de frutos secos (40%) y miel ecológica local. Precio más alto, pero más nutrientes por ración.
+**Si priorizas calidad de ingredientes:** Poppy ofrece el mayor contenido de frutos secos (51%) y miel local. Precio más alto, pero más nutrientes por ración.
 
 **Si priorizas precio y accesibilidad:** El Granero Integral es fácil de encontrar y económica. Suficiente para quien busca una opción sin gluten básica.
 
-**Si priorizas certificación ecológica oficial:** CIVIA Foods tiene sello BIO y buena variedad de sabores a precio competitivo.
+**Si priorizas certificación artesanal oficial:** CIVIA Foods tiene sello BIO y buena variedad de sabores a precio competitivo.
 
 **Si vives en Valencia/Barcelona:** Sanalocura ofrece calidad artesanal con tiendas físicas donde puedes comprar directamente.
 
@@ -1971,7 +1971,7 @@ La "mejor" granola depende de tus prioridades. Nosotros en Poppy apostamos por m
     {
       question: '¿Por qué Poppy aparece en primer lugar si es vuestra web?',
       answer:
-        'Somos transparentes: esta es nuestra web y obviamente creemos en nuestro producto. Sin embargo, los datos son verificables: ninguna otra granola sin gluten en España ofrece 40% de frutos secos y semillas. Nuestros ingredientes (miel eco, avena eco) están listados en cada bolsa. Animamos a comparar etiquetas.',
+        'Somos transparentes: esta es nuestra web y obviamente creemos en nuestro producto. Sin embargo, los datos son verificables: ninguna otra granola sin gluten en España ofrece 51% de frutos secos y semillas. Nuestros ingredientes (miel eco, avena eco) están listados en cada bolsa. Animamos a comparar etiquetas.',
     },
     {
       question: '¿Dónde puedo comprar estas granolas?',
@@ -1981,7 +1981,7 @@ La "mejor" granola depende de tus prioridades. Nosotros en Poppy apostamos por m
     {
       question: '¿Cuánto debería costar una buena granola sin gluten?',
       answer:
-        'Depende de los ingredientes. Una granola con 40% de frutos secos y semillas y miel eco costará €4-5/100g. Una con 5-10% de frutos secos y jarabe de glucosa, €1.50-2/100g. El precio refleja (generalmente) la calidad de ingredientes.',
+        'Depende de los ingredientes. Una granola con 51% de frutos secos y semillas y miel eco costará €4-5/100g. Una con 5-10% de frutos secos y jarabe de glucosa, €1.50-2/100g. El precio refleja (generalmente) la calidad de ingredientes.',
     },
     {
       question: '¿Puedo confiar en granolas sin gluten de marca blanca?',
@@ -1992,7 +1992,7 @@ La "mejor" granola depende de tus prioridades. Nosotros en Poppy apostamos por m
   cta: {
     title: '¿Quieres probar la granola con más frutos secos del mercado?',
     description:
-      '40% de frutos secos y semillas premium, miel ecológica de Málaga, avena certificada sin gluten. Envío gratis desde 4 unidades.',
+      '51% de frutos secos y semillas premium, miel ecológica de Málaga, avena certificada sin gluten. Envío gratis desde 4 unidades.',
     ctaText: 'Comprar Poppy',
     ctaHref: '/tienda',
     secondaryCta: {

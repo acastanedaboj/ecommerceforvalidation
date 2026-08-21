@@ -9,6 +9,11 @@ import { welcomeEmail, WelcomeEmailData } from './templates/welcome';
 import { orderConfirmationEmail, OrderConfirmationData } from './templates/order-confirmation';
 import { orderShippedEmail, OrderShippedData } from './templates/order-shipped';
 import {
+  internalOrderNotificationEmail,
+  InternalOrderNotificationData,
+} from './templates/internal-order-notification';
+import { orderReadyPickupEmail, OrderReadyPickupData } from './templates/order-ready-pickup';
+import {
   subscriptionActiveEmail,
   subscriptionRenewedEmail,
   subscriptionFailedEmail,
@@ -126,6 +131,42 @@ export async function sendSubscriptionCancelledEmail(data: SubscriptionCancelled
   });
 }
 
+const INTERNAL_NOTIFICATION_RECIPIENTS = [
+  'alvaro.castanneda@gmail.com',
+  'hola@poppy.es',
+  'pilar.orico@gmail.com',
+];
+
+/**
+ * Send order ready for pickup email to local delivery customers
+ */
+export async function sendOrderReadyForPickupEmail(data: OrderReadyPickupData) {
+  const { subject, html } = orderReadyPickupEmail(data);
+  return sendEmail({
+    to: data.email,
+    subject,
+    html,
+    tags: [
+      { name: 'type', value: 'order_ready_pickup' },
+      { name: 'order_id', value: data.orderId },
+    ],
+  });
+}
+
+/**
+ * Send internal order notification to the Poppy team
+ */
+export async function sendInternalOrderNotification(data: InternalOrderNotificationData) {
+  const { subject, html } = internalOrderNotificationEmail(data);
+  // Send to all recipients in a single API call to avoid rate limits
+  return sendEmail({
+    to: INTERNAL_NOTIFICATION_RECIPIENTS,
+    subject,
+    html,
+    tags: [{ name: 'type', value: 'internal_order' }],
+  });
+}
+
 // ==========================================
 // Re-export types and config
 // ==========================================
@@ -135,6 +176,7 @@ export type {
   WelcomeEmailData,
   OrderConfirmationData,
   OrderShippedData,
+  OrderReadyPickupData,
   SubscriptionActiveData,
   SubscriptionRenewedData,
   SubscriptionFailedData,

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import {
   sendOrderConfirmationEmail,
+  sendInternalOrderNotification,
   sendSubscriptionActiveEmail,
   sendSubscriptionRenewedEmail,
   sendSubscriptionFailedEmail,
@@ -9,6 +10,7 @@ import {
 } from '@/lib/email';
 import prisma from '@/lib/db';
 import { generateOrderNumber } from '@/lib/utils';
+import { createSendcloudParcel } from '@/lib/sendcloud';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || 'sk_test_placeholder', {
   apiVersion: '2023-10-16',
@@ -44,8 +46,10 @@ export async function POST(request: NextRequest) {
         // Send order confirmation email and save to database for one-time purchases
         if (session.mode === 'payment' && session.customer_email) {
           try {
-            // Get line items from session
-            const lineItems = await stripe.checkout.sessions.listLineItems(session.id);
+            // Get line items from session (expand product to access metadata with DB productId)
+            const lineItems = await stripe.checkout.sessions.listLineItems(session.id, {
+              expand: ['data.price.product'],
+            });
 
             const items = lineItems.data.map((item) => ({
               name: item.description || 'Granola Poppy',
@@ -66,7 +70,7 @@ export async function POST(request: NextRequest) {
             }
 
             // Save order to database
-            const order = await prisma.order.create({
+            await prisma.order.create({
               data: {
                 orderNumber,
                 userId,
@@ -93,14 +97,22 @@ export async function POST(request: NextRequest) {
                 discountCode: session.metadata?.couponCode || null,
                 paidAt: new Date(),
                 items: {
-                  create: lineItems.data.map((item) => ({
-                    productId: (item.price?.product as string) || 'unknown',
-                    productName: item.description || 'Granola Poppy',
-                    productSku: item.price?.id || 'unknown',
-                    quantity: item.quantity || 1,
-                    unitPriceInCents: item.price?.unit_amount || 0,
-                    totalPriceInCents: item.amount_total || 0,
-                  })),
+                  create: lineItems.data
+                    .filter((item) => {
+                      const product = item.price?.product as Stripe.Product | null;
+                      return product?.metadata?.productId;
+                    })
+                    .map((item) => {
+                      const product = item.price?.product as Stripe.Product;
+                      return {
+                        productId: product.metadata.productId,
+                        productName: item.description || 'Granola Poppy',
+                        productSku: item.price?.id || 'unknown',
+                        quantity: item.quantity || 1,
+                        unitPriceInCents: item.price?.unit_amount || 0,
+                        totalPriceInCents: item.amount_total || 0,
+                      };
+                    }),
                 },
               },
               include: {
@@ -109,6 +121,84 @@ export async function POST(request: NextRequest) {
             });
 
             console.log('Order saved to database:', orderNumber, 'for user:', userId || 'guest');
+
+            // Create Sendcloud parcel (non-blocking)
+            if (session.shipping_details?.address?.line1) {
+              const totalUnits = lineItems.data.reduce(
+                (sum, item) => sum + (item.quantity || 1),
+                0
+              );
+              const weightGrams = Math.min(totalUnits * 150, 1000); // 150g per bag, max 1kg box
+              const parcelItems = lineItems.data
+                .filter((item) => item.description && item.quantity)
+                .map((item) => {
+                  const qty = item.quantity || 1;
+                  const unitWeightKg = (150 / 1000).toFixed(3); // 150g per bag
+                  const unitValueEur = ((item.amount_total || 0) / qty / 100).toFixed(2);
+                  return {
+                    description: item.description || 'Granola Poppy',
+                    quantity: qty,
+                    weight: unitWeightKg,
+                    value: unitValueEur,
+                    origin_country: 'ES',
+                  };
+                });
+              createSendcloudParcel({
+                orderNumber,
+                customerName: session.customer_details?.name || 'Cliente',
+                customerEmail: session.customer_email,
+                customerPhone: session.customer_details?.phone || null,
+                addressLine1: session.shipping_details.address.line1,
+                city: session.shipping_details.address.city || '',
+                postalCode: session.shipping_details.address.postal_code || '',
+                country: session.shipping_details.address.country || 'ES',
+                weightGrams,
+                items: parcelItems,
+              })
+                .then(async (parcel) => {
+                  if (!parcel) return;
+                  await prisma.order.update({
+                    where: { orderNumber },
+                    data: {
+                      sendcloudParcelId: String(parcel.id),
+                      carrier: parcel.carrier?.code || null,
+                      trackingNumber: parcel.tracking_number || null,
+                      trackingUrl: parcel.tracking_url || null,
+                    },
+                  });
+                  console.log('Sendcloud parcel created:', parcel.id);
+                })
+                .catch((err) =>
+                  console.error('Sendcloud parcel creation failed (non-blocking):', err)
+                );
+            }
+
+            // Send internal notification to Poppy team (isolated — never blocks customer email)
+            sendInternalOrderNotification({
+              orderId: orderNumber,
+              orderNumber,
+              orderDate: new Date(),
+              customerName: session.customer_details?.name || 'Cliente',
+              customerEmail: session.customer_email,
+              customerPhone: session.customer_details?.phone || undefined,
+              items,
+              subtotalCents: session.amount_subtotal || 0,
+              shippingCents: session.shipping_cost?.amount_total || 0,
+              discountCents: session.total_details?.amount_discount || 0,
+              totalCents: session.amount_total || 0,
+              shippingAddress: {
+                name: session.shipping_details?.name || session.customer_details?.name || '',
+                line1: session.shipping_details?.address?.line1 || 'Entrega local',
+                line2: session.shipping_details?.address?.line2 || undefined,
+                city: session.shipping_details?.address?.city || 'Málaga',
+                postalCode: session.shipping_details?.address?.postal_code || '',
+                country: session.shipping_details?.address?.country || 'ES',
+              },
+              isLocalDelivery: !session.shipping_details?.address?.line1,
+              discountCode: session.metadata?.couponCode || undefined,
+            })
+              .then(() => console.log('Internal order notification sent'))
+              .catch((err) => console.error('Internal notification failed (non-blocking):', err));
 
             // Send order confirmation email
             await sendOrderConfirmationEmail({

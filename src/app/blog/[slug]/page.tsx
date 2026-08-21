@@ -10,6 +10,7 @@ import {
   getCanonicalUrl,
   buildArticleSchema,
   buildBreadcrumbSchema,
+  buildFaqSchema,
   JsonLd,
 } from '@/lib/seo';
 
@@ -61,6 +62,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         },
       ],
     },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.excerpt,
+      images: [
+        post.coverImage?.startsWith('http')
+          ? post.coverImage
+          : `${SITE_URL}${post.coverImage || '/images/og-image.jpg'}`,
+      ],
+    },
   };
 }
 
@@ -90,7 +101,7 @@ export default function BlogPostPage({ params }: Props) {
       return text
         .replace(
           /\[([^\]]+)\]\(([^)]+)\)/g,
-          '<a href="$2" class="text-earth-600 underline hover:text-earth-700 transition-colors">$1</a>'
+          '<a href="$2" style="color:var(--brown);text-decoration:underline">$1</a>'
         )
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
     };
@@ -102,7 +113,7 @@ export default function BlogPostPage({ params }: Props) {
     while (i < lines.length) {
       const line = lines[i];
 
-      // Skip empty lines (don't render <br/>)
+      // Skip empty lines
       if (line.trim() === '') {
         i++;
         continue;
@@ -113,7 +124,12 @@ export default function BlogPostPage({ params }: Props) {
         elements.push(
           <h1
             key={i}
-            className="mb-4 mt-8 font-display text-3xl text-neutral-900"
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '28px',
+              marginTop: '32px',
+              marginBottom: '16px',
+            }}
             dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
           />
         );
@@ -124,7 +140,12 @@ export default function BlogPostPage({ params }: Props) {
         elements.push(
           <h2
             key={i}
-            className="mb-4 mt-8 font-display text-2xl text-neutral-900"
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '22px',
+              marginTop: '32px',
+              marginBottom: '16px',
+            }}
             dangerouslySetInnerHTML={{ __html: parseInline(line.slice(3)) }}
           />
         );
@@ -135,7 +156,12 @@ export default function BlogPostPage({ params }: Props) {
         elements.push(
           <h3
             key={i}
-            className="mb-3 mt-6 text-xl font-semibold text-neutral-900"
+            style={{
+              fontFamily: 'var(--font-display)',
+              fontSize: '18px',
+              marginTop: '24px',
+              marginBottom: '12px',
+            }}
             dangerouslySetInnerHTML={{ __html: parseInline(line.slice(4)) }}
           />
         );
@@ -151,7 +177,7 @@ export default function BlogPostPage({ params }: Props) {
           listItems.push(
             <li
               key={i}
-              className="text-neutral-600"
+              style={{ color: 'rgba(17,17,17,.5)' }}
               dangerouslySetInnerHTML={{ __html: parseInline(lines[i].slice(2)) }}
             />
           );
@@ -173,7 +199,7 @@ export default function BlogPostPage({ params }: Props) {
           listItems.push(
             <li
               key={i}
-              className="text-neutral-600"
+              style={{ color: 'rgba(17,17,17,.5)' }}
               dangerouslySetInnerHTML={{ __html: parseInline(lines[i].replace(/^\d+\.\s/, '')) }}
             />
           );
@@ -189,7 +215,12 @@ export default function BlogPostPage({ params }: Props) {
 
       // Horizontal rule
       if (line.trim() === '---') {
-        elements.push(<hr key={i} className="my-8 border-neutral-200" />);
+        elements.push(
+          <hr
+            key={i}
+            style={{ margin: '32px 0', border: 'none', borderTop: '1px solid rgba(0,0,0,.07)' }}
+          />
+        );
         i++;
         continue;
       }
@@ -204,7 +235,7 @@ export default function BlogPostPage({ params }: Props) {
             href={href}
             target="_blank"
             rel="sponsored noopener noreferrer"
-            className="my-8 block overflow-hidden rounded-xl shadow-sm transition-shadow hover:shadow-md"
+            className="my-8 block overflow-hidden transition-shadow"
             aria-label={alt}
           >
             <Image
@@ -226,7 +257,13 @@ export default function BlogPostPage({ params }: Props) {
         elements.push(
           <blockquote
             key={i}
-            className="my-4 rounded-r border-l-4 border-primary-300 bg-neutral-50 py-2 pl-4 italic text-neutral-600"
+            style={{
+              borderLeft: '3px solid var(--brown)',
+              paddingLeft: '16px',
+              margin: '16px 0',
+              fontStyle: 'italic',
+              color: 'rgba(17,17,17,.5)',
+            }}
             dangerouslySetInnerHTML={{ __html: parseInline(line.slice(2)) }}
           />
         );
@@ -238,7 +275,13 @@ export default function BlogPostPage({ params }: Props) {
       elements.push(
         <p
           key={i}
-          className="mb-4 leading-relaxed text-neutral-600"
+          style={{
+            fontSize: '14px',
+            color: 'rgba(17,17,17,.5)',
+            fontWeight: 300,
+            lineHeight: 1.85,
+            marginBottom: '16px',
+          }}
           dangerouslySetInnerHTML={{ __html: parseInline(line) }}
         />
       );
@@ -262,13 +305,17 @@ export default function BlogPostPage({ params }: Props) {
         ])}
       />
 
-      <article className="section">
+      {/* JSON-LD: FAQ Schema (if post has FAQs) */}
+      {post.faqs && post.faqs.length > 0 && <JsonLd data={buildFaqSchema(post.faqs)} />}
+
+      <article style={{ paddingTop: '140px', paddingBottom: '96px' }}>
         <div className="container-custom">
           {/* Breadcrumb */}
           <nav className="mb-8">
             <Link
               href="/blog"
-              className="inline-flex items-center text-neutral-600 hover:text-primary-600"
+              className="inline-flex items-center transition-colors"
+              style={{ color: 'rgba(17,17,17,.4)', textDecoration: 'none', fontSize: '13px' }}
             >
               <ChevronLeft className="mr-1 h-4 w-4" />
               Volver al blog
@@ -278,20 +325,44 @@ export default function BlogPostPage({ params }: Props) {
           {/* Header */}
           <header className="mx-auto mb-12 max-w-3xl text-center">
             <span className="badge-accent mb-4">{category?.name}</span>
-            <h1 className="mb-6 font-display text-3xl text-neutral-900 md:text-4xl lg:text-5xl">
+            <h1
+              style={{
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(28px, 4vw, 44px)',
+                marginBottom: '24px',
+              }}
+            >
               {post.title}
             </h1>
-            <p className="mb-6 text-lg text-neutral-600">{post.excerpt}</p>
-            <div className="flex items-center justify-center gap-4 text-sm text-neutral-500">
+            <p
+              style={{
+                fontSize: '14px',
+                color: 'rgba(17,17,17,.5)',
+                fontWeight: 300,
+                lineHeight: 1.85,
+                marginBottom: '24px',
+              }}
+            >
+              {post.excerpt}
+            </p>
+            <div
+              className="flex items-center justify-center gap-4"
+              style={{
+                fontSize: '11px',
+                color: 'rgba(17,17,17,.35)',
+                letterSpacing: '0.05em',
+                textTransform: 'uppercase',
+              }}
+            >
               <span>{post.author}</span>
-              <span>•</span>
+              <span>·</span>
               <span className="flex items-center gap-1">
-                <Calendar className="h-4 w-4" />
+                <Calendar className="h-3.5 w-3.5" />
                 {formatDate(post.publishedAt)}
               </span>
-              <span>•</span>
+              <span>·</span>
               <span className="flex items-center gap-1">
-                <Clock className="h-4 w-4" />
+                <Clock className="h-3.5 w-3.5" />
                 {post.readingTime} min lectura
               </span>
             </div>
@@ -299,7 +370,7 @@ export default function BlogPostPage({ params }: Props) {
 
           {/* Featured image */}
           {post.coverImage && (
-            <div className="relative mx-auto mb-12 aspect-video max-w-4xl overflow-hidden rounded-2xl">
+            <div className="relative mx-auto mb-12 aspect-video max-w-4xl overflow-hidden">
               <Image
                 src={post.coverImage}
                 alt={post.title}
@@ -316,10 +387,20 @@ export default function BlogPostPage({ params }: Props) {
             <div className="prose-custom">{formatContent(post.content)}</div>
 
             {/* Tags */}
-            <div className="mt-8 border-t border-neutral-200 pt-8">
+            <div className="mt-8 pt-8" style={{ borderTop: '1px solid rgba(0,0,0,.07)' }}>
               <div className="flex flex-wrap gap-2">
                 {post.tags.map((tag) => (
-                  <span key={tag} className="badge bg-neutral-100 text-neutral-700">
+                  <span
+                    key={tag}
+                    style={{
+                      background: 'var(--off)',
+                      color: 'rgba(17,17,17,.5)',
+                      fontSize: '12px',
+                      padding: '4px 12px',
+                      borderRadius: '100px',
+                      fontWeight: 300,
+                    }}
+                  >
                     #{tag}
                   </span>
                 ))}
@@ -328,21 +409,29 @@ export default function BlogPostPage({ params }: Props) {
 
             {/* Share */}
             <div className="mt-8 flex items-center gap-4">
-              <span className="text-neutral-600">Compartir:</span>
+              <span style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)' }}>Compartir:</span>
               <button
                 type="button"
-                className="rounded-lg p-2 transition-colors hover:bg-neutral-100"
+                className="p-2 transition-colors"
+                style={{ color: 'rgba(17,17,17,.4)' }}
                 aria-label="Compartir"
               >
-                <Share2 className="h-5 w-5 text-neutral-600" />
+                <Share2 className="h-5 w-5" />
               </button>
             </div>
           </div>
 
           {/* Related posts */}
           {relatedPosts.length > 0 && (
-            <section className="mt-16 border-t border-neutral-200 pt-16">
-              <h2 className="mb-8 text-center font-display text-2xl text-neutral-900">
+            <section className="mt-16 pt-16" style={{ borderTop: '1px solid rgba(0,0,0,.07)' }}>
+              <h2
+                className="text-center"
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '24px',
+                  marginBottom: '32px',
+                }}
+              >
                 Artículos relacionados
               </h2>
               <div className="mx-auto grid max-w-4xl gap-6 md:grid-cols-2">
@@ -362,10 +451,25 @@ export default function BlogPostPage({ params }: Props) {
                       />
                     </div>
                     <div className="p-6">
-                      <h3 className="text-neutral-900 transition-colors group-hover:text-primary-600">
+                      <h3
+                        className="transition-colors group-hover:text-poppy-brown"
+                        style={{
+                          fontFamily: 'var(--font-display)',
+                          fontSize: '18px',
+                          marginBottom: '8px',
+                        }}
+                      >
                         {relatedPost.title}
                       </h3>
-                      <p className="mt-2 line-clamp-2 text-sm text-neutral-600">
+                      <p
+                        className="line-clamp-2"
+                        style={{
+                          fontSize: '13px',
+                          color: 'rgba(17,17,17,.5)',
+                          fontWeight: 300,
+                          lineHeight: 1.7,
+                        }}
+                      >
                         {relatedPost.excerpt}
                       </p>
                     </div>
@@ -376,12 +480,26 @@ export default function BlogPostPage({ params }: Props) {
           )}
 
           {/* CTA */}
-          <section className="mx-auto mt-16 max-w-2xl rounded-2xl bg-primary-50 p-8 text-center">
-            <h3 className="mb-2 text-xl text-neutral-900">¿Te ha gustado este artículo?</h3>
-            <p className="mb-4 text-neutral-600">
+          <section
+            className="mx-auto mt-16 max-w-2xl p-8 text-center md:p-12"
+            style={{ background: 'var(--off)' }}
+          >
+            <h3
+              style={{ fontFamily: 'var(--font-display)', fontSize: '22px', marginBottom: '8px' }}
+            >
+              ¿Te ha gustado este artículo?
+            </h3>
+            <p
+              style={{
+                fontSize: '14px',
+                color: 'rgba(17,17,17,.5)',
+                fontWeight: 300,
+                marginBottom: '24px',
+              }}
+            >
               Prueba nuestra granola Poppy y ponla en práctica
             </p>
-            <Link href="/tienda" className="btn-primary">
+            <Link href="/tienda" className="btn-pill">
               Ver productos
             </Link>
           </section>

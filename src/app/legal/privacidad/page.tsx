@@ -12,12 +12,16 @@ export const metadata: Metadata = {
 
 export default function PrivacidadPage() {
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom max-w-3xl">
-        <h1 className="mb-8 font-display text-4xl text-neutral-900">Política de Privacidad</h1>
+        <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '32px' }}>
+          Política de Privacidad
+        </h1>
 
         <div className="prose-custom">
-          <p className="mb-6 text-neutral-600">Última actualización: Febrero 2026</p>
+          <p style={{ color: 'rgba(17,17,17,.4)', fontSize: '13px', marginBottom: '24px' }}>
+            Última actualización: Febrero 2026
+          </p>
 
           <p>
             En cumplimiento del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27
@@ -33,7 +37,7 @@ export default function PrivacidadPage() {
             <br />
             <strong>Forma jurídica:</strong> Empresario Individual / Autónomo
             <br />
-            <strong>NIF:</strong> [Pendiente de inscripción]
+            <strong>NIF:</strong> Disponible previa solicitud a {BUSINESS.email}
             <br />
             <strong>Domicilio:</strong> {BUSINESS.address.street}, {BUSINESS.address.postalCode}{' '}
             {BUSINESS.address.city}

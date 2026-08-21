@@ -50,20 +50,20 @@ test.describe('E-commerce Happy Path', () => {
   test('should show correct pricing for different packs', async ({ page }) => {
     await page.goto('/tienda/granola-clasica-250g');
 
-    // Single unit - 9.00€
+    // Single unit - 7.00€
     await page.click('button:has-text("1 ud")');
-    await expect(page.locator('text=9,00 €')).toBeVisible();
+    await expect(page.locator('text=7,00 €')).toBeVisible();
 
-    // Pack 3 - 3% discount = 8.73€/ud
+    // Pack 3 - 3% discount = 6.79€/ud
     await page.click('button:has-text("Pack 3")');
     await expect(page.locator('text=-3%')).toBeVisible();
 
-    // Pack 4 - 5% discount = 8.55€/ud + free shipping
+    // Pack 4 - 5% discount = 6.65€/ud + free shipping
     await page.click('button:has-text("Pack 4")');
     await expect(page.locator('text=-5%')).toBeVisible();
     await expect(page.locator('text=Envío gratis')).toBeVisible();
 
-    // Pack 6 - 10% discount = 8.10€/ud
+    // Pack 6 - 10% discount = 6.30€/ud
     await page.click('button:has-text("Pack 6")');
     await expect(page.locator('text=-10%')).toBeVisible();
   });
@@ -76,7 +76,7 @@ test.describe('E-commerce Happy Path', () => {
 
     // Verify subscription badge and discount
     await expect(page.locator('text=-15%')).toBeVisible();
-    await expect(page.locator('text=7,65 €')).toBeVisible();
+    await expect(page.locator('text=5,95 €')).toBeVisible();
     await expect(page.locator('text=Envío gratis')).toBeVisible();
   });
 });

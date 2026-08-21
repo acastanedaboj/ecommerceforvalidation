@@ -113,7 +113,7 @@ export function orderShippedEmail(data: OrderShippedData): { subject: string; ht
 
     <p class="text-small" style="color: #A3A3A3;">
       P.D. Nos encantaría ver cómo disfrutas tu granola.
-      Etiquétanos en Instagram <a href="https://instagram.com/poppy.granola">@poppy.granola</a>
+      Etiquétanos en Instagram <a href="https://instagram.com/poppy_granola">@poppy_granola</a>
     </p>
   `;
 

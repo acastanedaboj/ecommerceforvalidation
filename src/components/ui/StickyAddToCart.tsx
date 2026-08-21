@@ -83,7 +83,7 @@ export function StickyAddToCart({
           ) : (
             <ShoppingBag className="h-5 w-5" />
           )}
-          <span className="whitespace-nowrap">Anadir</span>
+          <span className="whitespace-nowrap">Añadir</span>
         </button>
       </div>
     </div>

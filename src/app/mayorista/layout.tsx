@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import { getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Mayorista | Granola para Profesionales',
+  title: 'Mayorista | Granola para profesionales',
   description:
     'Granola Poppy en formato profesional para cafeterías, hoteles y tiendas. Condiciones especiales para mayoristas. Solicita información.',
   alternates: {

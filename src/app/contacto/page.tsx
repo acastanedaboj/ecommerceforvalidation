@@ -37,12 +37,21 @@ export default function ContactoPage() {
   };
 
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom">
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="mb-4 font-display text-4xl text-neutral-900 md:text-5xl">Contacto</h1>
-          <p className="mx-auto max-w-2xl text-lg text-neutral-600">
+          <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>Contacto</h1>
+          <p
+            style={{
+              fontSize: '14px',
+              color: 'rgba(17,17,17,.5)',
+              fontWeight: 300,
+              maxWidth: '520px',
+              margin: '0 auto',
+              lineHeight: 1.85,
+            }}
+          >
             ¿Tienes alguna pregunta o sugerencia? Nos encantaría escucharte. Rellena el formulario o
             contacta directamente con nosotros.
           </p>
@@ -51,19 +60,39 @@ export default function ContactoPage() {
         <div className="grid gap-12 lg:grid-cols-3">
           {/* Contact info */}
           <div className="lg:col-span-1">
-            <div className="rounded-2xl bg-primary-50 p-8">
-              <h2 className="mb-6 text-xl text-neutral-900">Información de contacto</h2>
+            <div className="p-8" style={{ background: 'var(--off)' }}>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '20px',
+                  marginBottom: '24px',
+                }}
+              >
+                Información de contacto
+              </h2>
 
               <div className="space-y-6">
                 <div className="flex gap-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary-100">
-                    <Mail className="h-5 w-5 text-primary-600" />
+                  <div
+                    className="flex h-10 w-10 flex-shrink-0 items-center justify-center"
+                    style={{ background: 'var(--white)' }}
+                  >
+                    <Mail className="h-5 w-5" style={{ color: 'var(--brown)' }} />
                   </div>
                   <div>
-                    <p className="text-neutral-900">Email</p>
+                    <p
+                      style={{
+                        fontSize: '14px',
+                        fontWeight: 400,
+                        color: 'var(--dark)',
+                        marginBottom: '2px',
+                      }}
+                    >
+                      Email
+                    </p>
                     <a
                       href={`mailto:${BUSINESS.email}`}
-                      className="text-primary-600 hover:underline"
+                      style={{ fontSize: '13px', color: 'var(--brown)', textDecoration: 'none' }}
                     >
                       {BUSINESS.email}
                     </a>
@@ -71,12 +100,31 @@ export default function ContactoPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary-100">
-                    <MapPin className="h-5 w-5 text-primary-600" />
+                  <div
+                    className="flex h-10 w-10 flex-shrink-0 items-center justify-center"
+                    style={{ background: 'var(--white)' }}
+                  >
+                    <MapPin className="h-5 w-5" style={{ color: 'var(--brown)' }} />
                   </div>
                   <div>
-                    <p className="text-neutral-900">Dirección</p>
-                    <p className="text-neutral-600">
+                    <p
+                      style={{
+                        fontSize: '14px',
+                        fontWeight: 400,
+                        color: 'var(--dark)',
+                        marginBottom: '2px',
+                      }}
+                    >
+                      Dirección
+                    </p>
+                    <p
+                      style={{
+                        fontSize: '13px',
+                        color: 'rgba(17,17,17,.5)',
+                        fontWeight: 300,
+                        lineHeight: 1.7,
+                      }}
+                    >
                       {BUSINESS.address.street}
                       <br />
                       {BUSINESS.address.postalCode} {BUSINESS.address.city}
@@ -87,12 +135,31 @@ export default function ContactoPage() {
                 </div>
 
                 <div className="flex gap-4">
-                  <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary-100">
-                    <Clock className="h-5 w-5 text-primary-600" />
+                  <div
+                    className="flex h-10 w-10 flex-shrink-0 items-center justify-center"
+                    style={{ background: 'var(--white)' }}
+                  >
+                    <Clock className="h-5 w-5" style={{ color: 'var(--brown)' }} />
                   </div>
                   <div>
-                    <p className="text-neutral-900">Horario de atención</p>
-                    <p className="text-neutral-600">
+                    <p
+                      style={{
+                        fontSize: '14px',
+                        fontWeight: 400,
+                        color: 'var(--dark)',
+                        marginBottom: '2px',
+                      }}
+                    >
+                      Horario de atención
+                    </p>
+                    <p
+                      style={{
+                        fontSize: '13px',
+                        color: 'rgba(17,17,17,.5)',
+                        fontWeight: 300,
+                        lineHeight: 1.7,
+                      }}
+                    >
                       Lunes a Viernes: 9:00 - 18:00
                       <br />
                       Fines de semana: Cerrado
@@ -102,14 +169,24 @@ export default function ContactoPage() {
               </div>
 
               {/* Social links */}
-              <div className="mt-8 border-t border-primary-200 pt-6">
-                <p className="mb-3 text-neutral-900">Síguenos en redes</p>
+              <div className="mt-8 pt-6" style={{ borderTop: '1px solid rgba(0,0,0,.07)' }}>
+                <p
+                  style={{
+                    fontSize: '14px',
+                    fontWeight: 400,
+                    color: 'var(--dark)',
+                    marginBottom: '12px',
+                  }}
+                >
+                  Síguenos en redes
+                </p>
                 <div className="flex gap-3">
                   <a
                     href={BUSINESS.socialMedia.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-neutral-600 transition-colors hover:bg-primary-100 hover:text-primary-600"
+                    className="flex h-10 w-10 items-center justify-center transition-colors"
+                    style={{ background: 'var(--white)', color: 'rgba(17,17,17,.5)' }}
                     aria-label="Instagram"
                   >
                     <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -120,7 +197,8 @@ export default function ContactoPage() {
                     href={BUSINESS.socialMedia.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-lg bg-white text-neutral-600 transition-colors hover:bg-primary-100 hover:text-primary-600"
+                    className="flex h-10 w-10 items-center justify-center transition-colors"
+                    style={{ background: 'var(--white)', color: 'rgba(17,17,17,.5)' }}
                     aria-label="Facebook"
                   >
                     <svg className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
@@ -136,9 +214,18 @@ export default function ContactoPage() {
           <div className="lg:col-span-2">
             <form
               onSubmit={handleSubmit}
-              className="rounded-2xl border border-neutral-200 bg-white p-8 shadow-sm"
+              className="p-8"
+              style={{ background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}
             >
-              <h2 className="mb-6 text-xl text-neutral-900">Envíanos un mensaje</h2>
+              <h2
+                style={{
+                  fontFamily: 'var(--font-display)',
+                  fontSize: '20px',
+                  marginBottom: '24px',
+                }}
+              >
+                Envíanos un mensaje
+              </h2>
 
               <div className="space-y-4">
                 <div className="grid gap-4 sm:grid-cols-2">
@@ -191,15 +278,16 @@ export default function ContactoPage() {
                 </div>
 
                 <div className="flex items-start gap-2">
-                  <input
-                    type="checkbox"
-                    id="privacy"
-                    required
-                    className="mt-1 h-4 w-4 rounded border-neutral-300 text-primary-600 focus:ring-primary-500"
-                  />
-                  <label htmlFor="privacy" className="text-sm text-neutral-600">
+                  <input type="checkbox" id="privacy" required className="mt-1 h-4 w-4" />
+                  <label
+                    htmlFor="privacy"
+                    style={{ fontSize: '13px', color: 'rgba(17,17,17,.5)', fontWeight: 300 }}
+                  >
                     He leído y acepto la{' '}
-                    <a href="/legal/privacidad" className="text-primary-600 hover:underline">
+                    <a
+                      href="/legal/privacidad"
+                      style={{ color: 'var(--brown)', textDecoration: 'underline' }}
+                    >
                       política de privacidad
                     </a>
                   </label>
@@ -220,7 +308,7 @@ export default function ContactoPage() {
 
         {/* Google Maps */}
         <div className="mt-12">
-          <div className="h-64 overflow-hidden rounded-2xl md:h-96">
+          <div className="h-64 overflow-hidden md:h-96">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3198.0!2d-4.4295!3d36.7213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd72f7be5c5c8a7d%3A0x0!2sAvda.%20Sor%20Teresa%20Prat%2C%2015%2C%2029003%20M%C3%A1laga!5e0!3m2!1ses!2ses!4v1706000000000"
               width="100%"

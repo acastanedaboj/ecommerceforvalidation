@@ -46,6 +46,8 @@ export function isCartSingleItem(item: CartItemUnion): item is CartItem {
 interface CartState {
   items: CartItemUnion[];
   isOpen: boolean;
+  localDelivery: boolean;
+  localDeliveryEmail: string;
 
   // Single item actions
   addItem: (item: Omit<CartItem, 'quantity' | 'type'> & { quantity?: number }) => void;
@@ -66,6 +68,10 @@ interface CartState {
   }) => void;
   removeBundle: (bundleId: string) => void;
   updateBundleQuantity: (bundleId: string, quantity: number) => void;
+
+  // Local delivery actions
+  setLocalDelivery: (enabled: boolean) => void;
+  setLocalDeliveryEmail: (email: string) => void;
 
   // General actions
   clearCart: () => void;
@@ -88,6 +94,8 @@ export const useCartStore = create<CartState>()(
     (set, get) => ({
       items: [],
       isOpen: false,
+      localDelivery: false,
+      localDeliveryEmail: '',
 
       addItem: (newItem) => {
         if (STORE_CLOSED) return;
@@ -197,7 +205,12 @@ export const useCartStore = create<CartState>()(
         }));
       },
 
-      clearCart: () => set({ items: [] }),
+      setLocalDelivery: (enabled) =>
+        set({ localDelivery: enabled, ...(enabled ? {} : { localDeliveryEmail: '' }) }),
+
+      setLocalDeliveryEmail: (email) => set({ localDeliveryEmail: email }),
+
+      clearCart: () => set({ items: [], localDelivery: false, localDeliveryEmail: '' }),
 
       setIsOpen: (isOpen) => set({ isOpen }),
 
@@ -253,14 +266,28 @@ export const useCartStore = create<CartState>()(
           };
         });
 
-        return calculateCartTotal(cartItems);
+        const result = calculateCartTotal(cartItems);
+
+        // Override shipping for local delivery in Málaga center
+        if (get().localDelivery) {
+          const diff = result.shippingCents;
+          result.shippingCents = 0;
+          result.isFreeShipping = true;
+          result.totalCents -= diff;
+        }
+
+        return result;
       },
 
       getItemKey: generateItemKey,
     }),
     {
       name: 'poppy-cart',
-      partialize: (state) => ({ items: state.items }), // Only persist items
+      partialize: (state) => ({
+        items: state.items,
+        localDelivery: state.localDelivery,
+        localDeliveryEmail: state.localDeliveryEmail,
+      }),
     }
   )
 );

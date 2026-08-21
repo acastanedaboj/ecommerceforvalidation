@@ -6,7 +6,7 @@ export const STORE_CLOSED = true;
 
 export const BUSINESS = {
   name: 'Poppy',
-  tagline: 'Sin gluten real, orgánica, artesanal',
+  tagline: 'Sin gluten, sin lactosa, artesanal',
   email: 'hola@poppy.es',
   address: {
     street: 'Avda. Sor Teresa Prat, 15',
@@ -25,19 +25,19 @@ export const BUSINESS = {
 // ==========================================
 
 export const PRICING = {
-  // Base price in cents (9.00€)
-  BASE_PRICE_CENTS: 900,
+  // Base price in cents (7.00€)
+  BASE_PRICE_CENTS: 700,
 
   // Pack discounts (percentage off per unit)
   PACK_DISCOUNTS: {
     1: 0, // No discount for single
-    3: 0.03, // 3% off = 8.73€/unit
-    4: 0.05, // 5% off = 8.55€/unit
-    6: 0.1, // 10% off = 8.10€/unit
+    3: 0.03, // 3% off = 6.79€/unit
+    4: 0.05, // 5% off = 6.65€/unit
+    6: 0.1, // 10% off = 6.30€/unit
   } as Record<number, number>,
 
   // Subscription additional discount (on top of pack 6)
-  SUBSCRIPTION_DISCOUNT: 0.15, // 15% off = 7.65€/unit
+  SUBSCRIPTION_DISCOUNT: 0.15, // 15% off = 5.95€/unit
 
   // VAT rate (Spain - reduced rate for food)
   VAT_RATE: 0.1, // 10%
@@ -57,7 +57,7 @@ export const SHIPPING = {
 
   // Delivery estimates
   ESTIMATED_DAYS: {
-    peninsula: '2-4 días laborables',
+    peninsula: '4-6 días laborables',
     islands: '5-7 días laborables',
   },
 } as const;
@@ -97,9 +97,9 @@ export const CURRENCY = {
 
 export const SEO = {
   titleTemplate: '%s | Poppy',
-  defaultTitle: 'Poppy - Granola Sin Gluten, Orgánica, Premium',
+  defaultTitle: 'Poppy - Granola sin gluten, orgánica, premium',
   defaultDescription:
-    'Granola artesanal 150g sin gluten real, elaborada con avena certificada, miel ecológica y frutos secos premium. Envío gratis a partir de 4 bolsas.',
+    'Granola artesanal 150g sin gluten real, elaborada con avena integral, miel y frutos secos premium. Envío gratis a partir de 4 bolsas.',
   siteUrl: process.env.NEXT_PUBLIC_APP_URL || 'https://poppy.es',
   ogImage: '/images/og-image.jpg',
   twitterHandle: '@poppy_granola',
@@ -126,7 +126,7 @@ export const NAVIGATION = {
     ],
     empresa: [
       { name: 'Sobre nosotros', href: '/nosotros' },
-      { name: 'Blog & Recetas', href: '/blog' },
+      { name: 'Blog & recetas', href: '/blog' },
       // { name: 'Mayorista / B2B', href: '/mayorista' }, // Hidden until ready
       { name: 'Contacto', href: '/contacto' },
     ],

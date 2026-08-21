@@ -21,7 +21,7 @@ async function main() {
     where: { slug: 'horeca' },
     update: {},
     create: {
-      name: 'Formato Horeca',
+      name: 'Formato horeca',
       slug: 'horeca',
       description: 'Formatos profesionales para hostelería y distribución',
       image: '/images/categories/horeca.jpg',
@@ -30,21 +30,21 @@ async function main() {
 
   console.log('✅ Categories created');
 
-  // Create products
+  // Create products — IDs must match src/data/products.ts exactly
   const products = [
     {
-      sku: 'GRAN-250-CLS',
-      name: 'Granola Clásica',
-      slug: 'granola-clasica-250g',
-      description: `Nuestra granola clásica es el resultado de una receta artesanal perfeccionada durante años. Elaborada con avena certificada sin gluten, frutos secos y semillas remojados para facilitar la digestión, y tostada lentamente con miel ecológica de apicultores locales.`,
-      shortDescription:
-        'Granola artesanal premium con avena sin gluten, miel ecológica y frutos secos selectos.',
-      priceInCents: 900,
-      weight: 250,
+      id: 'prod_granola_clasica',
+      sku: 'GRAN-150-CLA',
+      name: 'Granola original',
+      slug: 'granola-clasica-150g',
+      description: 'Nuestra granola original es la receta que dio vida a Poppy.',
+      shortDescription: 'Nuestra receta original con miel y frutos secos premium.',
+      priceInCents: 700,
+      weight: 150,
       ingredients:
-        'Copos de avena certificada sin gluten* (40%), miel ecológica* (12%), pipas de girasol (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecológica.',
+        'Copos de avena integral sin gluten, semillas de girasol, almendras, anacardos, miel, semillas de calabaza, aceite de coco, avellanas, lino molido, canela, jengibre.',
       allergens:
-        'Contiene: frutos de cáscara (almendras, avellanas, anacardos, pipas de girasol). Producido en instalaciones que procesan gluten, soja y sésamo.',
+        'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Puede contener trazas de soja y sésamo.',
       nutritionalInfo: {
         servingSize: 'por 100g',
         calories: 475,
@@ -56,59 +56,26 @@ async function main() {
         protein: 17,
         salt: 0.01,
       },
-      images: ['/images/products/granola-clasica-1.jpg', '/images/products/granola-clasica-2.jpg'],
+      images: ['/images/granola-clasica.png', '/images/hover-clasica.png'],
       stock: 200,
       isActive: true,
       categoryId: granolaCategory.id,
-      metaTitle: 'Granola Clásica 250g | Sin Gluten, Orgánica',
-      metaDescription:
-        'Granola artesanal clásica 250g sin gluten real. Avena certificada, miel ecológica y frutos secos premium.',
+      metaTitle: 'Comprar granola clásica sin gluten | Poppy',
+      metaDescription: 'Granola artesanal sin gluten con miel ecológica y frutos secos premium.',
     },
     {
-      sku: 'GRAN-250-CAC',
-      name: 'Granola Cacao & Avellana',
-      slug: 'granola-cacao-avellana-250g',
-      description: `Para los amantes del chocolate, nuestra granola de cacao y avellana es un capricho saludable que no decepciona.`,
-      shortDescription:
-        'Granola con cacao puro y avellanas tostadas. La opción perfecta para los amantes del chocolate saludable.',
-      priceInCents: 900,
-      weight: 250,
+      id: 'prod_granola_naranja',
+      sku: 'GRAN-150-NAR',
+      name: 'Granola con naranja',
+      slug: 'granola-naranja-150g',
+      description: 'Nuestra granola con naranja es una explosión de frescura mediterránea.',
+      shortDescription: 'Granola con piel de naranja deshidratada y miel.',
+      priceInCents: 700,
+      weight: 150,
       ingredients:
-        'Copos de avena certificada sin gluten* (38%), miel ecológica* (10%), avellanas tostadas (15%), cacao en polvo puro* (8%), chips de cacao nibs* (5%), almendras (6%), anacardos (5%), aceite de coco virgen extra* (4%), pipas de girasol (4%), lino molido (3%), vainilla natural (1%), sal marina (0.5%). *De agricultura ecológica.',
+        'Copos de avena integral sin gluten, semillas de girasol, almendras, anacardos, miel, semillas de calabaza, piel de naranja deshidratada, aceite de coco, avellanas, lino molido, canela, jengibre.',
       allergens:
-        'Contiene: frutos de cáscara (avellanas, almendras, anacardos). Producido en instalaciones que procesan gluten, soja y sésamo.',
-      nutritionalInfo: {
-        servingSize: 'por 100g',
-        calories: 485,
-        fat: 28,
-        saturatedFat: 7,
-        carbohydrates: 45,
-        sugars: 8,
-        fiber: 10,
-        protein: 17,
-        salt: 0.01,
-      },
-      images: ['/images/products/granola-cacao-1.jpg', '/images/products/granola-cacao-2.jpg'],
-      stock: 150,
-      isActive: true,
-      categoryId: granolaCategory.id,
-      metaTitle: 'Granola Cacao & Avellana 250g | Sin Gluten',
-      metaDescription:
-        'Granola artesanal de cacao puro y avellanas 250g. Sin gluten, sin azúcares añadidos.',
-    },
-    {
-      sku: 'GRAN-250-TRP',
-      name: 'Granola Tropical',
-      slug: 'granola-tropical-250g',
-      description: `Un viaje al trópico en cada cucharada. Nuestra granola tropical combina la base artesanal que conoces con coco rallado tostado, mango deshidratado y un toque de lima.`,
-      shortDescription:
-        'Granola con coco, mango deshidratado y lima. Un toque tropical para tus mañanas.',
-      priceInCents: 900,
-      weight: 250,
-      ingredients:
-        'Copos de avena certificada sin gluten* (36%), miel ecológica* (10%), coco rallado tostado (12%), mango deshidratado natural (10%), anacardos (8%), almendras (6%), pipas de calabaza (5%), aceite de coco virgen extra* (5%), semillas de chía* (3%), lino molido (3%), ralladura de lima natural (1%), jengibre en polvo (1%). *De agricultura ecológica.',
-      allergens:
-        'Contiene: frutos de cáscara (anacardos, almendras), coco. Producido en instalaciones que procesan gluten, soja y sésamo.',
+        'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Puede contener trazas de soja y sésamo.',
       nutritionalInfo: {
         servingSize: 'por 100g',
         calories: 470,
@@ -120,30 +87,59 @@ async function main() {
         protein: 16,
         salt: 0.01,
       },
-      images: [
-        '/images/products/granola-tropical-1.jpg',
-        '/images/products/granola-tropical-2.jpg',
-      ],
-      stock: 120,
+      images: ['/images/granola-naranja.png', '/images/hover-naranja.png'],
+      stock: 200,
       isActive: true,
       categoryId: granolaCategory.id,
-      metaTitle: 'Granola Tropical 250g | Coco y Mango',
+      metaTitle: 'Comprar granola de naranja sin gluten | Poppy',
       metaDescription:
-        'Granola artesanal tropical con coco, mango y lima 250g. Sin gluten, ingredientes naturales.',
+        'Granola de naranja sin gluten con piel de naranja deshidratada y miel ecológica.',
     },
     {
-      sku: 'GRAN-1KG',
-      name: 'Granola Clásica - Formato Horeca',
-      slug: 'granola-clasica-1kg-horeca',
-      description: `El mismo producto artesanal que adoran nuestros clientes, ahora en formato de 1kg pensado para profesionales.`,
+      id: 'prod_granola_datiles',
+      sku: 'GRAN-150-VEG',
+      name: 'Granola vegana',
+      slug: 'granola-vegana-150g',
+      description: 'Nuestra granola vegana con sirope de agave. 100% vegetal.',
       shortDescription:
-        'Formato 1kg para hostelería y tiendas. Misma receta artesanal, tamaño profesional.',
+        'Nuestra receta clásica endulzada con sirope de agave. Sin miel, 100% vegana.',
+      priceInCents: 700,
+      weight: 150,
+      ingredients:
+        'Copos de avena integral sin gluten, semillas de girasol, almendras, anacardos, sirope de agave, semillas de calabaza, aceite de coco, avellanas, lino molido, canela, jengibre.',
+      allergens:
+        'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Puede contener trazas de soja y sésamo.',
+      nutritionalInfo: {
+        servingSize: 'por 100g',
+        calories: 475,
+        fat: 27,
+        saturatedFat: 6,
+        carbohydrates: 46,
+        sugars: 8,
+        fiber: 9,
+        protein: 17,
+        salt: 0.01,
+      },
+      images: ['/images/vegana.png', '/images/hover-vegana.png'],
+      stock: 180,
+      isActive: true,
+      categoryId: granolaCategory.id,
+      metaTitle: 'Comprar granola vegana sin gluten | Poppy',
+      metaDescription: 'Granola vegana sin gluten con sirope de agave ecológico. 100% vegetal.',
+    },
+    {
+      id: 'prod_granola_horeca',
+      sku: 'GRAN-1KG',
+      name: 'Granola original - Formato horeca',
+      slug: 'granola-clasica-1kg-horeca',
+      description: 'El mismo producto artesanal en formato 1kg para profesionales.',
+      shortDescription: 'Formato 1kg para hostelería y tiendas. Misma receta artesanal.',
       priceInCents: 2800,
       weight: 1000,
       ingredients:
-        'Copos de avena certificada sin gluten* (40%), miel ecológica* (12%), pipas de girasol (8%), almendras (8%), avellanas (6%), anacardos (6%), pipas de girasol (5%), pipas de calabaza (5%), aceite de coco virgen extra* (4%), lino molido (3%), canela de Ceilán (1%), jengibre en polvo (1%), ralladura de naranja natural (1%). *De agricultura ecológica.',
+        'Copos de avena integral sin gluten, semillas de girasol, almendras, anacardos, miel, semillas de calabaza, aceite de coco, avellanas, lino molido, canela, jengibre.',
       allergens:
-        'Contiene: frutos de cáscara (almendras, avellanas, anacardos, pipas de girasol). Producido en instalaciones que procesan gluten, soja y sésamo.',
+        'Contiene: frutos de cáscara (almendras, avellanas, anacardos). Puede contener trazas de soja y sésamo.',
       nutritionalInfo: {
         servingSize: 'por 100g',
         calories: 475,
@@ -157,17 +153,16 @@ async function main() {
       },
       images: ['/images/products/granola-horeca-1.jpg'],
       stock: 50,
-      isActive: true,
+      isActive: false,
       categoryId: horecaCategory.id,
       metaTitle: 'Granola Clásica 1kg Horeca | Formato Profesional',
-      metaDescription:
-        'Granola artesanal formato 1kg para hostelería y tiendas. Sin gluten, ecológica.',
+      metaDescription: 'Granola artesanal formato 1kg para hostelería y tiendas.',
     },
   ];
 
   for (const product of products) {
     await prisma.product.upsert({
-      where: { sku: product.sku },
+      where: { id: product.id },
       update: product,
       create: product,
     });
@@ -180,7 +175,7 @@ async function main() {
     {
       question: '¿Vuestra granola es realmente sin gluten?',
       answer:
-        'Sí, nuestra granola está elaborada con avena certificada sin gluten. Cumplimos con el estándar europeo de ≤20 ppm de gluten.',
+        'Sí, nuestra granola está elaborada con avena certificada sin gluten en un obrador dedicado donde no entra gluten. Cumplimos con el estándar europeo de ≤20 ppm.',
       category: 'producto',
       order: 1,
     },

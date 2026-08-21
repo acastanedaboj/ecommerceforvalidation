@@ -19,16 +19,18 @@ export const faqs: FAQ[] = [
 
 Nuestro producto cumple con el estándar europeo de ≤20 ppm (partes por millón) de gluten, que es el umbral establecido para que un producto pueda etiquetarse como "sin gluten".
 
-**Nota importante:** Aunque utilizamos avena certificada, nuestra granola se produce en instalaciones que también manejan productos con gluten. Implementamos estrictos protocolos de limpieza y control, pero si tienes enfermedad celíaca severa, te recomendamos consultar con tu médico antes de consumir.`,
+Además, elaboramos en un **obrador dedicado** en Málaga donde no entra ni se manipula trigo, cebada, centeno ni ningún cereal con gluten. Esto elimina el riesgo de contaminación cruzada durante la producción.
+
+Todas nuestras granolas son también **sin lactosa**: no utilizamos ningún derivado lácteo en la elaboración.`,
     category: 'producto',
     order: 1,
   },
   {
     id: 'faq_honey',
     question: '¿Por qué usáis miel si es "sin azúcares añadidos"?',
-    answer: `Queremos ser totalmente transparentes: **nuestra granola NO es "sin azúcares añadidos"** porque utilizamos miel ecológica como endulzante natural.
+    answer: `Queremos ser totalmente transparentes: **nuestra granola NO es "sin azúcares añadidos"** porque utilizamos miel como endulzante natural.
 
-La miel es un azúcar natural que aporta dulzor y ayuda a tostar los ingredientes. Elegimos miel ecológica de apicultores locales porque:
+La miel es un azúcar natural que aporta dulzor y ayuda a tostar los ingredientes. Elegimos miel de apicultores locales porque:
 
 - Tiene un índice glucémico más bajo que el azúcar refinado
 - Aporta antioxidantes y nutrientes
@@ -42,17 +44,30 @@ Si buscas una opción sin ningún tipo de azúcar añadido, nuestra granola no e
   {
     id: 'faq_vegan',
     question: '¿Tenéis opciones veganas?',
-    answer: `**Sí, nuestra Granola de Dátiles es 100% vegana**, ya que no contiene miel ni ningún ingrediente de origen animal.
+    answer: `**Sí, nuestra Granola Vegana es 100% vegana**, ya que no contiene miel ni ningún ingrediente de origen animal.
 
-La mayoría de nuestras granolas contienen miel ecológica como endulzante natural. Elegimos miel porque:
+La mayoría de nuestras granolas contienen miel como endulzante natural. Elegimos miel porque:
 
 - Es el endulzante que mejor resultado da en textura y sabor
 - Proviene de apicultores locales con prácticas éticas
 - Aporta propiedades beneficiosas adicionales
 
-**Para veganos:** Nuestra Granola de Dátiles utiliza dátiles Medjool como endulzante natural, ofreciendo una dulzura intensa sin necesidad de miel. Está claramente etiquetada como "Sin miel (vegana)" en nuestra tienda.`,
+**Para veganos:** Nuestra Granola Vegana utiliza sirope de agave ecológico como endulzante natural, ofreciendo una dulzura suave sin necesidad de miel. Está claramente etiquetada como "Sin miel (vegana)" en nuestra tienda.`,
     category: 'producto',
     order: 3,
+  },
+  {
+    id: 'faq_lactose_free',
+    question: '¿Vuestra granola es sin lactosa?',
+    answer: `**Sí, todas nuestras granolas son 100% sin lactosa.** Ninguno de nuestros sabores contiene leche, derivados lácteos ni trazas de lactosa.
+
+Nuestros ingredientes son exclusivamente de origen vegetal (avena, frutos secos, semillas, aceite de coco) y miel o sirope de agave como endulzante. No utilizamos mantequilla, leche en polvo ni ningún otro producto lácteo en nuestra elaboración.
+
+Además, nuestro obrador dedicado en Málaga no procesa ningún producto con lactosa, lo que elimina cualquier riesgo de contaminación cruzada.
+
+**Resumen:** sin gluten, sin lactosa, sin conservantes.`,
+    category: 'producto',
+    order: 4,
   },
   {
     id: 'faq_allergens',
@@ -64,11 +79,12 @@ La mayoría de nuestras granolas contienen miel ecológica como endulzante natur
 - Avellanas
 - Anacardos
 
-**Otros alérgenos (trazas posibles):**
-Aunque no son ingredientes directos, nuestra granola se produce en instalaciones que también procesan:
-- Gluten (trigo, cebada, centeno)
+**Posibles trazas:**
+Aunque no son ingredientes directos, algunos de nuestros proveedores de frutos secos y semillas también procesan:
 - Soja
 - Sésamo
+
+Nuestro obrador es un espacio dedicado donde no entra gluten (trigo, cebada, centeno).
 
 **Recomendación:** Si tienes alergias alimentarias severas, revisa siempre el etiquetado y consulta con tu alergólogo. Puedes contactarnos para más información sobre nuestros procesos de producción.`,
     category: 'producto',
@@ -77,7 +93,9 @@ Aunque no son ingredientes directos, nuestra granola se produce en instalaciones
   {
     id: 'faq_conservation',
     question: '¿Cómo debo conservar la granola?',
-    answer: `Para mantener la frescura y el crujiente de tu granola:
+    answer: `Tostamos granola cada semana bajo demanda en lotes pequeños, nunca la almacenamos. Eso significa que recibirás tu granola solo unas horas o días tras su elaboración.
+
+Nuestras granolas se envían en un packaging de papel sostenible y 100% reciclable. Te recomendamos que cuando lleguen a casa las vuelques en un tarro de cristal para conservarla mejor.
 
 **Antes de abrir:**
 - Conservar en lugar fresco y seco
@@ -85,9 +103,9 @@ Aunque no son ingredientes directos, nuestra granola se produce en instalaciones
 - Consumir preferentemente antes de la fecha indicada en el envase
 
 **Una vez abierta:**
-- Cerrar bien el envase después de cada uso
+- Vuelca la granola en un tarro de cristal hermético
 - Consumir en un plazo de 4-6 semanas
-- Si vives en un clima húmedo, puedes transferirla a un recipiente hermético
+- Si vives en un clima húmedo, asegúrate de cerrar bien el tarro
 
 **Fecha de caducidad:** Nuestras granolas tienen una vida útil de 6 meses desde la fecha de fabricación.`,
     category: 'producto',
@@ -105,10 +123,14 @@ Aunque no son ingredientes directos, nuestra granola se produce en instalaciones
 - Tu pedido supera los 35€
 - Tienes una suscripción activa
 
+**Entrega gratuita en el centro de Málaga:**
+Si estás en Málaga capital, puedes seleccionar la opción de entrega local gratuita al hacer tu pedido. Nos pondremos en contacto contigo para concertar día y hora de entrega.
+
 **Plazos de entrega:**
-- Península: 2-4 días laborables
-- Baleares: 4-6 días laborables
-- Canarias: 5-8 días laborables (pueden aplicar tasas de importación)
+- Península: 4-6 días laborables
+- Baleares: 6-8 días laborables
+- Canarias: 8-12 días laborables (pueden aplicar tasas de importación)
+- Málaga centro (entrega local): nos ponemos de acuerdo contigo
 
 Actualmente solo realizamos envíos a España. Si estás interesado en envíos internacionales, contáctanos.`,
     category: 'envio',
@@ -126,6 +148,21 @@ Actualmente solo realizamos envíos a España. Si estás interesado en envíos i
 Si no has recibido la información de seguimiento en 48 horas laborables después de hacer tu pedido, escríbenos a hola@poppy.es`,
     category: 'envio',
     order: 2,
+  },
+  {
+    id: 'faq_local_delivery',
+    question: '¿Ofrecéis entrega en mano en Málaga?',
+    answer: `Sí. Si estás en el **centro de Málaga**, ofrecemos **entrega gratuita en mano**.
+
+**¿Cómo funciona?**
+1. Añade los productos que quieras a tu carrito
+2. Marca la opción "Entrega gratuita en el centro de Málaga"
+3. Introduce tu email de contacto
+4. Completa el pedido
+
+Nos pondremos en contacto contigo por email para concertar el día y la hora de entrega que mejor te venga. No tiene coste adicional, independientemente del importe del pedido.`,
+    category: 'envio',
+    order: 3,
   },
   {
     id: 'faq_returns',
@@ -159,9 +196,6 @@ Los gastos de envío de devolución corren por cuenta del cliente, excepto en ca
 - Mastercard
 - American Express
 
-**Otros métodos:**
-- Pago contra reembolso (gastos adicionales de 2€)
-
 Todos los pagos con tarjeta se procesan de forma segura a través de **Stripe**, cumpliendo con los estándares PCI-DSS de seguridad.
 
 Tus datos de pago nunca se almacenan en nuestros servidores.`,
@@ -192,7 +226,7 @@ Para compras B2B con volumen, ofrecemos condiciones especiales. Consulta nuestra
 
 **Qué incluye:**
 - Pack de 6 bolsas cada mes
-- **15% de descuento** sobre el precio unitario (7,65€/bolsa vs 9€)
+- **15% de descuento** sobre el precio unitario (5,95€/bolsa vs 7€)
 - Envío GRATIS siempre
 - Renovación automática mensual
 
@@ -284,13 +318,13 @@ Consulta nuestra Política de Privacidad completa para más detalles. Cumplimos 
     answer: `**Certificaciones y garantías:**
 
 - **Avena sin gluten certificada:** Nuestra avena proviene de proveedores con certificación de cultivo y procesado sin gluten
-- **Ingredientes ecológicos:** La miel, aceite de coco y parte de los ingredientes cuentan con certificación ecológica
+- **Ingredientes de calidad:** La miel de apicultores locales, aceite de coco y frutos secos premium
 - **Registro sanitario:** Cumplimos con toda la normativa sanitaria española y europea para producción alimentaria
 
 **Control de calidad:**
 - Análisis periódicos de gluten (≤20 ppm)
 - Trazabilidad completa de ingredientes
-- Producción en instalaciones registradas
+- Obrador dedicado sin gluten, registrado
 
 Puedes solicitar información adicional sobre nuestras certificaciones escribiéndonos a hola@poppy.es`,
     category: 'legal',
@@ -308,8 +342,8 @@ export function getAllFAQs(): FAQ[] {
 
 export const faqCategories = [
   { id: 'producto', name: 'Producto', icon: 'Package' },
-  { id: 'envio', name: 'Envíos y Devoluciones', icon: 'Truck' },
-  { id: 'pago', name: 'Pagos y Facturas', icon: 'CreditCard' },
+  { id: 'envio', name: 'Envíos y devoluciones', icon: 'Truck' },
+  { id: 'pago', name: 'Pagos y facturas', icon: 'CreditCard' },
   { id: 'suscripcion', name: 'Suscripción', icon: 'RefreshCw' },
-  { id: 'legal', name: 'Legal y Privacidad', icon: 'Shield' },
+  { id: 'legal', name: 'Legal y privacidad', icon: 'Shield' },
 ];

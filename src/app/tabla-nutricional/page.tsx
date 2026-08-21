@@ -5,9 +5,9 @@ import { getRetailProducts } from '@/data/products';
 import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Tabla Nutricional Granola Sin Gluten: Compara 4 Sabores | Poppy',
+  title: 'Tabla nutricional granola sin gluten: compara 3 sabores | Poppy',
   description:
-    'Compara la información nutricional de las 4 granolas Poppy: calorías, proteína, fibra, azúcares y más. Descubre cuál se adapta mejor a tu dieta. Datos por 100g y por ración.',
+    'Compara la información nutricional de las 3 granolas Poppy: calorías, proteína, fibra, azúcares y más. Descubre cuál se adapta mejor a tu dieta. Datos por 100g y por ración.',
   keywords: [
     'tabla nutricional granola sin gluten',
     'información nutricional granola',
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/tabla-nutricional'),
   },
   openGraph: {
-    title: 'Tabla Nutricional Granola Sin Gluten: Compara 4 Sabores | Poppy',
+    title: 'Tabla nutricional granola sin gluten: compara 3 sabores | Poppy',
     description:
-      'Compara calorías, proteína, fibra y azúcares de las 4 granolas Poppy. Encuentra la que mejor se adapta a tus objetivos.',
+      'Compara calorías, proteína, fibra y azúcares de las 3 granolas Poppy. Encuentra la que mejor se adapta a tus objetivos.',
     url: `${SITE_URL}/tabla-nutricional`,
     type: 'website',
     images: [
@@ -69,27 +69,27 @@ const ingredientBreakdown: Record<
   }
 > = {
   prod_granola_clasica: {
-    avena: 50,
+    avena: 34,
     semillas: 25,
-    frutosSecos: 13,
-    endulzante: 'Miel ecológica',
-    endulzantePct: 7,
-    diferenciador: 'Especias (canela, jengibre)',
+    frutosSecos: 26,
+    endulzante: 'Miel',
+    endulzantePct: 8,
+    diferenciador: 'Canela y jengibre',
   },
   prod_granola_naranja: {
-    avena: 48,
-    semillas: 24,
-    frutosSecos: 12,
-    endulzante: 'Miel ecológica',
-    endulzantePct: 7,
-    diferenciador: 'Naranja confitada + ralladura natural',
+    avena: 34,
+    semillas: 25,
+    frutosSecos: 26,
+    endulzante: 'Miel',
+    endulzantePct: 8,
+    diferenciador: 'Piel de naranja deshidratada',
   },
   prod_granola_datiles: {
-    avena: 50,
+    avena: 34,
     semillas: 25,
-    frutosSecos: 13,
+    frutosSecos: 26,
     endulzante: 'Sirope de agave',
-    endulzantePct: 7,
+    endulzantePct: 8,
     diferenciador: '100% vegana',
   },
 };
@@ -134,7 +134,7 @@ export default function TablaNutricionalPage() {
     <>
       <JsonLd data={breadcrumbSchema} />
 
-      <div className="section bg-cream-50">
+      <div style={{ paddingTop: '140px', paddingBottom: '96px', background: 'var(--off)' }}>
         <div className="container-custom">
           {/* Breadcrumbs */}
           <nav className="mb-8" aria-label="Breadcrumb">
@@ -344,8 +344,8 @@ export default function TablaNutricionalPage() {
               Desglose de ingredientes
             </h2>
             <p className="mx-auto mb-8 max-w-xl text-center text-stone-500">
-              Todas comparten una base de avena sin gluten, semillas y frutos secos premium. Lo que
-              las diferencia es el toque final.
+              Todas comparten una base de avena integral sin gluten, semillas y frutos secos
+              premium. Lo que las diferencia es el toque final.
             </p>
 
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
@@ -362,7 +362,7 @@ export default function TablaNutricionalPage() {
                     </h3>
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between">
-                        <span className="text-stone-500">Avena sin gluten</span>
+                        <span className="text-stone-500">Avena integral sin gluten</span>
                         <span className="font-medium text-stone-700">{breakdown.avena}%</span>
                       </div>
                       <div className="h-2 w-full rounded-full bg-cream-100">
@@ -416,13 +416,13 @@ export default function TablaNutricionalPage() {
             <div className="rounded-2xl bg-stone-800 p-8 md:p-10">
               <div className="mb-6 flex items-start gap-4">
                 <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-white/10">
-                  <ShieldCheck className="h-5 w-5 text-[#ffffec]" strokeWidth={1.5} />
+                  <ShieldCheck className="h-5 w-5 text-[#fcf8d5]" strokeWidth={1.5} />
                 </div>
                 <div>
-                  <h2 className="mb-2 font-display text-xl text-[#ffffec]">
+                  <h2 className="mb-2 font-display text-xl text-[#fcf8d5]">
                     Lo que NO encontrarás en ninguna granola Poppy
                   </h2>
-                  <p className="text-[#ffffec]/70">
+                  <p className="text-[#fcf8d5]/70">
                     Creemos que lo que no lleva un producto es tan importante como lo que lleva.
                   </p>
                 </div>
@@ -437,7 +437,7 @@ export default function TablaNutricionalPage() {
                   'Aromas artificiales',
                   'Gluten (< 20 ppm certificado)',
                 ].map((item) => (
-                  <div key={item} className="flex items-center gap-3 text-[#ffffec]/90">
+                  <div key={item} className="flex items-center gap-3 text-[#fcf8d5]/90">
                     <XCircle className="h-5 w-5 flex-shrink-0 text-red-400" strokeWidth={1.5} />
                     <span className="text-sm">{item}</span>
                   </div>

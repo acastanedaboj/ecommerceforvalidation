@@ -1,8 +1,8 @@
 'use client';
 
 import Image from 'next/image';
-import { Minus, Plus, X, Package } from 'lucide-react';
-import { cn, formatPrice } from '@/lib/utils';
+import { Minus, Plus, X } from 'lucide-react';
+import { formatPrice } from '@/lib/utils';
 import { generateBundleSummary, calculateBundlePrice } from '@/lib/bundle';
 import { useCartStore } from '@/store/cart-store';
 import type { BundleCartItem as BundleCartItemType } from '@/types/bundle';
@@ -43,8 +43,14 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
     return (
       <div className="flex items-center gap-3 py-3">
         {/* Image */}
-        <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden rounded-lg bg-cream-100">
-          <Package className="absolute left-1/2 top-1/2 h-6 w-6 -translate-x-1/2 -translate-y-1/2 text-earth-400" />
+        <div className="relative h-12 w-12 flex-shrink-0 overflow-hidden bg-cream-100">
+          <Image
+            src={displayImage}
+            alt={item.bundleName}
+            fill
+            className="object-cover"
+            sizes="48px"
+          />
         </div>
 
         {/* Info */}
@@ -63,100 +69,92 @@ export function BundleCartItem({ item, compact = false }: BundleCartItemProps) {
   }
 
   return (
-    <div className="group relative flex gap-4 border-b border-cream-200 py-5 last:border-b-0">
-      {/* Product images collage */}
-      <div className="relative h-20 w-20 flex-shrink-0 overflow-hidden rounded-xl bg-gradient-earth">
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Package className="h-8 w-8 text-earth-400" />
-        </div>
-        {/* Show small flavor images */}
-        <div className="absolute bottom-0 left-0 right-0 flex -space-x-1 p-1">
-          {item.flavors
-            .filter((f) => f.quantity > 0)
-            .slice(0, 3)
-            .map((flavor, index) => (
-              <div
-                key={flavor.productId}
-                className="h-6 w-6 overflow-hidden rounded-full border-2 border-white"
-                style={{ zIndex: 10 - index }}
-              >
-                <Image
-                  src={flavor.productImage}
-                  alt={flavor.productName}
-                  fill
-                  className="object-cover"
-                  sizes="24px"
-                />
-              </div>
-            ))}
-        </div>
+    <div className="flex gap-4 py-5">
+      {/* Product image — first flavor */}
+      <div
+        className="relative h-20 w-20 flex-shrink-0 overflow-hidden"
+        style={{ background: 'var(--off)' }}
+      >
+        <Image
+          src={displayImage}
+          alt={item.bundleName}
+          fill
+          className="object-cover"
+          sizes="80px"
+        />
       </div>
 
       {/* Content */}
       <div className="min-w-0 flex-1">
-        {/* Title row */}
+        {/* Name + remove */}
         <div className="flex items-start justify-between gap-2">
           <div>
-            <h4 className="font-medium leading-tight text-stone-800">{item.bundleName}</h4>
-            <p className="mt-0.5 line-clamp-2 text-sm text-stone-500">{summary}</p>
+            <p style={{ fontWeight: 700, fontSize: '14px', color: 'var(--dark)' }}>
+              {item.bundleName}
+            </p>
+            <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.45)', marginTop: '2px' }}>
+              {summary}
+            </p>
           </div>
-
-          {/* Remove button */}
           <button
             type="button"
             onClick={handleRemove}
-            className={cn(
-              'flex h-8 w-8 items-center justify-center rounded-full',
-              'text-stone-400 hover:bg-cream-100 hover:text-stone-600',
-              'transition-all duration-200',
-              'opacity-0 focus:opacity-100 group-hover:opacity-100'
-            )}
+            className="transition-all hover:opacity-50"
+            style={{
+              color: 'rgba(17,17,17,.2)',
+              background: 'none',
+              border: 'none',
+              padding: '4px',
+            }}
             aria-label="Eliminar pack"
           >
             <X className="h-4 w-4" />
           </button>
         </div>
 
-        {/* Price & Quantity row */}
+        {/* Quantity + price */}
         <div className="mt-3 flex items-center justify-between">
-          {/* Quantity controls */}
-          <div className="flex items-center gap-1">
+          <div
+            className="flex items-center"
+            style={{ border: '1px solid rgba(0,0,0,.1)', borderRadius: '100px' }}
+          >
             <button
               type="button"
               onClick={handleDecrement}
-              className={cn(
-                'flex h-8 w-8 items-center justify-center rounded-full',
-                'bg-cream-100 text-stone-600 hover:bg-cream-200',
-                'transition-colors duration-200'
-              )}
+              className="p-2 transition-colors hover:bg-off"
+              style={{ borderRadius: '100px 0 0 100px', background: 'none', border: 'none' }}
               aria-label="Reducir cantidad"
             >
-              <Minus className="h-3.5 w-3.5" />
+              <Minus className="h-3.5 w-3.5" style={{ color: 'rgba(17,17,17,.4)' }} />
             </button>
-
-            <span className="w-8 text-center font-medium text-stone-800">{item.quantity}</span>
-
+            <span
+              style={{
+                width: '32px',
+                textAlign: 'center',
+                fontSize: '13px',
+                fontWeight: 700,
+                color: 'var(--dark)',
+              }}
+            >
+              {item.quantity}
+            </span>
             <button
               type="button"
               onClick={handleIncrement}
-              className={cn(
-                'flex h-8 w-8 items-center justify-center rounded-full',
-                'bg-earth-500 text-[#ffffec] hover:bg-earth-600',
-                'transition-colors duration-200'
-              )}
+              className="p-2 transition-colors hover:bg-off"
+              style={{ borderRadius: '0 100px 100px 0', background: 'none', border: 'none' }}
               aria-label="Aumentar cantidad"
             >
-              <Plus className="h-3.5 w-3.5" />
+              <Plus className="h-3.5 w-3.5" style={{ color: 'rgba(17,17,17,.4)' }} />
             </button>
           </div>
 
-          {/* Price */}
           <div className="text-right">
-            <p className="font-display text-lg text-earth-600">
+            <p style={{ fontWeight: 700, fontSize: '14px', color: 'var(--dark)' }}>
               {formatPrice(pricing.subtotalCents)}
             </p>
             {pricing.discountPercentage > 0 && (
-              <p className="text-xs font-medium text-olive-600">
+              <p style={{ fontSize: '11px', color: 'var(--blue)', fontWeight: 300 }}>
                 -{Math.round(pricing.discountPercentage)}% ahorro
               </p>
             )}

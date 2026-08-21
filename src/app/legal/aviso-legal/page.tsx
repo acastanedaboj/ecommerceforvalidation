@@ -3,7 +3,7 @@ import { BUSINESS } from '@/lib/constants';
 import { getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Aviso Legal',
+  title: 'Aviso legal',
   description: 'Aviso legal e información corporativa de Poppy.',
   alternates: {
     canonical: getCanonicalUrl('/legal/aviso-legal'),
@@ -12,12 +12,14 @@ export const metadata: Metadata = {
 
 export default function AvisoLegalPage() {
   return (
-    <div className="section">
+    <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
       <div className="container-custom max-w-3xl">
-        <h1 className="mb-8 font-display text-4xl text-neutral-900">Aviso Legal</h1>
+        <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '32px' }}>Aviso Legal</h1>
 
         <div className="prose-custom">
-          <p className="mb-6 text-neutral-600">Última actualización: Febrero 2026</p>
+          <p style={{ color: 'rgba(17,17,17,.4)', fontSize: '13px', marginBottom: '24px' }}>
+            Última actualización: Febrero 2026
+          </p>
 
           <h2>1. Datos identificativos</h2>
           <p>
@@ -33,7 +35,7 @@ export default function AvisoLegalPage() {
               <strong>Forma jurídica:</strong> Empresario Individual / Autónomo
             </li>
             <li>
-              <strong>NIF:</strong> [Pendiente de inscripción]
+              <strong>NIF:</strong> Disponible previa solicitud a {BUSINESS.email}
             </li>
             <li>
               <strong>Domicilio:</strong> {BUSINESS.address.street}, {BUSINESS.address.postalCode}{' '}
@@ -46,7 +48,7 @@ export default function AvisoLegalPage() {
               <strong>Sitio web:</strong> https://poppy.es
             </li>
           </ul>
-          <p className="mt-2 text-sm text-neutral-600">
+          <p className="mt-2" style={{ fontSize: '13px', color: 'rgba(17,17,17,.4)' }}>
             <em>
               Nota: Este negocio está inscrito como empresario individual. El NIF se facilitará una
               vez completado el proceso de alta censal en Hacienda.

@@ -11,14 +11,14 @@ import {
 } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Preguntas Frecuentes (FAQ) | Granola Sin Gluten',
+  title: 'Preguntas frecuentes (FAQ) | Granola sin gluten',
   description:
     'Resuelve tus dudas sobre granola Poppy: ingredientes sin gluten, opciones veganas, envíos a España, métodos de pago, suscripciones y política de devoluciones.',
   alternates: {
     canonical: getCanonicalUrl('/faq'),
   },
   openGraph: {
-    title: 'Preguntas Frecuentes | Poppy',
+    title: 'Preguntas frecuentes | Poppy',
     description:
       'Todo lo que necesitas saber sobre nuestra granola sin gluten: ingredientes, envíos, pagos y suscripciones.',
     url: `${SITE_URL}/faq`,
@@ -49,14 +49,23 @@ export default function FAQPage() {
         ])}
       />
 
-      <div className="section">
+      <div style={{ paddingTop: '140px', paddingBottom: '96px' }}>
         <div className="container-custom">
           {/* Header */}
           <div className="mb-12 text-center">
-            <h1 className="mb-4 font-display text-4xl text-neutral-900 md:text-5xl">
+            <h1 style={{ fontFamily: 'var(--font-display)', marginBottom: '16px' }}>
               Preguntas frecuentes
             </h1>
-            <p className="mx-auto max-w-2xl text-lg text-neutral-600">
+            <p
+              style={{
+                fontSize: '14px',
+                color: 'rgba(17,17,17,.5)',
+                fontWeight: 300,
+                maxWidth: '520px',
+                margin: '0 auto',
+                lineHeight: 1.85,
+              }}
+            >
               Encuentra respuestas a las dudas más comunes sobre nuestros productos, envíos, pagos y
               suscripciones.
             </p>
@@ -68,9 +77,19 @@ export default function FAQPage() {
               <a
                 key={category.id}
                 href={`#${category.id}`}
-                className="inline-flex items-center gap-2 rounded-full border border-neutral-200 bg-white px-4 py-2 transition-colors hover:border-primary-300 hover:bg-primary-50"
+                className="inline-flex items-center gap-2 transition-colors"
+                style={{
+                  padding: '8px 18px',
+                  background: 'var(--white)',
+                  border: '1px solid rgba(0,0,0,.1)',
+                  borderRadius: '100px',
+                  fontSize: '13px',
+                  fontWeight: 300,
+                  color: 'rgba(17,17,17,.6)',
+                  textDecoration: 'none',
+                }}
               >
-                {categoryIcons[category.id]}
+                <span style={{ color: 'var(--brown)' }}>{categoryIcons[category.id]}</span>
                 {category.name}
               </a>
             ))}
@@ -86,38 +105,60 @@ export default function FAQPage() {
               return (
                 <section key={category.id} id={category.id}>
                   <div className="mb-6 flex items-center gap-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary-100 text-primary-600">
-                      {categoryIcons[category.id]}
+                    <div
+                      className="flex h-10 w-10 flex-shrink-0 items-center justify-center"
+                      style={{ background: 'var(--off)' }}
+                    >
+                      <span style={{ color: 'var(--brown)' }}>{categoryIcons[category.id]}</span>
                     </div>
-                    <h2 className="font-display text-2xl text-neutral-900">{category.name}</h2>
+                    <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '22px' }}>
+                      {category.name}
+                    </h2>
                   </div>
 
-                  <div className="space-y-4">
+                  <div className="space-y-3">
                     {categoryFaqs.map((faq) => (
                       <details
                         key={faq.id}
-                        className="group rounded-xl border border-neutral-200 bg-white"
+                        className="group"
+                        style={{ background: 'var(--white)', border: '1px solid rgba(0,0,0,.06)' }}
                       >
-                        <summary className="flex cursor-pointer list-none items-center justify-between p-6 text-neutral-900 transition-colors hover:text-primary-600">
+                        <summary
+                          className="flex cursor-pointer list-none items-center justify-between transition-colors"
+                          style={{
+                            padding: '20px 24px',
+                            fontSize: '15px',
+                            fontWeight: 400,
+                            color: 'var(--dark)',
+                          }}
+                        >
                           {faq.question}
-                          <span className="ml-4 flex-shrink-0 text-primary-600 transition-transform group-open:rotate-180">
+                          <span
+                            className="ml-4 flex-shrink-0 transition-transform group-open:rotate-180"
+                            style={{ color: 'var(--brown)' }}
+                          >
                             ↓
                           </span>
                         </summary>
-                        <div className="-mt-2 px-6 pb-6">
-                          <div className="prose-custom prose-sm">
-                            {faq.answer.split('\n\n').map((paragraph, index) => (
-                              <p
-                                key={index}
-                                className="mb-3 whitespace-pre-line text-neutral-600 last:mb-0"
-                                dangerouslySetInnerHTML={{
-                                  __html: paragraph
-                                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-                                    .replace(/\n- /g, '<br/>• '),
-                                }}
-                              />
-                            ))}
-                          </div>
+                        <div style={{ padding: '0 24px 20px' }}>
+                          {faq.answer.split('\n\n').map((paragraph, index) => (
+                            <p
+                              key={index}
+                              className="whitespace-pre-line last:mb-0"
+                              style={{
+                                fontSize: '14px',
+                                color: 'rgba(17,17,17,.5)',
+                                fontWeight: 300,
+                                lineHeight: 1.85,
+                                marginBottom: '12px',
+                              }}
+                              dangerouslySetInnerHTML={{
+                                __html: paragraph
+                                  .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                                  .replace(/\n- /g, '<br/>• '),
+                              }}
+                            />
+                          ))}
                         </div>
                       </details>
                     ))}
@@ -128,12 +169,27 @@ export default function FAQPage() {
           </div>
 
           {/* Contact CTA */}
-          <div className="mx-auto mt-16 max-w-2xl rounded-2xl bg-primary-50 p-8 text-center">
-            <h3 className="mb-2 text-xl text-neutral-900">¿No encuentras lo que buscas?</h3>
-            <p className="mb-4 text-neutral-600">
+          <div
+            className="mx-auto mt-16 max-w-2xl p-8 text-center md:p-12"
+            style={{ background: 'var(--off)' }}
+          >
+            <h3
+              style={{ fontFamily: 'var(--font-display)', fontSize: '22px', marginBottom: '8px' }}
+            >
+              ¿No encuentras lo que buscas?
+            </h3>
+            <p
+              style={{
+                fontSize: '14px',
+                color: 'rgba(17,17,17,.5)',
+                fontWeight: 300,
+                marginBottom: '24px',
+                lineHeight: 1.85,
+              }}
+            >
               Estamos aquí para ayudarte. Escríbenos y te responderemos lo antes posible.
             </p>
-            <Link href="/contacto" className="btn-primary">
+            <Link href="/contacto" className="btn-pill">
               Contactar
             </Link>
           </div>

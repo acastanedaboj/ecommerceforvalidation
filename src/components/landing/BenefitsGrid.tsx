@@ -21,28 +21,63 @@ export function BenefitsGrid({ title, subtitle, benefits, columns = 4 }: Benefit
   };
 
   return (
-    <section className="bg-cream-100 py-20 md:py-28">
+    <section style={{ padding: '80px 0', background: 'var(--off)' }}>
       <div className="container-custom">
         {(title || subtitle) && (
           <div className="mb-16 text-center">
             {subtitle && (
-              <p className="mb-4 text-xs uppercase tracking-widest text-stone-500">{subtitle}</p>
+              <p
+                style={{
+                  fontSize: '11px',
+                  letterSpacing: '0.08em',
+                  textTransform: 'uppercase',
+                  color: 'rgba(17,17,17,.35)',
+                  marginBottom: '16px',
+                }}
+              >
+                {subtitle}
+              </p>
             )}
-            {title && <h2 className="font-display text-stone-800">{title}</h2>}
+            {title && <h2 style={{ fontFamily: 'var(--font-display)' }}>{title}</h2>}
           </div>
         )}
 
-        <div className={`grid ${gridCols[columns]} gap-px bg-stone-200`}>
+        <div
+          className={`grid ${gridCols[columns]} gap-px`}
+          style={{ background: 'rgba(0,0,0,.06)' }}
+        >
           {benefits.map((benefit, index) => {
             const Icon = benefit.icon;
             return (
               <div
                 key={index}
-                className="group bg-cream-100 p-10 text-center transition-colors hover:bg-white"
+                className="group p-10 text-center transition-colors"
+                style={{ background: 'var(--off)' }}
               >
-                <Icon className="mx-auto mb-6 h-8 w-8 text-earth-600" strokeWidth={1} />
-                <h3 className="mb-3 font-display text-lg text-stone-800">{benefit.title}</h3>
-                <p className="text-sm leading-relaxed text-stone-600">{benefit.description}</p>
+                <Icon
+                  className="mx-auto mb-6 h-8 w-8"
+                  style={{ color: 'var(--brown)' }}
+                  strokeWidth={1}
+                />
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-display)',
+                    fontSize: '18px',
+                    marginBottom: '12px',
+                  }}
+                >
+                  {benefit.title}
+                </h3>
+                <p
+                  style={{
+                    fontSize: '13px',
+                    color: 'rgba(17,17,17,.5)',
+                    fontWeight: 300,
+                    lineHeight: 1.7,
+                  }}
+                >
+                  {benefit.description}
+                </p>
               </div>
             );
           })}
