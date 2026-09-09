@@ -13,9 +13,9 @@ import { celiacosContent } from '@/data/landing-content';
 import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/seo';
 
 export const metadata: Metadata = {
-  title: 'Granola apta para celíacos | Poppy',
+  title: 'Granola sin gluten, ingredientes aptos para celíacos | Poppy',
   description:
-    'Granola artesanal apta para celíacos. Elaborada con avena certificada sin gluten y proceso controlado. 3 sabores deliciosos. Reserva con entrega en mano en Málaga.',
+    'Granola artesanal sin gluten, hecha con ingredientes aptos para celíacos. Elaborada con avena y otros ingredientes certificados sin gluten y sin trazas. 3 sabores deliciosos. Reserva con entrega en mano en Málaga.',
   keywords: [
     'granola celiacos',
     'granola apta celiacos',
@@ -28,9 +28,9 @@ export const metadata: Metadata = {
     canonical: getCanonicalUrl('/granola-para-celiacos'),
   },
   openGraph: {
-    title: 'Granola apta para celíacos | Poppy',
+    title: 'Granola sin gluten, ingredientes aptos para celíacos | Poppy',
     description:
-      'Granola artesanal elaborada pensando en celíacos. Avena certificada sin gluten y proceso controlado. 3 sabores.',
+      'Granola artesanal elaborada pensando en celíacos. Avena y otros ingredientes certificados sin gluten y sin trazas. 3 sabores.',
     url: `${SITE_URL}/granola-para-celiacos`,
     type: 'website',
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
         url: `${SITE_URL}/products/hero.jpg`,
         width: 1200,
         height: 630,
-        alt: 'Granola Apta para Celíacos Poppy',
+        alt: 'Granola sin gluten Poppy',
       },
     ],
   },

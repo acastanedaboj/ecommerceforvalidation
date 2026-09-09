@@ -207,6 +207,20 @@ export default function HomePage() {
             <br />
             <em>Ahora, para ti</em>
           </p>
+          <p
+            style={{
+              fontSize: '15px',
+              color: 'rgba(17,17,17,.6)',
+              fontWeight: 300,
+              lineHeight: 1.85,
+              maxWidth: '560px',
+              margin: '0 auto 20px',
+            }}
+          >
+            Un día tuve que dejar el gluten de forma estricta y no encontré una granola en la que
+            confiar. Así que la empecé a hacer yo, con ingredientes certificados sin gluten. Si no
+            es buena para mí, no sale de mi cocina.
+          </p>
           <p style={{ fontSize: '12px', color: 'var(--dark)', opacity: 0.5, fontWeight: 300 }}>
             Ingredientes que reconoces &nbsp;&middot;&nbsp; Proceso que respeto
           </p>

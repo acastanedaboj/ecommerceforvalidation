@@ -316,9 +316,9 @@ La avena es naturalmente libre de gluten, pero presenta un problema: la contamin
 4. **Comprueba si hay certificaciones oficiales**
 5. **Investiga los procesos de fabricación de la marca**
 
-## Nuestra garantía
+## Nuestro compromiso
 
-En Poppy utilizamos avena de cultivos dedicados, procesada en instalaciones con estrictos protocolos de limpieza. Cada lote se analiza para garantizar niveles por debajo de 20 ppm.
+En Poppy utilizamos avena y otros ingredientes certificados sin gluten y sin trazas por sus proveedores, y elaboramos en un obrador dedicado donde no entra gluten. Cuidamos cada lote con mucho mimo.
 
 ## Más recursos
 
@@ -1261,14 +1261,14 @@ Aquí es donde se produce la mayor contaminación. Las fábricas convencionales 
 
 ### 5. El obrador: nuestra responsabilidad directa
 
-Una vez la avena llega a nuestro obrador en Málaga, mantenemos la cadena de seguridad:
+Una vez la avena llega a nuestro obrador en Málaga, mantenemos el cuidado en cada paso:
 
 - **Almacenamiento separado** de la avena respecto a otros ingredientes
 - **Protocolos de limpieza** entre lotes de producción
-- **Control de proveedores:** Todos nuestros ingredientes son verificados como aptos
-- **Certificado de análisis** de cada lote final de granola
+- **Selección de ingredientes:** partimos de ingredientes certificados sin gluten y sin trazas por sus proveedores
+- **Obrador dedicado sin gluten:** no entra ni se manipula trigo, cebada ni centeno
 
-> El resultado: cada bolsa de granola Poppy contiene **menos de 20 ppm de gluten**, cumpliendo el Reglamento (UE) 828/2014. Puedes ver nuestros [3 sabores de granola sin gluten en la tienda](/tienda).
+> El resultado: una granola elaborada con avena e ingredientes certificados sin gluten y sin trazas, con mucho cuidado en cada lote. Puedes ver nuestros [3 sabores de granola sin gluten en la tienda](/tienda).
 
 ## Cómo verificar que tu avena es realmente sin gluten
 
@@ -1297,18 +1297,18 @@ Antes de comprar cualquier producto con avena, verifica estos 5 puntos:
 4. **Información sobre trazabilidad** (origen de la avena, tipo de cultivo)
 5. **Análisis por lotes** mencionado en la etiqueta o web del fabricante
 
-> En Poppy cumplimos los 5 puntos. Si quieres saber más sobre cómo adaptamos nuestros productos para celíacos, visita nuestra [guía de granola para celíacos](/granola-para-celiacos).
+> En Poppy partimos de avena e ingredientes certificados sin gluten y sin trazas por sus proveedores, con la espiga barrada y la declaración "sin gluten" en su origen. Si quieres saber más sobre cómo trabajamos para celíacos, visita nuestra [guía de granola para celíacos](/granola-para-celiacos).
 
 ## Cómo usamos la avena en Poppy
 
-En Poppy utilizamos exclusivamente **avena certificada sin gluten** de proveedores con trazabilidad completa:
+En Poppy utilizamos exclusivamente **avena certificada sin gluten** de proveedores con origen trazable:
 
 - **Origen:** Cultivos dedicados sin rotación con cereales con gluten
 - **Procesado:** Molinos exclusivos para avena sin gluten
-- **Verificación:** Certificado de análisis en cada lote (<20 ppm)
+- **Certificación:** Certificación sin gluten del proveedor (<20 ppm)
 - **Almacenamiento:** Separación total de otros ingredientes
 
-Nuestro proceso garantiza que cada bolsa de granola Poppy es segura para personas con enfermedad celíaca. Consulta la [tabla nutricional completa](/tabla-nutricional) de nuestras 3 variedades para comparar valores.
+Así, cada bolsa de granola Poppy se elabora con avena e ingredientes aptos para personas con celiaquía. Consulta la [tabla nutricional completa](/tabla-nutricional) de nuestras 3 variedades para comparar valores.
 
 ## Preguntas frecuentes sobre avena sin gluten
 

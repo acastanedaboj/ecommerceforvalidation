@@ -11,22 +11,22 @@
 export const sinGlutenContent = {
   hero: {
     title: 'Granola sin gluten',
-    highlight: 'Apta para celíacos',
+    highlight: 'con ingredientes aptos para celíacos',
     subtitle:
-      'Elaborada con avena certificada sin gluten y un proceso de producción controlado. Disfruta de un desayuno seguro y delicioso.',
+      'Elaborada con avena y otros ingredientes certificados sin gluten y sin trazas, con mucho cuidado en cada lote. Disfruta de un desayuno delicioso.',
     ctaText: 'Ver productos',
     ctaHref: '/tienda',
     secondaryCta: {
       text: 'Más información',
       href: '#que-es',
     },
-    badges: ['Apta celíacos', 'Entrega en mano en Málaga'],
+    badges: ['Ingredientes aptos para celíacos', 'Entrega en mano en Málaga'],
     image: '/images/hero-sin-gluten.jpeg',
   },
   intro: {
     title: '¿Qué hace que nuestra granola sea sin gluten?',
     description:
-      'No basta con decir "sin gluten". En Poppy, cada paso del proceso está diseñado para garantizar que nuestras granolas sean 100% seguras para personas con celiaquía o sensibilidad al gluten. Desde la selección de la avena hasta el empaquetado final, controlamos todo.',
+      'Poppy nació de una necesidad propia: cuando tuve que dejar el gluten de forma estricta, no encontré una granola en la que confiar, así que la empecé a hacer yo. Por eso cada paso está pensado para cuidar al máximo a las personas con celiaquía o sensibilidad al gluten: partimos de avena y otros ingredientes certificados sin gluten y sin trazas, y trabajamos con mimo cada lote. Como si fuera para mí. Porque lo es.',
   },
   whatIsGlutenFree: {
     title: 'Granola sin gluten: más que una etiqueta',
@@ -56,7 +56,7 @@ export const sinGlutenContent = {
       {
         title: 'Personas con celiaquía',
         description:
-          'Si tienes celiaquía diagnosticada, nuestra granola es 100% segura para ti. Usamos avena certificada y controlamos todo el proceso para evitar cualquier contaminación cruzada.',
+          'Si tienes celiaquía diagnosticada, elaboramos nuestra granola con avena y otros ingredientes certificados sin gluten y sin trazas, cuidando cada lote frente al gluten.',
         icon: '🩺',
       },
       {
@@ -80,8 +80,8 @@ export const sinGlutenContent = {
     ],
   },
   certification: {
-    title: 'Nuestro proceso de garantía sin gluten',
-    subtitle: 'Cómo aseguramos que cada bolsa sea segura',
+    title: 'Nuestro cuidado con el gluten',
+    subtitle: 'Cómo trabajamos con ingredientes aptos para celíacos',
     steps: [
       {
         number: 1,
@@ -110,8 +110,8 @@ export const sinGlutenContent = {
     ],
   },
   benefits: {
-    title: 'Por qué nuestra granola es apta para celíacos',
-    subtitle: 'Compromiso con tu seguridad',
+    title: 'Granola sin gluten, con ingredientes aptos para celíacos',
+    subtitle: 'Nuestro cuidado en cada lote',
     items: [
       {
         title: 'Avena sin gluten',
@@ -139,13 +139,13 @@ export const sinGlutenContent = {
     title: 'Nuestras granolas sin gluten',
     subtitle: 'Todos los sabores',
     description:
-      'Los 3 sabores de Poppy son aptos para celíacos. Elige tu favorito o pruébalos todos.',
+      'Los 3 sabores de Poppy están hechos con ingredientes aptos para celíacos. Elige tu favorito o pruébalos todos.',
   },
   faqs: [
     {
       question: '¿Puedo consumir esta granola si soy celíaco?',
       answer:
-        'Sí, absolutamente. Nuestra granola está elaborada con avena certificada sin gluten y seguimos un proceso de producción controlado en instalaciones donde no se manipulan productos con gluten. Todos nuestros productos son 100% aptos para personas con celiaquía.',
+        'Nuestra granola está elaborada con avena certificada sin gluten en un obrador donde no se manipulan productos con gluten. Todos nuestros productos están hechos con ingredientes aptos para personas con celiaquía. Si tienes celiaquía y dudas, te recomendamos revisar el etiquetado y, si lo necesitas, consultarlo con tu médico.',
     },
     {
       question: '¿Qué tipo de avena utilizan?',
@@ -165,7 +165,7 @@ export const sinGlutenContent = {
     {
       question: '¿Tienen alguna certificación oficial sin gluten?',
       answer:
-        'Elaboramos nuestra granola cumpliendo los criterios para productos aptos para celíacos establecidos por el Reglamento (UE) 828/2014, utilizando avena certificada sin gluten (<20 ppm) y un proceso de producción controlado.',
+        'Somos honestos: no contamos con una certificación propia del producto final ni con análisis de laboratorio propios. Elaboramos con avena y otros ingredientes certificados sin gluten y sin trazas por sus proveedores, con mucho cuidado en cada lote.',
     },
     {
       question: '¿La avena sin gluten es realmente segura para celíacos?',
@@ -196,7 +196,7 @@ export const sinGlutenContent = {
   cta: {
     title: '¿Lista para probar una granola sin gluten de verdad?',
     description:
-      'Únete a cientos de celíacos que han descubierto que pueden disfrutar de un desayuno delicioso y seguro.',
+      'Únete a cientos de celíacos que han descubierto que pueden disfrutar de un desayuno delicioso.',
     ctaText: 'Comprar ahora',
     ctaHref: '/tienda',
     secondaryCta: {
@@ -278,7 +278,7 @@ export const veganaContent = {
     {
       question: '¿La granola vegana también es sin gluten?',
       answer:
-        'Sí. Todas nuestras granolas, incluida la vegana, están elaboradas con avena certificada sin gluten y son aptas para celíacos.',
+        'Sí. Todas nuestras granolas, incluida la vegana, están elaboradas con avena certificada sin gluten y con ingredientes aptos para celíacos.',
     },
     {
       question: '¿Es apta para dietas plant-based estrictas?',
@@ -417,22 +417,22 @@ export const artesanalContent = {
 
 export const celiacosContent = {
   hero: {
-    title: 'Granola apta',
-    highlight: 'para celíacos',
+    title: 'Granola sin gluten,',
+    highlight: 'con ingredientes aptos para celíacos',
     subtitle:
-      'Sabemos lo difícil que es encontrar productos seguros. Nuestra granola está elaborada pensando en ti: avena certificada sin gluten y proceso controlado.',
-    ctaText: 'Ver opciones seguras',
+      'Sabemos lo difícil que es encontrar tu desayuno. Nuestra granola está elaborada pensando en ti: avena y otros ingredientes certificados sin gluten y sin trazas, con mucho cuidado en cada lote.',
+    ctaText: 'Ver opciones',
     ctaHref: '/tienda',
-    badges: ['Apta celíacos', 'Avena sin gluten', '3 sabores'],
+    badges: ['Ingredientes aptos para celíacos', 'Avena sin gluten', '3 sabores'],
     image: '/images/hero-celiacos.jpeg',
   },
   intro: {
     title: 'Entendemos la celiaquía',
     description:
-      'Sabemos que para las personas con celiaquía, encontrar productos de desayuno seguros y sabrosos puede ser un desafío. Por eso hemos creado una granola que puedes disfrutar con total tranquilidad.',
+      'Sé de primera mano lo que es tener que dejar el gluten de forma estricta: Poppy nació justo de ahí. No encontraba una granola en la que confiar, así que la empecé a hacer yo, con avena y otros ingredientes certificados sin gluten y sin trazas. La cuido como si fuera para mí. Porque lo es.',
   },
   commitment: {
-    title: 'Nuestro compromiso con tu seguridad',
+    title: 'Nuestro cuidado con el gluten',
     subtitle: 'Productos de confianza',
     items: [
       {
@@ -458,14 +458,14 @@ export const celiacosContent = {
     ],
   },
   products: {
-    title: 'Todos nuestros sabores son aptos para celíacos',
+    title: 'Todos nuestros sabores, con ingredientes aptos para celíacos',
     subtitle: '3 opciones para ti',
     description:
-      'No tienes que elegir "la única opción sin gluten". Los 3 sabores de Poppy son seguros para personas con celiaquía.',
+      'No tienes que elegir "la única opción sin gluten". Los 3 sabores de Poppy están hechos con ingredientes aptos para personas con celiaquía.',
   },
   faqs: [
     {
-      question: '¿Por qué es apta para celíacos?',
+      question: '¿Por qué está hecha con ingredientes aptos para celíacos?',
       answer:
         'Utilizamos avena certificada sin gluten y elaboramos en un obrador dedicado donde no entra gluten. No utilizamos trigo, cebada ni centeno en ninguno de nuestros productos.',
     },
@@ -513,8 +513,8 @@ export const celiacosContent = {
   cta: {
     title: 'Disfruta del desayuno otra vez',
     description:
-      'Únete a cientos de celíacos que han descubierto que pueden tener un desayuno delicioso y seguro.',
-    ctaText: 'Comprar granola apta celíacos',
+      'Únete a cientos de celíacos que han descubierto que pueden tener un desayuno delicioso.',
+    ctaText: 'Comprar granola sin gluten',
     ctaHref: '/tienda',
     secondaryCta: {
       text: 'Más sobre sin gluten',
@@ -539,7 +539,7 @@ export const mercadonaContent = {
       text: 'Ver comparativa',
       href: '#comparativa',
     },
-    badges: ['Artesanal', 'Apta celíacos', 'Ingredientes premium'],
+    badges: ['Artesanal', 'Sin gluten', 'Ingredientes premium'],
     image: '/images/hero-sin-gluten.jpeg',
   },
   intro: {
@@ -613,9 +613,9 @@ export const mercadonaContent = {
           'Conocemos cada lote, cada ingrediente. Apoyar a Poppy es apoyar la producción local y artesanal.',
       },
       {
-        title: 'Realmente apta para celíacos',
+        title: 'Ingredientes aptos para celíacos',
         description:
-          'No solo "sin gluten", sino elaborada con proceso controlado y avena certificada. Seguridad garantizada.',
+          'No solo "sin gluten": elaborada con avena y otros ingredientes certificados sin gluten y sin trazas, con mucho cuidado en cada lote.',
       },
     ],
   },
@@ -640,7 +640,7 @@ export const mercadonaContent = {
     {
       question: '¿Es mejor la granola de Mercadona o la de Poppy?',
       answer:
-        'Depende de lo que valores. Mercadona ofrece conveniencia y precio bajo. Poppy ofrece ingredientes premium, elaboración artesanal, sabor superior y proceso controlado para celíacos. Si buscas calidad y quieres apoyar producción local, Poppy es tu opción.',
+        'Depende de lo que valores. Mercadona ofrece conveniencia y precio bajo. Poppy ofrece ingredientes premium, elaboración artesanal, sabor superior e ingredientes aptos para celíacos. Si buscas calidad y quieres apoyar producción local, Poppy es tu opción.',
     },
     {
       question: '¿Por qué es más cara la granola Poppy?',
@@ -660,7 +660,7 @@ export const mercadonaContent = {
     {
       question: '¿La granola de Mercadona es apta para celíacos?',
       answer:
-        'Depende del producto específico. No todas las granolas de Mercadona son sin gluten. Debes verificar siempre la etiqueta. La ventaja de Poppy es que TODAS nuestras granolas son aptas para celíacos con avena certificada.',
+        'Depende del producto específico. No todas las granolas de Mercadona son sin gluten. Debes verificar siempre la etiqueta. La ventaja de Poppy es que TODAS nuestras granolas se elaboran con avena y otros ingredientes aptos para celíacos.',
     },
   ],
   cta: {
@@ -755,7 +755,7 @@ export const carrefourContent = {
           'Sin "saborizantes naturales" ni nombres raros. Solo lo que usarías en tu cocina: avena, miel, frutos secos, aceite de coco.',
       },
       {
-        title: 'Trazabilidad total',
+        title: 'Origen conocido',
         description:
           'Conocemos el origen de cada ingrediente. Miel de apicultores de Málaga, avena certificada, frutos secos seleccionados.',
       },
@@ -765,7 +765,7 @@ export const carrefourContent = {
           'Hecha en Málaga con amor e ingredientes locales. Apoyar a Poppy es apoyar el comercio local y sostenible.',
       },
       {
-        title: 'Garantía celiaca',
+        title: 'Todos sin gluten',
         description:
           'Todos nuestros sabores son sin gluten, siempre. No hace falta leer letras pequeñas o buscar entre opciones.',
       },
@@ -815,7 +815,7 @@ export const carrefourContent = {
     {
       question: '¿La granola de Carrefour es apta para celíacos?',
       answer:
-        'Carrefour tiene varias opciones certificadas sin gluten (marca Carrefour Bio, Schär, etc.). Siempre verifica el símbolo de espiga barrada y la etiqueta. Con Poppy, todos los sabores son automáticamente aptos para celíacos.',
+        'Carrefour tiene varias opciones certificadas sin gluten (marca Carrefour Bio, Schär, etc.). Siempre verifica el símbolo de espiga barrada y la etiqueta. Con Poppy, todos los sabores se elaboran con avena y otros ingredientes aptos para celíacos.',
     },
     {
       question: '¿Qué pasa si no me gusta Poppy?',
@@ -1616,9 +1616,9 @@ export const guiaCeliaquiaContent = {
     },
   ],
   cta: {
-    title: '¿Buscas una granola segura para celíacos?',
+    title: '¿Buscas una granola sin gluten para celíacos?',
     description:
-      'En Poppy elaboramos granola artesanal con avena certificada sin gluten (<20 ppm) y un proceso de producción controlado. Todos nuestros sabores son aptos para celíacos. Entrega en mano en Málaga.',
+      'En Poppy elaboramos granola artesanal con avena y otros ingredientes certificados sin gluten y sin trazas, con mucho cuidado en cada lote. Todos nuestros sabores están hechos con ingredientes aptos para celíacos. Entrega en mano en Málaga.',
     ctaText: 'Ver granolas sin gluten',
     ctaHref: '/tienda',
     secondaryCta: {
@@ -1768,7 +1768,7 @@ export const ecologicaContent = {
       },
       {
         title: 'Producción artesanal',
-        description: 'Elaborada en Málaga en pequeños lotes. Cada bolsa es trazable y controlada.',
+        description: 'Elaborada en Málaga en pequeños lotes, con mimo y cuidado en cada tanda.',
       },
     ],
   },
@@ -1782,7 +1782,7 @@ export const ecologicaContent = {
     {
       question: '¿Poppy tiene certificación ecológica oficial?',
       answer:
-        'Seleccionamos ingredientes ecológicos de proveedores certificados: miel ecológica de apicultores locales, avena certificada sin gluten y aceite de coco. Nuestro obrador en Málaga garantiza trazabilidad completa. La certificación ecológica oficial del producto final está en proceso de obtención.',
+        'Seleccionamos ingredientes ecológicos de proveedores certificados: miel ecológica de apicultores locales, avena certificada sin gluten y aceite de coco. Elaboramos de forma artesanal en Málaga, con mucho cuidado en cada lote. Somos honestos: no contamos con una certificación ecológica propia del producto final.',
     },
     {
       question: '¿De dónde viene la miel?',
@@ -1890,7 +1890,7 @@ export const mejorGranolaContent = {
         price: '€4.67/100g',
         frutosSecos: '51%',
         endulzante: 'Miel ecológica / Sirope de agave',
-        certificacion: 'Sin gluten (<20 ppm)',
+        certificacion: 'Sin gluten (avena certificada)',
         pros: [
           'Mayor contenido de frutos secos del mercado',
           'Ingredientes artesanals',

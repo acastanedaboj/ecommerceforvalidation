@@ -435,7 +435,7 @@ export default function TablaNutricionalPage() {
                   'Conservantes',
                   'Colorantes artificiales',
                   'Aromas artificiales',
-                  'Gluten (< 20 ppm certificado)',
+                  'Gluten (avena certificada sin gluten)',
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3 text-[#fcf8d5]/90">
                     <XCircle className="h-5 w-5 flex-shrink-0 text-red-400" strokeWidth={1.5} />

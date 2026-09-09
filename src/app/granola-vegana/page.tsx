@@ -161,7 +161,8 @@ export default function GranolaVeganaPage() {
             </div>
 
             <p className="mt-4 text-sm text-stone-500">
-              Todas nuestras granolas son sin gluten y aptas para celíacos.{' '}
+              Todas nuestras granolas son sin gluten y están hechas con ingredientes aptos para
+              celíacos.{' '}
               <Link href="/granola-sin-gluten" className="text-earth-600 hover:underline">
                 Más información
               </Link>

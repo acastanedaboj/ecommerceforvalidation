@@ -209,8 +209,8 @@ export default function GranolaSinGlutenMercadonaPage() {
           <div className="mt-8 rounded-lg border border-primary-100 bg-primary-50 p-6">
             <p className="text-neutral-900">
               <strong>💡 Consejo:</strong> Si compras en Mercadona, verifica siempre la etiqueta. La
-              disponibilidad de productos sin gluten varía según la tienda. Con Poppy, sabes que
-              todos los sabores son siempre aptos para celíacos.
+              disponibilidad de productos sin gluten varía según la tienda. Con Poppy, todos los
+              sabores se elaboran con ingredientes aptos para celíacos.
             </p>
           </div>
         </div>
@@ -220,7 +220,7 @@ export default function GranolaSinGlutenMercadonaPage() {
       <div className="bg-neutral-50">
         <ProductsShowcase
           title="Nuestras granolas sin gluten"
-          subtitle="3 sabores, todos aptos para celíacos"
+          subtitle="3 sabores, todos con ingredientes aptos para celíacos"
           description="No tienes que conformarte con una sola opción. Todos los sabores de Poppy son artesanales y sin gluten."
           products={products}
         />

@@ -17,9 +17,9 @@ export const faqs: FAQ[] = [
     question: '¿Vuestra granola es realmente sin gluten?',
     answer: `Sí, nuestra granola está elaborada con **avena certificada sin gluten**. Esto significa que la avena proviene de cultivos dedicados y ha sido procesada en instalaciones controladas para evitar contaminación cruzada.
 
-Nuestro producto cumple con el estándar europeo de ≤20 ppm (partes por millón) de gluten, que es el umbral establecido para que un producto pueda etiquetarse como "sin gluten".
+El etiquetado "sin gluten" corresponde al estándar europeo de ≤20 ppm (partes por millón). Usamos avena y otros **ingredientes certificados sin gluten y sin trazas** por sus proveedores.
 
-Además, elaboramos en un **obrador dedicado** en Málaga donde no entra ni se manipula trigo, cebada, centeno ni ningún cereal con gluten. Esto elimina el riesgo de contaminación cruzada durante la producción.
+Además, elaboramos en un **obrador dedicado** en Málaga donde no entra ni se manipula trigo, cebada, centeno ni ningún cereal con gluten. Así cuidamos al máximo cada lote frente al gluten.
 
 Todas nuestras granolas son también **sin lactosa**: no utilizamos ningún derivado lácteo en la elaboración.`,
     category: 'producto',
@@ -222,18 +222,15 @@ Consulta nuestra Política de Privacidad completa para más detalles. Cumplimos 
   {
     id: 'faq_certifications',
     question: '¿Tenéis certificaciones de calidad?',
-    answer: `**Certificaciones y garantías:**
+    answer: `Somos honestos contigo: Poppy es un proyecto artesanal y **no contamos con certificaciones ni análisis de laboratorio propios** del producto final.
 
-- **Avena sin gluten certificada:** Nuestra avena proviene de proveedores con certificación de cultivo y procesado sin gluten
-- **Ingredientes de calidad:** La miel de apicultores locales, aceite de coco y frutos secos premium
-- **Registro sanitario:** Cumplimos con toda la normativa sanitaria española y europea para producción alimentaria
+Lo que sí hacemos con mucho cuidado:
 
-**Control de calidad:**
-- Análisis periódicos de gluten (≤20 ppm)
-- Trazabilidad completa de ingredientes
-- Obrador dedicado sin gluten, registrado
+- **Ingredientes certificados sin gluten y sin trazas:** partimos de avena y otros ingredientes con certificación sin gluten de sus proveedores
+- **Cocina dedicada sin gluten:** elaboramos en un espacio donde no entra ni se manipula trigo, cebada ni centeno
+- **Cuidado personal:** detrás de Poppy hay alguien que sigue una dieta sin gluten estricta y no puede comer gluten, así que tratamos cada lote como si fuera para nosotros mismos
 
-Puedes solicitar información adicional sobre nuestras certificaciones escribiéndonos a hola@poppy.es`,
+Si tienes cualquier duda sobre nuestros ingredientes o nuestro proceso, escríbenos a hola@poppy.es`,
     category: 'legal',
     order: 2,
   },

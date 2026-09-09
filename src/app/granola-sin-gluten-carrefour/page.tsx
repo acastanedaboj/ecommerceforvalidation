@@ -203,8 +203,8 @@ export default function GranolaSinGlutenCarrefourPage() {
           <div className="mt-8 rounded-lg border border-primary-100 bg-primary-50 p-6">
             <p className="text-neutral-900">
               <strong>💡 Consejo:</strong> Si compras en Carrefour, busca el símbolo de espiga
-              barrada y verifica siempre la lista de ingredientes. Con Poppy, sabes que todos los
-              sabores son siempre aptos para celíacos.
+              barrada y verifica siempre la lista de ingredientes. Con Poppy, todos los sabores se
+              elaboran con ingredientes aptos para celíacos.
             </p>
           </div>
         </div>
