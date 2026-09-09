@@ -116,7 +116,6 @@ export const NAVIGATION = {
   main: [
     { name: 'Inicio', href: '/' },
     { name: 'Tienda', href: '/tienda' },
-    { name: 'Suscripción', href: '/suscripcion' },
     { name: 'Recetas', href: '/blog' },
     { name: 'Nosotros', href: '/nosotros' },
     // { name: 'B2B / Horeca', href: '/mayorista' }, // Hidden until ready
@@ -125,7 +124,6 @@ export const NAVIGATION = {
     tienda: [
       { name: 'Todos los productos', href: '/tienda' },
       { name: 'Packs', href: '/tienda?pack=true' },
-      { name: 'Suscripción', href: '/suscripcion' },
     ],
     empresa: [
       { name: 'Sobre nosotros', href: '/nosotros' },

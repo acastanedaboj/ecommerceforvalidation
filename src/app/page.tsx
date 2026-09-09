@@ -9,7 +9,7 @@ import { HomeClient } from '@/components/home/HomeClient';
 export const metadata: Metadata = {
   title: `Granola sin gluten artesanal | ${BRAND_NAME} — Hecha en Málaga`,
   description:
-    'Granola artesanal hecha en Málaga con avena sin gluten, miel ecológica y frutos secos. Tostada despacio en lotes pequeños. Envío gratis a partir de 4 bolsas.',
+    'Granola artesanal hecha en Málaga con avena sin gluten, miel ecológica y frutos secos. Tostada despacio en lotes pequeños. Reserva la tuya con entrega en mano en Málaga.',
   alternates: {
     canonical: getCanonicalUrl('/'),
   },
@@ -389,33 +389,20 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* ── SUBSCRIPTION SPLIT ── */}
+      {/* ── ON-DEMAND SPLIT ── */}
       <div className="split fi">
         <div className="split-body" style={{ background: 'var(--off)' }}>
-          <span className="section-label">Suscripción</span>
+          <span className="section-label">Bajo demanda</span>
           <h2 className="split-title">
-            Para quienes no quieren <em>quedarse sin</em>
+            Hecha para ti, <em>por encargo</em>
           </h2>
-          <div className="sub-stats">
-            <div>
-              <div className="stat-val">&minus;15%</div>
-              <div className="stat-lbl">cada pedido</div>
-            </div>
-            <div>
-              <div className="stat-val">6</div>
-              <div className="stat-lbl">bolsas al mes</div>
-            </div>
-            <div>
-              <div className="stat-val">0</div>
-              <div className="stat-lbl">sin compromiso</div>
-            </div>
-          </div>
           <p className="split-text">
-            Entrega en tu puerta, cancela cuando quieras. El 15% que ahorras es mi modo de decir
-            gracias.
+            Elaboramos en pequeños lotes cada semana en nuestro obrador de Málaga. Reserva tu
+            granola y te la entregamos en mano, recién tostada. Nada de almacén: solo granola fresca
+            cuando la pides.
           </p>
-          <Link href="/suscripcion" className="btn-pill">
-            Empezar la suscripción
+          <Link href="/tienda" className="btn-pill">
+            Reservar la mía
           </Link>
         </div>
         <div

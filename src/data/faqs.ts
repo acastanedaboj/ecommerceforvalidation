@@ -115,52 +115,34 @@ Nuestras granolas se envían en un packaging de papel sostenible y 100% reciclab
   // ENVÍO
   {
     id: 'faq_shipping_cost',
-    question: '¿Cuánto cuesta el envío?',
-    answer: `**Envío estándar a Península:** 4,95€
+    question: '¿Hacéis envíos?',
+    answer: `Ahora mismo elaboramos **bajo demanda** en pequeños lotes y **entregamos en mano en Málaga**, sin envíos por mensajería.
 
-**Envío GRATIS cuando:**
-- Compras 4 o más bolsas
-- Tu pedido supera los 35€
-- Tienes una suscripción activa
-
-**Entrega gratuita en el centro de Málaga:**
-Si estás en Málaga capital, puedes seleccionar la opción de entrega local gratuita al hacer tu pedido. Nos pondremos en contacto contigo para concertar día y hora de entrega.
-
-**Plazos de entrega:**
-- Península: 4-6 días laborables
-- Baleares: 6-8 días laborables
-- Canarias: 8-12 días laborables (pueden aplicar tasas de importación)
-- Málaga centro (entrega local): nos ponemos de acuerdo contigo
-
-Actualmente solo realizamos envíos a España. Si estás interesado en envíos internacionales, contáctanos.`,
+Reserva tu granola desde la tienda: te confirmamos cuándo estará listo el próximo lote y concertamos la entrega. La entrega en mano no tiene coste.`,
     category: 'envio',
     order: 1,
   },
   {
     id: 'faq_shipping_tracking',
-    question: '¿Puedo hacer seguimiento de mi pedido?',
-    answer: `¡Por supuesto! Una vez que tu pedido sea enviado:
+    question: '¿Cuándo estará lista mi reserva?',
+    answer: `Elaboramos en lotes pequeños cada semana. Cuando reservas, te escribimos por email para confirmar en qué lote entra tu granola y concretar el **día y la hora de la entrega en mano en Málaga**.
 
-1. Recibirás un email con el número de seguimiento
-2. Podrás rastrear tu paquete desde tu cuenta o directamente en la web de la empresa de transporte
-3. Te enviaremos notificaciones cuando el pedido esté en reparto
-
-Si no has recibido la información de seguimiento en 48 horas laborables después de hacer tu pedido, escríbenos a hola@poppy.es`,
+Si tienes cualquier duda, escríbenos a hola@poppy.es`,
     category: 'envio',
     order: 2,
   },
   {
     id: 'faq_local_delivery',
-    question: '¿Ofrecéis entrega en mano en Málaga?',
-    answer: `Sí. Si estás en el **centro de Málaga**, ofrecemos **entrega gratuita en mano**.
+    question: '¿Cómo reservo mi granola?',
+    answer: `Es muy sencillo, y es nuestra forma de entrega ahora mismo:
 
 **¿Cómo funciona?**
-1. Añade los productos que quieras a tu carrito
-2. Marca la opción "Entrega gratuita en el centro de Málaga"
-3. Introduce tu email de contacto
-4. Completa el pedido
+1. Elige tu granola en la tienda
+2. Pulsa "Reservar" y déjanos tu nombre, email y teléfono
+3. Te contactamos para confirmar el próximo lote y concertar día y hora
+4. Te la entregamos **en mano en Málaga**, recién hecha
 
-Nos pondremos en contacto contigo por email para concertar el día y la hora de entrega que mejor te venga. No tiene coste adicional, independientemente del importe del pedido.`,
+Sin coste de entrega y sin compromiso.`,
     category: 'envio',
     order: 3,
   },
@@ -188,17 +170,10 @@ Los gastos de envío de devolución corren por cuenta del cliente, excepto en ca
   // PAGO
   {
     id: 'faq_payment_methods',
-    question: '¿Qué métodos de pago aceptáis?',
-    answer: `Aceptamos los siguientes métodos de pago:
+    question: '¿Cómo se paga?',
+    answer: `Como trabajamos con reserva y **entrega en mano en Málaga**, el pago se hace **en el momento de la entrega**.
 
-**Tarjeta de crédito/débito:**
-- Visa
-- Mastercard
-- American Express
-
-Todos los pagos con tarjeta se procesan de forma segura a través de **Stripe**, cumpliendo con los estándares PCI-DSS de seguridad.
-
-Tus datos de pago nunca se almacenan en nuestros servidores.`,
+Cuando concertamos el día y la hora, acordamos también la forma de pago que mejor te venga. Sin pagos online ni datos de tarjeta.`,
     category: 'pago',
     order: 1,
   },
@@ -216,74 +191,6 @@ Tus datos de pago nunca se almacenan en nuestros servidores.`,
 Para compras B2B con volumen, ofrecemos condiciones especiales. Consulta nuestra página de mayoristas.`,
     category: 'pago',
     order: 2,
-  },
-
-  // SUSCRIPCIÓN
-  {
-    id: 'faq_subscription_works',
-    question: '¿Cómo funciona la suscripción?',
-    answer: `Nuestra suscripción es la forma más económica de disfrutar de granola Poppy cada mes:
-
-**Qué incluye:**
-- Pack de 6 bolsas cada mes
-- **15% de descuento** sobre el precio unitario (5,95€/bolsa vs 7€)
-- Envío GRATIS siempre
-- Renovación automática mensual
-
-**Cómo funciona:**
-1. Te suscribes seleccionando la opción de suscripción
-2. Cada mes procesamos tu pedido automáticamente
-3. Recibes tu granola sin preocuparte de nada
-
-**Flexibilidad total:**
-- Puedes pausar o cancelar cuando quieras
-- Sin permanencia ni penalizaciones
-- Gestiona todo desde tu cuenta`,
-    category: 'suscripcion',
-    order: 1,
-  },
-  {
-    id: 'faq_subscription_cancel',
-    question: '¿Cómo cancelo mi suscripción?',
-    answer: `Cancelar tu suscripción es muy sencillo:
-
-**Desde tu cuenta:**
-1. Inicia sesión en tu cuenta
-2. Ve a "Mis suscripciones"
-3. Haz clic en "Cancelar suscripción"
-4. Confirma la cancelación
-
-**Por email:**
-También puedes escribirnos a hola@poppy.es solicitando la cancelación.
-
-**Importante:**
-- La cancelación se hará efectiva al final del período actual ya pagado
-- Recibirás tu último envío correspondiente al período pagado
-- No hay penalizaciones ni cargos adicionales
-- Puedes reactivar tu suscripción cuando quieras`,
-    category: 'suscripcion',
-    order: 2,
-  },
-  {
-    id: 'faq_subscription_pause',
-    question: '¿Puedo pausar mi suscripción temporalmente?',
-    answer: `¡Sí! Entendemos que a veces necesitas un descanso:
-
-**Cómo pausar:**
-1. Accede a tu cuenta
-2. Ve a "Mis suscripciones"
-3. Selecciona "Pausar suscripción"
-4. Elige la duración de la pausa (1-3 meses)
-
-**Qué pasa cuando pausas:**
-- No se procesarán pagos durante la pausa
-- No recibirás envíos hasta que reactives
-- Tu descuento de suscriptor se mantiene
-
-**Reactivación:**
-Tu suscripción se reactivará automáticamente cuando termine el período de pausa, o puedes reactivarla manualmente antes desde tu cuenta.`,
-    category: 'suscripcion',
-    order: 3,
   },
 
   // LEGAL
@@ -342,8 +249,7 @@ export function getAllFAQs(): FAQ[] {
 
 export const faqCategories = [
   { id: 'producto', name: 'Producto', icon: 'Package' },
-  { id: 'envio', name: 'Envíos y devoluciones', icon: 'Truck' },
+  { id: 'envio', name: 'Reserva y entrega', icon: 'Truck' },
   { id: 'pago', name: 'Pagos y facturas', icon: 'CreditCard' },
-  { id: 'suscripcion', name: 'Suscripción', icon: 'RefreshCw' },
   { id: 'legal', name: 'Legal y privacidad', icon: 'Shield' },
 ];

@@ -178,14 +178,9 @@ export function Footer() {
       <div className="bg-[#5a3f38] py-5">
         <div className="container-custom">
           <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-[#fcf8d5]">
-            <span>Pago seguro:</span>
-            <div className="flex items-center gap-2">
-              <span className="rounded-md bg-[#4a322c] px-2.5 py-1">Visa</span>
-              <span className="rounded-md bg-[#4a322c] px-2.5 py-1">Mastercard</span>
-              <span className="rounded-md bg-[#4a322c] px-2.5 py-1">Stripe</span>
-            </div>
+            <span>Elaborado a mano en Málaga</span>
             <span className="hidden text-[#fcf8d5] sm:inline">|</span>
-            <span>Envío seguro a toda España</span>
+            <span>Entrega en mano · bajo demanda</span>
           </div>
         </div>
       </div>

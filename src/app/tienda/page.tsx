@@ -160,10 +160,10 @@ export default function TiendaPage() {
         </div>
       </div>
 
-      {/* ── SUBSCRIPTION — editorial ── */}
+      {/* ── HOW RESERVATIONS WORK ── */}
       <section style={{ padding: '96px 0', background: 'var(--white)', textAlign: 'center' }}>
         <div className="container-custom" style={{ maxWidth: '640px' }}>
-          <span className="section-label">Suscripción mensual</span>
+          <span className="section-label">Cómo funciona</span>
           <h2
             style={{
               fontFamily: 'var(--font-display)',
@@ -172,7 +172,7 @@ export default function TiendaPage() {
               marginBottom: '20px',
             }}
           >
-            Recíbela cada mes <em>con un 15% menos</em>
+            Reserva y te avisamos <em>del próximo lote</em>
           </h2>
           <p
             style={{
@@ -184,11 +184,12 @@ export default function TiendaPage() {
               marginBottom: '36px',
             }}
           >
-            6 bolsas al mes. Envío gratis siempre. Sin permanencia, cancela cuando quieras. El 15%
-            que ahorras es nuestra forma de decir gracias.
+            Elige tu granola y déjanos tus datos. Te confirmamos cuándo estará listo el próximo lote
+            y concertamos la <strong style={{ fontWeight: 500 }}>entrega en mano en Málaga</strong>.
+            Sin envíos ni esperas: recién tostada.
           </p>
-          <Link href="/suscripcion" className="btn-pill">
-            Empezar la suscripción
+          <Link href="/contacto" className="btn-pill">
+            ¿Dudas? Escríbenos
           </Link>
         </div>
       </section>

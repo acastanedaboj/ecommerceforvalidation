@@ -361,7 +361,6 @@ export default function ProductDetailPage() {
                   {[1, 3, 4, 6].map((pack) => {
                     const isSelected = selectedPack === pack && !isSubscription;
                     const packDiscount = getPackDiscount(pack);
-                    const hasFreeShip = pack >= 4;
                     return (
                       <button
                         key={pack}
@@ -394,7 +393,7 @@ export default function ProductDetailPage() {
                               marginTop: '2px',
                             }}
                           >
-                            -{Math.round(packDiscount * 100)}%{hasFreeShip ? ' · envío gratis' : ''}
+                            -{Math.round(packDiscount * 100)}%
                           </span>
                         )}
                         {pack === 1 && (
@@ -426,55 +425,59 @@ export default function ProductDetailPage() {
                 </button>
               </div>
 
-              {/* Subscription — conversational, not a toggle */}
-              <div className="mb-8">
-                <button
-                  type="button"
-                  onClick={() => {
-                    setIsSubscription(!isSubscription);
-                    if (!isSubscription) setSelectedPack(6);
-                  }}
-                  className="w-full text-left transition-all duration-200"
-                  style={{
-                    padding: '20px 24px',
-                    border: isSubscription
-                      ? '1.5px solid var(--brown)'
-                      : '1px solid rgba(0,0,0,.08)',
-                    background: isSubscription ? 'var(--white)' : 'transparent',
-                  }}
-                >
-                  <div className="flex items-center justify-between">
-                    <div>
-                      <p
+              {/* Subscription — hidden while online purchasing is disabled */}
+              {!STORE_CLOSED && (
+                <div className="mb-8">
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setIsSubscription(!isSubscription);
+                      if (!isSubscription) setSelectedPack(6);
+                    }}
+                    className="w-full text-left transition-all duration-200"
+                    style={{
+                      padding: '20px 24px',
+                      border: isSubscription
+                        ? '1.5px solid var(--brown)'
+                        : '1px solid rgba(0,0,0,.08)',
+                      background: isSubscription ? 'var(--white)' : 'transparent',
+                    }}
+                  >
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p
+                          style={{
+                            fontSize: '14px',
+                            fontWeight: isSubscription ? 700 : 400,
+                            color: 'var(--dark)',
+                            marginBottom: '4px',
+                          }}
+                        >
+                          Recíbela cada mes con un 15% menos
+                        </p>
+                        <p
+                          style={{ fontSize: '12px', color: 'rgba(17,17,17,.55)', fontWeight: 300 }}
+                        >
+                          6 bolsas · {formatPrice(calculateSubscriptionUnitPrice())}/ud · Envío
+                          gratis · Sin permanencia
+                        </p>
+                      </div>
+                      <span
                         style={{
-                          fontSize: '14px',
-                          fontWeight: isSubscription ? 700 : 400,
-                          color: 'var(--dark)',
-                          marginBottom: '4px',
+                          fontSize: '11px',
+                          fontWeight: 700,
+                          color: isSubscription ? 'var(--white)' : 'var(--brown)',
+                          background: isSubscription ? 'var(--brown)' : 'transparent',
+                          border: isSubscription ? 'none' : '1px solid var(--brown)',
+                          padding: '4px 10px',
                         }}
                       >
-                        Recíbela cada mes con un 15% menos
-                      </p>
-                      <p style={{ fontSize: '12px', color: 'rgba(17,17,17,.55)', fontWeight: 300 }}>
-                        6 bolsas · {formatPrice(calculateSubscriptionUnitPrice())}/ud · Envío gratis
-                        · Sin permanencia
-                      </p>
+                        -15%
+                      </span>
                     </div>
-                    <span
-                      style={{
-                        fontSize: '11px',
-                        fontWeight: 700,
-                        color: isSubscription ? 'var(--white)' : 'var(--brown)',
-                        background: isSubscription ? 'var(--brown)' : 'transparent',
-                        border: isSubscription ? 'none' : '1px solid var(--brown)',
-                        padding: '4px 10px',
-                      }}
-                    >
-                      -15%
-                    </span>
-                  </div>
-                </button>
-              </div>
+                  </button>
+                </div>
+              )}
 
               {/* Quantity */}
               <div className="mb-8">
@@ -710,7 +713,7 @@ export default function ProductDetailPage() {
       {/* ── FRESHNESS & SHIPPING — editorial ── */}
       <section style={{ padding: '96px 0', background: 'var(--white)', textAlign: 'center' }}>
         <div className="container-custom" style={{ maxWidth: '600px' }}>
-          <span className="section-label">Frescura y envío</span>
+          <span className="section-label">Frescura y entrega</span>
           <h2
             style={{
               fontFamily: 'var(--font-display)',
@@ -742,7 +745,8 @@ export default function ProductDetailPage() {
               marginBottom: '12px',
             }}
           >
-            Envío a toda España en 4-6 días laborables. Entrega gratuita en el centro de Málaga.
+            Reserva la tuya y te la entregamos en mano en Málaga, recién hecha. Sin envíos: solo
+            granola fresca, del obrador a tus manos.
           </p>
           <p
             style={{
