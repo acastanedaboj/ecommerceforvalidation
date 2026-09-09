@@ -318,7 +318,7 @@ La avena es naturalmente libre de gluten, pero presenta un problema: la contamin
 
 ## Nuestro compromiso
 
-En Poppy utilizamos avena y otros ingredientes certificados sin gluten y sin trazas por sus proveedores, y elaboramos en un obrador dedicado donde no entra gluten. Cuidamos cada lote con mucho mimo.
+En Poppy utilizamos avena y otros ingredientes certificados sin gluten y sin trazas por sus proveedores, y elaboramos de forma artesanal en un espacio dedicado donde no entra gluten. Cuidamos cada lote con mucho mimo.
 
 ## Más recursos
 
@@ -1259,14 +1259,14 @@ Aquí es donde se produce la mayor contaminación. Las fábricas convencionales 
 
 **Lo que hacemos en Poppy:** Nuestra avena se procesa en **molinos exclusivos para avena sin gluten**. No comparten línea con ningún cereal con gluten. Cada lote se analiza antes de salir del molino.
 
-### 5. El obrador: nuestra responsabilidad directa
+### 5. La elaboración: nuestra responsabilidad directa
 
-Una vez la avena llega a nuestro obrador en Málaga, mantenemos el cuidado en cada paso:
+Una vez la avena llega a nuestras manos en Málaga, mantenemos el cuidado en cada paso:
 
 - **Almacenamiento separado** de la avena respecto a otros ingredientes
 - **Protocolos de limpieza** entre lotes de producción
 - **Selección de ingredientes:** partimos de ingredientes certificados sin gluten y sin trazas por sus proveedores
-- **Obrador dedicado sin gluten:** no entra ni se manipula trigo, cebada ni centeno
+- **Espacio dedicado sin gluten:** no entra ni se manipula trigo, cebada ni centeno
 
 > El resultado: una granola elaborada con avena e ingredientes certificados sin gluten y sin trazas, con mucho cuidado en cada lote. Puedes ver nuestros [3 sabores de granola sin gluten en la tienda](/tienda).
 
@@ -1373,7 +1373,7 @@ Ninguna diferencia nutricional ni de sabor. La única diferencia es el proceso d
     ],
     metaTitle: 'Contaminación cruzada del gluten en avena: guía completa | Poppy',
     metaDescription:
-      'Cadena de contaminación cruzada del gluten en avena paso a paso: campo, cosecha, molino y obrador. Cómo verificar etiquetas y elegir avena realmente segura para celíacos.',
+      'Cadena de contaminación cruzada del gluten en avena paso a paso: campo, cosecha, molino y elaboración. Cómo verificar etiquetas y elegir avena realmente segura para celíacos.',
     faqs: [
       {
         question: '¿La avena de Mercadona es sin gluten?',

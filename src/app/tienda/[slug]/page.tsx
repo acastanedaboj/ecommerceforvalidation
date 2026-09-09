@@ -746,7 +746,7 @@ export default function ProductDetailPage() {
             }}
           >
             Reserva la tuya y te la entregamos en mano en Málaga, recién hecha. Sin envíos: solo
-            granola fresca, del obrador a tus manos.
+            granola fresca, del horno a tus manos.
           </p>
           <p
             style={{

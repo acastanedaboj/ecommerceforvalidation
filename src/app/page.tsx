@@ -165,7 +165,7 @@ export default function HomePage() {
           <span className="marquee-dot">&middot;</span>
           <span>Sin lactosa</span>
           <span className="marquee-dot">&middot;</span>
-          <span>Obrador propio en Málaga</span>
+          <span>Elaborada a mano en Málaga</span>
           <span className="marquee-dot">&middot;</span>
           <span>Crafted for pleasure</span>
           <span className="marquee-dot">&middot;</span>
@@ -181,7 +181,7 @@ export default function HomePage() {
           <span className="marquee-dot">&middot;</span>
           <span>Sin lactosa</span>
           <span className="marquee-dot">&middot;</span>
-          <span>Obrador propio en Málaga</span>
+          <span>Elaborada a mano en Málaga</span>
           <span className="marquee-dot">&middot;</span>
           <span>Crafted for pleasure</span>
           <span className="marquee-dot">&middot;</span>
@@ -217,9 +217,9 @@ export default function HomePage() {
               margin: '0 auto 20px',
             }}
           >
-            Un día tuve que dejar el gluten de forma estricta y no encontré una granola en la que
-            confiar. Así que la empecé a hacer yo, con ingredientes certificados sin gluten. Si no
-            es buena para mí, no sale de mi cocina.
+            Un día el médico me dijo que tenía que dejar el gluten de forma estricta y para siempre.
+            No encontré una granola en la que confiar, así que la empecé a hacer yo, con
+            ingredientes certificados sin gluten. Si no es buena para mí, no la vendo.
           </p>
           <p style={{ fontSize: '12px', color: 'var(--dark)', opacity: 0.5, fontWeight: 300 }}>
             Ingredientes que reconoces &nbsp;&middot;&nbsp; Proceso que respeto
@@ -233,7 +233,7 @@ export default function HomePage() {
           <div className="split-img-inner">
             <Image
               src="/images/nosotros-divider.png"
-              alt="Obrador, Málaga"
+              alt="Elaboración artesanal en Málaga"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -251,7 +251,7 @@ export default function HomePage() {
               opacity: 0.35,
             }}
           >
-            Obrador, Málaga
+            Elaboración artesanal
           </span>
         </div>
         <div className="split-body">
@@ -411,9 +411,9 @@ export default function HomePage() {
             Hecha para ti, <em>por encargo</em>
           </h2>
           <p className="split-text">
-            Elaboramos en pequeños lotes cada semana en nuestro obrador de Málaga. Reserva tu
-            granola y te la entregamos en mano, recién tostada. Nada de almacén: solo granola fresca
-            cuando la pides.
+            Elaboramos en pequeños lotes cada semana, a mano en Málaga. Reserva tu granola y te la
+            entregamos en mano, recién tostada. Nada de almacén: solo granola fresca cuando la
+            pides.
           </p>
           <Link href="/tienda" className="btn-pill">
             Reservar la mía

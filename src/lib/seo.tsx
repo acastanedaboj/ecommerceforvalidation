@@ -353,7 +353,7 @@ export function buildLocalBusinessSchema() {
     name: `${BRAND_NAME} - Granola Artesanal Sin Gluten`,
     alternateName: BRAND_NAME,
     description:
-      'Compra granola artesanal sin gluten online. Obrador en Málaga. Elaboramos con avena integral sin gluten, miel de apicultores locales y frutos secos premium. Envío gratis +4 uds a toda España.',
+      'Compra granola artesanal sin gluten online. Elaborada a mano en Málaga. Elaboramos con avena integral sin gluten, miel de apicultores locales y frutos secos premium. Reserva con entrega en mano en Málaga.',
     image: [`${SITE_URL}/images/hero-granola.jpeg`, `${SITE_URL}/logo.svg`],
     url: SITE_URL,
     email: BUSINESS.email,

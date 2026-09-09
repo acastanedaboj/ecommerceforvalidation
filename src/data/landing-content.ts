@@ -26,7 +26,7 @@ export const sinGlutenContent = {
   intro: {
     title: '¿Qué hace que nuestra granola sea sin gluten?',
     description:
-      'Poppy nació de una necesidad propia: cuando tuve que dejar el gluten de forma estricta, no encontré una granola en la que confiar, así que la empecé a hacer yo. Por eso cada paso está pensado para cuidar al máximo a las personas con celiaquía o sensibilidad al gluten: partimos de avena y otros ingredientes certificados sin gluten y sin trazas, y trabajamos con mimo cada lote. Como si fuera para mí. Porque lo es.',
+      'Poppy nació de una necesidad propia: cuando el médico me dijo que tenía que dejar el gluten de forma estricta y para siempre, no encontré una granola en la que confiar, así que la empecé a hacer yo. Por eso cada paso está pensado para cuidar al máximo a las personas con celiaquía o sensibilidad al gluten: partimos de avena y otros ingredientes certificados sin gluten y sin trazas, y trabajamos con mimo cada lote. Como si fuera para mí. Porque lo es.',
   },
   whatIsGlutenFree: {
     title: 'Granola sin gluten: más que una etiqueta',
@@ -99,13 +99,13 @@ export const sinGlutenContent = {
         number: 3,
         title: 'Producción controlada',
         description:
-          'Elaboramos la granola en un obrador dedicado donde no entra gluten. No procesamos trigo, cebada ni centeno. Limpiamos y desinfectamos todo el equipo antes de cada lote.',
+          'Elaboramos la granola en un espacio dedicado donde no entra gluten. No procesamos trigo, cebada ni centeno. Limpiamos y desinfectamos todo el equipo antes de cada lote.',
       },
       {
         number: 4,
         title: 'Etiquetado transparente',
         description:
-          'Cada bolsa incluye información clara de alérgenos. Nuestro obrador es y será siempre un espacio libre de gluten.',
+          'Cada bolsa incluye información clara de alérgenos. Elaboramos siempre en un espacio libre de gluten.',
       },
     ],
   },
@@ -145,7 +145,7 @@ export const sinGlutenContent = {
     {
       question: '¿Puedo consumir esta granola si soy celíaco?',
       answer:
-        'Nuestra granola está elaborada con avena certificada sin gluten en un obrador donde no se manipulan productos con gluten. Todos nuestros productos están hechos con ingredientes aptos para personas con celiaquía. Si tienes celiaquía y dudas, te recomendamos revisar el etiquetado y, si lo necesitas, consultarlo con tu médico.',
+        'Nuestra granola está elaborada con avena certificada sin gluten en un espacio donde no se manipulan productos con gluten. Todos nuestros productos están hechos con ingredientes aptos para personas con celiaquía. Si tienes celiaquía y dudas, te recomendamos revisar el etiquetado y, si lo necesitas, consultarlo con tu médico.',
     },
     {
       question: '¿Qué tipo de avena utilizan?',
@@ -180,7 +180,7 @@ export const sinGlutenContent = {
     {
       question: '¿Dónde puedo conseguir granola sin gluten Poppy?',
       answer:
-        'Elaboramos bajo demanda en nuestro obrador de Málaga. Reserva la tuya en poppy.es y te la entregamos en mano en Málaga, recién hecha. Así controlamos la calidad y la frescura de cada lote.',
+        'Elaboramos bajo demanda en Málaga. Reserva la tuya en poppy.es y te la entregamos en mano en Málaga, recién hecha. Así controlamos la calidad y la frescura de cada lote.',
     },
     {
       question: '¿Cuánto dura la granola sin gluten una vez abierta?',
@@ -394,9 +394,9 @@ export const artesanalContent = {
         'Ahora mismo elaboramos bajo demanda en pequeños lotes y entregamos en mano en Málaga, sin envíos por mensajería. Reserva la tuya y concertamos día y hora de entrega. Sin coste de entrega.',
     },
     {
-      question: '¿Puedo visitar vuestro obrador?',
+      question: '¿Puedo visitar dónde elaboráis?',
       answer:
-        'Nuestro obrador está en Málaga. Aunque no tenemos un horario de visitas establecido, puedes contactarnos en hola@poppy.es si quieres conocernos.',
+        'Elaboramos en Málaga. Aunque no tenemos un horario de visitas establecido, puedes contactarnos en hola@poppy.es si quieres conocernos.',
     },
   ],
   cta: {
@@ -429,7 +429,7 @@ export const celiacosContent = {
   intro: {
     title: 'Entendemos la celiaquía',
     description:
-      'Sé de primera mano lo que es tener que dejar el gluten de forma estricta: Poppy nació justo de ahí. No encontraba una granola en la que confiar, así que la empecé a hacer yo, con avena y otros ingredientes certificados sin gluten y sin trazas. La cuido como si fuera para mí. Porque lo es.',
+      'Sé de primera mano lo que es que el médico te diga que tienes que dejar el gluten de forma estricta y para siempre: Poppy nació justo de ahí. No encontraba una granola en la que confiar, así que la empecé a hacer yo, con avena y otros ingredientes certificados sin gluten y sin trazas. La cuido como si fuera para mí. Porque lo es.',
   },
   commitment: {
     title: 'Nuestro cuidado con el gluten',
@@ -443,7 +443,7 @@ export const celiacosContent = {
       {
         title: 'Proceso controlado',
         description:
-          'Elaboramos en un obrador dedicado sin gluten. No entra trigo, cebada ni centeno en nuestras instalaciones.',
+          'Elaboramos en un espacio dedicado sin gluten. No entra trigo, cebada ni centeno en nuestras instalaciones.',
       },
       {
         title: 'Ingredientes seguros',
@@ -467,7 +467,7 @@ export const celiacosContent = {
     {
       question: '¿Por qué está hecha con ingredientes aptos para celíacos?',
       answer:
-        'Utilizamos avena certificada sin gluten y elaboramos en un obrador dedicado donde no entra gluten. No utilizamos trigo, cebada ni centeno en ninguno de nuestros productos.',
+        'Utilizamos avena certificada sin gluten y elaboramos en un espacio dedicado donde no entra gluten. No utilizamos trigo, cebada ni centeno en ninguno de nuestros productos.',
     },
     {
       question: '¿Qué tipo de avena utilizan exactamente?',
@@ -477,12 +477,12 @@ export const celiacosContent = {
     {
       question: '¿Cómo controlan la contaminación cruzada?',
       answer:
-        'Elaboramos en un obrador dedicado sin gluten en Málaga. No entra trigo, cebada ni centeno. Verificamos cada materia prima antes de usarla y seguimos protocolos estrictos de limpieza.',
+        'Elaboramos en un espacio dedicado sin gluten en Málaga. No entra trigo, cebada ni centeno. Verificamos cada materia prima antes de usarla y seguimos protocolos estrictos de limpieza.',
     },
     {
       question: '¿Puedo consumirla si soy muy sensible al gluten?',
       answer:
-        'Nuestra granola está elaborada con avena certificada sin gluten en un obrador dedicado donde no entra gluten. Sin embargo, si eres extremadamente sensible, te recomendamos consultar con tu médico antes de probar cualquier producto nuevo.',
+        'Nuestra granola está elaborada con avena certificada sin gluten en un espacio dedicado donde no entra gluten. Sin embargo, si eres extremadamente sensible, te recomendamos consultar con tu médico antes de probar cualquier producto nuevo.',
     },
     {
       question: '¿Qué otros alérgenos contiene?',
@@ -1667,7 +1667,7 @@ export const ecologicaContent = {
         title: 'Avena certificada sin gluten',
         percentage: '48-50%',
         description:
-          'Cultivada en campos dedicados sin rotación con cereales con gluten. Certificada sin gluten (<20 ppm). Elaboramos en obrador dedicado donde no entra gluten.',
+          'Cultivada en campos dedicados sin rotación con cereales con gluten. Certificada sin gluten (<20 ppm). Elaboramos en espacio dedicado donde no entra gluten.',
         icon: '🌾',
       },
       {
@@ -1945,8 +1945,8 @@ export const mejorGranolaContent = {
         price: '€3.50-4.00/100g',
         frutosSecos: '~20%',
         endulzante: 'Sirope de agave, dátiles',
-        certificacion: 'Sin gluten (obrador dedicado)',
-        pros: ['Obrador 100% sin gluten', 'Producción artesanal', 'Tiendas físicas'],
+        certificacion: 'Sin gluten (espacio dedicado)',
+        pros: ['Espacio 100% sin gluten', 'Producción artesanal', 'Tiendas físicas'],
         contras: ['Distribución limitada (Valencia, Barcelona, Tenerife)', 'Precio elevado'],
         verdict: 'Excelente opción artesanal si vives en sus zonas de distribución.',
         isOurs: false,

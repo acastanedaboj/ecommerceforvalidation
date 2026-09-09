@@ -76,8 +76,7 @@ export default function TiendaPage() {
               }}
             >
               Tres sabores. Ingredientes reales. Sin gluten, sin lactosa. Elaborada{' '}
-              <em style={{ fontStyle: 'italic' }}>bajo demanda</em> cada semana en nuestro obrador
-              de Málaga.
+              <em style={{ fontStyle: 'italic' }}>bajo demanda</em> cada semana a mano en Málaga.
             </p>
           </div>
         </div>
@@ -122,7 +121,7 @@ export default function TiendaPage() {
           <div className="split-img-inner">
             <Image
               src="/images/nosotros-divider.png"
-              alt="Obrador Poppy, Málaga"
+              alt="Elaboración artesanal Poppy, Málaga"
               fill
               className="object-cover"
               sizes="(max-width: 768px) 100vw, 50vw"
@@ -142,7 +141,7 @@ export default function TiendaPage() {
               backdropFilter: 'blur(4px)',
             }}
           >
-            Obrador, Málaga
+            Elaboración artesanal
           </span>
         </div>
         <div className="split-body">

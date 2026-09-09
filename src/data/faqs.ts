@@ -19,7 +19,7 @@ export const faqs: FAQ[] = [
 
 El etiquetado "sin gluten" corresponde al estándar europeo de ≤20 ppm (partes por millón). Usamos avena y otros **ingredientes certificados sin gluten y sin trazas** por sus proveedores.
 
-Además, elaboramos en un **obrador dedicado** en Málaga donde no entra ni se manipula trigo, cebada, centeno ni ningún cereal con gluten. Así cuidamos al máximo cada lote frente al gluten.
+Además, elaboramos de forma artesanal en Málaga, en un espacio dedicado donde no entra ni se manipula trigo, cebada, centeno ni ningún cereal con gluten. Así cuidamos al máximo cada lote frente al gluten.
 
 Todas nuestras granolas son también **sin lactosa**: no utilizamos ningún derivado lácteo en la elaboración.`,
     category: 'producto',
@@ -63,7 +63,7 @@ La mayoría de nuestras granolas contienen miel como endulzante natural. Elegimo
 
 Nuestros ingredientes son exclusivamente de origen vegetal (avena, frutos secos, semillas, aceite de coco) y miel o sirope de agave como endulzante. No utilizamos mantequilla, leche en polvo ni ningún otro producto lácteo en nuestra elaboración.
 
-Además, nuestro obrador dedicado en Málaga no procesa ningún producto con lactosa, lo que elimina cualquier riesgo de contaminación cruzada.
+Además, elaboramos en un espacio dedicado que no procesa ningún producto con lactosa, lo que elimina cualquier riesgo de contaminación cruzada.
 
 **Resumen:** sin gluten, sin lactosa, sin conservantes.`,
     category: 'producto',
@@ -84,7 +84,7 @@ Aunque no son ingredientes directos, algunos de nuestros proveedores de frutos s
 - Soja
 - Sésamo
 
-Nuestro obrador es un espacio dedicado donde no entra gluten (trigo, cebada, centeno).
+Elaboramos en un espacio dedicado donde no entra gluten (trigo, cebada, centeno).
 
 **Recomendación:** Si tienes alergias alimentarias severas, revisa siempre el etiquetado y consulta con tu alergólogo. Puedes contactarnos para más información sobre nuestros procesos de producción.`,
     category: 'producto',
