@@ -29,6 +29,7 @@ import { ProductCard } from '@/components/product/ProductCard';
 import { ImageGallery } from '@/components/ui/ImageGallery';
 import { StickyAddToCart } from '@/components/ui/StickyAddToCart';
 import { BundleBuilderModal } from '@/components/bundle';
+import { ReservationModal } from '@/components/reservation/ReservationModal';
 import toast from 'react-hot-toast';
 
 export default function ProductDetailPage() {
@@ -41,6 +42,7 @@ export default function ProductDetailPage() {
   const [quantity, setQuantity] = useState(1);
   const [isAdding, setIsAdding] = useState(false);
   const [isBundleModalOpen, setIsBundleModalOpen] = useState(false);
+  const [isReservationOpen, setIsReservationOpen] = useState(false);
 
   const addItem = useCartStore((state) => state.addItem);
   const toggleCart = useCartStore((state) => state.toggleCart);
@@ -541,27 +543,32 @@ export default function ProductDetailPage() {
                 </div>
 
                 {STORE_CLOSED ? (
-                  <div
-                    className="w-full text-center"
-                    style={{
-                      background: 'rgba(17,17,17,.05)',
-                      padding: '16px 24px',
-                      fontSize: '13px',
-                      fontWeight: 400,
-                      color: 'rgba(17,17,17,.6)',
-                      lineHeight: 1.7,
-                    }}
-                  >
-                    <div style={{ fontWeight: 600, color: 'var(--dark)', marginBottom: '4px' }}>
-                      Entrega en mano en Málaga centro
-                    </div>
-                    Elaboramos por lotes pequeños.{' '}
-                    <Link
-                      href="/contacto"
-                      style={{ textDecoration: 'underline', color: 'var(--dark)' }}
+                  <div>
+                    <button
+                      type="button"
+                      onClick={() => setIsReservationOpen(true)}
+                      className={cn(
+                        'btn w-full justify-center bg-earth-500 py-4 text-base text-[#ffffec] hover:bg-earth-600'
+                      )}
                     >
-                      Escríbenos para reservar
-                    </Link>
+                      Reservar
+                    </button>
+                    <p
+                      style={{
+                        fontSize: '12px',
+                        color: 'rgba(17,17,17,.5)',
+                        fontWeight: 300,
+                        textAlign: 'center',
+                        marginTop: '12px',
+                        lineHeight: 1.6,
+                      }}
+                    >
+                      Elaboramos por lotes pequeños. Te lo preparamos y lo entregamos{' '}
+                      <strong style={{ fontWeight: 500, color: 'var(--dark)' }}>
+                        en mano en Málaga
+                      </strong>
+                      .
+                    </p>
                   </div>
                 ) : (
                   <button
@@ -776,21 +783,31 @@ export default function ProductDetailPage() {
         </section>
       )}
 
-      {/* Sticky Add to Cart for mobile */}
-      <StickyAddToCart
-        productName={product.name}
-        totalPrice={totalPrice}
-        onAddToCart={handleAddToCart}
-        isLoading={isAdding}
-        isDisabled={product.stock === 0 || STORE_CLOSED}
-        observeElementId="main-cta"
-      />
+      {/* Sticky Add to Cart for mobile — hidden while purchasing is disabled */}
+      {!STORE_CLOSED && (
+        <StickyAddToCart
+          productName={product.name}
+          totalPrice={totalPrice}
+          onAddToCart={handleAddToCart}
+          isLoading={isAdding}
+          isDisabled={product.stock === 0}
+          observeElementId="main-cta"
+        />
+      )}
 
       {/* Bundle Builder Modal */}
       <BundleBuilderModal
         isOpen={isBundleModalOpen}
         onClose={() => setIsBundleModalOpen(false)}
         initialProductId={product.id}
+      />
+
+      {/* Reservation Modal */}
+      <ReservationModal
+        isOpen={isReservationOpen}
+        onClose={() => setIsReservationOpen(false)}
+        productName={product.name}
+        initialQuantity={totalUnits}
       />
     </>
   );

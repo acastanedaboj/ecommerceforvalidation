@@ -2,6 +2,9 @@
 // Business Constants - Poppy
 // ==========================================
 
+// Online purchasing disabled: the catalog is browsable but there is no cart or
+// checkout. Products are reserved instead (see ReservationModal) and delivered
+// by hand in Málaga. Set to false to re-enable the full online store.
 export const STORE_CLOSED = true;
 
 export const BUSINESS = {

@@ -13,6 +13,7 @@ import {
   InternalOrderNotificationData,
 } from './templates/internal-order-notification';
 import { orderReadyPickupEmail, OrderReadyPickupData } from './templates/order-ready-pickup';
+import { reservationEmail, ReservationData } from './templates/reservation';
 import {
   subscriptionActiveEmail,
   subscriptionRenewedEmail,
@@ -154,6 +155,20 @@ export async function sendOrderReadyForPickupEmail(data: OrderReadyPickupData) {
 }
 
 /**
+ * Send a reservation notification to the Poppy team (catalog reservation flow)
+ */
+export async function sendReservationNotification(data: ReservationData) {
+  const { subject, html } = reservationEmail(data);
+  return sendEmail({
+    to: INTERNAL_NOTIFICATION_RECIPIENTS,
+    subject,
+    html,
+    replyTo: data.email,
+    tags: [{ name: 'type', value: 'reservation' }],
+  });
+}
+
+/**
  * Send internal order notification to the Poppy team
  */
 export async function sendInternalOrderNotification(data: InternalOrderNotificationData) {
@@ -177,6 +192,7 @@ export type {
   OrderConfirmationData,
   OrderShippedData,
   OrderReadyPickupData,
+  ReservationData,
   SubscriptionActiveData,
   SubscriptionRenewedData,
   SubscriptionFailedData,

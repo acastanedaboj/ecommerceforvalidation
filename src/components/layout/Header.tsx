@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X, ShoppingBag } from 'lucide-react';
 import { useCartStore, useCartItemCount } from '@/store/cart-store';
-import { NAVIGATION } from '@/lib/constants';
+import { NAVIGATION, STORE_CLOSED } from '@/lib/constants';
 import { cn } from '@/lib/utils';
 import { UserMenu } from '@/components/auth/UserMenu';
 
@@ -120,28 +120,30 @@ export function Header() {
             <UserMenu />
           </div>
 
-          {/* Cart button */}
-          <button
-            type="button"
-            onClick={toggleCart}
-            className="relative p-3 transition-opacity hover:opacity-55"
-            style={{
-              color: useDarkText ? '#111111' : '#fcf8d5',
-              background: 'none',
-              border: 'none',
-            }}
-            aria-label={`Carrito de compra (${itemCount} productos)`}
-          >
-            <ShoppingBag className="h-5 w-5" strokeWidth={1.5} />
-            {itemCount > 0 && (
-              <span
-                className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full text-[9px] font-bold"
-                style={{ background: 'var(--yellow)', color: 'var(--dark)' }}
-              >
-                {itemCount > 9 ? '9+' : itemCount}
-              </span>
-            )}
-          </button>
+          {/* Cart button — hidden while online purchasing is disabled */}
+          {!STORE_CLOSED && (
+            <button
+              type="button"
+              onClick={toggleCart}
+              className="relative p-3 transition-opacity hover:opacity-55"
+              style={{
+                color: useDarkText ? '#111111' : '#fcf8d5',
+                background: 'none',
+                border: 'none',
+              }}
+              aria-label={`Carrito de compra (${itemCount} productos)`}
+            >
+              <ShoppingBag className="h-5 w-5" strokeWidth={1.5} />
+              {itemCount > 0 && (
+                <span
+                  className="absolute right-1 top-1 flex h-4 w-4 items-center justify-center rounded-full text-[9px] font-bold"
+                  style={{ background: 'var(--yellow)', color: 'var(--dark)' }}
+                >
+                  {itemCount > 9 ? '9+' : itemCount}
+                </span>
+              )}
+            </button>
+          )}
 
           {/* Mobile menu button */}
           <button

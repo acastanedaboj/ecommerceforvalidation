@@ -36,6 +36,7 @@ export interface SendEmailOptions {
   subject: string;
   html: string;
   text?: string;
+  replyTo?: string;
   tags?: { name: string; value: string }[];
 }
 
@@ -43,7 +44,7 @@ export interface SendEmailOptions {
  * Send an email via Resend
  */
 export async function sendEmail(options: SendEmailOptions) {
-  const { to, subject, html, text, tags } = options;
+  const { to, subject, html, text, replyTo, tags } = options;
 
   // Allow overriding recipient for testing (set EMAIL_TEST_OVERRIDE in env)
   const recipient = process.env.EMAIL_TEST_OVERRIDE || to;
@@ -55,7 +56,7 @@ export async function sendEmail(options: SendEmailOptions) {
       subject,
       html,
       text,
-      replyTo: EMAIL_CONFIG.replyTo,
+      replyTo: replyTo || EMAIL_CONFIG.replyTo,
       tags,
     });
 
