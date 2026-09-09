@@ -194,12 +194,14 @@ export default function CheckoutPage() {
     return (
       <div className="section">
         <div className="container-custom text-center">
-          <h1 className="mb-4 text-2xl">Tienda cerrada temporalmente</h1>
+          <h1 className="mb-4 text-2xl">Entrega en mano en Málaga centro</h1>
           <p className="mb-6 text-neutral-600">
-            Estamos de vacaciones. Gestionaremos pedidos a partir del 8 de septiembre.
+            Elaboramos la granola en pequeños lotes artesanales, así que por ahora no gestionamos
+            pedidos online. Escríbenos y te reservamos la tuya del próximo lote para entregártela en
+            mano en el centro de Málaga.
           </p>
-          <Link href="/tienda" className="btn-primary">
-            Volver a la tienda
+          <Link href="/contacto" className="btn-primary">
+            Escríbenos
           </Link>
         </div>
       </div>

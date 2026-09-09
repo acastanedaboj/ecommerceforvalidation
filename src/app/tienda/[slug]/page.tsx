@@ -545,13 +545,23 @@ export default function ProductDetailPage() {
                     className="w-full text-center"
                     style={{
                       background: 'rgba(17,17,17,.05)',
-                      padding: '16px 32px',
+                      padding: '16px 24px',
                       fontSize: '13px',
                       fontWeight: 400,
-                      color: 'rgba(17,17,17,.5)',
+                      color: 'rgba(17,17,17,.6)',
+                      lineHeight: 1.7,
                     }}
                   >
-                    Tienda temporalmente cerrada
+                    <div style={{ fontWeight: 600, color: 'var(--dark)', marginBottom: '4px' }}>
+                      Entrega en mano en Málaga centro
+                    </div>
+                    Elaboramos por lotes pequeños.{' '}
+                    <Link
+                      href="/contacto"
+                      style={{ textDecoration: 'underline', color: 'var(--dark)' }}
+                    >
+                      Escríbenos para reservar
+                    </Link>
                   </div>
                 ) : (
                   <button
@@ -772,7 +782,7 @@ export default function ProductDetailPage() {
         totalPrice={totalPrice}
         onAddToCart={handleAddToCart}
         isLoading={isAdding}
-        isDisabled={product.stock === 0}
+        isDisabled={product.stock === 0 || STORE_CLOSED}
         observeElementId="main-cta"
       />
 

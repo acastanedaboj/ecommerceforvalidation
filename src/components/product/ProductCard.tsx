@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useCartStore } from '@/store/cart-store';
+import { STORE_CLOSED } from '@/lib/constants';
 import { formatPrice, cn } from '@/lib/utils';
 import type { Product } from '@/data/products';
 import toast from 'react-hot-toast';
@@ -134,7 +135,7 @@ export function ProductCard({ product, showQuickAdd = true }: ProductCardProps) 
         )}
 
         {/* Quick add — appears on hover */}
-        {showQuickAdd && product.stock > 0 && (
+        {showQuickAdd && !STORE_CLOSED && product.stock > 0 && (
           <button
             type="button"
             onClick={handleQuickAdd}
