@@ -15,7 +15,7 @@ import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/
 export const metadata: Metadata = {
   title: 'Granola vegana 100% sin miel | Poppy',
   description:
-    'Granola vegana endulzada con sirope de agave ecológico. Sin miel ni productos animales. Artesanal y sin gluten. Envío gratis +4 uds.',
+    'Granola vegana endulzada con sirope de agave ecológico. Sin miel ni productos animales. Artesanal y sin gluten. Reserva con entrega en mano en Málaga.',
   keywords: [
     'granola vegana',
     'granola sin miel',

@@ -14,7 +14,7 @@ import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/
 export const metadata: Metadata = {
   title: 'Granola sin gluten apta para celíacos | Poppy Málaga',
   description:
-    'Granola artesanal sin gluten, 100% apta para celíacos. Elaborada con avena certificada sin gluten (<20ppm) y proceso controlado. 3 sabores. Envío gratis desde 4 uds. Hecha en Málaga.',
+    'Granola artesanal sin gluten, 100% apta para celíacos. Elaborada con avena certificada sin gluten (<20ppm) y proceso controlado. 3 sabores. Hecha en Málaga con entrega en mano bajo reserva.',
   keywords: [
     'granola sin gluten',
     'granola celiaca',

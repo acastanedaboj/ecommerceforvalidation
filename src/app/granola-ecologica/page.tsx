@@ -14,7 +14,7 @@ import { SITE_URL, getCanonicalUrl, JsonLd, buildBreadcrumbSchema } from '@/lib/
 export const metadata: Metadata = {
   title: 'Granola artesanal sin gluten | Ingredientes naturales | Poppy',
   description:
-    'Granola artesanal con miel, avena integral sin gluten y aceite de coco. 51% frutos secos y semillas. Envío gratis desde 4 uds.',
+    'Granola artesanal con miel, avena integral sin gluten y aceite de coco. 51% frutos secos y semillas. Reserva con entrega en mano en Málaga.',
   keywords: [
     'granola artesanal',
     'granola natural',

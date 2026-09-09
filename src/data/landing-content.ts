@@ -20,7 +20,7 @@ export const sinGlutenContent = {
       text: 'Más información',
       href: '#que-es',
     },
-    badges: ['Apta celíacos', 'Envío gratis +4 uds'],
+    badges: ['Apta celíacos', 'Entrega en mano en Málaga'],
     image: '/images/hero-sin-gluten.jpeg',
   },
   intro: {
@@ -178,9 +178,9 @@ export const sinGlutenContent = {
         'Sí, nuestra granola es perfecta para personas con sensibilidad al gluten no celíaca (SGNC). Al estar libre de gluten, no experimentarás los síntomas digestivos o de malestar asociados con el consumo de gluten.',
     },
     {
-      question: '¿Dónde puedo comprar granola sin gluten Poppy?',
+      question: '¿Dónde puedo conseguir granola sin gluten Poppy?',
       answer:
-        'Vendemos exclusivamente online en poppy.es. Esto nos permite controlar la calidad y frescura de cada envío. Hacemos envíos a toda España, y es gratis a partir de 4 bolsas. Tu pedido llega en 4-6 días laborables.',
+        'Elaboramos bajo demanda en nuestro obrador de Málaga. Reserva la tuya en poppy.es y te la entregamos en mano en Málaga, recién hecha. Así controlamos la calidad y la frescura de cada lote.',
     },
     {
       question: '¿Cuánto dura la granola sin gluten una vez abierta?',
@@ -389,9 +389,9 @@ export const artesanalContent = {
         'Gracias a nuestro proceso de tostado lento y al envasado hermético, la granola mantiene su frescura y crujiente durante 6 meses. Una vez abierta, recomendamos consumirla en 4-6 semanas.',
     },
     {
-      question: '¿Hacéis envíos a toda España?',
+      question: '¿Cómo recibo mi granola?',
       answer:
-        'Sí, enviamos a toda la península. Envío gratis a partir de 4 bolsas o 35€. Los pedidos se preparan y envían en 24-48h laborables. Si estás en Málaga centro, también ofrecemos entrega gratuita en mano.',
+        'Ahora mismo elaboramos bajo demanda en pequeños lotes y entregamos en mano en Málaga, sin envíos por mensajería. Reserva la tuya y concertamos día y hora de entrega. Sin coste de entrega.',
     },
     {
       question: '¿Puedo visitar vuestro obrador?',
@@ -587,8 +587,8 @@ export const mercadonaContent = {
         mercadona: '4-6€ / 375-500g',
       },
       {
-        feature: 'Envío',
-        poppy: 'Gratis desde 4 uds',
+        feature: 'Entrega',
+        poppy: 'En mano en Málaga',
         mercadona: 'Recogida en tienda',
       },
     ],
@@ -650,12 +650,12 @@ export const mercadonaContent = {
     {
       question: '¿Puedo comprar Poppy en Mercadona?',
       answer:
-        'No. Poppy es una marca artesanal independiente que vende exclusivamente online en poppy.es. Esto nos permite controlar la calidad y frescura de cada envío.',
+        'No. Poppy es una marca artesanal independiente. Reserva en poppy.es y elaboramos tu granola bajo demanda, controlando la calidad y frescura de cada lote.',
     },
     {
-      question: '¿Cuánto tarda el envío de Poppy?',
+      question: '¿Cómo consigo la granola de Poppy?',
       answer:
-        'Preparamos tu pedido en 24-48h laborables y lo enviamos a toda España. Envío gratis a partir de 4 bolsas. Lo recibes en 4-6 días laborables. En Málaga centro ofrecemos entrega gratuita en mano.',
+        'Elaboramos bajo demanda en pequeños lotes en Málaga. Reserva la tuya y te la entregamos en mano en Málaga, recién hecha. Sin envíos ni coste de entrega.',
     },
     {
       question: '¿La granola de Mercadona es apta para celíacos?',
@@ -665,7 +665,7 @@ export const mercadonaContent = {
   ],
   cta: {
     title: 'Prueba la diferencia artesanal',
-    description: 'Envío gratis desde 4 unidades. Si no te convence, te devolvemos el dinero.',
+    description: 'Entrega en mano en Málaga. Si no te convence, te devolvemos el dinero.',
     ctaText: 'Comprar granola Poppy',
     ctaHref: '/tienda',
     secondaryCta: {
@@ -810,7 +810,7 @@ export const carrefourContent = {
     {
       question: '¿Puedo comprar Poppy en Carrefour?',
       answer:
-        'No. Poppy es una marca artesanal independiente que vende exclusivamente online en poppy.es. Esto nos permite mantener precios justos, controlar la frescura y ofrecer envío directo a tu casa.',
+        'No. Poppy es una marca artesanal independiente. Reserva en poppy.es y elaboramos tu granola bajo demanda, con entrega en mano en Málaga, controlando precio y frescura.',
     },
     {
       question: '¿La granola de Carrefour es apta para celíacos?',
@@ -825,7 +825,7 @@ export const carrefourContent = {
   ],
   cta: {
     title: 'Siente la diferencia artesanal',
-    description: 'Envío gratis desde 4 bolsas. Hecho en Málaga, directo a tu mesa.',
+    description: 'Elaborada bajo demanda en Málaga. Reserva la tuya con entrega en mano.',
     ctaText: 'Comprar granola Poppy',
     ctaHref: '/tienda',
     secondaryCta: {
@@ -1618,7 +1618,7 @@ export const guiaCeliaquiaContent = {
   cta: {
     title: '¿Buscas una granola segura para celíacos?',
     description:
-      'En Poppy elaboramos granola artesanal con avena certificada sin gluten (<20 ppm) y un proceso de producción controlado. Todos nuestros sabores son aptos para celíacos. Envío gratis desde 4 unidades.',
+      'En Poppy elaboramos granola artesanal con avena certificada sin gluten (<20 ppm) y un proceso de producción controlado. Todos nuestros sabores son aptos para celíacos. Entrega en mano en Málaga.',
     ctaText: 'Ver granolas sin gluten',
     ctaHref: '/tienda',
     secondaryCta: {
@@ -1813,7 +1813,7 @@ export const ecologicaContent = {
   cta: {
     title: '¿Lista para probar granola artesanal de verdad?',
     description:
-      'Ingredientes eco, producción artesanal en Málaga, sin gluten y con 51% de frutos secos y semillas. Envío gratis a partir de 4 unidades.',
+      'Ingredientes eco, producción artesanal en Málaga, sin gluten y con 51% de frutos secos y semillas. Reserva con entrega en mano en Málaga.',
     ctaText: 'Comprar ahora',
     ctaHref: '/tienda',
     secondaryCta: {
@@ -1992,7 +1992,7 @@ La "mejor" granola depende de tus prioridades. Nosotros en Poppy apostamos por m
   cta: {
     title: '¿Quieres probar la granola con más frutos secos del mercado?',
     description:
-      '51% de frutos secos y semillas premium, miel ecológica de Málaga, avena certificada sin gluten. Envío gratis desde 4 unidades.',
+      '51% de frutos secos y semillas premium, miel ecológica de Málaga, avena certificada sin gluten. Entrega en mano en Málaga.',
     ctaText: 'Comprar Poppy',
     ctaHref: '/tienda',
     secondaryCta: {

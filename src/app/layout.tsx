@@ -40,13 +40,13 @@ export const metadata: Metadata = {
     template: `%s | ${BRAND_NAME}`,
   },
   description:
-    'Granola artesanal sin gluten y sin lactosa elaborada con avena integral (≤20ppm), miel y frutos secos premium. Opción vegana disponible. Envío gratis desde 4 unidades. Compra online en España.',
+    'Granola artesanal sin gluten y sin lactosa elaborada con avena integral (≤20ppm), miel y frutos secos premium. Opción vegana disponible. Elaborada bajo demanda con entrega en mano en Málaga.',
   keywords: [
     'comprar granola artesanal online',
     'granola sin gluten comprar',
     'granola ecológica a domicilio',
     'comprar granola vegana España',
-    'granola artesanal envío gratis',
+    'granola artesanal Málaga entrega en mano',
     'granola artesanal cerca de mí',
     'mejor granola sin gluten España',
     'granola sin gluten españa',
@@ -60,7 +60,7 @@ export const metadata: Metadata = {
     'granola miel',
     'granola dátiles',
     'poppy granola',
-    'suscripción granola mensual',
+    'reserva granola Málaga',
   ],
   authors: [{ name: BRAND_NAME, url: SITE_URL }],
   creator: BRAND_NAME,
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     siteName: BRAND_NAME,
     title: `${BRAND_NAME} - Granola sin gluten premium`,
     description:
-      'Granola artesanal sin gluten con avena integral, miel y frutos secos premium. Opción vegana disponible. Envío gratis +4 unidades.',
+      'Granola artesanal sin gluten con avena integral, miel y frutos secos premium. Opción vegana disponible. Entrega en mano en Málaga.',
     images: [
       {
         url: `${SITE_URL}/images/og-image.jpg`,
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${BRAND_NAME} - Granola sin gluten premium`,
     description:
-      'Granola artesanal sin gluten con avena integral y miel. Opción vegana. Envío gratis +4 unidades.',
+      'Granola artesanal sin gluten con avena integral y miel. Opción vegana. Entrega en mano en Málaga.',
     images: [`${SITE_URL}/images/og-image.jpg`],
     creator: SEO.twitterHandle,
     site: SEO.twitterHandle,
