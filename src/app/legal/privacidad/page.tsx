@@ -59,7 +59,7 @@ export default function PrivacidadPage() {
               <strong>Datos de contacto:</strong> dirección postal, email, teléfono
             </li>
             <li>
-              <strong>Datos de transacción:</strong> historial de compras, métodos de pago
+              <strong>Datos de transacción:</strong> historial de reservas y compras
             </li>
             <li>
               <strong>Datos de navegación:</strong> cookies, IP, datos de uso del sitio web
@@ -69,10 +69,9 @@ export default function PrivacidadPage() {
           <h2>3. Finalidad del tratamiento</h2>
           <p>Tratamos tus datos personales para las siguientes finalidades:</p>
           <ul>
-            <li>Gestionar y procesar tus pedidos</li>
+            <li>Gestionar tus reservas y pedidos</li>
             <li>Gestionar tu cuenta de usuario</li>
-            <li>Gestionar suscripciones y pagos recurrentes</li>
-            <li>Enviarte comunicaciones relacionadas con tu pedido</li>
+            <li>Enviarte comunicaciones relacionadas con tu reserva o pedido</li>
             <li>Con tu consentimiento, enviarte comunicaciones comerciales</li>
             <li>Atender tus consultas y reclamaciones</li>
             <li>Cumplir con nuestras obligaciones legales</li>
@@ -82,7 +81,7 @@ export default function PrivacidadPage() {
           <p>La base legal para el tratamiento de tus datos es:</p>
           <ul>
             <li>
-              <strong>Ejecución de un contrato:</strong> para procesar tus pedidos
+              <strong>Ejecución de un contrato:</strong> para gestionar tus reservas y pedidos
             </li>
             <li>
               <strong>Consentimiento:</strong> para comunicaciones comerciales
@@ -99,14 +98,9 @@ export default function PrivacidadPage() {
           <p>Podemos compartir tus datos con terceros encargados del tratamiento:</p>
           <ul>
             <li>
-              <strong>Proveedores de pago:</strong> Stripe, Inc. (USA) para procesar transacciones
-              de forma segura. Stripe cuenta con certificaciones PCI-DSS y cláusulas contractuales
-              tipo aprobadas por la Comisión Europea.
-            </li>
-            <li>
-              <strong>Empresas de transporte:</strong> Correos / Correos Express (España) para la
-              entrega de pedidos. Se comparten únicamente los datos necesarios para el envío
-              (nombre, dirección, teléfono).
+              <strong>Proveedor de email:</strong> Resend (USA) para gestionar las comunicaciones y
+              las reservas realizadas a través de la web. Se comparten únicamente los datos
+              necesarios (nombre, email, teléfono).
             </li>
             <li>
               <strong>Proveedor de hosting:</strong> Vercel Inc. (USA) para alojar el sitio web.
@@ -125,7 +119,7 @@ export default function PrivacidadPage() {
 
           <h2>6. Transferencias internacionales</h2>
           <p>
-            Algunos de nuestros proveedores de servicios (Stripe, Vercel) están ubicados fuera del
+            Algunos de nuestros proveedores de servicios (Vercel, Resend) están ubicados fuera del
             Espacio Económico Europeo (EEE), concretamente en Estados Unidos.
           </p>
           <p>

@@ -176,7 +176,7 @@ export function subscriptionRenewedEmail(data: SubscriptionRenewedData): {
     <div class="card" style="background-color: #E1EDF5;">
       <p style="margin: 0; color: #3B6280;">
         <strong>Tu pedido sale en 24-48h</strong><br>
-        Te enviaremos el número de seguimiento en cuanto salga de nuestro obrador.
+        Te avisaremos en cuanto tu pedido esté listo.
       </p>
     </div>
 

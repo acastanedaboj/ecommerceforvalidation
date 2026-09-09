@@ -89,7 +89,7 @@ export function orderConfirmationEmail(data: OrderConfirmationData): {
           <td style="text-align: right;">${formatDate(orderDate)}</td>
         </tr>
         <tr>
-          <td style="padding-top: 12px; color: #6B7280;">Preparación en obrador</td>
+          <td style="padding-top: 12px; color: #6B7280;">Preparación artesanal</td>
           <td style="padding-top: 12px; text-align: right;"><strong style="color: #6D4D45;">4–6 días laborables</strong></td>
         </tr>
         <tr>
@@ -156,7 +156,7 @@ export function orderConfirmationEmail(data: OrderConfirmationData): {
     </div>
 
     <p class="text-small">
-      Te avisaremos en cuanto tu pedido salga de nuestro obrador con el número de seguimiento.
+      Te avisaremos en cuanto tu pedido esté listo para la entrega.
       Si tienes cualquier pregunta, estamos en <a href="mailto:hola@poppy.es">hola@poppy.es</a>.
     </p>
 

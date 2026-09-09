@@ -34,7 +34,7 @@ export function orderShippedEmail(data: OrderShippedData): { subject: string; ht
     <h1>${firstName}, tu granola ya viaja hacia ti</h1>
 
     <p>
-      ¡Buenas noticias! Tu pedido <strong>#${orderId}</strong> acaba de salir de nuestro obrador
+      ¡Buenas noticias! Tu pedido <strong>#${orderId}</strong> acaba de salir de nuestra elaboración en Málaga
       en Málaga y está de camino a tu casa. Pronto podrás disfrutar de ese primer bocado crujiente.
     </p>
 

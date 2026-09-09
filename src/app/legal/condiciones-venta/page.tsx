@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { BUSINESS, SHIPPING, PRICING } from '@/lib/constants';
+import { BUSINESS, PRICING } from '@/lib/constants';
 import { getCanonicalUrl } from '@/lib/seo';
 
 export const metadata: Metadata = {
@@ -20,7 +20,7 @@ export default function CondicionesVentaPage() {
 
         <div className="prose-custom">
           <p style={{ color: 'rgba(17,17,17,.4)', fontSize: '13px', marginBottom: '24px' }}>
-            Última actualización: Febrero 2026
+            Última actualización: Septiembre 2026
           </p>
 
           <p>
@@ -52,13 +52,15 @@ export default function CondicionesVentaPage() {
 
           <h2>2. Objeto y ámbito de aplicación</h2>
           <p>
-            Las presentes condiciones generales regulan la venta de productos alimenticios (granola
-            artesanal) a través del sitio web https://poppy.es.
+            Las presentes condiciones generales regulan la reserva y venta de productos alimenticios
+            (granola artesanal) elaborados por encargo. Los productos se muestran en el sitio web
+            https://poppy.es, donde el cliente puede reservarlos. La venta se perfecciona con la
+            entrega en mano en Málaga.
           </p>
           <p>
-            <strong>Importante:</strong> Al realizar un pedido a través de nuestro sitio web,
-            declaras haber leído, comprendido y aceptado expresamente estas condiciones generales de
-            venta, conforme al artículo 98 de la LGDCU.
+            <strong>Importante:</strong> Al realizar una reserva a través de nuestro sitio web,
+            declaras haber leído, comprendido y aceptado expresamente estas condiciones generales,
+            conforme al artículo 98 de la LGDCU.
           </p>
 
           <h2>3. Productos</h2>
@@ -84,52 +86,43 @@ export default function CondicionesVentaPage() {
           <h3>4.1 Packs y descuentos</h3>
           <ul>
             <li>Pack 3: 3% de descuento por unidad</li>
-            <li>Pack 4: 5% de descuento por unidad + envío gratis</li>
-            <li>Pack 6: 10% de descuento por unidad + envío gratis</li>
-            <li>Suscripción: 15% de descuento + envío gratis</li>
+            <li>Pack 4: 5% de descuento por unidad</li>
+            <li>Pack 6: 10% de descuento por unidad</li>
           </ul>
 
-          <h2>5. Proceso de compra</h2>
-          <p>El proceso de compra consta de los siguientes pasos:</p>
+          <h2>5. Proceso de reserva</h2>
+          <p>
+            La granola se elabora por encargo, en pequeños lotes. El proceso consta de los
+            siguientes pasos:
+          </p>
           <ol>
-            <li>Selección de productos y añadir al carrito</li>
-            <li>Revisión del carrito y aplicación de descuentos</li>
-            <li>Introducción de datos de envío y facturación</li>
-            <li>Selección del método de pago</li>
-            <li>Confirmación y pago del pedido</li>
+            <li>Selección de la granola en el sitio web</li>
+            <li>Pulsar "Reservar" e introducir tus datos de contacto (nombre, email y teléfono)</li>
+            <li>
+              Nos ponemos en contacto contigo para confirmar la disponibilidad del próximo lote
+            </li>
+            <li>Acordamos el día, la hora y el punto de entrega en mano en Málaga</li>
           </ol>
           <p>
-            Una vez confirmado el pedido, recibirás un email de confirmación con los detalles del
-            mismo.
+            La reserva es una solicitud sin coste ni compromiso y no vinculante hasta que
+            confirmamos su disponibilidad.
           </p>
 
-          <h2>6. Métodos de pago</h2>
-          <p>Aceptamos los siguientes métodos de pago:</p>
-          <ul>
-            <li>
-              <strong>Tarjeta de crédito/débito:</strong> Visa, Mastercard, American Express
-            </li>
-          </ul>
+          <h2>6. Precio y forma de pago</h2>
           <p>
-            Los pagos con tarjeta se procesan de forma segura a través de Stripe, cumpliendo con los
-            estándares PCI-DSS.
+            El pago se realiza <strong>en el momento de la entrega en mano</strong>. No se procesan
+            pagos online ni se solicitan datos de tarjeta a través de la web.
           </p>
 
-          <h2>7. Envío y entrega</h2>
-          <h3>7.1 Gastos de envío</h3>
-          <ul>
-            <li>Envío estándar Península: {(SHIPPING.STANDARD_COST_CENTS / 100).toFixed(2)}€</li>
-            <li>Envío gratis: pedidos de 4 o más bolsas, o superiores a 35€</li>
-            <li>Suscripciones: envío siempre gratis</li>
-          </ul>
-
-          <h3>7.2 Plazos de entrega</h3>
-          <ul>
-            <li>Península: {SHIPPING.ESTIMATED_DAYS.peninsula}</li>
-            <li>Baleares/Canarias: {SHIPPING.ESTIMATED_DAYS.islands}</li>
-          </ul>
+          <h2>7. Entrega</h2>
           <p>
-            Los plazos son orientativos y pueden variar según la disponibilidad del transportista.
+            Actualmente realizamos únicamente <strong>entrega en mano en Málaga</strong>, sin gastos
+            de envío. No realizamos envíos por mensajería.
+          </p>
+          <p>
+            Una vez confirmada la reserva, acordamos contigo el día, la hora y el punto de entrega.
+            Al tratarse de un producto elaborado por encargo, los plazos dependen de la programación
+            de cada lote y se comunican al confirmar la reserva.
           </p>
 
           <h2>8. Derecho de desistimiento</h2>
@@ -260,12 +253,12 @@ export default function CondicionesVentaPage() {
             incidencia en las primeras 48 horas.
           </p>
 
-          <h2>10. Suscripciones</h2>
+          <h2>10. Reservas</h2>
           <p>
-            Las suscripciones se renuevan automáticamente cada mes. Puedes cancelar o pausar tu
-            suscripción en cualquier momento desde tu cuenta de usuario.
+            La reserva es una solicitud sin coste ni compromiso hasta que confirmamos la
+            disponibilidad del próximo lote. Puedes anularla en cualquier momento antes de la
+            entrega escribiéndonos a {BUSINESS.email}.
           </p>
-          <p>La cancelación se hará efectiva al final del período de facturación actual.</p>
 
           <h2>11. Propiedad intelectual</h2>
           <p>
