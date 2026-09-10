@@ -45,7 +45,7 @@ export function Header() {
           className="text-[11px] uppercase tracking-[0.12em]"
           style={{ color: 'rgba(17,17,17,.65)', fontWeight: 300 }}
         >
-          <span className="font-bold">Bajo demanda</span>
+          <span className="font-bold">Solo ingredientes que reconoces</span>
           <span className="mx-2 opacity-30">|</span>Elaborada cada semana en Málaga
           <span className="mx-2 opacity-30">|</span>
           <Link
@@ -53,7 +53,7 @@ export function Header() {
             className="font-bold underline underline-offset-2 transition-opacity hover:opacity-80"
             style={{ color: 'rgba(17,17,17,.65)' }}
           >
-            Reserva la tuya
+            Encarga la tuya
           </Link>
         </p>
       </div>
