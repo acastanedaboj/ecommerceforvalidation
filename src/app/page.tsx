@@ -219,7 +219,7 @@ export default function HomePage() {
           >
             Un día el médico me dijo que tenía que dejar el gluten de forma estricta y para siempre.
             No encontré una granola en la que confiar, así que la empecé a hacer yo, con
-            ingredientes certificados sin gluten. Si no es buena para mí, no la vendo.
+            ingredientes certificados sin gluten. Si no es buena para mí, no es buena para ti.
           </p>
           <p style={{ fontSize: '12px', color: 'var(--dark)', opacity: 0.5, fontWeight: 300 }}>
             Ingredientes que reconoces &nbsp;&middot;&nbsp; Proceso que respeto
