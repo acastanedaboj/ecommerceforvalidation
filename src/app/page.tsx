@@ -9,7 +9,7 @@ import { HomeClient } from '@/components/home/HomeClient';
 export const metadata: Metadata = {
   title: `Granola sin gluten artesanal | ${BRAND_NAME} — Hecha en Málaga`,
   description:
-    'Granola artesanal sin gluten hecha en Málaga: avena certificada sin gluten, miel ecológica y frutos secos, tostada despacio en pequeños lotes. Cero ingredientes raros: si no es buena para mí, no es buena para ti.',
+    'Granola artesanal sin gluten hecha en Málaga: avena certificada sin gluten, miel ecológica y frutos secos. Cero ingredientes raros: si no es buena para mí, no es buena para ti.',
   alternates: {
     canonical: getCanonicalUrl('/'),
   },
