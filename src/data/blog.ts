@@ -2662,7 +2662,7 @@ La magia está en la combinación de **especias cálidas + melaza**:
 - 1/2 cucharadita de nuez moscada
 - 1/4 cucharadita de clavo molido
 - 1 pizca de sal
-- Opcional: trozos de jengibre confitado
+- Opcional: un puñado de pasas
 
 ## Preparación paso a paso
 
@@ -2676,7 +2676,7 @@ Junta la avena, los frutos secos, las semillas, las especias y la sal. Aparte, t
 Extiéndela en capa fina sobre **papel vegetal**. Hornea **25-30 minutos**, removiendo a mitad. Ojo: la melaza dora rápido, así que vigila los últimos minutos.
 
 ### 4. Enfría (y el crunch llega)
-Déjala enfriar por completo sin tocarla. Añade el jengibre confitado ya frío, en trocitos.
+Déjala enfriar por completo sin tocarla. Si quieres, añade un puñado de pasas ya en frío.
 
 ## Cómo disfrutarla
 
