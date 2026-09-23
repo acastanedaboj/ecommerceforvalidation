@@ -2769,6 +2769,168 @@ Es nuestra edición más especial, en lotes muy limitados. [Resérvala](/tienda)
       },
     ],
   },
+  {
+    id: 'post_picos_glucosa',
+    slug: 'granola-picos-glucosa-como-tomarla',
+    title: 'Granola y picos de glucosa: por qué tomarla de postre o con proteína',
+    excerpt:
+      'No es solo qué comes, también cómo y cuándo. Con un par de trucos —proteína al lado y tomarla de postre— tu granola sienta mucho mejor. Te lo explicamos sin tecnicismos.',
+    content: `
+# Granola y picos de glucosa: por qué tomarla de postre o con proteína
+
+Has oído hablar de los "picos de glucosa" y te preguntas si la granola encaja en esa conversación. La respuesta corta: **no es solo qué comes, también cómo y cuándo lo comes.** Con un par de trucos, tu granola sienta mucho mejor. Te lo contamos sin tecnicismos.
+
+> Nota: esto es información general de nutrición, no consejo médico. Si tienes diabetes o alguna condición, sigue las indicaciones de tu profesional de salud.
+
+## Qué es un pico de glucosa (en 30 segundos)
+
+Cuando comemos hidratos, el azúcar en sangre sube y luego baja. Si sube y baja de forma muy brusca —un "pico"— es más fácil sentir hambre poco después, un bajón de energía o antojo de dulce. Suavizar esa curva ayuda a mantener la energía estable y la saciedad.
+
+## ¿La granola da picos?
+
+Depende de tres cosas:
+
+- **Los ingredientes:** una granola cargada de azúcar añadido sube la glucosa más rápido. Una con **poco azúcar, fibra (avena), grasas buenas (frutos secos) y algo de proteína** la suaviza. Aprende a distinguirlo en [cómo leer la etiqueta](/blog/como-leer-etiqueta-granola).
+- **La cantidad:** [la ración importa](/blog/granola-engorda-racion-mitos).
+- **Con qué y cuándo la tomas:** aquí está el truco.
+
+## Truco 1: acompáñala de proteína y grasa
+
+La fibra, la grasa y la proteína **ralentizan la absorción del azúcar**. Por eso la granola sienta mejor cuando la combinas con:
+
+- **Yogur** (griego o natural) o skyr — el clásico y el más fácil.
+- **Kéfir** o requesón.
+- Un puñado extra de **frutos secos**.
+
+Sola, y sobre todo con leche azucarada o zumo, sube más rápido. Con proteína al lado, la curva se suaviza.
+
+## Truco 2: no la tomes con el estómago vacío
+
+Tomar hidratos en ayunas, de primeras, favorece el pico. Dos ideas:
+
+- Si desayunas granola, **acompáñala de proteína** (yogur, huevos al lado…).
+- O tómala **después** de algo con fibra o proteína, no como primer bocado del día.
+
+## Truco 3: de postre, mejor que sola a media mañana
+
+Aquí va el que sorprende: la granola **como "postre"**, justo después de una comida completa (con verdura, proteína y grasa), genera **menos pico** que tomada sola entre horas, porque la comida previa ya ha "amortiguado" la subida.
+
+Así que una cucharada de granola sobre yogur **al final de la comida** es un caprichito que sienta mejor de lo que crees. Y si te apetece entre horas, [tómala como snack pero acompañada](/blog/granola-snack-saludable-entre-horas), no a palo seco.
+
+## Resumen práctico
+
+- Elige una granola con **poco azúcar añadido** y buena fibra/grasa.
+- **Acompáñala de proteína** (yogur, kéfir, skyr).
+- Evita tomarla **sola en ayunas**.
+- De **postre**, tras una comida completa, sienta mejor que sola a media mañana.
+- Cuida la **ración**.
+
+Nuestra granola va justo en esa línea: **cero ingredientes raros**, avena, frutos secos y semillas, con un dulzor comedido. [Descúbrela](/tienda). 🌿
+    `,
+    coverImage: '/images/blog/granola-bowl-yogurt.png',
+    category: 'nutricion',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-10-01',
+    readingTime: 6,
+    tags: ['glucosa', 'picos-de-glucosa', 'proteina', 'nutricion', 'saciedad'],
+    metaTitle: 'Granola y picos de glucosa: cómo tomarla para evitarlos | Poppy',
+    metaDescription:
+      'Cómo tomar la granola para suavizar los picos de glucosa: acompáñala de proteína (yogur, kéfir), evita el estómago vacío y tómala de postre. Guía práctica sin tecnicismos.',
+    faqs: [
+      {
+        question: '¿La granola es apta para personas con diabetes?',
+        answer:
+          'Depende de los ingredientes y de la ración, y conviene individualizar con tu médico. Tenemos una guía específica: granola sin azúcar para diabéticos.',
+      },
+      {
+        question: '¿Es mejor tomar la granola con yogur?',
+        answer:
+          'Sí. La proteína y la grasa del yogur (o kéfir/skyr) ralentizan la absorción del azúcar y suavizan la subida de glucosa, además de saciar más.',
+      },
+      {
+        question: '¿Cuál es el mejor momento para tomarla?',
+        answer:
+          'Acompañada de proteína, o de postre tras una comida completa, mejor que sola y en ayunas a media mañana.',
+      },
+    ],
+  },
+  {
+    id: 'post_granola_embarazo',
+    slug: 'granola-embarazo-dudas-frecuentes',
+    title: 'Granola en el embarazo: dudas frecuentes',
+    excerpt:
+      'La granola suele ser un buen aliado en el embarazo: fibra, energía y nutrientes. Resolvemos las dudas más habituales, incluida la de la miel, con la cautela que merece.',
+    content: `
+# Granola en el embarazo: dudas frecuentes
+
+Durante el embarazo surgen mil dudas sobre qué se puede comer. La granola es, en general, **un buen aliado**: aporta fibra, energía y nutrientes interesantes. Aquí resolvemos las preguntas más habituales.
+
+> Importante: esta es información general, no consejo médico. Cada embarazo es distinto; sigue siempre las indicaciones de tu **matrona o ginecólogo/a**.
+
+## ¿Se puede comer granola en el embarazo?
+
+Sí. La granola es un alimento **seco y horneado**, sin los ingredientes de riesgo típicos del embarazo (no lleva carne ni pescado crudos, ni lácteos sin pasteurizar). Como desayuno o snack, es una opción cómoda y nutritiva.
+
+## Por qué puede venir bien
+
+- **Fibra** (avena, semillas): ayuda con el tránsito, algo que en el embarazo suele agradecerse.
+- **Energía de calidad** para los momentos de más cansancio.
+- **Frutos secos y semillas:** aportan hierro, magnesio, grasas buenas y algo de proteína. Más sobre esto en [frutos secos: beneficios y tipos](/blog/frutos-secos-granola-beneficios-tipos).
+
+## En qué fijarte
+
+- **Azúcar añadido:** en el embarazo conviene vigilarlo especialmente. Elige una granola con poco azúcar ([cómo leer la etiqueta](/blog/como-leer-etiqueta-granola)).
+- **La ración:** es densa; con [30-45 g](/blog/granola-engorda-racion-mitos) suele bastar.
+- **Con qué la tomas:** acompañada de yogur o kéfir suma proteína y calcio (y [suaviza la glucosa](/blog/granola-picos-glucosa-como-tomarla)).
+
+## ¿Y la miel?
+
+Muchas granolas (la nuestra incluida) llevan **miel**. Buena noticia: **la miel es segura para la persona embarazada.** El aviso conocido —no dar miel a bebés menores de 12 meses por el riesgo de botulismo infantil— **es solo para el bebé una vez nazca**, no durante el embarazo. Aun así, si tienes cualquier duda, coméntalo con tu matrona.
+
+## ¿Puedo tomarla con diabetes gestacional?
+
+Aquí conviene individualizar: la diabetes gestacional exige controlar los hidratos y el azúcar. Puede encajar en pequeñas cantidades y **acompañada de proteína**, pero **consúltalo con tu equipo médico**.
+
+## ¿Sin gluten y sin lactosa?
+
+Si tienes que evitar el gluten o la lactosa, busca una granola que lo garantice. La nuestra se elabora con **ingredientes certificados sin gluten y sin trazas** y es **sin lactosa**.
+
+## Resumen
+
+- La granola encaja bien en el embarazo como desayuno o snack.
+- Elígela con **poco azúcar** y **acompáñala de proteína**.
+- La **miel** es segura para ti (no para bebés menores de 1 año).
+- Ante cualquier duda concreta, **tu matrona o médico** tienen la última palabra.
+
+¿Buscas una granola con ingredientes que reconoces? [Descubre la nuestra](/tienda). 🌿
+    `,
+    coverImage: '/images/blog/desayuno-sin-gluten-semana.jpg',
+    category: 'nutricion',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-10-02',
+    readingTime: 6,
+    tags: ['embarazo', 'nutricion', 'dudas', 'miel', 'salud'],
+    metaTitle: 'Granola en el embarazo: dudas frecuentes | Poppy',
+    metaDescription:
+      '¿Se puede comer granola en el embarazo? Sí, y suele venir bien. Resolvemos las dudas frecuentes: azúcar, ración, la miel (segura para la embarazada) y diabetes gestacional.',
+    faqs: [
+      {
+        question: '¿Es seguro comer granola durante el embarazo?',
+        answer:
+          'En general sí: es un alimento seco y horneado, sin ingredientes de riesgo típicos del embarazo. Cuida el azúcar añadido y la ración, y ante dudas consulta con tu matrona.',
+      },
+      {
+        question: '¿Puedo tomar granola con miel estando embarazada?',
+        answer:
+          'Sí. La miel es segura para la persona embarazada. El aviso de no ofrecer miel es para bebés menores de 12 meses, por el riesgo de botulismo infantil, no durante el embarazo.',
+      },
+      {
+        question: '¿Y si tengo diabetes gestacional?',
+        answer:
+          'Conviene individualizar con tu equipo médico. En pequeñas cantidades y acompañada de proteína suele integrarse mejor, pero sigue siempre las pautas de tu profesional de salud.',
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
