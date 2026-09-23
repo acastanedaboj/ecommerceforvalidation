@@ -2166,6 +2166,79 @@ La sensibilidad al gluten no celíaca es una condición real que afecta a millon
     metaDescription:
       '¿Reaccionas al gluten pero no eres celíaco? Guía completa sobre la sensibilidad al gluten no celíaca (SGNC): síntomas, diagnóstico por exclusión, diferencias con celiaquía y dieta.',
   },
+  {
+    id: 'post_conservar_granola',
+    slug: 'como-conservar-granola-fresca',
+    title: 'Cómo conservar tu granola fresca (y recuperar el crunch)',
+    excerpt:
+      'Dos trucos muy sencillos para que tu granola dure crujiente hasta la última cucharada: el bote de cristal y el golpe de calor para recuperar el crunch.',
+    content: `
+# Cómo conservar tu granola fresca (y recuperar el crunch)
+
+Nuestra granola se elabora en pequeños lotes y sin conservantes, así que llega a tus manos recién hecha. Para que dure crujiente hasta la última cucharada, aquí van dos trucos muy sencillos.
+
+## 1. Pásala a un bote de cristal en cuanto la recibas
+
+En cuanto llegue a casa, pásala a un **bote de cristal con cierre hermético**. Es el mejor amigo de la granola:
+
+- La protege de la **humedad**, que es justo lo que le quita el crujiente.
+- Mantiene el aroma y los sabores intactos.
+- Y, de paso, queda preciosa en la encimera.
+
+Guárdala en un lugar **fresco y seco**, lejos de fuentes de calor y de la luz directa. No necesita nevera.
+
+## 2. ¿Ha perdido crunch? Recupéralo con un toque de calor
+
+Si en algún momento notas la granola menos crujiente (pasa con la humedad del ambiente), tiene solución: **un golpe de calor suave** y vuelve a estar como recién hecha. Elige el método que más te convenga.
+
+### En el horno
+Extiéndela en una bandeja y caliéntala a **150 °C durante 5-8 minutos**.
+
+### En air fryer
+A **150 °C, 3-5 minutos**, moviendo la cesta a mitad.
+
+### En sartén
+A fuego **medio-bajo** y removiendo sin parar. Es el método más rápido, pero **cuidado: se quema con facilidad**, así que no la pierdas de vista ni un momento.
+
+> **Truco clave:** el crujiente vuelve **al enfriarse**, no cuando está caliente. Déjala reposar un par de minutos fuera del fuego antes de probarla.
+
+**Para ahorrarte limpieza:** usa **papel vegetal (de horno)** en la bandeja o la sartén y, al terminar, solo tienes que tirarlo.
+
+## En resumen
+
+- Bote de cristal hermético, en un lugar fresco y seco.
+- Si pierde crunch: golpe de calor suave (horno, air fryer o sartén con cuidado) y dejar enfriar.
+- Papel vegetal para no tener que fregar.
+
+Con esto, cada cucharada sabrá tan bien como el primer día. 🌿
+    `,
+    coverImage: '/images/blog/conservar-granola.png',
+    category: 'estilo-de-vida',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-09-23',
+    readingTime: 3,
+    tags: ['conservacion', 'crunch', 'trucos', 'granola', 'consejos'],
+    metaTitle: 'Cómo conservar tu granola fresca y recuperar el crunch | Poppy',
+    metaDescription:
+      'Dos trucos sencillos para conservar tu granola crujiente: pásala a un bote de cristal hermético y, si pierde crunch, recupéralo con un toque de calor en horno, air fryer o sartén.',
+    faqs: [
+      {
+        question: '¿Cuánto dura la granola?',
+        answer:
+          'Al no llevar conservantes, está en su mejor momento durante las primeras semanas. En un bote de cristal hermético y en un lugar fresco y seco aguanta perfectamente; si notas que pierde crujiente, lo recuperas con un toque de calor.',
+      },
+      {
+        question: '¿Puedo guardar la granola en la nevera?',
+        answer:
+          'No hace falta. La nevera tiene humedad y puede restarle crujiente. Mejor un bote de cristal hermético a temperatura ambiente, en un sitio fresco y seco.',
+      },
+      {
+        question: '¿Cómo recupero el crunch si se ablanda?',
+        answer:
+          'Con un calor suave: unos 150 °C en horno (5-8 min) o air fryer (3-5 min), o a fuego medio-bajo en sartén con cuidado de que no se queme. Recuerda que el crujiente vuelve al enfriarse, así que déjala reposar antes de probarla.',
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
