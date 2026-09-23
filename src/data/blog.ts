@@ -2931,6 +2931,87 @@ Si tienes que evitar el gluten o la lactosa, busca una granola que lo garantice.
       },
     ],
   },
+  {
+    id: 'post_granola_vs_muesli',
+    slug: 'granola-vs-muesli-diferencia',
+    title: 'Granola vs muesli: la diferencia (te lo cuento como se lo cuento a todo el mundo)',
+    excerpt:
+      'Es la pregunta que más me hacen cuando le hablo de Poppy a alguien por primera vez: ¿granola y muesli no son lo mismo? Te lo explico igual que en persona.',
+    content: `
+# Granola vs muesli: la diferencia
+
+Cada vez que le hablo por primera vez de Poppy a alguien, casi siempre me hace la misma pregunta: "pero… ¿la granola no es lo mismo que el muesli?". Es la duda más común de todas, así que la respondo aquí de una vez, tal cual la cuento en persona.
+
+La respuesta corta: **se parecen, pero no son lo mismo. La diferencia está en si pasa por el horno o no.**
+
+## Qué es el muesli
+
+El muesli es una **mezcla en crudo**: copos de avena, frutos secos, semillas y, a veces, fruta deshidratada, sin hornear y sin apenas endulzar. Nació hace más de un siglo como comida saludable. Al no llevar horno:
+
+- Queda **suelto y blando**, no crujiente.
+- Se suele tomar **remojado** (en leche, yogur o de un día para otro).
+- No lleva, o lleva muy poco, endulzante y aceite.
+
+## Qué es la granola
+
+La granola parte de ingredientes parecidos, pero **se hornea** con un poco de aceite y de endulzante (miel, sirope…). Ese paso por el horno lo cambia todo:
+
+- Queda **crujiente** y dorada.
+- Se agrupa en **clusters**.
+- Tiene más sabor tostado… y, para qué engañarnos, engancha más.
+
+## La diferencia, en una frase
+
+> **Muesli = la mezcla cruda. Granola = esa misma mezcla, tostada al horno con un toque de aceite y endulzante.**
+
+## ¿Cuál es "más sana"?
+
+Esta es la pregunta trampa, y te la respondo claro: **depende de los ingredientes, no de la etiqueta.**
+
+Un muesli puede ir cargado de fruta escarchada y azúcares; y una granola puede llevar poco azúcar y grasas buenas… o justo al revés. Lo que de verdad marca la diferencia es **qué hay dentro**. Por eso yo miro siempre la lista de ingredientes ([aquí te enseño cómo](/blog/como-leer-etiqueta-granola)).
+
+De media, el muesli suele tener algo menos de azúcar y grasa (no lleva el aceite ni el endulzante del horneado). La granola, a cambio, te da el crujiente y el sabor tostado. Ninguno es "malo": es cuestión de ingredientes y de [ración](/blog/granola-engorda-racion-mitos).
+
+## Por qué yo hago granola (y no muesli)
+
+Cuando tuve que dejar el gluten de forma estricta, no encontraba una granola en la que confiar. Y, siendo sincera, **el muesli crudo no me llenaba**: echaba de menos el crujiente, ese gustito tostado que hace que apetezca desayunar. Así que me puse a hornear la mía, con ingredientes que reconozco y un dulzor comedido. Si no es buena para mí, no es buena para ti.
+
+## Cómo tomar cada uno
+
+- **Muesli:** remojado — en leche, en yogur o en unos [overnight oats](/blog/overnight-oats-granola-receta-perfecta).
+- **Granola:** de topping crujiente sobre yogur o fruta, o de [muchas otras formas](/blog/5-formas-desayunar-granola-energia). Un truco: [acompáñala de proteína](/blog/granola-picos-glucosa-como-tomarla) para que siente aún mejor.
+
+## En resumen
+
+Muesli y granola son primos, no gemelos: **crudo frente a horneado.** Y lo importante no es cuál elijas, sino que tenga **ingredientes que reconozcas**. La mía la puedes [descubrir aquí](/tienda). 🌿
+    `,
+    coverImage: '/images/blog/frutos-secos-granola.png',
+    category: 'nutricion',
+    author: 'Pilar',
+    publishedAt: '2026-10-03',
+    readingTime: 5,
+    tags: ['granola-vs-muesli', 'muesli', 'diferencias', 'nutricion', 'desayuno'],
+    metaTitle: 'Granola vs muesli: cuál es la diferencia | Poppy',
+    metaDescription:
+      'Granola vs muesli: la diferencia real es el horno. Te explico en qué se distinguen, cuál es más sano y cómo tomar cada uno, tal como lo cuento en persona.',
+    faqs: [
+      {
+        question: '¿La granola es lo mismo que el muesli?',
+        answer:
+          'No. El muesli es la mezcla cruda de avena, frutos secos y semillas; la granola es esa misma mezcla horneada con un toque de aceite y endulzante, por eso queda crujiente y en clusters.',
+      },
+      {
+        question: '¿Qué es más sano, la granola o el muesli?',
+        answer:
+          'Depende de los ingredientes y de la ración, no del tipo. De media el muesli lleva algo menos de azúcar y grasa, pero lo que manda es la lista de ingredientes de cada producto.',
+      },
+      {
+        question: '¿Se puede remojar la granola como el muesli?',
+        answer:
+          'Sí, aunque pierde crujiente al remojarse. Si te gusta crujiente, añádela al final en lugar de dejarla en remojo.',
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
