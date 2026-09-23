@@ -2291,6 +2291,244 @@ Con estos gestos, cada cucharada sabrá tan bien como el primer día. Y si se te
       },
     ],
   },
+  {
+    id: 'post_granola_engorda',
+    slug: 'granola-engorda-racion-mitos',
+    title: '¿La granola engorda? La verdad sobre la ración y los mitos',
+    excerpt:
+      'Ningún alimento engorda por sí solo: lo que cuenta es la ración y el conjunto de la dieta. Separamos el mito de la realidad sobre la granola.',
+    content: `
+# ¿La granola engorda? La verdad sobre la ración y los mitos
+
+Es una de las preguntas más buscadas sobre la granola, y la respuesta corta es clara: **ningún alimento engorda por sí solo; lo que cuenta es el conjunto de tu dieta y la cantidad.** La granola tiene fama de "trampa saludable" y, en parte, es merecida… pero no por lo que crees. Vamos a separar el mito de la realidad.
+
+## Por qué la granola tiene fama de engordar
+
+La granola es un alimento **energéticamente denso**: concentra avena, frutos secos, semillas y un toque de endulzante en poco volumen. Eso es una virtud (nutrientes de calidad y buena saciedad) y, a la vez, el motivo de su fama: es fácil pasarse con la ración.
+
+El otro problema es la **granola industrial**: muchas marcas cargan azúcares y aceites baratos para abaratar costes y hacerla más adictiva. Ahí está la trampa real. [Te contamos las diferencias aquí](/blog/granola-casera-vs-industrial-diferencias).
+
+## La clave está en la ración
+
+Una ración razonable de granola ronda los **30-45 g** (unas 2-3 cucharadas soperas). El error habitual es servirla "a ojo" en un bol grande y acabar tomando el triple sin darte cuenta.
+
+Trucos para controlar la ración sin obsesionarte:
+
+- Sírvela con **cuchara**, no volcando el bote.
+- Úsala como **topping** (sobre yogur o fruta), no como base infinita.
+- Pésala un par de veces al principio para calibrar el ojo.
+
+## ¿Engorda o no? Depende de tres cosas
+
+1. **Cuánta tomas** (la ración).
+2. **Con qué la acompañas** (yogur natural y fruta no es lo mismo que helado y sirope).
+3. **Los ingredientes de la propia granola** (azúcares y aceites añadidos).
+
+Una granola de calidad, en ración adecuada, **encaja perfectamente en una dieta equilibrada** e incluso ayuda: la fibra de la avena y las grasas buenas de los frutos secos sacian y reducen el picoteo.
+
+## Qué mirar para que sume, no reste
+
+- **Poco azúcar añadido** (mira la etiqueta: [aquí te enseñamos cómo](/blog/como-leer-etiqueta-granola)).
+- **Grasas buenas** (frutos secos, semillas, aceite de coco) en lugar de aceites refinados baratos.
+- **Ingredientes que reconoces.** En Poppy es literalmente nuestro lema: cero ingredientes raros.
+
+## Granola y deporte
+
+Si entrenas, la granola es una aliada: hidratos de calidad más la proteína de los frutos secos. Funciona como pre-entreno ligero o como recuperación. Tenemos una receta pensada para eso: el [bowl proteico post-entreno](/blog/bowl-proteico-granola-post-entreno).
+
+## Mitos rápidos
+
+- **"La granola es dietética"** → no por sí sola; depende de ingredientes y ración.
+- **"Sin gluten = adelgaza"** → falso; sin gluten es para quien lo necesita, no un adelgazante.
+- **"Sin azúcar = puedo tomar la que quiera"** → sigue siendo densa; la ración manda.
+
+## En resumen
+
+La granola no engorda: **engorda comer más de lo que gastas, de forma sostenida.** Elige una granola honesta, cuida la ración (30-45 g) y acompáñala bien. Así es un desayuno o snack que suma.
+
+¿Quieres una granola con ingredientes que reconoces, hecha en pequeños lotes? [Reserva la tuya](/tienda). 🌿
+    `,
+    coverImage: '/images/blog/granola-bowl-yogurt.png',
+    category: 'nutricion',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-09-24',
+    readingTime: 6,
+    tags: ['granola', 'racion', 'mitos', 'nutricion', 'peso', 'dieta'],
+    metaTitle: '¿La granola engorda? Ración recomendada y mitos | Poppy',
+    metaDescription:
+      '¿La granola engorda? La verdad: depende de la ración y del conjunto de tu dieta. Ración recomendada, qué mirar en la etiqueta y mitos frecuentes.',
+    faqs: [
+      {
+        question: '¿Cuál es la ración recomendada de granola?',
+        answer:
+          'Una ración razonable ronda los 30-45 g (2-3 cucharadas soperas). El error más común es servirla a ojo en un bol grande. Sírvela con cuchara o úsala como topping.',
+      },
+      {
+        question: '¿Puedo comer granola si quiero perder peso?',
+        answer:
+          'Sí, cuidando la ración y el acompañamiento. Una granola con poco azúcar añadido y grasas buenas sacia y ayuda a evitar el picoteo; la clave es no pasarse de cantidad.',
+      },
+      {
+        question: '¿La granola sin azúcar engorda menos?',
+        answer:
+          'Ayuda, pero sigue siendo un alimento denso en energía. Aunque no lleve azúcar añadido, la ración sigue mandando.',
+      },
+    ],
+  },
+  {
+    id: 'post_granola_malaga',
+    slug: 'donde-comprar-granola-artesanal-malaga',
+    title: 'Dónde comprar granola artesanal en Málaga',
+    excerpt:
+      'Cómo conseguir granola artesanal de verdad en Málaga: hecha en pequeños lotes, con ingredientes que reconoces y entregada en mano, recién tostada.',
+    content: `
+# Dónde comprar granola artesanal en Málaga
+
+Si buscas **granola artesanal en Málaga** —de verdad artesanal, con ingredientes que reconoces y hecha en pequeños lotes— estás en el sitio correcto. Te contamos cómo conseguir la nuestra y en qué fijarte para distinguir una granola realmente artesanal de una "artesanal de etiqueta".
+
+## Granola hecha en Málaga, por encargo
+
+En Poppy elaboramos la granola **bajo demanda, en pequeños lotes**, aquí en Málaga. No la producimos en masa ni la almacenamos durante meses: la hacemos cuando la pides, para que llegue recién tostada.
+
+Nuestro modelo es sencillo:
+
+1. Eliges tu granola en la [tienda](/tienda).
+2. Pulsas **"Reservar"** y nos dejas tus datos.
+3. Te confirmamos el próximo lote y **concertamos la entrega en mano en Málaga**.
+
+Sin envíos ni intermediarios: de nuestras manos a las tuyas, recién hecha.
+
+## Por qué "en mano" y no en el súper
+
+La granola industrial del supermercado se fabrica en grandes cantidades y pasa semanas o meses en almacén y estantería. La artesanal por encargo es lo contrario: **frescura y trazabilidad**. Sabes quién la hace, con qué y te llega en su mejor momento.
+
+## Cómo reconocer una granola artesanal de verdad
+
+No te quedes solo con la palabra "artesanal" del envase. Fíjate en:
+
+- **Lista de ingredientes corta** y reconocible (nuestro lema: cero ingredientes raros).
+- **Sin azúcares ni aceites baratos** añadidos ([cómo leer la etiqueta](/blog/como-leer-etiqueta-granola)).
+- **Lotes pequeños** y fecha reciente.
+- **Origen claro**: quién y dónde la elabora.
+
+## Nuestra granola
+
+Elaboramos con **avena e ingredientes certificados sin gluten y sin trazas**, sin lactosa, tostada despacio. Poppy nació de una necesidad propia (puedes leer [nuestra historia](/nosotros)). Tenemos tres sabores; échales un vistazo en la [tienda](/tienda).
+
+## Y cuando la tengas, cuídala
+
+Para que dure crujiente: pásala a un bote de cristal y guárdala en un sitio fresco y seco. Te lo contamos todo en [cómo conservar tu granola fresca](/blog/como-conservar-granola-fresca).
+
+## En resumen
+
+¿Dónde comprar granola artesanal en Málaga? Reservando la tuya en poppy.es y recibiéndola **en mano**, recién hecha. Elige ingredientes que reconoces y la frescura de un lote pequeño. [Reserva la tuya](/tienda). 🌿
+    `,
+    coverImage: '/images/nosotros-divider.png',
+    category: 'estilo-de-vida',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-09-25',
+    readingTime: 5,
+    tags: ['malaga', 'artesanal', 'local', 'reserva', 'granola'],
+    metaTitle: 'Dónde comprar granola artesanal en Málaga | Poppy',
+    metaDescription:
+      'Granola artesanal en Málaga, hecha en pequeños lotes y por encargo. Reserva la tuya y recíbela en mano, recién tostada, con ingredientes que reconoces.',
+    faqs: [
+      {
+        question: '¿Hacéis entrega en Málaga?',
+        answer:
+          'Sí, entregamos en mano en Málaga. Al reservar, concertamos contigo el día, la hora y el punto de entrega.',
+      },
+      {
+        question: '¿Puedo comprarla en una tienda física?',
+        answer:
+          'Trabajamos por reserva y entrega en mano, no en tienda física. Reserva en poppy.es y nos ponemos en contacto contigo para coordinar la entrega.',
+      },
+      {
+        question: '¿Hacéis envíos fuera de Málaga?',
+        answer: 'Ahora mismo solo ofrecemos entrega en mano en Málaga, sin envíos por mensajería.',
+      },
+    ],
+  },
+  {
+    id: 'post_leer_etiqueta',
+    slug: 'como-leer-etiqueta-granola',
+    title: 'Cómo leer la etiqueta de una granola (y detectar azúcares ocultos)',
+    excerpt:
+      'No todas las granolas son iguales, aunque en el frente parezcan sanas. Aprende a leer la etiqueta en 5 minutos y a detectar azúcares y aceites ocultos.',
+    content: `
+# Cómo leer la etiqueta de una granola (y detectar azúcares ocultos)
+
+No todas las granolas son iguales, aunque en el frente del envase todas parezcan "saludables". La diferencia está **en la letra pequeña**. Aprende a leer la etiqueta en cinco minutos y sabrás distinguir una granola honesta de una bomba de azúcar disfrazada.
+
+## 1. La lista de ingredientes: cuanto más corta, mejor
+
+Los ingredientes se ordenan **de mayor a menor cantidad**. Si el azúcar (o alguno de sus alias) aparece de los primeros, mala señal. Una buena granola empieza por avena, frutos secos y semillas.
+
+Nuestro lema resume esto: **cero ingredientes raros**. Si no sabes pronunciar la mitad de la lista, desconfía.
+
+## 2. Los azúcares y sus disfraces
+
+El azúcar se esconde bajo muchos nombres. Vigila:
+
+- Azúcar, azúcar moreno, azúcar invertido
+- Jarabe de glucosa, de fructosa, de maíz o de arroz
+- Dextrosa, maltodextrina, melaza, concentrados de zumo
+
+Mira la línea **"de los cuales azúcares"** en la tabla nutricional. Incluye también los azúcares naturales de la fruta, pero cifras altas (por ejemplo, más de 20-25 g por 100 g) suelen indicar azúcar añadido.
+
+## 3. Las grasas: cuáles sí y cuáles no
+
+La granola lleva grasa, y está bien: la buena viene de **frutos secos, semillas y aceites de calidad** (como el de coco). Desconfía de "aceite vegetal" sin especificar, del aceite de palma y de las grasas hidrogenadas.
+
+## 4. La avena y el "sin gluten"
+
+Si lo necesitas, que ponga **"avena certificada sin gluten"**, no solo "avena": la avena convencional suele arrastrar trazas de gluten. [Aquí lo explicamos a fondo](/blog/avena-sin-gluten-guia-completa-celiacos).
+
+## 5. Aromas, aditivos y raciones
+
+- **Aromas y saborizantes**: en una granola artesanal no hacen falta.
+- **Fibra y proteína**: buenos indicadores de densidad nutricional.
+- **Ración de referencia**: las tablas suelen ser por 100 g; recuerda que una ración real ronda los [30-45 g](/blog/granola-engorda-racion-mitos).
+
+## Checklist rápido antes de comprar
+
+1. ¿La lista de ingredientes es corta y reconocible?
+2. ¿El azúcar está lejos del principio?
+3. ¿Las grasas vienen de frutos secos y semillas?
+4. ¿Especifica "avena certificada sin gluten" si lo necesitas?
+5. ¿Está libre de aromas y aditivos raros?
+
+## En resumen
+
+Leer la etiqueta te da el poder de elegir bien: ingredientes cortos, poco azúcar añadido, grasas buenas y cero rarezas. Es exactamente el estándar con el que hacemos la nuestra. [Descúbrela](/tienda). 🌿
+    `,
+    coverImage: '/images/blog/granola-casera-vs-industrial.png',
+    category: 'nutricion',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-09-26',
+    readingTime: 6,
+    tags: ['etiqueta', 'azucar', 'ingredientes', 'nutricion', 'consejos'],
+    metaTitle: 'Cómo leer la etiqueta de una granola y detectar azúcares | Poppy',
+    metaDescription:
+      'Aprende a leer la etiqueta de una granola en 5 minutos: lista de ingredientes, azúcares ocultos y sus alias, grasas buenas y el "sin gluten". Checklist incluido.',
+    faqs: [
+      {
+        question: '¿Cuánto azúcar debería tener una buena granola?',
+        answer:
+          'Cuanto menos azúcar añadido, mejor. Mira la línea "de los cuales azúcares" y la lista de ingredientes: si el azúcar (o sus alias) aparece de los primeros, es señal de que lleva mucho.',
+      },
+      {
+        question: '¿"Sin azúcares añadidos" es lo mismo que "sin azúcar"?',
+        answer:
+          'No. "Sin azúcares añadidos" significa que no se ha añadido azúcar, pero el producto puede contener los azúcares naturales de sus ingredientes (como la fruta). "Sin azúcar" es un umbral mucho más estricto.',
+      },
+      {
+        question: '¿Cómo sé si la avena es realmente sin gluten?',
+        answer:
+          'Debe indicar "avena certificada sin gluten". La avena convencional suele arrastrar trazas de trigo, cebada o centeno por contaminación cruzada.',
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
