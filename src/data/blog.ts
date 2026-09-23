@@ -2529,6 +2529,105 @@ Leer la etiqueta te da el poder de elegir bien: ingredientes cortos, poco azúca
       },
     ],
   },
+  {
+    id: 'post_pumpkin_spice',
+    slug: 'granola-pumpkin-spice-otono-receta',
+    title: 'Granola pumpkin spice: la receta con sabor a otoño',
+    excerpt:
+      'Avena tostada despacio, frutos secos y la mezcla de especias más reconocible del otoño. La receta casera de granola pumpkin spice, con el truco para que quede bien crujiente.',
+    content: `
+# Granola pumpkin spice: la receta con sabor a otoño
+
+Llegan el frío, las mantas y ese antojo de todo lo que sepa a **pumpkin spice**. Esta granola casera captura el otoño en un bote: avena tostada despacio, frutos secos y la mezcla de especias más reconocible de la temporada. Te dejamos la receta y los trucos para que quede crujiente de verdad.
+
+## Qué es el "pumpkin spice"
+
+Aunque el nombre despiste, la mezcla clásica **no lleva calabaza**: es una combinación de especias cálidas que tradicionalmente acompaña a los postres de calabaza. La base es:
+
+- Canela
+- Jengibre
+- Nuez moscada
+- Clavo
+- Pimienta de Jamaica (opcional)
+
+### Mezcla pumpkin spice (para tener a mano)
+
+- 3 cucharaditas de canela
+- 1 cucharadita de jengibre molido
+- 1 cucharadita de nuez moscada
+- 1/2 cucharadita de clavo molido
+- 1/2 cucharadita de pimienta de Jamaica (opcional)
+
+Mézclalas y guárdalas en un bote pequeño: te sirve para el café, los bizcochos y esta granola.
+
+## Ingredientes de la granola (para 1 bote)
+
+- 200 g de copos de avena (certificada sin gluten si lo necesitas)
+- 80 g de frutos secos (las nueces y las pecanas van genial en otoño)
+- 30 g de semillas (calabaza, girasol)
+- 2 cucharadas de aceite de coco
+- 3 cucharadas de miel o sirope de arce
+- 2 cucharaditas de mezcla pumpkin spice
+- 1 pizca de sal
+- Opcional: 2 cucharadas de puré de calabaza para un toque más auténtico
+
+## Preparación paso a paso
+
+### 1. Precalienta
+Horno a **150 °C**. El tostado lento es clave: más crujiente y menos riesgo de quemarla.
+
+### 2. Mezcla
+En un bol, junta la avena, los frutos secos, las semillas, las especias y la sal. Aparte, templa el aceite de coco con la miel (y el puré de calabaza, si lo usas) y viértelo sobre lo seco. Remueve hasta que todo quede bien impregnado.
+
+### 3. Hornea
+Extiéndela en una bandeja con **papel vegetal**, en capa fina. Hornea **25-30 minutos**, removiendo a mitad para que se dore por igual.
+
+### 4. El truco del crujiente
+Sácala y **déjala enfriar por completo sin tocarla**: el crunch aparece al enfriar, no en caliente. Si te gustan los *clusters*, presiona ligeramente la mezcla antes de que enfríe y no la remuevas.
+
+## Cómo disfrutarla
+
+- Sobre yogur con manzana o pera asada.
+- En unos [overnight oats](/blog/overnight-oats-granola-receta-perfecta) para desayunos de otoño.
+- Con leche caliente, como un abrazo en un bol.
+
+Más ideas en [5 formas de desayunar granola con energía](/blog/5-formas-desayunar-granola-energia).
+
+## Conserva el crujiente
+
+Pásala a un bote de cristal hermético en cuanto enfríe. Todos los trucos, en [cómo conservar tu granola fresca](/blog/como-conservar-granola-fresca).
+
+## ¿Sin ganas de encender el horno?
+
+Muy pronto tendremos **ediciones de temporada** en Poppy. Mientras tanto, puedes [reservar](/tienda) nuestros sabores de siempre, hechos en pequeños lotes con ingredientes que reconoces. 🍂
+    `,
+    coverImage: '/images/blog/granola-snack.png',
+    category: 'recetas',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-09-27',
+    readingTime: 6,
+    tags: ['pumpkin-spice', 'otono', 'receta', 'especias', 'granola', 'temporada'],
+    metaTitle: 'Granola pumpkin spice: receta casera de otoño | Poppy',
+    metaDescription:
+      'Receta de granola pumpkin spice para el otoño: mezcla de especias casera, ingredientes y el truco para que quede bien crujiente. Sin gluten si usas avena certificada.',
+    faqs: [
+      {
+        question: '¿El pumpkin spice lleva calabaza?',
+        answer:
+          'No necesariamente. El "pumpkin spice" es una mezcla de especias cálidas (canela, jengibre, nuez moscada, clavo y a veces pimienta de Jamaica) que acompaña a los postres de calabaza, pero la mezcla en sí no lleva calabaza. Puedes añadir puré de calabaza si quieres un toque más auténtico.',
+      },
+      {
+        question: '¿Puedo hacerla sin gluten?',
+        answer:
+          'Sí. Usa copos de avena certificada sin gluten y comprueba que el resto de ingredientes también lo sean. Así la receta es apta para dietas sin gluten.',
+      },
+      {
+        question: '¿Por qué no me queda crujiente?',
+        answer:
+          'Casi siempre es por dos motivos: no dejarla enfriar del todo (el crunch aparece al enfriar) o extenderla en capa demasiado gruesa. Hornéala en capa fina, a 150 °C, y déjala reposar sin tocarla.',
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
