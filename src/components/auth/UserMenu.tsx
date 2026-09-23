@@ -24,10 +24,13 @@ export function UserMenu() {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
+  // Fixed-size slot (44×44) used in every state so the header nav never shifts
+  // when the session resolves (loading → login icon → avatar).
+
   // Loading state
   if (status === 'loading') {
     return (
-      <div className="p-3">
+      <div className="flex h-11 w-11 items-center justify-center" aria-hidden="true">
         <div className="h-5 w-5 animate-pulse rounded-full bg-cream-200" />
       </div>
     );
@@ -38,7 +41,7 @@ export function UserMenu() {
     return (
       <Link
         href="/auth/login"
-        className="p-3 transition-opacity hover:opacity-55"
+        className="flex h-11 w-11 items-center justify-center transition-opacity hover:opacity-55"
         aria-label="Iniciar sesion"
       >
         <User className="h-5 w-5" strokeWidth={1.5} />
@@ -51,7 +54,7 @@ export function UserMenu() {
     <div className="relative" ref={menuRef}>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 rounded-full p-1.5 transition-all hover:bg-cream-200/50"
+        className="flex h-11 w-11 items-center justify-center rounded-full transition-all hover:bg-cream-200/50"
         aria-expanded={isOpen}
         aria-haspopup="true"
       >
