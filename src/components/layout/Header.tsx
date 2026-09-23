@@ -62,7 +62,9 @@ export function Header() {
       <nav
         className={cn(
           'duration-350 flex items-center justify-between transition-all',
-          isScrolled ? 'px-6 py-3 md:px-8 lg:px-14' : 'px-6 py-5 md:px-8 lg:px-14'
+          // Fixed heights (not padding) so content changes — e.g. the session
+          // resolving and the avatar appearing — can never shift the nav row.
+          isScrolled ? 'h-[68px] px-6 md:px-8 lg:px-14' : 'h-[84px] px-6 md:px-8 lg:px-14'
         )}
         style={
           useDarkText
