@@ -2628,6 +2628,267 @@ Muy pronto tendremos **ediciones de temporada** en Poppy. Mientras tanto, puedes
       },
     ],
   },
+  {
+    id: 'post_gingerbread',
+    slug: 'granola-gingerbread-navidad-receta',
+    title: 'Granola de gingerbread: sabor a Navidad en un bote',
+    excerpt:
+      'El gingerbread —jengibre, canela y melaza— cabe en tu desayuno. Receta casera de granola gingerbread, crujiente y con todo el aroma navideño. Ideal también para regalar.',
+    content: `
+# Granola de gingerbread: sabor a Navidad en un bote
+
+El gingerbread —esas galletas de jengibre y melaza tan navideñas— también cabe en tu desayuno. Esta granola casera huele a Navidad desde que abres el horno: jengibre, canela y un fondo de melaza que la hace irresistible. Aquí tienes la receta.
+
+## A qué sabe el gingerbread
+
+La magia está en la combinación de **especias cálidas + melaza**:
+
+- Jengibre (el protagonista)
+- Canela
+- Nuez moscada
+- Clavo
+- Melaza (o azúcar moreno oscuro) para ese toque acaramelado
+
+## Ingredientes (para 1 bote)
+
+- 200 g de copos de avena (certificada sin gluten si lo necesitas)
+- 80 g de frutos secos (almendras, nueces)
+- 30 g de semillas (calabaza, girasol)
+- 2 cucharadas de aceite de coco
+- 2 cucharadas de melaza (o sirope oscuro)
+- 2 cucharadas de miel o sirope de arce
+- 2 cucharaditas de jengibre molido
+- 1 cucharadita de canela
+- 1/2 cucharadita de nuez moscada
+- 1/4 cucharadita de clavo molido
+- 1 pizca de sal
+- Opcional: trozos de jengibre confitado
+
+## Preparación paso a paso
+
+### 1. Precalienta
+Horno a **150 °C**. El tostado lento evita que la melaza se queme.
+
+### 2. Mezcla
+Junta la avena, los frutos secos, las semillas, las especias y la sal. Aparte, templa el aceite de coco con la melaza y la miel, y viértelo sobre lo seco. Remueve muy bien para que la especia se reparta.
+
+### 3. Hornea
+Extiéndela en capa fina sobre **papel vegetal**. Hornea **25-30 minutos**, removiendo a mitad. Ojo: la melaza dora rápido, así que vigila los últimos minutos.
+
+### 4. Enfría (y el crunch llega)
+Déjala enfriar por completo sin tocarla. Añade el jengibre confitado ya frío, en trocitos.
+
+## Cómo disfrutarla
+
+- Con yogur y pera.
+- En un bol con leche caliente para las mañanas frías.
+- De topping en tu postre navideño.
+
+Más ideas en [5 formas de desayunar granola con energía](/blog/5-formas-desayunar-granola-energia).
+
+## Ideal para regalar
+
+Un bote de cristal con esta granola y una etiqueta bonita es un **regalo navideño** con muchísimo encanto. Consérvala con estos [trucos](/blog/como-conservar-granola-fresca) para que llegue crujiente a su destino.
+
+## Próximamente
+
+Muy pronto tendremos **ediciones de temporada** en Poppy. Mientras tanto, puedes [reservar](/tienda) nuestros sabores de siempre. 🎄
+    `,
+    coverImage: '/images/blog/overnight-oats-granola.png',
+    category: 'recetas',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-09-28',
+    readingTime: 6,
+    tags: ['gingerbread', 'navidad', 'jengibre', 'receta', 'temporada', 'regalo'],
+    metaTitle: 'Granola de gingerbread: receta navideña de jengibre | Poppy',
+    metaDescription:
+      'Receta de granola gingerbread con jengibre, canela y melaza: el sabor de la Navidad, crujiente y fácil. Sin gluten si usas avena certificada. Ideal para regalar.',
+    faqs: [
+      {
+        question: '¿Puedo hacerla sin melaza?',
+        answer:
+          'Sí. Sustitúyela por azúcar moreno oscuro disuelto o por más sirope de arce. La melaza aporta el toque acaramelado típico del gingerbread, pero la receta funciona igual.',
+      },
+      {
+        question: '¿Se puede hacer sin gluten?',
+        answer:
+          'Sí, usando copos de avena certificada sin gluten y comprobando que el resto de ingredientes también lo sean.',
+      },
+      {
+        question: '¿Sirve como regalo?',
+        answer:
+          'Perfectamente. En un bote de cristal hermético y bien conservada aguanta semanas en su mejor momento, así que es un regalo comestible ideal para Navidad.',
+      },
+    ],
+  },
+  {
+    id: 'post_caramelo_salado',
+    slug: 'granola-caramelo-salado-receta',
+    title: 'Granola de caramelo salado: el capricho que sí puedes desayunar',
+    excerpt:
+      'El contraste dulce-salado del caramelo salado, llevado a la granola con ingredientes honestos y un toque de sal en escamas. Receta casera crujiente y fácil.',
+    content: `
+# Granola de caramelo salado: el capricho que sí puedes desayunar
+
+El caramelo salado engancha por su contraste dulce-salado. La buena noticia: se puede llevar a la granola **sin convertirla en un postre**. Esta receta consigue ese sabor con ingredientes honestos y un toque final de sal en escamas.
+
+## El secreto del caramelo salado (sin hacer caramelo)
+
+No hace falta cocinar un caramelo de verdad. El truco está en combinar:
+
+- Un endulzante con notas acarameladas: **sirope de arce, pasta de dátil o azúcar de coco**
+- **Mantequilla de frutos secos** (cacahuete o almendra) para ese cuerpo "caramelo"
+- **Sal en escamas** al final, para el contraste
+- Un poco de **vainilla** para redondear
+
+## Ingredientes (para 1 bote)
+
+- 200 g de copos de avena (certificada sin gluten si lo necesitas)
+- 80 g de frutos secos (cacahuetes o almendras)
+- 30 g de semillas
+- 2 cucharadas de aceite de coco
+- 3 cucharadas de sirope de arce (o pasta de dátil)
+- 2 cucharadas de mantequilla de cacahuete o almendra
+- 1 cucharadita de extracto de vainilla
+- Sal en escamas (1/2 cucharadita + un extra para el final)
+
+## Preparación paso a paso
+
+### 1. Precalienta
+Horno a **150 °C**.
+
+### 2. La "salsa caramelo"
+Templa el aceite de coco con el sirope, la mantequilla de frutos secos y la vainilla hasta que quede una salsa lisa. Mézclala con la avena, los frutos secos, las semillas y la 1/2 cucharadita de sal.
+
+### 3. Hornea
+Extiéndela en capa fina sobre **papel vegetal**. Hornea **25-30 minutos**, removiendo a mitad.
+
+### 4. Sal y crunch
+Nada más sacarla, espolvorea **sal en escamas** por encima. Déjala enfriar del todo: ahí llega el crujiente. Si quieres *clusters*, no la remuevas mientras enfría.
+
+## Cómo disfrutarla
+
+- Con yogur griego (el punto ácido equilibra el dulce).
+- Sobre helado o plátano, como capricho de fin de semana.
+- A cucharadas, como snack. [Más ideas de snack aquí](/blog/granola-snack-saludable-entre-horas).
+
+## Conserva el crunch
+
+Pásala a un bote de cristal hermético en cuanto enfríe. Te contamos cómo en [conservar tu granola fresca](/blog/como-conservar-granola-fresca).
+
+## Próximamente
+
+Pronto, **ediciones de temporada** en Poppy. Mientras tanto, [reserva](/tienda) tu Poppy de siempre. 🧂
+    `,
+    coverImage: '/images/blog/granola-snack.png',
+    category: 'recetas',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-09-29',
+    readingTime: 6,
+    tags: ['caramelo-salado', 'receta', 'capricho', 'granola', 'dulce-salado'],
+    metaTitle: 'Granola de caramelo salado: receta casera crujiente | Poppy',
+    metaDescription:
+      'Receta de granola de caramelo salado sin hacer caramelo: sirope, mantequilla de frutos secos, vainilla y sal en escamas. Crujiente, fácil y con ingredientes honestos.',
+    faqs: [
+      {
+        question: '¿Lleva caramelo o mucho azúcar?',
+        answer:
+          'No lleva caramelo cocinado. El sabor acaramelado viene del sirope de arce (o pasta de dátil) y de la mantequilla de frutos secos, así que puedes controlar el dulzor y mantenerla honesta.',
+      },
+      {
+        question: '¿Se puede hacer sin gluten?',
+        answer:
+          'Sí, con copos de avena certificada sin gluten y comprobando el resto de ingredientes.',
+      },
+      {
+        question: '¿Qué sal debo usar?',
+        answer:
+          'Sal en escamas (tipo Maldon) añadida al final. Es la que da el contraste crujiente y salado característico del caramelo salado.',
+      },
+    ],
+  },
+  {
+    id: 'post_pistacho',
+    slug: 'granola-pistacho-receta',
+    title: 'Granola de pistacho: la receta del sabor de moda',
+    excerpt:
+      'El pistacho está en todo, y a la granola le sienta de maravilla: punto tostado, color precioso y grasas buenas. Receta casera de granola de pistacho, elegante y fácil.',
+    content: `
+# Granola de pistacho: la receta del sabor de moda
+
+El pistacho está en todo: helados, cremas, dulces… y también le sienta de maravilla a la granola. Su punto tostado y ligeramente dulce combina con la avena como pocos frutos secos. Aquí tienes una granola de pistacho elegante y fácil de hacer.
+
+## Por qué el pistacho funciona tan bien
+
+- Sabor **delicado y tostado**, nada empalagoso
+- Un **color precioso** (ese verde que enamora)
+- **Grasas buenas** y proteína vegetal
+
+## Ingredientes (para 1 bote)
+
+- 200 g de copos de avena (certificada sin gluten si lo necesitas)
+- 80 g de pistachos pelados sin sal (y un extra para el final)
+- 20 g de otras semillas (opcional)
+- 2 cucharadas de aceite de coco
+- 3 cucharadas de miel o sirope de arce
+- 1/2 cucharadita de cardamomo o de vainilla (opcional, realza el pistacho)
+- 1 pizca de sal
+
+## Preparación paso a paso
+
+### 1. Precalienta
+Horno a **150 °C**.
+
+### 2. Mezcla
+Pica gruesos la mitad de los pistachos y deja el resto enteros. Junta la avena, los pistachos, la sal y el cardamomo. Templa el aceite de coco con la miel y viértelo por encima; remueve bien.
+
+### 3. Hornea (con ojo)
+Extiéndela en capa fina sobre **papel vegetal**. Hornea **20-25 minutos**, removiendo a mitad. El pistacho se tuesta rápido, así que vigila los últimos minutos para que no amargue.
+
+### 4. Enfría y remata
+Déjala enfriar por completo. Añade los pistachos reservados por encima, para color y textura extra.
+
+## Cómo disfrutarla
+
+- Con yogur y frambuesas (pistacho + rojo = precioso y riquísimo).
+- En un [smoothie bowl](/blog/smoothie-bowl-granola-frutos-rojos).
+- De topping en postres y tartas.
+
+## Conserva el crunch
+
+Bote de cristal hermético en cuanto enfríe. Todos los trucos, en [cómo conservar tu granola fresca](/blog/como-conservar-granola-fresca).
+
+## Próximamente
+
+Muy pronto, **ediciones de temporada** en Poppy. Mientras tanto, [reserva](/tienda) tu granola de siempre. 🩶
+    `,
+    coverImage: '/images/blog/smoothie-bowl-granola.png',
+    category: 'recetas',
+    author: 'Equipo Poppy',
+    publishedAt: '2026-09-30',
+    readingTime: 5,
+    tags: ['pistacho', 'receta', 'tendencia', 'granola', 'frutos-secos'],
+    metaTitle: 'Granola de pistacho: receta casera del sabor de moda | Poppy',
+    metaDescription:
+      'Receta de granola de pistacho: tostado, elegante y fácil, con un toque de cardamomo. Sin gluten si usas avena certificada. El sabor de moda, en tu desayuno.',
+    faqs: [
+      {
+        question: '¿Uso pistachos con o sin sal?',
+        answer:
+          'Mejor sin sal, así controlas tú el punto. Puedes añadir una pizca de sal a la mezcla si te gusta el contraste.',
+      },
+      {
+        question: '¿Se puede hacer sin gluten?',
+        answer:
+          'Sí, con copos de avena certificada sin gluten y comprobando el resto de ingredientes.',
+      },
+      {
+        question: '¿Por qué se me queman los pistachos?',
+        answer:
+          'El pistacho se tuesta más rápido que la avena. Hornea a 150 °C, remueve a mitad y vigila los últimos minutos; en cuanto huele tostado, fuera.',
+      },
+    ],
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {
