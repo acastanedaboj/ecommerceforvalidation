@@ -2531,361 +2531,241 @@ Leer la etiqueta te da el poder de elegir bien: ingredientes cortos, poco azúca
   },
   {
     id: 'post_pumpkin_spice',
-    slug: 'granola-pumpkin-spice-otono-receta',
-    title: 'Granola pumpkin spice: la receta con sabor a otoño',
+    slug: 'granola-pumpkin-spice-otono',
+    title: 'Granola pumpkin spice: nuestra edición de otoño',
     excerpt:
-      'Avena tostada despacio, frutos secos y la mezcla de especias más reconocible del otoño. La receta casera de granola pumpkin spice, con el truco para que quede bien crujiente.',
+      'Nuestra edición de temporada con el aroma del otoño: canela, jengibre, nuez moscada y clavo, y protagonismo para la pipa de calabaza tostada. En lotes limitados.',
     content: `
-# Granola pumpkin spice: la receta con sabor a otoño
+# Granola pumpkin spice: nuestra edición de otoño
 
-Llegan el frío, las mantas y ese antojo de todo lo que sepa a **pumpkin spice**. Esta granola casera captura el otoño en un bote: avena tostada despacio, frutos secos y la mezcla de especias más reconocible de la temporada. Te dejamos la receta y los trucos para que quede crujiente de verdad.
+Cuando llega el frío apetece todo lo que sabe a **pumpkin spice**: esa mezcla de especias cálidas que huele a otoño. Por eso preparamos una **edición de temporada** de granola con ese carácter, en pequeños lotes y con los mismos ingredientes honestos de siempre.
 
-## Qué es el "pumpkin spice"
+## A qué sabe
 
-Aunque el nombre despiste, la mezcla clásica **no lleva calabaza**: es una combinación de especias cálidas que tradicionalmente acompaña a los postres de calabaza. La base es:
+Imagina nuestra granola de siempre, pero envuelta en un aroma especiado: **canela, jengibre, nuez moscada, clavo y pimienta de Jamaica**. Cálida, aromática y nada empalagosa.
 
-- Canela
-- Jengibre
-- Nuez moscada
-- Clavo
-- Pimienta de Jamaica (opcional)
+Un apunte: aunque se llame "pumpkin spice", **no lleva calabaza**. El nombre describe la mezcla de especias, no el ingrediente. Nosotros le damos protagonismo a la **pipa de calabaza tostada**, que refuerza el concepto y aporta un punto crujiente extra.
 
-### Mezcla pumpkin spice (para tener a mano)
+## Qué lleva
 
-- 3 cucharaditas de canela
-- 1 cucharadita de jengibre molido
-- 1 cucharadita de nuez moscada
-- 1/2 cucharadita de clavo molido
-- 1/2 cucharadita de pimienta de Jamaica (opcional)
+Nuestra base de siempre: **avena sin gluten, pipas de calabaza y girasol, almendras, anacardos, avellanas y lino**, con la mezcla de especias de otoño, **miel** y **aceite de coco**. Ingredientes que reconoces, cero rarezas.
 
-Mézclalas y guárdalas en un bote pequeño: te sirve para el café, los bizcochos y esta granola.
-
-## Ingredientes de la granola (para 1 bote)
-
-- 200 g de copos de avena (certificada sin gluten si lo necesitas)
-- 80 g de frutos secos (las nueces y las pecanas van genial en otoño)
-- 30 g de semillas (calabaza, girasol)
-- 2 cucharadas de aceite de coco
-- 3 cucharadas de miel o sirope de arce
-- 2 cucharaditas de mezcla pumpkin spice
-- 1 pizca de sal
-- Opcional: 2 cucharadas de puré de calabaza para un toque más auténtico
-
-## Preparación paso a paso
-
-### 1. Precalienta
-Horno a **150 °C**. El tostado lento es clave: más crujiente y menos riesgo de quemarla.
-
-### 2. Mezcla
-En un bol, junta la avena, los frutos secos, las semillas, las especias y la sal. Aparte, templa el aceite de coco con la miel (y el puré de calabaza, si lo usas) y viértelo sobre lo seco. Remueve hasta que todo quede bien impregnado.
-
-### 3. Hornea
-Extiéndela en una bandeja con **papel vegetal**, en capa fina. Hornea **25-30 minutos**, removiendo a mitad para que se dore por igual.
-
-### 4. El truco del crujiente
-Sácala y **déjala enfriar por completo sin tocarla**: el crunch aparece al enfriar, no en caliente. Si te gustan los *clusters*, presiona ligeramente la mezcla antes de que enfríe y no la remuevas.
+Como todas nuestras granolas, se elabora con **ingredientes certificados sin gluten y sin trazas**, y es **sin lactosa**.
 
 ## Cómo disfrutarla
 
-- Sobre yogur con manzana o pera asada.
-- En unos [overnight oats](/blog/overnight-oats-granola-receta-perfecta) para desayunos de otoño.
-- Con leche caliente, como un abrazo en un bol.
+- Sobre yogur con manzana o pera.
+- En un bol con leche (o bebida vegetal) templada, para las mañanas frías.
+- En unos [overnight oats](/blog/overnight-oats-granola-receta-perfecta) con un toque otoñal.
 
 Más ideas en [5 formas de desayunar granola con energía](/blog/5-formas-desayunar-granola-energia).
 
-## Conserva el crujiente
+## Edición limitada
 
-Pásala a un bote de cristal hermético en cuanto enfríe. Todos los trucos, en [cómo conservar tu granola fresca](/blog/como-conservar-granola-fresca).
-
-## ¿Sin ganas de encender el horno?
-
-Muy pronto tendremos **ediciones de temporada** en Poppy. Mientras tanto, puedes [reservar](/tienda) nuestros sabores de siempre, hechos en pequeños lotes con ingredientes que reconoces. 🍂
+Es una **edición de temporada**: la preparamos por lotes mientras dura el otoño. Si no quieres quedarte sin ella, [resérvala](/tienda) o [escríbenos](/contacto) para que te avisemos del próximo lote. Y cuando la tengas, cuida su crujiente con estos [trucos de conservación](/blog/como-conservar-granola-fresca). 🍂
     `,
     coverImage: '/images/blog/granola-snack.png',
-    category: 'recetas',
+    category: 'estilo-de-vida',
     author: 'Equipo Poppy',
     publishedAt: '2026-09-27',
-    readingTime: 6,
-    tags: ['pumpkin-spice', 'otono', 'receta', 'especias', 'granola', 'temporada'],
-    metaTitle: 'Granola pumpkin spice: receta casera de otoño | Poppy',
+    readingTime: 4,
+    tags: ['pumpkin-spice', 'otono', 'edicion-de-temporada', 'especias', 'granola'],
+    metaTitle: 'Granola pumpkin spice: edición de otoño | Poppy',
     metaDescription:
-      'Receta de granola pumpkin spice para el otoño: mezcla de especias casera, ingredientes y el truco para que quede bien crujiente. Sin gluten si usas avena certificada.',
+      'Nuestra granola pumpkin spice: edición de otoño con canela, jengibre, nuez moscada y clavo, y protagonismo de la pipa de calabaza. Sin gluten y sin lactosa. En lotes limitados.',
     faqs: [
       {
-        question: '¿El pumpkin spice lleva calabaza?',
+        question: '¿La granola pumpkin spice lleva calabaza?',
         answer:
-          'No necesariamente. El "pumpkin spice" es una mezcla de especias cálidas (canela, jengibre, nuez moscada, clavo y a veces pimienta de Jamaica) que acompaña a los postres de calabaza, pero la mezcla en sí no lleva calabaza. Puedes añadir puré de calabaza si quieres un toque más auténtico.',
+          'No. "Pumpkin spice" es la mezcla de especias (canela, jengibre, nuez moscada, clavo y pimienta de Jamaica), no la calabaza. Eso sí, le damos protagonismo a la pipa de calabaza tostada.',
       },
       {
-        question: '¿Puedo hacerla sin gluten?',
+        question: '¿Es sin gluten y sin lactosa?',
         answer:
-          'Sí. Usa copos de avena certificada sin gluten y comprueba que el resto de ingredientes también lo sean. Así la receta es apta para dietas sin gluten.',
+          'Sí. Como el resto de nuestras granolas, se elabora con ingredientes certificados sin gluten y sin trazas, y es sin lactosa.',
       },
       {
-        question: '¿Por qué no me queda crujiente?',
+        question: '¿Cuándo está disponible?',
         answer:
-          'Casi siempre es por dos motivos: no dejarla enfriar del todo (el crunch aparece al enfriar) o extenderla en capa demasiado gruesa. Hornéala en capa fina, a 150 °C, y déjala reposar sin tocarla.',
+          'Es una edición de temporada de otoño, en lotes limitados. Resérvala en la tienda o escríbenos para que te avisemos del próximo lote.',
       },
     ],
   },
   {
     id: 'post_gingerbread',
-    slug: 'granola-gingerbread-navidad-receta',
-    title: 'Granola de gingerbread: sabor a Navidad en un bote',
+    slug: 'granola-gingerbread-navidad',
+    title: 'Granola gingerbread: nuestra edición de Navidad',
     excerpt:
-      'El gingerbread —jengibre, canela y melaza— cabe en tu desayuno. Receta casera de granola gingerbread, crujiente y con todo el aroma navideño. Ideal también para regalar.',
+      'Especiada, con un fondo oscuro y acaramelado de melaza y un toque de naranja. Nuestra edición navideña de granola, en lotes limitados. Ideal para regalar.',
     content: `
-# Granola de gingerbread: sabor a Navidad en un bote
+# Granola gingerbread: nuestra edición de Navidad
 
-El gingerbread —esas galletas de jengibre y melaza tan navideñas— también cabe en tu desayuno. Esta granola casera huele a Navidad desde que abres el horno: jengibre, canela y un fondo de melaza que la hace irresistible. Aquí tienes la receta.
+El **gingerbread** —las galletas de jengibre y melaza— es puro diciembre. Lo llevamos a la granola en una **edición de Navidad**: especiada, con un fondo oscuro y acaramelado, para desayunos con manta y luces.
 
-## A qué sabe el gingerbread
+## A qué sabe
 
-La magia está en la combinación de **especias cálidas + melaza**:
+Más **jengibre** que nuestra pumpkin spice, con **canela, nuez moscada y clavo**, y un toque de **melaza** que le da ese color oscuro y ligeramente tostado tan característico del gingerbread. Y un giro muy nuestro: un punto de **piel de naranja**, que le va de maravilla.
 
-- Jengibre (el protagonista)
-- Canela
-- Nuez moscada
-- Clavo
-- Melaza (o azúcar moreno oscuro) para ese toque acaramelado
+## Qué lleva
 
-## Ingredientes (para 1 bote)
+La base de siempre —**avena sin gluten, pipas de calabaza y girasol, almendras, anacardos, avellanas y lino**— con la mezcla de especias navideñas, **miel**, un toque de **melaza** y **aceite de coco**. Ingredientes que reconoces.
 
-- 200 g de copos de avena (certificada sin gluten si lo necesitas)
-- 80 g de frutos secos (almendras, nueces)
-- 30 g de semillas (calabaza, girasol)
-- 2 cucharadas de aceite de coco
-- 2 cucharadas de melaza (o sirope oscuro)
-- 2 cucharadas de miel o sirope de arce
-- 2 cucharaditas de jengibre molido
-- 1 cucharadita de canela
-- 1/2 cucharadita de nuez moscada
-- 1/4 cucharadita de clavo molido
-- 1 pizca de sal
-- Opcional: un puñado de pasas
-
-## Preparación paso a paso
-
-### 1. Precalienta
-Horno a **150 °C**. El tostado lento evita que la melaza se queme.
-
-### 2. Mezcla
-Junta la avena, los frutos secos, las semillas, las especias y la sal. Aparte, templa el aceite de coco con la melaza y la miel, y viértelo sobre lo seco. Remueve muy bien para que la especia se reparta.
-
-### 3. Hornea
-Extiéndela en capa fina sobre **papel vegetal**. Hornea **25-30 minutos**, removiendo a mitad. Ojo: la melaza dora rápido, así que vigila los últimos minutos.
-
-### 4. Enfría (y el crunch llega)
-Déjala enfriar por completo sin tocarla. Si quieres, añade un puñado de pasas ya en frío.
+Sin gluten (ingredientes certificados sin gluten y sin trazas) y sin lactosa.
 
 ## Cómo disfrutarla
 
 - Con yogur y pera.
-- En un bol con leche caliente para las mañanas frías.
-- De topping en tu postre navideño.
+- En un bol con leche templada las mañanas frías.
+- De topping en tus postres navideños.
 
-Más ideas en [5 formas de desayunar granola con energía](/blog/5-formas-desayunar-granola-energia).
+## Un regalo con encanto
 
-## Ideal para regalar
+Un bote de esta granola es un **detalle navideño** precioso. Consérvala crujiente con estos [trucos](/blog/como-conservar-granola-fresca).
 
-Un bote de cristal con esta granola y una etiqueta bonita es un **regalo navideño** con muchísimo encanto. Consérvala con estos [trucos](/blog/como-conservar-granola-fresca) para que llegue crujiente a su destino.
+## Edición limitada
 
-## Próximamente
-
-Muy pronto tendremos **ediciones de temporada** en Poppy. Mientras tanto, puedes [reservar](/tienda) nuestros sabores de siempre. 🎄
+Solo en Navidad y por lotes. [Resérvala](/tienda) o [escríbenos](/contacto) para que te avisemos del próximo lote. 🎄
     `,
     coverImage: '/images/blog/overnight-oats-granola.png',
-    category: 'recetas',
+    category: 'estilo-de-vida',
     author: 'Equipo Poppy',
     publishedAt: '2026-09-28',
-    readingTime: 6,
-    tags: ['gingerbread', 'navidad', 'jengibre', 'receta', 'temporada', 'regalo'],
-    metaTitle: 'Granola de gingerbread: receta navideña de jengibre | Poppy',
+    readingTime: 4,
+    tags: ['gingerbread', 'navidad', 'jengibre', 'edicion-de-temporada', 'regalo'],
+    metaTitle: 'Granola gingerbread: edición de Navidad | Poppy',
     metaDescription:
-      'Receta de granola gingerbread con jengibre, canela y melaza: el sabor de la Navidad, crujiente y fácil. Sin gluten si usas avena certificada. Ideal para regalar.',
+      'Nuestra granola gingerbread: edición de Navidad con jengibre, canela, melaza y un toque de naranja. Sin gluten y sin lactosa. En lotes limitados, ideal para regalar.',
     faqs: [
       {
-        question: '¿Puedo hacerla sin melaza?',
+        question: '¿En qué se diferencia del pumpkin spice?',
         answer:
-          'Sí. Sustitúyela por azúcar moreno oscuro disuelto o por más sirope de arce. La melaza aporta el toque acaramelado típico del gingerbread, pero la receta funciona igual.',
+          'Lleva más jengibre y un toque de melaza, que le dan un color más oscuro y un sabor acaramelado, con un punto de naranja. El pumpkin spice es más suave y otoñal.',
       },
       {
-        question: '¿Se puede hacer sin gluten?',
+        question: '¿Es sin gluten y sin lactosa?',
         answer:
-          'Sí, usando copos de avena certificada sin gluten y comprobando que el resto de ingredientes también lo sean.',
+          'Sí, elaborada con ingredientes certificados sin gluten y sin trazas, y sin lactosa.',
       },
       {
-        question: '¿Sirve como regalo?',
+        question: '¿Cuándo está disponible?',
         answer:
-          'Perfectamente. En un bote de cristal hermético y bien conservada aguanta semanas en su mejor momento, así que es un regalo comestible ideal para Navidad.',
+          'Es una edición de Navidad, en lotes limitados. Resérvala o escríbenos para que te avisemos del próximo lote.',
       },
     ],
   },
   {
     id: 'post_caramelo_salado',
-    slug: 'granola-caramelo-salado-receta',
-    title: 'Granola de caramelo salado: el capricho que sí puedes desayunar',
+    slug: 'granola-caramelo-salado',
+    title: 'Granola de caramelo salado: dulce, salada y crujiente',
     excerpt:
-      'El contraste dulce-salado del caramelo salado, llevado a la granola con ingredientes honestos y un toque de sal en escamas. Receta casera crujiente y fácil.',
+      'El contraste dulce-salado del caramelo salado, sin convertirlo en un postre: notas acarameladas de dátil, pecanas y unos cristales de sal en escamas. Edición especial.',
     content: `
-# Granola de caramelo salado: el capricho que sí puedes desayunar
+# Granola de caramelo salado: dulce, salada y crujiente
 
-El caramelo salado engancha por su contraste dulce-salado. La buena noticia: se puede llevar a la granola **sin convertirla en un postre**. Esta receta consigue ese sabor con ingredientes honestos y un toque final de sal en escamas.
+El **caramelo salado** engancha por su contraste dulce-salado. Lo hemos llevado a la granola en una edición especial, **sin convertirla en un postre**: el punto justo de dulzor acaramelado y unos toques de sal que lo realzan.
 
-## El secreto del caramelo salado (sin hacer caramelo)
+## A qué sabe
 
-No hace falta cocinar un caramelo de verdad. El truco está en combinar:
+Notas **acarameladas y tostadas** —gracias al **sirope de dátil**, más oscuro que la miel— con **vainilla** y el crujiente de las **nueces pecanas**. Y el detalle que lo cambia todo: unos **cristales de sal en escamas** por encima, para que aparezcan pequeños puntos salados sin salar la mezcla entera.
 
-- Un endulzante con notas acarameladas: **sirope de arce, pasta de dátil o azúcar de coco**
-- **Mantequilla de frutos secos** (cacahuete o almendra) para ese cuerpo "caramelo"
-- **Sal en escamas** al final, para el contraste
-- Un poco de **vainilla** para redondear
+## Qué lleva
 
-## Ingredientes (para 1 bote)
+Nuestra base —**avena sin gluten, pipas de calabaza y girasol, almendras, anacardos, nueces pecanas y lino**—, endulzada con **miel** y **sirope de dátil**, con **vainilla**, **aceite de coco** y un toque de **sal marina**. Ingredientes que reconoces.
 
-- 200 g de copos de avena (certificada sin gluten si lo necesitas)
-- 80 g de frutos secos (cacahuetes o almendras)
-- 30 g de semillas
-- 2 cucharadas de aceite de coco
-- 3 cucharadas de sirope de arce (o pasta de dátil)
-- 2 cucharadas de mantequilla de cacahuete o almendra
-- 1 cucharadita de extracto de vainilla
-- Sal en escamas (1/2 cucharadita + un extra para el final)
-
-## Preparación paso a paso
-
-### 1. Precalienta
-Horno a **150 °C**.
-
-### 2. La "salsa caramelo"
-Templa el aceite de coco con el sirope, la mantequilla de frutos secos y la vainilla hasta que quede una salsa lisa. Mézclala con la avena, los frutos secos, las semillas y la 1/2 cucharadita de sal.
-
-### 3. Hornea
-Extiéndela en capa fina sobre **papel vegetal**. Hornea **25-30 minutos**, removiendo a mitad.
-
-### 4. Sal y crunch
-Nada más sacarla, espolvorea **sal en escamas** por encima. Déjala enfriar del todo: ahí llega el crujiente. Si quieres *clusters*, no la remuevas mientras enfría.
+Sin gluten (ingredientes certificados sin gluten y sin trazas) y sin lactosa.
 
 ## Cómo disfrutarla
 
-- Con yogur griego (el punto ácido equilibra el dulce).
-- Sobre helado o plátano, como capricho de fin de semana.
-- A cucharadas, como snack. [Más ideas de snack aquí](/blog/granola-snack-saludable-entre-horas).
+- Con yogur griego: el punto ácido equilibra el dulce.
+- Como capricho, sobre fruta o con un poco de chocolate.
+- A cucharadas, como [snack entre horas](/blog/granola-snack-saludable-entre-horas).
 
-## Conserva el crunch
+## Edición limitada
 
-Pásala a un bote de cristal hermético en cuanto enfríe. Te contamos cómo en [conservar tu granola fresca](/blog/como-conservar-granola-fresca).
-
-## Próximamente
-
-Pronto, **ediciones de temporada** en Poppy. Mientras tanto, [reserva](/tienda) tu Poppy de siempre. 🧂
+La preparamos por lotes. [Resérvala](/tienda) o [escríbenos](/contacto) para que te avisemos. Y consérvala crujiente con estos [trucos](/blog/como-conservar-granola-fresca). 🧂
     `,
-    coverImage: '/images/blog/granola-snack.png',
-    category: 'recetas',
+    coverImage: '/images/blog/granola-bowl-yogurt.png',
+    category: 'estilo-de-vida',
     author: 'Equipo Poppy',
     publishedAt: '2026-09-29',
-    readingTime: 6,
-    tags: ['caramelo-salado', 'receta', 'capricho', 'granola', 'dulce-salado'],
-    metaTitle: 'Granola de caramelo salado: receta casera crujiente | Poppy',
+    readingTime: 4,
+    tags: ['caramelo-salado', 'edicion-especial', 'dulce-salado', 'granola'],
+    metaTitle: 'Granola de caramelo salado: dulce, salada y crujiente | Poppy',
     metaDescription:
-      'Receta de granola de caramelo salado sin hacer caramelo: sirope, mantequilla de frutos secos, vainilla y sal en escamas. Crujiente, fácil y con ingredientes honestos.',
+      'Nuestra granola de caramelo salado: notas acarameladas de sirope de dátil, nueces pecanas y sal en escamas, sin ser un postre. Sin gluten y sin lactosa. Edición especial.',
     faqs: [
       {
-        question: '¿Lleva caramelo o mucho azúcar?',
+        question: '¿Lleva mucho azúcar?',
         answer:
-          'No lleva caramelo cocinado. El sabor acaramelado viene del sirope de arce (o pasta de dátil) y de la mantequilla de frutos secos, así que puedes controlar el dulzor y mantenerla honesta.',
+          'El dulzor viene de la miel y el sirope de dátil, con un toque de sal que lo equilibra. Nada de caramelo industrial ni azúcares raros.',
       },
       {
-        question: '¿Se puede hacer sin gluten?',
+        question: '¿Es sin gluten y sin lactosa?',
         answer:
-          'Sí, con copos de avena certificada sin gluten y comprobando el resto de ingredientes.',
+          'Sí, elaborada con ingredientes certificados sin gluten y sin trazas, y sin lactosa.',
       },
       {
-        question: '¿Qué sal debo usar?',
+        question: '¿Cuándo está disponible?',
         answer:
-          'Sal en escamas (tipo Maldon) añadida al final. Es la que da el contraste crujiente y salado característico del caramelo salado.',
+          'Es una edición especial en lotes limitados. Resérvala o escríbenos para que te avisemos del próximo lote.',
       },
     ],
   },
   {
     id: 'post_pistacho',
-    slug: 'granola-pistacho-receta',
-    title: 'Granola de pistacho: la receta del sabor de moda',
+    slug: 'granola-pistacho-limon-cardamomo',
+    title: 'Granola de pistacho, limón y cardamomo: nuestra edición premium',
     excerpt:
-      'El pistacho está en todo, y a la granola le sienta de maravilla: punto tostado, color precioso y grasas buenas. Receta casera de granola de pistacho, elegante y fácil.',
+      'Pistacho de verdad, un punto de limón y el aroma del cardamomo. Nuestra edición más premium: clara, fresca y aromática. En lotes muy limitados.',
     content: `
-# Granola de pistacho: la receta del sabor de moda
+# Granola de pistacho, limón y cardamomo: nuestra edición premium
 
-El pistacho está en todo: helados, cremas, dulces… y también le sienta de maravilla a la granola. Su punto tostado y ligeramente dulce combina con la avena como pocos frutos secos. Aquí tienes una granola de pistacho elegante y fácil de hacer.
+El pistacho está de moda, y con razón. Le hemos dado una vuelta muy **Poppy**: pistacho de verdad, un punto de **limón** y el aroma del **cardamomo**. Una edición **clara, fresca y aromática**, la más premium de la casa.
 
-## Por qué el pistacho funciona tan bien
+## A qué sabe
 
-- Sabor **delicado y tostado**, nada empalagoso
-- Un **color precioso** (ese verde que enamora)
-- **Grasas buenas** y proteína vegetal
+El **pistacho** manda: tostado y delicado, nada empalagoso. Lo acompañamos de **ralladura de limón** y **cardamomo**, con apenas un toque de canela para no taparlo. El resultado es fresco y elegante, muy distinto a una granola especiada de invierno.
 
-## Ingredientes (para 1 bote)
+## Qué lleva
 
-- 200 g de copos de avena (certificada sin gluten si lo necesitas)
-- 80 g de pistachos pelados sin sal (y un extra para el final)
-- 20 g de otras semillas (opcional)
-- 2 cucharadas de aceite de coco
-- 3 cucharadas de miel o sirope de arce
-- 1/2 cucharadita de cardamomo o de vainilla (opcional, realza el pistacho)
-- 1 pizca de sal
+Nuestra base —**avena sin gluten, pipas de calabaza y girasol, pistachos, anacardos, almendras, avellanas y lino**—, con **cardamomo, limón y vainilla**, endulzada con **miel** y **aceite de coco**, y un extra de sabor con **pasta de pistacho**. Parte de los pistachos van por encima, para conservar su color y su textura.
 
-## Preparación paso a paso
-
-### 1. Precalienta
-Horno a **150 °C**.
-
-### 2. Mezcla
-Pica gruesos la mitad de los pistachos y deja el resto enteros. Junta la avena, los pistachos, la sal y el cardamomo. Templa el aceite de coco con la miel y viértelo por encima; remueve bien.
-
-### 3. Hornea (con ojo)
-Extiéndela en capa fina sobre **papel vegetal**. Hornea **20-25 minutos**, removiendo a mitad. El pistacho se tuesta rápido, así que vigila los últimos minutos para que no amargue.
-
-### 4. Enfría y remata
-Déjala enfriar por completo. Añade los pistachos reservados por encima, para color y textura extra.
+Sin gluten (ingredientes certificados sin gluten y sin trazas) y sin lactosa.
 
 ## Cómo disfrutarla
 
-- Con yogur y frambuesas (pistacho + rojo = precioso y riquísimo).
+- Con yogur y frambuesas (pistacho + rojo, precioso y riquísimo).
 - En un [smoothie bowl](/blog/smoothie-bowl-granola-frutos-rojos).
 - De topping en postres y tartas.
 
-## Conserva el crunch
+## Edición limitada
 
-Bote de cristal hermético en cuanto enfríe. Todos los trucos, en [cómo conservar tu granola fresca](/blog/como-conservar-granola-fresca).
-
-## Próximamente
-
-Muy pronto, **ediciones de temporada** en Poppy. Mientras tanto, [reserva](/tienda) tu granola de siempre. 🩶
+Es nuestra edición más especial, en lotes muy limitados. [Resérvala](/tienda) o [escríbenos](/contacto) para que te avisemos. Consérvala con estos [trucos](/blog/como-conservar-granola-fresca). 🩶
     `,
     coverImage: '/images/blog/smoothie-bowl-granola.png',
-    category: 'recetas',
+    category: 'estilo-de-vida',
     author: 'Equipo Poppy',
     publishedAt: '2026-09-30',
-    readingTime: 5,
-    tags: ['pistacho', 'receta', 'tendencia', 'granola', 'frutos-secos'],
-    metaTitle: 'Granola de pistacho: receta casera del sabor de moda | Poppy',
+    readingTime: 4,
+    tags: ['pistacho', 'limon', 'cardamomo', 'edicion-premium', 'granola'],
+    metaTitle: 'Granola de pistacho, limón y cardamomo | Poppy',
     metaDescription:
-      'Receta de granola de pistacho: tostado, elegante y fácil, con un toque de cardamomo. Sin gluten si usas avena certificada. El sabor de moda, en tu desayuno.',
+      'Nuestra granola de pistacho, limón y cardamomo: clara, fresca y aromática, con pistacho de verdad. Sin gluten y sin lactosa. Edición premium en lotes muy limitados.',
     faqs: [
       {
-        question: '¿Uso pistachos con o sin sal?',
+        question: '¿Por qué pistacho, limón y cardamomo?',
         answer:
-          'Mejor sin sal, así controlas tú el punto. Puedes añadir una pizca de sal a la mezcla si te gusta el contraste.',
+          'El limón y el cardamomo realzan el pistacho y lo mantienen fresco, en lugar de taparlo con demasiada especia. Por eso lleva muy poca canela.',
       },
       {
-        question: '¿Se puede hacer sin gluten?',
+        question: '¿Es sin gluten y sin lactosa?',
         answer:
-          'Sí, con copos de avena certificada sin gluten y comprobando el resto de ingredientes.',
+          'Sí, elaborada con ingredientes certificados sin gluten y sin trazas, y sin lactosa.',
       },
       {
-        question: '¿Por qué se me queman los pistachos?',
+        question: '¿Cuándo está disponible?',
         answer:
-          'El pistacho se tuesta más rápido que la avena. Hornea a 150 °C, remueve a mitad y vigila los últimos minutos; en cuanto huele tostado, fuera.',
+          'Es nuestra edición premium, en lotes muy limitados. Resérvala o escríbenos para que te avisemos del próximo lote.',
       },
     ],
   },
