@@ -2175,48 +2175,95 @@ La sensibilidad al gluten no celíaca es una condición real que afecta a millon
     content: `
 # Cómo conservar tu granola fresca (y recuperar el crunch)
 
-Nuestra granola se elabora en pequeños lotes y sin conservantes, así que llega a tus manos recién hecha. Para que dure crujiente hasta la última cucharada, aquí van dos trucos muy sencillos.
+La granola buena tiene un enemigo silencioso: la humedad. Da igual lo crujiente que estuviera al abrir la bolsa; si no la guardas bien, en unos días pierde ese punto que la hace irresistible. La buena noticia es que conservarla —y recuperarla si se ablanda— es facilísimo.
 
-## 1. Pásala a un bote de cristal en cuanto la recibas
+En esta guía te contamos cómo mantener tu granola crujiente hasta la última cucharada, con los mismos trucos que usamos nosotros. Nuestra granola se elabora en pequeños lotes y **sin conservantes**, así que llega a tus manos recién hecha; precisamente por eso merece un pequeño cuidado en casa.
 
-En cuanto llegue a casa, pásala a un **bote de cristal con cierre hermético**. Es el mejor amigo de la granola:
+## Por qué la granola pierde el crujiente
 
-- La protege de la **humedad**, que es justo lo que le quita el crujiente.
-- Mantiene el aroma y los sabores intactos.
-- Y, de paso, queda preciosa en la encimera.
+El crujiente viene del tostado: al hornear la avena, los frutos secos y las semillas, se evapora la humedad y quedan dorados y crocantes. El problema es que esos mismos ingredientes son **higroscópicos**, es decir, absorben la humedad del aire con facilidad.
 
-Guárdala en un lugar **fresco y seco**, lejos de fuentes de calor y de la luz directa. No necesita nevera.
+Cuando la granola queda expuesta al aire —una bolsa mal cerrada, un bote que no cierra bien, el vapor de la cocina— empieza a captar humedad y se ablanda. No se estropea (sigue siendo perfectamente comestible), pero pierde textura. Y en la granola, la textura lo es casi todo.
 
-## 2. ¿Ha perdido crunch? Recupéralo con un toque de calor
+Controla dos cosas —**el aire y la humedad**— y tendrás el 90% del trabajo hecho.
 
-Si en algún momento notas la granola menos crujiente (pasa con la humedad del ambiente), tiene solución: **un golpe de calor suave** y vuelve a estar como recién hecha. Elige el método que más te convenga.
+## Truco 1: Pásala a un bote de cristal en cuanto la recibas
+
+El gesto más importante, y el más sencillo: en cuanto llegue a casa, pásala a un **bote de cristal con cierre hermético**. Es el mejor amigo de la granola por varios motivos:
+
+- **La aísla de la humedad**, que es justo lo que le roba el crujiente.
+- **Conserva el aroma y los sabores** intactos, sin que cojan olores de la despensa.
+- Es **reutilizable y sostenible**: cero plásticos de un solo uso.
+- Y, de paso, queda preciosa en la encimera y te invita a desayunar bien.
+
+### Cómo hacerlo bien
+
+- Elige un bote con **tapa hermética** (de rosca o con junta de goma), no uno en el que la tapa solo apoye.
+- Asegúrate de que el bote esté **completamente seco** por dentro antes de llenarlo.
+- Llénalo **hasta arriba** si puedes: cuanto menos aire quede dentro, mejor se conserva.
+- Ciérralo bien después de cada uso. Parece obvio, pero es el error más común.
+
+Evita dejar la granola en la bolsa abierta con una pinza: entra aire cada vez que la abres y la humedad va ganando terreno.
+
+## Truco 2: Dónde guardar el bote
+
+El sitio también importa. Guarda el bote en un lugar **fresco, seco y oscuro**:
+
+- Lejos de fuentes de calor (horno, vitrocerámica, radiadores).
+- Fuera de la luz solar directa, que acelera el enranciamiento de los frutos secos.
+- Y **no en la nevera**: aunque parezca buena idea, tiene humedad y puede restarle crujiente. La granola se conserva mejor a temperatura ambiente, en un armario o despensa.
+
+¿Y el congelador? Es una opción válida si quieres guardarla mucho tiempo: en un recipiente hermético aguanta meses. Eso sí, sácala y deja que llegue a temperatura ambiente **antes de abrir el recipiente**, para evitar la condensación.
+
+## Truco 3: Recupera el crunch con un toque de calor
+
+¿Ha perdido crujiente? No la tires: tiene solución. Un **golpe de calor suave** evapora la humedad que ha absorbido y la deja como recién hecha. Elige el método que más te convenga:
 
 ### En el horno
-Extiéndela en una bandeja y caliéntala a **150 °C durante 5-8 minutos**.
+El método más uniforme. Extiéndela en una bandeja formando una capa fina y caliéntala a **150 °C durante 5-8 minutos**.
 
 ### En air fryer
-A **150 °C, 3-5 minutos**, moviendo la cesta a mitad.
+Rápido y cómodo para cantidades pequeñas: **150 °C, 3-5 minutos**, moviendo la cesta a mitad para que se haga por igual.
 
 ### En sartén
-A fuego **medio-bajo** y removiendo sin parar. Es el método más rápido, pero **cuidado: se quema con facilidad**, así que no la pierdas de vista ni un momento.
+El método más rápido si tienes prisa: a fuego **medio-bajo**, removiendo sin parar. Eso sí, **cuidado: se quema con facilidad**, así que no la pierdas de vista ni un momento.
 
-> **Truco clave:** el crujiente vuelve **al enfriarse**, no cuando está caliente. Déjala reposar un par de minutos fuera del fuego antes de probarla.
+> **El truco que casi nadie conoce:** el crujiente **vuelve al enfriarse**, no cuando la granola está caliente. Si la pruebas recién sacada del horno te parecerá blanda; déjala reposar un par de minutos y notarás cómo recupera el crunch.
 
-**Para ahorrarte limpieza:** usa **papel vegetal (de horno)** en la bandeja o la sartén y, al terminar, solo tienes que tirarlo.
+**Para ahorrarte limpieza:** usa **papel vegetal (de horno)** en la bandeja o en la sartén y, al terminar, solo tienes que tirarlo. Sin restos pegados ni fregoteo.
+
+## Cuánto dura la granola artesanal
+
+Al no llevar conservantes, nuestra granola está en su **mejor momento durante las primeras semanas**. Bien guardada en su bote hermético aguanta bastante más; simplemente, con el tiempo puede ir perdiendo algo de crujiente (que ya sabes recuperar) y los frutos secos pierden frescura poco a poco.
+
+Como referencia: si huele raro o los frutos secos saben "a rancio", es señal de que ha pasado su mejor momento. Con una conservación correcta, eso tarda mucho en ocurrir.
+
+## Errores comunes que le quitan el crujiente
+
+- Dejarla en la **bolsa abierta** con una pinza.
+- Guardarla **cerca del vapor** de la cocina o de la cafetera.
+- Meterla en la **nevera**.
+- Usar un bote que **no cierra herméticamente**.
+- Servirla con una **cuchara mojada**: la humedad entra directa al bote.
+
+## ¿Y si ya está blanda y no quiero encender el horno?
+
+No pasa nada: una granola que ha perdido un poco de crujiente sigue estando riquísima y da mucho juego. Puedes aprovecharla como topping cremoso sobre yogur, en un [smoothie bowl](/blog/smoothie-bowl-granola-frutos-rojos), en unos [overnight oats](/blog/overnight-oats-granola-receta-perfecta) o en cualquiera de estas [5 formas de desayunar granola con energía](/blog/5-formas-desayunar-granola-energia). Y si te apetece picar algo, aquí tienes ideas para tomarla [como snack entre horas](/blog/granola-snack-saludable-entre-horas).
 
 ## En resumen
 
-- Bote de cristal hermético, en un lugar fresco y seco.
-- Si pierde crunch: golpe de calor suave (horno, air fryer o sartén con cuidado) y dejar enfriar.
-- Papel vegetal para no tener que fregar.
+- **Bote de cristal hermético** en cuanto la recibas, lleno hasta arriba y bien cerrado.
+- Guárdalo en un lugar **fresco, seco y oscuro**. Nunca en la nevera.
+- Si pierde crunch: **golpe de calor suave** (horno, air fryer o sartén con cuidado) y **déjala enfriar**: ahí vuelve el crujiente.
+- **Papel vegetal** para no tener que fregar.
 
-Con esto, cada cucharada sabrá tan bien como el primer día. 🌿
+Con estos gestos, cada cucharada sabrá tan bien como el primer día. Y si se te acaba, ya sabes: puedes [reservar la tuya](/tienda) del próximo lote. 🌿
     `,
     coverImage: '/images/blog/conservar-granola.png',
     category: 'estilo-de-vida',
     author: 'Equipo Poppy',
     publishedAt: '2026-09-23',
-    readingTime: 3,
+    readingTime: 6,
     tags: ['conservacion', 'crunch', 'trucos', 'granola', 'consejos'],
     metaTitle: 'Cómo conservar tu granola fresca y recuperar el crunch | Poppy',
     metaDescription:
@@ -2236,6 +2283,11 @@ Con esto, cada cucharada sabrá tan bien como el primer día. 🌿
         question: '¿Cómo recupero el crunch si se ablanda?',
         answer:
           'Con un calor suave: unos 150 °C en horno (5-8 min) o air fryer (3-5 min), o a fuego medio-bajo en sartén con cuidado de que no se queme. Recuerda que el crujiente vuelve al enfriarse, así que déjala reposar antes de probarla.',
+      },
+      {
+        question: '¿Se puede congelar la granola?',
+        answer:
+          'Sí. Si quieres guardarla mucho tiempo, en un recipiente hermético aguanta meses en el congelador. Déjala llegar a temperatura ambiente antes de abrir el recipiente para evitar la condensación.',
       },
     ],
   },
