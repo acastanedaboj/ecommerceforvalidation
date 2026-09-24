@@ -244,6 +244,30 @@ Key test files:
 4. Add tests for new functionality
 5. Update documentation if significant
 
+## Blog content standards
+
+Blog posts live in `src/data/blog.ts` (`BlogPost` objects). When writing a new post:
+
+- **Length follows search intent, not a fixed number.** Informational / SEO
+  posts (guías, "qué es", "vs", "cómo", dudas frecuentes) should be thorough:
+  target roughly **1,000–1,300 words**. Personal / brand-voice / opinion posts
+  (first person, anecdote-driven) may be shorter (~700) — do not pad them.
+  Never add filler just to hit a count; every section must earn its place.
+- **Structure for SEO:** keyword-led `##` headings, a hooking intro, a short
+  "en resumen" list, 3–5 `faqs` (they render FAQ schema), and 2–4 internal
+  links to related posts / `/tienda` / `/contacto`.
+- **Brand + honesty rules (must follow):** ingredients are "certificados sin
+  gluten y sin trazas" and the product is "sin gluten / sin lactosa", but never
+  claim the finished product is "apto para celíacos", nor first-party
+  certifications, sanitary registration or lab analyses. Do not label the
+  founder "celíaca" (she has non-celiac gluten sensitivity). Health topics
+  (embarazo, diabetes, glucosa) carry a "no es consejo médico / consulta a tu
+  profesional" disclaimer. Reserve/entrega-en-mano-en-Málaga model, no shipping.
+- **Do NOT publish product recipes** (exact proportions or method) for sellable
+  granolas: describe the flavour and name ingredients without quantities.
+- Reuse existing images from `public/images/blog/` as covers when a fitting one
+  exists; otherwise use a placeholder and note the intended filename.
+
 ## Stripe Testing
 
 Use test cards:

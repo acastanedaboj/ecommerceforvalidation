@@ -2774,17 +2774,19 @@ Es nuestra edición más especial, en lotes muy limitados. [Resérvala](/tienda)
     slug: 'granola-picos-glucosa-como-tomarla',
     title: 'Granola y picos de glucosa: por qué tomarla de postre o con proteína',
     excerpt:
-      'No es solo qué comes, también cómo y cuándo. Con un par de trucos —proteína al lado y tomarla de postre— tu granola sienta mucho mejor. Te lo explicamos sin tecnicismos.',
+      'No es solo qué comes, también cómo y cuándo. Con unos trucos —proteína al lado, el orden de los alimentos y tomarla de postre— tu granola sienta mucho mejor. Te lo explico sin tecnicismos.',
     content: `
 # Granola y picos de glucosa: por qué tomarla de postre o con proteína
 
-Has oído hablar de los "picos de glucosa" y te preguntas si la granola encaja en esa conversación. La respuesta corta: **no es solo qué comes, también cómo y cuándo lo comes.** Con un par de trucos, tu granola sienta mucho mejor. Te lo contamos sin tecnicismos.
+Has oído hablar de los "picos de glucosa" y te preguntas si la granola encaja en esa conversación. La respuesta corta: **no es solo qué comes, también cómo y cuándo lo comes.** Con un par de trucos, tu granola sienta mucho mejor. Te lo cuento sin tecnicismos.
 
 > Nota: esto es información general de nutrición, no consejo médico. Si tienes diabetes o alguna condición, sigue las indicaciones de tu profesional de salud.
 
 ## Qué es un pico de glucosa (en 30 segundos)
 
-Cuando comemos hidratos, el azúcar en sangre sube y luego baja. Si sube y baja de forma muy brusca —un "pico"— es más fácil sentir hambre poco después, un bajón de energía o antojo de dulce. Suavizar esa curva ayuda a mantener la energía estable y la saciedad.
+Cuando comemos hidratos, el azúcar en sangre sube y luego baja. Si sube y baja de forma muy brusca —un "pico"— es más fácil sentir hambre poco después, un bajón de energía o antojo de dulce. Suavizar esa curva ayuda a mantener la energía estable y la saciedad durante más tiempo.
+
+No se trata de tenerle miedo a los hidratos: se trata de **cómo los presentamos** para que la subida sea más amable.
 
 ## ¿La granola da picos?
 
@@ -2792,7 +2794,11 @@ Depende de tres cosas:
 
 - **Los ingredientes:** una granola cargada de azúcar añadido sube la glucosa más rápido. Una con **poco azúcar, fibra (avena), grasas buenas (frutos secos) y algo de proteína** la suaviza. Aprende a distinguirlo en [cómo leer la etiqueta](/blog/como-leer-etiqueta-granola).
 - **La cantidad:** [la ración importa](/blog/granola-engorda-racion-mitos).
-- **Con qué y cuándo la tomas:** aquí está el truco.
+- **Con qué y cuándo la tomas:** aquí están los trucos.
+
+## El orden de los alimentos importa
+
+Un truco que se ha hecho muy popular: **el orden en que comes**. Si tomas primero la fibra y la proteína, y dejas los hidratos para el final, la glucosa sube de forma más suave. Con la granola, la versión práctica es sencilla: no la tomes como primer bocado con el estómago vacío; ponla **sobre una base de proteína** (como el yogur) o déjala para el final de una comida.
 
 ## Truco 1: acompáñala de proteína y grasa
 
@@ -2800,7 +2806,7 @@ La fibra, la grasa y la proteína **ralentizan la absorción del azúcar**. Por 
 
 - **Yogur** (griego o natural) o skyr — el clásico y el más fácil.
 - **Kéfir** o requesón.
-- Un puñado extra de **frutos secos**.
+- Un puñado extra de **frutos secos**, o incluso unos huevos al lado en un desayuno salado-dulce.
 
 Sola, y sobre todo con leche azucarada o zumo, sube más rápido. Con proteína al lado, la curva se suaviza.
 
@@ -2808,7 +2814,7 @@ Sola, y sobre todo con leche azucarada o zumo, sube más rápido. Con proteína 
 
 Tomar hidratos en ayunas, de primeras, favorece el pico. Dos ideas:
 
-- Si desayunas granola, **acompáñala de proteína** (yogur, huevos al lado…).
+- Si desayunas granola, **acompáñala de proteína**.
 - O tómala **después** de algo con fibra o proteína, no como primer bocado del día.
 
 ## Truco 3: de postre, mejor que sola a media mañana
@@ -2817,13 +2823,25 @@ Aquí va el que sorprende: la granola **como "postre"**, justo después de una c
 
 Así que una cucharada de granola sobre yogur **al final de la comida** es un caprichito que sienta mejor de lo que crees. Y si te apetece entre horas, [tómala como snack pero acompañada](/blog/granola-snack-saludable-entre-horas), no a palo seco.
 
+## Granola y deporte: el pico "bueno"
+
+No todos los momentos son iguales. **Justo después de entrenar**, tu cuerpo aprovecha esos hidratos para recuperarse, así que una granola post-entreno no es un problema —al contrario—. Si te mueves, es un momento estupendo para disfrutarla. Tienes una idea aquí: [bowl proteico post-entreno](/blog/bowl-proteico-granola-post-entreno).
+
+## Errores que disparan el pico
+
+- Tomarla **sola con zumo** (doble de azúcar de absorción rápida).
+- Servir **raciones enormes** a ojo.
+- Elegir **granolas muy azucaradas** sin mirar la etiqueta.
+- Tomarla **en ayunas** como único desayuno.
+
 ## Resumen práctico
 
 - Elige una granola con **poco azúcar añadido** y buena fibra/grasa.
 - **Acompáñala de proteína** (yogur, kéfir, skyr).
+- Cuida el **orden**: la granola, mejor sobre proteína o al final de la comida.
 - Evita tomarla **sola en ayunas**.
 - De **postre**, tras una comida completa, sienta mejor que sola a media mañana.
-- Cuida la **ración**.
+- Y cuida la **ración**.
 
 Nuestra granola va justo en esa línea: **cero ingredientes raros**, avena, frutos secos y semillas, con un dulzor comedido. [Descúbrela](/tienda). 🌿
     `,
@@ -2831,11 +2849,11 @@ Nuestra granola va justo en esa línea: **cero ingredientes raros**, avena, frut
     category: 'nutricion',
     author: 'Equipo Poppy',
     publishedAt: '2026-10-01',
-    readingTime: 6,
+    readingTime: 7,
     tags: ['glucosa', 'picos-de-glucosa', 'proteina', 'nutricion', 'saciedad'],
     metaTitle: 'Granola y picos de glucosa: cómo tomarla para evitarlos | Poppy',
     metaDescription:
-      'Cómo tomar la granola para suavizar los picos de glucosa: acompáñala de proteína (yogur, kéfir), evita el estómago vacío y tómala de postre. Guía práctica sin tecnicismos.',
+      'Cómo tomar la granola para suavizar los picos de glucosa: acompáñala de proteína, cuida el orden de los alimentos, evita el ayuno y tómala de postre. Guía práctica sin tecnicismos.',
     faqs: [
       {
         question: '¿La granola es apta para personas con diabetes?',
@@ -2850,7 +2868,12 @@ Nuestra granola va justo en esa línea: **cero ingredientes raros**, avena, frut
       {
         question: '¿Cuál es el mejor momento para tomarla?',
         answer:
-          'Acompañada de proteína, o de postre tras una comida completa, mejor que sola y en ayunas a media mañana.',
+          'Acompañada de proteína, o de postre tras una comida completa, mejor que sola y en ayunas a media mañana. Después de entrenar también es un buen momento.',
+      },
+      {
+        question: '¿La granola tiene un índice glucémico alto?',
+        answer:
+          'Depende de la granola: las muy azucaradas suben más rápido; las de poco azúcar, con avena, frutos secos y semillas, tienen un impacto más suave, sobre todo si las acompañas de proteína.',
       },
     ],
   },
