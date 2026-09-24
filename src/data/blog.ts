@@ -2859,60 +2859,80 @@ Nuestra granola va justo en esa línea: **cero ingredientes raros**, avena, frut
     slug: 'granola-embarazo-dudas-frecuentes',
     title: 'Granola en el embarazo: dudas frecuentes',
     excerpt:
-      'La granola suele ser un buen aliado en el embarazo: fibra, energía y nutrientes. Resolvemos las dudas más habituales, incluida la de la miel, con la cautela que merece.',
+      'La granola suele ser un buen aliado en el embarazo: fibra, energía, hierro y folato. Resuelvo las dudas más habituales —estreñimiento, náuseas, la miel, diabetes gestacional— con la cautela que merece.',
     content: `
 # Granola en el embarazo: dudas frecuentes
 
-Durante el embarazo surgen mil dudas sobre qué se puede comer. La granola es, en general, **un buen aliado**: aporta fibra, energía y nutrientes interesantes. Aquí resolvemos las preguntas más habituales.
+Durante el embarazo surgen mil dudas sobre qué se puede y qué no se puede comer. La granola es, en general, **un buen aliado**: aporta fibra, energía y nutrientes que en estos meses vienen especialmente bien. Aquí resuelvo las preguntas más habituales, con calma y sin alarmismos.
 
-> Importante: esta es información general, no consejo médico. Cada embarazo es distinto; sigue siempre las indicaciones de tu **matrona o ginecólogo/a**.
+> Importante: esto es información general, no consejo médico. Cada embarazo es distinto; sigue siempre las indicaciones de tu **matrona o ginecólogo/a**.
 
 ## ¿Se puede comer granola en el embarazo?
 
-Sí. La granola es un alimento **seco y horneado**, sin los ingredientes de riesgo típicos del embarazo (no lleva carne ni pescado crudos, ni lácteos sin pasteurizar). Como desayuno o snack, es una opción cómoda y nutritiva.
+Sí. La granola es un alimento **seco y horneado**, sin los ingredientes de riesgo típicos del embarazo (no lleva carne ni pescado crudos, ni lácteos sin pasteurizar, ni embutidos). Como desayuno o snack, es una opción cómoda, saciante y nutritiva.
 
-## Por qué puede venir bien
+Lo único a lo que prestar atención es a **qué granola** eliges —sobre todo el azúcar— y a **con qué la acompañas**. Vamos a ello.
 
-- **Fibra** (avena, semillas): ayuda con el tránsito, algo que en el embarazo suele agradecerse.
-- **Energía de calidad** para los momentos de más cansancio.
-- **Frutos secos y semillas:** aportan hierro, magnesio, grasas buenas y algo de proteína. Más sobre esto en [frutos secos: beneficios y tipos](/blog/frutos-secos-granola-beneficios-tipos).
+## Por qué puede venir especialmente bien
 
-## En qué fijarte
+El embarazo cambia muchas cosas, y algunos de esos cambios encajan justo con lo que aporta una buena granola:
 
-- **Azúcar añadido:** en el embarazo conviene vigilarlo especialmente. Elige una granola con poco azúcar ([cómo leer la etiqueta](/blog/como-leer-etiqueta-granola)).
-- **La ración:** es densa; con [30-45 g](/blog/granola-engorda-racion-mitos) suele bastar.
-- **Con qué la tomas:** acompañada de yogur o kéfir suma proteína y calcio (y [suaviza la glucosa](/blog/granola-picos-glucosa-como-tomarla)).
+- **Fibra (avena y semillas):** ayuda con el tránsito intestinal, que suele volverse más lento en el embarazo.
+- **Energía de calidad:** para los momentos de cansancio, sobre todo en el primer y el tercer trimestre.
+- **Hierro y folato:** los frutos secos, las semillas y la avena aportan hierro vegetal y folato, dos nutrientes clave en estos meses. Más sobre esto en [frutos secos: beneficios y tipos](/blog/frutos-secos-granola-beneficios-tipos).
+- **Grasas buenas y proteína vegetal:** de los frutos secos, que sacian y ayudan a llegar mejor entre horas.
+- **Calcio,** si la acompañas de yogur o kéfir.
+
+## Un aliado contra el estreñimiento
+
+El estreñimiento es una de las molestias más comunes del embarazo, por los cambios hormonales y la presión del útero. Una granola rica en **fibra**, acompañada de **suficiente agua**, puede ayudar a regular el tránsito. Si te cuesta especialmente, coméntalo con tu matrona.
+
+## Náuseas y antojos: cómo ayuda
+
+En el primer trimestre, con náuseas, a veces apetecen cosas **secas y suaves**. Un puñadito de granola —sin excederse— puede sentar mejor que un desayuno pesado, y al tomarse a pequeños bocados, va bien para esos momentos regulares. Y frente a los antojos de dulce, una granola con **poco azúcar** y acompañada de proteína ayuda a quedarte satisfecha sin subidas bruscas.
+
+## En qué fijarte al elegirla
+
+- **Azúcar añadido:** en el embarazo conviene vigilarlo especialmente. Elige una granola con poco azúcar; te enseño a detectarlo en [cómo leer la etiqueta](/blog/como-leer-etiqueta-granola).
+- **La ración:** es un alimento denso; con [30-45 g](/blog/granola-engorda-racion-mitos) suele bastar.
+- **Con qué la tomas:** acompañada de yogur o kéfir sumas proteína y calcio, y además [suavizas la subida de glucosa](/blog/granola-picos-glucosa-como-tomarla).
 
 ## ¿Y la miel?
 
-Muchas granolas (la nuestra incluida) llevan **miel**. Buena noticia: **la miel es segura para la persona embarazada.** El aviso conocido —no dar miel a bebés menores de 12 meses por el riesgo de botulismo infantil— **es solo para el bebé una vez nazca**, no durante el embarazo. Aun así, si tienes cualquier duda, coméntalo con tu matrona.
+Muchas granolas (la nuestra incluida) llevan **miel**, y es una de las dudas más repetidas. Buena noticia: **la miel es segura para la persona embarazada.** El aviso conocido —no dar miel a bebés menores de 12 meses por el riesgo de botulismo infantil— **es solo para el bebé una vez nazca**, no durante el embarazo, porque el sistema digestivo adulto neutraliza esas esporas. Aun así, si tienes cualquier duda, coméntalo con tu matrona.
 
 ## ¿Puedo tomarla con diabetes gestacional?
 
-Aquí conviene individualizar: la diabetes gestacional exige controlar los hidratos y el azúcar. Puede encajar en pequeñas cantidades y **acompañada de proteína**, pero **consúltalo con tu equipo médico**.
+Aquí conviene individualizar. La diabetes gestacional exige controlar los hidratos y el azúcar, así que la granola puede encajar **en pequeñas cantidades, con poco azúcar y acompañada de proteína**, pero la última palabra la tiene **tu equipo médico**. No tomes decisiones por tu cuenta con este tema.
+
+## ¿Casera o comprada?
+
+Las dos valen; lo que de verdad importa son los ingredientes. Una granola comprada con **lista corta y poco azúcar** es tan buena opción como una casera. Si te animas a hacerla en casa, controlas al 100% lo que lleva; si la compras, elige una marca transparente, con sus ingredientes a la vista.
 
 ## ¿Sin gluten y sin lactosa?
 
-Si tienes que evitar el gluten o la lactosa, busca una granola que lo garantice. La nuestra se elabora con **ingredientes certificados sin gluten y sin trazas** y es **sin lactosa**.
+Si tienes que evitar el gluten o la lactosa —o simplemente lo prefieres en el embarazo—, busca una granola que lo garantice. La nuestra se elabora con **ingredientes certificados sin gluten y sin trazas** y es **sin lactosa**.
 
 ## Resumen
 
 - La granola encaja bien en el embarazo como desayuno o snack.
-- Elígela con **poco azúcar** y **acompáñala de proteína**.
+- Elígela con **poco azúcar** y **acompáñala de proteína** (yogur, kéfir).
+- Aporta **fibra** (ayuda con el estreñimiento), **hierro y folato**.
 - La **miel** es segura para ti (no para bebés menores de 1 año).
-- Ante cualquier duda concreta, **tu matrona o médico** tienen la última palabra.
+- Con **diabetes gestacional**, individualiza con tu médico.
+- Ante cualquier duda concreta, **tu matrona o ginecólogo/a** tienen la última palabra.
 
-¿Buscas una granola con ingredientes que reconoces? [Descubre la nuestra](/tienda). 🌿
+¿Buscas una granola con ingredientes que reconoces, sin gluten y sin lactosa? [Descubre la nuestra](/tienda). 🌿
     `,
     coverImage: '/images/blog/desayuno-sin-gluten-semana.jpg',
     category: 'nutricion',
     author: 'Equipo Poppy',
     publishedAt: '2026-10-02',
-    readingTime: 6,
-    tags: ['embarazo', 'nutricion', 'dudas', 'miel', 'salud'],
+    readingTime: 8,
+    tags: ['embarazo', 'nutricion', 'dudas', 'miel', 'estrenimiento', 'salud'],
     metaTitle: 'Granola en el embarazo: dudas frecuentes | Poppy',
     metaDescription:
-      '¿Se puede comer granola en el embarazo? Sí, y suele venir bien. Resolvemos las dudas frecuentes: azúcar, ración, la miel (segura para la embarazada) y diabetes gestacional.',
+      '¿Se puede comer granola en el embarazo? Sí, y suele venir bien. Resuelvo las dudas frecuentes: fibra y estreñimiento, náuseas, hierro y folato, la miel (segura) y diabetes gestacional.',
     faqs: [
       {
         question: '¿Es seguro comer granola durante el embarazo?',
@@ -2920,14 +2940,24 @@ Si tienes que evitar el gluten o la lactosa, busca una granola que lo garantice.
           'En general sí: es un alimento seco y horneado, sin ingredientes de riesgo típicos del embarazo. Cuida el azúcar añadido y la ración, y ante dudas consulta con tu matrona.',
       },
       {
+        question: '¿La granola ayuda con el estreñimiento del embarazo?',
+        answer:
+          'Puede ayudar, por su contenido en fibra (avena y semillas), siempre acompañada de suficiente agua. Si el estreñimiento es intenso, coméntalo con tu matrona.',
+      },
+      {
         question: '¿Puedo tomar granola con miel estando embarazada?',
         answer:
           'Sí. La miel es segura para la persona embarazada. El aviso de no ofrecer miel es para bebés menores de 12 meses, por el riesgo de botulismo infantil, no durante el embarazo.',
       },
       {
+        question: '¿Aporta hierro y folato?',
+        answer:
+          'Sí, en cantidades interesantes: los frutos secos, las semillas y la avena aportan hierro vegetal y folato, dos nutrientes especialmente relevantes en el embarazo.',
+      },
+      {
         question: '¿Y si tengo diabetes gestacional?',
         answer:
-          'Conviene individualizar con tu equipo médico. En pequeñas cantidades y acompañada de proteína suele integrarse mejor, pero sigue siempre las pautas de tu profesional de salud.',
+          'Conviene individualizar con tu equipo médico. En pequeñas cantidades, con poco azúcar y acompañada de proteína suele integrarse mejor, pero sigue siempre las pautas de tu profesional de salud.',
       },
     ],
   },
