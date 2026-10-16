@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { sendReservationNotification } from '@/lib/email';
+import prisma from '@/lib/db';
 
 interface ReservationRequest {
   name?: string;
@@ -30,14 +31,24 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'La cantidad debe estar entre 1 y 20' }, { status: 400 });
     }
 
-    await sendReservationNotification({
+    const reservation = {
       name: data.name.trim(),
       email: data.email.trim(),
       phone: data.phone.trim(),
       productName: data.productName,
       quantity: data.quantity,
       note: data.note?.trim() || undefined,
-    });
+    };
+
+    // Persist the reservation (non-blocking: a DB hiccup must not lose the email).
+    try {
+      await prisma.reservation.create({ data: reservation });
+    } catch (dbError) {
+      console.error('Could not save reservation to the database:', dbError);
+    }
+
+    // Notify the team by email (the critical path).
+    await sendReservationNotification(reservation);
 
     return NextResponse.json({ success: true });
   } catch (error) {

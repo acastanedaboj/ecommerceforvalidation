@@ -595,6 +595,137 @@ function OrderDetail({ order }: { order: Order }) {
   );
 }
 
+function Stat({ label, value }: { label: string; value: number }) {
+  return (
+    <div className="rounded-lg px-4 py-3" style={{ background: 'var(--off)', minWidth: '110px' }}>
+      <div style={{ fontFamily: 'var(--font-display)', fontSize: '22px' }}>{value}</div>
+      <div style={{ fontSize: '11px', color: 'rgba(17,17,17,.5)' }}>{label}</div>
+    </div>
+  );
+}
+
+interface Reservation {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  productName: string;
+  quantity: number;
+  note: string | null;
+  status: string;
+  createdAt: string;
+}
+
+interface ReservationStats {
+  total: number;
+  totalBags: number;
+  byProduct: Record<string, number>;
+  byStatus: Record<string, number>;
+}
+
+function ReservationsPanel() {
+  const [reservations, setReservations] = useState<Reservation[]>([]);
+  const [stats, setStats] = useState<ReservationStats | null>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+
+  useEffect(() => {
+    fetch('/api/admin/reservations')
+      .then((r) => (r.ok ? r.json() : Promise.reject()))
+      .then((data) => {
+        setReservations(Array.isArray(data.reservations) ? data.reservations : []);
+        setStats(data.stats || null);
+        setLoading(false);
+      })
+      .catch(() => {
+        setError('No se pudieron cargar las reservas.');
+        setLoading(false);
+      });
+  }, []);
+
+  const fmt = (d: string) =>
+    new Date(d).toLocaleDateString('es-ES', {
+      day: 'numeric',
+      month: 'short',
+      year: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit',
+    });
+
+  return (
+    <section
+      className="mb-8 rounded-xl border p-5"
+      style={{ borderColor: 'rgba(0,0,0,.08)', background: 'white' }}
+    >
+      <h2 className="mb-4 text-xl" style={{ fontFamily: 'var(--font-display)' }}>
+        Reservas
+      </h2>
+
+      {loading ? (
+        <p style={{ color: 'rgba(17,17,17,.4)', fontSize: '14px' }}>Cargando…</p>
+      ) : error ? (
+        <p style={{ color: '#b91c1c', fontSize: '14px' }}>{error}</p>
+      ) : (
+        <>
+          {stats && (
+            <div className="mb-5 flex flex-wrap gap-3">
+              <Stat label="Reservas" value={stats.total} />
+              <Stat label="Bolsas" value={stats.totalBags} />
+              {Object.entries(stats.byProduct).map(([p, n]) => (
+                <Stat key={p} label={p} value={n} />
+              ))}
+            </div>
+          )}
+
+          {reservations.length === 0 ? (
+            <p style={{ color: 'rgba(17,17,17,.4)', fontSize: '14px' }}>Aún no hay reservas.</p>
+          ) : (
+            <div style={{ overflowX: 'auto' }}>
+              <table
+                className="w-full text-left"
+                style={{ fontSize: '13px', borderCollapse: 'collapse' }}
+              >
+                <thead>
+                  <tr style={{ color: 'rgba(17,17,17,.5)' }}>
+                    <th style={{ padding: '8px' }}>Fecha</th>
+                    <th style={{ padding: '8px' }}>Producto</th>
+                    <th style={{ padding: '8px' }}>Cant.</th>
+                    <th style={{ padding: '8px' }}>Nombre</th>
+                    <th style={{ padding: '8px' }}>Contacto</th>
+                    <th style={{ padding: '8px' }}>Nota</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {reservations.map((r) => (
+                    <tr key={r.id} style={{ borderTop: '1px solid rgba(0,0,0,.06)' }}>
+                      <td style={{ padding: '8px', whiteSpace: 'nowrap' }}>{fmt(r.createdAt)}</td>
+                      <td style={{ padding: '8px' }}>{r.productName}</td>
+                      <td style={{ padding: '8px' }}>{r.quantity}</td>
+                      <td style={{ padding: '8px' }}>{r.name}</td>
+                      <td style={{ padding: '8px' }}>
+                        <a href={`mailto:${r.email}`} style={{ color: 'var(--brown)' }}>
+                          {r.email}
+                        </a>
+                        <br />
+                        <a href={`tel:${r.phone}`} style={{ color: 'rgba(17,17,17,.55)' }}>
+                          {r.phone}
+                        </a>
+                      </td>
+                      <td style={{ padding: '8px', color: 'rgba(17,17,17,.55)' }}>
+                        {r.note || '—'}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </>
+      )}
+    </section>
+  );
+}
+
 export default function AdminPage() {
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
@@ -690,6 +821,8 @@ export default function AdminPage() {
 
   return (
     <div>
+      <ReservationsPanel />
+
       <ReconcileForm onReconciled={handleReconciled} />
 
       {orders.length === 0 ? (

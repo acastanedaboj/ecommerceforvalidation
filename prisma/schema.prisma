@@ -469,3 +469,24 @@ model ContactMessage {
 
   @@index([isRead])
 }
+
+// ==========================================
+// Reservations (catalog reservation flow)
+// ==========================================
+
+model Reservation {
+  id          String   @id @default(cuid())
+  name        String
+  email       String
+  phone       String
+  productName String
+  quantity    Int      @default(1)
+  note        String?  @db.Text
+
+  status      String   @default("pending") // pending, contacted, delivered, cancelled
+
+  createdAt   DateTime @default(now())
+
+  @@index([createdAt])
+  @@index([status])
+}
