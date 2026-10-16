@@ -222,6 +222,15 @@ Key test files:
 3. **Update tests:** Add/update tests for business logic changes
 4. **Preserve pricing logic:** Any changes to pricing must match business rules
 
+### Live checks / "use the browser" (owner preference)
+
+When something can't be verified from the sandbox (the cloud session's network
+is restricted — it CANNOT reach poppy.es, Supabase or Vercel), **prefer a
+browser/automation tool if one is connected to that session** (e.g. a Chrome
+extension / Playwright MCP) before telling the user it can't be done. Only if
+no browser tool is available AND the sandbox network blocks the host, fall back
+to asking the owner to run the check, and say exactly why.
+
 ### Critical Files (Handle with Care)
 
 - `src/lib/pricing.ts` - Core business logic
