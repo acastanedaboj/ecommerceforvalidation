@@ -45,8 +45,8 @@ export function Header() {
           className="text-[11px] uppercase tracking-[0.12em]"
           style={{ color: 'rgba(17,17,17,.65)', fontWeight: 300 }}
         >
-          <span className="font-bold">Cero ingredientes raros</span>
-          <span className="mx-2 opacity-30">|</span>Elaborada cada semana en Málaga
+          <span className="font-bold">Nuevo sabor: Pumpkin Spice Granola</span>
+          <span className="mx-2 opacity-30">|</span>Solo por tiempo limitado
           <span className="mx-2 opacity-30">|</span>
           <Link
             href="/tienda"
