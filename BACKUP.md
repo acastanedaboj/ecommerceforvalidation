@@ -16,7 +16,7 @@ depende de la cuenta de Claude.
 | Copia | Qué contiene | Dónde |
 | --- | --- | --- |
 | **GitHub** (principal) | Todo: código, imágenes, 336 commits, 24 ramas, PRs e issues | `github.com/acastanedaboj/ecommerceforvalidation` |
-| **Tag de respaldo** | Instantánea inmutable del estado de esta fecha | Tag `backup-2026-11-09` en ese mismo repo |
+| **Commit de referencia** | El estado exacto de esta fecha | Commit `cc2462f`, rama `claude/magical-cray-2rakbf` |
 | **Bundle de Git** | Fichero único con todo el historial y todas las ramas | Descarga local (ver abajo) |
 
 La copia que importa es **GitHub**: pertenece a tu cuenta de GitHub, no a la de
@@ -33,7 +33,14 @@ git clone https://github.com/acastanedaboj/ecommerceforvalidation
 Para recuperar exactamente el estado de este backup:
 
 ```bash
-git checkout backup-2026-11-09
+git checkout cc2462f
+```
+
+Si prefieres marcarlo con un tag con nombre, créalo tú desde tu máquina (la
+sesión de Claude no tiene permiso para crear tags en el repositorio):
+
+```bash
+git tag -a backup-2026-11-09 cc2462f -m "Backup del proyecto" && git push origin backup-2026-11-09
 ```
 
 ---
@@ -141,7 +148,7 @@ de cambios:
 git push origin main
 ```
 
-Para marcar un nuevo punto de restauración:
+Para marcar un nuevo punto de restauración (desde tu máquina, no desde Claude):
 
 ```bash
 git tag -a backup-AAAA-MM-DD -m "Backup del proyecto" && git push origin backup-AAAA-MM-DD
